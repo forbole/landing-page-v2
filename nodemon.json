@@ -1,0 +1,16 @@
+{
+  "verbose": true,
+  "ignore": [
+    "node_modules",
+    ".next"
+  ],
+  "watch": [
+    "pages/",
+    "components/",
+    "public/static/locales/",
+    "scss/",
+    "utils/",
+    "server.js"
+  ],
+  "ext": "tsx, json, js, jsx"
+}
