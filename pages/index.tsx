@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
 import Head from "next/head";
-import { useTranslation, i18n } from "../i18n";
+import { useTranslation } from "../i18n";
 
 const IndexPage = () => {
   const { t } = useTranslation("home");
@@ -30,9 +30,5 @@ const IndexPage = () => {
     </Layout>
   );
 };
-
-IndexPage.getInitialProps = async () => ({
-  namespacesRequired: ["home"],
-});
 
 export default IndexPage;
