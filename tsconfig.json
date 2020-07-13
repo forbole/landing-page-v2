@@ -28,5 +28,20 @@
     "**/*.ts",
     "**/*.tsx",
     "server.js"
-  ]
+  ],
+  "baseUrl": ".",
+  "paths": {
+    "@scss/*": [
+      "./scss/*"
+    ],
+    "@utils/*": [
+      "./utils/*"
+    ],
+    "@public/*": [
+      "./public/*"
+    ],
+    "@components/*": [
+      "./components/*"
+    ]
+  }
 }
