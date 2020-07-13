@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "next": "latest",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "next": "^9.4.4",
     "node-sass": "^4.14.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
