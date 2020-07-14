@@ -36,5 +36,7 @@
   "exclude": [
     "node_modules"
   ],
-  "include": []
+  "include": [
+    "./server.js"
+  ]
 }
