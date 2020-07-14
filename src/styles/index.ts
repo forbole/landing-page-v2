@@ -1,3 +1,13 @@
 import GlobalCSS from "./global";
+import Fonts from "./fonts";
+import theme from "./theme";
+import media from "./media";
+import mixins from "./mixins";
 
-export { GlobalCSS };
+export {
+  GlobalCSS,
+  Fonts,
+  theme,
+  media,
+  mixins,
+};
