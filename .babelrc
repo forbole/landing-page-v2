@@ -11,14 +11,7 @@
         "alias": {
           "@modules": "./modules",
           "@components": "./components",
-          "@layout": "./layout",
-          "@actions": "./actions",
-          "@actionTypes": "./actionTypes",
-          "@static": "./static",
-          "@store": "./store",
-          "@sagas": "./sagas",
-          "@reducers": "./reducers",
-          "@dummy": "./dummy"
+          "@screens": "./screens"
         }
       }
     ]

@@ -32,16 +32,22 @@
   "baseUrl": ".",
   "paths": {
     "@scss/*": [
-      "./scss/*"
+      "scss/*"
     ],
     "@utils/*": [
-      "./utils/*"
+      "utils/*"
     ],
     "@public/*": [
-      "./public/*"
+      "public/*"
     ],
     "@components/*": [
-      "./components/*"
+      "components/*"
+    ],
+    "@screens/*": [
+      "screens/*"
+    ],
+    "@src/*": [
+      "src/*"
     ]
   }
 }
