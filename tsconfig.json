@@ -31,6 +31,9 @@
       "@public/*": [
         "public/*"
       ],
+      "@styles": [
+        "src/styles"
+      ],
     }
   },
   "exclude": [
