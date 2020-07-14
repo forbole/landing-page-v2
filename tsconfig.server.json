@@ -6,6 +6,6 @@
     "noEmit": false
   },
   "include": [
-    "server.js"
+    "server.ts"
   ]
 }

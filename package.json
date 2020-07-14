@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon",
-    "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "build": "npm run build:next && npm run build:server",
+    "build:server": "tsc --project tsconfig.server.json",
+    "build:next": "next build",
+    "start": "NODE_ENV=production node dist/index.js",
     "type-check": "tsc",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
