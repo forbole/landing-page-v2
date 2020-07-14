@@ -1,5 +1,5 @@
 import React from "react";
-import Home from "@screens/home";
+import Home from "@src/src/screens/home";
 
 const IndexPage = () => {
   return <Home />;
