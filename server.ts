@@ -13,6 +13,9 @@ const handle = app.getRequestHandler();
   try {
     await app.prepare();
     const server = express();
+
+    await nextI18next.initPromise;
+    server.use(nextI18NextMiddleware(nextI18next));
     server.all("*", (req: Request, res: Response) => {
       return handle(req, res);
     });
