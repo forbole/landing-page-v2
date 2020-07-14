@@ -1,7 +1,7 @@
 import GlobalCSS from "./global";
 import Fonts from "./fonts";
 import theme from "./theme";
-import media from "./media";
+import media, { sizes as screenSize } from "./media";
 import mixins from "./mixins";
 
 export {
@@ -10,4 +10,5 @@ export {
   theme,
   media,
   mixins,
+  screenSize,
 };

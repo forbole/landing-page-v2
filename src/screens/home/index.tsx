@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { Layout } from "@components";
+import { Layout, ResponsiveExample } from "@components";
 import { useTranslation } from "i18n";
 import { HomeCSS } from "./styles";
 
@@ -13,6 +13,7 @@ const Home = () => {
         <Head>
           <title>Forbole</title>
         </Head>
+        <ResponsiveExample />
         <div className="hero">
           <h1>Co-Building Interchain</h1>
           <p>
