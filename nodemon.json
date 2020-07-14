@@ -12,5 +12,5 @@
     "utils/"
   ],
   "ext": "tsx, json, ts",
-  "exec": "ts-node ./index.ts"
+  "exec": "ts-node --project tsconfig.server.json server.ts"
 }
