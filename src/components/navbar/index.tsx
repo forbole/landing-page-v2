@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { NavBarCSS } from "./styles";
-// import "./styles.scss";
 
 const NavBar = () => {
   return (

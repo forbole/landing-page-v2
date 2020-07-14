@@ -31,4 +31,4 @@ export const NavBarCSS = styled.header`
       }
     }
   }
-`
+`;

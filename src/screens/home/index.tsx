@@ -1,14 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import Layout from "@components/layout";
+import { Layout } from "@components";
 import { useTranslation } from "i18n";
+import { HomeCSS } from "./styles";
 
 const Home = () => {
   const { t } = useTranslation("home");
   return (
     <Layout title="Forbole">
-      <div>
+      <HomeCSS>
         <Head>
           <title>Forbole</title>
         </Head>
@@ -27,7 +28,7 @@ const Home = () => {
           </p>
           <p>{t("placeholder")}</p>
         </div>
-      </div>
+      </HomeCSS>
     </Layout>
   );
 };

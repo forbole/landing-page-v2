@@ -1,4 +1,3 @@
-import "../scss/style.scss";
 import { AppProps } from "next/app";
 import { GlobalCSS } from "@styles";
 import { appWithTranslation } from "../../i18n";

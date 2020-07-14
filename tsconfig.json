@@ -22,8 +22,8 @@
       "@src/*": [
         "src/*"
       ],
-      "@components/*": [
-        "src/components/*"
+      "@components": [
+        "src/components"
       ],
       "@screens/*": [
         "src/screens/*"

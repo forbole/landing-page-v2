@@ -11,7 +11,6 @@ const GlobalCSS = createGlobalStyle`
     font-size: 16px;
     box-sizing: border-box;
     width: 100%;
-    background: pink;
   }
 
   * {

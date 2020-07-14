@@ -5,11 +5,7 @@
     ".next"
   ],
   "watch": [
-    "pages/",
-    "components/",
-    "public/static/locales/",
-    "scss/",
-    "utils/"
+    "src"
   ],
   "ext": "tsx, json, ts",
   "exec": "ts-node --project tsconfig.server.json server/index.ts"

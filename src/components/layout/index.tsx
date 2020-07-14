@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
-import NavBar from "@components/navbar";
+import { NavBar } from "@components";
 import { LayoutCSS } from "./styles";
 
 type Props = {
