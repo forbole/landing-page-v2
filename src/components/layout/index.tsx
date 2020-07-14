@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
-import NavBar from "@src/src/components/navbar";
+import NavBar from "@components/navbar";
 import "./styles.scss";
 import "../global.scss";
 

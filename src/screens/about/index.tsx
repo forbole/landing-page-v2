@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Layout from "@src/src/components/layout";
+import Layout from "@components/layout";
 
 const About = () => {
   return (
