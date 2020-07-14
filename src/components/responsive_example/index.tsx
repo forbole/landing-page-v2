@@ -1,13 +1,15 @@
 import React from "react";
 import { screenSize } from "@styles";
 import getWindowSize from "@utils/getScreenSize";
+import ResponsiveExampleMobile from "./components/mobile";
+import ResponsiveExampleDesktop from "./components/desktop";
 
 const ResponseExample = () => {
   const { width } = getWindowSize();
   if (width <= screenSize.tablet) {
-    return <div>mobile to tablet</div>;
+    return <ResponsiveExampleMobile />;
   }
-  return <div>tablet and up</div>;
+  return <ResponsiveExampleDesktop />;
 };
 
 export default ResponseExample;
