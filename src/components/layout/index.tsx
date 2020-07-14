@@ -1,8 +1,7 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 import NavBar from "@components/navbar";
-import "./styles.scss";
-import "../global.scss";
+import { LayoutCSS } from "./styles";
 
 type Props = {
   children?: ReactNode;
@@ -10,7 +9,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <div className="Layout">
+  <LayoutCSS>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -22,7 +21,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
       <hr />
       <span>(Footer)</span>
     </footer>
-  </div>
+  </LayoutCSS>
 );
 
 export default Layout;

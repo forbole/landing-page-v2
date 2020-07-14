@@ -44,11 +44,6 @@ const GlobalCSS = createGlobalStyle`
     margin: 0 0 2rem 0;
   }
 
-  svg {
-    width: 30px;
-    margin: 0 5px;
-  }
-
   a {
     color: inherit;
     text-decoration: none;
@@ -57,7 +52,6 @@ const GlobalCSS = createGlobalStyle`
   img {
     width: 100%;
     height: auto;
-    object-fit: cover;
   }
 `;
 
