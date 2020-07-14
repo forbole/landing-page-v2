@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import Head from "next/head";
 import NavBar from "@components/navbar";
 import "./styles.scss";
-import "./global.scss";
+import "../global.scss";
 
 type Props = {
   children?: ReactNode;

@@ -3,7 +3,7 @@
     "allowJs": true,
     "alwaysStrict": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "forceConsistentCasingInFileNames": false,
     "isolatedModules": true,
     "jsx": "preserve",
     "lib": [
@@ -32,22 +32,22 @@
   "baseUrl": ".",
   "paths": {
     "@scss/*": [
-      "scss/*"
+      "./scss/*"
     ],
     "@utils/*": [
-      "utils/*"
+      "./utils/*"
     ],
     "@public/*": [
-      "public/*"
+      "./public/*"
     ],
-    "@components/*": [
-      "components/*"
+    "@components*": [
+      "./components/*"
     ],
     "@screens/*": [
-      "screens/*"
+      "./screens/*"
     ],
     "@src/*": [
-      "src/*"
+      "./*"
     ]
   }
 }
