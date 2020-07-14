@@ -37,6 +37,8 @@
     "node_modules"
   ],
   "include": [
-    "./server.js"
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
   ]
 }

@@ -9,8 +9,8 @@
     "components/",
     "public/static/locales/",
     "scss/",
-    "utils/",
-    "server.js"
+    "utils/"
   ],
-  "ext": "tsx, json"
+  "ext": "tsx, json, ts",
+  "exec": "ts-node ./index.ts"
 }
