@@ -1,53 +1,93 @@
+// {
+//   "compilerOptions": {
+//     "allowJs": true,
+//     "alwaysStrict": true,
+//     "esModuleInterop": true,
+//     "forceConsistentCasingInFileNames": false,
+//     "isolatedModules": true,
+//     "jsx": "preserve",
+//     "lib": [
+//       "dom",
+//       "es2017"
+//     ],
+//     "module": "esnext",
+//     "moduleResolution": "node",
+//     "noEmit": true,
+//     "noFallthroughCasesInSwitch": true,
+//     "noUnusedLocals": true,
+//     "noUnusedParameters": true,
+//     "resolveJsonModule": true,
+//     "skipLibCheck": true,
+//     "strict": true,
+//     "target": "esnext"
+//   },
+//   "exclude": [
+//     "node_modules"
+//   ],
+//   "include": [
+//     "**/*.ts",
+//     "**/*.tsx",
+//     "server.js"
+//   ],
+//   "baseUrl": ".",
+//   "paths": {
+//     "@scss/*": [
+//       "./scss/*"
+//     ],
+//     "@utils/*": [
+//       "./utils/*"
+//     ],
+//     "@public/*": [
+//       "./public/*"
+//     ],
+//     "@components*": [
+//       "./components/*"
+//     ],
+//     "@screens/*": [
+//       "./screens/*"
+//     ],
+//     "@src/*": [
+//       "./*"
+//     ]
+//   }
+// }
 {
   "compilerOptions": {
-    "allowJs": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": false,
-    "isolatedModules": true,
-    "jsx": "preserve",
+    "target": "es5",
     "lib": [
       "dom",
-      "es2017"
+      "dom.iterable",
+      "esnext"
     ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext"
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "./*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@screens/*": [
+        "screens/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+    }
   },
   "exclude": [
     "node_modules"
   ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "server.js"
-  ],
-  "baseUrl": ".",
-  "paths": {
-    "@scss/*": [
-      "./scss/*"
-    ],
-    "@utils/*": [
-      "./utils/*"
-    ],
-    "@public/*": [
-      "./public/*"
-    ],
-    "@components*": [
-      "./components/*"
-    ],
-    "@screens/*": [
-      "./screens/*"
-    ],
-    "@src/*": [
-      "./*"
-    ]
-  }
+  "include": []
 }
