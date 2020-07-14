@@ -12,5 +12,5 @@
     "utils/",
     "server.js"
   ],
-  "ext": "tsx, json, js, jsx"
+  "ext": "tsx, json"
 }
