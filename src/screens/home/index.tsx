@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
-import { Layout, ResponsiveExample } from "@components";
+import { Layout, ResponsiveExample, SampleButton } from "@components";
 import { useTranslation } from "i18n";
 import { HomeCSS } from "./styles";
 
@@ -15,6 +15,7 @@ const Home = () => {
         </Head>
         <ResponsiveExample />
         <div className="hero">
+          <SampleButton />
           <h1>Co-Building Interchain</h1>
           <p>
             <Link href="/about">
