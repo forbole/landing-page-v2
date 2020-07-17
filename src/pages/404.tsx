@@ -1,3 +1,7 @@
-export default function Custom404() {
-  return <h1>404 - Page Not Found</h1>;
-}
+import NotFound from "@screens/404";
+
+const Custom404 = () => {
+  return <NotFound />;
+};
+
+export default Custom404;
