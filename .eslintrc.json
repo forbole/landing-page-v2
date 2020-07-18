@@ -23,12 +23,6 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "prettier/prettier": [
-      "warn",
-      {
-        "singleQuote": true
-      }
-    ]
+    "@typescript-eslint/no-var-requires": "off"
   }
 }
