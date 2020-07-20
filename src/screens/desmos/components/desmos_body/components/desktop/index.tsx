@@ -8,10 +8,11 @@ const Desktop = () => {
   return (
     <DesktopCSS>
       <DesmosBodyCSS>
-        <DesmosBodyContainerCSS>
-          <DesmosHeader />
-          <DesmosContent />
-        </DesmosBodyContainerCSS>
+        <h1>what</h1>
+        {/* <DesmosBodyContainerCSS> */}
+        {/* <DesmosHeader /> */}
+        {/* <DesmosContent /> */}
+        {/* </DesmosBodyContainerCSS> */}
       </DesmosBodyCSS>
     </DesktopCSS>
   );
