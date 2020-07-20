@@ -1,8 +1,13 @@
 import React from "react";
+import Hero from "./components/hero";
+import Body from "./components/body";
 
 export const Mobile = () => {
   return (
-    <h1>mobile</h1>
+    <>
+      <Hero />
+      <Body />
+    </>
   );
 };
 

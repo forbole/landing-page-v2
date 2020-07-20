@@ -1,31 +1,18 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import {
-  BodyCSS,
   BodyImageContainerCSS,
   DecentralizedCSS,
   MooncakeBodyCSS,
-  ButtonsCSS
+  ButtonsCSS,
+  BodyCSS,
 } from "./styles";
 
-const Body = () => {
+const Mobile = () => {
   const { t } = useTranslation("desmos");
+
   return (
     <BodyCSS>
-      <p>{t("bodyOne")}</p>
-      <p>{t("bodyTwo")}</p>
-      <p>
-        {t("bodyThree")}{" "}
-        <a
-          href="https://twitter.com/desmosnetwork"
-          target="_blank"
-          rel="noreferrer"
-          title={t("twitterOfDesmos")}
-        >
-          {t("twitterOfDesmos")}
-        </a>{" "}
-        {t("bodyFour")}
-      </p>
       <BodyImageContainerCSS>
         <img src="images/assets/mooncake_screenshot_one.png" />
         <img src="images/assets/mooncake_screenshot_two.png" />
@@ -45,4 +32,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default Mobile;
