@@ -1,10 +1,14 @@
 import styled from "styled-components";
-import { theme } from "@styles";
+import { theme, media } from "@styles";
 
 const { headerMargin } = theme;
 
 export const BodyCSS = styled.div`
   padding: 1rem 0;
+
+  ${media.bigDesktop`
+    display: none;
+  `}
 `;
 
 export const BodyImageContainerCSS = styled.div`

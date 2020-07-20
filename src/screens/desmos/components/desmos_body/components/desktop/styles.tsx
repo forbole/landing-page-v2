@@ -1,15 +1,14 @@
 import styled from "styled-components";
 import { media, theme } from "@styles";
+import { CONTAINER_HEIGHT, CONTAINER_WIDTH } from "../../../../config";
 
 const { colors } = theme;
-const CONTAINER_HEIGHT = "80vh";
 
 export const DesktopCSS = styled.div`
   display: none;
 
   ${media.bigDesktop`
     display: block;
-    height: ${CONTAINER_HEIGHT};
     background-image: linear-gradient(
         0deg,
         rgba(123, 135, 185, 0.33),
@@ -24,7 +23,7 @@ export const DesktopCSS = styled.div`
 `;
 
 export const DesmosBodyCSS = styled.div`
-  width: 55%;
+  width: ${CONTAINER_WIDTH};
   background: white;
   height: ${CONTAINER_HEIGHT};
   display: flex;
