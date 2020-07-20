@@ -8,8 +8,8 @@
     "build:next": "next build",
     "start": "NODE_ENV=production node dist/index.js",
     "now-build": "npm run semantic:build && next build",
-    "semantic:build": "cd .semantic && gulp build-css build-assets",
-    "semantic:watch": "cd .semantic && npm run semantic:build && gulp watch",
+    "semantic:build": "cd semantic && gulp build-css build-assets",
+    "semantic:watch": "cd semantic && npm run semantic:build && gulp watch",
     "type-check": "tsc",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
