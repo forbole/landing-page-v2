@@ -8,10 +8,10 @@
        Fonts
 --------------------*/
 
-@fontName          : 'Lato';
+@fontName          : 'Hind Madurai';
 
-@headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
-@pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@headerFont        : @fontName, 'Hind Madurai', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : @fontName, 'Hind Madurai, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
 @googleFontName    : @fontName;
 @importGoogleFonts : true;
