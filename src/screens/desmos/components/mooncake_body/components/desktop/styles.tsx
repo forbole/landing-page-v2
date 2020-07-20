@@ -12,8 +12,25 @@ export const DesktopCSS = styled.div`
   `}
 `;
 
-export const MooncakeContentCSS = styled.div`
+export const MooncakeBodyCSS = styled.div`
   background: white;
   height: ${CONTAINER_HEIGHT};
   width: ${CONTAINER_WIDTH};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+
+export const MooncakeContentCSS = styled.div`
+  padding-left: 3.5rem;
+  width: 70%;
+`;
+
+export const MooncakeImgCSS = styled.div`
+  width: 80%;
+  max-width: 1000px;
+  position: absolute;
+  right: -68%;
+  top: 15%;
 `;
