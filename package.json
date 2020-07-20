@@ -7,6 +7,9 @@
     "build:server": "tsc --project tsconfig.server.json",
     "build:next": "next build",
     "start": "NODE_ENV=production node dist/index.js",
+    "now-build": "npm run semantic:build && next build",
+    "semantic:build": "cd .semantic && gulp build-css build-assets",
+    "semantic:watch": "cd .semantic && npm run semantic:build && gulp watch",
     "type-check": "tsc",
     "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
   },
@@ -18,7 +21,6 @@
     "next-i18next": "^4.5.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.1.1"
   },
@@ -36,6 +38,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "file-loader": "^6.0.0",
+    "fomantic-ui": "^2.8.6",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.2",
     "typescript": "3.7.3",
