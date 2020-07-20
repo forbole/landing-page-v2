@@ -29,3 +29,7 @@ export const MooncakeBodyCSS = styled.div`
     margin-bottom: ${headerMargin.small};
   }
 `;
+
+export const ButtonsCSS = styled.div`
+  display: flex;
+`;

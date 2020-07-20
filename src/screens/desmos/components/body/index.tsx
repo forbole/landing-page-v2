@@ -5,6 +5,7 @@ import {
   BodyImageContainerCSS,
   DecentralizedCSS,
   MooncakeBodyCSS,
+  ButtonsCSS
 } from "./styles";
 
 const Body = () => {
@@ -34,6 +35,10 @@ const Body = () => {
         <p>{t("mooncakeBodyTwo")}</p>
         <p>{t("mooncakeBodyThree")}</p>
       </MooncakeBodyCSS>
+      <ButtonsCSS>
+        <div>apple</div>
+        <div>google</div>
+      </ButtonsCSS>
     </BodyCSS>
   );
 };
