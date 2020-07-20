@@ -9,8 +9,10 @@ export const Mobile = () => {
   return (
     <MobileCSS>
       <HeroCSS>
-        <DesmosHeader />
-        <p>{t("visitWebsite")} &#x2192;</p>
+        <div className="content-container">
+          <DesmosHeader />
+          <p className="visit-website">{t("visitWebsite")} &#x2192;</p>
+        </div>
         <DesmosLogoCSS src="images/icons/desmos_logo.svg" />
       </HeroCSS>
       <Body />
