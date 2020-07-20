@@ -1,5 +1,8 @@
 {
   "desmos": "Desmos",
   "heroDetails": "Rearchitecting Social networks",
-  "visitWebsite": "VISIT WEBSITE"
+  "visitWebsite": "VISIT WEBSITE",
+  "bodyOne": "We are developing Desmos with Cosmos SDK. Desmos is a public blockchain with its own modules specifically designed for social networking features. One of the modules is Magpie which provides identity and accountability to validators, delegators and other types of stakeholders with a novel and generalizable temporary key pairing method using browser-based WASM. This project was a prize winner of HackAtom Seoul. Please follow the",
+  "twitterOfDesmos": "Twitter of Desmos",
+  "bodyTwo": "to keep updated with its progress."
 }

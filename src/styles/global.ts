@@ -44,8 +44,12 @@ const GlobalCSS = createGlobalStyle`
   }
 
   a {
-    color: inherit;
+    color: rgba(13, 106, 255, 1);
     text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   img {
