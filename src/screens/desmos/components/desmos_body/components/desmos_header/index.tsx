@@ -11,7 +11,7 @@ const ContentHeader = () => {
       <p>-- Social media --</p>
       <p>{t("visitWebsite")} &#x2192;</p>
     </ContentHeaderCSS>
-  )
+  );
 };
 
 export default ContentHeader;

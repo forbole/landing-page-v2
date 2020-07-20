@@ -28,3 +28,7 @@ export const DesmosBodyCSS = styled.div`
     color: black;
   }
 `;
+
+export const DesmosBodyContainerCSS = styled.div`
+  width: 70%;
+`;
