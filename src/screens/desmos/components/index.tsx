@@ -1,3 +1,4 @@
 import Hero from "./hero";
 import Body from "./body";
-export { Hero, Body };
+import DesmosBody from "./desmos_body";
+export { Hero, Body, DesmosBody };
