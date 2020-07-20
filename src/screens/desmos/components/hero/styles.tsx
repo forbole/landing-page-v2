@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "@styles";
+import { theme, media } from "@styles";
 
 const { headerMargin } = theme;
 
@@ -15,9 +15,15 @@ export const HeroCSS = styled.div`
   background-position: left bottom;
   background-size: cover;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 
+  ${media.bigDesktop`
+    background: green;
+  `}
+`;
+
+export const HeroDetailsCSS = styled.div`
   h2 {
     color: white;
     margin-bottom: ${headerMargin.small};
@@ -27,3 +33,8 @@ export const HeroCSS = styled.div`
     color: white;
   }
 `;
+
+export const DesmosLogoCSS = styled.img`
+  width: 50px;
+`;
+

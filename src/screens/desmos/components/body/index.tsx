@@ -12,8 +12,10 @@ const Body = () => {
   const { t } = useTranslation("desmos");
   return (
     <BodyCSS>
+      <p>{t("bodyOne")}</p>
+      <p>{t("bodyTwo")}</p>
       <p>
-        {t("bodyOne")}{" "}
+        {t("bodyThree")}{" "}
         <a
           href="https://twitter.com/desmosnetwork"
           target="_blank"
@@ -22,7 +24,7 @@ const Body = () => {
         >
           {t("twitterOfDesmos")}
         </a>{" "}
-        {t("bodyTwo")}
+        {t("bodyFour")}
       </p>
       <BodyImageContainerCSS>
         <img src="images/assets/mooncake_screenshot_one.png" />

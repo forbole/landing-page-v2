@@ -3,6 +3,7 @@ import { theme } from "@styles";
 
 const { headerMargin } = theme;
 export const BodyCSS = styled.div`
+  padding: 1rem 0;
 `;
 
 export const BodyImageContainerCSS = styled.div`
@@ -27,6 +28,10 @@ export const MooncakeBodyCSS = styled.div`
   h3 {
     font-weight: 500;
     margin-bottom: ${headerMargin.small};
+  }
+
+  p {
+    font-size: 0.9rem;
   }
 `;
 
