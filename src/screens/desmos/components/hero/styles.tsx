@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { theme } from "@styles";
+
+const { headerMargin } = theme;
 
 export const HeroCSS = styled.div`
   background-image: linear-gradient(
@@ -17,6 +20,7 @@ export const HeroCSS = styled.div`
 
   h2 {
     color: white;
+    margin-bottom: ${headerMargin.small};
   }
 
   p {

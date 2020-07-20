@@ -1,3 +1,3 @@
 import Hero from "./hero";
-
-export { Hero };
+import Body from "./body";
+export { Hero, Body };

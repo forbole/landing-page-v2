@@ -8,6 +8,8 @@ const Hero = () => {
     <HeroCSS>
       <h2>{t("desmos")}</h2>
       <p>{t("heroDetails")}</p>
+      <p>-- Social media --</p>
+      <p>{t("visitWebsite")} &#x2192;</p>
     </HeroCSS>
   );
 };
