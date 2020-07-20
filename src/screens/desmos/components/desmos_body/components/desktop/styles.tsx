@@ -1,21 +1,32 @@
 import styled from "styled-components";
+import { media, theme } from "@styles";
+
+const { colors } = theme;
+const CONTAINER_HEIGHT = "80vh";
 
 export const DesktopCSS = styled.div`
-  height: 70vh;
-  background-image: linear-gradient(
-      0deg,
-      rgba(123, 135, 185, 0.33),
-      rgba(123, 135, 185, 0.33)
-    ),
-    url("forbole_background/desmos_hero.png");
-  display: flex;
-  flex-direction: row-reverse;
+  display: none;
+
+  ${media.bigDesktop`
+    display: block;
+    height: ${CONTAINER_HEIGHT};
+    background-image: linear-gradient(
+        0deg,
+        rgba(123, 135, 185, 0.33),
+        rgba(123, 135, 185, 0.33)
+      ),
+      url("forbole_background/desmos_hero.png");
+    background-repeat: no-repeat;
+    background-position: 40% bottom;
+    display: flex;
+    flex-direction: row-reverse;
+  `}
 `;
 
 export const DesmosBodyCSS = styled.div`
-  width: 60%;
+  width: 55%;
   background: white;
-  height: 70vh;
+  height: ${CONTAINER_HEIGHT};
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,8 +38,20 @@ export const DesmosBodyCSS = styled.div`
   p {
     color: black;
   }
+
+  .ui.button {
+    background: ${colors.orange};
+    color: white;
+    font-weight: 400;
+    transition: 0.2s;
+
+    &:hover {
+      background: black;
+    }
+  }
 `;
 
 export const DesmosBodyContainerCSS = styled.div`
   width: 70%;
+  margin-left: 3.5rem;
 `;

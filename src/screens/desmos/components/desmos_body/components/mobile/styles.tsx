@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import { media } from "@styles";
+
+export const MobileCSS = styled.div`
+  ${media.bigDesktop`
+    display: none;
+  `}
+`;
 
 export const HeroCSS = styled.div`
   background-image: linear-gradient(
@@ -19,4 +26,3 @@ export const HeroCSS = styled.div`
 export const DesmosLogoCSS = styled.img`
   width: 50px;
 `;
-

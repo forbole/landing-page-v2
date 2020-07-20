@@ -11,7 +11,7 @@ const Desmos = () => {
     <Layout title={t("title")}>
       <DesmosPageCSS>
         <DesmosBody />
-        <MooncakeBody />
+        {/* <MooncakeBody /> */}
       </DesmosPageCSS>
     </Layout>
   );
