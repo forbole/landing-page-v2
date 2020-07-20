@@ -2,7 +2,12 @@ import React from "react";
 import { Button } from "semantic-ui-react";
 import { useTranslation } from "i18n";
 import { DesmosHeader, DesmosContent } from "../../components";
-import { DesmosBodyCSS, DesktopCSS, DesmosBodyContainerCSS } from "./styles";
+import {
+  DesmosBodyCSS,
+  DesktopCSS,
+  DesmosBodyContainerCSS,
+  DesmosLogoCSS,
+} from "./styles";
 
 const Desktop = () => {
   const { t } = useTranslation("desmos");
@@ -15,6 +20,7 @@ const Desktop = () => {
           <a href="#">
             <Button title={t("visitWebsite")}>{t("visitWebsite")}</Button>
           </a>
+          <DesmosLogoCSS src="images/icons/desmos_logo.svg" />
         </DesmosBodyContainerCSS>
       </DesmosBodyCSS>
     </DesktopCSS>

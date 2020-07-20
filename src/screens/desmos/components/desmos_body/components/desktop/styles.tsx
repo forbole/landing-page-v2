@@ -17,6 +17,7 @@ export const DesktopCSS = styled.div`
       url("forbole_background/desmos_hero.png");
     background-repeat: no-repeat;
     background-position: 40% bottom;
+    background-size: cover;
     display: flex;
     flex-direction: row-reverse;
   `}
@@ -50,7 +51,16 @@ export const DesmosBodyCSS = styled.div`
   }
 `;
 
+export const DesmosLogoCSS = styled.img`
+  width: 60px;
+  position: absolute;
+  left: -60px;
+  top: 0;
+`;
+
+
 export const DesmosBodyContainerCSS = styled.div`
   width: 70%;
-  margin-left: 3.5rem;
+  padding-left: 3.5rem;
+  position: relative;
 `;
