@@ -1,0 +1,11 @@
+{
+  "watch": [
+    "server",
+    "public"
+  ],
+  "ignore": [
+    "src"
+  ],
+  "exec": "ts-node --project tsconfig.server.json server/index.ts",
+  "ext": "json"
+}
