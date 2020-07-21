@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "nodemon",
-    "build": "npm run semantic:build && npm run build:next && npm run build:server &&",
+    "build": "npm run build:next && npm run build:server",
     "build:server": "tsc --project tsconfig.server.json",
     "build:next": "next build",
     "start": "NODE_ENV=production node dist/index.js",
