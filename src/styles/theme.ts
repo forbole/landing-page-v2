@@ -12,6 +12,10 @@ const theme = {
   fonts: {
     hind: "Hind Madurai, sans-serif",
   },
+  headerMargin: {
+    small: "0.5rem",
+    medium: "1rem",
+  },
 };
 
 export default theme;
