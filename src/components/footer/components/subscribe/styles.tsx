@@ -28,6 +28,8 @@ export const SubscribeCSS = styled.div`
   .ui.input > input {
     color: rgba(255, 255, 255, 0.8);
     background: rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+    font-weight: 350;
   }
 
   h1 {
@@ -50,7 +52,6 @@ export const SubscribeCSS = styled.div`
   .ui.input {
     position: relative;
     right: 0px;
-    font-weight: 400;
   }
   .ui.button {
     font-size: 12px;
@@ -60,6 +61,7 @@ export const SubscribeCSS = styled.div`
   }
   ${media.bigDesktop`
   margin-top: 0.7rem;
+  margin-right: 5vw;
   width: 40vw; 
   h1 + h2 {
   width: fit-content;
@@ -70,9 +72,6 @@ export const SubscribeCSS = styled.div`
   .ui.action.input {
     width: 100%;
     height: 30%;
-  }
-  .ui.input > input {
-    font-size: 0.8rem;
   }
   `}
 `;

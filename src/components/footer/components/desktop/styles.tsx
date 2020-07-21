@@ -18,8 +18,8 @@ export const DesktopFooterCSS = styled.div`
   justify-content: center;
 
   .desktopFooter-left {
-    margin-left: 4rem;
-    margin-right: 5rem;
+    margin-left: 4vw;
+    margin-right: 5vw;
   }
   p {
     font-size: 11px;

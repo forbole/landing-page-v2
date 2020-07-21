@@ -9,6 +9,10 @@ export const FooterItemsCSS = styled.div`
   list-style-type: none;
   text-align: left;
   width: 100%;
+  a {
+    color: ${colors.offwhite};
+    font-weight: 200;
+  }
   .ui {
     margin-bottom: 1em;
   }
@@ -35,6 +39,7 @@ export const FooterItemsCSS = styled.div`
   }
 
   a li {
+    color: ${colors.offwhite};
     font-size: 0.8rem;
     margin-bottom: 1em;
     font-weight: 300;

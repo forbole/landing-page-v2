@@ -20,9 +20,8 @@ export const MobileFooterCSS = styled.div`
   li {
     margin-bottom: 1em;
   }
-  li:first-of-type {
-    font-size: 16px;
-    font-weight: 500;
+  h2 {
+    font-weight: 250;
   }
   ${media.bigDesktop`
     display: none;
