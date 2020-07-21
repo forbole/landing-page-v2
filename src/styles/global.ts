@@ -37,10 +37,6 @@ const GlobalCSS = createGlobalStyle`
     margin: 0 0 2rem 0;
   }
 
-  p{
-  
-  }
-
   a {
     color: rgba(13, 106, 255, 1);
     text-decoration: none;
@@ -53,10 +49,6 @@ const GlobalCSS = createGlobalStyle`
   img {
     width: 100%;
     height: auto;
-  }
-
-  .ui {
-  
   }
 `;
 
