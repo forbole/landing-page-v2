@@ -17,11 +17,10 @@ export const FooterItemsCSS = styled.div`
     opacity: 0.3;
   }
 
-  ${media.phone`
   li {
     margin-bottom: 1em;
   }
-  `};
+
   ${media.bigDesktop`
   display: flex;
   justify-content: center;
