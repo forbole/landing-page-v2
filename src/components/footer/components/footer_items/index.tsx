@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useTranslation } from "i18n";
 import { FooterItemsCSS } from "./styles";
 import {
   forboleFooterItems,
@@ -8,18 +9,19 @@ import {
 } from "../../config";
 
 const FooterItems = () => {
+  const { t } = useTranslation("footer");
   return (
     <FooterItemsCSS>
       <hr />
       <div>
         {forboleFooterItems.map((x, i) => {
           if (i == 0) {
-            return <li key={x.title}>{x.title}</li>;
+            return <li key={x.title}>{t(x.title)}</li>;
           } else {
             return (
               <Link href={x.to} key={x.display}>
                 <a>
-                  <li>{x.display}</li>
+                  <li>{t(x.display)}</li>
                 </a>
               </Link>
             );
@@ -30,11 +32,11 @@ const FooterItems = () => {
       <div>
         {bigDipperFooterItems.map((y, i) => {
           if (i == 0) {
-            return <li key={y.title}>{y.title}</li>;
+            return <li key={y.title}>{t(y.title)}</li>;
           } else {
             return (
               <a href={y.to} key={y.to}>
-                <li>{y.display}</li>
+                <li>{t(y.display)}</li>
               </a>
             );
           }
@@ -44,11 +46,11 @@ const FooterItems = () => {
       <div>
         {desmosFooterItems.map((z, i) => {
           if (i == 0) {
-            return <li key={z.title}>{z.title}</li>;
+            return <li key={z.title}>{t(z.title)}</li>;
           } else {
             return (
               <a href={z.to} key={z.to}>
-                <li>{z.display}</li>
+                <li>{t(z.display)}</li>
               </a>
             );
           }

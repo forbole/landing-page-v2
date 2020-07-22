@@ -1,40 +1,40 @@
 export const forboleFooterItems = [
   {
-    title: "Forbole",
+    title: "forbole",
   },
   {
-    display: "Stake Now",
+    display: "stakeNow",
     to: "/#stakeNow",
   },
   {
-    display: "Staking",
+    display: "staking",
     to: "/#staking",
   },
 ];
 
 export const bigDipperFooterItems = [
-  { title: "Big Dipper" },
+  { title: "bigDipper" },
 
   {
-    display: "Source Code",
+    display: "sourceCode",
     to: "https://github.com/forbole/big-dipper",
   },
   {
-    display: "Issues",
+    display: "issues",
     to: "https://github.com/forbole/big-dipper/issues",
   },
 ];
 
 export const desmosFooterItems = [
   {
-    title: "Desmos",
+    title: "desmos",
   },
   {
-    display: "Source Code",
+    display: "sourceCode",
     to: "https://github.com/desmos-labs",
   },
   {
-    display: "Issues",
+    display: "issues",
     to: "https://github.com/desmos-labs/desmos/issues",
   },
 ];
