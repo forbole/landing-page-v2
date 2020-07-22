@@ -11,7 +11,7 @@ export const ForboleCSS = styled.div`
   }
   p {
     font-size: 14px;
-    font-weight: 380;
+    font-weight: 300;
   }
 
   ${media.bigDesktop`

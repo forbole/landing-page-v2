@@ -29,7 +29,7 @@ export const SubscribeCSS = styled.div`
     color: rgba(255, 255, 255, 0.8);
     background: rgba(255, 255, 255, 0.3);
     font-size: 0.8rem;
-    font-weight: 350;
+    font-weight: 300;
   }
 
   h1 {
