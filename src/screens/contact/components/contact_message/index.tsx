@@ -1,16 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { ContactMessageCSS } from "./styles";
-import {
-  Button,
-  Form,
-  Grid,
-  Header,
-  Image,
-  Message,
-  Segment,
-  Input,
-} from "semantic-ui-react";
+import { Button, Form, Segment, Input } from "semantic-ui-react";
 
 const ContactMessage = () => {
   const { t } = useTranslation("contact");

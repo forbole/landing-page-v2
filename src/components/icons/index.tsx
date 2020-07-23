@@ -6,6 +6,8 @@ import Github from "./github";
 import Forbole from "./forbole";
 import Language from "./language.svg";
 import Arrow from "./arrow.svg";
+import Email from "./email.svg";
+import Location from "./location.svg";
 
 export {
   Telegram,
@@ -16,4 +18,6 @@ export {
   Forbole,
   Language,
   Arrow,
+  Email,
+  Location,
 };
