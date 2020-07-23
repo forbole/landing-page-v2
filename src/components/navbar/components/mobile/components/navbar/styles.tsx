@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { media, theme } from "@styles";
-import { IMobileNavBarIconCSS } from "./interfaces";
+import { IMobileNavBarIconCSS } from "../../interfaces";
 
 const { colors } = theme;
 
 export const MobileNavBarCSS = styled.div<IMobileNavBarIconCSS>`
   width: 100%;
-  background: pink;
   position: fixed;
   z-index: 100;
   top: 0;

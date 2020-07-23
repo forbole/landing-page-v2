@@ -1,6 +1,6 @@
 import React from "react";
 import { Forbole as ForboleLogo } from "@icons";
-import { INavBar } from "./interfaces";
+import { INavBar } from "../../interfaces";
 import { MobileNavBarIconCSS, MobileNavBarCSS } from "./styles";
 
 const Navbar = (props: INavBar) => {

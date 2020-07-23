@@ -10,7 +10,7 @@ const MobileNav = () => {
   return (
     <MobileNavCSS>
       <Navbar isOpen={isOpen} toggle={toggle} />
-      <NavBody />
+      <NavBody isOpen={isOpen} toggle={toggle} />
     </MobileNavCSS>
   );
 };
