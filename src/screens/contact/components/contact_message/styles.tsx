@@ -44,4 +44,32 @@ export const ContactMessageCSS = styled.div`
     background-color: rgba(18, 113, 227, 0.43);
     width: 100%;
   }
+
+  .ui.segment {
+    border-radius: 0;
+  }
+  ${media.bigDesktop`
+  .nameField{
+    float: left;
+    width: 50%;
+  }
+  .emailField{
+    float: right;
+    width: 50%;
+  }
+  .messages {
+    margin-bottom: 5em;
+  }
+  .ui.input{
+    width: 97%;
+  }
+  .ui.button {
+    background-color: rgba(18, 113, 227, 0.43);
+    width: 7vw;
+    height: 4vh
+  }
+    button.ui.button {
+      margin: 1em 1em 1em 45em;
+  }
+  `}
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
-import { ContactHeader, ContactMessage } from "./components";
+import { ContactHeader, ContactMessage, ContactInfo } from "./components";
 import { ContactPageCSS } from "./styles";
 
 const Contact = () => {
@@ -11,7 +11,12 @@ const Contact = () => {
       <ContactPageCSS>
         <div className="background">
           <ContactHeader />
-          <ContactMessage />
+          <div className="left">
+            <ContactMessage />
+          </div>
+          <div className="right">
+            <ContactInfo />
+          </div>
         </div>
       </ContactPageCSS>
     </Layout>

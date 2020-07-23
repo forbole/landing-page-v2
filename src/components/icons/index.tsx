@@ -4,6 +4,8 @@ import Medium from "./medium";
 import Twitter from "./twitter";
 import Github from "./github";
 import Forbole from "./forbole";
+import LinkedIn from "./linkedIn";
+import YouTube from "./youtube";
 import Language from "./language.svg";
 import Arrow from "./arrow.svg";
 import Email from "./email.svg";
@@ -16,6 +18,8 @@ export {
   Twitter,
   Github,
   Forbole,
+  LinkedIn,
+  YouTube,
   Language,
   Arrow,
   Email,

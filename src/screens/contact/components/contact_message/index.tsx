@@ -10,10 +10,14 @@ const ContactMessage = () => {
       <Form>
         <Segment raised>
           <h2>{t("formHeading")}</h2>
-          <p>{t("name")}</p>
-          <Input transparent placeholder="" />
-          <p>{t("email")}</p>
-          <Input transparent placeholder="" />
+          <div className="nameField">
+            <p>{t("name")}</p>
+            <Input transparent placeholder="" />
+          </div>
+          <div className="emailField">
+            <p>{t("email")}</p>
+            <Input transparent placeholder="" />
+          </div>
           <p className="messages">{t("messages")}</p>
           <Input transparent placeholder="" />
           <Button>{t("submit")}</Button>
