@@ -35,7 +35,7 @@ export const navItems = [
 
 export const mapLanguages = {
   en: "English",
-  zht: "中文",
+  // zht: "中文",
 };
 
 const languageKeys = Object.keys(mapLanguages);

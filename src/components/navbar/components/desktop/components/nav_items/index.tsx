@@ -24,7 +24,7 @@ const NavItems = () => {
 
   return (
     <NavItemsCSS>
-      {navItems.map((x) => (
+      {navItems.slice(1).map((x) => (
         <Link href={x.link} key={x.display}>
           <a className={classNames({ active: router.pathname === x.link })}>
             {t(x.display)}
