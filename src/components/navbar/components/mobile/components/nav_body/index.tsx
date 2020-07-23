@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { useTransition } from "react-spring";
 import { useTranslation, i18n } from "i18n";
-import { navItems, availableLanguages } from "@src/components/navbar/config";
+import { navItems, availableLanguages, mapLanguages } from "@src/components/navbar/config";
 import { useShowAvailableLanguages } from "@src/components/navbar/hooks";
 import { INavBar } from "../../interfaces";
 import { NavBodyCSS, LanguageContainerCSS } from "./styles";
@@ -12,15 +12,15 @@ const NavBody = (props: INavBar) => {
   const { isOpen } = props;
   const { showLanguage, toggleShowLanguage } = useShowAvailableLanguages();
   const { t } = useTranslation("nav");
-  const currentLanguage: string = i18n.language || "en";
+  const currentLanguage: string = mapLanguages[i18n.language || "en"];
 
   const languageTransitions: any = useTransition(showLanguage, null, {
-    enter: (item) => async (next: any, cancel: any) => {
+    enter: () => async (next: any) => {
       await next({ display: "block" });
       await next({ opacity: "1" });
       await next({ maxHeight: "500px" });
     },
-    leave: (item: any) => async (next: any, cancel: any) => {
+    leave: () => async (next: any) => {
       await next({ maxHeight: "0" });
       await next({ opacity: "0" });
       await next({ display: "none" });
@@ -31,11 +31,11 @@ const NavBody = (props: INavBar) => {
   });
 
   const displayTransitions: any = useTransition(isOpen, null, {
-    enter: (item: any) => async (next, cancel) => {
+    enter: () => async (next) => {
       await next({ display: "block" });
       await next({ opacity: "1" });
     },
-    leave: (item: any) => async (next, cancel) => {
+    leave: () => async (next) => {
       await next({ opacity: "0" });
       await next({ display: "none" });
     },
@@ -65,7 +65,7 @@ const NavBody = (props: INavBar) => {
                 {t("language")}
               </div>
               <div className="select-language" onClick={toggleShowLanguage}>
-                {t(currentLanguage)}
+                {currentLanguage}
                 <span>
                   <ArrowIcon />
                 </span>
@@ -76,7 +76,7 @@ const NavBody = (props: INavBar) => {
                 item && (
                   <LanguageContainerCSS style={props} key={key}>
                     {availableLanguages.map((x) => (
-                      <li key={x}>{t(x)}</li>
+                      <li key={x.key}>{x.display}</li>
                     ))}
                   </LanguageContainerCSS>
                 )

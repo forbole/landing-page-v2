@@ -33,7 +33,14 @@ export const navItems = [
   },
 ];
 
-export const availableLanguages = [
-  "en",
-  "zht",
-];
+export const mapLanguages = {
+  en: "English",
+  zht: "中文",
+};
+
+const languageKeys = Object.keys(mapLanguages);
+
+export const availableLanguages = languageKeys.map((x) => ({
+  key: x,
+  display: mapLanguages[x],
+}));
