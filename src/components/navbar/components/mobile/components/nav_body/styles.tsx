@@ -1,5 +1,8 @@
 import styled from "styled-components";
+import { mixins, theme } from "@styles";
 import { IMobileNavBarIconCSS as INavBody } from "../../interfaces";
+
+const { colors } = theme;
 
 export const NavBodyCSS = styled.div`
   position: fixed;
@@ -14,6 +17,32 @@ export const NavBodyCSS = styled.div`
 
     li {
       padding: 1rem 0;
+
+      &.space-between {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .language-globe {
+          ${mixins.flexCenter}
+          svg {
+            margin-right: 0.5rem;
+            path {
+              fill: ${colors.gray400};
+            }
+          }
+        }
+
+        .select-language {
+          ${mixins.flexCenter}
+          svg {
+            margin-left: 0.5rem;
+            path {
+              fill: ${colors.gray400};
+            }
+          }
+        }
+      }
     }
   }
 
