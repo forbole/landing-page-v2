@@ -2,14 +2,17 @@ import React from "react";
 import Link from "next/link";
 import { useTranslation, i18n } from "i18n";
 import { Github, Facebook } from "@icons";
-import { navItems } from "@src/components/navbar/config";
+import { navItems, availableLanguages } from "@src/components/navbar/config";
+import { useShowAvailableLanguages } from "@src/components/navbar/hooks";
 import { INavBar } from "../../interfaces";
-import { NavBodyCSS } from "./styles";
+import { NavBodyCSS, LanguageContainerCSS } from "./styles";
 
 const NavBody = (props: INavBar) => {
   const { isOpen } = props;
+  const { showLanguage, toggleShowLanguage } = useShowAvailableLanguages();
   const { t } = useTranslation("nav");
   const currentLanguage: string = i18n.language || "en";
+
   return (
     <NavBodyCSS>
       <ul>
@@ -28,9 +31,16 @@ const NavBody = (props: INavBar) => {
           </div>
           <div className="select-language">
             {t(currentLanguage)}
-            <Facebook />
+            <span onClick={toggleShowLanguage}>
+              <Facebook />
+            </span>
           </div>
         </li>
+        <LanguageContainerCSS showLanguage={showLanguage}>
+          {availableLanguages.map((x) => (
+            <li key={x}>{t(x)}</li>
+          ))}
+        </LanguageContainerCSS>
       </ul>
     </NavBodyCSS>
   );

@@ -14,13 +14,14 @@ export const MobileNavBarCSS = styled.div<IMobileNavBarIconCSS>`
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  background: ${(props) => (props.isOpen ? "white" : "transparent")};
+  transition: 0.3s;
 
   svg {
     width: 100px;
 
     path {
       fill: ${(props) => (props.isOpen ? colors.forboleRed : "white")};
-      transition: 0.3s;
     }
   }
 `;

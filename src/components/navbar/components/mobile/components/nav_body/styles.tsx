@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import { mixins, theme } from "@styles";
-import { IMobileNavBarIconCSS as INavBody } from "../../interfaces";
+import { IMobileNavBarIconCSS as INavBody, IShowLanguage } from "../../interfaces";
 
 const { colors } = theme;
 
 export const NavBodyCSS = styled.div`
   position: fixed;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: white;
   z-index: 99;
   padding: calc(1rem + 50px) 1rem 1rem;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
   ul {
     list-style-type: none;
@@ -58,4 +62,9 @@ export const NavBodyCSS = styled.div`
     margin: 1em 0;
     padding: 0;
   }
+`;
+
+export const LanguageContainerCSS = styled.div<IShowLanguage>`
+  opacity: ${(props) => (props.showLanguage ? "0" : "1")};
+  transition: 0.3s;
 `;

@@ -7,3 +7,7 @@ export interface INavBar {
   isOpen: boolean;
   toggle(): void;
 }
+
+export interface IShowLanguage {
+  showLanguage: boolean;
+}

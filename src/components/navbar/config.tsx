@@ -32,3 +32,8 @@ export const navItems = [
     link: "/contact",
   },
 ];
+
+export const availableLanguages = [
+  "en",
+  "zht",
+];
