@@ -18,5 +18,5 @@ export const ContactPageCSS = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  height: 80vh;
+  height: 200vh;
 `;

@@ -25,14 +25,9 @@ const ContactMessage = () => {
           <Input transparent placeholder="" />
           <p className="messages">{t("messages")}</p>
           <Input transparent placeholder="" />
-          <Button color="teal" fluid size="large">
-            Login
-          </Button>
+          <Button>{t("submit")}</Button>
         </Segment>
       </Form>
-      <Message>
-        New to us? <a href="#">Sign Up</a>
-      </Message>
     </ContactMessageCSS>
   );
 };

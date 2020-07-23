@@ -34,4 +34,14 @@ export const ContactMessageCSS = styled.div`
   .ui.transparent.input > textarea {
     border-color: transparent transparent rgba(0, 0, 0, 0.3) !important;
   }
+  button.ui.button {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  .ui.button {
+    background-color: rgba(18, 113, 227, 0.43);
+    width: 100%;
+  }
 `;
