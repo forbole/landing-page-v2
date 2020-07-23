@@ -13,13 +13,22 @@ export const ContactMessageCSS = styled.div`
   }
   h2 {
     font-weight: 400;
-    font-size: 1.275rem;
+    font-size: 1.275em;
     height: 1vh;
     text-align: left;
     width: 100%;
   }
   p {
     color: rgba(112, 112, 112, 1);
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+  }
+  .ui.input {
+    width: 90%;
+    margin-bottom: 2em;
+  }
+  .messages {
+    margin-bottom: 2.5em;
   }
   .ui.transparent.input > input,
   .ui.transparent.input > textarea {
