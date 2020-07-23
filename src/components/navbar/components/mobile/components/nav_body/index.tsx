@@ -7,7 +7,7 @@ import { navItems, availableLanguages } from "@src/components/navbar/config";
 import { useShowAvailableLanguages } from "@src/components/navbar/hooks";
 import { INavBar } from "../../interfaces";
 import { NavBodyCSS, LanguageContainerCSS } from "./styles";
-import { Language as LanguageIcon } from "@icons";
+import { Language as LanguageIcon, Arrow as ArrowIcon } from "@icons";
 
 const NavBody = (props: INavBar) => {
   const { isOpen } = props;
@@ -47,10 +47,10 @@ const NavBody = (props: INavBar) => {
             <LanguageIcon />
             {t("language")}
           </div>
-          <div className="select-language">
+          <div className="select-language" onClick={toggleShowLanguage}>
             {t(currentLanguage)}
-            <span onClick={toggleShowLanguage}>
-              <Facebook />
+            <span>
+              <ArrowIcon />
             </span>
           </div>
         </li>

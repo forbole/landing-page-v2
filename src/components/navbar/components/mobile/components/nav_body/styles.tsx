@@ -27,6 +27,7 @@ export const NavBodyCSS = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        color: rgba(65, 65, 65, 1);
 
         .language-globe {
           ${mixins.flexCenter}
