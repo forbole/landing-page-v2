@@ -4,5 +4,6 @@ import Medium from "./medium";
 import Twitter from "./twitter";
 import Github from "./github";
 import Forbole from "./forbole";
+import Language from "./language.svg";
 
-export { Telegram, Facebook, Medium, Twitter, Github, Forbole };
+export { Telegram, Facebook, Medium, Twitter, Github, Forbole, Language };

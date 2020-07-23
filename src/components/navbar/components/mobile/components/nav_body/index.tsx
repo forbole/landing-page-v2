@@ -2,11 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { useTransition } from "react-spring";
 import { useTranslation, i18n } from "i18n";
-import { Github, Facebook } from "@icons";
+import { Facebook } from "@icons";
 import { navItems, availableLanguages } from "@src/components/navbar/config";
 import { useShowAvailableLanguages } from "@src/components/navbar/hooks";
 import { INavBar } from "../../interfaces";
 import { NavBodyCSS, LanguageContainerCSS } from "./styles";
+import { Language as LanguageIcon } from "@icons";
 
 const NavBody = (props: INavBar) => {
   const { isOpen } = props;
@@ -43,7 +44,7 @@ const NavBody = (props: INavBar) => {
         <hr />
         <li className="space-between">
           <div className="language-globe">
-            <Github />
+            <LanguageIcon />
             {t("language")}
           </div>
           <div className="select-language">

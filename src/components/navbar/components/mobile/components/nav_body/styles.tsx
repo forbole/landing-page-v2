@@ -1,10 +1,7 @@
 import styled from "styled-components";
 import { animated } from "react-spring";
 import { mixins, theme } from "@styles";
-import {
-  IMobileNavBarIconCSS as INavBody,
-  IShowLanguage,
-} from "../../interfaces";
+import { IShowLanguage } from "../../interfaces";
 
 const { colors } = theme;
 
