@@ -5,7 +5,7 @@ import { IShowLanguage } from "../../interfaces";
 
 const { colors } = theme;
 
-export const NavBodyCSS = styled.div`
+export const NavBodyCSS = styled(animated.div)`
   position: fixed;
   width: 100%;
   min-height: 100vh;

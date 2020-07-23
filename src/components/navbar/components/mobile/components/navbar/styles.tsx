@@ -15,7 +15,7 @@ export const MobileNavBarCSS = styled.div<IMobileNavBarIconCSS>`
   justify-content: space-between;
   padding: 0 1rem;
   background: ${(props) => (props.isOpen ? "white" : "transparent")};
-  transition: 0.3s;
+  transition: 0.3s, background 1s;
 
   svg {
     width: 100px;
