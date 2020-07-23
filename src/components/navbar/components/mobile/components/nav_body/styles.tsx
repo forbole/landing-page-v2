@@ -1,6 +1,10 @@
 import styled from "styled-components";
+import { animated } from "react-spring";
 import { mixins, theme } from "@styles";
-import { IMobileNavBarIconCSS as INavBody, IShowLanguage } from "../../interfaces";
+import {
+  IMobileNavBarIconCSS as INavBody,
+  IShowLanguage,
+} from "../../interfaces";
 
 const { colors } = theme;
 
@@ -10,7 +14,7 @@ export const NavBodyCSS = styled.div`
   min-height: 100vh;
   background: white;
   z-index: 99;
-  padding: calc(1rem + 50px) 1rem 1rem;
+  padding: calc(1rem + 50px) 1rem 2rem;
   top: 0;
   bottom: 0;
   overflow-y: scroll;
@@ -64,7 +68,6 @@ export const NavBodyCSS = styled.div`
   }
 `;
 
-export const LanguageContainerCSS = styled.div<IShowLanguage>`
-  opacity: ${(props) => (props.showLanguage ? "0" : "1")};
-  transition: 0.3s;
+export const LanguageContainerCSS = styled(animated.div) <IShowLanguage>`
+  overflow: hidden;
 `;

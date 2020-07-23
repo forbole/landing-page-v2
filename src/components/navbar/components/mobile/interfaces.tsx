@@ -10,4 +10,6 @@ export interface INavBar {
 
 export interface IShowLanguage {
   showLanguage: boolean;
+  props?: any;
+  key?: any;
 }

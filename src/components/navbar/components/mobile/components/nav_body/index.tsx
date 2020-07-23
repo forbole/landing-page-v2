@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { useTransition } from "react-spring";
 import { useTranslation, i18n } from "i18n";
 import { Github, Facebook } from "@icons";
 import { navItems, availableLanguages } from "@src/components/navbar/config";
@@ -12,6 +13,22 @@ const NavBody = (props: INavBar) => {
   const { showLanguage, toggleShowLanguage } = useShowAvailableLanguages();
   const { t } = useTranslation("nav");
   const currentLanguage: string = i18n.language || "en";
+
+  const transitions: any = useTransition(showLanguage, null, {
+    enter: (item) => async (next: any, cancel: any) => {
+      await next({ display: "block" });
+      await next({ opacity: "1" });
+      await next({ maxHeight: "500px" });
+    },
+    leave: (item: any) => async (next: any, cancel: any) => {
+      await next({ maxHeight: "0" });
+      await next({ opacity: "0" });
+      await next({ display: "none" });
+    },
+    from: {
+      opacity: "0",
+    },
+  });
 
   return (
     <NavBodyCSS>
@@ -36,11 +53,16 @@ const NavBody = (props: INavBar) => {
             </span>
           </div>
         </li>
-        <LanguageContainerCSS showLanguage={showLanguage}>
-          {availableLanguages.map((x) => (
-            <li key={x}>{t(x)}</li>
-          ))}
-        </LanguageContainerCSS>
+        {transitions.map(
+          ({ item, key, props }: any) =>
+            item && (
+              <LanguageContainerCSS style={props} key={key}>
+                {availableLanguages.map((x) => (
+                  <li key={x}>{t(x)}</li>
+                ))}
+              </LanguageContainerCSS>
+            )
+        )}
       </ul>
     </NavBodyCSS>
   );
