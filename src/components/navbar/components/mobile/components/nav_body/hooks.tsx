@@ -14,7 +14,7 @@ export const useShowAvailableLanguages = () => {
   };
 };
 
-export const useTransitionAnimation = ({ showLanguage, isOpen, }) => {
+export const useTransitionAnimation = ({ showLanguage, isOpen }) => {
   const languageTransitions: any = useTransition(showLanguage, null, {
     enter: () => async (next: any) => {
       await next({ display: "block" });
@@ -30,7 +30,6 @@ export const useTransitionAnimation = ({ showLanguage, isOpen, }) => {
       opacity: "0",
     },
   });
-
 
   const displayTransitions: any = useTransition(isOpen, null, {
     enter: () => async (next) => {
@@ -51,5 +50,5 @@ export const useTransitionAnimation = ({ showLanguage, isOpen, }) => {
   return {
     languageTransitions,
     displayTransitions,
-  }
-}
+  };
+};
