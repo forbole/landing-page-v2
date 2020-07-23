@@ -1,30 +1,42 @@
 import styled from "styled-components";
-import { media } from "@styles";
+import { media, theme } from "@styles";
 import { IMobileNavBarIconCSS } from "./interfaces";
 
-export const MobileNavBarCSS = styled.div`
+const { colors } = theme;
+
+export const MobileNavBarCSS = styled.div<IMobileNavBarIconCSS>`
   width: 100%;
   background: pink;
   position: fixed;
   z-index: 100;
   top: 0;
-  height: 100px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+
+  svg {
+    width: 100px;
+
+    path {
+      fill: ${(props) => (props.isOpen ? colors.forboleRed : "white")};
+      transition: 0.3s;
+    }
+  }
 `;
 
 export const MobileNavBarIconCSS = styled.div<IMobileNavBarIconCSS>`
-  width: 27px;
+  width: 20px;
   z-index: 8;
-  // position: fixed;
-  // top: 1.5rem;
-  // right: 1rem;
   &:after,
   &:before,
   > div {
-    background-color: black;
+    background-color: white;
     border-radius: 10px;
     content: "";
     display: block;
-    height: 3px;
+    height: 2px;
     margin: 4px 0;
     transition: all 0.4s ease-in-out;
   }
@@ -33,15 +45,17 @@ export const MobileNavBarIconCSS = styled.div<IMobileNavBarIconCSS>`
     props.isOpen
       ? `
       &:before {
-        transform: translateY(7px) rotate(137deg)
+        transform: translateY(7px) rotate(137deg);
+        background-color: black;
       }
 
       &:after {
-        transform: translateY(-7px) rotate(-137deg)
+        transform: translateY(-5px) rotate(-140deg);
+        background-color: black;
       }
 
       > div {
-        transform: scale(0)
+        transform: scale(0);
       }
     `
       : ""}

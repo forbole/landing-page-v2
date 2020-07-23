@@ -1,5 +1,5 @@
 export interface IMobileNavBarIconCSS {
-  onClick: any;
+  onClick?: any;
   isOpen: boolean;
 }
 

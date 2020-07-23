@@ -10,6 +10,7 @@ const theme = {
     gray400: "rgba(149, 149, 149, 1)",
     gray100: "rgba(247, 247, 247, 1)",
     footer: "rgba(26, 26, 44, 1)",
+    forboleRed: "rgba(189, 8, 28, 1)",
   },
   fonts: {
     hind: "Hind Madurai, sans-serif",
