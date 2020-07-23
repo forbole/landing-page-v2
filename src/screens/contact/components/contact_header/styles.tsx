@@ -9,7 +9,7 @@ export const ContactHeaderCSS = styled.div`
   align-items: left;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 20vh;
+  margin-top: 15vh;
   margin-bottom: 1rem;
   h2 {
     color: white;

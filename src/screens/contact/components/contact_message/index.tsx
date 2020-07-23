@@ -21,6 +21,10 @@ const ContactMessage = () => {
           <h2>{t("formHeading")}</h2>
           <p>{t("name")}</p>
           <Input transparent placeholder="" />
+          <p>{t("email")}</p>
+          <Input transparent placeholder="" />
+          <p>{t("messages")}</p>
+          <Input transparent placeholder="" />
           <Form.Input
             fluid
             icon="lock"
@@ -28,7 +32,6 @@ const ContactMessage = () => {
             placeholder="Password"
             type="password"
           />
-
           <Button color="teal" fluid size="large">
             Login
           </Button>
