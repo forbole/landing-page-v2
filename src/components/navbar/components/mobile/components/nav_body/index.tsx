@@ -1,9 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import { useTransition } from "react-spring";
 import { useTranslation, i18n } from "i18n";
-import { navItems, availableLanguages, mapLanguages } from "@src/components/navbar/config";
-import { useShowAvailableLanguages } from "@src/components/navbar/hooks";
+import {
+  navItems,
+  availableLanguages,
+  mapLanguages,
+} from "@src/components/navbar/config";
+import { useShowAvailableLanguages, useTransitionAnimation } from "./hooks";
 import { INavBar } from "../../interfaces";
 import { NavBodyCSS, LanguageContainerCSS } from "./styles";
 import { Language as LanguageIcon, Arrow as ArrowIcon } from "@icons";
@@ -11,40 +14,12 @@ import { Language as LanguageIcon, Arrow as ArrowIcon } from "@icons";
 const NavBody = (props: INavBar) => {
   const { isOpen } = props;
   const { showLanguage, toggleShowLanguage } = useShowAvailableLanguages();
+  const { languageTransitions, displayTransitions } = useTransitionAnimation({
+    isOpen,
+    showLanguage,
+  });
   const { t } = useTranslation("nav");
   const currentLanguage: string = mapLanguages[i18n.language || "en"];
-
-  const languageTransitions: any = useTransition(showLanguage, null, {
-    enter: () => async (next: any) => {
-      await next({ display: "block" });
-      await next({ opacity: "1" });
-      await next({ maxHeight: "500px" });
-    },
-    leave: () => async (next: any) => {
-      await next({ maxHeight: "0" });
-      await next({ opacity: "0" });
-      await next({ display: "none" });
-    },
-    from: {
-      opacity: "0",
-    },
-  });
-
-  const displayTransitions: any = useTransition(isOpen, null, {
-    enter: () => async (next) => {
-      await next({ display: "block" });
-      await next({ opacity: "1" });
-    },
-    leave: () => async (next) => {
-      await next({ opacity: "0" });
-      await next({ display: "none" });
-    },
-    from: {
-      display: "none",
-      opacity: "0",
-    },
-    option: { mass: 1, tension: 500, friction: 18 },
-  });
 
   return displayTransitions.map(
     ({ item, key, props }: any) =>

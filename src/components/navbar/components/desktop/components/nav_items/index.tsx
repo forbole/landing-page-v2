@@ -12,7 +12,6 @@ import {
 import { NavItemsCSS } from "./styles";
 import { formatLanguageList } from "./config";
 
-
 const NavItems = () => {
   const router = useRouter();
   const { t } = useTranslation("nav");
