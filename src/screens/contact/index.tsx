@@ -9,9 +9,7 @@ const Contact = () => {
   return (
     <Layout title={t("title")}>
       <ContactPageCSS>
-        <div className="background">
-          <ContactHeader />
-        </div>
+        <ContactHeader />
         <div className="wrapper">
           <div className="left">
             <ContactMessage />
