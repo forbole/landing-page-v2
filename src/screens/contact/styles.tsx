@@ -15,11 +15,17 @@ export const ContactPageCSS = styled.div`
     background-position: center center;
     background-size: cover;
   }
+  .wrapper {
+    background-color: white;
+    padding-bottom: 5rem;
+  }
+  .left {
+    margin-top: -5rem;
+  }
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  height: 170vh;
   ${media.bigDesktop`
   .background{
     align-items: center;

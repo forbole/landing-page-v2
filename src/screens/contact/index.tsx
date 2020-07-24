@@ -11,13 +11,13 @@ const Contact = () => {
       <ContactPageCSS>
         <div className="background">
           <ContactHeader />
-          <div className="wrapper">
-            <div className="left">
-              <ContactMessage />
-            </div>
-            <div className="right">
-              <ContactInfo />
-            </div>
+        </div>
+        <div className="wrapper">
+          <div className="left">
+            <ContactMessage />
+          </div>
+          <div className="right">
+            <ContactInfo />
           </div>
         </div>
       </ContactPageCSS>
