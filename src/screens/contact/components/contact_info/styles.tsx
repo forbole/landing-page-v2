@@ -66,5 +66,45 @@ export const ContactInfoCSS = styled.div`
     }
   }
   ${media.bigDesktop`
-  margin-top: 0;`}
+  margin-top: 0;
+  h2{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 1.5em;
+  }
+  div {
+      padding: 2em;
+  }
+  .ui.segment {
+    height: 557px;
+  }
+  span {
+    padding: 30em;
+}
+  .address,
+  .emailInfo {
+    margin-left: 0.5em;
+    width: auto;
+  }
+  .location{
+      margin: 0.2em 2em 5em;
+  }
+  .address {
+    margin: 0 2em 2em 5em;
+    font-size: 1.1rem;
+}
+  .email {
+    margin: 0.3em 2em 5em;
+  }
+  .emailInfo {
+    margin: 0 2em 2em 5em;
+    font-size: 1.1rem;
+  }
+
+  .socialMedia {
+    margin-left: 2em;
+  a {
+    padding-right: 1.5vw;
+  }
+}`}
 `;

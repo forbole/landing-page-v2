@@ -23,16 +23,13 @@ export const ContactPageCSS = styled.div`
   ${media.bigDesktop`
   .background{
     align-items: center;
+    height: 50vh;
   }
-  .left{
-    float: left;
-    width: 55%;
-    margin: 1em 0 4em 4em;
-  }
-  .right{
-    float: right;
-    width: 37%;
-    margin: 1em 5.6em 1em 0;
+  height: 100vh;
+  .wrapper {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin: 2em 15em 2em;
   }
   `}
 `;

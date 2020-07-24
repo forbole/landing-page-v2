@@ -20,4 +20,6 @@ export const ContactHeaderCSS = styled.div`
     color: white;
     font-weight: 100;
   }
+  ${media.bigDesktop`
+  padding: 1rem 15rem 1rem;`}
 `;

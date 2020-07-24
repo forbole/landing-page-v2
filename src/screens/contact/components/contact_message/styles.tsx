@@ -60,6 +60,13 @@ export const ContactMessageCSS = styled.div`
   .messages {
     margin-bottom: 5em;
   }
+  h2 {
+    margin-bottom: 3em;
+  }
+  .ui.segment {
+    height: 557px;
+    padding: 3.5em;
+  }
   .ui.input{
     width: 97%;
   }
@@ -69,7 +76,7 @@ export const ContactMessageCSS = styled.div`
     height: 4vh
   }
     button.ui.button {
-      margin: 1em 1em 1em 45em;
+      margin: 1em 1em 1em 27em;
   }
   `}
 `;
