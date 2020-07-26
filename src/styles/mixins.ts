@@ -11,6 +11,9 @@ const mixins = {
     align-items: center;
     justify-content: space-between;
   `,
+  desktopMaxWidth: css`
+    max-width: 1200px;
+  `,
 };
 
 export default mixins;
