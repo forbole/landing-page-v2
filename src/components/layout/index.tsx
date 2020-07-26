@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
 import { NavBar, Footer } from "@components";
-import { LayoutCSS } from "./styles";
+import { LayoutCSS, MainContentCSS } from "./styles";
 
 type Props = {
   children?: ReactNode;
@@ -12,7 +12,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
     <LayoutCSS>
       <Head>
         <title>{title}</title>
-        {/* wingman edit later */}
+        {/*  edit later */}
         <meta name="og:type" content="website" />
         <meta name="description" content="" />
         <meta name="og:title" content="Forbole" />
@@ -23,10 +23,10 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
         <meta name="og:image" content="" />
       </Head>
       <NavBar />
-      {children}
+      <MainContentCSS>{children}</MainContentCSS>
       <Footer />
     </LayoutCSS>
-  )
+  );
 };
 
 export default Layout;
