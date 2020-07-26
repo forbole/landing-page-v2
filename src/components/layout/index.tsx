@@ -14,12 +14,6 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
     <LayoutCSS>
       <Head>
         <title>{title}</title>
-        <meta property="og:title" content={title} key="title" />
-        <meta
-          property="og:url"
-          content={`${process.env.URL}${router.asPath}`}
-          key="url"
-        />
       </Head>
       <NavBar />
       {children}
