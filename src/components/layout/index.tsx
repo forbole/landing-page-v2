@@ -24,11 +24,9 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
         <meta name="og:description" content="" />
         <meta name="og:image" content="" />
       </Head>
-      <body>
-        <NavBar />
-        <MainContentCSS>{children}</MainContentCSS>
-        <Footer />
-      </body>
+      <NavBar />
+      <MainContentCSS>{children}</MainContentCSS>
+      <Footer />
     </>
   );
 };
