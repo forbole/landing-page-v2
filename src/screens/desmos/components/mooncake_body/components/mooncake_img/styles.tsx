@@ -3,7 +3,6 @@ import { media } from "@styles";
 
 export const BodyImageContainerCSS = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-around;
   margin-bottom: 1rem;
 
