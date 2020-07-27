@@ -19,7 +19,9 @@ const MooncakeDetails = () => {
         <p>{t("mooncakeBodyThree")}</p>
       </MooncakeBodyCSS>
       <ButtonsCSS>
-        <AppStoreButton />
+        <span>
+          <AppStoreButton />
+        </span>
         <div className="resize">
           <GooglePlayButton />
         </div>
