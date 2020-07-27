@@ -12,6 +12,18 @@ export const ContentHeaderCSS = styled.div`
   p {
     color: white;
   }
+  .social-media-container {
+    margin-bottom: 0.5rem;
+    a {
+      margin-right: 0.5rem;
+
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
+  }
 
   ${media.bigDesktop`
     h2 {
