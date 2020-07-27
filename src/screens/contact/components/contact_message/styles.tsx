@@ -6,9 +6,10 @@ export const ContactMessageCSS = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  padding-top: 2rem;
   .ui.form {
     width: 90vw;
-    margin-top: -2rem;
+    margin-top: -0.5rem;
   }
   h2 {
     font-weight: 400;
@@ -76,6 +77,9 @@ export const ContactMessageCSS = styled.div`
   }
     button.ui.button {
       margin: 1em 1em 1em 27em;
-  }
+  }`}
+  ${media.tablet`
+    padding-top: 0;
+  
   `}
 `;

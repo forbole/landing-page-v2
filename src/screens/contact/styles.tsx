@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { media } from "@styles";
 
 export const ContactPageCSS = styled.div`
+  margin: 0 -1rem -3rem;
   .wrapper {
     background-color: white;
     padding-bottom: 5rem;

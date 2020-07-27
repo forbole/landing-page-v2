@@ -22,17 +22,25 @@ export const ContactHeaderCSS = styled.div`
     font-weight: 300;
     margin-bottom: ${headerMargin.small};
     margin-top: 4rem;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
   }
   p {
     color: white;
     font-weight: 100;
-    margin-left: 2rem;
+    margin-left: 1.5rem;
   }
   ${media.bigDesktop`
   padding: 1rem 15rem 1rem;
   .background{
     align-items: center;
     height: 50vh;
+  }`}
+  ${media.tablet`
+  h2 {
+    margin-top: 15rem;
+      margin-left: 3rem;
+  }
+  p {
+      margin-left: 3rem;
   }`}
 `;
