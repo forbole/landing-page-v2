@@ -6,6 +6,8 @@ import Github from "./github";
 import Forbole from "./forbole";
 import Language from "./language.svg";
 import Arrow from "./arrow.svg";
+import AppStoreButton from "./app_store_button.svg";
+import GooglePlayButton from "./google_play_badge.svg";
 
 export {
   Telegram,
@@ -16,4 +18,6 @@ export {
   Forbole,
   Language,
   Arrow,
+  AppStoreButton,
+  GooglePlayButton,
 };
