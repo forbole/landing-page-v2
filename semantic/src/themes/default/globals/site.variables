@@ -130,7 +130,8 @@
 @pageBackground      : #FFFFFF;
 @pageOverflowX       : hidden;
 
-@lineHeight          : 1.4285em;
+/* @lineHeight          : 1.4285em; */
+@lineHeight          : 1.7;
 @textColor           : rgba(0, 0, 0, 0.87);
 
 /*-------------------
