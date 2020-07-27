@@ -11,6 +11,16 @@ const mixins = {
     align-items: center;
     justify-content: space-between;
   `,
+  desktopMaxWidth: css`
+    max-width: 1200px;
+  `,
+  cancelMobilePadding: css`
+    margin: 0 -1rem -3rem;
+  `,
+  cancelMobileHorizontalPadding: css`
+    margin-left: -1rem;
+    margin-right: -1rem;
+  `,
 };
 
 export default mixins;

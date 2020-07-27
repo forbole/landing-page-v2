@@ -1,24 +1,34 @@
 import React, { ReactNode } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { NavBar, Footer } from "@components";
-import { LayoutCSS } from "./styles";
+import { MainContentCSS } from "./styles";
 
 type Props = {
   children?: ReactNode;
   title?: string;
 };
-
-const Layout = ({ children, title = "This is the default title" }: Props) => (
-  <LayoutCSS>
-    <Head>
-      <title>{title}</title>
-      <meta charSet="utf-8" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
-    <NavBar />
-    {children}
-    <Footer />
-  </LayoutCSS>
-);
+const Layout = ({ children, title = "This is the default title" }: Props) => {
+  const router = useRouter();
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+        {/* refactor this in to document later */}
+        <meta name="og:type" content="website" />
+        <meta name="description" content="" />
+        <meta name="og:title" content="Forbole" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="og:url" content={`${process.env.URL}${router.pathname}`} />
+        <meta name="og:description" content="" />
+        <meta name="og:image" content="" />
+      </Head>
+      <NavBar />
+      <MainContentCSS>{children}</MainContentCSS>
+      <Footer />
+    </>
+  );
+};
 
 export default Layout;

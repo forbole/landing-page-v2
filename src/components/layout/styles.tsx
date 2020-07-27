@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import { media } from "@styles";
 
-export const LayoutCSS = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100%;
+export const MainContentCSS = styled.div`
+  padding: 0 1rem 3rem;
+
+  ${media.bigDesktop`
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  `}
 `;

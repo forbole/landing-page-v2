@@ -17,7 +17,6 @@ const NavItems = () => {
   const { t } = useTranslation("nav");
   const options = formatLanguageList(availableLanguages, t);
   const handleDropdownOnClick = (e: any, data: any) => {
-    console.log("clicked", data.value);
     i18n.changeLanguage(data.value);
   };
 
