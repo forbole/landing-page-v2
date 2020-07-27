@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "@styles";
+import { media, mixins } from "@styles";
 
 export const MobileCSS = styled.div`
   ${media.bigDesktop`
@@ -8,6 +8,8 @@ export const MobileCSS = styled.div`
 `;
 
 export const HeroCSS = styled.div`
+  ${mixins.cancelMobileHorizontalPadding}
+  padding-left: 1rem;
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.68),
@@ -24,6 +26,7 @@ export const HeroCSS = styled.div`
 
   .visit-website {
     color: white;
+    font-weight: 300;
   }
 
   .content-container {

@@ -7,10 +7,23 @@ export const ContentHeaderCSS = styled.div`
   h2 {
     color: white;
     margin-bottom: ${headerMargin.small};
+    font-weight: 500;
   }
 
   p {
     color: white;
+  }
+  .social-media-container {
+    margin-bottom: 0.5rem;
+    a {
+      margin-right: 0.5rem;
+
+      svg {
+        path {
+          fill: white;
+        }
+      }
+    }
   }
 
   ${media.bigDesktop`

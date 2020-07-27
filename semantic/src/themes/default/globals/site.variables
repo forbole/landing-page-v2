@@ -9,11 +9,11 @@
 --------------------*/
 
 @fontName          : 'Hind Madurai';
-
+@urlFontName       : 'Hind+Madurai';
 @headerFont        : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 @pageFont          : @fontName, 'Helvetica Neue', Arial, Helvetica, sans-serif;
 
-@googleFontName    : @fontName;
+@googleFontName    : @urlFontName;
 @importGoogleFonts : true;
 @googleFontSizes   : '400,700,400italic,700italic';
 @googleSubset      : 'latin';
@@ -130,7 +130,8 @@
 @pageBackground      : #FFFFFF;
 @pageOverflowX       : hidden;
 
-@lineHeight          : 1.4285em;
+/* @lineHeight          : 1.4285em; */
+@lineHeight          : 1.7;
 @textColor           : rgba(0, 0, 0, 0.87);
 
 /*-------------------

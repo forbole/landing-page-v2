@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { ContentHeaderCSS } from "./styles";
+import { socialMedias } from "./config";
 
 const ContentHeader = () => {
   const { t } = useTranslation("desmos");
@@ -8,7 +9,13 @@ const ContentHeader = () => {
     <ContentHeaderCSS>
       <h2>{t("desmos")}</h2>
       <p>{t("heroDetails")}</p>
-      <p>-- Social media --</p>
+      <div className="social-media-container">
+        {socialMedias.map((x, i) => (
+          <a href={x.url} key={i}>
+            {x.component}
+          </a>
+        ))}
+      </div>
     </ContentHeaderCSS>
   );
 };
