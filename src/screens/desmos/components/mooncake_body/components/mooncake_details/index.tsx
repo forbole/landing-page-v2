@@ -20,7 +20,9 @@ const MooncakeDetails = () => {
       </MooncakeBodyCSS>
       <ButtonsCSS>
         <AppStoreButton />
-        <GooglePlayButton />
+        <div className="resize">
+          <GooglePlayButton />
+        </div>
       </ButtonsCSS>
     </>
   );

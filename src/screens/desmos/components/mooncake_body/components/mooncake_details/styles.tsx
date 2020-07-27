@@ -37,4 +37,11 @@ export const MooncakeBodyCSS = styled.div`
 
 export const ButtonsCSS = styled.div`
   display: flex;
+  align-items: center;
+
+  .resize {
+    svg {
+      width: 160px;
+    }
+  }
 `;
