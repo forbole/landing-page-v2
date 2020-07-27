@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { media, theme } from "@styles";
-import { CONTAINER_HEIGHT, CONTAINER_WIDTH } from "../../../../config";
+import { CONTAINER_HEIGHT, CONTAINER_WIDTH, CONTAINER_MIN_HEIGHT } from "../../../../config";
 
 const { colors } = theme;
 
@@ -27,6 +27,8 @@ export const DesmosBodyCSS = styled.div`
   width: ${CONTAINER_WIDTH};
   background: white;
   height: ${CONTAINER_HEIGHT};
+  min-height: ${CONTAINER_MIN_HEIGHT};
+  min-height:
   display: flex;
   flex-direction: column;
   justify-content: center;

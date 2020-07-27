@@ -8,15 +8,23 @@ export const BodyImageContainerCSS = styled.div`
   margin-bottom: 1rem;
 
   img {
-    width: 40%;
+    width: 45%;
   }
 
   ${media.tablet`
-  justify-content: center;
-  margin-bottom: 3rem;
+    justify-content: center;
+    margin-bottom: 3rem;
     img {
       max-width: 250px;
       margin: 0 0.5rem;
+    }
+  `}
+
+  ${media.bigDesktop`
+    margin-bottom: 0;
+    img {
+      width: 100%;
+      max-width: 250px;
     }
   `}
 `;

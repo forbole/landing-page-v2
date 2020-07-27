@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { media, theme } from "@styles";
-import { CONTAINER_HEIGHT, CONTAINER_WIDTH } from "../../../../config";
+import { CONTAINER_HEIGHT, CONTAINER_WIDTH, CONTAINER_MIN_HEIGHT } from "../../../../config";
 
 const { colors } = theme;
 
@@ -16,6 +16,7 @@ export const MooncakeBodyCSS = styled.div`
   background: white;
   height: ${CONTAINER_HEIGHT};
   width: ${CONTAINER_WIDTH};
+  min-height: ${CONTAINER_MIN_HEIGHT};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,9 +29,8 @@ export const MooncakeContentCSS = styled.div`
 `;
 
 export const MooncakeImgCSS = styled.div`
-  width: 80%;
-  max-width: 1000px;
   position: absolute;
-  right: -68%;
-  top: 15%;
+  right: -450px;
+  top: 20%;
+  max-height: 45vh;
 `;
