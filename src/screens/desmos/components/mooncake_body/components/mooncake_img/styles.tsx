@@ -8,6 +8,7 @@ export const BodyImageContainerCSS = styled.div`
 
   img {
     width: 45%;
+    height: 100%;
   }
 
   ${media.tablet`
