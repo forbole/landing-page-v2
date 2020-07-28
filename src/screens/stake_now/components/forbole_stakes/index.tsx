@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { ForboleStakesCSS, StakesDetailsContainerCSS } from "./styles";
 import HubDetail from "./components/hub_detail";
+import Chart from "./components/chart";
 import { dummyData } from "./config";
 const { cosmos } = dummyData;
 
@@ -11,7 +12,7 @@ const ForboleStakes = () => {
   return (
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
-      <p>graph here</p>
+      <Chart />
       <StakesDetailsContainerCSS>
         <HubDetail
           main
