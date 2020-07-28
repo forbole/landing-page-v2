@@ -1,7 +1,7 @@
-import Home from "@screens/home";
+import StakeNow from "@screens/stake_now";
 
-const IndexPage = () => {
-  return <Home />;
+const StakeNowPage = () => {
+  return <StakeNow />;
 };
 
-export default IndexPage;
+export default StakeNowPage;
