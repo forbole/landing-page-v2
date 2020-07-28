@@ -63,6 +63,10 @@ export const ContactMessageCSS = styled.div`
   h2 {
     margin-bottom: 3em;
   }
+  .ui.form {
+    width: 90%;
+    margin-top: 0;
+  }
   .ui.segment {
     height: 557px;
     padding: 3.5em;

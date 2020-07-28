@@ -73,6 +73,10 @@ export const ContactInfoCSS = styled.div`
   div {
       padding: 2em;
   }
+  .ui.form {
+    width: 47%;
+    margin-top: 0;
+  }
   .ui.segment {
     height: 557px;
   }

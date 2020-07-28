@@ -15,11 +15,19 @@ export const ContactPageCSS = styled.div`
   flex-direction: column;
   align-items: center;
   ${media.bigDesktop`
+  width: 100%;
   height: 100vh;
   .wrapper {
     display: grid;
     grid-template-columns: 60% 40%;
     margin: 2em 15em 2em;
+    justify-content: center;
+    justify-items: end;
+    padding-left: 5em;
+    .left {
+      margin-top: 0;
+    }
   }
+  
   `}
 `;
