@@ -1,6 +1,7 @@
 export const dummyData = {
   stakeAmount: 1298873168,
   cosmos: {
+    title: "cosmosHub",
     atom: 311266,
     usd: 1562345,
     perAtom: 4.58,

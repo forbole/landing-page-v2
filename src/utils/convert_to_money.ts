@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-export const convertToMoney = (num: any, decimal = 2) => {
+export const convertToMoney = (num: any, decimal = 0) => {
   if (!num) {
     return '';
   }
