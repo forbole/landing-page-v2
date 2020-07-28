@@ -15,12 +15,13 @@ const mixins = {
   desktopMaxWidth: css`
     max-width: 1200px;
   `,
-  // general padding wrapper across all components
+  // general padding across all components
   mobilePadding: css`
     padding: 1.5rem;
   `,
+  // general padding for last component before footer
   mobileLastContainerPadding: css`
-    padding: 1.5rem 1.5rem 3rem;
+    padding: 1.5rem 1.5rem 5rem;
   `,
   // used for containers that require custom or no horizontal padding
   mobileVerticalPadding: css`
@@ -36,8 +37,26 @@ const mixins = {
   mobileBottomPadding: css`
     padding-bottom: 5rem;
   `,
-  desktopContainerPadding: css`
+  // general padding across all components
+  desktopPadding: css`
     padding: 1rem;
+  `,
+  desktopLastContainerPadding: css`
+    padding: 1rem 1.5rem 5rem;
+  `,
+  // used for containers that require custom or no horizontal padding
+  desktopVerticalPadding: css`
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  `,
+  // used for containers that require custom or no vertical padding
+  desktopHorizontalPadding: css`
+    padding-right: 1rem;
+    padding-left: 1rem;
+  `,
+  // Used for the last container right before footer
+  desktopBottomPadding: css`
+    padding-bottom: 5rem;
   `,
 };
 
