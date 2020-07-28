@@ -10,7 +10,7 @@ export const MobileCSS = styled.div`
 `;
 
 export const HeroCSS = styled.div`
-  padding-left: ${padding.horizontalMobile};
+  padding-left: ${padding.mobileHorizontal};
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.68),
