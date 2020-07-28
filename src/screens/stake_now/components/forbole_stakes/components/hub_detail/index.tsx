@@ -17,7 +17,10 @@ const HubDetail = (props: any) => {
 
   return (
     <HubDetailCSS>
-      <p className={classNames("title", { main })}>{t(title)}</p>
+      <p className={classNames("title", { main })}>
+        {!!main && <img src="images/icons/cosmos_hub.png" />}
+        {t(title)}
+      </p>
       <StatDetailsCSS>
         <p className={classNames("atom", { main })}>
           {convertToMoney(atom)} {t("atom")}
@@ -27,7 +30,9 @@ const HubDetail = (props: any) => {
             <p>{convertToMoney(usd)}</p>
             <p>{perAtom}</p>
           </>
-        ) : <p>{percent}%</p>}
+        ) : (
+            <p>{percent}%</p>
+          )}
       </StatDetailsCSS>
     </HubDetailCSS>
   );

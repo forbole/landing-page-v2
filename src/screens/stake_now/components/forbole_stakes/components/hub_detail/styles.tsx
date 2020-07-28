@@ -9,8 +9,24 @@ export const HubDetailCSS = styled.div`
 
   .title {
     &.main {
-      border-left: solid 3px ${PINK};
+      // border-left: solid 3px ${PINK};
       padding-left: 0.4rem;
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: " ";
+        background: ${PINK};
+        height: 1.5rem;
+        width: 4px;
+        margin-right: 0.3rem;
+        border-radius: 4px;
+      }
+
+      img {
+        width: 30px;
+        margin-right: 0.3rem;
+      }
     }
   }
 `;
@@ -18,8 +34,7 @@ export const HubDetailCSS = styled.div`
 export const StatDetailsCSS = styled.div`
   .atom {
     &.main {
-      font-size: 1.1rem;
-      font-weight: 600;
+      font-size: 1.15rem;
     }
   }
 
