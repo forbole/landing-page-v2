@@ -74,15 +74,12 @@ export const ContactInfoCSS = styled.div`
       padding: 2em;
   }
   .ui.form {
-    width: 47%;
+    width: 100%;
     margin-top: 0;
   }
   .ui.segment {
     height: 557px;
   }
-  span {
-    padding: 30em;
-}
   .address,
   .emailInfo {
     margin-left: 0.5em;

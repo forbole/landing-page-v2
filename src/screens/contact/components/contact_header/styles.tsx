@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, media } from "@styles";
+import { theme, media, mixins } from "@styles";
 
 const { headerMargin } = theme;
 
@@ -29,18 +29,31 @@ export const ContactHeaderCSS = styled.div`
     font-weight: 100;
     margin-left: 1.5rem;
   }
-  ${media.bigDesktop`
-  padding: 1rem 15rem 1rem;
-  .background{
-    align-items: center;
-    height: 50vh;
-  }`}
   ${media.tablet`
   h2 {
     margin-top: 15rem;
-      margin-left: 3rem;
+    margin-left: 3rem;
   }
   p {
       margin-left: 3rem;
+  }`}
+  ${media.bigDesktop`
+  ${mixins.flexBetween}
+  width: 100%;
+  height: fit-content;
+  align-items: flex-start;
+  padding: 30rem 12rem 5rem 10rem;
+
+  h2 {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  p {
+    font-weight: 100;
+    margin-left: 0;
+  }
+  .background{
+    align-items: center;
+    height: 50vh;
   }`}
 `;

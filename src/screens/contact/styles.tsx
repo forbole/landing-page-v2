@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media } from "@styles";
+import { media, mixins } from "@styles";
 
 export const ContactPageCSS = styled.div`
   margin: 0 -1rem -3rem;
@@ -15,15 +15,18 @@ export const ContactPageCSS = styled.div`
   flex-direction: column;
   align-items: center;
   ${media.bigDesktop`
+    ${mixins.flexBetween}
   width: 100%;
-  height: 100vh;
+  height: 100%;
   .wrapper {
+    background: none;
     display: grid;
     grid-template-columns: 60% 40%;
-    margin: 2em 15em 2em;
+    margin: -25rem 15rem 2rem;
     justify-content: center;
     justify-items: end;
-    padding-left: 5em;
+    padding-left: 5rem;
+    padding-bottom: 10rem;
     .left {
       margin-top: 0;
     }

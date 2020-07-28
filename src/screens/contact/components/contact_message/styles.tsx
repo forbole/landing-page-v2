@@ -64,7 +64,7 @@ export const ContactMessageCSS = styled.div`
     margin-bottom: 3em;
   }
   .ui.form {
-    width: 90%;
+    width: 100%;
     margin-top: 0;
   }
   .ui.segment {

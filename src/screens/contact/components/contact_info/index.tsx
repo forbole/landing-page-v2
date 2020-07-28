@@ -20,14 +20,13 @@ const ContactInfo = () => {
       <Form>
         <Segment raised>
           <h2>{t("contactInfo")}</h2>
-          <span>
-            <Location className="location" />
-            <p className="address">{t("address")}</p>
-          </span>
-          <span>
-            <Email className="email" />
-            <p className="emailInfo">{t("contactEmail")}</p>
-          </span>
+
+          <Location className="location" />
+          <p className="address">{t("address")}</p>
+
+          <Email className="email" />
+          <p className="emailInfo">{t("contactEmail")}</p>
+
           <div className="socialMedia">
             <a href="#">
               <Telegram />
