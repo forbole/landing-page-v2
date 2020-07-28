@@ -8,5 +8,9 @@ export const MainContentCSS = styled.div`
     padding: 0;
     display: flex;
     justify-content: center;
+
+    & > * {
+      width: 100%;
+    }
   `}
 `;

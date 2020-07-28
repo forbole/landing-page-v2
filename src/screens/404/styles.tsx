@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { mixins } from "@styles";
 
 export const NotFoundCSS = styled.div`
   ${mixins.cancelMobilePadding}
@@ -40,8 +40,4 @@ export const NotFoundCSS = styled.div`
   img {
     max-width: 300px;
   }
-
-  ${media.bigDesktop`
-    width: 100%;
-  `}
 `;

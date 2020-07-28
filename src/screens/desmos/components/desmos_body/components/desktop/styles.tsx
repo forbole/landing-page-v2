@@ -68,4 +68,5 @@ export const DesmosBodyContainerCSS = styled.div`
   width: 70%;
   padding-left: 3.5rem;
   position: relative;
+  max-width: 700px;
 `;
