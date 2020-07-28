@@ -40,8 +40,10 @@ export const ButtonsCSS = styled.div`
   align-items: center;
 
   .resize {
+    margin-left: 0.4rem;
     svg {
-      width: 160px;
+      width: 140px;
+      height: auto;
     }
   }
 `;
