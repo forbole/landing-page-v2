@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { media } from "@styles";
 
 const PINK = `rgba(253, 103, 103, 1)`;
 
@@ -27,6 +28,28 @@ export const HubDetailCSS = styled.div`
       }
     }
   }
+
+  ${media.bigDesktop`
+    &.main {
+      flex-direction: column;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      width: 100%;
+      &.main {
+        font-size: 1.3rem;
+        margin-bottom: 0;
+        &::before {
+          display: none;
+        }
+
+        img {
+          width: 30px;
+        }
+      }
+    }
+  `}
 `;
 
 export const StatDetailsCSS = styled.div`
@@ -39,5 +62,28 @@ export const StatDetailsCSS = styled.div`
   p {
     text-align: right;
     margin-bottom: 0;
+    width: 100%;
   }
+
+  ${media.bigDesktop`
+    width: 100%;
+
+    .atom {
+      &.main {
+        text-align: left;
+        font-size: 1.8rem;
+      }
+    }
+
+    .main-only-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .usd {
+        font-size: 1.3rem;
+        text-align: left;
+      }
+    }
+  `}
 `;

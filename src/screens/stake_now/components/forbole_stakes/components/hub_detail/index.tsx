@@ -16,7 +16,7 @@ const HubDetail = (props: any) => {
   const { t } = useTranslation("stake_now");
 
   return (
-    <HubDetailCSS>
+    <HubDetailCSS className={classNames({ main })}>
       <p className={classNames("title", { main })}>
         {!!main && <img src="images/icons/cosmos_hub.png" />}
         {t(title)}
@@ -26,10 +26,14 @@ const HubDetail = (props: any) => {
           {convertToMoney(atom)} {t("atom")}
         </p>
         {main ? (
-          <>
-            <p>{convertToMoney(usd)}</p>
-            <p>{perAtom}</p>
-          </>
+          <div className="main-only-content">
+            <p className="usd">
+              {convertToMoney(usd)} {t("usd")}
+            </p>
+            <p className="per-atom">
+              (${perAtom}/${t("atom")})
+            </p>
+          </div>
         ) : (
             <p>{percent}%</p>
           )}
