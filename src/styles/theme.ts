@@ -20,8 +20,10 @@ const theme = {
     medium: "1rem",
   },
   padding: {
-    horizontalMobile: "1.5rem",
-    verticalMobile: "1.5rem",
+    mobileHorizontal: "1.5rem",
+    mobileVertical: "1.5rem",
+    desktopHorizontal: "1rem",
+    desktopVertical: "1rem",
   }
 };
 
