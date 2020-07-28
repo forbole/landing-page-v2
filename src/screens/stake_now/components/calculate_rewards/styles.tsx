@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { theme } from "@styles";
+import { theme, mixins } from "@styles";
 
 const { colors } = theme;
 export const CalculateRewardsCSS = styled.div`
+  ${mixins.mobilePadding}
   background: white;
-  padding-top: 2rem;
 
   h2 {
     font-weight: 400;
