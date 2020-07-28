@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { theme } from "@styles";
+import { theme, mixins } from "@styles";
 
 const { headerMargin } = theme;
 export const BodyCSS = styled.div`
-  padding: 1rem 0;
+  ${mixins.mobilePadding}
 `;
 
 export const BodyImageContainerCSS = styled.div`

@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import { theme, media } from "@styles";
+import { mixins, media } from "@styles";
 
 export const BodyCSS = styled.div`
-  padding: 1rem 0;
+  ${mixins.mobileHorizontalPadding}
+  ${mixins.mobileBottomPadding}
 
   ${media.bigDesktop`
     display: none;

@@ -19,6 +19,10 @@ const theme = {
     small: "0.5rem",
     medium: "1rem",
   },
+  padding: {
+    horizontalMobile: "1.5rem",
+    verticalMobile: "1.5rem",
+  }
 };
 
 export default theme;
