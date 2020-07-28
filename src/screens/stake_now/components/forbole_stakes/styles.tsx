@@ -4,7 +4,7 @@ import { mixins, theme, media } from "@styles";
 const { colors } = theme;
 
 export const ForboleStakesCSS = styled.div`
-  ${mixins.cancelMobileParentPaddingAndInject};
+  ${mixins.mobileHorizontalPadding};
   min-height: 90vh;
   background-image: url("images/assets/stake_now_bg.svg");
   background-position: center center;
@@ -15,7 +15,7 @@ export const ForboleStakesCSS = styled.div`
   justify-content: center;
   flex-direction: column;
   padding-top: 4rem;
-  padding-bottom: 3rem;
+  padding-bottom: 5rem;
 
   p {
     color: white;
