@@ -42,7 +42,7 @@ export const ContactHeaderCSS = styled.div`
   width: 100%;
   height: fit-content;
   align-items: flex-start;
-  padding: 30rem 12rem 5rem 10rem;
+  padding: 10rem 1rem 30rem 13rem;
 
   h2 {
     margin-top: 0;
