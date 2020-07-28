@@ -33,7 +33,7 @@ const ForboleStakes = () => {
           />
           {dummyData.details.map((x) => (
             <>
-              <hr />
+              <hr className="stats-hr" />
               <HubDetail
                 key={x.title}
                 title={x.title}

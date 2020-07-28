@@ -26,14 +26,17 @@ const HubDetail = (props: any) => {
           {convertToMoney(atom)} {t("atom")}
         </p>
         {main ? (
-          <div className="main-only-content">
-            <p className="usd">
-              {convertToMoney(usd)} {t("usd")}
-            </p>
-            <p className="per-atom">
-              (${perAtom}/${t("atom")})
-            </p>
-          </div>
+          <>
+            <div className="main-only-content">
+              <p className="usd">
+                {convertToMoney(usd)} {t("usd")}
+              </p>
+              <p className="per-atom">
+                (${perAtom}/${t("atom")})
+              </p>
+            </div>
+            <hr className="main-content-hr" />
+          </>
         ) : (
             <p>{percent}%</p>
           )}

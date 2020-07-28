@@ -8,6 +8,10 @@ export const HubDetailCSS = styled.div`
   justify-content: space-between;
   align-items: start;
 
+  .main-content-hr {
+    display: none;
+  }
+
   .title {
     &.main {
       display: flex;
@@ -83,6 +87,19 @@ export const StatDetailsCSS = styled.div`
       .usd {
         font-size: 1.3rem;
         text-align: left;
+      }
+    }
+
+    .main-content-hr {
+      margin-bottom: 0;
+      display: block;
+      position: relative;
+
+      &:before {
+        content: url(images/assets/stake-now-hr.svg);
+        position: absolute;
+        left: -110px;
+        top: -30px;
       }
     }
   `}

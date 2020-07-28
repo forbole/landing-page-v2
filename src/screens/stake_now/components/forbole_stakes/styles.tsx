@@ -42,7 +42,7 @@ export const ForboleStakesCSS = styled.div`
     background-repeat: no-repeat;
     min-height: 80vh;
 
-    hr {
+    .stats-hr {
       display: none;
     }
   `}
@@ -76,5 +76,6 @@ export const ChartContainerCSS = styled.div`
     margin: 1rem 4rem 1rem 0rem;
     flex: 1;
     max-width: 450px;
+    z-index: 5;
   `}
 `;
