@@ -7,7 +7,7 @@ export const dummyData = {
   },
   details: [
     {
-      title: "voting",
+      title: "votingPower",
       atom: 32545,
       percent: 1.84,
     },

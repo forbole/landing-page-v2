@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { ForboleStakesCSS } from "./styles";
+import { ForboleStakesCSS, StakesDetailsContainerCSS } from "./styles";
 import HubDetail from "./components/hub_detail";
 import { dummyData } from "./config";
 
@@ -11,16 +11,19 @@ const ForboleStakes = () => {
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
       <p>graph here</p>
-      <div>
+      <StakesDetailsContainerCSS>
         {dummyData.details.map((x) => (
-          <HubDetail
-            key={x.title}
-            title={t(x.title)}
-            atom={x.atom}
-            percent={x.percent}
-          />
+          <>
+            <hr />
+            <HubDetail
+              key={x.title}
+              title={x.title}
+              atom={x.atom}
+              percent={x.percent}
+            />
+          </>
         ))}
-      </div>
+      </StakesDetailsContainerCSS>
     </ForboleStakesCSS>
   );
 };

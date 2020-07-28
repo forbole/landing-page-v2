@@ -14,12 +14,19 @@ const mixins = {
   desktopMaxWidth: css`
     max-width: 1200px;
   `,
+  mobileHorizontalPadding: css`
+    padding: 0 1rem;
+  `,
   cancelMobilePadding: css`
     margin: 0 -1rem -3rem;
   `,
   cancelMobileHorizontalPadding: css`
     margin-left: -1rem;
     margin-right: -1rem;
+  `,
+  cancelMobileParentPaddingAndInject: css`
+    margin: 0 -1rem -3rem;
+    padding: 0 1rem;
   `,
 };
 
