@@ -94,7 +94,7 @@ export const StatDetailsCSS = styled.div`
       margin-bottom: 0;
       display: block;
       position: relative;
-
+      width: 105%;
       &:before {
         content: url(images/assets/stake-now-hr.svg);
         position: absolute;

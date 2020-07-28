@@ -1,14 +1,18 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
-import { ForboleStakes } from "./components";
+import { ForboleStakes, CalculateRewards } from "./components";
+import { StakeNowCSS } from "./styles";
 
 const StakeNow = () => {
   const { t } = useTranslation("stake_now");
 
   return (
     <Layout title={t("title")}>
-      <ForboleStakes />
+      <StakeNowCSS>
+        <ForboleStakes />
+        <CalculateRewards />
+      </StakeNowCSS>
     </Layout>
   );
 };

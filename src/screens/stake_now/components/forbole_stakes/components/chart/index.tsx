@@ -12,8 +12,6 @@ const fakeData = [
 const Chart = () => {
   const { t } = useTranslation("stake_now");
   const [selected, setSelected] = useState<number | undefined>(3);
-  const [hovered, setHovered] = useState<number | undefined>(undefined);
-
 
   const lineWidth = 50;
   const segmentsStyle = { transition: "stroke .3s", cursor: "pointer" };
@@ -28,7 +26,10 @@ const Chart = () => {
       lineWidth={lineWidth}
       segmentsStyle={(index) => {
         return index === selected
-          ? { ...segmentsStyle, strokeWidth: 25 }
+          ? {
+            ...segmentsStyle,
+            strokeWidth: 25,
+          }
           : segmentsStyle;
       }}
       animate
