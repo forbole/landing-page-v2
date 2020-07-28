@@ -5,6 +5,13 @@ export const ForboleStakesCSS = styled.div`
   ${mixins.cancelMobilePadding};
   height: 100vh;
   background-image: url("images/assets/stake_now_bg.svg");
-  background-position: right bottom, left top;
+  background-position: center center;
   background-repeat: no-repeat, repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: white;
+  }
 `;

@@ -3,5 +3,8 @@
   "tokensStakedWithForbole": "Tokens staked with Forbole",
   "cosmosHub": "Cosmos Hub",
   "atom": "ATOM",
-  "usd": "USD"
+  "usd": "USD",
+  "votingPower": "Voting Power",
+  "selfDelegations": "Self Delegations",
+  "otherDelegations": "Other Delegations"
 }
