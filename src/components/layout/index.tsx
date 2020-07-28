@@ -2,7 +2,6 @@ import React, { ReactNode } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { NavBar, Footer } from "@components";
-import { MainContentCSS } from "./styles";
 
 type Props = {
   children?: ReactNode;
@@ -31,7 +30,7 @@ const Layout = ({
         <meta name="og:image" content="" />
       </Head>
       <NavBar />
-      <MainContentCSS>{children}</MainContentCSS>
+      {children}
       {!!footer && <Footer />}
     </>
   );

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme, media } from "@styles";
 
-const { headerMargin } = theme;
+const { headerMargin, colors } = theme;
 
 export const ContentHeaderCSS = styled.div`
   h2 {
@@ -13,6 +13,7 @@ export const ContentHeaderCSS = styled.div`
   p {
     color: white;
   }
+
   .social-media-container {
     margin-bottom: 0.5rem;
     a {
@@ -33,6 +34,25 @@ export const ContentHeaderCSS = styled.div`
 
     p {
       color: black;
+    }
+
+    .social-media-container {
+      margin-bottom: 0;
+      a {
+        svg {
+          path {
+            fill: ${colors.gray600};
+            transition: 0.2s;
+          }
+        }
+        &:hover {
+          svg {
+            path {
+              fill: ${colors.orange};
+            }
+          }
+        }
+      }
     }
   `}
 `;

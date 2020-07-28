@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme, media } from "@styles";
 
-const { headerMargin } = theme;
+const { headerMargin, padding } = theme;
 
 export const DecentralizedCSS = styled.p`
   font-size: 1.1rem;
@@ -14,7 +14,8 @@ export const DecentralizedCSS = styled.p`
 `;
 
 export const MooncakeBodyCSS = styled.div`
-  margin-bottom: 1rem;
+  margin-bottom: ${padding.desktopVertical};
+
   h3 {
     font-weight: 500;
     margin-bottom: ${headerMargin.small};
