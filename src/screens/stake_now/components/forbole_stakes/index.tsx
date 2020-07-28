@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { ForboleStakesCSS, StakesDetailsContainerCSS } from "./styles";
+import { convertToMoney } from "@utils/convert_to_money";
+import { ForboleStakesCSS, StakesDetailsContainerCSS, ChartContainerCSS } from "./styles";
 import HubDetail from "./components/hub_detail";
 import Chart from "./components/chart";
 import { dummyData } from "./config";
@@ -12,7 +13,10 @@ const ForboleStakes = () => {
   return (
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
-      <Chart />
+      <h1>${convertToMoney(dummyData.stakeAmount)}</h1>
+      <ChartContainerCSS>
+        <Chart />
+      </ChartContainerCSS>
       <StakesDetailsContainerCSS>
         <HubDetail
           main

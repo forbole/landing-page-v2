@@ -26,7 +26,7 @@ const mixins = {
   `,
   cancelMobileParentPaddingAndInject: css`
     margin: 0 -1rem -3rem;
-    padding: 0 1rem;
+    padding: 1rem;
   `,
 };
 

@@ -13,6 +13,7 @@ export const ForboleStakesCSS = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-top: 4rem;
   padding-bottom: 3rem;
 
   p {
@@ -26,8 +27,19 @@ export const ForboleStakesCSS = styled.div`
     margin: 1em 0;
     padding: 0;
   }
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 500;
+  }
 `;
 
 export const StakesDetailsContainerCSS = styled.div`
   width: 100%;
+`;
+
+export const ChartContainerCSS = styled.div`
+  margin: 1rem 0;
 `;

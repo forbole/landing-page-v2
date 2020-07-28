@@ -9,8 +9,6 @@ export const HubDetailCSS = styled.div`
 
   .title {
     &.main {
-      // border-left: solid 3px ${PINK};
-      padding-left: 0.4rem;
       display: flex;
       align-items: center;
 
