@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { NavBar, Layout } from "@components";
+import { Layout } from "@components";
 import { NotFoundCSS } from "./styles";
 
 const NotFound = () => {
