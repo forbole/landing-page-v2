@@ -7,8 +7,14 @@ import { MainContentCSS } from "./styles";
 type Props = {
   children?: ReactNode;
   title?: string;
+  footer?: boolean;
 };
-const Layout = ({ children, title = "This is the default title" }: Props) => {
+
+const Layout = ({
+  children,
+  title = "This is the default title",
+  footer = true,
+}: Props) => {
   const router = useRouter();
   return (
     <>
@@ -26,7 +32,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => {
       </Head>
       <NavBar />
       <MainContentCSS>{children}</MainContentCSS>
-      <Footer />
+      {!!footer && <Footer />}
     </>
   );
 };

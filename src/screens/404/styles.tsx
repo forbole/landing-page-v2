@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { mixins, media } from "@styles";
 
 export const NotFoundCSS = styled.div`
+  ${mixins.cancelMobilePadding}
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5),
@@ -38,4 +40,8 @@ export const NotFoundCSS = styled.div`
   img {
     max-width: 300px;
   }
+
+  ${media.bigDesktop`
+    width: 100%;
+  `}
 `;
