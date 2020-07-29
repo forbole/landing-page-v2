@@ -5,6 +5,13 @@ const { colors } = theme;
 export const SupportedNetworksCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
   background: ${colors.gray100};
+
+  ${media.bigDesktop`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  `}
 `;
 
 export const HeaderContentCSS = styled.div`
@@ -21,6 +28,16 @@ export const HeaderContentCSS = styled.div`
   .terms {
     color: rgba(13, 106, 255, 1);
   }
+
+  ${media.bigDesktop`
+    ${mixins.desktopMaxWidth}
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  `}
 `;
 
 export const NetworkListCSS = styled.div`
@@ -30,6 +47,13 @@ export const NetworkListCSS = styled.div`
 
   ${media.tablet`
     grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-gap: 20px;
+  `}
+
+  ${media.bigDesktop`
+    ${mixins.desktopMaxWidth}
+    width: 100%;
+    grid-template-columns: repeat(5, minmax(100px, 1fr));
     grid-gap: 20px;
   `}
 `;
