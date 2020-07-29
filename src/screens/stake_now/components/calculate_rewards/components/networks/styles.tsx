@@ -7,6 +7,7 @@ const { colors } = theme;
 export const NetworkChoicesCSS = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.5rem;
 `;
 
 export const Button = styled(SemanticButton)`
@@ -17,6 +18,8 @@ export const Button = styled(SemanticButton)`
     align-items: center;
     padding: 0.5rem 0.7rem;
     width: 100%;
+    font-weight: 300;
+    font-size: 1rem;
   }
 
   img {
