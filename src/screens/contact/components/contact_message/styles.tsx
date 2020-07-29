@@ -6,10 +6,8 @@ export const ContactMessageCSS = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
   .ui.form {
     width: 90vw;
-    margin-top: -0.5rem;
   }
   h2 {
     font-weight: 400;
