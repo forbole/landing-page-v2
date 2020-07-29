@@ -3,7 +3,7 @@ import { media, mixins, theme } from "@styles";
 
 const { colors } = theme;
 export const SupportedNetworksCSS = styled.div`
-  ${mixins.mobilePadding}
+  ${mixins.mobileLastContainerPadding}
   background: ${colors.gray100};
 `;
 
@@ -27,4 +27,9 @@ export const NetworkListCSS = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   grid-gap: 7px 12px;
+
+  ${media.tablet`
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-gap: 20px;
+  `}
 `;
