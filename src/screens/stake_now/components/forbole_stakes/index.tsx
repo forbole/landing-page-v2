@@ -32,15 +32,10 @@ const ForboleStakes = () => {
             perAtom={cosmos.perAtom}
           />
           {dummyData.details.map((x) => (
-            <>
+            <React.Fragment key={x.title}>
               <hr className="stats-hr" />
-              <HubDetail
-                key={x.title}
-                title={x.title}
-                atom={x.atom}
-                percent={x.percent}
-              />
-            </>
+              <HubDetail title={x.title} atom={x.atom} percent={x.percent} />
+            </React.Fragment>
           ))}
         </StakesDetailsContainerCSS>
       </FlexContainerCSS>

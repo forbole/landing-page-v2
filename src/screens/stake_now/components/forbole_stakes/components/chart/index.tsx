@@ -1,4 +1,4 @@
-import React, { useState, ComponentProps } from "react";
+import React, { useState } from "react";
 import { useTranslation } from "i18n";
 import { PieChart } from "react-minimal-pie-chart";
 
@@ -26,10 +26,7 @@ const Chart = () => {
       lineWidth={lineWidth}
       segmentsStyle={(index) => {
         return index === selected
-          ? {
-            ...segmentsStyle,
-            strokeWidth: 25,
-          }
+          ? { ...segmentsStyle, strokeWidth: 25 }
           : segmentsStyle;
       }}
       animate

@@ -1,18 +1,27 @@
 import React from "react";
+import classNames from "classnames";
 import { useTranslation } from "i18n";
 import { networkData } from "./config";
 import { Button, NetworkChoicesCSS } from "./styles";
+import { INetworkProps } from "./interfaces";
 
-const Networks = () => {
+const Networks = (props: INetworkProps) => {
   const { t } = useTranslation("stake_now");
+  const { selectedToken, setSelectedToken } = props;
+
+
   return (
     <div>
       <p className="select-network">{t("selectNetwork")}</p>
       <NetworkChoicesCSS>
         {networkData.map((x) => (
-          <Button key={x.name}>
+          <Button
+            key={x.name}
+            onClick={() => setSelectedToken(x.name)}
+            className={classNames({ active: x.name == selectedToken })}
+          >
             <img src={x.image} />
-            {t(x.name)}
+            <p>{x.name}</p>
           </Button>
         ))}
       </NetworkChoicesCSS>
