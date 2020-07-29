@@ -24,5 +24,9 @@
   "dailyEarnings": "Daily Earnings",
   "monthlyEarnings": "Monthly Earnings",
   "yearlyEarnings": "Yearly Earnings",
-  "token": "Token"
+  "token": "Token",
+  "supportedNetworks": "Supported Networks",
+  "supportedNeworksContent": "Curabitur nec venenatis metus. Morbi dolor ipsum, egestas in odio quis, ornare cursus leo. Ut ornare lorem ipsum. Sed posuere magna a turpi",
+  "termsOfService": "Terms of Service",
+  "stakeNow": "STAKE NOW"
 }

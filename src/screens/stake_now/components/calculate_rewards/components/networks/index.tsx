@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { useTranslation } from "i18n";
-import { networkData } from "./config";
+import { networkData } from "../../../../config";
 import { Button, NetworkChoicesCSS } from "./styles";
 import { INetworkProps } from "./interfaces";
 import { ParagraphTitleCSS } from "../../styles";

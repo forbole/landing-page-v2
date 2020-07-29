@@ -8,6 +8,7 @@ import Language from "./language.svg";
 import Arrow from "./arrow.svg";
 import AppStoreButton from "./app_store_button.svg";
 import GooglePlayButton from "./google_play_badge.svg";
+import Block from "./block.svg";
 
 export {
   Telegram,
@@ -20,4 +21,5 @@ export {
   Arrow,
   AppStoreButton,
   GooglePlayButton,
+  Block,
 };
