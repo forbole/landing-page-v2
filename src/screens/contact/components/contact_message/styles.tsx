@@ -41,7 +41,7 @@ export const ContactMessageCSS = styled.div`
     letter-spacing: 0.05em;
   }
   .ui.button {
-    background-color: rgba(18, 113, 227, 0.43);
+    background-color: rgba(18, 113, 227, 1);
     width: 100%;
   }
 
@@ -75,7 +75,7 @@ export const ContactMessageCSS = styled.div`
     width: 97%;
   }
   .ui.button {
-    background-color: rgba(18, 113, 227, 0.43);
+    background-color: rgba(18, 113, 227, 1);
     width: 109px;
     height: 40px;
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { ContactMessageCSS } from "./styles";
+import validator from "validator";
 import { Button, Form, Segment, Input } from "semantic-ui-react";
 
 import useContactForm from "./hooks";
@@ -8,7 +9,7 @@ import useContactForm from "./hooks";
 const ContactMessage = () => {
   const { t } = useTranslation("contact");
   const { inputs, handleInputChange, handleSubmit } = useContactForm();
-  console.log(Input.length);
+  console.log(inputs.name);
   return (
     <ContactMessageCSS>
       <Form onSubmit={handleSubmit}>
@@ -17,8 +18,9 @@ const ContactMessage = () => {
           <div className="nameField">
             <p>{t("name")}</p>
             <Input
+              name="name"
               onChange={handleInputChange}
-              value={inputs.Name}
+              value={inputs.name}
               transparent
               placeholder=""
               required
@@ -26,20 +28,28 @@ const ContactMessage = () => {
           </div>
           <div className="emailField">
             <p>{t("email")}</p>
-            <Input transparent placeholder="" />
+            <Input
+              name="email"
+              onChange={handleInputChange}
+              value={inputs.email}
+              transparent
+              placeholder=""
+              {...validator.isEmail("foo@bar.com")}
+            />
           </div>
           <p className="messages">{t("messages")}</p>
           <Input
+            name="message"
             onChange={handleInputChange}
-            value={inputs.Message}
+            value={inputs.message}
             transparent
             placeholder=""
             required
           />
-          {Input.length > 0 ? (
-            <Button>{t("submit")}</Button>
+          {inputs.name && inputs.message && inputs.message != null ? (
+            <Button type="submit">{t("submit")}</Button>
           ) : (
-            <Button disabled>Disabled</Button>
+            <Button disabled>{t("submit")}</Button>
           )}
         </Segment>
       </Form>

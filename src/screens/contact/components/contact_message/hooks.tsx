@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const useContactForm = () => {
-  const [inputs, setInputs] = useState({ Name: "", Message: "" });
+  const [inputs, setInputs] = useState({ name: "", message: "", email: "" });
   const handleSubmit = (event) => {
     if (event) {
       event.preventDefault();
