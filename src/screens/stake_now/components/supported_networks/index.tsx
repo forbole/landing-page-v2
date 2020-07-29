@@ -1,7 +1,12 @@
 import React from "react";
 import { useTranslation } from "i18n";
+import { TermsOfService } from "@components";
 import { networkData } from "../../config";
-import { SupportedNetworksCSS, HeaderContentCSS, NetworkListCSS } from "./styles";
+import {
+  SupportedNetworksCSS,
+  HeaderContentCSS,
+  NetworkListCSS,
+} from "./styles";
 import Network from "./components/network";
 
 const SupportedNetworks = () => {
@@ -11,7 +16,9 @@ const SupportedNetworks = () => {
       <HeaderContentCSS>
         <h2>{t("supportedNetworks")}</h2>
         <p>{t("supportedNeworksContent")}</p>
-        <p className="terms">{t("termsOfService")}</p>
+        <TermsOfService
+          trigger={<p className="terms">{t("termsOfService")}</p>}
+        />
       </HeaderContentCSS>
       <NetworkListCSS>
         {networkData.map((x) => (
