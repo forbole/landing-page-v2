@@ -58,10 +58,6 @@ const mixins = {
   desktopBottomPadding: css`
     padding-bottom: 5rem;
   `,
-  cancelMobileParentPaddingAndInject: css`
-    margin: 0 -1rem;
-    padding: 1rem;
-  `,
   grayHr: css`
     display: block;
     height: 1px;
