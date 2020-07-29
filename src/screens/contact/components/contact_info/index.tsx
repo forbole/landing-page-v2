@@ -4,15 +4,6 @@ import { socialMedias } from "../../config";
 import { ContactInfoCSS } from "./styles";
 import { Button, Form, Segment, Input } from "semantic-ui-react";
 import { Location, Email } from "@icons";
-import {
-  Telegram,
-  Facebook,
-  Medium,
-  Twitter,
-  Github,
-  LinkedIn,
-  YouTube,
-} from "@icons";
 
 const ContactInfo = () => {
   const { t } = useTranslation("contact");
