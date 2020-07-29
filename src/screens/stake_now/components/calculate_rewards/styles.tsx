@@ -10,12 +10,10 @@ export const CalculateRewardsCSS = styled.div`
     font-weight: 400;
     text-align: left;
   }
+`;
 
-  p {
-    &.select-network {
-      color: ${colors.gray600};
-      margin-bottom: 0.6rem;
-      font-weight: 300;
-    }
-  }
+export const ParagraphTitleCSS = styled.p`
+  color: ${colors.gray600};
+  margin-bottom: 0.6rem;
+  font-weight: 300;
 `;

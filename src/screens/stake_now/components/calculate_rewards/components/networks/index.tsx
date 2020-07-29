@@ -4,15 +4,15 @@ import { useTranslation } from "i18n";
 import { networkData } from "./config";
 import { Button, NetworkChoicesCSS } from "./styles";
 import { INetworkProps } from "./interfaces";
+import { ParagraphTitleCSS } from "../../styles";
 
 const Networks = (props: INetworkProps) => {
   const { t } = useTranslation("stake_now");
   const { selectedToken, setSelectedToken } = props;
 
-
   return (
     <div>
-      <p className="select-network">{t("selectNetwork")}</p>
+      <ParagraphTitleCSS>{t("selectNetwork")}</ParagraphTitleCSS>
       <NetworkChoicesCSS>
         {networkData.map((x) => (
           <Button

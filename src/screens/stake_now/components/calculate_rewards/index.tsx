@@ -2,11 +2,18 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { CalculateRewardsCSS } from "./styles";
 import Networks from "./components/networks";
+import Calculator from "./components/calculator";
 import { useCalculateRewardsHook } from "./hooks";
 
 const CalculateRewards = () => {
   const { t } = useTranslation("stake_now");
-  const { selectedToken, setSelectedToken } = useCalculateRewardsHook();
+  const {
+    selectedToken,
+    setSelectedToken,
+    inputElement,
+    handleCalculations,
+    totalEarnings,
+  } = useCalculateRewardsHook();
 
   return (
     <CalculateRewardsCSS>
@@ -16,7 +23,11 @@ const CalculateRewards = () => {
           selectedToken={selectedToken}
           setSelectedToken={setSelectedToken}
         />
-        <div>form another div</div>
+        <Calculator
+          inputElement={inputElement}
+          handleCalculations={handleCalculations}
+          totalEarnings={totalEarnings}
+        />
       </div>
     </CalculateRewardsCSS>
   );

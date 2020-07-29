@@ -62,6 +62,13 @@ const mixins = {
     margin: 0 -1rem;
     padding: 1rem;
   `,
+  grayHr: css`
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #e6e6e6;
+    padding: 0;
+  `,
 };
 
 export default mixins;
