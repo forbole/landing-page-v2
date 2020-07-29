@@ -25,8 +25,6 @@ export const ContactPageCSS = styled.div`
     margin: -25rem 15rem 2rem;
     justify-content: center;
     justify-items: end;
-    padding-left: 5rem;
-    padding-bottom: 10rem;
     .left {
       margin-top: 0;
     }

@@ -81,6 +81,7 @@ export const ContactMessageCSS = styled.div`
   }
     button.ui.button {
       margin: 1em 1em 1em 27em;
+      float: right;
   }`}
   ${media.tablet`
     padding-top: 0;

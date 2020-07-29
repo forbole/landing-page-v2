@@ -84,24 +84,20 @@ export const ContactInfoCSS = styled.div`
   .emailInfo {
     margin-left: 0.5em;
     width: auto;
-  }
-  .location{
-      margin: 0.2em 2em 5em;
-  }
-  .address {
     margin: 0 2em 2em 5em;
     font-size: 1.1rem;
-}
-  .email {
-    margin: 0.3em 2em 2em;
   }
-  .emailInfo {
-    margin: 0 2em 4em 5em;
-    font-size: 1.1rem;
+  .location {
+      margin: 0.2em 2em 1em;
+      float: left;
+  }
+  .email {
+    margin: 0.2em 2em 3em;
   }
 
   .socialMedia {
     margin-left: 2em;
+    margin-top: 4em;
     a {
       padding-right: 1.5vw;
     }
