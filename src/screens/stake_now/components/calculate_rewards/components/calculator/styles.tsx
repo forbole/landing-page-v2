@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { Input as SemenaticInput } from "semantic-ui-react";
-import { mixins, media } from "@styles";
+import { mixins, media, theme } from "@styles";
+
+const { colors } = theme;
 
 export const CalculatorCSS = styled.div`
   margin-top: 1.5rem;
@@ -13,9 +15,13 @@ export const CalculatorCSS = styled.div`
 export const Input = styled(SemenaticInput)`
   &.ui.input {
     .ui.button {
-      background: black;
+      background: ${colors.gray600};
       color: white;
       font-weight: 300;
+      transition: 0.2s;
+      &:hover {
+        background: black;
+      }
     }
   }
 `;
