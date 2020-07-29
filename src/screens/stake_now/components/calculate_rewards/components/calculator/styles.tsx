@@ -4,6 +4,10 @@ import { mixins, media } from "@styles";
 
 export const CalculatorCSS = styled.div`
   margin-top: 1.5rem;
+
+  ${media.bigDesktop`
+    margin-top: 0;
+  `}
 `;
 
 export const Input = styled(SemenaticInput)`

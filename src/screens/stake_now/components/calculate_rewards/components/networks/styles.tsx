@@ -10,7 +10,11 @@ export const NetworkChoicesCSS = styled.div`
   grid-gap: 7px 12px;
 
   ${media.tablet`
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+  `}
+
+  ${media.desktop`
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
   `}
 `;
 

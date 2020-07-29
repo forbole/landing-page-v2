@@ -22,15 +22,14 @@ const Calculator = (props: ICalculatorProp) => {
       />
       <StatsDetailsCSS>
         {totalEarningKeys.map((x, i) => (
-          <>
+          <React.Fragment key={x}>
             <Detail
-              key={x}
               title={t(x)}
               amount={totalEarnings[x].amount}
               tokens={totalEarnings[x].tokens}
             />
             {i !== totalEarningKeys.length - 1 && <hr />}
-          </>
+          </React.Fragment>
         ))}
       </StatsDetailsCSS>
     </CalculatorCSS>
