@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Button as SemanticButton } from "semantic-ui-react";
-import { theme } from "@styles";
+import { theme, media } from "@styles";
 
 const { colors } = theme;
 
@@ -8,6 +8,10 @@ export const NetworkChoicesCSS = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
   grid-gap: 7px 12px;
+
+  ${media.tablet`
+  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  `}
 `;
 
 export const Button = styled(SemanticButton)`

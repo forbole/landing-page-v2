@@ -11,7 +11,8 @@ const Detail = (props: any) => {
       <p>{title}</p>
       <div>
         <p>
-          {tokens} {t("token")}
+          <span className="tokens">{tokens}</span>
+          {t("token")}
         </p>
         <p>${amount}</p>
       </div>

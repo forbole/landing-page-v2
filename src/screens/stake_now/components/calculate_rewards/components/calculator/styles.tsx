@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Input as SemenaticInput } from "semantic-ui-react";
-import { mixins } from "@styles";
+import { mixins, media } from "@styles";
 
 export const CalculatorCSS = styled.div`
   margin-top: 1.5rem;
@@ -22,4 +22,15 @@ export const StatsDetailsCSS = styled.div`
     ${mixins.grayHr}
     margin: 0.5rem 0;
   }
+
+  ${media.tablet`
+    width: 70%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    hr {
+      display: none;
+    }
+  `}
 `;
