@@ -49,5 +49,8 @@
     "typescript": "3.7.3",
     "url-loader": "^4.1.0"
   },
+  "resolutions": {
+    "babel-plugin-inline-react-svg/*/js-yaml": "3.13.1"
+  },
   "license": "ISC"
 }
