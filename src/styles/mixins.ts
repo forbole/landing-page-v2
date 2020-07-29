@@ -17,21 +17,21 @@ const mixins = {
   `,
   // general padding across all components
   mobilePadding: css`
-    padding: 1.5rem;
+    padding: 1rem;
   `,
   // general padding for last component before footer
   mobileLastContainerPadding: css`
-    padding: 1.5rem 1.5rem 5rem;
+    padding: 1rem 1rem 5rem;
   `,
   // used for containers that require custom or no horizontal padding
   mobileVerticalPadding: css`
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   `,
   // used for containers that require custom or no vertical padding
   mobileHorizontalPadding: css`
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
   `,
   // Used for the last container right before footer
   mobileBottomPadding: css`
