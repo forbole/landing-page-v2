@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
+import { socialMedias } from "../../config";
 import { ContactInfoCSS } from "./styles";
 import { Button, Form, Segment, Input } from "semantic-ui-react";
 import { Location, Email } from "@icons";
@@ -28,27 +29,11 @@ const ContactInfo = () => {
           <p className="emailInfo">{t("contactEmail")}</p>
 
           <div className="socialMedia">
-            <a href="#">
-              <Telegram />
-            </a>
-            <a href="#">
-              <Facebook />
-            </a>
-            <a href="#">
-              <Medium />
-            </a>
-            <a href="#">
-              <Twitter />
-            </a>
-            <a href="#">
-              <YouTube />
-            </a>
-            <a href="#">
-              <LinkedIn />
-            </a>
-            <a href="#">
-              <Github />
-            </a>
+            {socialMedias.map((x, i) => (
+              <a href={x.url} key={i}>
+                <x.component />
+              </a>
+            ))}
           </div>
         </Segment>
       </Form>
