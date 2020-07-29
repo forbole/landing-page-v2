@@ -93,17 +93,17 @@ export const ContactInfoCSS = styled.div`
     font-size: 1.1rem;
 }
   .email {
-    margin: 0.3em 2em 5em;
+    margin: 0.3em 2em 2em;
   }
   .emailInfo {
-    margin: 0 2em 2em 5em;
+    margin: 0 2em 4em 5em;
     font-size: 1.1rem;
   }
 
   .socialMedia {
     margin-left: 2em;
-  a {
-    padding-right: 1.5vw;
-  }
+    a {
+      padding-right: 1.5vw;
+    }
 }`}
 `;

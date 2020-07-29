@@ -76,8 +76,8 @@ export const ContactMessageCSS = styled.div`
   }
   .ui.button {
     background-color: rgba(18, 113, 227, 0.43);
-    width: 7vw;
-    height: 4vh
+    width: 109px;
+    height: 40px;
   }
     button.ui.button {
       margin: 1em 1em 1em 27em;
