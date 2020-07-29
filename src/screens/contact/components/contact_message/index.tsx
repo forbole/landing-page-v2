@@ -20,7 +20,11 @@ const ContactMessage = () => {
           </div>
           <p className="messages">{t("messages")}</p>
           <Input transparent placeholder="" />
-          <Button>{t("submit")}</Button>
+          {Input.length > 0 ? (
+            <Button>{t("submit")}</Button>
+          ) : (
+            <Button disabled>Disabled</Button>
+          )}
         </Segment>
       </Form>
     </ContactMessageCSS>
