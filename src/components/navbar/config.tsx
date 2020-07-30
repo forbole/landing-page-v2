@@ -5,7 +5,7 @@ export const navItems = [
   },
   {
     display: "stakeNow",
-    link: "/",
+    link: "/stake-now",
   },
   {
     display: "staking",

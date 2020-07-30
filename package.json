@@ -21,8 +21,10 @@
     "next": "^9.4.4",
     "next-compose-plugins": "^2.2.0",
     "next-i18next": "^4.5.0",
+    "ramda": "^0.27.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-minimal-pie-chart": "^8.0.1",
     "react-spring": "^8.0.27",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.1.1",
@@ -49,6 +51,9 @@
     "ts-node": "^8.10.2",
     "typescript": "3.7.3",
     "url-loader": "^4.1.0"
+  },
+  "resolutions": {
+    "babel-plugin-inline-react-svg/*/js-yaml": "3.13.1"
   },
   "license": "ISC"
 }

@@ -7,7 +7,8 @@ export const ContactMessageCSS = styled.div`
   flex-direction: column;
   align-items: center;
   .ui.form {
-    width: 90vw;
+    width: 100%;
+    margin-top: -0.5rem;
   }
   h2 {
     font-weight: 400;
@@ -46,6 +47,10 @@ export const ContactMessageCSS = styled.div`
   .ui.segment {
     border-radius: 0;
   }
+  ${media.tablet`
+    padding-top: 0;
+
+  `}
   ${media.bigDesktop`
   .nameField{
     float: left;
@@ -81,8 +86,4 @@ export const ContactMessageCSS = styled.div`
       margin: 1em 1em 1em 27em;
       float: right;
   }`}
-  ${media.tablet`
-    padding-top: 0;
-  
-  `}
 `;

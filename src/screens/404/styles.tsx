@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { mixins } from "@styles";
 
 export const NotFoundCSS = styled.div`
+  ${mixins.cancelMobilePadding}
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5),

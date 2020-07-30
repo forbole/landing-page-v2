@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
+import { AppStoreButton, GooglePlayButton } from "@icons";
 import {
   DecentralizedCSS,
   MooncakeBodyCSS,
@@ -18,8 +19,12 @@ const MooncakeDetails = () => {
         <p>{t("mooncakeBodyThree")}</p>
       </MooncakeBodyCSS>
       <ButtonsCSS>
-        <div>apple</div>
-        <div>google</div>
+        <span>
+          <AppStoreButton />
+        </span>
+        <div className="resize">
+          <GooglePlayButton />
+        </div>
       </ButtonsCSS>
     </>
   );
