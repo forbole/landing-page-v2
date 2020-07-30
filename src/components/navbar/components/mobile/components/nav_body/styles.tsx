@@ -14,7 +14,7 @@ export const NavBodyCSS = styled(animated.div)`
   padding: calc(1rem + 50px) 1rem 2rem;
   top: 0;
   bottom: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 
   ul {
