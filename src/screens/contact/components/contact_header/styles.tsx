@@ -4,6 +4,8 @@ import { theme, media, mixins } from "@styles";
 const { headerMargin } = theme;
 
 export const ContactHeaderCSS = styled.div`
+  ${mixins.mobileHorizontalPadding}
+  padding-top: 5rem;
   width: 100%;
   display: flex;
   align-items: left;
@@ -21,21 +23,13 @@ export const ContactHeaderCSS = styled.div`
     color: white;
     font-weight: 300;
     margin-bottom: ${headerMargin.small};
-    margin-top: 4rem;
   }
 
   p {
     color: white;
     font-weight: 100;
   }
-  ${media.tablet`
-  h2 {
-    margin-top: 15rem;
-    margin-left: 3rem;
-  }
-  p {
-      margin-left: 3rem;
-  }`}
+
   ${media.bigDesktop`
   ${mixins.flexBetween}
   width: 100%;

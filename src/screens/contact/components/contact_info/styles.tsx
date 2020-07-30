@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { media } from "@styles";
+import { media, theme } from "@styles";
+
+const { colors } = theme;
 
 export const ContactInfoCSS = styled.div`
   display: flex;
@@ -8,20 +10,17 @@ export const ContactInfoCSS = styled.div`
   align-items: center;
   margin-top: 1em;
   h2 {
-    padding-top: 1em;
-    padding-bottom: 1em;
     color: rgba(255, 255, 255, 1);
     font-weight: 400;
     font-size: 1.375em;
-    height: 1vh;
     text-align: left;
     width: 100%;
+    margin-bottom: 0.5rem;
   }
   p {
-    color: rgba(255, 255, 255, 1);
+    color: ${colors.white};
     font-weight: 400;
     font-size: 0.9em;
-    line-height: 1.5em;
   }
   .location,
   .email {
@@ -31,12 +30,9 @@ export const ContactInfoCSS = styled.div`
   .address,
   .emailInfo {
     margin-left: 2em;
-    width: 70vw;
-  }
-  .ui.form {
-    width: 90vw;
   }
   .ui.segment {
+    width: 100%;
     border-radius: 0;
     box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
   }
@@ -45,22 +41,19 @@ export const ContactInfoCSS = styled.div`
     box-shadow: 0 2px 4px 0 rgba(34, 36, 38, 0.12),
       0 2px 10px 0 rgba(34, 36, 38, 0.15);
     border: none;
+    padding: 2rem 1.5rem;
   }
   path {
     fill: rgba(255, 255, 255, 1);
   }
   .socialMedia {
-    height: 26px;
-    width: 100%;
-    padding: 0px;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1.3rem;
     svg path:hover {
       fill: rgba(250, 250, 250, 1);
       cursor: pointer;
     }
     a {
-      padding-right: 3vw;
+      padding-right: 0.5rem;
     }
   }
   ${media.bigDesktop`

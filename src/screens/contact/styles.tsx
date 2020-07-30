@@ -13,10 +13,18 @@ export const ContactPageCSS = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+
+  .wrapper {
+    ${mixins.mobileHorizontalPadding}
+    ${mixins.mobileBottomPadding}
+    width: 100%;
+  }
+
   ${media.bigDesktop`
     ${mixins.flexBetween}
   width: 100%;
   height: 100%;
+
   .wrapper {
     background: none;
     display: grid;
