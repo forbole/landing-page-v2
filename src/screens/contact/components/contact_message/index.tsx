@@ -8,8 +8,13 @@ import useContactForm from "./hooks";
 
 const ContactMessage = () => {
   const { t } = useTranslation("contact");
-  const { inputs, handleInputChange, handleSubmit } = useContactForm();
-  console.log(inputs.name);
+  const {
+    inputs,
+    handleInputChange,
+    handleSubmit,
+    canSubmit,
+  } = useContactForm();
+
   return (
     <ContactMessageCSS>
       <Form onSubmit={handleSubmit}>
@@ -46,11 +51,9 @@ const ContactMessage = () => {
             placeholder=""
             required
           />
-          {inputs.name && inputs.message && inputs.message != null ? (
-            <Button type="submit">{t("submit")}</Button>
-          ) : (
-            <Button disabled>{t("submit")}</Button>
-          )}
+          <Button type="submit" disabled={!canSubmit}>
+            {t("submit")}
+          </Button>
         </Segment>
       </Form>
     </ContactMessageCSS>
