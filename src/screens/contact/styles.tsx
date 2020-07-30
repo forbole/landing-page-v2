@@ -2,11 +2,10 @@ import styled from "styled-components";
 import { media, mixins } from "@styles";
 
 export const ContactPageCSS = styled.div`
-  margin: 0 -1rem -3rem;
   .wrapper {
     background-color: white;
-    padding-bottom: 5rem;
   }
+
   .left {
     margin-top: -10rem;
   }
@@ -29,6 +28,6 @@ export const ContactPageCSS = styled.div`
       margin-top: 0;
     }
   }
-  
+
   `}
 `;
