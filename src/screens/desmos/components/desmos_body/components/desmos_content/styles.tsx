@@ -1,9 +1,16 @@
 import styled from "styled-components";
-import { theme } from "@styles";
+import { theme, mixins, media } from "@styles";
 
 const { headerMargin } = theme;
+
 export const BodyCSS = styled.div`
-  padding: 1rem 0;
+  ${mixins.mobilePadding}
+
+  ${media.bigDesktop`
+    padding-left: 0;
+    padding-right: 0;
+    ${mixins.desktopVerticalPadding}
+  `}
 `;
 
 export const BodyImageContainerCSS = styled.div`
