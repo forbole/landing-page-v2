@@ -26,10 +26,11 @@ export const ContactPageCSS = styled.div`
   height: 100%;
 
   .wrapper {
+    ${mixins.desktopMaxWidth}
+    margin-top: -18rem;
     background: none;
     display: grid;
     grid-template-columns: 60% 40%;
-    margin: -25rem 15rem 2rem;
     justify-content: center;
     justify-items: end;
     .left {

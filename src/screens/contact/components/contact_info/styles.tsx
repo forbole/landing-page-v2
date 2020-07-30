@@ -22,6 +22,11 @@ export const ContactInfoCSS = styled.div`
     font-weight: 400;
     font-size: 0.9em;
   }
+
+  .container {
+    margin-bottom: 1rem;
+  }
+
   .location,
   .email {
     margin-top: 0.2em;
@@ -29,7 +34,7 @@ export const ContactInfoCSS = styled.div`
   }
   .address,
   .emailInfo {
-    margin-left: 2em;
+    padding-left: 2em;
   }
   .ui.segment {
     width: 100%;
@@ -58,26 +63,44 @@ export const ContactInfoCSS = styled.div`
   }
   ${media.bigDesktop`
   margin-top: 0;
+  height: 100%;
   h2{
     padding-top: 2em;
     padding-bottom: 2em;
     padding-left: 1.5em;
   }
-  div {
-      padding: 2em;
+  .content-container {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    flex-direction: column;
+    flex: 1;
   }
+
+  .container {
+    position: relative;
+    svg {
+      margin: 0;
+      position: absolute;
+      top: 5px;
+    }
+  }
+
   .ui.form {
     width: 100%;
     margin-top: 0;
   }
   .ui.segment {
-    height: 557px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .ui.raised.raised.segment {
+    height: 100%;
   }
   .address,
   .emailInfo {
-    margin-left: 0.5em;
-    width: auto;
-    margin: 0 2em 2em 5em;
+    width: 100%;
     font-size: 1.1rem;
   }
   .location {
@@ -89,8 +112,6 @@ export const ContactInfoCSS = styled.div`
   }
 
   .socialMedia {
-    margin-left: 2em;
-    margin-top: 4em;
     a {
       padding-right: 1.5vw;
     }

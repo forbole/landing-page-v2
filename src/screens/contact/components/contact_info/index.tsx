@@ -11,19 +11,24 @@ const ContactInfo = () => {
     <ContactInfoCSS>
       <Segment raised>
         <h2>{t("contactInfo")}</h2>
+        <div className="content-container">
+          <div className="container">
+            <Location className="location" />
+            <p className="address">{t("address")}</p>
+          </div>
 
-        <Location className="location" />
-        <p className="address">{t("address")}</p>
+          <div className="container">
+            <Email className="email" />
+            <p className="emailInfo">{t("contactEmail")}</p>
+          </div>
 
-        <Email className="email" />
-        <p className="emailInfo">{t("contactEmail")}</p>
-
-        <div className="socialMedia">
-          {socialMedias.map((x, i) => (
-            <a href={x.url} key={i}>
-              <x.component />
-            </a>
-          ))}
+          <div className="socialMedia">
+            {socialMedias.map((x, i) => (
+              <a href={x.url} key={i}>
+                <x.component />
+              </a>
+            ))}
+          </div>
         </div>
       </Segment>
     </ContactInfoCSS>
