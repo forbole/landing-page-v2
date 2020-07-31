@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { media, theme, mixins } from "@styles";
-
-const { colors } = theme;
+import { media, mixins } from "@styles";
 
 export const MobileFooterCSS = styled.div`
   ${mixins.mobilePadding}
