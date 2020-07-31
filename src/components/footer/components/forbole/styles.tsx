@@ -8,17 +8,16 @@ export const ForboleCSS = styled.div`
     width: 83px;
   }
   p {
-    font-size: 14px;
     font-weight: 300;
   }
 
   ${media.bigDesktop`
-  text-align: left;
-  margin-top: 0.5rem;
-  width: 10vw; 
-  margin-bottom: 1rem;
   img {
-    height: 30%;
-    width: 70%;
-  }`}
+    height: 30px;
+    width: 125px;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  `}
 `;

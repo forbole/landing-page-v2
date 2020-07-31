@@ -6,9 +6,6 @@ const { colors } = theme;
 export const FooterItemsCSS = styled.div`
   color: ${colors.offwhite};
   list-style-type: none;
-  .ui {
-    margin-bottom: 1rem;
-  }
   hr {
     margin-bottom: 1rem;
     opacity: 0.3;
@@ -25,24 +22,22 @@ export const FooterItemsCSS = styled.div`
   ${media.bigDesktop`
   display: flex;
   justify-content: center;
-  align-items: start;
   flex-grow: 1;
-  margin-top: 0.5rem;
-  margin-right: 1rem;
-  margin-left: 3rem;
-
   div{
-    width: 10vw;
+    width: 10rem;
   }
-
+  hr {
+    margin: 0px 0px 0px 0px;
+  }
   a li {
     color: ${colors.offwhite};
     font-size: 0.8rem;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     font-weight: 300;
   }
   li {
     font-size: 1rem;
     font-weight: 400;
+    text-decoration: none;
   }`};
 `;

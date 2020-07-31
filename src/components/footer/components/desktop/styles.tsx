@@ -17,21 +17,5 @@ export const DesktopFooterCSS = styled.div`
     padding-left: 4rem;
     padding-right: 5rem;
   }
-  p {
-    font-size: 11px;
-    font-weight: 300;
-  }
-  ul li {
-    margin: 10px;
-  }
-
-  ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  hr {
-    margin: 0px 0px 0px 25px;
-  }
   `}
 `;

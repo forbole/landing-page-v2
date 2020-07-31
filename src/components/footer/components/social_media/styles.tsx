@@ -2,14 +2,8 @@ import styled from "styled-components";
 import { media } from "@styles";
 
 export const SocialMediaCSS = styled.div`
-  height: 26px;
-  width: 162px;
-  padding: 0px;
-  margin-bottom: 1em;
-
   svg path:hover {
     fill: rgba(250, 250, 250, 1);
-
     cursor: pointer;
   }
   a {
@@ -17,10 +11,9 @@ export const SocialMediaCSS = styled.div`
   }
 
   ${media.bigDesktop`
-  margin-top: 1.3rem;
-  width: 20vw;
+  width: 20rem;
   a {
-    padding-right: 15px;
+    padding-right: 1rem;
     svg {
       height: 25px;
       width: 25px;
