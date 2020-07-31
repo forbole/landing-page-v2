@@ -4,6 +4,7 @@ import { media, theme } from "@styles";
 const { colors } = theme;
 
 export const SubscribeCSS = styled.div`
+  color: ${colors.white};
   padding-bottom: 1rem;
   input::-webkit-input-placeholder {
     color: white !important;
@@ -26,14 +27,14 @@ export const SubscribeCSS = styled.div`
   }
 
   h1 {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
     font-weight: 400;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
-    font-weight: 400;
+    font-weight: 200;
   }
 
   .ui.action.input {
@@ -42,7 +43,7 @@ export const SubscribeCSS = styled.div`
 
   .ui.input {
     position: relative;
-    right: 0px;
+    right: 0;
   }
   .ui.button {
     font-weight: 300;
@@ -51,13 +52,6 @@ export const SubscribeCSS = styled.div`
   }
   ${media.bigDesktop`
   padding-bottom: 0;
-  h1 {
-    font-size: 1rem;
-  }
-  h2 {
-    font-size: 0.8rem;
-    font-weight: 300;
-  }
   .ui.action.input {
     width: 25rem;
   }

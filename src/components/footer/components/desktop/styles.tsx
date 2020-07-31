@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { media, theme, mixins } from "@styles";
-
-const { colors } = theme;
+import { media, mixins } from "@styles";
 
 export const DesktopFooterCSS = styled.div`
   display: none;
@@ -9,7 +7,6 @@ export const DesktopFooterCSS = styled.div`
   ${mixins.flexBetween}
   width: 100%;
   bottom: 0;
-  color: ${colors.offwhite};
   background-color: rgba(26, 26, 44, 1);
   padding: 2rem 3rem;
   width: 100%;
@@ -18,6 +15,5 @@ export const DesktopFooterCSS = styled.div`
   .desktopFooter-left {
     padding-right: 7rem;
   }
-
   `}
 `;

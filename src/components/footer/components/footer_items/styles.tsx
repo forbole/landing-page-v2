@@ -10,13 +10,17 @@ export const FooterItemsCSS = styled.div`
     margin-bottom: 1rem;
     opacity: 0.3;
   }
-  li {
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-  }
   a li {
     color: ${colors.offwhite};
     font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
+  li {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-decoration: none;
   }
 
   ${media.bigDesktop`
@@ -29,15 +33,5 @@ export const FooterItemsCSS = styled.div`
   hr {
     margin: 0px 0px 0px 0px;
   }
-  a li {
-    color: ${colors.offwhite};
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-    font-weight: 300;
-  }
-  li {
-    font-size: 1rem;
-    font-weight: 400;
-    text-decoration: none;
-  }`};
+`};
 `;

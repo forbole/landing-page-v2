@@ -1,7 +1,10 @@
 import styled from "styled-components";
-import { media } from "@styles";
+import { media, theme } from "@styles";
+
+const { colors } = theme;
 
 export const ForboleCSS = styled.div`
+  color: ${colors.offwhite};
   padding-bottom: 1rem;
   img {
     height: 16px;

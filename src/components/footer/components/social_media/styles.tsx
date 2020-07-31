@@ -7,15 +7,13 @@ export const SocialMediaCSS = styled.div`
     cursor: pointer;
   }
   a {
-    padding-right: 5px;
+    padding-right: 1rem;
   }
 
   ${media.bigDesktop`
-  a {
-    padding-right: 1rem;
     svg {
       height: 25px;
       width: 25px;
     }
-  }`}
+`}
 `;
