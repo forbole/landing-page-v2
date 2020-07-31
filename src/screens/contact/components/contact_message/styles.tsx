@@ -89,6 +89,8 @@ export const ContactMessageCSS = styled.div`
     height: 40px;
   }
     button.ui.button {
-      float: right;
+      display: block;
+      margin-left: auto;
+      margin-right: 0;
   }`}
 `;
