@@ -5,30 +5,20 @@ const { colors } = theme;
 
 export const FooterItemsCSS = styled.div`
   color: ${colors.offwhite};
-  background-color: rgba(26, 26, 44, 1);
   list-style-type: none;
-  text-align: left;
-  width: 100%;
-  a {
-    color: ${colors.offwhite};
-    font-weight: 200;
-    font-size: 1rem;
-  }
   .ui {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
   hr {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     opacity: 0.3;
   }
-
   li {
     margin-bottom: 1rem;
     font-size: 1.3rem;
   }
   a li {
     color: ${colors.offwhite};
-    font-weight: 200;
     font-size: 1rem;
   }
 

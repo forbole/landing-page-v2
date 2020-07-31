@@ -10,19 +10,6 @@ export const MobileFooterCSS = styled.div`
   list-style-type: none;
   text-align: left;
   width: 100%;
-  .ui {
-    margin-bottom: 1em;
-  }
-  hr {
-    margin-bottom: 1em;
-    opacity: 0.3;
-  }
-  li {
-    margin-bottom: 1em;
-  }
-  h2 {
-    font-weight: 250;
-  }
   ${media.bigDesktop`
     display: none;
   `}
