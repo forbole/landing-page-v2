@@ -32,7 +32,6 @@ export const ContactPageCSS = styled.div`
     display: grid;
     grid-template-columns: 60% 40%;
     justify-content: center;
-    justify-items: end;
     .left {
       margin-top: 0;
     }
