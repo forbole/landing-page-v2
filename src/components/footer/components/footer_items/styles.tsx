@@ -12,6 +12,7 @@ export const FooterItemsCSS = styled.div`
   a {
     color: ${colors.offwhite};
     font-weight: 200;
+    font-size: 1rem;
   }
   .ui {
     margin-bottom: 1em;
@@ -22,7 +23,13 @@ export const FooterItemsCSS = styled.div`
   }
 
   li {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  a li {
+    color: ${colors.offwhite};
+    font-weight: 200;
+    font-size: 1rem;
   }
 
   ${media.bigDesktop`

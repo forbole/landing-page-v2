@@ -2,9 +2,7 @@ import styled from "styled-components";
 import { media } from "@styles";
 
 export const ForboleCSS = styled.div`
-  text-align: left;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  padding-bottom: 1rem;
   img {
     height: 16px;
     width: 83px;
@@ -15,6 +13,7 @@ export const ForboleCSS = styled.div`
   }
 
   ${media.bigDesktop`
+  text-align: left;
   margin-top: 0.5rem;
   width: 10vw; 
   margin-bottom: 1rem;
