@@ -1,33 +1,39 @@
 import styled from "styled-components";
-import { media } from "@styles";
+import { media, theme } from "@styles";
+
+const { headerMargin } = theme;
 
 export const ContactMessageCSS = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  .ui.form {
-    width: 100%;
-    margin-top: -0.5rem;
-  }
   h2 {
     font-weight: 400;
-    font-size: 1.275em;
-    height: 1vh;
+    font-size: 1.4rem;
     text-align: left;
     width: 100%;
   }
   p {
     color: rgba(112, 112, 112, 1);
-    font-size: 1em;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
   }
   .ui.input {
     width: 90%;
-    margin-bottom: 2em;
+    padding-bottom: 2rem;
   }
   .messages {
-    margin-bottom: 2.5em;
+    padding-bottom: 2.5rem;
+  }
+  .ui.raised.raised.segment {
+    padding: 2rem 1rem;
+  }
+  .ui.form {
+    width: 100%;
+  }
+  .ui.form input[type="text"] {
+    padding: 0.58035714em 0em;
   }
   .ui.transparent.input > input,
   .ui.transparent.input > textarea {
@@ -37,13 +43,12 @@ export const ContactMessageCSS = styled.div`
     color: white;
     font-size: 1rem;
     font-weight: 400;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05rem;
   }
   .ui.button {
     background-color: rgba(18, 113, 227, 1);
     width: 100%;
   }
-
   .ui.segment {
     border-radius: 0;
   }
@@ -61,18 +66,19 @@ export const ContactMessageCSS = styled.div`
     width: 50%;
   }
   .messages {
-    margin-bottom: 5em;
+    padding-bottom: 5rem;
   }
   h2 {
-    margin-bottom: 3em;
+    padding-bottom: 2rem;
+  }
+  .ui.raised.raised.segment {
+    padding: 3.5rem;
   }
   .ui.form {
     width: 100%;
-    margin-top: 0;
   }
   .ui.segment {
-    height: 557px;
-    padding: 3.5em;
+    height: 100%;
   }
   .ui.input{
     width: 97%;
@@ -83,7 +89,6 @@ export const ContactMessageCSS = styled.div`
     height: 40px;
   }
     button.ui.button {
-      margin: 1em 1em 1em 27em;
       float: right;
   }`}
 `;

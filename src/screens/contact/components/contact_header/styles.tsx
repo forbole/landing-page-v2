@@ -30,6 +30,7 @@ export const ContactHeaderCSS = styled.div`
   }
 
   ${media.bigDesktop`
+    background: linear-gradient(0deg, rgb(32, 6, 105, 0.7), rgb(24, 0, 88, 0.4)),url("forbole_background/contact_us.png");
     display: flex;
     align-items: center;
     height: 500px;
@@ -37,19 +38,17 @@ export const ContactHeaderCSS = styled.div`
   h2 {
     ${mixins.desktopMaxWidth}
     width: 100%;
-    margin-top: 0;
-    margin-left: 0;
+    padding-left: 1.5rem;
   }
 
   p {
     ${mixins.desktopMaxWidth}
     width: 100%;
     font-weight: 100;
-    margin-left: 0;
+    padding-left: 1.5rem;
   }
 
   .background{
     align-items: center;
-    height: 50vh;
   }`}
 `;

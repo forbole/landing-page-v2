@@ -8,33 +8,32 @@ export const ContactInfoCSS = styled.div`
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
-  margin-top: 1em;
+  padding-top: 1rem;
   h2 {
     color: rgba(255, 255, 255, 1);
     font-weight: 400;
-    font-size: 1.375em;
+    font-size: 1.4rem;
     text-align: left;
     width: 100%;
-    margin-bottom: 0.5rem;
   }
   p {
     color: ${colors.white};
     font-weight: 400;
-    font-size: 0.9em;
+    font-size: 1rem;
   }
 
   .container {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
   }
 
   .location,
   .email {
-    margin-top: 0.2em;
+    margin-top: 0.3rem;
     float: left;
   }
   .address,
   .emailInfo {
-    padding-left: 2em;
+    padding-left: 2rem;
   }
   .ui.segment {
     width: 100%;
@@ -52,7 +51,7 @@ export const ContactInfoCSS = styled.div`
     fill: rgba(255, 255, 255, 1);
   }
   .socialMedia {
-    margin-top: 1.3rem;
+    padding-top: 1.3rem;
     svg path:hover {
       fill: rgba(250, 250, 250, 1);
       cursor: pointer;
@@ -62,13 +61,8 @@ export const ContactInfoCSS = styled.div`
     }
   }
   ${media.bigDesktop`
-  margin-top: 0;
+  padding-top: 0;
   height: 100%;
-  h2{
-    padding-top: 2em;
-    padding-bottom: 2em;
-    padding-left: 1.5em;
-  }
   .content-container {
     display: flex;
     align-items: start;
@@ -85,17 +79,13 @@ export const ContactInfoCSS = styled.div`
       top: 5px;
     }
   }
-
-  .ui.form {
-    width: 100%;
-    margin-top: 0;
-  }
   .ui.segment {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
   .ui.raised.raised.segment {
+    padding: 3.5rem;
     height: 100%;
   }
   .address,
@@ -103,17 +93,9 @@ export const ContactInfoCSS = styled.div`
     width: 100%;
     font-size: 1.1rem;
   }
-  .location {
-      margin: 0.2em 2em 1em;
-      float: left;
-  }
-  .email {
-    margin: 0.2em 2em 3em;
-  }
-
   .socialMedia {
     a {
-      padding-right: 1.5vw;
+      padding-right: 1.4rem;
     }
 }`}
 `;
