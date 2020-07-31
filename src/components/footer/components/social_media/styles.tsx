@@ -11,7 +11,6 @@ export const SocialMediaCSS = styled.div`
   }
 
   ${media.bigDesktop`
-  width: 20rem;
   a {
     padding-right: 1rem;
     svg {

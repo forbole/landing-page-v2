@@ -23,7 +23,7 @@ export const FooterItemsCSS = styled.div`
   display: flex;
   justify-content: center;
   flex-grow: 1;
-  div{
+  .footer-content {
     width: 10rem;
   }
   hr {
