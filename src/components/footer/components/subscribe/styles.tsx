@@ -52,8 +52,9 @@ export const SubscribeCSS = styled.div`
   }
   ${media.bigDesktop`
   padding-bottom: 0;
+  width: 100%;
   .ui.action.input {
-    width: 25rem;
+    width: 100%;
   }
   `}
 `;

@@ -7,7 +7,6 @@ export const MobileFooterCSS = styled.div`
   list-style-type: none;
   text-align: left;
   width: 100%;
-  bottom: 0;
   ${media.bigDesktop`
     display: none;
   `}
