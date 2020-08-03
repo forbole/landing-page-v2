@@ -2,15 +2,12 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { MilestonesCSS, MilestonesGridCSS } from "./styles";
 import { MaxWidthContainerCSS } from "@styles/components";
-import { milestonesData } from "./config";
+import { milestoneRowOne, milestoneRowTwo } from "./config";
 import SingleMilestone from "./components/single_milestone";
 
 const Milestones = () => {
   const { t } = useTranslation("about");
-  const half = Math.floor(milestonesData.length / 2);
-  const milestoneRowOne = milestonesData.slice(0, half);
-  const milestoneRowTwo = milestonesData.slice(half);
-  console.log(milestoneRowTwo);
+
   return (
     <MilestonesCSS>
       <MaxWidthContainerCSS>

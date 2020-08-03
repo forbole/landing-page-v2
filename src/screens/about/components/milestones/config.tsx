@@ -65,3 +65,7 @@ export const milestonesData = [
     detail: "launchMooncakeDetails",
   },
 ];
+
+export const half = Math.floor(milestonesData.length / 2);
+export const milestoneRowOne = milestonesData.slice(0, half);
+export const milestoneRowTwo = milestonesData.slice(half);

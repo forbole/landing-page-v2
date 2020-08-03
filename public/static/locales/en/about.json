@@ -50,5 +50,15 @@
   "desmosTestnetDetails": "Launched the public testnet of Desmos, the blockchain designed for decentralized social networks (explorer)",
   "feb2020": "Feb 2020",
   "launchMooncakeTitle": "Launched Mooncake",
-  "launchMooncakeDetails": "Launched Mooncake, the decentralized microblogging app built on Desmos. Download Mooncake"
+  "launchMooncakeDetails": "Launched Mooncake, the decentralized microblogging app built on Desmos. Download Mooncake",
+  "teamMembers": "Our Team Members",
+  "teamMembersDetails": "We are an early-stage startup with worldwide tractions. We are currently a small team across three timezones (HKT, CET, EST).",
+  "cofounderConductor": "Cofounder & Conductor",
+  "cofounderEvangelist": "Cofounder & Evangelist",
+  "partner": "Partner",
+  "researchContent": "Research & Content",
+  "swe": "software engineer",
+  "communicationDesigner": "Communication Designer",
+  "uxDesigner": "UX Designer",
+  "advisor": "Advisor"
 }
