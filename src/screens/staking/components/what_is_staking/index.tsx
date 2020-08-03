@@ -7,6 +7,7 @@ import {
   MainContentContainerCSS,
 } from "./styles";
 import { features } from "./config";
+
 const WhatIsStaking = () => {
   const { t } = useTranslation("staking");
 

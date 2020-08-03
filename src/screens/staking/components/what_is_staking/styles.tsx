@@ -22,10 +22,14 @@ export const MainContentContainerCSS = styled.div`
 
 export const SingleContentCSS = styled.div`
   margin-bottom: 1rem;
-
   ul {
-    list-style: disc;
+    list-style-type: none;
   }
+  ${media.bigDesktop`
+    ul {
+      list-style-type: disc;
+    }
+  `}
 `;
 
 export const FeatureItemCSS = styled.li`
