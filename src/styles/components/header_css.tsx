@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, media } from "@styles";
+import { theme } from "@styles";
 
 const { padding } = theme;
 
@@ -7,7 +7,6 @@ const CoverCSS = styled.div`
   padding-left: ${padding.mobileHorizontal};
   height: 50vh;
   background-repeat: no-repeat;
-  background-position: left bottom;
   background-size: cover;
   display: flex;
   justify-content: space-between;

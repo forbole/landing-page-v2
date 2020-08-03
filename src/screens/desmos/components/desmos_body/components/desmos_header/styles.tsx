@@ -6,7 +6,7 @@ export const ContentHeaderCSS = styled.div`
   h2 {
     color: white;
     margin-bottom: ${headerMargin.small};
-    font-weight: 500;
+    font-weight: 400;
   }
 
   p {

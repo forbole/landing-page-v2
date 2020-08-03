@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { media, theme } from "@styles";
-import { CoverCSS } from "@stylesComponents";
+import { CoverCSS } from "@styles/components";
 const { padding } = theme;
 
 export const MobileCSS = styled.div`
@@ -16,6 +16,7 @@ export const HeroCSS = styled(CoverCSS)`
       rgba(0, 0, 0, 0.68)
     ),
     url("forbole_background/desmos_hero.png");
+  background-position: left bottom;
 
   .visit-website {
     color: white;

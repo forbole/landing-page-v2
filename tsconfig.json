@@ -34,7 +34,7 @@
       "@styles": [
         "src/styles"
       ],
-      "@stylesComponents": [
+      "@styles/components": [
         "src/styles/components"
       ],
       "@icons": [
