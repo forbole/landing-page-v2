@@ -68,7 +68,7 @@ export const HeaderCSS = styled(CoverCSS)`
     .background-image-container {
       justify-content: flex-end;
       img {
-        width: 50%;
+        width: 35%;
       }
     }
   `}
