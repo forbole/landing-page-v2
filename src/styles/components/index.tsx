@@ -1,5 +1,3 @@
-import HeaderCSS from "./header_css";
+import CoverCSS from "./header_css";
 
-export {
-  HeaderCSS,
-};
+export { CoverCSS };
