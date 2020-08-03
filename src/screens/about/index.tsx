@@ -1,17 +1,12 @@
 import React from "react";
-import Link from "next/link";
+import { useTranslation } from "i18n";
 import { Layout } from "@components";
 
 const About = () => {
+  const { t } = useTranslation("stake_now");
   return (
-    <Layout title="About Us">
+    <Layout title={t("title")}>
       <h1>About</h1>
-      <p>This is the about page</p>
-      <p>
-        <Link href="/">
-          <a>Go home</a>
-        </Link>
-      </p>
     </Layout>
   )
 }
