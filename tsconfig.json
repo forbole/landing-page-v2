@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -15,15 +19,39 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["src/*"],
-      "@components": ["src/components"],
-      "@screens/*": ["src/screens/*"],
-      "@public/*": ["public/*"],
-      "@styles": ["src/styles"],
-      "@icons": ["src/components/icons"],
-      "@utils/*": ["src/utils/*"]
+      "@src/*": [
+        "src/*"
+      ],
+      "@components": [
+        "src/components"
+      ],
+      "@screens/*": [
+        "src/screens/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ],
+      "@styles": [
+        "src/styles"
+      ],
+      "@styles/components": [
+        "src/styles/components"
+      ],
+      "@icons": [
+        "src/components/icons"
+      ],
+      "@utils/*": [
+        "src/utils/*"
+      ]
     }
   },
-  "exclude": ["node_modules"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/styles/media.js"]
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/styles/media.js"
+  ]
 }

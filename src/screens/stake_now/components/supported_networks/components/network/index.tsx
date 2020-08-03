@@ -11,12 +11,14 @@ const Network = (props: INetworkProps) => {
   return (
     <NetworkCSS>
       <img src={image} />
-      <p>{name}</p>
+      <p className="name">{name}</p>
       <p className="amount">
         <Block />
         {convertToMoney(amount)}
       </p>
-      <Button>{t("stakeNow")}</Button>
+      <div className="button-container">
+        <Button>{t("stakeNow")}</Button>
+      </div>
     </NetworkCSS>
   );
 };

@@ -36,6 +36,123 @@ export const NetworkCSS = styled.div`
   ${media.tablet`
     padding: 2rem 1rem;
   `}
+
+  ${media.bigDesktop`
+    display: block;
+    padding: 1rem;
+    transition: 0.5s ease;
+    height: 193px;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transition: 1s ease;
+      width: 45px;
+    }
+
+    p {
+      text-align: center;
+      &.amount {
+        height: 27px;
+        overflow: hidden;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 8px 13px 3px rgba(214, 214, 214, 0.45);
+      cursor: pointer;
+      @keyframes buttonContainerHover {
+        30% {
+          margin-left: -1rem;
+          margin-right: -1rem;
+        }
+        50% {
+          margin-left: -1rem;
+          margin-right: -1rem;
+          margin-bottom: -1rem;
+        }
+        100% {
+          margin-left: -1rem;
+          margin-right: -1rem;
+          margin-bottom: -1rem;
+        }
+      }
+
+      @keyframes uiButtonHover {
+        50% {
+          padding-top: calc(0.5rem + 0.6875em);
+          padding-bottom: calc(0.5rem + 0.6875em);
+        }
+        100% {
+          padding-top: calc(0.5rem + 0.6875em);
+          padding-bottom: calc(0.5rem + 0.6875em);
+          border-radius: 0 0 5px 5px;
+        }
+      }
+
+      @keyframes amountHover {
+        100% {
+          font-size: 1.3rem;
+          margin-top: calc(7px + 0.5rem);
+          margin-bottom: 1rem;
+        }
+      }
+
+      @keyframes nameHover {
+        20% {
+          opacity: 0%;
+        }
+        30% {
+          margin: 0;
+          opacity: 0%;
+          height: 10px;
+        }
+        100% {
+          opacity: 0;
+          height: 0;
+          margin: 0;
+        }
+      }
+
+      @keyframes imgHover {
+        100% {
+          margin-top: 20px;
+        }
+      }
+
+      .button-container {
+        animation: buttonContainerHover 0.8s;
+        -webkit-animation-fill-mode: forwards;
+        .ui.button {
+          animation: uiButtonHover 1s;
+          -webkit-animation-fill-mode: forwards;
+          animation-timing-function: ease-out;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 0;
+        }
+      }
+
+      img {
+        animation: imgHover 0.5s;
+          -webkit-animation-fill-mode: forwards;
+      }
+
+      p {
+        &.amount {
+          animation: amountHover 0.5s;
+          -webkit-animation-fill-mode: forwards;
+        }
+
+        &.name {
+          animation: nameHover 0.5s;
+          -webkit-animation-fill-mode: forwards;
+        }
+      }
+    }
+  `}
 `;
 
 export const Button = styled(SemanticButton)`
@@ -44,5 +161,6 @@ export const Button = styled(SemanticButton)`
     font-weight: 300;
     background: black;
     color: white;
+    margin-right: 0;
   }
 `;
