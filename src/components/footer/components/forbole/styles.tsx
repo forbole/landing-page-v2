@@ -1,25 +1,26 @@
 import styled from "styled-components";
-import { media } from "@styles";
+import { media, theme } from "@styles";
+
+const { colors } = theme;
 
 export const ForboleCSS = styled.div`
-  text-align: left;
-  margin-bottom: 1em;
-  margin-top: 1em;
+  color: ${colors.offwhite};
+  padding-bottom: 1rem;
   img {
     height: 16px;
     width: 83px;
   }
   p {
-    font-size: 14px;
     font-weight: 300;
   }
 
   ${media.bigDesktop`
-  margin-top: 0.5rem;
-  width: 10vw; 
-  margin-bottom: 1rem;
   img {
-    height: 30%;
-    width: 70%;
-  }`}
+    height: 30px;
+    width: 125px;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  `}
 `;

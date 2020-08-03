@@ -13,7 +13,7 @@ const FooterItems = () => {
   return (
     <FooterItemsCSS>
       <hr />
-      <div>
+      <div className="footer-content">
         {forboleFooterItems.map((x, i) => {
           if (i == 0) {
             return <li key={x.title}>{t(x.title)}</li>;
@@ -29,7 +29,7 @@ const FooterItems = () => {
         })}
       </div>
       <hr />
-      <div>
+      <div className="footer-content">
         {bigDipperFooterItems.map((y, i) => {
           if (i == 0) {
             return <li key={y.title}>{t(y.title)}</li>;
@@ -43,7 +43,7 @@ const FooterItems = () => {
         })}
       </div>
       <hr />
-      <div>
+      <div className="footer-content">
         {desmosFooterItems.map((z, i) => {
           if (i == 0) {
             return <li key={z.title}>{t(z.title)}</li>;

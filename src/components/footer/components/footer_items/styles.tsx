@@ -5,47 +5,33 @@ const { colors } = theme;
 
 export const FooterItemsCSS = styled.div`
   color: ${colors.offwhite};
-  background-color: rgba(26, 26, 44, 1);
   list-style-type: none;
-  text-align: left;
-  width: 100%;
-  a {
-    color: ${colors.offwhite};
-    font-weight: 200;
-  }
-  .ui {
-    margin-bottom: 1em;
-  }
   hr {
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
     opacity: 0.3;
   }
-
+  a li {
+    color: ${colors.offwhite};
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+  }
   li {
-    margin-bottom: 1em;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    text-decoration: none;
   }
 
   ${media.bigDesktop`
   display: flex;
   justify-content: center;
-  align-items: start;
   flex-grow: 1;
-  margin-top: 0.5rem;
-  margin-right: 1rem;
-  margin-left: 3rem;
-
-  div{
-    width: 10vw;
+  .footer-content {
+    width: 10rem;
   }
-
-  a li {
-    color: ${colors.offwhite};
-    font-size: 0.8rem;
-    margin-bottom: 1em;
-    font-weight: 300;
+  hr {
+    margin: 0px 0px 0px 0px;
   }
-  li {
-    font-size: 1rem;
-    font-weight: 400;
-  }`};
+`};
 `;
