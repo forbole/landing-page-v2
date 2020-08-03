@@ -5,6 +5,11 @@ export const milestonesData = [
     detail: "establishedDetails",
   },
   {
+    date: "apr2018",
+    title: "validatorPresenceTitle",
+    detail: "validatorPresenceDetails",
+  },
+  {
     date: "jul2018",
     title: "cosmosMentionedTitle",
     detail: "cosmosMentionedDetails",

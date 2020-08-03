@@ -19,7 +19,7 @@ export const WhatWeDoCSS = styled.div`
     }
   `}
 
-  ${media.desktop`
+  ${media.bigDesktop`
     ${mixins.flexCenter}
 
     ul {
