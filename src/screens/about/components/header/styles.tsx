@@ -15,6 +15,11 @@ export const HeaderCSS = styled(CoverCSS)`
     justify-content: center;
     margin-left: -1.5rem;
     width: 100%;
+
+    img {
+      opacity: 0.6;
+      mix-blend-mode: hard-light;
+    }
   }
 
   .content-container {
@@ -45,7 +50,7 @@ export const HeaderCSS = styled(CoverCSS)`
   ${media.tablet`
     .background-image-container {
       img {
-        width: 50%;
+        width: 70%;
       }
     }
   `}
