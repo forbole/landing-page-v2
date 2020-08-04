@@ -38,10 +38,19 @@ export const NetworkCSS = styled.div`
   `}
 
   ${media.bigDesktop`
-    display: block;
+    // display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
     padding: 1rem;
     transition: 0.5s ease;
     height: 193px;
+    position: relative;
+
+    .flex {
+      width: 100%;
+    }
 
     img {
       display: block;
@@ -57,17 +66,20 @@ export const NetworkCSS = styled.div`
         height: 27px;
         overflow: hidden;
       }
+
+      &.name {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 33%;
+      }
     }
 
     &:hover {
       box-shadow: 0px 8px 13px 3px rgba(214, 214, 214, 0.45);
       cursor: pointer;
       @keyframes buttonContainerHover {
-        30% {
-          margin-left: -1rem;
-          margin-right: -1rem;
-        }
-        50% {
+        20% {
           margin-left: -1rem;
           margin-right: -1rem;
           margin-bottom: -1rem;
@@ -80,9 +92,10 @@ export const NetworkCSS = styled.div`
       }
 
       @keyframes uiButtonHover {
-        50% {
-          padding-top: calc(0.5rem + 0.6875em);
+        20% {
           padding-bottom: calc(0.5rem + 0.6875em);
+          padding-top: calc(0.5rem + 0.6875em);
+          border-radius: 0 0 5px 5px;
         }
         100% {
           padding-top: calc(0.5rem + 0.6875em);
@@ -92,6 +105,11 @@ export const NetworkCSS = styled.div`
       }
 
       @keyframes amountHover {
+        20% {
+          font-size: 1.3rem;
+          margin-top: calc(7px + 0.5rem);
+          margin-bottom: 1rem;
+        }
         100% {
           font-size: 1.3rem;
           margin-top: calc(7px + 0.5rem);
@@ -100,18 +118,11 @@ export const NetworkCSS = styled.div`
       }
 
       @keyframes nameHover {
-        20% {
+        50% {
           opacity: 0%;
-        }
-        30% {
-          margin: 0;
-          opacity: 0%;
-          height: 10px;
         }
         100% {
           opacity: 0;
-          height: 0;
-          margin: 0;
         }
       }
 
@@ -122,10 +133,10 @@ export const NetworkCSS = styled.div`
       }
 
       .button-container {
-        animation: buttonContainerHover 0.8s;
+        animation: buttonContainerHover 1.5s;
         -webkit-animation-fill-mode: forwards;
         .ui.button {
-          animation: uiButtonHover 1s;
+          animation: uiButtonHover 1.5s;
           -webkit-animation-fill-mode: forwards;
           animation-timing-function: ease-out;
           display: flex;
@@ -137,12 +148,12 @@ export const NetworkCSS = styled.div`
 
       img {
         animation: imgHover 0.5s;
-          -webkit-animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
       }
 
       p {
         &.amount {
-          animation: amountHover 0.5s;
+          animation: amountHover 1.5s;
           -webkit-animation-fill-mode: forwards;
         }
 
