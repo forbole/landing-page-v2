@@ -1,15 +1,16 @@
 import styled from "styled-components";
 import { theme } from "@styles";
+import { IDesktopNavCSS } from "../../interfaces";
 
 const { colors } = theme;
 
-export const NavItemsCSS = styled.div`
+export const NavItemsCSS = styled.div<IDesktopNavCSS>`
   a:last-child {
     margin-right: 0;
   }
 
   a {
-    color: ${colors.gray600};
+    color: ${(props) => (props.color ? props.color : "white")};
     margin: 0 0.5rem;
     position: relative;
 
@@ -42,7 +43,7 @@ export const NavItemsCSS = styled.div`
     }
   }
   .ui.dropdown {
-    color: ${colors.gray600};
+    color: ${(props) => (props.color ? props.color : "white")};
 
     .menu {
       right: 0;
