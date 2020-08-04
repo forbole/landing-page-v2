@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { media, mixins } from "@styles";
 
 export const CosmosContentCSS = styled.div`
-  padding: 1.5rem 1rem;
+  ${mixins.mobileLastContainerPadding}
+  flex: 1;
   p {
     font-size: 1rem;
     margin-bottom: 2em;
