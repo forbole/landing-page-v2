@@ -22,7 +22,7 @@ export const DesktopNavCSS = styled.div<IDesktopNavCSS>`
 
       path {
         fill: ${colors.forboleRed};
-        fill: ${(props) => (props.color ? props.color : "white")};
+        fill: ${(props) => (props.color ? colors.forboleRed : "white")};
       }
     }
   `}

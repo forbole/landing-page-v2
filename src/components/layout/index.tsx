@@ -7,12 +7,14 @@ type Props = {
   children?: ReactNode;
   title?: string;
   footer?: boolean;
+  navColor?: string;
 };
 
 const Layout = ({
   children,
   title = "This is the default title",
   footer = true,
+  navColor,
 }: Props) => {
   const router = useRouter();
   return (
@@ -29,7 +31,7 @@ const Layout = ({
         <meta name="og:description" content="" />
         <meta name="og:image" content="" />
       </Head>
-      <NavBar />
+      <NavBar color={navColor} />
       {children}
       {!!footer && <Footer />}
     </>
