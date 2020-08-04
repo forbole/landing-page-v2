@@ -19,7 +19,7 @@ h2{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 52px -59px;
- 
+
   }
   .cosmoslogo {
     height: 40px;
@@ -37,7 +37,7 @@ h2{
     width: 60px;
     margin-right: 1rem;
   }`}
-  
+
   ${media.bigDesktop`
   min-height: 25rem;
   background-position: 600px -734px;
@@ -45,6 +45,7 @@ h2{
   .wrapper {
     ${mixins.desktopMaxWidth}
     width: 100%;
+    display: flex;
   }
   h2 {
     ${mixins.desktopMaxWidth}

@@ -28,6 +28,7 @@ export const CosmosContentCSS = styled.div`
       ${mixins.desktopMaxWidth}
       width: 100%;
     }
+
     p {
         justify-content: flex-start;
         width: 100%;
