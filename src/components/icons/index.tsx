@@ -13,7 +13,6 @@ import Location from "./location.svg";
 import AppStoreButton from "./app_store_button.svg";
 import GooglePlayButton from "./google_play_badge.svg";
 import Block from "./block.svg";
-import CosmosHub from "./cosmos_hub.svg";
 
 export {
   Telegram,
@@ -31,5 +30,4 @@ export {
   AppStoreButton,
   GooglePlayButton,
   Block,
-  CosmosHub,
 };

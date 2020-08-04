@@ -63,7 +63,6 @@ export const DesmosLogoCSS = styled.img`
   top: 0;
 `;
 
-
 export const DesmosBodyContainerCSS = styled.div`
   width: 70%;
   padding-left: 3.5rem;

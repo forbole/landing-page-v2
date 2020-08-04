@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme, media, mixins } from "@styles";
 
-const { colors, headerMargin } = theme;
+const { colors } = theme;
 
 export const CosmosHeaderCSS = styled.div`
 h2{
@@ -27,4 +27,29 @@ h2{
     width: 40px;
     margin-right: 0.5rem;
   }
+
+  ${media.tablet`
+  background-position: 62px -334px;
+  h2{
+    font-size: 2rem;
+  }
+  
+  ${media.bigDesktop`
+  justify-content: flex-start;
+  min-height: 25rem;
+  background-position: 600px -734px;
+  padding: 5rem 10rem;
+  h2 {
+    ${mixins.desktopMaxWidth}
+    width: 100%;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+  .cosmoslogo {
+    height: 70px;
+    width: 70px;
+  }
+    `}
+  
+  `}
 `;
