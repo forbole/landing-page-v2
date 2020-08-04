@@ -9,7 +9,7 @@ export const DecentralizedCSS = styled.p`
   margin-bottom: 0;
 
   ${media.bigDesktop`
-    font-size: 1.3rem;
+    font-size: 2rem;
   `};
 `;
 
@@ -27,7 +27,7 @@ export const MooncakeBodyCSS = styled.div`
 
   ${media.bigDesktop`
     h3 {
-      font-size: 2rem;
+      font-size: 3rem;
     }
 
     p {
