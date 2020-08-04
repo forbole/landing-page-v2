@@ -4,14 +4,6 @@ import { theme, media, mixins } from "@styles";
 const { colors } = theme;
 
 export const CosmosHeaderCSS = styled.div`
-h2{
-  color: ${colors.white};
-  font-weight: 100;
-}
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   min-height: 10rem;
   background-color: rgba(55, 68, 172, 1);
@@ -20,6 +12,14 @@ h2{
   background-size: cover;
   background-position: 52px -59px;
 
+  .wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  h2 {
+    color: ${colors.white};
+    font-weight: 100;
   }
   .cosmoslogo {
     height: 40px;
@@ -29,7 +29,7 @@ h2{
 
   ${media.tablet`
   background-position: 62px -334px;
-  h2{
+  h2 {
     font-size: 3rem;
   }
   .cosmoslogo {
