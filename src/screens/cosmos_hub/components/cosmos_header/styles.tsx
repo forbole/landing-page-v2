@@ -32,7 +32,7 @@ h2{
   background-position: 62px -334px;
   h2{
     font-size: 2rem;
-  }
+  }`}
   
   ${media.bigDesktop`
   justify-content: flex-start;
@@ -46,10 +46,9 @@ h2{
     font-weight: 100;
   }
   .cosmoslogo {
+    ${mixins.desktopMaxWidth}
     height: 70px;
     width: 70px;
   }
-    `}
-  
   `}
 `;
