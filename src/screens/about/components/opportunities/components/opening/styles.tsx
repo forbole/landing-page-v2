@@ -20,6 +20,10 @@ export const OpeningCSS = styled.div`
     cursor: pointer;
   }
 
+  a {
+    color: black;
+  }
+
   ${media.bigDesktop`
     .header-content {
       display: flex;

@@ -11,7 +11,7 @@ const Staking = () => {
       <WhatIsStaking />
       <EcoSystemProjects />
     </Layout>
-  )
-}
+  );
+};
 
 export default Staking;

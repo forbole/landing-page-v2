@@ -16,7 +16,12 @@ const Opportunities = () => {
         </HeaderCSS>
         <GridCSS>
           {openingsData.map((x, i) => (
-            <Opening key={i} title={x.title} description={x.description} />
+            <Opening
+              key={i}
+              title={x.title}
+              description={x.description}
+              slug={x.slug}
+            />
           ))}
         </GridCSS>
       </MaxWidthContainerCSS>
