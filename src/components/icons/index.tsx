@@ -14,6 +14,7 @@ import AppStoreButton from "./app_store_button.svg";
 import GooglePlayButton from "./google_play_badge.svg";
 import Block from "./block.svg";
 import Award from "./award.svg";
+import Go from "./go.svg";
 
 export {
   Telegram,
@@ -32,4 +33,5 @@ export {
   GooglePlayButton,
   Block,
   Award,
+  Go,
 };

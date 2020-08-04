@@ -65,8 +65,8 @@ export const membersData = [
     image: "images/team/123.png",
   },
   {
-    name: "Shilin",
-    position: "researchContent",
-    image: "images/team/123.png",
+    // name: "You",
+    // position: "researchContent",
+    // image: "images/team/123.png",
   },
 ];

@@ -1,7 +1,13 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
-import { Header, WhatWeDo, Milestones, Team } from "./components";
+import {
+  Header,
+  WhatWeDo,
+  Milestones,
+  Team,
+  Opportunities,
+} from "./components";
 
 const About = () => {
   const { t } = useTranslation("about");
@@ -11,6 +17,7 @@ const About = () => {
       <WhatWeDo />
       <Milestones />
       <Team />
+      <Opportunities />
     </Layout>
   );
 };
