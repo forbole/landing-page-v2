@@ -6,12 +6,14 @@ function CosmosHeader() {
   const { t } = useTranslation("cosmos_hub");
   return (
     <CosmosHeaderCSS>
-      <img
-        className="cosmoslogo"
-        src="images/icons/cosmos_hub.png"
-        alt="cosmos-hub"
-      ></img>
-      <h2>{t("cosmosHub")}</h2>
+      <div className="wrapper">
+        <img
+          className="cosmoslogo"
+          src="images/icons/cosmos_hub.png"
+          alt="cosmos-hub"
+        ></img>
+        <h2>{t("cosmosHub")}</h2>
+      </div>
     </CosmosHeaderCSS>
   );
 }

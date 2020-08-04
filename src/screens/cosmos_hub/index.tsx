@@ -10,7 +10,9 @@ function CosmosHub() {
     <Layout title={t("title")}>
       <CosmosHubCSS>
         <CosmosHeader />
-        <CosmosContent />
+        <div className="wrapper">
+          <CosmosContent />
+        </div>
       </CosmosHubCSS>
     </Layout>
   );

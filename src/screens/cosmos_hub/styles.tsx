@@ -1,6 +1,9 @@
 import styled from "styled-components";
-import { mixins } from "@styles";
 
 export const CosmosHubCSS = styled.div`
-  ${mixins.mobileBottomPadding}
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;

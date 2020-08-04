@@ -7,18 +7,19 @@ export const CosmosContentCSS = styled.div`
     font-size: 1rem;
     margin-bottom: 2em;
   }
+  ${mixins.mobileLastContainerPadding}
   ${media.tablet`
   padding: 3rem;
 p {
     font-size: 2rem;
 }`}
   ${media.bigDesktop`
-  padding: 5rem 10rem;
+  ${mixins.desktopMaxWidth}
   width: 100%;
   height: 100%;
+  padding: 3rem 0;
+  ${mixins.desktopBottomPadding}
 p {
-    ${mixins.desktopMaxWidth}
-    ${mixins.flexCenter}
     justify-content: flex-start;
     width: 100%;
     font-weight: 100;

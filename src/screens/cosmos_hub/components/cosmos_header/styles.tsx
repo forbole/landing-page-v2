@@ -12,14 +12,13 @@ h2{
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 3rem 3rem;
   width: 100%;
   min-height: 10rem;
   background-color: rgba(55, 68, 172, 1);
   background-image: url("images/assets/cosmos_hub_details_elements.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 59px -93px;
+  background-position: 52px -59px;
  
   }
   .cosmoslogo {
@@ -31,24 +30,37 @@ h2{
   ${media.tablet`
   background-position: 62px -334px;
   h2{
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+  .cosmoslogo {
+    height: 60px;
+    width: 60px;
+    margin-right: 1rem;
   }`}
   
   ${media.bigDesktop`
-  justify-content: flex-start;
   min-height: 25rem;
   background-position: 600px -734px;
-  padding: 5rem 10rem;
+  ${mixins.flexCenter}
+  .wrapper {
+    ${mixins.desktopMaxWidth}
+    width: 100%;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+  }
   h2 {
     ${mixins.desktopMaxWidth}
     width: 100%;
     font-size: 3rem;
     font-weight: 100;
+    justify-content: flex-start;
   }
   .cosmoslogo {
     ${mixins.desktopMaxWidth}
     height: 70px;
     width: 70px;
+    justify-content: flex-start;
   }
   `}
 `;
