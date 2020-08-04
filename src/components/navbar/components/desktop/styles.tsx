@@ -15,7 +15,7 @@ export const DesktopNavCSS = styled.div<IDesktopNavCSS>`
     z-index: 100;
     transition: 0.5s;
     background: ${(props) =>
-      props.displayBackground ? "white" : "transparent"};
+      props.displayBackground ? "rgba(255, 255, 255, 1)" : "transparent"};
 
     svg {
       width: 125px;

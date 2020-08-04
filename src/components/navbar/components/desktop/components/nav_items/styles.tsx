@@ -11,7 +11,7 @@ export const NavItemsCSS = styled.div<IDesktopNavCSS>`
 
   a {
     color: ${(props) => (props.color ? props.color : "white")};
-    margin: 0 0.5rem;
+    margin: 0 2rem;
     position: relative;
 
     div {
@@ -23,7 +23,7 @@ export const NavItemsCSS = styled.div<IDesktopNavCSS>`
       justify-content: center;
       opacity: 0;
       transition: 0.2s;
-      color: ${colors.gray600};
+      color: ${(props) => (props.color ? props.color : "white")};
     }
 
     &.active {
@@ -44,7 +44,7 @@ export const NavItemsCSS = styled.div<IDesktopNavCSS>`
   }
   .ui.dropdown {
     color: ${(props) => (props.color ? props.color : "white")};
-
+    margin-left: 2rem;
     .menu {
       right: 0;
       left: auto;
