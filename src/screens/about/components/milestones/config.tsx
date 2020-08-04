@@ -69,3 +69,17 @@ export const milestonesData = [
 export const half = Math.floor(milestonesData.length / 2);
 export const milestoneRowOne = milestonesData.slice(0, half);
 export const milestoneRowTwo = milestonesData.slice(half);
+export const milestoneFormat = [];
+export const fetchMileStoneData = () => {
+  const results = [];
+  for (let i = 0; i <= half; i += 1) {
+    if (milestoneRowOne[i]) {
+      results.push(milestoneRowOne[i]);
+    }
+    if (milestoneRowTwo[i]) {
+      results.push(milestoneRowTwo[i]);
+    }
+  }
+
+  return results;
+};
