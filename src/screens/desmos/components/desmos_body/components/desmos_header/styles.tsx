@@ -29,6 +29,7 @@ export const ContentHeaderCSS = styled.div`
   ${media.bigDesktop`
   h2 {
     color: black;
+    font-size: 2rem;
   }
 
   p {

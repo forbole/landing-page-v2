@@ -24,6 +24,10 @@ export const MainContentCSS = styled.div`
   ${media.bigDesktop`
     ${mixins.desktopMaxWidth}
     width: 100%;
+
+    h3 {
+      font-size: 2rem;
+    }
   `}
 `;
 

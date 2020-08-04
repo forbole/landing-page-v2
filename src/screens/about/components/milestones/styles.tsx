@@ -12,6 +12,10 @@ export const MilestonesCSS = styled.div`
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
+
+    h3 {
+      font-size: 2rem;
+    }
   `}
 `;
 

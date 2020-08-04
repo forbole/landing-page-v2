@@ -63,6 +63,10 @@ export const HeaderCSS = styled(CoverCSS)`
     .content-container {
       ${mixins.desktopMaxWidth}
       width: 100%;
+
+      h2 {
+        font-size: 3rem;
+      }
     }
 
     .background-image-container {

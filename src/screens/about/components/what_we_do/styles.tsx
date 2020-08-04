@@ -22,6 +22,10 @@ export const WhatWeDoCSS = styled.div`
   ${media.bigDesktop`
     ${mixins.flexCenter}
 
+    h3 {
+      font-size: 2rem;
+    }
+
     ul {
       list-style-type: disc;
     }

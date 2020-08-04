@@ -29,6 +29,12 @@ export const HeaderCSS = styled.div`
   p {
     text-align: center;
   }
+
+  ${media.bigDesktop`
+    h3 {
+      font-size: 2rem;
+    }
+  `}
 `;
 
 export const GridCSS = styled.div`

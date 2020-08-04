@@ -11,6 +11,10 @@ export const WhatIsStakingCSS = styled.div`
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
+
+    h3 {
+      font-size: 2rem;
+    }
   `}
 `;
 

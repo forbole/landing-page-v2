@@ -19,6 +19,10 @@ export const TeamHeadingContainerCSS = styled.div`
 
   ${media.bigDesktop`
     padding-right: 2rem;
+
+    h3 {
+      font-size: 3.5rem;
+    }
   `}
 `;
 
