@@ -45,9 +45,6 @@ h2{
   .wrapper {
     ${mixins.desktopMaxWidth}
     width: 100%;
-    // display: flex;
-    // justify-content: flex-start;
-    // align-items: center;
   }
   h2 {
     ${mixins.desktopMaxWidth}
