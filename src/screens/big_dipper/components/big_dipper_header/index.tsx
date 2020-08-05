@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { BDHeaderCSS, MainContentCSS } from "./styles";
+import { BDHeaderCSS } from "./styles";
 import { socialMedias } from "./config";
 import { Go } from "@icons";
 
