@@ -1,10 +1,11 @@
 import styled from "styled-components";
-import { mixins, theme } from "@styles";
+import { mixins, theme, media } from "@styles";
 
 const { colors } = theme;
 
 export const BDHeaderCSS = styled.div`
-  ${mixins.mobilePadding}
+  ${mixins.mobileHorizontalPadding}
+  ${mixins.mobileBottomPadding}
   padding-top: 5rem;
   background-color: ${colors.red};
   display: flex;
@@ -14,8 +15,11 @@ export const BDHeaderCSS = styled.div`
     color: ${colors.white};
     padding-right: 0.5rem;
   }
-  .socialMedia > a {
-    padding-right: 1rem;
+  .socialMedia {
+    padding-top: 1rem;
+    a {
+      padding-right: 1rem;
+    }
   }
   h1,
   h2,
@@ -32,4 +36,26 @@ export const BDHeaderCSS = styled.div`
   svg > path {
     fill: white;
   }
+  ${media.bigDesktop`
+  min-height: 25rem;
+  ${mixins.flexCenter}
+  .desktopWrapper {
+    ${mixins.desktopMaxWidth}
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+  }
+  h1,
+  h2,
+  span {
+    ${mixins.desktopMaxWidth}
+    margin-bottom: 0;
+  }
+    .wrapper {
+    ${mixins.flexBetween}
+        .socialMedia{
+            padding-top: 0;
+        }
+    }
+  `}
 `;
