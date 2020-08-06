@@ -6,10 +6,12 @@ export const BDContent = () => {
   const { t } = useTranslation("big_dipper");
   return (
     <BDContentCSS>
-      <img
-        src="images/assets/bigdipper-screenshot.png"
-        alt="Big Dipper Screenshot"
-      ></img>
+      <div className="image">
+        <img
+          src="images/assets/bigdipper-screenshot.png"
+          alt="Big Dipper Screenshot"
+        ></img>
+      </div>
       <div className="content">
         <p>{t("bd1")}</p>
         <p>{t("bd2")}</p>
