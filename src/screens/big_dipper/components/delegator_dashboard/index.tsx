@@ -20,7 +20,9 @@ export const DDContent = () => {
           <p>{t("dd1")}</p>
           <p>{t("dd2")}</p>
           <p>{t("dd3")}</p>
-          <Button color="black">{t("download")}</Button>
+          <Button color="black">
+            <a href="#">{t("download")}</a>
+          </Button>
         </div>
       </div>
     </DDContentCSS>

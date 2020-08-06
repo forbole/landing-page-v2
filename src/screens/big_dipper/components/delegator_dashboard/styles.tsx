@@ -89,5 +89,11 @@ h2 {
   .ui.black.button:hover {
     background-color: ${colors.red}
 }
+.ui.black.button:focus {
+    background-color: rgba(240, 57, 57, 1);
+}
+a {
+    color: ${colors.white}
+}
   `}
 `;
