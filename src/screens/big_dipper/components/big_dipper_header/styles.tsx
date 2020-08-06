@@ -21,6 +21,9 @@ export const BDHeaderCSS = styled.div`
       padding-right: 1rem;
     }
   }
+  h1 {
+    font-size: 2rem;
+  }
   h1,
   h2,
   span {
@@ -36,6 +39,11 @@ export const BDHeaderCSS = styled.div`
   svg > path {
     fill: white;
   }
+  ${media.tablet`
+  h1 { 
+    font-size: 3rem;    
+  }
+  `}
   ${media.bigDesktop`
   min-height: 25rem;
   ${mixins.flexCenter}
@@ -46,14 +54,30 @@ export const BDHeaderCSS = styled.div`
     display: flex;
   }
   h1,
-  h2,
-  span {
+  h2 {
     ${mixins.desktopMaxWidth}
-    margin-bottom: 0;
+    margin: 0 0 2rem 0;
+  }
+  svg path:hover {
+    fill: rgba(250, 250, 250, 1);
+    cursor: pointer;
+  }
+
+  span {
+      margin-bottom: 0;
+  }
+
+  span:hover {
+    a {
+        color: ${colors.black}
+    }
+    svg > path {
+        fill: ${colors.black}
+    }
   }
     .wrapper {
     ${mixins.flexBetween}
-        .socialMedia{
+        .socialMedia {
             padding-top: 0;
         }
     }
