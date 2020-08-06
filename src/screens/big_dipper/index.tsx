@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
-import { BDHeader, BDContent, EcoProjects } from "./components";
+import { BDHeader, BDContent, EcoProjects, DDContent } from "./components";
 
 const BigDipper = () => {
   const { t } = useTranslation("big_dipper");
@@ -10,6 +10,7 @@ const BigDipper = () => {
       <BDHeader />
       <BDContent />
       <EcoProjects />
+      <DDContent />
     </Layout>
   );
 };
