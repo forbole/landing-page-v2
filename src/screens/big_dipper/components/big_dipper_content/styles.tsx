@@ -33,4 +33,35 @@ export const BDContentCSS = styled.div`
     font-size: 2rem;
   }
   `}
+  ${media.bigDesktop`
+  min-height: 25rem;
+  ${mixins.flexCenter}
+  ${mixins.desktopBottomPadding}
+  .desktopWrapper {
+    ${mixins.desktopMaxWidth}
+    ${mixins.flexBetween}
+    flex-direction: row-reverse;
+    width: 100%;
+    display: flex;
+  }
+  p {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+  img {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0;
+  }
+  .image {
+    padding: 0;
+  }
+  .content {
+    padding-right: 4rem;
+    padding-top: 2rem;
+  }
+  `}
 `;
