@@ -1,13 +1,13 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { BDHeaderCSS } from "./styles";
+import { BigDipperHeaderCSS } from "./styles";
 import { socialMedias } from "./config";
 import { Go } from "@icons";
 
-export const BDHeader = () => {
+export const BigDipperHeader = () => {
   const { t } = useTranslation("big_dipper");
   return (
-    <BDHeaderCSS>
+    <BigDipperHeaderCSS>
       <div className="desktopWrapper">
         <h1>{t("title")}</h1>
         <h2>{t("yourCosmosExplorer")}</h2>
@@ -25,8 +25,8 @@ export const BDHeader = () => {
           </div>
         </div>
       </div>
-    </BDHeaderCSS>
+    </BigDipperHeaderCSS>
   );
 };
 
-export default BDHeader;
+export default BigDipperHeader;

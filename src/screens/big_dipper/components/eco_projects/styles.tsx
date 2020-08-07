@@ -21,13 +21,14 @@ export const MainContentCSS = styled.div`
   p {
     font-size: 0.9rem;
   }
+  ${media.tablet`
+  h3 {
+    font-size: 2rem;
+  }
+  `}
   ${media.bigDesktop`
     ${mixins.desktopMaxWidth}
     width: 100%;
-
-    h3 {
-      font-size: 2rem;
-    }
   `}
 `;
 

@@ -1,11 +1,11 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { BDContentCSS } from "./styles";
+import { BigDipperContentCSS } from "./styles";
 
-export const BDContent = () => {
+export const BigDipperContent = () => {
   const { t } = useTranslation("big_dipper");
   return (
-    <BDContentCSS>
+    <BigDipperContentCSS>
       <div className="desktopWrapper">
         <div className="image">
           <img
@@ -20,8 +20,8 @@ export const BDContent = () => {
           <p>{t("bd4")}</p>
         </div>
       </div>
-    </BDContentCSS>
+    </BigDipperContentCSS>
   );
 };
 
-export default BDContent;
+export default BigDipperContent;

@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { DDContentCSS } from "./styles";
+import { DashboardContentCSS } from "./styles";
 import { Button } from "semantic-ui-react";
 
-export const DDContent = () => {
+export const DashboardContent = () => {
   const { t } = useTranslation("big_dipper");
   return (
-    <DDContentCSS>
+    <DashboardContentCSS>
       <div className="desktopWrapper">
         <div className="image">
           <img
@@ -25,8 +25,8 @@ export const DDContent = () => {
           </Button>
         </div>
       </div>
-    </DDContentCSS>
+    </DashboardContentCSS>
   );
 };
 
-export default DDContent;
+export default DashboardContent;

@@ -1,7 +1,6 @@
 {
   "title": "Big Dipper",
-  "ecosystemProjects": "Ecosystem Projects",
-  "ecosystemProjectsDescription": "We are one of the very few professional validators who is also building a blockchain, we focus our resources for staking-as-a-service in three ecosystems",
+  "supportedBlockchains": "Supported Blockchains",
   "yourCosmosExplorer": "Your Cosmos Explorer",
   "visitWebsite": "VISIT WEBSITE",
   "bd1": "Our journey in blockchain space started as an ecosystem project in Cosmos. As we needed an explorer for our chain, we built our own block explorer.",

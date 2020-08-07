@@ -3,7 +3,7 @@ import { mixins, theme, media } from "@styles";
 
 const { colors } = theme;
 
-export const BDHeaderCSS = styled.div`
+export const BigDipperHeaderCSS = styled.div`
   ${mixins.mobileHorizontalPadding}
   ${mixins.mobileBottomPadding}
   padding-top: 5rem;
@@ -45,8 +45,8 @@ export const BDHeaderCSS = styled.div`
   }
   `}
   ${media.bigDesktop`
-  min-height: 25rem;
   ${mixins.flexCenter}
+  min-height: 25rem;
   .desktopWrapper {
     ${mixins.desktopMaxWidth}
     flex-direction: column;
@@ -62,11 +62,9 @@ export const BDHeaderCSS = styled.div`
     fill: rgba(250, 250, 250, 1);
     cursor: pointer;
   }
-
   span {
       margin-bottom: 0;
   }
-
   span:hover {
     a {
         color: ${colors.black}
@@ -75,11 +73,11 @@ export const BDHeaderCSS = styled.div`
         fill: ${colors.black}
     }
   }
-    .wrapper {
+  .wrapper {
     ${mixins.flexBetween}
-        .socialMedia {
-            padding-top: 0;
-        }
-    }
+      .socialMedia {
+          padding-top: 0;
+      }
+  }
   `}
 `;

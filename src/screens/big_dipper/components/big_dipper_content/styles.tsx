@@ -3,10 +3,10 @@ import { mixins, theme, media } from "@styles";
 
 const { colors } = theme;
 
-export const BDContentCSS = styled.div`
+export const BigDipperContentCSS = styled.div`
   ${mixins.mobilePadding}
   ${mixins.flexCenter}
-  color: ${colors.black}
+  color: ${colors.black};
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -30,16 +30,17 @@ export const BDContentCSS = styled.div`
     padding: 2rem;
   }
   p {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   `}
   ${media.bigDesktop`
-  min-height: 25rem;
   ${mixins.flexCenter}
   ${mixins.desktopBottomPadding}
+  padding-top: 5rem;
+  min-height: 25rem;
   .desktopWrapper {
     ${mixins.desktopMaxWidth}
-    ${mixins.flexBetween}
+    ${mixins.flexCenter}
     flex-direction: row-reverse;
     width: 100%;
     display: flex;
@@ -47,7 +48,6 @@ export const BDContentCSS = styled.div`
   p {
     display: flex;
     justify-content: flex-start;
-    width: 100%;
     font-weight: 100;
     font-size: 1rem;
   }
@@ -60,8 +60,11 @@ export const BDContentCSS = styled.div`
     padding: 0;
   }
   .content {
-    padding-right: 8rem;
-    padding-top: 2rem;
+    margin-right: 7rem;
+    
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
   `}
 `;

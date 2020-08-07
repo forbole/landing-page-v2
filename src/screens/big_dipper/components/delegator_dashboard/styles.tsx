@@ -3,10 +3,10 @@ import { mixins, theme, media } from "@styles";
 
 const { colors } = theme;
 
-export const DDContentCSS = styled.div`
+export const DashboardContentCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
   ${mixins.flexCenter}
-  color: ${colors.black}
+  color: ${colors.black};
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -36,64 +36,63 @@ export const DDContentCSS = styled.div`
     font-weight: 100;
     margin-top: 0.5rem;
   }
-${media.tablet`
-  .image {
-    padding: 2rem;
+  a {
+    color: ${colors.white}
   }
-  h3 {
-    font-size: 2rem;
-}
-h2 {
-    font-size: 3rem;
-}
-  p {
-    font-size: 1.7rem;
-  }
+  ${media.tablet`
+    .image {
+      padding: 2rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.7rem;
+    }
   `}
-${media.bigDesktop`
-  min-height: 25rem;
-  ${mixins.flexCenter}
-  padding: 8rem 5rem 8rem;
-  .desktopWrapper {
-    ${mixins.desktopMaxWidth}
-    ${mixins.flexBetween}
-    flex-direction: row-reverse;
-    width: 100%;
-    display: flex;
-  }
-  h3 {
-    font-size: 1.5rem;
-}
-h2 {
-    font-size: 2rem;
-}
-  p {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    font-weight: 100;
-    font-size: 1rem;
-  }
-  img {
+  ${media.bigDesktop`
+    min-height: 25rem;
+    ${mixins.flexCenter}
+    padding: 8rem 5rem 8rem;
+    .desktopWrapper {
+      ${mixins.desktopMaxWidth}
+      ${mixins.flexBetween}
+      flex-direction: row-reverse;
+      width: 100%;
+      display: flex;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    p {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      font-weight: 100;
+      font-size: 1rem;
+    }
+    img {
       display: flex;
       justify-content: flex-end;
       margin-bottom: 0;
-  }
-  .image {
-    padding: 0;
-  }
-  .content {
-    padding-right: 8rem;
-    padding-top: 2rem;
-  }
-  .ui.black.button:hover {
-    background-color: ${colors.red}
-}
-.ui.black.button:focus {
-    background-color: rgba(240, 57, 57, 1);
-}
-a {
-    color: ${colors.white}
-}
+    }
+    .image {
+      padding: 0;
+    }
+    .content {
+      width: 65%;
+    }
+    .ui.black.button:hover {
+      background-color: ${colors.red}
+    }
+    .ui.black.button:focus {
+      background-color: rgba(240, 57, 57, 1);
+    }
   `}
 `;

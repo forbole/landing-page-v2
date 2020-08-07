@@ -9,8 +9,7 @@ export const EcoProjects = () => {
   return (
     <EcoProjectsCSS>
       <MainContentCSS>
-        <h3>{t("ecosystemProjects")}</h3>
-        <p>{t("ecosystemProjectsDescription")}</p>
+        <h3>{t("supportedBlockchains")}</h3>
         <ProjectsGridCSS>
           {networkData.map((x) => (
             <Network key={x.name} name={x.name} image={x.image} />
