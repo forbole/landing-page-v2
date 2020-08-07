@@ -5,6 +5,7 @@ const { colors } = theme;
 
 export const DescriptionCSS = styled.div`
   ${mixins.mobilePadding}
+  padding-top: 4rem;
 
   h2 {
     font-weight: 500;

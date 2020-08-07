@@ -7,11 +7,16 @@ import { IMobileNav } from "./interfaces";
 
 const MobileNav = (props: IMobileNav) => {
   const { isOpen, toggle } = useMobileNavHook();
-  const { color } = props;
+  const { color, displayBackground } = props;
 
   return (
     <MobileNavCSS>
-      <Navbar isOpen={isOpen} toggle={toggle} color={color} />
+      <Navbar
+        isOpen={isOpen}
+        toggle={toggle}
+        color={color}
+        displayBackground={displayBackground}
+      />
       <NavBody isOpen={isOpen} toggle={toggle} />
     </MobileNavCSS>
   );

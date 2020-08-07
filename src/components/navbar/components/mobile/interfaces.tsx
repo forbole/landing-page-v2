@@ -1,12 +1,12 @@
 export interface IMobileNavBarIconCSS {
   onClick?: any;
   isOpen: boolean;
+  displayBackground?: boolean;
 }
 
-export interface INavBar {
+export interface INavBar extends IMobileNav {
   isOpen: boolean;
   toggle(): void;
-  color?: string;
 }
 
 export interface IShowLanguage {
@@ -17,4 +17,5 @@ export interface IShowLanguage {
 
 export interface IMobileNav {
   color?: string;
+  displayBackground?: boolean;
 }

@@ -4,13 +4,11 @@ import { Forbole as ForboleLogo } from "@icons";
 import { theme } from "@styles";
 import NavItems from "./components/nav_items";
 import { DesktopNavCSS } from "./styles";
-import { useDesktopNavHook } from "./hooks";
 
 const { colors } = theme;
 
 const DesktopNav = (props: any) => {
-  const { color } = props;
-  const { displayBackground } = useDesktopNavHook();
+  const { color, displayBackground } = props;
 
   return (
     <DesktopNavCSS

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 
-export const useDesktopNavHook = () => {
+export const useNavHook = () => {
   const [displayBackground, setDisplayBackground] = useState(false);
 
   useScrollPosition(({ prevPos, currPos }) => {
