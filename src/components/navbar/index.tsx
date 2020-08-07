@@ -4,12 +4,12 @@ import MobileNav from "./components/mobile";
 import { INavBar } from "./interfaces";
 
 const NavBar = (props: INavBar) => {
-  const { color } = props;
+  const { color, mobileColor } = props;
 
   return (
     <>
       <DesktopNav color={color} />
-      <MobileNav />
+      <MobileNav color={mobileColor} />
     </>
   );
 };

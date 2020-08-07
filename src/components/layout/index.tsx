@@ -9,6 +9,7 @@ type Props = {
   title?: string;
   footer?: boolean;
   navColor?: string;
+  mobileNavColor?: string;
   description?: string;
   keywords?: string[];
 };
@@ -20,6 +21,7 @@ const Layout = ({
   navColor,
   description = "Too many friends. Too few relationships. Let's change our social network. Recommend trusted people and start making meaningful relationships with rewards.",
   keywords = ["Forbole", "blockchain", "social network"],
+  mobileNavColor,
 }: Props) => {
   const router = useRouter();
   const currentPath = router.pathname === "/" ? "/" : `${router.pathname}/`;
@@ -38,7 +40,7 @@ const Layout = ({
           content={`${process.env.URL}/static/images/icons/forbole-logo-red.svg`}
         />
       </Head>
-      <NavBar color={navColor} />
+      <NavBar color={navColor} mobileColor={mobileNavColor} />
       <FlexCSS>
         {children}
         {!!footer && <Footer />}

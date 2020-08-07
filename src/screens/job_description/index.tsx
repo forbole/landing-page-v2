@@ -8,7 +8,7 @@ const { colors } = theme;
 
 const JobDescription = () => {
   return (
-    <Layout navColor={colors.gray600}>
+    <Layout navColor={colors.gray600} mobileNavColor={colors.gray600}>
       <JobDescriptionCSS>
         <MaxWidthContainerCSS>
           <Description />

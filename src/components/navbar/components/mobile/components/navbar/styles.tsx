@@ -21,7 +21,8 @@ export const MobileNavBarCSS = styled.div<IMobileNavBarIconCSS>`
     width: 100px;
 
     path {
-      fill: ${(props) => (props.isOpen ? colors.forboleRed : "white")};
+      fill: ${(props) =>
+    props.isOpen || props.color ? colors.forboleRed : "white"};
     }
   }
 `;
@@ -32,7 +33,7 @@ export const MobileNavBarIconCSS = styled.div<IMobileNavBarIconCSS>`
   &:after,
   &:before,
   > div {
-    background-color: white;
+    background-color: ${(props) => (props.color ? "black" : "white")};
     border-radius: 10px;
     content: "";
     display: block;
