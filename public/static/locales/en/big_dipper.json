@@ -1,0 +1,16 @@
+{
+  "title": "Big Dipper",
+  "supportedBlockchains": "Supported Blockchains",
+  "yourCosmosExplorer": "Your Cosmos Explorer",
+  "visitWebsite": "VISIT WEBSITE",
+  "bd1": "Our journey in blockchain space started as an ecosystem project in Cosmos. As we needed an explorer for our chain, we built our own block explorer.",
+  "bd2": "After a while, we saw HackAtom3 Validator Series was coming. So we gave our explorer a name, and Big Dipper was born. In astronomy, Big Dipper is such an amazing asterism that were used by ancient people from both the east and the west as a pointer to find directions.",
+  "bd3": "Our goal is to make Big Dipper as the pointer for people to explore Cosmos the internet of blockchains.",
+  "bd4": " Since its launch in Oct 2018, Big Dipper has been used by people from over 130 countries. We will continue to enrich the features of Big Dipper to make it an all-around monitoring/staking tool and information hub for the ecosystem.",
+  "delegatorDashboard": "Delegator Dashboard",
+  "telescope": "Telescope For Bigdipper",
+  "dd1": "Get data from different networks",
+  "dd2": "Control your multi assets in a single interface",
+  "dd3": "Manage your delegations of different supported networks",
+  "download": "DOWNLOAD"
+}

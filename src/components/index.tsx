@@ -4,4 +4,13 @@ import SampleButton from "./button";
 import Footer from "./footer";
 import { Telegram } from "./icons";
 import TermsOfService from "./terms_of_service";
-export { Layout, NavBar, SampleButton, Footer, Telegram, TermsOfService };
+import Network from "./network";
+export {
+  Layout,
+  NavBar,
+  SampleButton,
+  Footer,
+  Telegram,
+  TermsOfService,
+  Network,
+};
