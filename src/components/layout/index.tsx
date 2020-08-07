@@ -35,7 +35,7 @@ const Layout = ({
         <meta name="og:description" content={description} />
         <meta
           name="og:image"
-          content={`${process.env.URL}${currentPath}forbole_logo/forbole_logo_red.svg`}
+          content={`${process.env.URL}/static/images/icons/forbole-logo-red.svg`}
         />
       </Head>
       <NavBar color={navColor} />

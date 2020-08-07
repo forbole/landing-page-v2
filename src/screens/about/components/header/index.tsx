@@ -13,7 +13,7 @@ const Header = () => {
         <p>{t("heroDetails")}</p>
       </div>
       <div className="background-image-container">
-        <img src="forbole_background/about.svg" className="bg-image" />
+        <img src="static/images/assets/about.svg" className="bg-image" />
       </div>
     </HeaderCSS>
   );

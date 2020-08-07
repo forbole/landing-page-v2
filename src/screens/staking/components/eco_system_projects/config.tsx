@@ -1,82 +1,82 @@
 export const networkData = [
   {
-    image: "images/icons/cosmos_hub.png",
+    image: "static/images/icons/cosmos-hub.png",
     name: "Cosmos Hub",
   },
   {
-    image: "images/icons/iris.png",
+    image: "static/images/icons/iris.png",
     name: "IRIS Hub",
   },
   {
-    image: "images/icons/terra.png",
+    image: "static/images/icons/terra.png",
     name: "Terra Money",
   },
   {
-    image: "images/icons/kava.png",
+    image: "static/images/icons/kava.png",
     name: "Kava",
   },
   {
-    image: "images/icons/sentinel.png",
+    image: "static/images/icons/sentinel.png",
     name: "Sentinel",
   },
   {
-    image: "images/icons/sentinel.png",
+    image: "static/images/icons/sentinel.png",
     name: "Cyberd",
   },
   {
-    image: "images/icons/likecoin.png",
+    image: "static/images/icons/likecoin.png",
     name: "LikeChain",
   },
   {
-    image: "images/icons/regen_network.png",
+    image: "static/images/icons/regen-network.png",
     name: "Regen Network",
   },
   {
-    image: "images/icons/e_money.png",
+    image: "static/images/icons/e-money.png",
     name: "e-Money",
   },
   {
-    image: "images/icons/desmos.png",
+    image: "static/images/icons/desmos.png",
     name: "Desmos",
   },
   {
-    image: "images/icons/desmos.png",
+    image: "static/images/icons/desmos.png",
     name: "Iov",
   },
   {
-    image: "images/icons/desmos.png",
+    image: "static/images/icons/desmos.png",
     name: "Oasis Labs",
   },
   {
-    image: "images/icons/desmos.png",
+    image: "static/images/icons/desmos.png",
     name: "Akash",
   },
   {
-    image: "images/icons/desmos.png",
+    image: "static/images/icons/desmos.png",
     name: "BitSongs",
   },
   {
-    image: "images/icons/desmos.png",
+    image: "static/images/icons/desmos.png",
     name: "Band Protocol",
   },
   {
-    image: "images/icons/desmos.png",
+    image: "static/images/icons/desmos.png",
     name: "Solana",
   },
   {
-    image: "images/icons/desmos.png",
+    image: "static/images/icons/desmos.png",
     name: "V-Stystem",
   },
   {
-    image: "images/icons/polkadot.png",
+    image: "static/images/icons/polkadot.png",
     name: "Polkadot",
   },
   {
-    image: "images/icons/polkadot.png",
+    image: "static/images/icons/polkadot.png",
     name: "Kusama",
   },
   {
-    image: "images/icons/polkadot.png",
+    image: "static/images/icons/polkadot.png",
     name: "Celo",
   },
 ];

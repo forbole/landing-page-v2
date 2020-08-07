@@ -7,7 +7,7 @@ export const CosmosHeaderCSS = styled.div`
   width: 100%;
   min-height: 10rem;
   background-color: rgba(55, 68, 172, 1);
-  background-image: url("images/assets/cosmos_hub_details_elements.svg");
+  background-image: url("static/images/assets/cosmos-hub-details-elements.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 52px -59px;

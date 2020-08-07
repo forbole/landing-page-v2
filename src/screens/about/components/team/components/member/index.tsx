@@ -5,7 +5,7 @@ const Member = (props: any) => {
   const {
     name = "",
     position = "",
-    image = "images/team/123.png",
+    image = "static/images/team/123.png",
     links = {},
   } = props;
 
