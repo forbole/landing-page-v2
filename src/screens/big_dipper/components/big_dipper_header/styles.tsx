@@ -67,10 +67,10 @@ export const BigDipperHeaderCSS = styled.div`
   }
   span:hover {
     a {
-        color: ${colors.black}
+        color: ${colors.black};
     }
     svg > path {
-        fill: ${colors.black}
+        fill: ${colors.black};
     }
   }
   .wrapper {

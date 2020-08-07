@@ -37,7 +37,7 @@ export const DashboardContentCSS = styled.div`
     margin-top: 0.5rem;
   }
   a {
-    color: ${colors.white}
+    color: ${colors.white};
   }
   ${media.tablet`
     .image {
@@ -89,7 +89,7 @@ export const DashboardContentCSS = styled.div`
       width: 65%;
     }
     .ui.black.button:hover {
-      background-color: ${colors.red}
+      background-color: ${colors.red};
     }
     .ui.black.button:focus {
       background-color: rgba(240, 57, 57, 1);
