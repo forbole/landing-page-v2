@@ -96,7 +96,7 @@ export const StatDetailsCSS = styled.div`
       position: relative;
       width: 105%;
       &:before {
-        content: url(images/assets/stake-now-hr.svg);
+        content: url(static/images/assets/stake-now-hr.svg);
         position: absolute;
         left: -110px;
         top: -30px;

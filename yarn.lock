@@ -1020,6 +1020,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/unitless/-/unitless-0.7.5.tgz#77211291c1900a700b8a78cfafda3160d76949ed"
   integrity sha512-OWORNpfjMsSSUBVrRBVGECkhWcULOAJz9ZW8uK9qgxD+87M7jHRcvh/A96XXNhXTLmKcoYSQtBEX7lHMO7YRwg==
 
+"@n8tb1t/use-scroll-position@^1.0.43":
+  version "1.0.43"
+  resolved "https://registry.yarnpkg.com/@n8tb1t/use-scroll-position/-/use-scroll-position-1.0.43.tgz#55ae24ed4d2b062c71bb51b15aaf67b6cc65caac"
+  integrity sha512-9CFB+3/ZRP0BGHCS+01ulq3syHamhcQiu3iVBSPJZV+578ySSOt9tWIVDiSaIQfz3a1QdKUbhYR+4Uplda3cwA==
+
 "@next/react-dev-overlay@9.4.4":
   version "9.4.4"
   resolved "https://registry.yarnpkg.com/@next/react-dev-overlay/-/react-dev-overlay-9.4.4.tgz#4ae03ac839ff022b3ce5c695bd24b179d4ef459d"

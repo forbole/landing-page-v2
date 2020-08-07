@@ -2,7 +2,7 @@
   padding: 1rem 0;
 ">
 <p align="center">
-  <img src="./public/forbole_logo/forbole_logo_red.svg" style="
+  <img src="./public/static/images/icons/forbole-logo-red.svg" style="
     width: 250px
   "/>
 </p>

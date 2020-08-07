@@ -2,7 +2,7 @@ export const membersData = [
   {
     name: "Kwun Yeung",
     position: "cofounderConductor",
-    image: "images/team/123.png",
+    image: "static/images/team/123.png",
     links: {
       linkedin: "#",
       github: "#",
@@ -12,7 +12,7 @@ export const membersData = [
   {
     name: "Terence Lam",
     position: "cofounderEvangelist",
-    image: "images/team/123.png",
+    image: "static/images/team/123.png",
     links: {
       linkedin: "#",
       github: "#",
@@ -22,7 +22,7 @@ export const membersData = [
   {
     name: "Steven Ping",
     position: "partner",
-    image: "images/team/123.png",
+    image: "static/images/team/123.png",
     links: {
       linkedin: "#",
       github: "#",
@@ -32,7 +32,7 @@ export const membersData = [
   {
     name: "Shilin",
     position: "researchContent",
-    image: "images/team/123.png",
+    image: "static/images/team/123.png",
     links: {
       linkedin: "#",
       github: "#",
@@ -42,7 +42,7 @@ export const membersData = [
   {
     name: "Shilin",
     position: "researchContent",
-    image: "images/team/123.png",
+    image: "static/images/team/123.png",
     links: {
       linkedin: "#",
       github: "#",
@@ -52,17 +52,17 @@ export const membersData = [
   {
     name: "Shilin",
     position: "researchContent",
-    image: "images/team/123.png",
+    image: "static/images/team/123.png",
   },
   {
     name: "Shilin",
     position: "researchContent",
-    image: "images/team/123.png",
+    image: "static/images/team/123.png",
   },
   {
     name: "Shilin",
     position: "researchContent",
-    image: "images/team/123.png",
+    image: "static/images/team/123.png",
   },
   {
     // name: "You",

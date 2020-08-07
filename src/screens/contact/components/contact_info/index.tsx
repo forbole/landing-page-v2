@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { socialMedias } from "../../config";
 import { ContactInfoCSS } from "./styles";
-import { Form, Segment } from "semantic-ui-react";
+import { Segment } from "semantic-ui-react";
 import { Location, Email } from "@icons";
 
 const ContactInfo = () => {

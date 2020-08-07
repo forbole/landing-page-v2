@@ -12,12 +12,14 @@ const Network = (props: INetworkProps) => {
     <NetworkCSS>
       <img src={image} />
       <p className="name">{name}</p>
-      <p className="amount">
-        <Block />
-        {convertToMoney(amount)}
-      </p>
-      <div className="button-container">
-        <Button>{t("stakeNow")}</Button>
+      <div className="flex">
+        <p className="amount">
+          <Block />
+          {convertToMoney(amount)}
+        </p>
+        <div className="button-container">
+          <Button>{t("stakeNow")}</Button>
+        </div>
       </div>
     </NetworkCSS>
   );

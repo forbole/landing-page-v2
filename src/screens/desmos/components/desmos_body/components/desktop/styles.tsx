@@ -18,7 +18,7 @@ export const DesktopCSS = styled.div`
         rgba(123, 135, 185, 0.33),
         rgba(123, 135, 185, 0.33)
       ),
-      url("forbole_background/desmos_hero.png");
+      url("static/images/assets/desmos-hero.png");
     background-repeat: no-repeat;
     background-position: 40% bottom;
     background-size: cover;
@@ -62,7 +62,6 @@ export const DesmosLogoCSS = styled.img`
   left: -60px;
   top: 0;
 `;
-
 
 export const DesmosBodyContainerCSS = styled.div`
   width: 70%;
