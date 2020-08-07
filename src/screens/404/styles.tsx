@@ -1,14 +1,12 @@
 import styled from "styled-components";
-import { mixins } from "@styles";
 
 export const NotFoundCSS = styled.div`
-  ${mixins.cancelMobilePadding}
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.9)
     ),
-    url("forbole_background/404_background.jpeg");
+    url("static/images/assets/404-background.jpeg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;

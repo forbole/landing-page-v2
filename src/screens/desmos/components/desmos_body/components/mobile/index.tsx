@@ -13,7 +13,7 @@ export const Mobile = () => {
           <DesmosHeader />
           <p className="visit-website">{t("visitWebsite")} &#x2192;</p>
         </div>
-        <DesmosLogoCSS src="images/icons/desmos_logo.svg" />
+        <DesmosLogoCSS src="static/images/icons/desmos-logo.svg" />
       </HeroCSS>
       <Body />
     </MobileCSS>

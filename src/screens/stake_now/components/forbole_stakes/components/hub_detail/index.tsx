@@ -18,7 +18,7 @@ const HubDetail = (props: any) => {
   return (
     <HubDetailCSS className={classNames({ main })}>
       <p className={classNames("title", { main })}>
-        {!!main && <img src="images/icons/cosmos_hub.png" />}
+        {!!main && <img src="static/images/icons/cosmos-hub.png" />}
         {t(title)}
       </p>
       <StatDetailsCSS>

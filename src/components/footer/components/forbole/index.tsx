@@ -7,7 +7,7 @@ const Forbole = () => {
   return (
     <ForboleCSS>
       <img
-        src="/forbole_logo/forbole_logo_white.svg"
+        src="static/images/icons/forbole-logo-white.svg"
         alt="forbole footer logo"
       ></img>
       <p>{t("logoCaption")}</p>

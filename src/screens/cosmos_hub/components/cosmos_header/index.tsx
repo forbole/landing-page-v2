@@ -9,7 +9,7 @@ function CosmosHeader() {
       <div className="wrapper">
         <img
           className="cosmoslogo"
-          src="images/icons/cosmos_hub.png"
+          src="static/images/icons/cosmos-hub.png"
           alt="cosmos-hub"
         ></img>
         <h2>{t("cosmosHub")}</h2>
