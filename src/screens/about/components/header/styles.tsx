@@ -6,7 +6,6 @@ const { headerMargin } = theme;
 export const HeaderCSS = styled(CoverCSS)`
   background: rgba(55, 68, 172, 1);
   position: relative;
-
   .background-image-container {
     position: absolute;
     bottom: 0;
