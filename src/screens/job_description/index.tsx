@@ -1,10 +1,17 @@
 import React from "react";
+import { IJopDescription } from "./interfaces";
+import { JobDescriptionCSS, MaxWidthContainerCSS } from "./styles";
+import { Description } from "./components";
 
-const JobDescription = () => {
+const JobDescription = (props: IJopDescription) => {
+  const { active } = props;
+
   return (
-    <div>
-      yes
-    </div>
+    <JobDescriptionCSS>
+      <MaxWidthContainerCSS>
+        <Description />
+      </MaxWidthContainerCSS>
+    </JobDescriptionCSS>
   );
 };
 
