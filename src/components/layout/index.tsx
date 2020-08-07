@@ -22,6 +22,7 @@ const Layout = ({
   keywords = ["Forbole", "blockchain", "social network"],
 }: Props) => {
   const router = useRouter();
+  const currentPath = router.pathname === "/" ? "/" : `${router.pathname}/`;
   return (
     <>
       <Head>
@@ -30,11 +31,11 @@ const Layout = ({
         <meta name="keywords" content={keywords.join(", ")} />
         <meta name="og:type" content="website" />
         <meta name="og:title" content="Forbole" />
-        <meta name="og:url" content={`${process.env.URL}${router.pathname}`} />
+        <meta name="og:url" content={`${process.env.URL}${currentPath}`} />
         <meta name="og:description" content={description} />
         <meta
           name="og:image"
-          content={`${process.env.URL}${router.pathname}forbole_logo/forbole_logo_red.svg`}
+          content={`${process.env.URL}${currentPath}forbole_logo/forbole_logo_red.svg`}
         />
       </Head>
       <NavBar color={navColor} />
