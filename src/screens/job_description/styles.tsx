@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { MaxWidthContainerCSS as MaxWidthCSS } from "@styles/components";
-import { mixins } from "@styles";
+import { mixins, media } from "@styles";
 
 export const JobDescriptionCSS = styled.div`
   ${mixins.flexCenter};
@@ -8,5 +8,9 @@ export const JobDescriptionCSS = styled.div`
 `;
 
 export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
-
+  ${media.bigDesktop`
+    ${mixins.mobileLastContainerPadding}
+    display: flex;
+    flex-direction: row-reverse;
+  `}
 `;

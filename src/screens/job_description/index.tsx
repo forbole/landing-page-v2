@@ -1,17 +1,15 @@
 import React from "react";
 import { Layout } from "@components";
-import { IJopDescription } from "./interfaces";
 import { JobDescriptionCSS, MaxWidthContainerCSS } from "./styles";
-import { Description } from "./components";
+import { Description, Sidebar } from "./components";
 
-const JobDescription = (props: IJopDescription) => {
-  const { active } = props;
-
+const JobDescription = () => {
   return (
     <Layout>
       <JobDescriptionCSS>
         <MaxWidthContainerCSS>
           <Description />
+          <Sidebar />
         </MaxWidthContainerCSS>
       </JobDescriptionCSS>
     </Layout>

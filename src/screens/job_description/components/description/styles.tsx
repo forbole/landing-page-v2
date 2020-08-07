@@ -33,5 +33,9 @@ export const DescriptionCSS = styled.div`
       margin: 1em 0;
       padding: 0;
     }
+
+    .ui.button {
+      width: auto;
+    }
   `}
 `;
