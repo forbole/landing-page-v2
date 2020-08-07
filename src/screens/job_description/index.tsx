@@ -1,11 +1,14 @@
 import React from "react";
 import { Layout } from "@components";
+import { theme } from "@styles";
 import { JobDescriptionCSS, MaxWidthContainerCSS } from "./styles";
 import { Description, Sidebar } from "./components";
 
+const { colors } = theme;
+
 const JobDescription = () => {
   return (
-    <Layout>
+    <Layout navColor={colors.gray600}>
       <JobDescriptionCSS>
         <MaxWidthContainerCSS>
           <Description />

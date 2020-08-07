@@ -25,6 +25,7 @@ export const DescriptionCSS = styled.div`
   }
 
   ${media.bigDesktop`
+    padding-left: 4rem;
     hr {
       display: block;
       height: 1px;

@@ -9,7 +9,8 @@ export const JobDescriptionCSS = styled.div`
 
 export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   ${media.bigDesktop`
-    ${mixins.mobileLastContainerPadding}
+    ${mixins.mobileBottomPadding}
+    padding-top: 6.5rem;
     display: flex;
     flex-direction: row-reverse;
   `}
