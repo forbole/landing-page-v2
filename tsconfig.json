@@ -50,13 +50,12 @@
     "declarations.d.ts"
   ],
   "exclude": [
-    "**/*.d.ts",
     "node_modules",
+    "node_modules/*",
   ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/styles/media.js"
   ]
 }
