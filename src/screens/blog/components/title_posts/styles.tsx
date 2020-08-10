@@ -4,8 +4,8 @@ import { mixins, theme, media } from "@styles";
 const { colors } = theme;
 
 export const TitlePostsCSS = styled.ul`
-  ${mixins.mobileHorizontalPadding}
-  ${mixins.mobileBottomPadding}
+  ${mixins.mobilePadding}
+  padding-top: 0;
   list-style-type: none;
 
   a {

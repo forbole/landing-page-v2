@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
 import { theme } from "@styles";
-import { BlogPosts, TitlePosts } from "./components";
+import { BlogPosts, TitlePosts, Tags } from "./components";
 import { BlogCSS, MaxWidthContainerCSS, SideCSS } from "./styles";
 
 const { colors } = theme;
@@ -20,6 +20,7 @@ const Blog = () => {
           <BlogPosts />
           <SideCSS>
             <TitlePosts />
+            <Tags />
           </SideCSS>
         </MaxWidthContainerCSS>
       </BlogCSS>
