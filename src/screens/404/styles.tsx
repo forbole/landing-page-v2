@@ -6,7 +6,7 @@ export const NotFoundCSS = styled.div`
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.9)
     ),
-    url("static/images/assets/404-background.jpeg");
+    url("/static/images/assets/404-background.jpeg");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;

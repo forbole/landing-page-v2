@@ -8,7 +8,7 @@ const NotFound = () => {
   return (
     <Layout title="404" footer={false}>
       <NotFoundCSS>
-        <img src="static/images/icons/404-unicorn.svg" />
+        <img src="/static/images/icons/404-unicorn.svg" />
         <div className="content">
           <h3>{t("title")}</h3>
           <p>{t("content")}</p>
