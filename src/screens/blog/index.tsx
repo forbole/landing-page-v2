@@ -3,6 +3,7 @@ import { useTranslation } from "i18n";
 import { Layout } from "@components";
 import { theme } from "@styles";
 import { BlogPosts } from "./components";
+import { BlogCSS, MaxWidthContainerCSS } from "./styles";
 
 const { colors } = theme;
 
@@ -14,9 +15,11 @@ const Blog = () => {
       navColor={colors.gray600}
       mobileNavColor={colors.gray600}
     >
-      <div>
-        <BlogPosts />
-      </div>
+      <BlogCSS>
+        <MaxWidthContainerCSS>
+          <BlogPosts />
+        </MaxWidthContainerCSS>
+      </BlogCSS>
     </Layout>
   );
 };

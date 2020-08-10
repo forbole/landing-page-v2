@@ -20,7 +20,7 @@ const Desktop = () => {
           <a href="#">
             <Button title={t("visitWebsite")}>{t("visitWebsite")}</Button>
           </a>
-          <DesmosLogoCSS src="static/images/icons/desmos-logo.svg" />
+          <DesmosLogoCSS src="/static/images/icons/desmos-logo.svg" />
         </DesmosBodyContainerCSS>
       </DesmosBodyCSS>
     </DesktopCSS>

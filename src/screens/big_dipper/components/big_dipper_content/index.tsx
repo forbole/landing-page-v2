@@ -9,7 +9,7 @@ export const BigDipperContent = () => {
       <div className="desktopWrapper">
         <div className="image">
           <img
-            src="static/images/assets/bigdipper-screenshot.png"
+            src="/static/images/assets/bigdipper-screenshot.png"
             alt="Big Dipper Screenshot"
           ></img>
         </div>

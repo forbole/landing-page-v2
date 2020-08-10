@@ -10,7 +10,7 @@ export const DashboardContent = () => {
       <div className="desktopWrapper">
         <div className="image">
           <img
-            src="static/images/assets/dashboard-screenshot.png"
+            src="/static/images/assets/dashboard-screenshot.png"
             alt="Big Dipper Screenshot"
           ></img>
         </div>

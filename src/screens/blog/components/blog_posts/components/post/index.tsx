@@ -4,17 +4,18 @@ import classNames from "classnames";
 import { PostCSS } from "./styles";
 
 const Post = (props: any) => {
-  const { post } = props;
-  const { image, title, excerpt, main = false, date, slug } = post;
-
+  const { post, main = false } = props;
+  const { image, title, excerpt, date, slug } = post;
   return (
     <PostCSS className={classNames({ main })}>
       <Link href={`/blog/${slug}`}>
         <a>
           <img src={image} />
-          <h3>{title}</h3>
-          <p>{excerpt}</p>
-          <p className="date">{date}</p>
+          <div className="content">
+            <h3>{title}</h3>
+            <p>{excerpt}</p>
+            <p className="date">{date}</p>
+          </div>
         </a>
       </Link>
     </PostCSS>
