@@ -9,8 +9,6 @@ import { fakeData } from "../../config";
 const Sidebar = (props: any) => {
   const { active } = props;
   const router = useRouter();
-  console.log(props, "props");
-  console.log(router.query, "pathname");
   const {
     query: { title = "" },
   } = router;
