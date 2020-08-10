@@ -8,6 +8,7 @@ export const BlogPostCSS = styled.div`
   grid-gap: 20px;
 
   ${media.bigDesktop`
+    padding: 0;
     grid-template-columns: repeat(2, 1fr);
 
     div.main {
