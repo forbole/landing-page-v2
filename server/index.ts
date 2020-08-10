@@ -23,7 +23,9 @@ const port = process.env.PORT || 3000;
     });
     server.listen(port, (err?: any) => {
       if (err) throw err;
-      console.log(`> Ready on localhost:${port} - env ${process.env.NODE_ENV}`);
+      console.log(
+        `> Ready on http://localhost:${port} - env ${process.env.NODE_ENV}`
+      );
     });
   } catch (e) {
     console.error(e);
