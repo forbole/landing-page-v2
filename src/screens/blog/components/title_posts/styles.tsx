@@ -21,15 +21,20 @@ export const TitlePostsCSS = styled.ul`
   }
 
   ${media.bigDesktop`
-    padding: 0;
     width: 100%;
     border: 1px solid ${colors.gray100};
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
     li {
-      padding: 1rem 0.7rem;
+      padding: 1rem 0rem;
 
       &:hover {
         cursor: pointer;
+      }
+
+      &:last-child {
+        border: none;
       }
     }
   `}

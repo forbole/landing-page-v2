@@ -10,7 +10,8 @@ export const BlogPostCSS = styled.div`
   ${media.bigDesktop`
     padding: 0;
     grid-template-columns: repeat(2, 1fr);
-
+    grid-auto-rows: min-content;
+    grid-gap: 30px 20px;
     div.main {
       grid-column: 1 / span 2;
     }

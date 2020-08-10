@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "@styles";
+import { theme, media } from "@styles";
 
 const { colors } = theme;
 
@@ -32,4 +32,16 @@ export const PostCSS = styled.div`
   .content {
     padding: 0.5rem;
   }
+
+  ${media.tablet`
+    img {
+      height: 300px;
+    }
+  `}
+
+  ${media.bigDesktop`
+    img {
+      height: 225px;
+    }
+  `}
 `;

@@ -12,7 +12,7 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   ${media.bigDesktop`
     ${mixins.mobileHorizontalPadding}
     ${mixins.mobileBottomPadding}
-    margin-top: 5.5rem;
+    margin-top: 7.5rem;
     display: flex;
   `}
 `;

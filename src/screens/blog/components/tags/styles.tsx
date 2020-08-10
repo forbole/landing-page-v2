@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { mixins, media, theme } from "@styles";
 import { generateBackgroundColor } from "./config";
+
+const { colors } = theme;
 
 export const TagsCSS = styled.div`
   ${mixins.mobilePadding}
@@ -18,8 +20,8 @@ export const TagsCSS = styled.div`
   }
 
   ${media.bigDesktop`
-    padding-left: 0;
-    padding-right: 0;
+    margin-top: 2rem;
+    border: solid 1px ${colors.gray100};
   `}
 `;
 
