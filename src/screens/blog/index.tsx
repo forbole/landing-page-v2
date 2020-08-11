@@ -1,8 +1,8 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { Layout } from "@components";
+import { Layout, Tags } from "@components";
 import { theme } from "@styles";
-import { BlogPosts, TitlePosts, Tags, Twitter } from "./components";
+import { BlogPosts, TitlePosts, Twitter } from "./components";
 import { BlogCSS, MaxWidthContainerCSS, SideCSS } from "./styles";
 
 const { colors } = theme;

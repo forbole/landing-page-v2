@@ -1,13 +1,7 @@
 import styled from "styled-components";
-import { mixins, media, theme } from "@styles";
 import { generateBackgroundColor } from "./config";
 
-const { colors } = theme;
-
-export const TagsCSS = styled.div`
-  ${mixins.mobilePadding}
-  padding-top: 1.5rem;
-
+export const TagsCSS = styled.div<any>`
   h3 {
     font-weight: 500;
     margin-bottom: 1rem;
@@ -18,11 +12,6 @@ export const TagsCSS = styled.div`
     display: flex;
     flex-wrap: wrap;
   }
-
-  ${media.bigDesktop`
-    margin-top: 2rem;
-    border: solid 1px ${colors.gray100};
-  `}
 `;
 
 export const ListCSS = styled.li<any>`

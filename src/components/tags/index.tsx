@@ -3,10 +3,11 @@ import { useTranslation } from "i18n";
 import { TagsCSS, ListCSS } from "./styles";
 import { fakeTags } from "./config";
 
-const Tags = () => {
+const Tags = (props: any) => {
   const { t } = useTranslation("blog");
+
   return (
-    <TagsCSS>
+    <TagsCSS className="tags-container">
       <h3>{t("tags")}</h3>
       <ul>
         {fakeTags.map((x, i) => (

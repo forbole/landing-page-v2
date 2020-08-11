@@ -5,6 +5,8 @@ import Footer from "./footer";
 import { Telegram } from "./icons";
 import TermsOfService from "./terms_of_service";
 import Network from "./network";
+import Tags from "./tags";
+
 export {
   Layout,
   NavBar,
@@ -13,4 +15,5 @@ export {
   Telegram,
   TermsOfService,
   Network,
+  Tags,
 };
