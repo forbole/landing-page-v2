@@ -19,8 +19,8 @@ const CarouselBlogPosts = () => {
           centerMode={false}
           className=""
           containerClass="container"
-          customLeftArrow={<CustomArrows />}
-          customRightArrow={<CustomArrows />}
+          customLeftArrow={<CustomArrows direction="left" />}
+          customRightArrow={<CustomArrows direction="right" />}
           dotListClass=""
           draggable
           focusOnSelect={false}
