@@ -38,15 +38,10 @@ const CarouselBlogPosts = () => {
           centerMode={false}
           className=""
           containerClass="container"
-<<<<<<< HEAD
-          customLeftArrow={<CustomArrows direction="left" />}
-          customRightArrow={<CustomArrows direction="right" />}
-=======
           customLeftArrow={<></>}
           customRightArrow={<></>}
           // customLeftArrow={<CustomArrows direction="left" />}
           // customRightArrow={<CustomArrows direction="right" />}
->>>>>>> 94bf926b36c9918c916fde083fbd7b407cd03774
           dotListClass=""
           draggable
           focusOnSelect={false}
@@ -54,12 +49,8 @@ const CarouselBlogPosts = () => {
           itemClass=""
           keyBoardControl
           minimumTouchDrag={80}
-<<<<<<< HEAD
-          renderButtonGroupOutside={false}
-=======
           renderButtonGroupOutside
           customButtonGroup={<ButtonGroup />}
->>>>>>> 94bf926b36c9918c916fde083fbd7b407cd03774
           renderDotsOutside={false}
           responsive={{
             desktop: {
@@ -73,11 +64,7 @@ const CarouselBlogPosts = () => {
           }}
           showDots={false}
           sliderClass=""
-<<<<<<< HEAD
-          slidesToSlide={1}
-=======
           slidesToSlide={3}
->>>>>>> 94bf926b36c9918c916fde083fbd7b407cd03774
           swipeable
         >
           <Post main post={main} />
