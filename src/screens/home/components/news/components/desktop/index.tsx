@@ -40,8 +40,6 @@ const CarouselBlogPosts = () => {
           containerClass="container"
           customLeftArrow={<></>}
           customRightArrow={<></>}
-          // customLeftArrow={<CustomArrows direction="left" />}
-          // customRightArrow={<CustomArrows direction="right" />}
           dotListClass=""
           draggable
           focusOnSelect={false}

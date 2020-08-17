@@ -16,6 +16,7 @@ export const TestCSS = styled.span`
   position: absolute;
 
   svg {
+    fill: rgba(0, 0, 0, 0.16);
     width: 35px;
   }
 
@@ -25,6 +26,7 @@ export const TestCSS = styled.span`
 
   &.left {
     left: -50px;
+    transform: scaleX(-1);
   }
 `;
 
