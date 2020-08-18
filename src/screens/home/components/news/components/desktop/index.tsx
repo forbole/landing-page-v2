@@ -2,8 +2,8 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import {
   CarouselCSS,
-  TestCSS,
-  MoreTestCSS,
+  ArrowCSS,
+  CarouselArrowCSS,
   MaxWidthContainerCSS,
 } from "./styles";
 import { dummyData } from "../carousel_item/config";
@@ -16,14 +16,14 @@ const ButtonGroup = (props: any) => {
   const { next, previous } = props;
 
   return (
-    <MoreTestCSS>
-      <TestCSS onClick={() => previous()} className="left">
+    <CarouselArrowCSS>
+      <ArrowCSS onClick={() => previous()} className="left">
         <Next />
-      </TestCSS>
-      <TestCSS onClick={() => next()} className="right">
+      </ArrowCSS>
+      <ArrowCSS onClick={() => next()} className="right">
         <Next />
-      </TestCSS>
-    </MoreTestCSS>
+      </ArrowCSS>
+    </CarouselArrowCSS>
   );
 };
 

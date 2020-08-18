@@ -5,19 +5,21 @@ import { MaxWidthContainerCSS as MaxWidthCSS } from "@styles/components";
 export const CarouselCSS = styled.div`
   display: none;
   ${media.bigDesktop`
-   ${mixins.desktopPadding}
+   ${mixins.desktopLastContainerPadding}
    display: flex;
    justify-content: center;
    align-items: center;
   `}
 `;
 
-export const TestCSS = styled.span`
+export const ArrowCSS = styled.span`
   position: absolute;
 
   svg {
-    fill: rgba(0, 0, 0, 0.16);
     width: 35px;
+    path {
+      fill: rgba(0, 0, 0, 0.2);
+    }
   }
 
   &.right {
@@ -30,7 +32,7 @@ export const TestCSS = styled.span`
   }
 `;
 
-export const MoreTestCSS = styled.div`
+export const CarouselArrowCSS = styled.div`
   width: 100%;
   position: absolute;
   top: 50%;
