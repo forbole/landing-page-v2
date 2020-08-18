@@ -33,15 +33,28 @@ export const PostCSS = styled.div`
     }
   `}
   ${media.bigDesktop`
-  padding: 3rem;
+    padding: 2rem;
     img {
       height: 225px;
+      width: 433px;
     }
     .content { 
       display: block;
-      border-radius: 1rem;
-    -webkit-filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.2));
-    filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.2));
+      margin: 2rem;
+      z-index: 1;
+      margin: -1rem;
+      // width: 15rem;
+      background: white;
+      border-radius: 0.5rem;
+      z-index: 1;
+      -webkit-filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.2));
+      filter: drop-shadow(0rem 0rem 0.5rem rgba(0, 0, 0, 0.2));
     }
+    .content:hover {
+      cursor: pointer;
+      z-index: 2;
+      box-shadow: 0px 8px 13px 3px rgba(214, 214, 214, 0.45);
+    }
+    background: none;
   `}
 `;
