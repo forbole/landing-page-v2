@@ -73,7 +73,6 @@ export const PostCSS = styled.div`
       border-bottom: 5px solid ${colors.red};
       -webkit-filter: none;
       filter: none;
-      // box-shadow: 0px 8px 13px 3px rgba(214, 214, 214, 0.45);
     }
     background: none;
   `}

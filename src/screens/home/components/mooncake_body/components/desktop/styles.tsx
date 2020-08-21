@@ -6,63 +6,58 @@ import {
   CONTAINER_MIN_HEIGHT,
 } from "../../../../config";
 
+const { colors } = theme;
+
 export const DesktopCSS = styled.div`
   display: none;
   ${media.bigDesktop`
     min-height: ${CONTAINER_MIN_HEIGHT};
     ${mixins.flexCenter}
+    justify-content: flex-start; 
     flex-direction: row;
-    background: white;
+    background: linear-gradient( 0deg,rgba(123,135,185,0.33),rgba(123,135,185,0.33) ),url(static/images/assets/desmos-hero.png);
+    background-repeat: no-repeat;
+    background-position: -733% 38%;
+    -webkit-transform: scaleX(-1);
+    -ms-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 100%;
     `}
 `;
 
-export const WrapperCSS = styled.div`
-  ${media.bigDesktop`
-  ${mixins.desktopMaxWidth}
-  ${mixins.flexBetween}
-  width: 100%;
-    .mooncake {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      // height: ${CONTAINER_HEIGHT};
-      width: 100%;
-      padding-left: 15rem;
-    }
-`}
-`;
-
 export const MooncakeBodyCSS = styled.div`
-  background: linear-gradient(
-      0deg,
-      rgba(123, 135, 185, 0.33),
-      rgba(123, 135, 185, 0.33)
-    ),
-    url(static/images/assets/desmos-hero.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  transform: scaleX(-1);
-  width: 100%;
   height: ${CONTAINER_HEIGHT};
   min-height: ${CONTAINER_MIN_HEIGHT};
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   position: relative;
+  width: 55%;
+  background: ${colors.white};
+  height: 80vh;
+  min-height: 800px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  transform: scaleX(-1);
 `;
 
 export const MooncakeContentCSS = styled.div`
-  // padding-left: 15rem;
-  // margin-right: 8.5rem;
-  max-width: 700px;
+  max-width: 500px;
 `;
 
 export const MooncakeImgCSS = styled.div`
   transform: scaleX(-1);
   position: absolute;
-  // right: -450px;
-  left: -70px;
+  right: 370px;
   top: 20%;
   max-height: 45vh;
+  z-index: 1;
 `;
