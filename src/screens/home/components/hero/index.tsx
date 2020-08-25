@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "i18n";
 import {
   HeroContentCSS,
@@ -11,6 +11,7 @@ import { ProgressBar } from "@components";
 
 export const HeroContent = () => {
   const { t } = useTranslation("home");
+  const [progress, setProgress] = useState(0);
   return (
     <HeroContentCSS>
       <div className="wrapper">
@@ -40,9 +41,9 @@ export const HeroContent = () => {
       <NextIconCSS>
         {/* <Next /> */}
         <ProgressBar
-          progress={50}
+          progress={progress}
           size={50}
-          strokeWidth={10}
+          strokeWidth={5}
           circleOneStroke="rgba(255, 255, 255, 0.5)"
           circleTwoStroke="rgba(255, 255, 255, 1)"
         />
