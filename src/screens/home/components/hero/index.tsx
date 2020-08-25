@@ -7,6 +7,7 @@ import {
   NextIconCSS,
 } from "./styles";
 import { Secure, Trusted, Reliable, Reward, Next } from "@icons";
+import { ProgressBar } from "@components";
 
 export const HeroContent = () => {
   const { t } = useTranslation("home");
@@ -37,7 +38,14 @@ export const HeroContent = () => {
         </HomeIconsCSS>
       </div>
       <NextIconCSS>
-        <Next />
+        {/* <Next /> */}
+        <ProgressBar
+          progress={50}
+          size={50}
+          strokeWidth={10}
+          circleOneStroke="rgba(255, 255, 255, 0.5)"
+          circleTwoStroke="rgba(255, 255, 255, 1)"
+        />
       </NextIconCSS>
     </HeroContentCSS>
   );
