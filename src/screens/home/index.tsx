@@ -7,6 +7,7 @@ import {
   DashboardContent,
   MooncakeBody,
   News,
+  HiringContent,
 } from "./components";
 import { Layout } from "@components";
 import { useTranslation } from "i18n";
@@ -21,6 +22,7 @@ const Home = () => {
           <title>{t("forbole")}</title>
         </Head>
         <HeroContent />
+        <HiringContent />
         <SupportedNetworks />
         <DashboardContent />
         <MooncakeBody />

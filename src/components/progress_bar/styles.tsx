@@ -14,10 +14,4 @@ export const ProgressBarCSS = styled.div`
   .svg-circle {
     fill: none;
   }
-  .svg-circle-text {
-    font-size: 2rem;
-    text-anchor: middle;
-    fill: #fff;
-    font-weight: bold;
-  }
 `;

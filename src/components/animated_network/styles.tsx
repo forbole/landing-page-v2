@@ -38,7 +38,6 @@ export const NetworkCSS = styled.div`
   `}
 
   ${media.bigDesktop`
-    // display: block;
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -20,8 +20,9 @@ const ProgressBar = (props) => {
     const progressOffset = ((100 - progress) / 100) * circumference;
     setOffset(progressOffset);
     circleRef.current.style =
-      "transition: stroke-dashoffset 850ms ease-in-out;";
+      "transition: stroke-dashoffset 2000ms ease-in-out";
   }, [setOffset, circumference, progress, offset]);
+
   return (
     <ProgressBarCSS>
       <svg width={size} height={size}>
