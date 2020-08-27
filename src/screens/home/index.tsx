@@ -21,7 +21,7 @@ const Home = () => {
         <Head>
           <title>{t("forbole")}</title>
         </Head>
-        <HeroContent />
+        {/* <HeroContent /> */}
         <HiringContent />
         <SupportedNetworks />
         <DashboardContent />

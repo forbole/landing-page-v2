@@ -8,7 +8,11 @@ export const HiringContent = () => {
   return (
     <HiringContentCSS>
       <HiringHeaderCSS>
-        <img src="/static/images/assets/joinUs.png/" alt="Join Us" />
+        <img
+          className="overlay"
+          src="/static/images/assets/joinUs.png/"
+          alt="Join Us"
+        />
       </HiringHeaderCSS>
       <ContentWrapperCSS>
         <h1>{t("hiring")}</h1>
