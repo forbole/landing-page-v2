@@ -6,6 +6,11 @@ const { colors } = theme;
 export const HiringContentCSS = styled.div`
   color: ${colors.white};
   background-color: ${colors.black};
+  ${media.bigDesktop`
+  display: flex;
+  flex-direction: row-reverse;
+  min-height: 40vh;
+  `}
 `;
 
 export const HiringHeaderCSS = styled.div`
@@ -36,6 +41,15 @@ export const HiringHeaderCSS = styled.div`
     object-position: 48% 53%;
   }
   `}
+  ${media.bigDesktop`
+  padding: 0rem;
+  height: 50rem;
+  width: 40%;
+  img {
+  zoom: 0.8;
+  object-position: 41% 4%;
+  }
+  `}
 `;
 
 export const ContentWrapperCSS = styled.div`
@@ -57,5 +71,37 @@ export const ContentWrapperCSS = styled.div`
   }
   .ui.red.button {
     background-color: rgba(255, 80, 80, 1);
+    font-weight: 100;
+  }
+  ${media.bigDesktop`
+  ${mixins.flexCenter}
+  padding: 5rem 3.5rem 3.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 60%;
+  padding: 5rem 4rem 5rem;
+  h1 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+  }
+  h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    width: 700px;
+  }
+  `}
+`;
+
+export const NextIconCSS = styled.div`
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  z-index: 5;
+  svg > path {
+    fill: ${colors.white};
   }
 `;
