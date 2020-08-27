@@ -26,8 +26,16 @@ export const HiringHeaderCSS = styled.div`
     background-color: rgba(39, 62, 84, 0.82);
     overflow: hidden;
     height: 100%;
-    z-index: 1;
+    z-index: 2;
+    width: 100%;
   }
+  ${media.tablet`
+  height: 33rem;
+  img {
+    zoom: 1.1;
+    object-position: 48% 53%;
+  }
+  `}
 `;
 
 export const ContentWrapperCSS = styled.div`
@@ -36,11 +44,11 @@ export const ContentWrapperCSS = styled.div`
   padding-top: 1.5rem;
   h1 {
     font-weight: 100;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
   }
   h2 {
     font-weight: 100;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
   h3 {
     font-weight: 100;
