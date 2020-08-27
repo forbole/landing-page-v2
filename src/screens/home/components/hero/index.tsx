@@ -61,7 +61,7 @@ export const HeroContent = () => {
         <ProgressBar
           progress={100}
           size={50}
-          strokeWidth={5}
+          strokeWidth={2}
           circleOneStroke="rgba(255, 255, 255, 0.5)"
           circleTwoStroke="rgba(255, 255, 255, 1)"
         />

@@ -6,10 +6,12 @@ const { colors } = theme;
 export const HiringContentCSS = styled.div`
   color: ${colors.white};
   background-color: ${colors.black};
+  position: relative;
   ${media.bigDesktop`
   display: flex;
   flex-direction: row-reverse;
   min-height: 40vh;
+  position: relative;
   `}
 `;
 
@@ -97,6 +99,9 @@ export const ContentWrapperCSS = styled.div`
 `;
 
 export const NextIconCSS = styled.div`
+  position: absolute;
+  bottom: 9px;
+  right: 15px;
   display: block;
   margin-left: auto;
   margin-right: 0;
@@ -104,4 +109,7 @@ export const NextIconCSS = styled.div`
   svg > path {
     fill: ${colors.white};
   }
+  ${media.bigDesktop`
+  bottom: 15px;
+  right: 20px;`}
 `;
