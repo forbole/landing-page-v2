@@ -1,61 +1,48 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState } from "react";
 import { ProgressBarCSS } from "./styles";
-import PropTypes from "prop-types";
+
 import "./styles";
 
-const ProgressBar = (props) => {
-  const [offset, setOffset] = useState(0);
-  const circleRef = useRef(null);
-  const {
-    size,
-    progress,
-    strokeWidth,
-    circleOneStroke,
-    circleTwoStroke,
-  } = props;
-  const center = size / 2;
-  const radius = size / 2 - strokeWidth / 2;
-  const circumference = 2 * Math.PI * radius;
-  useEffect(() => {
-    const progressOffset = ((100 - progress) / 100) * circumference;
-    setOffset(progressOffset);
-    circleRef.current.style =
-      "transition: stroke-dashoffset 2000ms ease-in-out";
-  }, [setOffset, circumference, progress, offset]);
-
+const ProgressBar = () => {
+  const value = 50;
+  const c = Math.PI * (90 * 2);
+  const display = ((100 - value) / 100) * c;
+  console.log(display, "display");
+  const [count, setCount] = useState(0);
   return (
     <ProgressBarCSS>
-      <svg width={size} height={size}>
-        <circle
-          className="svg-circle-bg"
-          stroke={circleOneStroke}
-          cx={center}
-          cy={center}
-          r={radius}
-          strokeWidth={strokeWidth}
-        />
-        <circle
-          className="svg-circle"
-          stroke={circleTwoStroke}
-          cx={center}
-          cy={center}
-          r={radius}
-          strokeWidth={strokeWidth}
-          strokeDasharray={circumference}
-          ref={circleRef}
-          strokeDashoffset={offset}
-        />
-      </svg>
+      <div className="App">
+        <div>
+          <svg
+            id="svg"
+            width="100"
+            height="100"
+            viewport="0 0 50 50"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              r="20"
+              cx="50"
+              cy="50"
+              fill="transparent"
+              strokeDasharray="565.48"
+              strokeDashoffset={display}
+            ></circle>
+            <circle
+              id="bar"
+              r="20"
+              cx="50"
+              cy="50"
+              fill="transparent"
+              strokeDasharray="565.48"
+              onAnimationIteration={() => setCount(count + 1)}
+            ></circle>
+          </svg>
+        </div>
+      </div>
     </ProgressBarCSS>
   );
-};
-
-ProgressBar.propTypes = {
-  size: PropTypes.number.isRequired,
-  progress: PropTypes.number.isRequired,
-  strokeWidth: PropTypes.number.isRequired,
-  circleOneStroke: PropTypes.string.isRequired,
-  circleTwoStroke: PropTypes.string.isRequired,
 };
 
 export default ProgressBar;

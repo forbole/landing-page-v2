@@ -5,6 +5,7 @@ const { colors } = theme;
 
 export const HeroContentCSS = styled.div`
   ${mixins.flexCenter}
+  position: relative;
   flex-direction: column;
   padding: 2.5rem 1rem 1rem;
   color: ${colors.white};
@@ -95,6 +96,9 @@ export const HomeIconsCSS = styled.div`
   `}
 `;
 export const NextIconCSS = styled.div`
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
   display: block;
   margin-left: auto;
   margin-right: 0;

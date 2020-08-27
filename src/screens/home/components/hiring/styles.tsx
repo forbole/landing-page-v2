@@ -100,8 +100,8 @@ export const ContentWrapperCSS = styled.div`
 
 export const NextIconCSS = styled.div`
   position: absolute;
-  bottom: 9px;
-  right: 15px;
+  bottom: 0px;
+  right: 0px;
   display: block;
   margin-left: auto;
   margin-right: 0;

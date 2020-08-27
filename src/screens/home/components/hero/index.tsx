@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTranslation } from "i18n";
 import {
   HeroContentCSS,
@@ -6,18 +6,18 @@ import {
   HomeIconsCSS,
   NextIconCSS,
 } from "./styles";
-import { Secure, Trusted, Reliable, Reward, Next } from "@icons";
+import { Secure, Trusted, Reliable, Reward } from "@icons";
 import { ProgressBar } from "@components";
 
 export const HeroContent = () => {
   const { t } = useTranslation("home");
-  const [progress, setProgress] = useState(0);
-  const updatePercentage = () => {
-    setTimeout(() => {
-      setProgress(progress + 10);
-    }, 5);
-    return progress;
-  };
+  // const [progress, setProgress] = useState(0);
+  // const updatePercentage = () => {
+  //   setTimeout(() => {
+  //     setProgress(progress + 10);
+  //   }, 5);
+  //   return progress;
+  // };
   // console.log(updatePercentage);
   // console.log(progress);
   // console.log(setProgress);
@@ -58,13 +58,7 @@ export const HeroContent = () => {
       </div>
       <NextIconCSS>
         {/* <Next /> */}
-        <ProgressBar
-          progress={100}
-          size={50}
-          strokeWidth={2}
-          circleOneStroke="rgba(255, 255, 255, 0.5)"
-          circleTwoStroke="rgba(255, 255, 255, 1)"
-        />
+        <ProgressBar />
       </NextIconCSS>
     </HeroContentCSS>
   );

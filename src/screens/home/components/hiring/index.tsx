@@ -28,13 +28,7 @@ export const HiringContent = () => {
       </ContentWrapperCSS>
       <NextIconCSS>
         {/* <Next /> */}
-        <ProgressBar
-          progress={100}
-          size={50}
-          strokeWidth={2}
-          circleOneStroke="rgba(255, 255, 255, 0.5)"
-          circleTwoStroke="rgba(255, 255, 255, 1)"
-        />
+        <ProgressBar />
       </NextIconCSS>
     </HiringContentCSS>
   );
