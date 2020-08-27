@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ProgressBarCSS = styled.div`
+  position: relative;
   #svg circle {
     stroke-dashoffset: 0;
     stroke: rgba(255, 255, 255, 0.5);
@@ -18,17 +19,10 @@ export const ProgressBarCSS = styled.div`
       stroke-dashoffset: 0px;
     }
   }
-  //   svg {
-  //     display: block;
-  //     margin: 20px auto;
-  //     max-width: 100%;
-  //   }
-
-  //   .svg-circle-bg {
-  //     fill: none;
-  //   }
-
-  //   .svg-circle {
-  //     fill: none;
-  //   }
+  i.icon {
+    z-index: 1;
+    position: absolute;
+    right: 37px;
+    bottom: 49px;
+  }
 `;

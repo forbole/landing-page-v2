@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ProgressBarCSS } from "./styles";
+import { Icon } from "semantic-ui-react";
 
 import "./styles";
 
@@ -39,6 +40,7 @@ const ProgressBar = () => {
               onAnimationIteration={() => setCount(count + 1)}
             ></circle>
           </svg>
+          <Icon name="arrow right" />
         </div>
       </div>
     </ProgressBarCSS>
