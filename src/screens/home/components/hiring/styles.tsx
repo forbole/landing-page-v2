@@ -13,7 +13,7 @@ export const HiringHeaderCSS = styled.div`
   //     url("static/images/assets/joinUs.png/");
   min-height: 30vh;
   ${mixins.mobileVerticalPadding}
-  padding-top: 3.5rem;
+  padding-top: 5.5rem;
   height: 20rem;
   width: 100%;
 
