@@ -74,6 +74,10 @@ export const ContentWrapperCSS = styled.div`
   .ui.red.button {
     background-color: rgba(255, 80, 80, 1);
     font-weight: 100;
+
+    &:hover {
+      background-color: rgba(255, 165, 0, 1);
+    }
   }
   ${media.bigDesktop`
   ${mixins.flexCenter}

@@ -9,7 +9,7 @@ export const ProgressBarCSS = styled.div`
   }
   #svg #bar {
     stroke: rgba(255, 255, 255, 1);
-    animation: mymove 3s infinite;
+    animation: mymove 8s infinite;
   }
   @keyframes mymove {
     from {
