@@ -30,6 +30,7 @@ export const HeroContentCSS = styled.div`
   background-size: 100%;
   background-position: 50% 55%;
   min-height: 100vh;
+  width: 100%;
   .wrapper {
     ${mixins.desktopMaxWidth}
   }

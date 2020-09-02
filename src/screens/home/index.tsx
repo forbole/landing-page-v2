@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-
 import {
   HeroContent,
   SupportedNetworks,
@@ -12,6 +11,10 @@ import {
 import { Layout } from "@components";
 import { useTranslation } from "i18n";
 import { HomeCSS } from "./styles";
+import AwesomeSlider from "react-awesome-slider";
+import withAutoplay from "react-awesome-slider/dist/autoplay";
+
+const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 const Home = () => {
   const { t } = useTranslation("home");
@@ -21,8 +24,26 @@ const Home = () => {
         <Head>
           <title>{t("forbole")}</title>
         </Head>
-        {/* <HeroContent /> */}
-        <HiringContent />
+        {/* <AwesomeSlider>
+          <div>
+            <HeroContent />
+          </div>
+          <div>
+            <HiringContent />
+          </div>
+        </AwesomeSlider> */}
+        <AutoplaySlider
+          play={false}
+          cancelOnInteraction={false} // should stop playing on user interaction
+          interval={8000}
+        >
+          <div className="hero-slider">
+            <HeroContent />
+          </div>
+          <div>
+            <HiringContent />
+          </div>
+        </AutoplaySlider>
         <SupportedNetworks />
         <DashboardContent />
         <MooncakeBody />
