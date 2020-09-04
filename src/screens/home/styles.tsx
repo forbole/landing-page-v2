@@ -23,6 +23,9 @@ export const HomeCSS = styled.div`
   .awssld {
     height: 100%;
   }
+  .awssld__bullets {
+    display: none;
+  }
   ${media.bigDesktop`
   .awssld {
     height: 43rem;

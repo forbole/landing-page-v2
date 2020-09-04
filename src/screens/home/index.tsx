@@ -36,6 +36,7 @@ const Home = () => {
           play={false}
           cancelOnInteraction={false} // should stop playing on user interaction
           interval={8000}
+          buttons={false}
         >
           <div className="hero-slider">
             <HeroContent />
