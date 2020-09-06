@@ -10,10 +10,10 @@ import {
 const Desktop = () => {
   return (
     <DesktopCSS>
-      <MooncakeImgCSS>
-        <MooncakeImg />
-      </MooncakeImgCSS>
       <MooncakeBodyCSS>
+        <MooncakeImgCSS>
+          <MooncakeImg />
+        </MooncakeImgCSS>
         <MooncakeContentCSS>
           <MooncakeDetails />
         </MooncakeContentCSS>

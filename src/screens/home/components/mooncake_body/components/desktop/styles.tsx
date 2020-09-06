@@ -17,17 +17,19 @@ export const DesktopCSS = styled.div`
     flex-direction: row;
     background: linear-gradient( 0deg,rgba(123,135,185,0.33),rgba(123,135,185,0.33) ),url(static/images/assets/desmos-hero.png);
     background-repeat: no-repeat;
-    background-position: -733% 38%;
+    background-position: 1005px center;
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
     transform: scaleX(-1);
     width: 100%;
+    position: relative
     `}
 `;
 
 export const MooncakeBodyCSS = styled.div`
   height: ${CONTAINER_HEIGHT};
   min-height: ${CONTAINER_MIN_HEIGHT};
+  width: ${CONTAINER_WIDTH};
   display: flex;
   align-items: center;
   position: relative;
@@ -56,7 +58,7 @@ export const MooncakeContentCSS = styled.div`
 export const MooncakeImgCSS = styled.div`
   transform: scaleX(-1);
   position: absolute;
-  right: 370px;
+  left: -450px;
   top: 20%;
   max-height: 45vh;
   z-index: 1;
