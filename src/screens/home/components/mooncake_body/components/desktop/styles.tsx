@@ -12,17 +12,9 @@ export const DesktopCSS = styled.div`
   display: none;
   ${media.bigDesktop`
     min-height: ${CONTAINER_MIN_HEIGHT};
-    ${mixins.flexCenter}
-    justify-content: flex-start; 
+    ${mixins.flexCenter};
     flex-direction: row;
-    background: linear-gradient( 0deg,rgba(123,135,185,0.33),rgba(123,135,185,0.33) ),url(static/images/assets/desmos-hero.png);
-    background-repeat: no-repeat;
-    background-position: 1005px center;
-    -webkit-transform: scaleX(-1);
-    -ms-transform: scaleX(-1);
-    transform: scaleX(-1);
     width: 100%;
-    position: relative
     `}
 `;
 
@@ -48,7 +40,6 @@ export const MooncakeBodyCSS = styled.div`
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  transform: scaleX(-1);
   padding-left: 15rem;
 `;
 
@@ -58,9 +49,27 @@ export const MooncakeContentCSS = styled.div`
 `;
 
 export const MooncakeImgCSS = styled.div`
-  transform: scaleX(-1);
   position: absolute;
   left: -650px;
   max-height: 45vh;
   z-index: 1;
+`;
+
+export const BackgroundCSS = styled.div`
+  height: ${CONTAINER_HEIGHT};
+  min-height: ${CONTAINER_MIN_HEIGHT};
+  width: ${CONTAINER_WIDTH};
+  background: linear-gradient(
+      0deg,
+      rgba(123, 135, 185, 0.33),
+      rgba(123, 135, 185, 0.33)
+    ),
+    url(static/images/assets/desmos-hero.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 center;
+  display: flex;
+  flex: 1;
+  background-color: black;
+  transform: scaleX(-1);
 `;

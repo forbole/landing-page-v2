@@ -2,6 +2,7 @@ import React from "react";
 import { MooncakeDetails, MooncakeImg } from "@components";
 import {
   DesktopCSS,
+  BackgroundCSS,
   MooncakeContentCSS,
   MooncakeBodyCSS,
   MooncakeImgCSS,
@@ -10,6 +11,7 @@ import {
 const Desktop = () => {
   return (
     <DesktopCSS>
+      <BackgroundCSS />
       <MooncakeBodyCSS>
         <MooncakeContentCSS>
           <MooncakeImgCSS>
