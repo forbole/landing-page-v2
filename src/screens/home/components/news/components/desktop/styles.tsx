@@ -23,11 +23,11 @@ export const ArrowCSS = styled.span`
   }
 
   &.right {
-    right: -50px;
+    right: 20px;
   }
 
   &.left {
-    left: -50px;
+    left: 20px;
     transform: scaleX(-1);
   }
 `;
@@ -36,8 +36,16 @@ export const CarouselArrowCSS = styled.div`
   width: 100%;
   position: absolute;
   top: 50%;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   position: relative;
+  display: flex;
+  justify-content: center;
+  .react-multi-carousel-list {
+    width: 90%;
+  }
 `;

@@ -15,7 +15,7 @@ export const HeroContentCSS = styled.div`
   background-size: 444%;
   background-repeat: no-repeat;
   background-position: 50% 52%;
-  min-height: 90vh;
+  height: 90vh;
   .wrapper {
     ${mixins.flexCenter}
     flex-direction: column;

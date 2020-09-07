@@ -7,6 +7,9 @@ export const HiringContentCSS = styled.div`
   color: ${colors.white};
   background-color: ${colors.black};
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
   ${media.bigDesktop`
   display: flex;
   flex-direction: row-reverse;
@@ -21,9 +24,9 @@ export const HiringHeaderCSS = styled.div`
   min-height: 30vh;
   ${mixins.mobileVerticalPadding}
   padding-top: 5.5rem;
-  height: 20rem;
   width: 100%;
-
+  object-fit: cover;
+  flex: 1;
   img {
     zoom: 0.44;
     object-fit: none;
@@ -45,7 +48,7 @@ export const HiringHeaderCSS = styled.div`
   `}
   ${media.bigDesktop`
   padding: 0rem;
-  height: 50rem;
+  height: 100%;
   width: 40%;
   img {
   zoom: 0.8;
@@ -56,7 +59,7 @@ export const HiringHeaderCSS = styled.div`
 
 export const ContentWrapperCSS = styled.div`
   ${mixins.mobilePadding}
-  ${mixins.mobileBottomPadding}
+  // ${mixins.mobileBottomPadding}
   padding-top: 1.5rem;
   h1 {
     font-weight: 100;
@@ -97,7 +100,7 @@ export const ContentWrapperCSS = styled.div`
   h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    width: 700px;
+    width: 500px;
   }
   `}
 `;

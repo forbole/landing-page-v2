@@ -5,7 +5,13 @@ export const HomeCSS = styled.div`
   .pb {
     position: relative;
   }
-
+  .awssld__wrapper {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    height: 90vh;
+    width: 100%;
+  }
   .aws-btn  {
     --slider-height-percentage: 61%;
     --slider-transition-duration: 800ms;
@@ -36,9 +42,7 @@ export const HomeCSS = styled.div`
     display: block;
   }
   ${media.bigDesktop`
-  .awssld {
-    height: 43rem;
-  }`}
+ `}
 `;
 
 export const CustomContent = styled.div`
