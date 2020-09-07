@@ -13,11 +13,12 @@ import { useTranslation } from "i18n";
 import { HomeCSS, CustomContent } from "./styles";
 import AwesomeSlider from "react-awesome-slider";
 import withAutoplay from "react-awesome-slider/dist/autoplay";
-
-const AutoplaySlider = withAutoplay(AwesomeSlider);
+import { useHomeHook } from "./hooks";
 
 const Home = () => {
   const { t } = useTranslation("home");
+  const { activeScreen, setActiveScreen, handleActiveScreen } = useHomeHook();
+  console.log(activeScreen);
   return (
     <Layout title={t("home")}>
       <HomeCSS>
@@ -44,10 +45,11 @@ const Home = () => {
         <AwesomeSlider
           customContent={
             <CustomContent>
-              <ProgressBar />
+              <ProgressBar handleAnimation={handleActiveScreen} />
             </CustomContent>
           }
           buttons={false}
+          selected={activeScreen}
         >
           <div>
             <HeroContent />

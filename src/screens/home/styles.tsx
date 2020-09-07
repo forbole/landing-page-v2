@@ -30,6 +30,11 @@ export const HomeCSS = styled.div`
   .awssld__bullets {
     display: none;
   }
+  .awssld__content {
+    background-color: var(--content-background-color);
+    overflow: hidden;
+    display: block;
+  }
   ${media.bigDesktop`
   .awssld {
     height: 43rem;

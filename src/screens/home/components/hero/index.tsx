@@ -7,29 +7,9 @@ import {
   NextIconCSS,
 } from "./styles";
 import { Secure, Trusted, Reliable, Reward } from "@icons";
-import { ProgressBar } from "@components";
 
 export const HeroContent = () => {
   const { t } = useTranslation("home");
-  // const [progress, setProgress] = useState(0);
-  // const updatePercentage = () => {
-  //   setTimeout(() => {
-  //     setProgress(progress + 10);
-  //   }, 5);
-  //   return progress;
-  // };
-  // console.log(updatePercentage);
-  // console.log(progress);
-  // console.log(setProgress);
-  // setInterval(() => {
-  //   if (progress < 100) {
-  //     setProgress(progress + 5);
-  //   }
-  // }, 1000);
-  // const randomProgressValue = () => {
-  //   const progressValue = Math.floor(Math.random() * 101);
-  //   setProgress(progressValue);
-  // };
   return (
     <HeroContentCSS>
       <div className="wrapper">

@@ -9,7 +9,7 @@ export const ProgressBarCSS = styled.div`
   }
   #svg #bar {
     stroke: rgba(255, 255, 255, 1);
-    animation: mymove 8s infinite;
+    animation: mymove 7s infinite;
   }
   @keyframes mymove {
     from {
@@ -19,13 +19,11 @@ export const ProgressBarCSS = styled.div`
       stroke-dashoffset: 0px;
     }
   }
-  .app {
-    // position: relative;
-  }
   i.icon {
     z-index: 1;
     position: absolute;
     right: 37px;
     bottom: 49px;
+    color: white;
   }
 `;
