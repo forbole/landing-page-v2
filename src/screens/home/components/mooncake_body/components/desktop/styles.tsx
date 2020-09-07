@@ -31,7 +31,7 @@ export const MooncakeBodyCSS = styled.div`
   min-height: ${CONTAINER_MIN_HEIGHT};
   width: ${CONTAINER_WIDTH};
   display: flex;
-  align-items: center;
+  // align-items: center;
   position: relative;
   width: 55%;
   background: ${colors.white};
@@ -49,17 +49,18 @@ export const MooncakeBodyCSS = styled.div`
   -ms-flex-pack: center;
   justify-content: center;
   transform: scaleX(-1);
+  padding-left: 15rem;
 `;
 
 export const MooncakeContentCSS = styled.div`
-  max-width: 500px;
+  max-width: 600px;
+  position: relative;
 `;
 
 export const MooncakeImgCSS = styled.div`
   transform: scaleX(-1);
   position: absolute;
-  left: -450px;
-  top: 20%;
+  left: -650px;
   max-height: 45vh;
   z-index: 1;
 `;

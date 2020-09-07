@@ -11,10 +11,10 @@ const Desktop = () => {
   return (
     <DesktopCSS>
       <MooncakeBodyCSS>
-        <MooncakeImgCSS>
-          <MooncakeImg />
-        </MooncakeImgCSS>
         <MooncakeContentCSS>
+          <MooncakeImgCSS>
+            <MooncakeImg />
+          </MooncakeImgCSS>
           <MooncakeDetails />
         </MooncakeContentCSS>
       </MooncakeBodyCSS>
