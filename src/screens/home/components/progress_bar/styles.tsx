@@ -19,6 +19,9 @@ export const ProgressBarCSS = styled.div`
       stroke-dashoffset: 0px;
     }
   }
+  .app {
+    // position: relative;
+  }
   i.icon {
     z-index: 1;
     position: absolute;

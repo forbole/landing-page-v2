@@ -2,6 +2,10 @@ import styled from "styled-components";
 import { media } from "@styles";
 
 export const HomeCSS = styled.div`
+  .pb {
+    position: relative;
+  }
+
   .aws-btn  {
     --slider-height-percentage: 61%;
     --slider-transition-duration: 800ms;
@@ -30,4 +34,11 @@ export const HomeCSS = styled.div`
   .awssld {
     height: 43rem;
   }`}
+`;
+
+export const CustomContent = styled.div`
+  z-index: 50;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 `;

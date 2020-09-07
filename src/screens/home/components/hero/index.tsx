@@ -58,7 +58,7 @@ export const HeroContent = () => {
       </div>
       <NextIconCSS>
         {/* <Next /> */}
-        <ProgressBar />
+        {/* <ProgressBar /> */}
       </NextIconCSS>
     </HeroContentCSS>
   );

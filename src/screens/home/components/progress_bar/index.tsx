@@ -12,13 +12,13 @@ const ProgressBar = () => {
   const [count, setCount] = useState(0);
   return (
     <ProgressBarCSS>
-      <div className="App">
+      <div className="app">
         <div>
           <svg
             id="svg"
             width="100"
             height="100"
-            viewport="0 0 50 50"
+            viewBox="0 0 50 50"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
           >

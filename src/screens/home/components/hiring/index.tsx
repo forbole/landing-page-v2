@@ -28,7 +28,7 @@ export const HiringContent = () => {
       </ContentWrapperCSS>
       <NextIconCSS>
         {/* <Next /> */}
-        <ProgressBar />
+        {/* <ProgressBar /> */}
       </NextIconCSS>
     </HiringContentCSS>
   );
