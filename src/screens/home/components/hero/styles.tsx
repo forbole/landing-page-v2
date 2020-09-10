@@ -29,7 +29,7 @@ export const HeroContentCSS = styled.div`
   ${media.bigDesktop`
   background-size: 100%;
   background-position: 50% 55%;
-  min-height: 100vh;
+  min-height: 35rem;
   width: 100%;
   .wrapper {
     ${mixins.desktopMaxWidth}

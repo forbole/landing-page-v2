@@ -11,6 +11,7 @@ export const HomeCSS = styled.div`
     position: relative;
     height: 90vh;
     width: 100%;
+    min-height: 35rem;
   }
   .aws-btn  {
     --slider-height-percentage: 61%;

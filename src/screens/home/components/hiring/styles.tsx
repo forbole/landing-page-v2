@@ -13,7 +13,7 @@ export const HiringContentCSS = styled.div`
   ${media.bigDesktop`
   display: flex;
   flex-direction: row-reverse;
-  min-height: 40vh;
+  min-height: 35rem;
   position: relative;
   `}
 `;
