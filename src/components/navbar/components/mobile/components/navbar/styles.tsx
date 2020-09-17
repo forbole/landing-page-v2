@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media, theme } from "@styles";
+import { theme } from "@styles";
 import { IMobileNavBarIconCSS } from "../../interfaces";
 
 const { colors } = theme;

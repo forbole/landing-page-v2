@@ -6,7 +6,7 @@ export interface IMobileNavBarIconCSS {
 
 export interface INavBar extends IMobileNav {
   isOpen: boolean;
-  toggle()?: void;
+  toggle(): void;
 }
 
 export interface IShowLanguage {
