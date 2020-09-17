@@ -8,8 +8,9 @@ import {
 } from "@src/components/navbar/config";
 import { useShowAvailableLanguages, useTransitionAnimation } from "./hooks";
 import { INavBar } from "../../interfaces";
-import { NavBodyCSS, LanguageContainerCSS } from "./styles";
+import { NavBodyCSS, LanguageContainerCSS, NavbarOverrideCSS } from "./styles";
 import { Language as LanguageIcon, Arrow as ArrowIcon } from "@icons";
+import { Forbole as ForboleLogo } from "@icons";
 
 const NavBody = (props: INavBar) => {
   const { isOpen } = props;
@@ -25,6 +26,13 @@ const NavBody = (props: INavBar) => {
     ({ item, key, props }: any) =>
       item && (
         <NavBodyCSS key={key} style={props}>
+          <NavbarOverrideCSS>
+            <Link href="/">
+              <a>
+                <ForboleLogo />
+              </a>
+            </Link>
+          </NavbarOverrideCSS>
           <ul>
             {navItems.map((x) => (
               <Link key={x.display} href={x.link}>

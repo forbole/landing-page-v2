@@ -2,15 +2,34 @@ import styled from "styled-components";
 import { animated } from "react-spring";
 import { mixins, theme } from "@styles";
 import { IShowLanguage } from "../../interfaces";
-
 const { colors } = theme;
+
+export const NavbarOverrideCSS = styled.div`
+  width: 100%;
+  position: fixed;
+  z-index: 105;
+  top: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  transition: 0.3s, background 1s;
+
+  svg {
+    width: 100px;
+    margin-top: 0.5rem;
+    path {
+      fill: ${colors.forboleRed}
+  }
+`;
 
 export const NavBodyCSS = styled(animated.div)`
   position: fixed;
   width: 100%;
   min-height: 100vh;
   background: white;
-  z-index: 99;
+  z-index: 101;
   padding: calc(1rem + 50px) 1rem 2rem;
   top: 0;
   bottom: 0;
@@ -66,6 +85,6 @@ export const NavBodyCSS = styled(animated.div)`
   }
 `;
 
-export const LanguageContainerCSS = styled(animated.div) <IShowLanguage>`
+export const LanguageContainerCSS = styled(animated.div)<IShowLanguage>`
   overflow: hidden;
 `;
