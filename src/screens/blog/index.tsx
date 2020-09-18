@@ -8,7 +8,6 @@ import { BlogCSS, MaxWidthContainerCSS, SideCSS } from "./styles";
 const { colors } = theme;
 
 const Blog = (props: any) => {
-  console.log(props, "props in blog");
   const { posts } = props;
   const { t } = useTranslation("blog");
   return (

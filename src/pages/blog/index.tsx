@@ -6,9 +6,10 @@ function BlogPage(props: any) {
 }
 
 BlogPage.getInitialProps = async () => {
-  let posts = await getPosts();
-  posts = posts.map((post) => Post.fromJson(post));
-  return { posts };
+  const posts = await getPosts({});
+  const formattedPosts = posts.map((post) => Post.fromJson(post));
+
+  return { posts: formattedPosts, meta: posts.meta };
 };
 
 export default BlogPage;
