@@ -17,3 +17,14 @@ export const BlogPostCSS = styled.div`
     }
   `}
 `;
+
+export const BlogContainerCSS = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .ui.pagination.menu {
+    margin-top: 2rem;
+  }
+`;

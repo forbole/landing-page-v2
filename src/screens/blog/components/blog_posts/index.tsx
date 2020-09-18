@@ -1,16 +1,32 @@
 import React from "react";
-import { BlogPostCSS } from "./styles";
+// import { useRouter } from 'next/router'
+import { Pagination } from "semantic-ui-react";
+import { BlogPostCSS, BlogContainerCSS } from "./styles";
 import Post from "./components/post";
 import { IProps } from "./interface";
+import { useBlogPostsHook } from "./hooks";
 
-const BlogPosts = ({ main, blogs }: IProps) => {
+const BlogPosts = ({ main, blogs, meta }: IProps) => {
+  const {
+    pagination: { page: currentPage, pages: totalPages },
+  } = meta;
+
+  const { handlePageChange } = useBlogPostsHook();
+
   return (
-    <BlogPostCSS>
-      <Post main post={main} />
-      {blogs.map((x, i) => (
-        <Post key={i} post={x} />
-      ))}
-    </BlogPostCSS>
+    <BlogContainerCSS>
+      <BlogPostCSS>
+        <Post main post={main} />
+        {blogs.map((x, i) => (
+          <Post key={i} post={x} />
+        ))}
+      </BlogPostCSS>
+      <Pagination
+        activePage={currentPage}
+        totalPages={totalPages}
+        onPageChange={handlePageChange}
+      />
+    </BlogContainerCSS>
   );
 };
 
