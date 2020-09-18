@@ -1,7 +1,6 @@
 import React from "react";
 import { BlogPostCSS } from "./styles";
 import Post from "./components/post";
-import { dummyData } from "./config";
 import { IProps } from "./interface";
 
 const BlogPosts = ({ main, blogs }: IProps) => {

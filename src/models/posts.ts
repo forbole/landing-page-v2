@@ -31,13 +31,13 @@ class Post {
   static fromJson(data: any) {
     return new Post({
       canonicalUrl: data["canonical_url"],
-      createdAt: moment(data["created_at"]).format("YYYY-MM-DD"),
+      createdAt: moment(data["created_at"]).format("Do MMM YYYY, h:mm a"),
       customExcerpt: data["custom_excerpt"],
       excerpt: data.excerpt,
       featureImage: data["feature_image"],
       featured: data.featured,
       html: data.html,
-      publishedAt: moment(data["published_at"]).format("YYYY-MM-DD"),
+      publishedAt: moment(data["published_at"]).format("Do MMM YYYY, h:mm a"),
       slug: data.slug,
       title: data.title,
       visibility: data.visibility,
