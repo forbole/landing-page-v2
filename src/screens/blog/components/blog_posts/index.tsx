@@ -2,10 +2,9 @@ import React from "react";
 import { BlogPostCSS } from "./styles";
 import Post from "./components/post";
 import { dummyData } from "./config";
+import { IProps } from "./interface";
 
-const { main, blogs } = dummyData;
-
-const BlogPosts = () => {
+const BlogPosts = ({ main, blogs }: IProps) => {
   return (
     <BlogPostCSS>
       <Post main post={main} />

@@ -1,6 +1,5 @@
 const withPlugins = require("next-compose-plugins");
 const css = require("@zeit/next-css");
-require("dotenv").config();
 
 const nextConfig = {
   target: "serverless",

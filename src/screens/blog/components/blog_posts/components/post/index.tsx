@@ -5,16 +5,16 @@ import { PostCSS } from "./styles";
 
 const Post = (props: any) => {
   const { post, main = false } = props;
-  const { image, title, excerpt, date, slug } = post;
+  const { featureImage, title, excerpt, publishedAt, slug } = post;
   return (
     <PostCSS className={classNames({ main })}>
       <Link href={`/blog/${slug}`} as={`/blog/${slug}`}>
         <a>
-          <img src={image} />
+          <img src={featureImage} />
           <div className="content">
             <h3>{title}</h3>
             <p>{excerpt}</p>
-            <p className="date">{date}</p>
+            <p className="date">{publishedAt}</p>
           </div>
         </a>
       </Link>
