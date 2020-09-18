@@ -9,33 +9,36 @@ import {
   MaxWidthContainerCSS,
   ContentCSS,
   FlexContainerCSS,
+  GhostCSS,
 } from "./styles";
 import { Author, SocialMedia } from "./components";
 
 const { colors } = theme;
 
-const BlogDetails = () => {
+const BlogDetails = ({ post }: any) => {
   const { t } = useTranslation("blog");
+  const { tags } = post;
   const sanitize = DOMPurify.sanitize;
   return (
     <Layout
-      title={fakeBlog.title}
+      title={post.title}
       navColor={colors.gray600}
       mobileNavColor={colors.gray600}
     >
       <BlogDetailsCSS>
         <MaxWidthContainerCSS>
           <ContentCSS>
-            <h3>{fakeBlog.title}</h3>
+            <h3>{post.title}</h3>
             <FlexContainerCSS>
-              <SocialMedia title={fakeBlog.title} />
-              <Author />
+              <SocialMedia title={post.title} />
+              <Author post={post} />
             </FlexContainerCSS>
-            <div
+            <img className="cover-image" src={post.featureImage} />
+            <GhostCSS
               className="blog-content"
-              dangerouslySetInnerHTML={{ __html: sanitize(fakeBlog.post) }}
+              dangerouslySetInnerHTML={{ __html: sanitize(post.html) }}
             />
-            <Tags />
+            {!!tags.length && <Tags tags={tags} />}
           </ContentCSS>
         </MaxWidthContainerCSS>
       </BlogDetailsCSS>

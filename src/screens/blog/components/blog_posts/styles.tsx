@@ -25,6 +25,13 @@ export const BlogContainerCSS = styled.div`
   justify-content: start;
 
   .ui.pagination.menu {
-    margin-top: 2rem;
+    display: none;
+    margin: 2rem 0;
   }
+
+  ${media.tablet`
+    .ui.pagination.menu {
+      display: inline-flex;
+    }
+  `}
 `;

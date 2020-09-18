@@ -16,7 +16,7 @@ export const getPosts = async ({ limit = 5, page = 1 }: IPost) => {
 
 /** Gets the main feature post from remote */
 export const getFeaturedPost = async () => {
-  api.posts
+  return await api.posts
     .browse({
       limit: 1,
       filter: "tag:fiction+tag:-fables",
@@ -25,4 +25,20 @@ export const getFeaturedPost = async () => {
     .catch((err) => {
       console.error(err);
     });
+};
+
+/** Get single post by slug */
+export const getSinglePost = async (slug: string) => {
+  return await api.posts.read(
+    { slug },
+    {
+      // formats: ["html", "plaintext"],
+      include: "tags,authors",
+    }
+  );
+};
+
+/** Get all post tags */
+export const getTags = async () => {
+  return await api.tags.browse({ order: "slug ASC" });
 };

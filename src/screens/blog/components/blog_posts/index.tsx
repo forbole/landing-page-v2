@@ -22,6 +22,7 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
         ))}
       </BlogPostCSS>
       <Pagination
+        boundaryRange={0}
         activePage={currentPage}
         totalPages={totalPages}
         onPageChange={handlePageChange}

@@ -1,3 +1,5 @@
-import Post from "./posts";
+import Post from "./post";
+import Author from "./author";
+import Tag from "./tag";
 
-export { Post };
+export { Post, Author, Tag };
