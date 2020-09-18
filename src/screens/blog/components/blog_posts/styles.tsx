@@ -22,7 +22,7 @@ export const BlogContainerCSS = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 
   .ui.pagination.menu {
     margin-top: 2rem;

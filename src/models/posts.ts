@@ -28,12 +28,18 @@ class Post {
     this.visibility = payload.visibility;
   }
 
+  static formatExcerpt(excerpt: string) {
+    const format = excerpt.slice(0, 250);
+    const afterFormat = excerpt.length > 250 ? "..." : "";
+    return `${format}${afterFormat}`;
+  }
+
   static fromJson(data: any) {
     return new Post({
       canonicalUrl: data["canonical_url"],
       createdAt: moment(data["created_at"]).format("Do MMM YYYY, h:mm a"),
       customExcerpt: data["custom_excerpt"],
-      excerpt: data.excerpt,
+      excerpt: this.formatExcerpt(data.excerpt),
       featureImage: data["feature_image"],
       featured: data.featured,
       html: data.html,
