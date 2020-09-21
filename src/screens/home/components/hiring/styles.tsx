@@ -19,8 +19,6 @@ export const HiringContentCSS = styled.div`
 `;
 
 export const HiringHeaderCSS = styled.div`
-  //   background: linear-gradient(0deg, rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.1)),
-  //     url("static/images/assets/joinUs.png/");
   min-height: 30vh;
   ${mixins.mobileVerticalPadding}
   padding-top: 5.5rem;
@@ -59,7 +57,6 @@ export const HiringHeaderCSS = styled.div`
 
 export const ContentWrapperCSS = styled.div`
   ${mixins.mobilePadding}
-  // ${mixins.mobileBottomPadding}
   padding-top: 1.5rem;
   h1 {
     font-weight: 100;
