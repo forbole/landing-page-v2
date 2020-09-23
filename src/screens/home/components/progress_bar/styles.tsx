@@ -9,14 +9,15 @@ export const ProgressBarCSS = styled.div`
   }
   #svg #bar {
     stroke: rgba(255, 255, 255, 1);
-    animation: mymove 7s infinite;
+    animation: mymove 8s infinite;
+    animation-timing-function: linear;
   }
   @keyframes mymove {
     from {
       stroke-dashoffset: 565.48px;
     }
     to {
-      stroke-dashoffset: 0px;
+      stroke-dashoffset: 440.48px;
     }
   }
   i.icon {
