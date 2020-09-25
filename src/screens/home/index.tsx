@@ -16,8 +16,7 @@ import { useHomeHook } from "./hooks";
 
 const Home = () => {
   const { t } = useTranslation("home");
-  const { activeScreen, setActiveScreen, handleActiveScreen } = useHomeHook();
-  // console.log(activeScreen);
+  const { activeScreen, handleActiveScreen } = useHomeHook();
   return (
     <Layout title={t("home")}>
       <HomeCSS>
@@ -27,10 +26,7 @@ const Home = () => {
         <AwesomeSlider
           customContent={
             <CustomContent>
-              <ProgressBar
-                handleAnimation={handleActiveScreen}
-                // onclick={}
-              />
+              <ProgressBar handleAnimation={handleActiveScreen} />
             </CustomContent>
           }
           buttons={false}

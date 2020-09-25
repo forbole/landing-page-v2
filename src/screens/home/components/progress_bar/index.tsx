@@ -11,7 +11,7 @@ const ProgressBar = (props: any) => {
   const display = ((100 - value) / 100) * c;
   return (
     <ProgressBarCSS>
-      <div className="app">
+      <div className="app" onClick={handleAnimation}>
         <div>
           <svg
             id="svg"

@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export const useHomeHook = () => {
   const [activeScreen, setActiveScreen] = useState(0);
+
   const handleActiveScreen = () => {
     if (activeScreen === 0) {
       setActiveScreen(1);
@@ -9,5 +10,10 @@ export const useHomeHook = () => {
       setActiveScreen(0);
     }
   };
-  return { activeScreen, setActiveScreen, handleActiveScreen };
+
+  return {
+    activeScreen,
+    setActiveScreen,
+    handleActiveScreen,
+  };
 };
