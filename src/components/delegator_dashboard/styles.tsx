@@ -34,7 +34,7 @@ export const DashboardContentCSS = styled.div`
   }
   .ui.black.button {
     font-weight: 100;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
   a {
     color: ${colors.white};
@@ -49,8 +49,10 @@ export const DashboardContentCSS = styled.div`
     h2 {
       font-size: 3rem;
     }
+
     p {
-      font-size: 1.7rem;
+      margin-bottom: 0;
+      line-height: 1.5;
     }
   `}
   ${media.bigDesktop`

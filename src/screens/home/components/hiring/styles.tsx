@@ -82,12 +82,12 @@ export const ContentWrapperCSS = styled.div`
   h2 {
     font-weight: 100;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   h3 {
     font-weight: 100;
     font-size: 0.9rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .ui.red.button {

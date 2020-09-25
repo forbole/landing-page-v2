@@ -9,7 +9,6 @@ export const BodyCSS = styled.div`
 
 export const ContentCSS = styled.div`
   ${mixins.mobileHorizontalPadding}
-  ${mixins.mobileBottomPadding}
   margin-top: -12rem;
   ${media.tablet`
   margin-top: -16rem;
