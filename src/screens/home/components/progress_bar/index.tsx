@@ -35,8 +35,7 @@ const ProgressBar = (props: any) => {
               cy="50"
               fill="transparent"
               strokeDasharray="565.48"
-              // wingman
-              // onAnimationIteration={handleAnimation}
+              onAnimationIteration={handleAnimation}
             ></circle>
           </svg>
           <Icon name="arrow right" />
