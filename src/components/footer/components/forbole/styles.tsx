@@ -7,8 +7,7 @@ export const ForboleCSS = styled.div`
   color: ${colors.offwhite};
   padding-bottom: 1rem;
   img {
-    height: 16px;
-    width: 83px;
+    width: 100px;
   }
   p {
     font-weight: 300;
@@ -16,7 +15,6 @@ export const ForboleCSS = styled.div`
 
   ${media.bigDesktop`
   img {
-    height: 30px;
     width: 125px;
   }
   p {
