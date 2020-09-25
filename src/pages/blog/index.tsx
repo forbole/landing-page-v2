@@ -13,7 +13,7 @@ BlogPage.getInitialProps = async ({ query }) => {
 
   const [tags, posts] = await Promise.all([getTags(), getPosts(fetchQuery)]);
 
-  const formattedPosts = posts.map((post) => Post.fromJson(post));
+  const formattedPosts = posts.map((post) => Post.fromJson(post, {}));
   const formattedTags = tags.map((tag) => Tag.fromJson(tag));
 
   return { posts: formattedPosts, meta: posts.meta, tags: formattedTags };

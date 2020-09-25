@@ -33,9 +33,9 @@ class Post {
     this.tags = payload.tags;
   }
 
-  static formatExcerpt(excerpt: string) {
-    const format = excerpt.slice(0, 250);
-    const afterFormat = excerpt.length > 250 ? "..." : "";
+  static formatExcerpt(excerpt: string, limit: number) {
+    const format = excerpt.slice(0, limit);
+    const afterFormat = excerpt.length > limit ? "..." : "";
     return `${format}${afterFormat}`;
   }
 
@@ -43,12 +43,12 @@ class Post {
     return tags.map((x) => Tag.fromJson(x));
   }
 
-  static fromJson(data: any) {
+  static fromJson(data: any, { excerptLimit = 250 }: any) {
     return new Post({
       canonicalUrl: data["canonical_url"],
       createdAt: moment(data["created_at"]).format("Do MMM YYYY, h:mm a"),
       customExcerpt: data["custom_excerpt"],
-      excerpt: this.formatExcerpt(data.excerpt),
+      excerpt: this.formatExcerpt(data.excerpt, excerptLimit),
       featureImage: data["feature_image"],
       featured: data.featured,
       html: data.html,

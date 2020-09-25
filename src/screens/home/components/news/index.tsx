@@ -1,12 +1,12 @@
 import React from "react";
 import { NewsHeader, CarouselItem, CarouselBlogPosts } from "./components";
 
-const News = () => {
+const News = (props: any) => {
   return (
     <>
       <NewsHeader />
-      <CarouselItem />
-      <CarouselBlogPosts />
+      <CarouselItem {...props} />
+      <CarouselBlogPosts {...props} />
     </>
   );
 };

@@ -45,7 +45,10 @@ export const PostCSS = styled.div`
     }
     .content {
       padding: 1rem;
-      display: block;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
       margin: 2rem;
       z-index: 1;
       margin: -4rem 1rem 0;
@@ -54,6 +57,7 @@ export const PostCSS = styled.div`
       -webkit-filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.2));
       filter: drop-shadow(0rem 0rem 0.5rem rgba(0, 0, 0, 0.2));
       transition: 0.3s ease;
+      min-height: 245px;
       h3 {
         margin-bottom: 0.5rem;
       }
@@ -61,6 +65,7 @@ export const PostCSS = styled.div`
         font-size: 1rem;
         line-height: 1.5rem;
       }
+
       .date {
         padding-top: 2rem;
       }

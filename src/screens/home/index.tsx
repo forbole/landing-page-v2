@@ -14,7 +14,8 @@ import { HomeCSS, CustomContent } from "./styles";
 import AwesomeSlider from "react-awesome-slider";
 import { useHomeHook } from "./hooks";
 
-const Home = () => {
+const Home = (props: any) => {
+  const { posts } = props;
   const { t } = useTranslation("home");
   const { activeScreen, handleActiveScreen } = useHomeHook();
   return (
@@ -42,7 +43,7 @@ const Home = () => {
         <SupportedNetworks />
         <DashboardContent />
         <MooncakeBody />
-        <News />
+        <News posts={posts} />
       </HomeCSS>
     </Layout>
   );
