@@ -9,7 +9,10 @@ export const HiringContentCSS = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  //wingman
+  // height: 100vh;
+  height: 100%;
+
   ${media.bigDesktop`
   display: flex;
   flex-direction: row-reverse;

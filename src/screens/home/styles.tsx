@@ -13,6 +13,11 @@ export const HomeCSS = styled.div`
     width: 100%;
     min-height: 35rem;
   }
+
+  .slider-wrapper {
+    height: 100%;
+  }
+
   .aws-btn  {
     --slider-height-percentage: 61%;
     --slider-transition-duration: 800ms;

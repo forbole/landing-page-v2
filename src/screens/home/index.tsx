@@ -32,7 +32,7 @@ const Home = () => {
           buttons={false}
           selected={activeScreen}
         >
-          <div>
+          <div className="slider-wrapper">
             <HeroContent />
           </div>
           <div>
