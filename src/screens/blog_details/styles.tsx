@@ -24,7 +24,7 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
 export const ContentCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
   padding-top: 4rem;
-
+  width: 100%;
   h3 {
     font-weight: 400;
     margin-bottom: 1rem;
