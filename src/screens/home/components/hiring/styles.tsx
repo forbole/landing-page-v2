@@ -62,6 +62,7 @@ export const HiringHeaderCSS = styled.div`
   }
   `}
   ${media.bigDesktop`
+    margin-top: 0;
     padding: 0rem;
     height: 100%;
     width: 40%;
