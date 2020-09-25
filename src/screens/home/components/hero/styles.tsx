@@ -17,19 +17,9 @@ export const HeroContentCSS = styled.div`
   height: 100%;
 
   ${media.tablet`
-  background-size: auto;
-  background-position: bottom 55%;
+    background-size: cover;
+    background-position: center 49%;
   `}
-
-  // ${media.bigDesktop`
-  // background-size: 100%;
-  // background-position: 50% 45%;
-  // min-height: 35rem;
-  // width: 100%;
-  // .wrapper {
-  //   ${mixins.desktopMaxWidth}
-  // }
-  // `}
 `;
 
 export const MainContentCSS = styled.div`
@@ -92,36 +82,4 @@ export const HomeIconsCSS = styled.div`
       margin-bottom: 0.3rem;
     }
   `}
-
-  // ${mixins.flexBetween}
-  // display: inline-flex;
-  // flex-wrap: wrap;
-  // width: 17rem;
-  // .icon {
-  //   border-radius: 0.5rem;
-  //   border: 1px solid ${colors.white};
-  //   box-sizing: border-box;
-  //   width: 4rem;
-  //   height: 4rem;
-  //   ${mixins.flexCenter}
-  //   flex-direction: column;
-  //   font-size: 0.8rem;
-  // }
-  // svg > path {
-  //   fill: ${colors.white};
-  // }
-
-  // ${media.bigDesktop`
-  // `}
-`;
-export const NextIconCSS = styled.div`
-  // position: absolute;
-  // bottom: 0px;
-  // right: 0px;
-  // display: block;
-  // margin-left: auto;
-  // margin-right: 0;
-  // svg > path {
-  //   fill: ${colors.white};
-  // }
 `;

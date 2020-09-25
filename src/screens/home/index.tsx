@@ -35,7 +35,7 @@ const Home = () => {
           <div className="slider-wrapper">
             <HeroContent />
           </div>
-          <div>
+          <div className="slider-wrapper">
             <HiringContent />
           </div>
         </AwesomeSlider>

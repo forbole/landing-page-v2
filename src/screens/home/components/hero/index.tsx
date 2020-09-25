@@ -1,18 +1,12 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import {
-  HeroContentCSS,
-  MainContentCSS,
-  HomeIconsCSS,
-  NextIconCSS,
-} from "./styles";
+import { HeroContentCSS, MainContentCSS, HomeIconsCSS } from "./styles";
 import { Secure, Trusted, Reliable, Reward } from "@icons";
 
 export const HeroContent = () => {
   const { t } = useTranslation("home");
   return (
     <HeroContentCSS>
-      {/* <div className="wrapper"> */}
       <MainContentCSS>
         <h1>{t("coBuildingInterchain")}</h1>
         <p>{t("homeDescription")}</p>
@@ -35,7 +29,6 @@ export const HeroContent = () => {
           {t("rewards")}
         </div>
       </HomeIconsCSS>
-      {/* </div> */}
     </HeroContentCSS>
   );
 };
