@@ -9,7 +9,9 @@ const nextI18next = require("../i18n");
 const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
+const url = process.env.URL;
+console.log(url,'what fucking url');
 
 (async () => {
   try {
@@ -25,9 +27,8 @@ const port = process.env.PORT || 3000;
     });
     server.listen(port, (err?: any) => {
       if (err) throw err;
-      console.log(
-        `> Ready on http://localhost:${port} - ENV ${process.env.ENV}`
-      );
+      console.log(`> Ready on ${url}:${port}`);
+      console.log(`> ENV:  ${process.env.ENV}`)
     });
   } catch (e) {
     console.error(e);
