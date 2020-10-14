@@ -1,12 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Link from "next/link";
-import { fakeTitles } from "./config";
 import { TitlePostsCSS } from "./styles";
 
-const TitlePosts = () => {
+const TitlePosts = ({ blogs }) => {
+  console.log(typeof blogs);
   return (
     <TitlePostsCSS>
-      {fakeTitles.map((x, i) => (
+      {blogs.map((x, i) => (
         <li key={i}>
           <Link href={`/blog/${x.slug}`}>
             <a>{x.title}</a>
@@ -15,6 +16,10 @@ const TitlePosts = () => {
       ))}
     </TitlePostsCSS>
   );
+};
+
+TitlePosts.propTypes = {
+  blogs: PropTypes.array,
 };
 
 export default TitlePosts;

@@ -1,0 +1,4 @@
+**/node_modules/*
+**/out/*
+**/.next/*
+**/semantic/src/definitions/*
