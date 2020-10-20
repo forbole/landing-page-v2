@@ -22,14 +22,4 @@ const nextConfig = {
 
 module.exports = {
   css: withPlugins([[css]], nextConfig),
-  env: {
-    URL: process.env.URL || "http://localhost:3000",
-  },
-  typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
-    // ignoreBuildErrors: true,
-  },
 };

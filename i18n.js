@@ -4,4 +4,5 @@ module.exports = new NextI18Next({
   defaultLanguage: "en",
   otherLanguages: [],
   localeSubpaths: {},
+  strictMode: false,
 });

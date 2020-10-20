@@ -6,11 +6,8 @@ import {
   CarouselArrowCSS,
   MaxWidthContainerCSS,
 } from "./styles";
-import { dummyData } from "../carousel_item/config";
 import Post from "../carousel_item/news_posts";
 import { Next } from "@icons";
-
-const { main, blogs } = dummyData;
 
 const ButtonGroup = (props: any) => {
   const { next, previous } = props;
@@ -27,7 +24,8 @@ const ButtonGroup = (props: any) => {
   );
 };
 
-const CarouselBlogPosts = () => {
+const CarouselBlogPosts = (props: any) => {
+  const { posts } = props;
   return (
     <CarouselCSS>
       <MaxWidthContainerCSS>
@@ -65,8 +63,7 @@ const CarouselBlogPosts = () => {
           slidesToSlide={3}
           swipeable
         >
-          <Post main post={main} />
-          {blogs.map((x, i) => (
+          {posts.map((x, i) => (
             <Post key={i} post={x} />
           ))}
         </Carousel>

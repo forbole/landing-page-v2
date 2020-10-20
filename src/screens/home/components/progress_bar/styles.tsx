@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 export const ProgressBarCSS = styled.div`
   position: relative;
+
+  &:hover {
+    cursor: pointer;
+  }
+
   #svg circle {
     stroke-dashoffset: 0;
     stroke: rgba(255, 255, 255, 0.5);

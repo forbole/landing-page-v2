@@ -17,9 +17,13 @@ export const DashboardContent = () => {
         <div className="content">
           <h3>{t("delegatorDashboard")}</h3>
           <h2>{t("telescope")}</h2>
-          <p>{t("dd1")}</p>
-          <p>{t("dd2")}</p>
-          <p>{t("dd3")}</p>
+          <p>
+            {t("dd1")}
+            <br />
+            {t("dd2")}
+            <br />
+            {t("dd3")}
+          </p>
           <Button color="black">
             <a href="#">{t("download")}</a>
           </Button>

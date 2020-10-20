@@ -14,10 +14,10 @@ import { HomeCSS, CustomContent } from "./styles";
 import AwesomeSlider from "react-awesome-slider";
 import { useHomeHook } from "./hooks";
 
-const Home = () => {
+const Home = (props: any) => {
+  const { posts } = props;
   const { t } = useTranslation("home");
-  const { activeScreen, setActiveScreen, handleActiveScreen } = useHomeHook();
-  // console.log(activeScreen);
+  const { activeScreen, handleActiveScreen } = useHomeHook();
   return (
     <Layout title={t("home")}>
       <HomeCSS>
@@ -27,26 +27,23 @@ const Home = () => {
         <AwesomeSlider
           customContent={
             <CustomContent>
-              <ProgressBar
-                handleAnimation={handleActiveScreen}
-                // onclick={}
-              />
+              <ProgressBar handleAnimation={handleActiveScreen} />
             </CustomContent>
           }
           buttons={false}
           selected={activeScreen}
         >
-          <div>
+          <div className="slider-wrapper">
             <HeroContent />
           </div>
-          <div>
+          <div className="slider-wrapper">
             <HiringContent />
           </div>
         </AwesomeSlider>
         <SupportedNetworks />
         <DashboardContent />
         <MooncakeBody />
-        <News />
+        <News posts={posts} />
       </HomeCSS>
     </Layout>
   );

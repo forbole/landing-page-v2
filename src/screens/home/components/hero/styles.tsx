@@ -4,109 +4,79 @@ import { theme, mixins, media } from "@styles";
 const { colors } = theme;
 
 export const HeroContentCSS = styled.div`
-  ${mixins.flexCenter}
-  position: relative;
-  flex-direction: column;
-  padding: 2.5rem 1rem 1rem;
-  color: ${colors.white};
-  width: 100%;
+  ${mixins.mobilePadding};
   background-image: linear-gradient(0deg, rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.1)),
     url("static/images/assets/horse.png");
-  background-size: 444%;
   background-repeat: no-repeat;
   background-position: 50% 52%;
-  height: 90vh;
-  .wrapper {
-    ${mixins.flexCenter}
-    flex-direction: column;
-    padding-bottom: 5rem;
-    height: 70vh;
-  }
+  background-size: 444%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
   ${media.tablet`
-  background-size: 181%;
-  background-position: 50% 42%;
-  `}
-  ${media.bigDesktop`
-  background-size: 100%;
-  background-position: 50% 55%;
-  min-height: 35rem;
-  width: 100%;
-  .wrapper {
-    ${mixins.desktopMaxWidth}
-  }
+    background-size: cover;
+    background-position: center 49%;
   `}
 `;
 
 export const MainContentCSS = styled.div`
-  ${mixins.flexCenter}
-  flex-direction: column;
   text-align: center;
-  width: 100%;
+  color: white;
+
   h1 {
-    font-size: 1.8rem;
-    font-weight: 100;
-    line-height: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
-  p {
-    font-size: 0.7rem;
-    margin-bottom: 1rem;
-    line-height: 1.1rem;
-    font-weight: 100;
-    width: 16rem;
-  }
+
   ${media.tablet`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   h1 {
     font-size: 4rem;
-    margin-bottom: 2rem;
   }
   p {
     font-size: 1.2rem;
     line-height: 1.5rem;
-    width: 37rem;
+    width: 80%;
   }
   `}
 `;
 
 export const HomeIconsCSS = styled.div`
-  ${mixins.flexBetween}
-  display: inline-flex;
+  display: flex;
+  margin-top: 1rem;
   flex-wrap: wrap;
-  width: 17rem;
+  align-items: center;
+  justify-content: center;
   .icon {
-    border-radius: 0.5rem;
-    border: 1px solid ${colors.white};
-    box-sizing: border-box;
-    width: 4rem;
-    height: 4rem;
-    ${mixins.flexCenter}
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid ${colors.white};
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    color: ${colors.white};
+    font-size: 0.9rem;
+  }
+  svg {
+    margin-bottom: 0.5rem;
+  }
+  ${media.tablet`
+  .icon {
+    width: 80px;
+    height: 80px;
     font-size: 0.8rem;
   }
   svg {
-    width: 30px;
-    height: 30px;
+    margin-bottom: 0.3rem;
   }
-  svg > path {
-    fill: ${colors.white};
-  }
-  ${media.tablet`
-  width: 20rem;
-  `}
-  ${media.bigDesktop`
-  `}
-`;
-export const NextIconCSS = styled.div`
-<<<<<<< HEAD
-=======
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
->>>>>>> af58304d19a252a98a38b660e6ff8c83ffb1f875
-  display: block;
-  margin-left: auto;
-  margin-right: 0;
-  svg > path {
-    fill: ${colors.white};
-  }
+`}
 `;
