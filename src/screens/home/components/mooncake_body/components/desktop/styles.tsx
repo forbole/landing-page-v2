@@ -6,34 +6,59 @@ import {
   CONTAINER_MIN_HEIGHT,
 } from "../../../../config";
 
+const { colors } = theme;
+
 export const DesktopCSS = styled.div`
   display: none;
   ${media.bigDesktop`
     min-height: ${CONTAINER_MIN_HEIGHT};
-    ${mixins.flexCenter}
+    ${mixins.flexCenter};
     flex-direction: row;
-    background: white;
+    width: 100%;
     `}
 `;
 
-export const WrapperCSS = styled.div`
-  ${media.bigDesktop`
-  ${mixins.desktopMaxWidth}
-  ${mixins.flexBetween}
-  width: 100%;
-    .mooncake {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      // height: ${CONTAINER_HEIGHT};
-      width: 100%;
-      padding-left: 15rem;
-    }
-`}
+export const MooncakeBodyCSS = styled.div`
+  height: ${CONTAINER_HEIGHT};
+  min-height: ${CONTAINER_MIN_HEIGHT};
+  width: ${CONTAINER_WIDTH};
+  display: flex;
+  // align-items: center;
+  position: relative;
+  width: 55%;
+  background: ${colors.white};
+  height: 80vh;
+  min-height: 800px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 15rem;
 `;
 
-export const MooncakeBodyCSS = styled.div`
+export const MooncakeContentCSS = styled.div`
+  max-width: 600px;
+  position: relative;
+`;
+
+export const MooncakeImgCSS = styled.div`
+  position: absolute;
+  left: -650px;
+  max-height: 45vh;
+  z-index: 1;
+`;
+
+export const BackgroundCSS = styled.div`
+  height: ${CONTAINER_HEIGHT};
+  min-height: ${CONTAINER_MIN_HEIGHT};
+  width: ${CONTAINER_WIDTH};
   background: linear-gradient(
       0deg,
       rgba(123, 135, 185, 0.33),
@@ -41,28 +66,10 @@ export const MooncakeBodyCSS = styled.div`
     ),
     url(static/images/assets/desmos-hero.png);
   background-repeat: no-repeat;
-  background-position: left bottom;
-  transform: scaleX(-1);
-  width: 100%;
-  height: ${CONTAINER_HEIGHT};
-  min-height: ${CONTAINER_MIN_HEIGHT};
+  background-size: cover;
+  background-position: 0 center;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-`;
-
-export const MooncakeContentCSS = styled.div`
-  // padding-left: 15rem;
-  // margin-right: 8.5rem;
-  max-width: 700px;
-`;
-
-export const MooncakeImgCSS = styled.div`
+  flex: 1;
+  background-color: black;
   transform: scaleX(-1);
-  position: absolute;
-  // right: -450px;
-  left: -70px;
-  top: 20%;
-  max-height: 45vh;
 `;

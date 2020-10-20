@@ -5,6 +5,7 @@ const { colors } = theme;
 
 export const HeroContentCSS = styled.div`
   ${mixins.flexCenter}
+  position: relative;
   flex-direction: column;
   padding: 2.5rem 1rem 1rem;
   color: ${colors.white};
@@ -14,7 +15,7 @@ export const HeroContentCSS = styled.div`
   background-size: 444%;
   background-repeat: no-repeat;
   background-position: 50% 52%;
-  min-height: 90vh;
+  height: 90vh;
   .wrapper {
     ${mixins.flexCenter}
     flex-direction: column;
@@ -28,7 +29,8 @@ export const HeroContentCSS = styled.div`
   ${media.bigDesktop`
   background-size: 100%;
   background-position: 50% 55%;
-  min-height: 100vh;
+  min-height: 35rem;
+  width: 100%;
   .wrapper {
     ${mixins.desktopMaxWidth}
   }
@@ -95,6 +97,12 @@ export const HomeIconsCSS = styled.div`
   `}
 `;
 export const NextIconCSS = styled.div`
+<<<<<<< HEAD
+=======
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+>>>>>>> af58304d19a252a98a38b660e6ff8c83ffb1f875
   display: block;
   margin-left: auto;
   margin-right: 0;

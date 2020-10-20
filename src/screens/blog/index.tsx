@@ -7,7 +7,8 @@ import { BlogCSS, MaxWidthContainerCSS, SideCSS } from "./styles";
 
 const { colors } = theme;
 
-const Blog = () => {
+const Blog = (props: any) => {
+  const { posts, meta, tags } = props;
   const { t } = useTranslation("blog");
   return (
     <Layout
@@ -17,10 +18,10 @@ const Blog = () => {
     >
       <BlogCSS>
         <MaxWidthContainerCSS>
-          <BlogPosts />
+          <BlogPosts main={posts[0]} blogs={posts.slice(1)} meta={meta} />
           <SideCSS>
             <TitlePosts />
-            <Tags />
+            <Tags tags={tags} />
             <Twitter />
           </SideCSS>
         </MaxWidthContainerCSS>

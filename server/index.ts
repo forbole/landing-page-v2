@@ -1,3 +1,5 @@
+/* eslint-disable */
+import 'dotenv-defaults/config';
 import express, { Request, Response } from "express";
 import next from "next";
 import cors from "cors";
@@ -24,7 +26,7 @@ const port = process.env.PORT || 3000;
     server.listen(port, (err?: any) => {
       if (err) throw err;
       console.log(
-        `> Ready on http://localhost:${port} - env ${process.env.NODE_ENV}`
+        `> Ready on http://localhost:${port} - ENV ${process.env.ENV}`
       );
     });
   } catch (e) {

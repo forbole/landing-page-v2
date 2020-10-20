@@ -10,6 +10,7 @@ import Tags from "./tags";
 import DashboardContent from "./delegator_dashboard";
 import MooncakeDetails from "./mooncake_details";
 import MooncakeImg from "./mooncake_img";
+import ProgressBar from "../screens/home/components/progress_bar";
 
 export {
   Layout,
@@ -24,4 +25,5 @@ export {
   DashboardContent,
   MooncakeDetails,
   MooncakeImg,
+  ProgressBar,
 };

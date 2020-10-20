@@ -6,7 +6,7 @@ import {
   HomeIconsCSS,
   NextIconCSS,
 } from "./styles";
-import { Secure, Trusted, Reliable, Reward, Next } from "@icons";
+import { Secure, Trusted, Reliable, Reward } from "@icons";
 
 export const HeroContent = () => {
   const { t } = useTranslation("home");
@@ -37,7 +37,8 @@ export const HeroContent = () => {
         </HomeIconsCSS>
       </div>
       <NextIconCSS>
-        <Next />
+        {/* <Next /> */}
+        {/* <ProgressBar /> */}
       </NextIconCSS>
     </HeroContentCSS>
   );

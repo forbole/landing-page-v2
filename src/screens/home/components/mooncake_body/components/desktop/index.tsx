@@ -2,27 +2,24 @@ import React from "react";
 import { MooncakeDetails, MooncakeImg } from "@components";
 import {
   DesktopCSS,
+  BackgroundCSS,
   MooncakeContentCSS,
   MooncakeBodyCSS,
   MooncakeImgCSS,
-  WrapperCSS,
 } from "./styles";
 
 const Desktop = () => {
   return (
     <DesktopCSS>
-      <WrapperCSS>
-        <MooncakeBodyCSS>
-          <MooncakeContentCSS>
-            <MooncakeImgCSS>
-              <MooncakeImg />
-            </MooncakeImgCSS>
-          </MooncakeContentCSS>
-        </MooncakeBodyCSS>
-        <div className="mooncake">
+      <BackgroundCSS />
+      <MooncakeBodyCSS>
+        <MooncakeContentCSS>
+          <MooncakeImgCSS>
+            <MooncakeImg />
+          </MooncakeImgCSS>
           <MooncakeDetails />
-        </div>
-      </WrapperCSS>
+        </MooncakeContentCSS>
+      </MooncakeBodyCSS>
     </DesktopCSS>
   );
 };

@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import { Forbole as ForboleLogo } from "@icons";
 import { INavBar } from "../../interfaces";
-import { MobileNavBarIconCSS, MobileNavBarCSS } from "./styles";
+import { MobileNavBarCSS } from "./styles";
 
 const Navbar = (props: INavBar) => {
-  const { isOpen, toggle, color, displayBackground } = props;
+  const { isOpen, color, displayBackground } = props;
 
   return (
     <MobileNavBarCSS
@@ -18,14 +18,6 @@ const Navbar = (props: INavBar) => {
           <ForboleLogo />
         </a>
       </Link>
-      <MobileNavBarIconCSS
-        isOpen={isOpen}
-        onClick={toggle}
-        color={color}
-        displayBackground={displayBackground}
-      >
-        <div></div>
-      </MobileNavBarIconCSS>
     </MobileNavBarCSS>
   );
 };

@@ -43,7 +43,13 @@
       ],
       "@utils/*": [
         "src/utils/*"
-      ]
+      ],
+      "@api/*": [
+        "src/api/*"
+      ],
+      "@models": [
+        "src/models"
+      ],
     }
   },
   "files": [

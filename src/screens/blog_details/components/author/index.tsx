@@ -1,13 +1,15 @@
 import React from "react";
 import { AuthorCSS } from "./styles";
 import { fakeBlog } from "../../config";
-const Author = () => {
+
+const Author = ({ post }: any) => {
+  const { primaryAuthor: author } = post;
   return (
     <AuthorCSS>
-      <img src={fakeBlog.author.image} />
+      <img src={author.profileImage} />
       <div className="content">
-        <p className="name">{fakeBlog.author.name}</p>
-        <p className="date">{fakeBlog.date}</p>
+        <p className="name">{author.name}</p>
+        <p className="date">{post.publishedAt}</p>
       </div>
     </AuthorCSS>
   );
