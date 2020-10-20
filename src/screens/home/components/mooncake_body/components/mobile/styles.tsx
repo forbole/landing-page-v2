@@ -13,7 +13,7 @@ export const ContentCSS = styled.div`
   ${media.tablet`
   margin-top: -16rem;
   img {
-    max-width: 283px;
+    max-width: 683px;
     margin: 0 1rem;
   }
   `}

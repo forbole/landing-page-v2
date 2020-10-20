@@ -51,6 +51,7 @@ export const MooncakeContentCSS = styled.div`
 export const MooncakeImgCSS = styled.div`
   position: absolute;
   left: -620px;
+  bottom: 150px;
   max-height: 45vh;
   z-index: 1;
 `;
