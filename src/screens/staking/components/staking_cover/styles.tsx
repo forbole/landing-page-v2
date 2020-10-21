@@ -9,7 +9,7 @@ export const StakingCoverCSS = styled(CoverCSS)`
       rgba(0, 0, 0, 0.68),
       rgba(0, 0, 0, 0.68)
     ),
-    url("static/images/assets/staking.png");
+    url("static/images/assets/staking.jpg");
   background-position: 55% bottom;
 
   .content-container {
@@ -39,7 +39,7 @@ export const StakingCoverCSS = styled(CoverCSS)`
   }
 
   ${media.tablet`
-    background-image: url("static/images/assets/staking.png");
+    background-image: url("static/images/assets/staking.jpg");
   `}
 
   ${media.bigDesktop`

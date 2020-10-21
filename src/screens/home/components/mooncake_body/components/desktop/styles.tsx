@@ -51,6 +51,7 @@ export const MooncakeContentCSS = styled.div`
 export const MooncakeImgCSS = styled.div`
   position: absolute;
   left: -620px;
+  bottom: 150px;
   max-height: 45vh;
   z-index: 1;
 `;
@@ -64,7 +65,7 @@ export const BackgroundCSS = styled.div`
       rgba(123, 135, 185, 0.33),
       rgba(123, 135, 185, 0.33)
     ),
-    url(static/images/assets/desmos-hero.png);
+    url(static/images/assets/desmos-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 center;

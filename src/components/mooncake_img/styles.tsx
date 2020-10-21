@@ -7,7 +7,7 @@ export const BodyImageContainerCSS = styled.div`
   margin-bottom: 1rem;
 
   img {
-    width: 45%;
+    width: 100%;
     height: 100%;
   }
 
@@ -15,7 +15,7 @@ export const BodyImageContainerCSS = styled.div`
     justify-content: center;
     margin-bottom: 3rem;
     img {
-      max-width: 250px;
+      max-width: 550px;
       margin: 0 0.5rem;
     }
   `}
@@ -24,7 +24,7 @@ export const BodyImageContainerCSS = styled.div`
     margin-bottom: 0;
     img {
       width: 100%;
-      max-width: 250px;
+      max-width: 600px;
     }
   `}
 `;

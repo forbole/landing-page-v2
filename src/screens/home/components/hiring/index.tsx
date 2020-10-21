@@ -9,7 +9,7 @@ export const HiringContent = () => {
     <HiringContentCSS>
       <HiringHeaderCSS>
         <div className="overlay" />
-        <img src="/static/images/assets/joinUs.png/" alt="Join Us" />
+        <img src="/static/images/assets/joinUs.jpg/" alt="Join Us" />
       </HiringHeaderCSS>
       <ContentWrapperCSS>
         <h1>{t("hiring")}</h1>
