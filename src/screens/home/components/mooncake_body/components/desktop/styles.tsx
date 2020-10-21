@@ -11,6 +11,7 @@ const { colors } = theme;
 export const DesktopCSS = styled.div`
   display: none;
   ${media.bigDesktop`
+  height: ${CONTAINER_HEIGHT};
     min-height: ${CONTAINER_MIN_HEIGHT};
     ${mixins.flexCenter};
     flex-direction: row;
