@@ -7,6 +7,8 @@ export const TeamCSS = styled.div`
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   `}
 `;
 
@@ -19,7 +21,6 @@ export const TeamHeadingContainerCSS = styled.div`
 
   ${media.bigDesktop`
     padding-right: 2rem;
-
     h3 {
       font-size: 3.5rem;
     }

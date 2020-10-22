@@ -12,9 +12,10 @@ export const MilestonesCSS = styled.div`
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
-
+    min-height: 100vh;
     h3 {
-      font-size: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
   `}
 `;
