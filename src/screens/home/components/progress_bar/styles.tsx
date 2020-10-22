@@ -10,7 +10,7 @@ export const ProgressBarCSS = styled.div`
   #svg circle {
     stroke-dashoffset: 0;
     stroke: rgba(255, 255, 255, 0.5);
-    stroke-width: 0.2rem;
+    stroke-width: 0.1rem;
   }
   #svg #bar {
     stroke: rgba(255, 255, 255, 1);

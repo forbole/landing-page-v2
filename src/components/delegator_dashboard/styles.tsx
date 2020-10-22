@@ -56,7 +56,7 @@ export const DashboardContentCSS = styled.div`
     }
   `}
   ${media.bigDesktop`
-    min-height: 25rem;
+    height: 100vh;
     ${mixins.flexCenter}
     padding: 8rem 5rem 8rem;
     .desktopWrapper {
