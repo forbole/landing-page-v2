@@ -40,7 +40,7 @@ export const ForboleStakesCSS = styled.div`
     background-image:  url("static/images/assets/stake-now-elements.svg"), url("static/images/assets/stake-now-bg.svg");
     background-position: center 200px, center center;
     background-repeat: no-repeat;
-    min-height: 80vh;
+    min-height: 100vh;
 
     .stats-hr {
       display: none;
