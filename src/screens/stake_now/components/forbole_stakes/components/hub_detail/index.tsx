@@ -21,7 +21,7 @@ const HubDetail = (props: any) => {
         {!!main && <img src="/static/images/icons/cosmos-hub.png" />}
         {t(title)}
       </p>
-      <StatDetailsCSS>
+      <StatDetailsCSS className={classNames({ main })}>
         <p className={classNames("atom", { main })}>
           {convertToMoney(atom)} {t("atom")}
         </p>
@@ -38,8 +38,8 @@ const HubDetail = (props: any) => {
             <hr className="main-content-hr" />
           </>
         ) : (
-            <p>{percent}%</p>
-          )}
+          <p>{percent}%</p>
+        )}
       </StatDetailsCSS>
     </HubDetailCSS>
   );

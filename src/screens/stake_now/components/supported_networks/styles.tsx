@@ -37,6 +37,10 @@ export const HeaderContentCSS = styled.div`
     justify-content: center;
     flex-direction: column;
     margin-bottom: 2rem;
+
+    h2 {
+      font-size: 2.5rem;
+    }
   `}
 `;
 
