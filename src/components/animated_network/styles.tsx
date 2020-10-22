@@ -56,7 +56,7 @@ export const NetworkCSS = styled.div`
       margin-left: auto;
       margin-right: auto;
       transition: 1s ease;
-      width: 45px;
+      width: 60px;
     }
 
     p {
@@ -70,7 +70,7 @@ export const NetworkCSS = styled.div`
         position: absolute;
         left: 0;
         right: 0;
-        top: 33%;
+        top: 37%;
       }
     }
 

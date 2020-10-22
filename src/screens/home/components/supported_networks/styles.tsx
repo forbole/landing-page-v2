@@ -7,6 +7,7 @@ export const SupportedNetworksCSS = styled.div`
   background: ${colors.gray100};
 
   ${media.bigDesktop`
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,7 +18,7 @@ export const SupportedNetworksCSS = styled.div`
 export const HeaderContentCSS = styled.div`
   h2 {
     font-weight: 400;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
 
@@ -33,7 +34,7 @@ export const HeaderContentCSS = styled.div`
     ${mixins.desktopMaxWidth}
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     margin-bottom: 2rem;

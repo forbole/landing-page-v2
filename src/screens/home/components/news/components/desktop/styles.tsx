@@ -23,11 +23,11 @@ export const ArrowCSS = styled.span`
   }
 
   &.right {
-    right: 20px;
+    right: 0px;
   }
 
   &.left {
-    left: 20px;
+    left: 0px;
     transform: scaleX(-1);
   }
 `;

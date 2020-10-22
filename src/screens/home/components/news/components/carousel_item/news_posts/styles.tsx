@@ -50,11 +50,9 @@ export const PostCSS = styled.div`
     }
 
     img {
-      height: 225px;
-      width: 433px;
+      height: 243px;
+      width: 434px;
       border-radius: 0.1rem;
-      -webkit-filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.2));
-      filter: drop-shadow(0rem 0rem 0.5rem rgba(0, 0, 0, 0.2));
     }
     .content {
       padding: 1rem;

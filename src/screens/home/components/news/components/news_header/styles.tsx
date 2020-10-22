@@ -20,6 +20,7 @@ export const NewsHeaderCSS = styled.div`
   `}
   ${media.bigDesktop`
   ${mixins.flexCenter}
+  padding: 5rem 1.5rem 2.5rem;
     .desktopWrapper{ 
       ${mixins.desktopMaxWidth}
       ${mixins.flexCenter}

@@ -10,7 +10,7 @@ export const DesktopFooterCSS = styled.div`
   align-items: center;
   justify-content: center;
   .wrapper {
-    ${mixins.desktopMaxWidth};
+    max-width: 1300px;
     width: 100%;
     display: flex;
     justify-content: center;

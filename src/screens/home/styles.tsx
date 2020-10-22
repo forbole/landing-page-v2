@@ -9,7 +9,7 @@ export const HomeCSS = styled.div`
     display: block;
     overflow: hidden;
     position: relative;
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     min-height: 35rem;
   }

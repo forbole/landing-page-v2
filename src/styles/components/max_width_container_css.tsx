@@ -3,10 +3,9 @@ import { mixins, media } from "@styles";
 
 const MaxWidthContainerCSS = styled.div`
   ${media.bigDesktop`
-    ${mixins.desktopMaxWidth}
+    max-width: 1300px;
     width: 100%;
   `}
 `;
 
 export default MaxWidthContainerCSS;
-

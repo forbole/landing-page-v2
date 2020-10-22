@@ -5,7 +5,7 @@ const { colors } = theme;
 
 export const HeroContentCSS = styled.div`
   ${mixins.mobilePadding};
-  background-image: linear-gradient(0deg, rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.1)),
+  background-image: linear-gradient(0deg, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
     url("static/images/assets/horse.png");
   background-repeat: no-repeat;
   background-position: 50% 52%;
@@ -42,6 +42,14 @@ export const MainContentCSS = styled.div`
     font-size: 1.2rem;
     line-height: 1.5rem;
     width: 80%;
+  }
+  `}
+  ${media.bigDesktop`
+  h1 {
+    font-size: 5rem;
+  }
+  p {
+    font-size: 1.5rem;
   }
   `}
 `;

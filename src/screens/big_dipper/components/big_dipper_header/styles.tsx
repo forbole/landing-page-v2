@@ -40,30 +40,43 @@ export const BigDipperHeaderCSS = styled.div`
     fill: white;
   }
   ${media.tablet`
-  h1 { 
-    font-size: 3rem;    
+  h1 {
+    font-size: 3rem;
   }
   `}
   ${media.bigDesktop`
   ${mixins.flexCenter}
-  min-height: 25rem;
+  height: 25rem;
   .desktopWrapper {
     ${mixins.desktopMaxWidth}
     flex-direction: column;
     width: 100%;
     display: flex;
   }
-  h1,
-  h2 {
-    ${mixins.desktopMaxWidth}
-    margin: 0 0 2rem 0;
+  h1 {
+    font-size: 3.75rem;
   }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+  h1, h2 {
+    ${mixins.desktopMaxWidth}
+    margin: 0;
+  }
+
+  svg {
+    width: 1.875rem;
+    height: auto;
+  }
+
   svg path:hover {
     fill: rgba(250, 250, 250, 1);
     cursor: pointer;
   }
   span {
       margin-bottom: 0;
+      font-size: 1.5rem;
   }
   span:hover {
     a {
