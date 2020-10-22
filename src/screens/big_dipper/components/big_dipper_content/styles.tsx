@@ -37,7 +37,8 @@ export const BigDipperContentCSS = styled.div`
   ${mixins.flexCenter}
   ${mixins.desktopBottomPadding}
   padding-top: 5rem;
-  min-height: 25rem;
+  min-height: 45rem;
+  height: calc(100vh - 25rem);
   .desktopWrapper {
     ${mixins.desktopMaxWidth}
     ${mixins.flexCenter}
@@ -61,7 +62,7 @@ export const BigDipperContentCSS = styled.div`
   }
   .content {
     margin-right: 7rem;
-    
+
     p:last-child {
       margin-bottom: 0;
     }
