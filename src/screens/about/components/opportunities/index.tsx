@@ -8,7 +8,7 @@ import Opening from "./components/opening";
 const Opportunities = () => {
   const { t } = useTranslation("about");
   return (
-    <OpportunitiesCSS>
+    <OpportunitiesCSS id="opportunities">
       <MaxWidthContainerCSS>
         <HeaderCSS>
           <h3>{t("currentOpportunities")}</h3>
