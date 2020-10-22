@@ -41,7 +41,7 @@ export const StakingCoverCSS = styled(CoverCSS)`
   ${media.tablet`
     background-image: url("static/images/assets/staking.jpg");
   `}
-
+// wingman
   ${media.bigDesktop`
     height: 42vh;
     background-position: 55% center;
