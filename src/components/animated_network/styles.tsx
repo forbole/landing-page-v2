@@ -70,7 +70,7 @@ export const NetworkCSS = styled.div`
         position: absolute;
         left: 0;
         right: 0;
-        top: 33%;
+        top: 37%;
       }
     }
 
