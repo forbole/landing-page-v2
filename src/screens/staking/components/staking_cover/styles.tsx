@@ -27,7 +27,7 @@ export const StakingCoverCSS = styled(CoverCSS)`
     .social-media-container {
       margin-bottom: 0.5rem;
       a {
-        margin-right: 0.5rem;
+        margin-right: 1.5rem;
 
         svg {
           path {
@@ -43,7 +43,7 @@ export const StakingCoverCSS = styled(CoverCSS)`
   `}
 
   ${media.bigDesktop`
-    height: 30vh;
+    height: 42vh;
     background-position: 55% center;
     padding: 0;
     justify-content: center;
@@ -52,7 +52,14 @@ export const StakingCoverCSS = styled(CoverCSS)`
       ${mixins.desktopMaxWidth}
       width: 100%;
       h2 {
-        font-size: 3rem;
+        font-size: 3.75rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      svg {
+        height: 30px;
+        width: 30px;
       }
     }
   `}
