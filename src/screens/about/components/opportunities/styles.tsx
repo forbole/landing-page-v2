@@ -7,10 +7,27 @@ export const OpportunitiesCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
   background: ${colors.gray100};
 
+  .no-opening {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1px dashed #6e6e6e;
+    border-radius: 10px;
+    p {
+      text-align: center;
+      color: #a8a8a8;
+      font-size: 1.3rem;
+    }
+  }
   ${media.bigDesktop`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .no-opening {
+      width: 50%;
+      margin: 0 auto;
+    }
   `}
 `;
 

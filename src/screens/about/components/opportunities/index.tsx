@@ -14,6 +14,11 @@ const Opportunities = () => {
           <h3>{t("currentOpportunities")}</h3>
           <p>{t("currentOpportunitiesDetails")}</p>
         </HeaderCSS>
+        {!openingsData.length && (
+          <div className="no-opening">
+            <p>{t("noOpportunities")}</p>
+          </div>
+        )}
         <GridCSS>
           {openingsData.map((x, i) => (
             <Opening
