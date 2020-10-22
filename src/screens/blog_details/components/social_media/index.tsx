@@ -7,7 +7,7 @@ const SocialMedia = (props: any) => {
   const { title = "Forbole " } = props;
   const router = useRouter();
   const path = router.asPath;
-  const shareUrl = `${process.env.URL}${path}`;
+  const shareUrl = `${process.env.NEXT_PUBLIC_URL}${path}`;
 
   const handleClick = (url: string) => {
     const config: { [key: string]: string | number } = {

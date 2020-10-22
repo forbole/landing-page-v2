@@ -10,7 +10,7 @@ const dev = process.env.NODE_ENV !== "production";
 const app = next({ dev });
 const handle = app.getRequestHandler();
 const port = process.env.PORT;
-const url = process.env.URL;
+const url = process.env.NEXT_PUBLIC_URL;
 
 (async () => {
   try {
@@ -26,7 +26,7 @@ const url = process.env.URL;
     });
     server.listen(port, (err?: any) => {
       if (err) throw err;
-      console.log(`> Ready on ${url}:${port}`);
+      console.log(`> Ready on ${url}`);
       console.log(`> ENV:  ${process.env.ENV}`)
     });
   } catch (e) {

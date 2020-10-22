@@ -25,6 +25,7 @@ const Layout = ({
 }: Props) => {
   const router = useRouter();
   const currentPath = router.pathname === "/" ? "/" : `${router.pathname}/`;
+  const url = process.env.NEXT_PUBLIC_URL;
   return (
     <>
       <Head>
@@ -33,12 +34,32 @@ const Layout = ({
         <meta name="keywords" content={keywords.join(", ")} />
         <meta name="og:type" content="website" />
         <meta name="og:title" content="Forbole" />
-        <meta name="og:url" content={`${process.env.URL}${currentPath}`} />
+        <meta name="og:url" content={`${url}${currentPath}`} />
         <meta name="og:description" content={description} />
         <meta
           name="og:image"
-          content={`${process.env.URL}/static/images/icons/forbole-logo-red.svg`}
+          content={`${url}/static/images/icons/forbole-logo-red.svg`}
         />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href={`${url}/static/icons/favicon-96x96.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href={`${url}/static/icons/favicon-32x32.png`}
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href={`${url}/static/icons/favicon-16x16.png`}
+        />
+        <link rel="manifest" href={`${url}/static/icons/manifest.json`} />
+        <meta name="twitter:card" content="summary" />
       </Head>
       <NavBar color={navColor} mobileColor={mobileNavColor} />
       <FlexCSS>
