@@ -41,7 +41,7 @@ export const PostCSS = styled.div`
 
   ${media.bigDesktop`
     img {
-      height: 225px;
+      height: 444px;
     }
   `}
 `;
