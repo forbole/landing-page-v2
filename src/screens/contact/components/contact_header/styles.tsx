@@ -34,9 +34,11 @@ export const ContactHeaderCSS = styled.div`
     display: flex;
     align-items: center;
     height: 500px;
+    padding-top: 11rem;
 
   h2 {
     ${mixins.desktopMaxWidth}
+    font-size: 2.5rem;
     width: 100%;
     padding-left: 1.5rem;
   }
@@ -45,6 +47,7 @@ export const ContactHeaderCSS = styled.div`
     ${mixins.desktopMaxWidth}
     width: 100%;
     font-weight: 100;
+    font-size: 1.5rem;
     padding-left: 1.5rem;
   }
 

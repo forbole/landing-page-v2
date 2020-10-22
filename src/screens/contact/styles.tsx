@@ -23,7 +23,7 @@ export const ContactPageCSS = styled.div`
   ${media.bigDesktop`
     ${mixins.flexBetween}
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
   .wrapper {
     ${mixins.desktopMaxWidth}
