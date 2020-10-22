@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import Link from "next/link";
 import { Forbole as ForboleLogo } from "@icons";
 import { theme } from "@styles";
@@ -14,6 +15,7 @@ const DesktopNav = (props: any) => {
     <DesktopNavCSS
       displayBackground={displayBackground}
       color={displayBackground ? colors.forboleRed : color}
+      className={classNames({ displayBackground })}
     >
       <Link href="/">
         <a>

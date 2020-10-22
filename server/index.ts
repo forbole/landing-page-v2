@@ -11,7 +11,6 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 const port = process.env.PORT;
 const url = process.env.URL;
-console.log(url,'what fucking url');
 
 (async () => {
   try {
