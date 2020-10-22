@@ -33,7 +33,7 @@ export const OpeningCSS = styled.div`
 
     .see-more {
       display: block;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
       margin-left: -1rem;
       margin-right: -1rem;
       margin-bottom: -1.5rem;
