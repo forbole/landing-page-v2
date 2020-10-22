@@ -31,8 +31,9 @@ export const HeaderCSS = styled.div`
   }
 
   ${media.bigDesktop`
+    margin-bottom: 3rem;
     h3 {
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
   `}
 `;
@@ -48,6 +49,7 @@ export const GridCSS = styled.div`
   `}
 
   ${media.bigDesktop`
+    grid-gap: 30px;
     grid-template-columns: repeat(3, 1fr);
   `}
 `;

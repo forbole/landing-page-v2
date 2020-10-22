@@ -8,7 +8,8 @@ const Header = () => {
     <HeaderCSS>
       <div className="content-container">
         <h2>
-          {t("build")} <div className="circle" /> {t("secure")} <div className="circle" /> {t("stake")}
+          {t("build")} <div className="circle" /> {t("secure")}{" "}
+          <div className="circle" /> {t("stake")}
         </h2>
         <p>{t("heroDetails")}</p>
       </div>

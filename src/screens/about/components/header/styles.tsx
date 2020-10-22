@@ -64,7 +64,11 @@ export const HeaderCSS = styled(CoverCSS)`
       width: 100%;
 
       h2 {
-        font-size: 3rem;
+        font-size: 3.75rem;
+        margin: 0;
+      }
+      p {
+        font-size: 1.25rem;
       }
     }
 
