@@ -31,7 +31,9 @@ export const ContentCSS = styled.div`
     ${mixins.desktopMaxWidth}
     width: 100%;
     margin-top: -5rem;
-
+    h2 {
+      text-align: center;
+    }
     .main-content {
       display: grid;
       grid-template-columns: repeat(2, minmax(100px, 1fr));

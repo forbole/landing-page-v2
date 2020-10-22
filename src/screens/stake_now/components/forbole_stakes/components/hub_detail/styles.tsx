@@ -57,6 +57,10 @@ export const HubDetailCSS = styled.div`
 `;
 
 export const StatDetailsCSS = styled.div`
+  &:not(.main) {
+    display: flex;
+  }
+
   .atom {
     &.main {
       font-size: 1.15rem;
@@ -71,7 +75,9 @@ export const StatDetailsCSS = styled.div`
 
   ${media.bigDesktop`
     width: 100%;
-
+    // display: flex;
+    align-items: center;
+    justify-content: space-between;
     .atom {
       &.main {
         text-align: left;

@@ -44,7 +44,7 @@ export const NetworkCSS = styled.div`
     flex-direction: column;
     padding: 1rem;
     transition: 0.5s ease;
-    height: 193px;
+    height: 210px;
     position: relative;
 
     .flex {
