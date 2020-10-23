@@ -8,13 +8,11 @@ export const NetworkContentCSS = styled.div`
   p {
     font-size: 1rem;
     margin-bottom: 2em;
+    white-space: pre-wrap;
   }
 
   ${media.tablet`
     padding: 3rem;
-    p {
-        font-size: 2rem;
-    }
   `}
 
   ${media.bigDesktop`
@@ -32,7 +30,6 @@ export const NetworkContentCSS = styled.div`
     p {
         justify-content: flex-start;
         width: 100%;
-        font-weight: 100;
         font-size: 1rem;
       }
   `}
