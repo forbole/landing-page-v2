@@ -86,9 +86,10 @@ export const DashboardContentCSS = styled.div`
     }
     .image {
       padding: 0;
+      width: 60%;
     }
     .content {
-      width: 65%;
+      width: 50%;
     }
     .ui.black.button:hover {
       background-color: ${colors.red};
