@@ -3,7 +3,7 @@ import { useTranslation } from "i18n";
 import { Layout } from "@components";
 import { CosmosContent, CosmosHeader } from "./components";
 
-function CosmosHub() {
+function Network() {
   const { t } = useTranslation("cosmos_hub");
   return (
     <Layout title={t("title")}>
@@ -13,4 +13,4 @@ function CosmosHub() {
   );
 }
 
-export default CosmosHub;
+export default Network;

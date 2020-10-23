@@ -12,7 +12,12 @@ export const EcoProjects = () => {
         <h3>{t("supportedBlockchains")}</h3>
         <ProjectsGridCSS>
           {networkData.map((x) => (
-            <Network key={x.name} name={x.name} image={x.image} />
+            <Network
+              key={x.name}
+              name={x.name}
+              image={x.image}
+              nameKey={x.key}
+            />
           ))}
         </ProjectsGridCSS>
       </MainContentCSS>

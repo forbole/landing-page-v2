@@ -17,7 +17,12 @@ export const EcoSystemProjects = () => {
         <p>{t("ecosystemProjectsDetails")}</p>
         <ProjectsGridCSS>
           {networkData.map((x) => (
-            <Network key={x.name} name={x.name} image={x.image} />
+            <Network
+              key={x.name}
+              name={x.name}
+              image={x.image}
+              nameKey={x.key}
+            />
           ))}
         </ProjectsGridCSS>
       </MainContentCSS>
