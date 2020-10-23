@@ -6,22 +6,29 @@ import { Button, NetworkCSS } from "./styles";
 import { INetworkProps } from "./interfaces";
 
 const Network = (props: INetworkProps) => {
-  const { image, name, amount } = props;
+  const {
+    image,
+    name,
+    amount = 1234,
+    delegate = process.env.NEXT_PUBLIC_URL,
+  } = props;
   const { t } = useTranslation("stake_now");
   return (
-    <NetworkCSS>
-      <img src={image} />
-      <p className="name">{name}</p>
-      <div className="flex">
-        <p className="amount">
-          <Block />
-          {convertToMoney(amount)}
-        </p>
-        <div className="button-container">
-          <Button>{t("stakeNow")}</Button>
+    <a href={delegate} target="_blank" rel="noreferrer">
+      <NetworkCSS>
+        <img src={image} />
+        <p className="name">{name}</p>
+        <div className="flex">
+          <p className="amount">
+            <Block />
+            {convertToMoney(amount)}
+          </p>
+          <div className="button-container">
+            <Button>{t("stakeNow")}</Button>
+          </div>
         </div>
-      </div>
-    </NetworkCSS>
+      </NetworkCSS>
+    </a>
   );
 };
 

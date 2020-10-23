@@ -10,6 +10,7 @@ export const NetworkCSS = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: rgba(0, 0, 0, 0.87);
 
   img {
     width: 35px;

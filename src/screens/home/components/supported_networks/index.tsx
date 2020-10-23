@@ -22,9 +22,10 @@ const SupportedNetworks = () => {
         {networkData.map((x) => (
           <AnimatedNetwork
             key={x.name}
-            name={x.name}
-            image={x.image}
-            amount={x.amount ?? 1234}
+            name={x?.name}
+            image={x?.image}
+            amount={x?.amount}
+            delegate={x?.delegate}
           />
         ))}
       </NetworkListCSS>

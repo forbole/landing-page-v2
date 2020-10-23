@@ -18,4 +18,4 @@ export const networkKeys = [
   "polkadot",
   "kusama",
   "celo",
-];
+].sort();

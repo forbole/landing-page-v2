@@ -3,10 +3,14 @@ export const networkKeys = [
   "polkadot",
   "kava",
   "terra-money",
-  "iris",
-  "desmos",
+  // "iris",
+  // "desmos",
   "likecoin",
   // "cyberd",
   "e-money",
-  "regen-network",
-];
+  // "regen-network",
+  "band-protocol",
+  "akash",
+  "iov",
+  "kusama",
+].sort();

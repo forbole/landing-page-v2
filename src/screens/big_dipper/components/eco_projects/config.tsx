@@ -8,4 +8,4 @@ export const networkKeys = [
   "regen-network",
   "e-money",
   "desmos",
-];
+].sort();
