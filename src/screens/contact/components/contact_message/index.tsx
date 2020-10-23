@@ -3,13 +3,11 @@ import { useTranslation } from "i18n";
 import { ContactMessageCSS } from "./styles";
 import validator from "validator";
 import { Button, Form, Segment, Input } from "semantic-ui-react";
-// import { SMTPClient } from "smtp-client";
 
 import useContactForm from "./hooks";
 
 const ContactMessage = () => {
   const { t } = useTranslation("contact");
-  // const s = new SMTPClient({ host: "smtp.mailgun.org", port: 465 });
   const {
     inputs,
     handleInputChange,

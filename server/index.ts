@@ -4,6 +4,7 @@ import express, { Request, Response } from "express";
 import next from "next";
 import cors from "cors";
 import nodemailer from "nodemailer";
+import validator from "validator";
 
 const nextI18NextMiddleware = require("next-i18next/middleware").default;
 const nextI18next = require("../i18n");

@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import validator from "validator";
 import axios from "axios";
+import DOMPurify from "isomorphic-dompurify";
 
 const useContactForm = () => {
   const [inputs, setInputs] = useState({ name: "", message: "", email: "" });
   const [canSubmit, setCanSubmit] = useState(false);
+  const sanitize = DOMPurify.sanitize;
 
   useEffect(() => {
     if (
@@ -25,9 +27,9 @@ const useContactForm = () => {
         .post("/api/contact", {
           from: inputs.email,
           to: "info@forbole.com",
-          subject: "Hi Forbole!",
-          text: inputs.message,
-          html: `<p>${inputs.message}</p>`,
+          subject: "Inquiry From Forbole's Landing Page",
+          text: sanitize(inputs.message),
+          html: `<p>${sanitize(inputs.message)}</p>`,
         })
         .then((res) => {
           console.log(res);
