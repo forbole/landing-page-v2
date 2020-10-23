@@ -1,18 +1,14 @@
 import Network from "@src/screens/network";
 
-const NetworkPage = () => {
-  return <Network />;
+const NetworkPage = (props) => {
+  return <Network {...props} />;
+};
+
+NetworkPage.getInitialProps = ({ query }) => {
+  const { network } = query;
+  return {
+    networkKey: network,
+  };
 };
 
 export default NetworkPage;
-
-// BlogDetailsPage.getInitialProps = async ({ query }) => {
-//   const { title } = query;
-
-//   const post = await getSinglePost(title);
-//   post.tags = removeInternalTags(post.tags);
-//   const formattedPost = Post.fromJson(post, {});
-//   return { post: formattedPost };
-// };
-
-// export default BlogDetailsPage;

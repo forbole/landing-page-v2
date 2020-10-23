@@ -1,4 +1,4 @@
 import CosmosContent from "./cosmos_content";
-import CosmosHeader from "./cosmos_header";
+import NetworkHeader from "./network_header";
 
-export { CosmosContent, CosmosHeader };
+export { CosmosContent, NetworkHeader };
