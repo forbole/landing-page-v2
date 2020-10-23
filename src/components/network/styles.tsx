@@ -15,6 +15,7 @@ export const NetworkCSS = styled.div`
 
   p {
     margin-top: 0.5rem;
+    color: rgba(0, 0, 0, 0.87);
   }
 
   ${media.bigDesktop`

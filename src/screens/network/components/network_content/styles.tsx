@@ -1,20 +1,18 @@
 import styled from "styled-components";
 import { media, mixins } from "@styles";
 
-export const CosmosContentCSS = styled.div`
+export const NetworkContentCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
   flex: 1;
 
   p {
     font-size: 1rem;
     margin-bottom: 2em;
+    white-space: pre-wrap;
   }
 
   ${media.tablet`
     padding: 3rem;
-    p {
-        font-size: 2rem;
-    }
   `}
 
   ${media.bigDesktop`
@@ -32,7 +30,6 @@ export const CosmosContentCSS = styled.div`
     p {
         justify-content: flex-start;
         width: 100%;
-        font-weight: 100;
         font-size: 1rem;
       }
   `}

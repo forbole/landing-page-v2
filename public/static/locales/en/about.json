@@ -63,5 +63,6 @@
   "advisor": "Advisor",
   "currentOpportunities": "Current career opportunities",
   "currentOpportunitiesDetails": "Joining us at this stage, you will be one of the early co-builders of a rising startup in a rising industry.",
-  "seeMore": "See More"
+  "seeMore": "See More",
+  "noOpportunities": "There are currently no positions available at this time :("
 }

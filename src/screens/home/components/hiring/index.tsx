@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { useTranslation } from "i18n";
 import { Button } from "semantic-ui-react";
 import { HiringContentCSS, HiringHeaderCSS, ContentWrapperCSS } from "./styles";
@@ -15,7 +16,11 @@ export const HiringContent = () => {
         <h1>{t("hiring")}</h1>
         <h2>{t("hiringJobs")}</h2>
         <h3>{t("hiringDescription")}</h3>
-        <Button color="red">{t("joinUs")}</Button>
+        <Link href="/about#opportunity">
+          <a>
+            <Button color="red">{t("joinUs")}</Button>
+          </a>
+        </Link>
       </ContentWrapperCSS>
     </HiringContentCSS>
   );

@@ -5,11 +5,13 @@ import {
   ProjectsGridCSS,
   MainContentCSS,
 } from "./styles";
-import { networkData } from "./config";
+import { networkKeys } from "./config";
 import { Network } from "@components";
+import { getNetworkInfo } from "@utils/network-info";
 
 export const EcoSystemProjects = () => {
   const { t } = useTranslation("staking");
+  const networkData = networkKeys.map((x) => getNetworkInfo(x));
   return (
     <EcoSystemProjectsCSS>
       <MainContentCSS>
@@ -17,7 +19,12 @@ export const EcoSystemProjects = () => {
         <p>{t("ecosystemProjectsDetails")}</p>
         <ProjectsGridCSS>
           {networkData.map((x) => (
-            <Network key={x.name} name={x.name} image={x.image} />
+            <Network
+              key={x.name}
+              name={x.name}
+              image={x.image}
+              nameKey={x.key}
+            />
           ))}
         </ProjectsGridCSS>
       </MainContentCSS>
