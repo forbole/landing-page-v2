@@ -24,14 +24,16 @@ const useContactForm = () => {
     if (event) {
       event.preventDefault();
       axios
-        .post("/contact", {
+        .post("/api/contact", {
           from: inputs.email,
-          to: "hi@forbole.com",
+          to: "info@forbole.com",
           subject: "Hi Forbole!",
           text: inputs.message,
           html: `<p>${inputs.message}</p>`,
         })
-        .then((res) => console.log(res))
+        .then((res) => {
+          console.log(res);
+        })
         .catch((err) => console.log(err));
     }
   };

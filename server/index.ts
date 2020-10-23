@@ -32,10 +32,18 @@ const transporter = nodemailer.createTransport({
     server.use(nextI18NextMiddleware(nextI18next));
     server.use(express.json());
 
-    server.post("/api/contact", (req: Request, res: Response) => {
-      console.log(req.body);
-      console.log("hiiiii");
-      transporter.sendMail(req.body);
+    const testAccount = await nodemailer.createTestAccount();
+
+    server.post("/api/contact", async (req: Request, res: Response) => {
+      try {
+        console.log(req.body);
+        console.log("hiiiii");
+        let info = await transporter.sendMail(req.body);
+        console.log("Message sent: %s", info.messageId);
+        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+      } catch (e) {
+        console.error(e);
+      }
     });
 
     server.all("*", (req: Request, res: Response) => {
@@ -51,5 +59,3 @@ const transporter = nodemailer.createTransport({
     process.exit(1);
   }
 })();
-
-export default transporter;
