@@ -8,7 +8,7 @@ const Member = (props: any) => {
     image = "static/images/team/123.png",
     links = {},
   } = props;
-  console.log(image, "the img src");
+
   return (
     <MemberCSS>
       <img src={image} />
