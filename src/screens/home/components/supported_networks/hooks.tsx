@@ -1,9 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import * as R from "ramda";
+import {
+  getNewHeight,
+  HEIGHT_QUERY,
+  COSMOS_HEIGHT,
+  AKASH_HEIGHT,
+} from "./config";
 
 export const useSupportedNetworkHook = () => {
   const [state, setState] = useState({
     cosmos: "---",
+    akash: "---",
   });
 
   const handleSetState = (stateChange: any) => {
@@ -11,39 +18,48 @@ export const useSupportedNetworkHook = () => {
     setState(newState);
   };
 
-  const ws = useRef(null);
+  const networks = {
+    cosmos: useRef(null),
+    akash: useRef(null),
+  };
 
   useEffect(() => {
-    ws.current = new WebSocket(
-      "ws://rpc.cosmoshub.bigdipper.live/websocket?tm.event='NewBlock'"
-    );
-    ws.current.onopen = () => {
-      ws.current.send(
-        '{"jsonrpc": "2.0","method": "subscribe","id":"0","params":{"query":"tm.event=\'NewBlock\'"}}'
-      );
+    // connections
+    networks.cosmos.current = new WebSocket(COSMOS_HEIGHT);
+    networks.akash.current = new WebSocket(AKASH_HEIGHT);
+    // on open
+    networks.cosmos.current.onopen = () => {
+      networks.cosmos.current.send(HEIGHT_QUERY);
     };
-    ws.current.onclose = () => console.log("ws closed");
+    networks.akash.current.onopen = () => {
+      networks.akash.current.send(HEIGHT_QUERY);
+    };
+    // onclose
+    networks.cosmos.current.onclose = () => console.log("cosmos closed");
+    networks.akash.current.onclose = () => console.log("akash closed");
 
+    // unsubscribe
     return () => {
-      ws.current.close();
+      networks.cosmos.current.close();
+      networks.akash.current.close();
     };
   }, []);
 
   useEffect(() => {
-    if (!ws.current) return;
-
-    ws.current.onmessage = (e) => {
-      const message = JSON.parse(e.data);
-      const newHeight = R.pathOr(
-        "---",
-        ["result", "data", "value", "block", "header", "height"],
-        message
-      );
+    networks.cosmos.current.onmessage = (e) => {
+      const newHeight = getNewHeight(e);
       handleSetState({
         cosmos: newHeight,
       });
     };
-  }, []);
+
+    networks.akash.current.onmessage = (e) => {
+      const newHeight = getNewHeight(e);
+      handleSetState({
+        akash: newHeight,
+      });
+    };
+  }, [handleSetState]);
   return {
     state,
   };

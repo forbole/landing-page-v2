@@ -13,6 +13,8 @@ const Network = (props: INetworkProps) => {
     delegate = process.env.NEXT_PUBLIC_URL,
   } = props;
   const { t } = useTranslation("stake_now");
+
+  const formattedAmount = amount === "---" ? amount : convertToMoney(amount);
   return (
     <a href={delegate} target="_blank" rel="noreferrer">
       <NetworkCSS>
@@ -21,7 +23,7 @@ const Network = (props: INetworkProps) => {
         <div className="flex">
           <p className="amount">
             <Block />
-            {convertToMoney(amount)}
+            {formattedAmount}
           </p>
           <div className="button-container">
             <Button>{t("stakeNow")}</Button>
