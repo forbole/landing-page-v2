@@ -4,7 +4,7 @@ export const networkKeys = [
   "terra-money",
   "kava",
   "sentinel",
-  "likechain",
+  "likecoin",
   "regen-network",
   "e-money",
   "desmos",

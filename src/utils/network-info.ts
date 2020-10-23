@@ -28,10 +28,10 @@ const logos = {
     name: "Sentinel",
     key: "sentinel",
   },
-  likechain: {
+  likecoin: {
     image: "/static/images/icons/likecoin.png",
-    name: "LikeChain",
-    key: "likechain",
+    name: "LikeCOin",
+    key: "likecoin",
   },
   ["regen-network"]: {
     image: "/static/images/icons/regen-network.png",
