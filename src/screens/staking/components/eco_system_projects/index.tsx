@@ -5,11 +5,13 @@ import {
   ProjectsGridCSS,
   MainContentCSS,
 } from "./styles";
-import { networkData } from "./config";
+import { networkKeys } from "./config";
 import { Network } from "@components";
+import { getNetworkInfo } from "@utils/network-info";
 
 export const EcoSystemProjects = () => {
   const { t } = useTranslation("staking");
+  const networkData = networkKeys.map((x) => getNetworkInfo(x));
   return (
     <EcoSystemProjectsCSS>
       <MainContentCSS>

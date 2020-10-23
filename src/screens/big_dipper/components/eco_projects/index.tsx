@@ -1,11 +1,13 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { EcoProjectsCSS, ProjectsGridCSS, MainContentCSS } from "./styles";
-import { networkData } from "./config";
+import { networkKeys } from "./config";
 import { Network } from "@components";
+import { getNetworkInfo } from "@src/utils/network-info";
 
 export const EcoProjects = () => {
   const { t } = useTranslation("big_dipper");
+  const networkData = networkKeys.map((x) => getNetworkInfo(x));
   return (
     <EcoProjectsCSS>
       <MainContentCSS>
