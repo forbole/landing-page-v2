@@ -39,7 +39,7 @@ const Layout = ({
         <meta name="og:description" content={description} />
         <meta
           name="og:image"
-          content={`${url}/static/images/icons/forbole-logo-red.svg`}
+          content={`${url}/static/icons/favicon-96x96.png`}
         />
         <link
           rel="icon"
