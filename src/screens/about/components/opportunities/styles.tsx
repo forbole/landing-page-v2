@@ -11,12 +11,15 @@ export const OpportunitiesCSS = styled.div`
     width: 100%;
     margin-top: 2rem;
     padding: 1rem;
-    border: 1px dashed #6e6e6e;
-    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     p {
+      margin-top: 1.5rem;
       text-align: center;
       color: #a8a8a8;
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
   ${media.bigDesktop`

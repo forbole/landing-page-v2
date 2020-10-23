@@ -8,7 +8,7 @@ import Opening from "./components/opening";
 const Opportunities = () => {
   const { t } = useTranslation("about");
   return (
-    <OpportunitiesCSS id="opportunities">
+    <OpportunitiesCSS id="opportunity">
       <MaxWidthContainerCSS>
         <HeaderCSS>
           <h3>{t("currentOpportunities")}</h3>
@@ -16,6 +16,7 @@ const Opportunities = () => {
         </HeaderCSS>
         {!openingsData.length && (
           <div className="no-opening">
+            <img src="/static/images/icons/unicorn-no-opportunity.png" />
             <p>{t("noOpportunities")}</p>
           </div>
         )}

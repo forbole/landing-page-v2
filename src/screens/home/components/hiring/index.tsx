@@ -16,7 +16,7 @@ export const HiringContent = () => {
         <h1>{t("hiring")}</h1>
         <h2>{t("hiringJobs")}</h2>
         <h3>{t("hiringDescription")}</h3>
-        <Link href="/about/#opportunities">
+        <Link href="/about#opportunity">
           <a>
             <Button color="red">{t("joinUs")}</Button>
           </a>
