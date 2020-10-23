@@ -9,7 +9,7 @@ const Network = (props: INetworkProps) => {
   const {
     image,
     name,
-    amount = 1234,
+    amount = "---",
     delegate = process.env.NEXT_PUBLIC_URL,
   } = props;
   const { t } = useTranslation("stake_now");
