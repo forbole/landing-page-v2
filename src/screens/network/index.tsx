@@ -1,15 +1,15 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
-import { CosmosContent, NetworkHeader } from "./components";
+import { NetworkContent, NetworkHeader } from "./components";
 
-function Network(props) {
-  console.log(props, "my props");
-  const { t } = useTranslation("cosmos_hub");
+function Network(props: any) {
+  const { t } = useTranslation("networks");
+  const { networkKey } = props;
   return (
-    <Layout title={t("title")}>
+    <Layout title={t(`${networkKey}.title`)}>
       <NetworkHeader {...props} />
-      <CosmosContent />
+      <NetworkContent {...props} />
     </Layout>
   );
 }

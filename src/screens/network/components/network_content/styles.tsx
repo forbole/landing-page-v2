@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { media, mixins } from "@styles";
 
-export const CosmosContentCSS = styled.div`
+export const NetworkContentCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
   flex: 1;
 
