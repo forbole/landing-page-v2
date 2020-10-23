@@ -19,10 +19,10 @@ export const networkData = [
     image: "static/images/icons/sentinel.png",
     name: "Sentinel",
   },
-  {
-    image: "static/images/icons/sentinel.png",
-    name: "Cyberd",
-  },
+  // {
+  //   image: "static/images/icons/sentinel.png",
+  //   name: "Cyberd",
+  // },
   {
     image: "static/images/icons/likecoin.png",
     name: "LikeChain",

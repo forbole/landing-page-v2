@@ -19,10 +19,10 @@ export const networkData = [
     image: "static/images/icons/sentinel.png",
     name: "Sentinel",
   },
-  {
-    image: "static/images/icons/sentinel.png",
-    name: "Cyberd",
-  },
+  // {
+  //   image: "static/images/icons/sentinel.png",
+  //   name: "Cyberd",
+  // },
   {
     image: "static/images/icons/likecoin.png",
     name: "LikeChain",
@@ -40,31 +40,31 @@ export const networkData = [
     name: "Desmos",
   },
   {
-    image: "static/images/icons/desmos.png",
+    image: "static/images/icons/iov.png",
     name: "Iov",
   },
   {
-    image: "static/images/icons/desmos.png",
+    image: "static/images/icons/oasis-labs.png",
     name: "Oasis Labs",
   },
   {
-    image: "static/images/icons/desmos.png",
+    image: "static/images/icons/akash.png",
     name: "Akash",
   },
   {
-    image: "static/images/icons/desmos.png",
+    image: "static/images/icons/bitsongs.png",
     name: "BitSongs",
   },
   {
-    image: "static/images/icons/desmos.png",
+    image: "static/images/icons/band-protocol.png",
     name: "Band Protocol",
   },
   {
-    image: "static/images/icons/desmos.png",
+    image: "static/images/icons/solana.png",
     name: "Solana",
   },
   {
-    image: "static/images/icons/desmos.png",
+    image: "static/images/icons/v-system.png",
     name: "V-Stystem",
   },
   {
@@ -72,11 +72,11 @@ export const networkData = [
     name: "Polkadot",
   },
   {
-    image: "static/images/icons/polkadot.png",
+    image: "static/images/icons/kusama.png",
     name: "Kusama",
   },
   {
-    image: "static/images/icons/polkadot.png",
+    image: "static/images/icons/celo.png",
     name: "Celo",
   },
 ];
