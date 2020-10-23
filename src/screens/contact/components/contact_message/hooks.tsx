@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import validator from "validator";
-import nodemailer from "nodemailer";
-import transporter from "server/index";
 import axios from "axios";
 
 const useContactForm = () => {

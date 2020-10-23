@@ -13,6 +13,7 @@ const handle = app.getRequestHandler();
 const port = process.env.PORT;
 const url = process.env.URL;
 const transporter = nodemailer.createTransport({
+  service: "Mailgun",
   host: "smtp.mailgun.org",
   port: 465,
   secure: true,
@@ -32,15 +33,11 @@ const transporter = nodemailer.createTransport({
     server.use(nextI18NextMiddleware(nextI18next));
     server.use(express.json());
 
-    const testAccount = await nodemailer.createTestAccount();
-
     server.post("/api/contact", async (req: Request, res: Response) => {
       try {
         console.log(req.body);
-        console.log("hiiiii");
         let info = await transporter.sendMail(req.body);
-        console.log("Message sent: %s", info.messageId);
-        // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
+        console.log("Message sent: %s", info.response);
       } catch (e) {
         console.error(e);
       }
