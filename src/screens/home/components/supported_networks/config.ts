@@ -32,3 +32,5 @@ export const HEIGHT_QUERY =
 export const COSMOS_HEIGHT = "ws://rpc.cosmoshub.bigdipper.live/websocket";
 
 export const AKASH_HEIGHT = "ws://rpc.akash.forbole.com/websocket";
+
+export const KAVA_HEIGHT = "ws://rpc.kava.forbole.com/websocket";
