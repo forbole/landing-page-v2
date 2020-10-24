@@ -36,9 +36,9 @@ const transporter = nodemailer.createTransport({
 
     server.post("/api/contact", async (req: Request, res: Response) => {
       try {
-        console.log(req.body);
-        let info = await transporter.sendMail(req.body);
-        console.log("Message sent: %s", info.response);
+        if (process.env.NODE_ENV === 'production') {
+          await transporter.sendMail(req.body);
+        }
       } catch (e) {
         console.error(e);
       }
