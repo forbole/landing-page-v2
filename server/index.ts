@@ -4,6 +4,7 @@ import express, { Request, Response } from "express";
 import next from "next";
 import cors from "cors";
 import nodemailer from "nodemailer";
+import axios from 'axios';
 
 const nextI18NextMiddleware = require("next-i18next/middleware").default;
 const nextI18next = require("../i18n");
@@ -34,19 +35,39 @@ const transporter = nodemailer.createTransport({
     server.use(nextI18NextMiddleware(nextI18next));
     server.use(express.json());
 
-    server.post("/api/contact", async (req: Request, res: Response) => {
+    server.post("/api/contact", async (req: Request, res: Response, next:any) => {
       try {
         if (process.env.NODE_ENV === 'production') {
           await transporter.sendMail(req.body);
         }
+        res.status(200).json({
+          success: true,
+        });
       } catch (e) {
-        console.error(e);
+        next(e);
       }
     });
+
+    server.post("/api/proxy", async (req:Request, res:Response, next:any) => {
+      try{
+        const { data } = await axios.get(req?.body?.url);
+        res.status(200).json(data)
+      } catch (err) {
+        next(err);
+      }
+    })
 
     server.all("*", (req: Request, res: Response) => {
       return handle(req, res);
     });
+
+    // error handler
+    server.use((err, req, res, next) => {
+      console.error(err)
+      console.error(err?.stack)
+      res.status(err?.status || 500).send(err?.message || 'Internal server error.')
+    })
+
     server.listen(port, (err?: any) => {
       if (err) throw err;
       console.log(`> Ready on ${url}`);

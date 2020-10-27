@@ -4,9 +4,10 @@ import { media } from "@styles";
 export const DetailCSS = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-right: 1.2rem;
 
   .tokens {
-    margin-right: 0.4rem;
+    margin-right: 0.6rem;
   }
 
   p {
