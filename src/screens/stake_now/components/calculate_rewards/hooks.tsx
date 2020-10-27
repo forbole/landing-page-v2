@@ -65,18 +65,28 @@ export const useCalculateRewardsHook = () => {
         url: calculator.stakingParams,
       });
 
-      const promises = [bondedApi, inflationApi, supplyApi, stakingParamsApi];
+      const marketPriceApi = axios.get(networkFunction?.gecko);
+
+      const promises = [
+        bondedApi,
+        inflationApi,
+        supplyApi,
+        stakingParamsApi,
+        marketPriceApi,
+      ];
       const [
         { data: bondedJson },
         { data: inflationJson },
         { data: supplyJson },
         { data: stakingParamsJson },
+        { data: marketPriceJson },
       ] = await Promise.all(promises);
 
       const bonded = networkFunction?.bonded(bondedJson);
       const inflation = networkFunction?.inflation(inflationJson);
       const supply = networkFunction?.supply(supplyJson);
       const commissionRate = networkFunction?.commissionRate(stakingParamsJson);
+      const marketPrice = networkFunction.marketPrice(marketPriceJson);
 
       // raw calcs
       const annualRewards = toFixed(
@@ -89,10 +99,6 @@ export const useCalculateRewardsHook = () => {
       const formatAnnualRewards = convertToMoney(annualRewards, 2);
       const formatMonthlyRewards = convertToMoney(monthlyRewards, 2);
       const formatDailyRewards = convertToMoney(dailyRewards, 2);
-
-      const { data: marketPriceJson } = await axios.get(networkFunction?.gecko);
-      const marketPrice = networkFunction.marketPrice(marketPriceJson);
-
       const formatAnnualPrice = convertToMoney(annualRewards * marketPrice, 2);
       const formatMonthlyPrice = convertToMoney(
         monthlyRewards * marketPrice,
@@ -119,6 +125,7 @@ export const useCalculateRewardsHook = () => {
         setError(false);
       }
     } catch (err) {
+      console.log(err, "whts the err");
       setError(true);
     }
   };

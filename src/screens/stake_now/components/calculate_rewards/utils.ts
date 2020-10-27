@@ -4,12 +4,16 @@ export const toFixed = (num: number): number => {
   return Number(num?.toFixed(2) ?? "0");
 };
 
-export const uAtomToAtom = (num: number) => {
-  return num / 1000000;
+export const defaultConverter = (ratio: number) => (num: number) => {
+  return num / ratio;
 };
+export const uAtomToAtom = defaultConverter(1000000);
 
-export const cosmos = {
-  gecko: "https://api.coingecko.com/api/v3/coins/cosmos",
+export const uLunaToLuna = defaultConverter(1000000);
+
+export const uKavaToKava = defaultConverter(1000000);
+
+export const defaultFunctions = {
   bonded: (data: any) => {
     return uAtomToAtom(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
   },
@@ -31,6 +35,17 @@ export const cosmos = {
   },
 };
 
+const cosmos = R.clone(defaultFunctions);
+cosmos.gecko = "https://api.coingecko.com/api/v3/coins/cosmos";
+
+const terra = R.clone(defaultFunctions);
+terra.gecko = "https://api.coingecko.com/api/v3/coins/terra-luna";
+
+const kava = R.clone(defaultFunctions);
+kava.gecko = "https://api.coingecko.com/api/v3/coins/kava";
+
 export const networkFunctions = {
   cosmos,
+  kava,
+  ["terra-money"]: terra,
 };

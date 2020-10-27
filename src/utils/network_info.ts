@@ -33,6 +33,13 @@ const logos = {
     delegate:
       "https://app.lunie.io/terra/validators/terravaloper1jkqr2vfg4krfd4zwmsf7elfj07cjuzss30ux8g",
     heightSocket: "wss://rpc.terra.bigdipper.live/websocket",
+    calculator: {
+      bonded: "https://lcd.terra.bigdipper.live/staking/pool",
+      // inflation: "https://lcd.terra.bigdipper.live/minting/inflation",
+      supply: "https://lcd.terra.bigdipper.live/supply/total/uluna",
+      stakingParams:
+        "https://lcd.terra.bigdipper.live/staking/validators/terravaloper1jkqr2vfg4krfd4zwmsf7elfj07cjuzss30ux8g",
+    },
   },
   kava: {
     image: "/static/images/icons/kava.png",
@@ -41,6 +48,13 @@ const logos = {
     delegate:
       "https://kava.bigdipper.live/validators/kavavaloper14kn0kk33szpwus9nh8n87fjel8djx0y02c7me3/delegate",
     heightSocket: "ws://rpc.kava.forbole.com/websocket",
+    calculator: {
+      bonded: "http://lcd.kava.forbole.com/staking/pool",
+      inflation: "http://lcd.kava.forbole.com/minting/inflation",
+      supply: "http://lcd.kava.forbole.com/supply/total/ukava",
+      stakingParams:
+        "http://lcd.kava.forbole.com/staking/validators/kavavaloper14kn0kk33szpwus9nh8n87fjel8djx0y02c7me3",
+    },
   },
   sentinel: {
     image: "/static/images/icons/sentinel.png",
