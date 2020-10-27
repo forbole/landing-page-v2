@@ -90,22 +90,28 @@ export const useCalculateRewardsHook = () => {
       const formatMonthlyRewards = convertToMoney(monthlyRewards, 2);
       const formatDailyRewards = convertToMoney(dailyRewards, 2);
 
-      // const { data: getMarketPrice } = await axios.get(networkFunction?.gecko);
+      const { data: marketPriceJson } = await axios.get(networkFunction?.gecko);
+      const marketPrice = networkFunction.marketPrice(marketPriceJson);
 
-      // console.log(getMarketPrice, "price");
+      const formatAnnualPrice = convertToMoney(annualRewards * marketPrice, 2);
+      const formatMonthlyPrice = convertToMoney(
+        monthlyRewards * marketPrice,
+        2
+      );
+      const formatDailyPrice = convertToMoney(dailyRewards * marketPrice, 2);
 
       setTotalEarnings({
         dailyEarnings: {
           tokens: formatDailyRewards,
-          amount: "0",
+          amount: formatDailyPrice,
         },
         monthlyEarnings: {
           tokens: formatMonthlyRewards,
-          amount: "0",
+          amount: formatMonthlyPrice,
         },
         yearlyEarnings: {
           tokens: formatAnnualRewards,
-          amount: "0",
+          amount: formatAnnualPrice,
         },
       });
 

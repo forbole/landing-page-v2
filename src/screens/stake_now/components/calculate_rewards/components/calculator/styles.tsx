@@ -34,7 +34,7 @@ export const StatsDetailsCSS = styled.div`
   }
 
   ${media.tablet`
-    width: 70%;
+    min-width: 70%;
     max-width: 900px;
     display: flex;
     align-items: center;

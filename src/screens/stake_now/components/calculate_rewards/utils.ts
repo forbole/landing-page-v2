@@ -24,6 +24,11 @@ export const cosmos = {
       R.pathOr(0, ["result", "commission", "commission_rates", "rate"], data)
     );
   },
+  marketPrice: (data: any) => {
+    return toFixed(
+      Number(R.pathOr(0, ["market_data", "current_price", "usd"], data))
+    );
+  },
 };
 
 export const networkFunctions = {
