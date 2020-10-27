@@ -12,6 +12,13 @@ const logos = {
     delegate:
       "https://cosmos.bigdipper.live/validators/cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj/delegate",
     heightSocket: "ws://rpc.cosmoshub.bigdipper.live/websocket",
+    calculator: {
+      bonded: "http://lcd.cosmoshub.bigdipper.live/staking/pool",
+      inflation: "http://lcd.cosmoshub.bigdipper.live/minting/inflation",
+      supply: "http://lcd.cosmoshub.bigdipper.live/supply/total/uatom",
+      stakingParams:
+        "http://lcd.cosmoshub.bigdipper.live/staking/validators/cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj",
+    },
   },
   iris: {
     image: "/static/images/icons/iris.png",

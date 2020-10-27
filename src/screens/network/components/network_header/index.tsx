@@ -1,6 +1,6 @@
 import React from "react";
 import { NetworkHeaderCSS } from "./styles";
-import { getNetworkInfo } from "@utils/network-info";
+import { getNetworkInfo } from "@src/utils/network_info";
 
 function NetworkHeader(props: any) {
   const { networkKey = "" } = props;

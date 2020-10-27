@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { AnimatedNetwork } from "@components";
 import { networkKeys } from "./config";
-import { getNetworkInfo } from "@utils/network-info";
+import { getNetworkInfo } from "@src/utils/network_info";
 import {
   SupportedNetworksCSS,
   HeaderContentCSS,

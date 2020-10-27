@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { TermsOfService, AnimatedNetwork } from "@components";
-import { getNetworkInfo } from "@utils/network-info";
+import { getNetworkInfo } from "@src/utils/network_info";
 import { networkKeys } from "../../config";
 import {
   SupportedNetworksCSS,

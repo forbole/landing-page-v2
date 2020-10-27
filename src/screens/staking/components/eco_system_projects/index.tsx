@@ -7,7 +7,7 @@ import {
 } from "./styles";
 import { networkKeys } from "./config";
 import { Network } from "@components";
-import { getNetworkInfo } from "@utils/network-info";
+import { getNetworkInfo } from "@src/utils/network_info";
 
 export const EcoSystemProjects = () => {
   const { t } = useTranslation("staking");

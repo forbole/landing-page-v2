@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { useTranslation } from "i18n";
-import { getNetworkInfo } from "@utils/network-info";
+import { getNetworkInfo } from "@src/utils/network_info";
 import { networkKeys } from "../../../../config";
 import { Button, NetworkChoicesCSS } from "./styles";
 import { INetworkProps } from "./interfaces";

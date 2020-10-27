@@ -3,7 +3,7 @@ import { useTranslation } from "i18n";
 import { EcoProjectsCSS, ProjectsGridCSS, MainContentCSS } from "./styles";
 import { networkKeys } from "./config";
 import { Network } from "@components";
-import { getNetworkInfo } from "@utils/network-info";
+import { getNetworkInfo } from "@src/utils/network_info";
 
 export const EcoProjects = () => {
   const { t } = useTranslation("big_dipper");

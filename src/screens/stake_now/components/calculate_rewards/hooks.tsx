@@ -1,13 +1,14 @@
 import { useState, useRef } from "react";
 import * as R from "ramda";
+import axios from "axios";
 import { convertToMoney } from "@utils/convert_to_money";
-
+import { getNetworkInfo } from "@utils/network_info";
 export const useCalculateRewardsHook = () => {
   const [tokens, setTokens] = useState({
     value: "",
     display: "",
   });
-
+  const [error, setError] = useState(false);
   const [selectedToken, setSelectedToken] = useState<string | null>("cosmos");
   const [totalEarnings, setTotalEarnings] = useState({
     dailyEarnings: {
@@ -26,19 +27,37 @@ export const useCalculateRewardsHook = () => {
 
   // const inputElement = useRef<any | null>(null);
 
-  const handleCalculations = () => {
-    if (!selectedToken || !tokens?.value) {
-      return;
+  const handleCalculations = async () => {
+    try {
+      if (!selectedToken || !tokens?.value) {
+        return;
+      }
+      console.log(selectedToken, "selectedToken");
+      console.log(tokens.value, "valu");
+      // get the selected token
+      const network = getNetworkInfo(selectedToken);
+      const { calculator } = network;
+      // check it has all the links we need
+      if (
+        !calculator.bonded ||
+        !calculator.inflation ||
+        !calculator.supply ||
+        !calculator.stakingParams
+      ) {
+        return;
+      }
+      console.log("made it to the end");
+
+      const { data: bonded } = await axios.get(calculator.bonded);
+      console.log(bonded, "bonded");
+
+      // finally
+      if (error) {
+        setError(false);
+      }
+    } catch (err) {
+      setError(true);
     }
-    console.log(selectedToken, "selectedToken");
-    console.log(tokens.value, "valu");
-    // const value = R.pathOr(
-    //   0,
-    //   ["current", "inputRef", "current", "value"],
-    //   inputElement
-    // );
-    // console.log(selectedToken, "selected");
-    // console.log(value, "the value");
   };
 
   const handleChange = (e: any) => {
@@ -59,5 +78,6 @@ export const useCalculateRewardsHook = () => {
     totalEarnings,
     handleChange,
     tokens,
+    error,
   };
 };

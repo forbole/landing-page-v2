@@ -28,5 +28,6 @@
   "supportedNetworks": "Supported Networks",
   "supportedNeworksContent": "Curabitur nec venenatis metus. Morbi dolor ipsum, egestas in odio quis, ornare cursus leo. Ut ornare lorem ipsum. Sed posuere magna a turpi",
   "termsOfService": "Terms of Service",
-  "stakeNow": "STAKE NOW"
+  "stakeNow": "STAKE NOW",
+  "error": "We are currently unable to calculate your rewards, please try again later."
 }

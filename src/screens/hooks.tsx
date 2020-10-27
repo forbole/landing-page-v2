@@ -4,7 +4,7 @@ import {
   getNewHeight,
   HEIGHT_QUERY,
   getNetworkInfo,
-} from "@utils/network-info";
+} from "@src/utils/network_info";
 
 export const useGetLatestHeightHook = () => {
   const [state, setState] = useState({

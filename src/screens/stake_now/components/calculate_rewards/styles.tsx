@@ -22,6 +22,17 @@ export const ParagraphTitleCSS = styled.p`
 export const ContentCSS = styled.div`
   background white;
   ${mixins.mobilePadding}
+  .hidden {
+    visibility: hidden;
+    margin-bottom: 0.5rem;
+  }
+
+  .error {
+    visibility: visible;
+    text-align: center;
+     color: ${colors.red};
+  }
+
   h2 {
     font-weight: 400;
     text-align: left;
