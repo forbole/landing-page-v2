@@ -30,7 +30,7 @@ export const membersData = [
     // },
   },
   {
-    name: "Anson",
+    name: "Anson Cheung",
     position: "projectDirector",
     image: "static/images/team/anson.jpg",
     links: {
@@ -40,7 +40,7 @@ export const membersData = [
     },
   },
   {
-    name: "Riccardo",
+    name: "Riccardo Montagnin",
     position: "techLead",
     image: "static/images/team/riccardo.jpg",
     links: {
@@ -50,7 +50,7 @@ export const membersData = [
     },
   },
   {
-    name: "Shilin",
+    name: "Shilin Zheng",
     position: "researchContent",
     image: "static/images/team/shilin.jpeg",
     links: {
@@ -88,7 +88,7 @@ export const membersData = [
     },
   },
   {
-    name: "Leo",
+    name: "Leo Bragagnolo",
     position: "swe",
     image: "static/images/team/leo.jpg",
     links: {
@@ -98,7 +98,7 @@ export const membersData = [
     },
   },
   {
-    name: "Rachel",
+    name: "Rachel Ho",
     position: "swe",
     image: "static/images/team/rachel.jpg",
     links: {
@@ -108,7 +108,7 @@ export const membersData = [
     },
   },
   {
-    name: "Monika",
+    name: "Monika Pusz",
     position: "swe",
     image: "static/images/team/monika.jpg",
     links: {
@@ -118,16 +118,7 @@ export const membersData = [
     },
   },
   {
-    name: "Paul",
-    position: "swe",
-    image: "static/images/team/paul.jpeg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
-      github: "https://github.com/dadamu",
-    },
-  },
-  {
-    name: "Tina",
+    name: "Tina Liao",
     position: "swe",
     image: "static/images/team/tina.jpeg",
     links: {
@@ -136,7 +127,16 @@ export const membersData = [
     },
   },
   {
-    name: "Apple",
+    name: "Paul Chen",
+    position: "swe",
+    image: "static/images/team/placeholder.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
+      github: "https://github.com/dadamu",
+    },
+  },
+  {
+    name: "Apple Choi",
     position: "swe",
     image: "static/images/team/placeholder.jpg",
     links: {
