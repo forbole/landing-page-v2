@@ -1,3 +1,5 @@
+import * as R from "ramda";
+
 /**
  * Takes the key name and returns the location. Will return null if undefined
  */
@@ -9,11 +11,13 @@ const logos = {
     key: "cosmos",
     delegate:
       "https://cosmos.bigdipper.live/validators/cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj/delegate",
+    heightSocket: "ws://rpc.cosmoshub.bigdipper.live/websocket",
   },
   iris: {
     image: "/static/images/icons/iris.png",
     name: "IRIS Hub",
     key: "iris",
+    heightSocket: "wss://rpc.iris.bigdipper.live/websocket",
   },
   ["terra-money"]: {
     image: "/static/images/icons/terra.png",
@@ -21,6 +25,7 @@ const logos = {
     key: "terra-money",
     delegate:
       "https://app.lunie.io/terra/validators/terravaloper1jkqr2vfg4krfd4zwmsf7elfj07cjuzss30ux8g",
+    heightSocket: "wss://rpc.terra.bigdipper.live/websocket",
   },
   kava: {
     image: "/static/images/icons/kava.png",
@@ -28,6 +33,7 @@ const logos = {
     key: "kava",
     delegate:
       "https://kava.bigdipper.live/validators/kavavaloper14kn0kk33szpwus9nh8n87fjel8djx0y02c7me3/delegate",
+    heightSocket: "ws://rpc.kava.forbole.com/websocket",
   },
   sentinel: {
     image: "/static/images/icons/sentinel.png",
@@ -81,6 +87,7 @@ const logos = {
     key: "akash",
     delegate:
       "https://akash.bigdipper.live/validator/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073/delegate",
+    heightSocket: "ws://rpc.akash.forbole.com/websocket",
   },
   bitsongs: {
     image: "/static/images/icons/bitsongs.png",
@@ -128,3 +135,15 @@ const logos = {
 export const getNetworkInfo = (key) => {
   return logos[key] ?? {};
 };
+
+export const getNewHeight = (e: any) => {
+  const message = JSON.parse(e.data);
+  const newHeight = R.pathOr(
+    "---",
+    ["result", "data", "value", "block", "header", "height"],
+    message
+  );
+  return newHeight;
+};
+export const HEIGHT_QUERY =
+  '{"jsonrpc": "2.0","method": "subscribe","id":"0","params":{"query":"tm.event=\'NewBlock\'"}}';

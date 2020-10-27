@@ -18,8 +18,8 @@ const Networks = (props: INetworkProps) => {
         {networkData.map((x) => (
           <Button
             key={x.name}
-            onClick={() => setSelectedToken(x.name)}
-            className={classNames({ active: x.name == selectedToken })}
+            onClick={() => setSelectedToken(x.key)}
+            className={classNames({ active: x.key == selectedToken })}
           >
             <img src={x.image} />
             <p>{x.name}</p>

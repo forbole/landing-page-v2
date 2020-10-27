@@ -26,6 +26,8 @@ export const useCalculateRewardsHook = () => {
       ["current", "inputRef", "current", "value"],
       inputElement
     );
+    console.log(selectedToken, "selected");
+    console.log(value, "the value");
   };
 
   return {
