@@ -6,6 +6,8 @@ import {
   COSMOS_HEIGHT,
   AKASH_HEIGHT,
   KAVA_HEIGHT,
+  TERRA_HEIGHT,
+  // IRIS_HEIGHT,
 } from "./config";
 
 export const useSupportedNetworkHook = () => {
@@ -13,6 +15,8 @@ export const useSupportedNetworkHook = () => {
     cosmos: "---",
     akash: "---",
     kava: "---",
+    terra: "---",
+    // iris: "---",
   });
 
   const handleSetState = (stateChange: any) => {
@@ -24,6 +28,8 @@ export const useSupportedNetworkHook = () => {
     cosmos: useRef(null),
     akash: useRef(null),
     kava: useRef(null),
+    ["terra-money"]: useRef(null),
+    // iris: useRef(null),
   };
 
   useEffect(() => {
@@ -31,6 +37,8 @@ export const useSupportedNetworkHook = () => {
     networks.cosmos.current = new WebSocket(COSMOS_HEIGHT);
     networks.akash.current = new WebSocket(AKASH_HEIGHT);
     networks.kava.current = new WebSocket(KAVA_HEIGHT);
+    networks["terra-money"].current = new WebSocket(TERRA_HEIGHT);
+    // networks.iris.current = new WebSocket(IRIS_HEIGHT);
 
     // on open
     networks.cosmos.current.onopen = () => {
@@ -42,16 +50,29 @@ export const useSupportedNetworkHook = () => {
     networks.kava.current.onopen = () => {
       networks.kava.current.send(HEIGHT_QUERY);
     };
+    networks["terra-money"].current.onopen = () => {
+      networks["terra-money"].current.send(HEIGHT_QUERY);
+    };
+    // networks.iris.current.onopen = () => {
+    //   networks.iris.current.send(HEIGHT_QUERY);
+    // };
     // onclose
-    networks.cosmos.current.onclose = () => console.log("cosmos closed");
-    networks.akash.current.onclose = () => console.log("akash closed");
-    networks.kava.current.onclose = () => console.log("kava closed");
+    if (process.env.NODE_ENV !== "production") {
+      networks.cosmos.current.onclose = () => console.log("cosmos closed");
+      networks.akash.current.onclose = () => console.log("akash closed");
+      networks.kava.current.onclose = () => console.log("kava closed");
+      networks["terra-money"].current.onclose = () =>
+        console.log("terra closed");
+      // networks.iris.current.onclose = () => console.log("iris closed");
+    }
 
     // unsubscribe
     return () => {
       networks.cosmos.current.close();
       networks.akash.current.close();
       networks.kava.current.close();
+      networks["terra-money"].current.close();
+      // networks.iris.current.close();
     };
   }, []);
 
@@ -73,6 +94,18 @@ export const useSupportedNetworkHook = () => {
         kava: getNewHeight(e),
       });
     };
+
+    networks["terra-money"].current.onmessage = (e) => {
+      handleSetState({
+        ["terra-money"]: getNewHeight(e),
+      });
+    };
+
+    // networks.iris.current.onmessage = (e) => {
+    //   handleSetState({
+    //     iris: getNewHeight(e),
+    //   });
+    // };
   }, [handleSetState]);
   return {
     state,
