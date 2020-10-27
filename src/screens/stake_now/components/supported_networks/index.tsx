@@ -1,7 +1,8 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { TermsOfService, AnimatedNetwork } from "@components";
-import { networkData } from "../../config";
+import { getNetworkInfo } from "@utils/network-info";
+import { networkKeys } from "../../config";
 import {
   SupportedNetworksCSS,
   HeaderContentCSS,
@@ -10,6 +11,7 @@ import {
 
 const SupportedNetworks = () => {
   const { t } = useTranslation("stake_now");
+  const networkData = networkKeys.map((x) => getNetworkInfo(x));
   return (
     <SupportedNetworksCSS>
       <HeaderContentCSS>
