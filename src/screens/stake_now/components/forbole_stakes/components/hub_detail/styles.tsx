@@ -59,6 +59,7 @@ export const HubDetailCSS = styled.div`
 export const StatDetailsCSS = styled.div`
   &:not(.main) {
     display: flex;
+    flex-direction: column;
   }
 
   .atom {
@@ -75,9 +76,13 @@ export const StatDetailsCSS = styled.div`
 
   ${media.bigDesktop`
     width: 100%;
-    // display: flex;
     align-items: center;
     justify-content: space-between;
+
+    &:not(.main) {
+      flex-direction: row;
+    }
+
     .atom {
       &.main {
         text-align: left;

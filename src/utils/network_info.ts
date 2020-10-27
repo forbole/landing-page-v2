@@ -126,6 +126,8 @@ const logos = {
     image: "/static/images/icons/band-protocol.png",
     name: "Band Protocol",
     key: "band-protocol",
+    // wingman need to fix
+    heightSocket: "wss://band.bigdipper.live/sockjs/603/qcx7s6o0/websocket",
     delegate:
       "https://band.bigdipper.live/validator/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z/delegate",
   },

@@ -12,6 +12,7 @@ export const useGetLatestHeightHook = () => {
     akash: "---",
     kava: "---",
     terra: "---",
+    ["band-protocol"]: "---",
     // iris: "---",
   });
 
@@ -25,6 +26,7 @@ export const useGetLatestHeightHook = () => {
     akash: useRef(null),
     kava: useRef(null),
     ["terra-money"]: useRef(null),
+    ["band-protocol"]: useRef(null),
     // iris: useRef(null),
   };
 
@@ -39,6 +41,9 @@ export const useGetLatestHeightHook = () => {
     networks.kava.current = new WebSocket(getNetworkInfo("kava")?.heightSocket);
     networks["terra-money"].current = new WebSocket(
       getNetworkInfo("terra-money")?.heightSocket
+    );
+    networks["band-protocol"].current = new WebSocket(
+      getNetworkInfo("band-protocol")?.heightSocket
     );
     // networks.iris.current = new WebSocket(IRIS_HEIGHT);
 
@@ -55,6 +60,9 @@ export const useGetLatestHeightHook = () => {
     networks["terra-money"].current.onopen = () => {
       networks["terra-money"].current.send(HEIGHT_QUERY);
     };
+    networks["band-protocol"].current.onopen = () => {
+      networks["band-protocol"].current.send(HEIGHT_QUERY);
+    };
     // networks.iris.current.onopen = () => {
     //   networks.iris.current.send(HEIGHT_QUERY);
     // };
@@ -65,6 +73,8 @@ export const useGetLatestHeightHook = () => {
       networks.kava.current.onclose = () => console.log("kava closed");
       networks["terra-money"].current.onclose = () =>
         console.log("terra closed");
+      networks["band-protocol"].current.onclose = () =>
+        console.log("band-protocol closed");
       // networks.iris.current.onclose = () => console.log("iris closed");
     }
 
@@ -74,6 +84,7 @@ export const useGetLatestHeightHook = () => {
       networks.akash.current.close();
       networks.kava.current.close();
       networks["terra-money"].current.close();
+      networks["band-protocol"].current.close();
       // networks.iris.current.close();
     };
   }, []);
