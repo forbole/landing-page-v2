@@ -15,9 +15,21 @@ const Member = (props: any) => {
       <p className="name">{name}</p>
       <p className="position">{position}</p>
       <SocialMediaContainerCSS>
-        {!!links.twitter && <Twitter />}
-        {!!links.linkedin && <LinkedIn />}
-        {!!links.github && <Github />}
+        {!!links.twitter && (
+          <a href={links.twitter} target="_blank" rel="noreferrer">
+            <Twitter />
+          </a>
+        )}
+        {!!links.linkedin && (
+          <a href={links.linkedin} target="_blank" rel="noreferrer">
+            <LinkedIn />
+          </a>
+        )}
+        {!!links.github && (
+          <a href={links.github} target="_blank" rel="noreferrer">
+            <Github />
+          </a>
+        )}
       </SocialMediaContainerCSS>
     </MemberCSS>
   );

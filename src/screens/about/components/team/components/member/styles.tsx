@@ -4,6 +4,12 @@ import { theme } from "@styles";
 const { colors } = theme;
 
 export const MemberCSS = styled.div`
+  img {
+    object-fit: cover;
+    height: 225px;
+    width: 100%;
+  }
+
   .name {
     font-weight: 500;
     margin-bottom: 0;
@@ -23,7 +29,14 @@ export const SocialMediaContainerCSS = styled.div`
     width: 23px;
     margin-right: 0.3rem;
     path {
+      transition: 0.2s;
       fill: ${colors.gray600};
     }
 
+    &:hover {
+      path {
+        fill: ${colors.forboleRed};
+      }
+    }
+  }
 `;
