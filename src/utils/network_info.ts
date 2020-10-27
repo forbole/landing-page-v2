@@ -109,6 +109,13 @@ const logos = {
     delegate:
       "https://akash.bigdipper.live/validator/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073/delegate",
     heightSocket: "ws://rpc.akash.forbole.com/websocket",
+    calculator: {
+      bonded: "http://lcd.akash.forbole.com/staking/pool",
+      inflation: "http://lcd.akash.forbole.com/minting/inflation",
+      supply: "http://lcd.akash.forbole.com/supply/total/uakt",
+      stakingParams:
+        "http://lcd.akash.forbole.com/staking/validators/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073",
+    },
   },
   bitsongs: {
     image: "/static/images/icons/bitsongs.png",

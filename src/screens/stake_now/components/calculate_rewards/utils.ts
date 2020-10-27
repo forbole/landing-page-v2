@@ -13,15 +13,17 @@ export const uLunaToLuna = defaultConverter(1000000);
 
 export const uKavaToKava = defaultConverter(1000000);
 
-export const defaultFunctions = {
+export const uAktToAkash = defaultConverter(1000000);
+
+export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
-    return uAtomToAtom(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
+    return converter(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
   },
   inflation: (data: any) => {
     return toFixed(Number(R.pathOr(0, ["result"], data))) ?? 0;
   },
   supply: (data: any) => {
-    return uAtomToAtom(Number(R.pathOr(0, ["result"], data)));
+    return converter(Number(R.pathOr(0, ["result"], data)));
   },
   commissionRate: (data: any) => {
     return Number(
@@ -33,19 +35,23 @@ export const defaultFunctions = {
       Number(R.pathOr(0, ["market_data", "current_price", "usd"], data))
     );
   },
-};
+});
 
-const cosmos = R.clone(defaultFunctions);
+const cosmos = R.clone(defaultFunctions(uAtomToAtom));
 cosmos.gecko = "https://api.coingecko.com/api/v3/coins/cosmos";
 
-const terra = R.clone(defaultFunctions);
+const terra = R.clone(defaultFunctions(uLunaToLuna));
 terra.gecko = "https://api.coingecko.com/api/v3/coins/terra-luna";
 
-const kava = R.clone(defaultFunctions);
+const kava = R.clone(defaultFunctions(uKavaToKava));
 kava.gecko = "https://api.coingecko.com/api/v3/coins/kava";
+
+const akash = R.clone(defaultFunctions(uAktToAkash));
+akash.gecko = "https://api.coingecko.com/api/v3/coins/akash-network";
 
 export const networkFunctions = {
   cosmos,
   kava,
+  akash,
   ["terra-money"]: terra,
 };
