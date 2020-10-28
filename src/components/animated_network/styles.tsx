@@ -173,6 +173,6 @@ export const Button = styled(SemanticButton)`
     background: black;
     color: white;
     margin-right: 0;
-    padding: 0.6875em 1em 0.6875em;
+    padding: 0.6875em 0.46em 0.6875em;
   }
 `;

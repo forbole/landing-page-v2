@@ -12,6 +12,7 @@ export const PostCSS = styled.div`
   h3 {
     font-weight: 500;
     margin-bottom: 0;
+    font-size: 1.25rem;
   }
   a {
     color: black;
@@ -20,7 +21,7 @@ export const PostCSS = styled.div`
     margin-bottom: 0;
     &.date {
       color: ${colors.gray600};
-      font-size: 0.8rem;
+      font-size: 0.875rem;
       font-weight: 300;
     }
   }
