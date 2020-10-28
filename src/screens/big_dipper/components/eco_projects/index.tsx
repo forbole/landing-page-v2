@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { useTranslation } from "i18n";
 import { EcoProjectsCSS, ProjectsGridCSS, MainContentCSS } from "./styles";
 import { networkKeys } from "./config";
@@ -15,11 +14,14 @@ export const EcoProjects = () => {
         <h3>{t("supportedBlockchains")}</h3>
         <ProjectsGridCSS>
           {networkData.map((x) => (
-            <Link href={`/networks/${x.key}`} key={x.name}>
-              <a>
-                <Network name={x.name} image={x.image} nameKey={x.key} />
-              </a>
-            </Link>
+            <a
+              href={x?.bigDipper ?? "/"}
+              key={x.name}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Network name={x.name} image={x.image} nameKey={x.key} />
+            </a>
           ))}
         </ProjectsGridCSS>
       </MainContentCSS>

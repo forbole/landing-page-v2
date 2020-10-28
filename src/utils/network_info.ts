@@ -9,6 +9,7 @@ const logos = {
     image: "/static/images/icons/cosmos-hub.png",
     name: "Cosmos Hub",
     key: "cosmos",
+    bigDipper: "https://cosmos.bigdipper.live/",
     delegate:
       "https://cosmos.bigdipper.live/validators/cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj/delegate",
     heightSocket: "ws://rpc.cosmoshub.bigdipper.live/websocket",
@@ -24,6 +25,7 @@ const logos = {
     image: "/static/images/icons/iris.png",
     name: "IRIS Hub",
     key: "iris",
+    bigDipper: "https://iris.bigdipper.live/",
     delegate:
       "https://iris.bigdipper.live/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegate",
     heightSocket: "wss://ws.iris.forbole.com",
@@ -47,6 +49,7 @@ const logos = {
     image: "/static/images/icons/kava.png",
     name: "Kava",
     key: "kava",
+    bigDipper: "https://kava.bigdipper.live/",
     delegate:
       "https://kava.bigdipper.live/validators/kavavaloper14kn0kk33szpwus9nh8n87fjel8djx0y02c7me3/delegate",
     heightSocket: "wss://ws.kava.forbole.com",
@@ -62,11 +65,13 @@ const logos = {
     image: "/static/images/icons/sentinel.png",
     name: "Sentinel",
     key: "sentinel",
+    bigDipper: "https://explorer.sentinel.co/",
   },
   likecoin: {
     image: "/static/images/icons/likecoin.png",
     name: "LikeCoin",
     key: "likecoin",
+    bigDipper: "http://likecoin.bigdipper.live/",
     delegate:
       "https://likecoin.bigdipper.live/validator/cosmosvaloper1v8njts96gl5eqstnen4gksdy5k860fau65c3sw/delegate",
     heightSocket: "wss://ws.likecoin.forbole.com",
@@ -75,11 +80,13 @@ const logos = {
     image: "/static/images/icons/regen-network.png",
     name: "Regen Network",
     key: "regen-network",
+    bigDipper: "https://explorer.regen.vitwit.com/",
   },
   ["e-money"]: {
     image: "/static/images/icons/e-money.png",
     name: "e-Money",
     key: "e-money",
+    bigDipper: "https://e-money.network/",
     delegate:
       "https://e-money.network/validator/emoneyvaloper1293pqwtzu67zp8txuya4yts03ccw5kgf98hz9y/delegate",
   },
@@ -87,6 +94,7 @@ const logos = {
     image: "/static/images/icons/desmos.png",
     name: "Desmos",
     key: "desmos",
+    bigDipper: "https://morpheus.desmos.network/",
   },
   cyberd: {
     image: "/static/images/icons/sentinel.png",
