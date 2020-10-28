@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { useTranslation } from "i18n";
 import {
   EcoSystemProjectsCSS,
@@ -19,12 +20,11 @@ export const EcoSystemProjects = () => {
         <p>{t("ecosystemProjectsDetails")}</p>
         <ProjectsGridCSS>
           {networkData.map((x) => (
-            <Network
-              key={x.name}
-              name={x.name}
-              image={x.image}
-              nameKey={x.key}
-            />
+            <Link href={`/networks/${x.key}`} key={x.name}>
+              <a>
+                <Network name={x.name} image={x.image} nameKey={x.key} />
+              </a>
+            </Link>
           ))}
         </ProjectsGridCSS>
       </MainContentCSS>

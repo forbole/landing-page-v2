@@ -1,12 +1,14 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { socialMedias } from "../../config";
+import { socialKeys } from "../../config";
+import { getSocialMediaInfo } from "@utils/social_media_info";
 import { ContactInfoCSS } from "./styles";
 import { Segment } from "semantic-ui-react";
 import { Location, Email } from "@icons";
 
 const ContactInfo = () => {
   const { t } = useTranslation("contact");
+  const socialMedias = socialKeys.map((x) => getSocialMediaInfo(x));
   return (
     <ContactInfoCSS>
       <Segment raised>
@@ -23,8 +25,8 @@ const ContactInfo = () => {
           </div>
 
           <div className="socialMedia">
-            {socialMedias.map((x, i) => (
-              <a href={x.url} key={i}>
+            {socialMedias.map((x) => (
+              <a href={x.url} key={x.key} target="_blank" rel="noreferrer">
                 <x.component />
               </a>
             ))}

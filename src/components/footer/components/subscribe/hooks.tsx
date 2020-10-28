@@ -10,7 +10,6 @@ export const useSubscribeHook = (t: any) => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, "damn email");
     if (!validator.isEmail(email)) {
       toast.error(t("common:invalidEmail"));
     }

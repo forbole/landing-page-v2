@@ -20,5 +20,5 @@
   "stakeIsPowerDetails": "coin owners are the ones who wield influence over the network, produce new blocks and secure the chain. The amount of stake participating in minting is directly related to the security level of the consensus. This user governance is only possible because proof-of-stake grants power over the network to stakeholders.",
   "aboutPOSDetailsThree": "In some cases (eg. Cosmos Hub), validators are weighted according to their total stake. This “stake” comes from the token holders who have locked-up their tokens with the validators (this process is called “delegating”). Staking is the process performed by the token holders to sacrifice something (eg. the liquidity through delegating to a validator) in order to participate in the operations of the blockchain to receive rewards.",
   "ecosystemProjects": "Ecosystem Projects",
-  "ecosystemProjectsDetails": "We are one of the very few professional validators who is also building a blockchain, we focus our resources for staking-as-a-service in three ecosystems"
+  "ecosystemProjectsDetails": "We are one of the very few professional validators who are also building a blockchain, we focus our resources for staking-as-a-service in three ecosystems"
 }

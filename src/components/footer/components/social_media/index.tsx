@@ -1,8 +1,11 @@
 import React from "react";
 import { SocialMediaCSS } from "./styles";
-import { socialMediaInfo } from "./config";
+import { socialKeys } from "./config";
+import { getSocialMediaInfo } from "@utils/social_media_info";
 
 const SocialMedia = () => {
+  const socialMediaInfo = socialKeys.map((x) => getSocialMediaInfo(x));
+
   return (
     <SocialMediaCSS>
       {socialMediaInfo.map((x) => {
