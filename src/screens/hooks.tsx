@@ -138,8 +138,6 @@ export const useGetLatestHeightHook = () => {
     };
 
     networks.iris.current.onmessage = (e) => {
-      console.log("iris");
-      console.log(JSON.parse(e.data));
       handleSetState({
         iris: getNewHeight(e),
       });
