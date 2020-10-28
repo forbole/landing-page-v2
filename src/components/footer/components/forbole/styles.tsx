@@ -13,6 +13,10 @@ export const ForboleCSS = styled.div`
     font-weight: 300;
   }
 
+  a {
+    color: white;
+  }
+
   ${media.bigDesktop`
   img {
     width: 125px;

@@ -4,11 +4,11 @@ export const forboleFooterItems = [
   },
   {
     display: "stakeNow",
-    to: "/#stakeNow",
+    to: "/stake-now",
   },
   {
     display: "staking",
-    to: "/#staking",
+    to: "/staking",
   },
 ];
 

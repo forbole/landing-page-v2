@@ -1,20 +1,7 @@
-import { Telegram, Medium, Twitter, Github } from "@icons";
-
-export const socialMedias = [
-  {
-    url: "#",
-    component: <Telegram />,
-  },
-  {
-    url: "#",
-    component: <Medium />,
-  },
-  {
-    url: "#",
-    component: <Twitter />,
-  },
-  {
-    url: "#",
-    component: <Github />,
-  },
+export const socialKeys = [
+  "telegram",
+  "facebook",
+  "medium",
+  "twitter",
+  "github",
 ];

@@ -1,25 +1,20 @@
 import React from "react";
 import { SocialMediaCSS } from "./styles";
-import { Telegram, Facebook, Medium, Twitter, Github } from "../../../icons";
+import { socialKeys } from "./config";
+import { getSocialMediaInfo } from "@utils/social_media_info";
 
 const SocialMedia = () => {
+  const socialMediaInfo = socialKeys.map((x) => getSocialMediaInfo(x));
+
   return (
     <SocialMediaCSS>
-      <a href="#">
-        <Telegram />
-      </a>
-      <a href="#">
-        <Facebook />
-      </a>
-      <a href="#">
-        <Medium />
-      </a>
-      <a href="#">
-        <Twitter />
-      </a>
-      <a href="#">
-        <Github />
-      </a>
+      {socialMediaInfo.map((x) => {
+        return (
+          <a key={x.key} href={x.url} target="_blank" rel="noreferrer">
+            <x.component />
+          </a>
+        );
+      })}
     </SocialMediaCSS>
   );
 };

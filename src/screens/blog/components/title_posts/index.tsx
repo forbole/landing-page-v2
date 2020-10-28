@@ -1,17 +1,17 @@
 import React from "react";
 import Link from "next/link";
-import { fakeTitles } from "./config";
 import { TitlePostsCSS } from "./styles";
 
-const TitlePosts = () => {
+const TitlePosts = (props: any) => {
+  const { posts } = props;
   return (
     <TitlePostsCSS>
-      {fakeTitles.map((x, i) => (
-        <li key={i}>
-          <Link href={`/blog/${x.slug}`}>
-            <a>{x.title}</a>
-          </Link>
-        </li>
+      {posts.map((x, i) => (
+        <Link href={`/blog/${x.slug}`} key={i}>
+          <a>
+            <li>{x.title}</li>
+          </a>
+        </Link>
       ))}
     </TitlePostsCSS>
   );

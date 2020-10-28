@@ -7,18 +7,41 @@ function BlogPage(props: any) {
 }
 
 BlogPage.getInitialProps = async ({ query }) => {
-  const fetchQuery: any = {};
-  if (query.page) {
-    fetchQuery.page = query.page;
+  let formattedPosts = [];
+  let formattedSidePosts = [];
+  let formattedTags = [];
+  let meta = {};
+  let error = false;
+  try {
+    const fetchQuery: any = {};
+    if (query.page) {
+      fetchQuery.page = query.page;
+    }
+
+    const [tags, posts, sidePosts] = await Promise.all([
+      getTags(),
+      getPosts(fetchQuery),
+      getPosts({
+        limit: 10,
+      }),
+    ]);
+
+    formattedPosts = posts.map((post) => Post.fromJson(post, {}));
+    formattedSidePosts = sidePosts.map((post) => Post.fromJson(post, {}));
+    formattedTags = removeInternalTags(tags).map((tag) => Tag.fromJson(tag));
+    meta = posts?.meta;
+  } catch (err) {
+    error = true;
+    console.log(error, "error");
   }
 
-  const [tags, posts] = await Promise.all([getTags(), getPosts(fetchQuery)]);
-  const formattedPosts = posts.map((post) => Post.fromJson(post, {}));
-  const formattedTags = removeInternalTags(tags).map((tag) =>
-    Tag.fromJson(tag)
-  );
-
-  return { posts: formattedPosts, meta: posts.meta, tags: formattedTags };
+  return {
+    posts: formattedPosts,
+    tags: formattedTags,
+    sidePosts: formattedSidePosts,
+    meta,
+    error,
+  };
 };
 
 export default BlogPage;
