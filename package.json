@@ -35,10 +35,11 @@
     "react-minimal-pie-chart": "^8.0.1",
     "react-multi-carousel": "^2.5.5",
     "react-spring": "^8.0.27",
+    "react-toastify": "^6.0.9",
     "react-twitter-embed": "^3.0.3",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.1.1",
-    "validator": "^13.1.1"
+    "validator": "^13.1.17"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
