@@ -4,12 +4,13 @@ import { Layout, Tags } from "@components";
 import { theme } from "@styles";
 import { BlogPosts, TitlePosts, Twitter } from "./components";
 import { BlogCSS, MaxWidthContainerCSS, SideCSS } from "./styles";
-
+import { useBlogHook } from "./hooks";
 const { colors } = theme;
 
 const Blog = (props: any) => {
-  const { posts, meta, tags } = props;
+  const { posts = [], meta = {}, tags = [], sidePosts = [], error } = props;
   const { t } = useTranslation("blog");
+  useBlogHook(error, t);
   return (
     <Layout
       title={t("title")}
@@ -20,7 +21,7 @@ const Blog = (props: any) => {
         <MaxWidthContainerCSS>
           <BlogPosts main={posts[0]} blogs={posts.slice(1)} meta={meta} />
           <SideCSS>
-            <TitlePosts />
+            <TitlePosts posts={sidePosts} />
             <Tags tags={tags} />
             <Twitter />
           </SideCSS>

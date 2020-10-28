@@ -35,7 +35,7 @@ const FooterItems = () => {
             return <li key={y.title}>{t(y.title)}</li>;
           } else {
             return (
-              <a href={y.to} key={y.to}>
+              <a href={y.to} key={y.to} target="_blank" rel="noreferrer">
                 <li>{t(y.display)}</li>
               </a>
             );
@@ -49,7 +49,7 @@ const FooterItems = () => {
             return <li key={z.title}>{t(z.title)}</li>;
           } else {
             return (
-              <a href={z.to} key={z.to}>
+              <a href={z.to} key={z.to} rel="noreferrer" target="_blank">
                 <li>{t(z.display)}</li>
               </a>
             );
