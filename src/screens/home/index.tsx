@@ -43,7 +43,7 @@ const Home = (props: any) => {
         <SupportedNetworks />
         <DashboardContent />
         <MooncakeBody />
-        <News posts={posts} />
+        {!!posts.length && <News posts={posts} />}
       </HomeCSS>
     </Layout>
   );

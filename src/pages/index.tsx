@@ -7,15 +7,21 @@ const IndexPage = (props: any) => {
 };
 
 IndexPage.getInitialProps = async () => {
-  const posts = await getPosts({
-    limit: 6,
-  });
+  let formattedPosts = [];
+  let error = false;
+  try {
+    const posts = await getPosts({
+      limit: 6,
+    });
+    formattedPosts = posts.map((post) =>
+      Post.fromJson(post, { excerptLimit: 150 })
+    );
+  } catch (err) {
+    console.log(err);
+    error = true;
+  }
 
-  const formattedPosts = posts.map((post) =>
-    Post.fromJson(post, { excerptLimit: 150 })
-  );
-
-  return { posts: formattedPosts };
+  return { posts: formattedPosts, error };
 };
 
 export default IndexPage;
