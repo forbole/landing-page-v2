@@ -18,12 +18,13 @@ export const SupportedNetworksCSS = styled.div`
 export const HeaderContentCSS = styled.div`
   h2 {
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
 
   p {
     margin-bottom: 0.5rem;
+    font-size: 0.875rem;
   }
 
   .terms {
@@ -44,7 +45,7 @@ export const HeaderContentCSS = styled.div`
 export const NetworkListCSS = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
-  grid-gap: 7px 12px;
+  grid-gap: 12px 12px;
 
   ${media.tablet`
     grid-template-columns: repeat(3, minmax(100px, 1fr));

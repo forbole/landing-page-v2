@@ -12,7 +12,7 @@ export const NetworkCSS = styled.div`
   flex-direction: column;
 
   img {
-    width: 35px;
+    width: 40px;
   }
 
   p {
@@ -168,9 +168,11 @@ export const NetworkCSS = styled.div`
 export const Button = styled(SemanticButton)`
   &.ui.button {
     width: 100%;
+    height: 2.125rem;
     font-weight: 300;
     background: black;
     color: white;
     margin-right: 0;
+    padding: 0.6875em 1em 0.6875em;
   }
 `;
