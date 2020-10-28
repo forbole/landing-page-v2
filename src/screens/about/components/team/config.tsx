@@ -60,7 +60,7 @@ export const membersData = [
   },
   {
     name: "Caroline Lau",
-    position: "cofounderConductor",
+    position: "associate",
     image: "static/images/team/caroline.jpeg",
     links: {
       linkedin: "https://www.linkedin.com/in/caroline-lauhy/",
@@ -74,7 +74,17 @@ export const membersData = [
     links: {
       linkedin: "https://www.linkedin.com/in/laura-nori-67826015a/",
       // github: "https://github.com/anson-cheung",
-      // twitter: "#",
+      twitter: "https://twitter.com/Lorinaura?s=20",
+    },
+  },
+  {
+    name: "Michael Wu",
+    position: "financeOperationManager",
+    image: "static/images/team/michael.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/michael-wu-a959123b",
+      // github: "https://github.com/anson-cheung",
+      // twitter: "https://twitter.com/Lorinaura?s=20",
     },
   },
   {
@@ -88,13 +98,13 @@ export const membersData = [
     },
   },
   {
-    name: "Leo Bragagnolo",
-    position: "swe",
-    image: "static/images/team/leo.jpg",
+    name: "Muhammad Elsayeh",
+    position: "blockchainEngineer",
+    image: "static/images/team/muhammad.jpg",
     links: {
-      linkedin: "https://www.linkedin.com/in/leonardo-bragagnolo-9a2ab4186/",
-      github: "https://github.com/bragaz",
-      twitter: "https://twitter.com/leobragaz_",
+      linkedin: "https://www.linkedin.com/in/muhammad-elsayeh-ph-d-76b52529/",
+      github: "https://github.com/Sayeh-1337",
+      // twitter: "https://twitter.com/Lorinaura?s=20",
     },
   },
   {
@@ -108,6 +118,25 @@ export const membersData = [
     },
   },
   {
+    name: "Tina Liao",
+    position: "swe",
+    image: "static/images/team/tina.jpeg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/yu-hsin-liao-0625319a/",
+      github: "https://github.com/YuhsinLiao1995",
+    },
+  },
+  {
+    name: "Leo Bragagnolo",
+    position: "swe",
+    image: "static/images/team/leo.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/leonardo-bragagnolo-9a2ab4186/",
+      github: "https://github.com/bragaz",
+      twitter: "https://twitter.com/leobragaz_",
+    },
+  },
+  {
     name: "Monika Pusz",
     position: "swe",
     image: "static/images/team/monika.jpg",
@@ -118,12 +147,31 @@ export const membersData = [
     },
   },
   {
-    name: "Tina Liao",
+    name: "Apple Choi",
     position: "swe",
-    image: "static/images/team/tina.jpeg",
+    image: "static/images/team/apple.jpeg",
     links: {
-      linkedin: "https://www.linkedin.com/in/yu-hsin-liao-0625319a/",
-      github: "https://github.com/YuhsinLiao1995",
+      linkedin: "https://www.linkedin.com/in/hau-yi-choi-4929b6153/",
+      // github: "https://github.com/bragaz",
+      // twitter: "https://twitter.com/leobragaz_",
+    },
+  },
+  {
+    name: "Wingman Lee",
+    position: "swe",
+    image: "static/images/team/wingman.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/wingman-lee/",
+      github: "https://github.com/ryuash",
+    },
+  },
+  {
+    name: "Ravi Soni",
+    position: "infrastructureEngineer",
+    image: "static/images/team/placeholder.jpg",
+    links: {
+      // linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
+      // github: "https://github.com/dadamu",
     },
   },
   {
@@ -133,16 +181,6 @@ export const membersData = [
     links: {
       linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
       github: "https://github.com/dadamu",
-    },
-  },
-  {
-    name: "Apple Choi",
-    position: "swe",
-    image: "static/images/team/placeholder.jpg",
-    links: {
-      // linkedin: "https://www.linkedin.com/in/leonardo-bragagnolo-9a2ab4186/",
-      // github: "https://github.com/bragaz",
-      // twitter: "https://twitter.com/leobragaz_",
     },
   },
   // {

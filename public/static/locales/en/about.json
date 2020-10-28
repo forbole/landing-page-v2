@@ -66,5 +66,9 @@
   "currentOpportunitiesDetails": "Joining us at this stage, you will be one of the early co-builders of a rising startup in a rising industry.",
   "seeMore": "See More",
   "noOpportunities": "There are currently no positions available at this time :(",
-  "projectDirector": "Project Director"
+  "projectDirector": "Project Director",
+  "associate": "Associate",
+  "financeOperationManager": "Finance & Operations Manager",
+  "blockchainEngineer": "Blockchain Engineer",
+  "infrastructureEngineer": "Infrastructure Engineer"
 }
