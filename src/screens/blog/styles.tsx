@@ -30,6 +30,7 @@ export const SideCSS = styled.div`
 
   ${media.bigDesktop`
     width: 30%;
+    min-width: 300px;
     margin-left: 2rem;
 
     .tags-container {

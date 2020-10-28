@@ -23,14 +23,14 @@ export const TitlePostsCSS = styled.ul`
   ${media.bigDesktop`
     width: 100%;
     border: 1px solid ${colors.gray100};
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 0;
 
     li {
-      padding: 1rem 0rem;
-
+      padding: 1rem 1.5rem;
+      transition: 0.2s;
       &:hover {
         cursor: pointer;
+        background: #f5f7fa;
       }
 
       &:last-child {
