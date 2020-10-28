@@ -1,5 +1,6 @@
 {
   "title": "Blog",
   "tags": "Tags",
-  "twitter": "Twitter"
+  "twitter": "Twitter",
+  "error": "Unable to fetch blogs. Please try again later."
 }
