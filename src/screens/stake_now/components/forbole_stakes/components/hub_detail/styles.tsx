@@ -63,7 +63,7 @@ export const StatDetailsCSS = styled.div`
 
   .atom {
     &.main {
-      font-size: 1.15rem;
+      font-size: 1.25rem;
     }
   }
 
@@ -71,6 +71,7 @@ export const StatDetailsCSS = styled.div`
     text-align: right;
     margin-bottom: 0;
     width: 100%;
+    font-size: 0.875rem;
   }
 
   ${media.bigDesktop`

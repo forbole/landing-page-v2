@@ -16,10 +16,11 @@ export const MainContentCSS = styled.div`
   h3 {
     font-weight: 500;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
   ${media.bigDesktop`
     ${mixins.desktopMaxWidth}

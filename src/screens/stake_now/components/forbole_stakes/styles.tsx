@@ -24,7 +24,7 @@ export const ForboleStakesCSS = styled.div`
   hr {
     display: block;
     border: 0;
-    border-top: 1px solid ${colors.gray600};
+    border-top: 1px solid rgb(71, 83, 117);
     margin: 1em 0;
     padding: 0;
   }

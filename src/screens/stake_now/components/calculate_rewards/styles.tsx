@@ -26,6 +26,7 @@ export const ContentCSS = styled.div`
     font-weight: 400;
     text-align: left;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
   ${media.bigDesktop`
     ${mixins.desktopMaxWidth}

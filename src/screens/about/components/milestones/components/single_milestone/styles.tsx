@@ -15,7 +15,7 @@ export const SingleMilestoneCSS = styled.div`
   .badge-wrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
     svg {
       margin-right: 0.5rem;
       width: 20px;

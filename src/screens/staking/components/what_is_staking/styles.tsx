@@ -7,6 +7,7 @@ export const WhatIsStakingCSS = styled.div`
   h3 {
     font-weight: 500;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 
   ${media.bigDesktop`
