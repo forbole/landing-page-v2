@@ -3,7 +3,7 @@ export const networkKeys = [
   "polkadot",
   "kava",
   "terra-money",
-  // "iris",
+  "iris",
   // "desmos",
   "likecoin",
   // "cyberd",

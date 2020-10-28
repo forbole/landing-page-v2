@@ -24,7 +24,9 @@ const logos = {
     image: "/static/images/icons/iris.png",
     name: "IRIS Hub",
     key: "iris",
-    heightSocket: "wss://rpc.iris.bigdipper.live/websocket",
+    delegate:
+      "https://iris.bigdipper.live/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegate",
+    heightSocket: "wss://ws.iris.forbole.com",
   },
   ["terra-money"]: {
     image: "/static/images/icons/terra.png",
@@ -32,7 +34,7 @@ const logos = {
     key: "terra-money",
     delegate:
       "https://app.lunie.io/terra/validators/terravaloper1jkqr2vfg4krfd4zwmsf7elfj07cjuzss30ux8g",
-    heightSocket: "wss://rpc.terra.bigdipper.live/websocket",
+    heightSocket: "wss://ws.terra.forbole.com",
     calculator: {
       bonded: "https://lcd.terra.bigdipper.live/staking/pool",
       // inflation: "https://lcd.terra.bigdipper.live/minting/inflation",
@@ -47,7 +49,7 @@ const logos = {
     key: "kava",
     delegate:
       "https://kava.bigdipper.live/validators/kavavaloper14kn0kk33szpwus9nh8n87fjel8djx0y02c7me3/delegate",
-    heightSocket: "ws://rpc.kava.forbole.com/websocket",
+    heightSocket: "wss://ws.kava.forbole.com",
     calculator: {
       bonded: "http://lcd.kava.forbole.com/staking/pool",
       inflation: "http://lcd.kava.forbole.com/minting/inflation",
@@ -67,6 +69,7 @@ const logos = {
     key: "likecoin",
     delegate:
       "https://likecoin.bigdipper.live/validator/cosmosvaloper1v8njts96gl5eqstnen4gksdy5k860fau65c3sw/delegate",
+    heightSocket: "wss://ws.likecoin.forbole.com",
   },
   ["regen-network"]: {
     image: "/static/images/icons/regen-network.png",
@@ -108,7 +111,7 @@ const logos = {
     key: "akash",
     delegate:
       "https://akash.bigdipper.live/validator/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073/delegate",
-    heightSocket: "ws://rpc.akash.forbole.com/websocket",
+    heightSocket: "wss://ws.akash.forbole.com",
     calculator: {
       bonded: "http://lcd.akash.forbole.com/staking/pool",
       inflation: "http://lcd.akash.forbole.com/minting/inflation",
@@ -127,7 +130,7 @@ const logos = {
     name: "Band Protocol",
     key: "band-protocol",
     // wingman need to fix
-    heightSocket: "wss://band.bigdipper.live/sockjs/603/qcx7s6o0/websocket",
+    heightSocket: "wss://ws.band.forbole.com",
     delegate:
       "https://band.bigdipper.live/validator/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z/delegate",
   },
@@ -175,5 +178,6 @@ export const getNewHeight = (e: any) => {
   );
   return newHeight;
 };
+
 export const HEIGHT_QUERY =
   '{"jsonrpc": "2.0","method": "subscribe","id":"0","params":{"query":"tm.event=\'NewBlock\'"}}';
