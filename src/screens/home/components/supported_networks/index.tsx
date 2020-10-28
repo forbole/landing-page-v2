@@ -14,7 +14,7 @@ const SupportedNetworks = () => {
     <SupportedNetworksCSS>
       <HeaderContentCSS>
         <h2>{t("supportedNetworks")}</h2>
-        <p>{t("placeholder")}</p>
+        <p>{t("supportedNetworksDescription")}</p>
       </HeaderContentCSS>
       <NetworkListCSS>
         {networkData.map((x) => (

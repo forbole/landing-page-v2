@@ -8,7 +8,7 @@ const NewsHeader = () => {
     <NewsHeaderCSS>
       <div className="desktopWrapper">
         <h2>{t("whatsNews")}</h2>
-        <p>{t("placeholder")}</p>
+        <p>{t("newsDescription")}</p>
       </div>
     </NewsHeaderCSS>
   );
