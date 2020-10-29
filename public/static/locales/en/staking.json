@@ -1,7 +1,7 @@
 {
   "title": "Staking",
   "stakingYourTokens": "Staking your tokens",
-  "stakingYourTokensDetails": "Duis porta, ligula rhoncus euismod pretium, nisi tellus eleifend odio, luctus viverra sem dolor id sem. Maecenas.",
+  "stakingYourTokensDetails": "Led by a team of experienced experts, Forbole has a proven track record in staking service. You stake with us, earn passive income in crypto, while we secure the networks. Stake with us now!",
   "whatIsStaking": "What’s “staking”?",
   "whatIsStakingDetailsOne": "The technology of proof-of-stake (PoS) has been evolved since it was first introduced in 2012. Instead of the miners in proof-of-work blockchains, proof-of-stake blockchains need a role called validators to provide the security infrastructure for the chains. Generally speaking, validators run a full-node and participate in consensus. Validators commit new blocks in the blockchain and receive revenue in exchange for their work.",
   "whatIsStakingDetailsTwo": "A responsible validator is also expected to participate in the governance by voting on proposals.",
@@ -20,5 +20,5 @@
   "stakeIsPowerDetails": "coin owners are the ones who wield influence over the network, produce new blocks and secure the chain. The amount of stake participating in minting is directly related to the security level of the consensus. This user governance is only possible because proof-of-stake grants power over the network to stakeholders.",
   "aboutPOSDetailsThree": "In some cases (eg. Cosmos Hub), validators are weighted according to their total stake. This “stake” comes from the token holders who have locked-up their tokens with the validators (this process is called “delegating”). Staking is the process performed by the token holders to sacrifice something (eg. the liquidity through delegating to a validator) in order to participate in the operations of the blockchain to receive rewards.",
   "ecosystemProjects": "Ecosystem Projects",
-  "ecosystemProjectsDetails": "We are one of the very few professional validators who are also building a blockchain, we focus our resources for staking-as-a-service in three ecosystems"
+  "ecosystemProjectsDetails": "Forbole has been providing staking-as-a-service in many renowed Proof-of-Stake networks for years."
 }

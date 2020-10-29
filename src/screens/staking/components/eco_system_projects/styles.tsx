@@ -16,10 +16,11 @@ export const MainContentCSS = styled.div`
   h3 {
     font-weight: 500;
     margin-bottom: 0.5rem;
+    font-size: 1.5rem;
   }
 
   p {
-    font-size: 0.9rem;
+    font-size: 0.875rem;
   }
   ${media.bigDesktop`
     ${mixins.desktopMaxWidth}
@@ -34,7 +35,7 @@ export const MainContentCSS = styled.div`
 export const ProjectsGridCSS = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
-  grid-gap: 7px 12px;
+  grid-gap: 12px 12px;
 
   ${media.tablet`
     grid-template-columns: repeat(3, minmax(100px, 1fr));

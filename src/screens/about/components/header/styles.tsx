@@ -30,6 +30,7 @@ export const HeaderCSS = styled(CoverCSS)`
       display: flex;
       align-items: center;
       flex-wrap: wrap;
+      font-size: 1.875rem;
     }
 
     p {

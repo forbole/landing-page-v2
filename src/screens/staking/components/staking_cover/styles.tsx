@@ -25,9 +25,9 @@ export const StakingCoverCSS = styled(CoverCSS)`
     }
 
     .social-media-container {
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
       a {
-        margin-right: 1.5rem;
+        margin-right: 0.875rem;
 
         svg {
           path {

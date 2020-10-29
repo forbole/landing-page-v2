@@ -15,8 +15,8 @@ export const DashboardContent = () => {
           ></img>
         </div>
         <div className="content">
-          <h3>{t("delegatorDashboard")}</h3>
-          <h2>{t("telescope")}</h2>
+          <h3>{t("bdWallet")}</h3>
+          <h2>{t("bdWalletDescription")}</h2>
           <p>
             {t("dd1")}
             <br />

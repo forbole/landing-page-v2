@@ -22,12 +22,13 @@ export const DashboardContentCSS = styled.div`
   h3, p {
       font-weight: 100;
       margin-bottom: 0.5rem;
+      font-size: 0.875rem;
   }
   h3 {
-      font-size: 1.4rem;
+      font-size: 1.25rem;
   }
   h2 {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       font-weight: 500;
       margin-bottom: 0.5rem;
       min-height: 2rem;

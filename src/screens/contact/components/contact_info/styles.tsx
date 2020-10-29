@@ -59,6 +59,10 @@ export const ContactInfoCSS = styled.div`
     a {
       padding-right: 0.5rem;
     }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
   }
   ${media.bigDesktop`
   padding-top: 0;
