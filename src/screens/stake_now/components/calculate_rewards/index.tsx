@@ -4,7 +4,6 @@ import { CalculateRewardsCSS, ContentCSS } from "./styles";
 import Networks from "./components/networks";
 import Calculator from "./components/calculator";
 import { useCalculateRewardsHook } from "./hooks";
-import classNames from "classnames";
 
 const CalculateRewards = () => {
   const { t } = useTranslation("stake_now");
@@ -15,15 +14,13 @@ const CalculateRewards = () => {
     totalEarnings,
     handleChange,
     tokens,
-    error,
     loading,
-  } = useCalculateRewardsHook();
+  } = useCalculateRewardsHook(t);
 
   return (
     <CalculateRewardsCSS>
       <ContentCSS>
         <h2>{t("calculateRewards")}</h2>
-        <div className={classNames("hidden", { error })}>{t("error")}</div>
         <div className="main-content">
           <Networks
             selectedToken={selectedToken}

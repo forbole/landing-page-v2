@@ -49,9 +49,10 @@ kava.gecko = "https://api.coingecko.com/api/v3/coins/kava";
 const akash = R.clone(defaultFunctions(uAktToAkash));
 akash.gecko = "https://api.coingecko.com/api/v3/coins/akash-network";
 
+// available networks for calculations
 export const networkFunctions = {
   cosmos,
   kava,
   akash,
-  ["terra-money"]: terra,
+  // ["terra-money"]: terra,
 };

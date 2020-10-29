@@ -50,8 +50,12 @@ const transporter = nodemailer.createTransport({
 
     server.post("/api/proxy", async (req:Request, res:Response, next:any) => {
       try{
-        const { data } = await axios.get(req?.body?.url);
-        res.status(200).json(data)
+        const url = req?.body?.url;
+        if (url) {
+          const { data } = await axios.get(req?.body?.url);
+          res.status(200).json(data)
+        }
+        next();
       } catch (err) {
         next(err);
       }

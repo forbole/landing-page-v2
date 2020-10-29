@@ -23,7 +23,11 @@ const Calculator = (props: ICalculatorProp) => {
         fluid
         onChange={handleChange}
         action={{
-          content: loading ? <Icon loading name="asterisk" /> : t("calculate"),
+          content: loading ? (
+            <Icon loading fitted name="asterisk" />
+          ) : (
+            t("calculate")
+          ),
           onClick: handleCalculations,
         }}
         value={tokens?.display}

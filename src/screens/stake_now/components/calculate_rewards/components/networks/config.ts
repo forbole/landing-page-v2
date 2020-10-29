@@ -1,8 +1,8 @@
-export const networkKeys = [
+export const calculatorKeys = [
   "cosmos",
   "polkadot",
   "kava",
-  "terra-money",
+  // "terra-money",
   "iris",
   // "desmos",
   "likecoin",
