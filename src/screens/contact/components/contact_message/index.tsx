@@ -3,7 +3,6 @@ import { useTranslation } from "i18n";
 import { ContactMessageCSS } from "./styles";
 import validator from "validator";
 import { Button, Form, Segment, Input } from "semantic-ui-react";
-import { ToastContainer, toast } from "react-toastify";
 
 import useContactForm from "./hooks";
 
