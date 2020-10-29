@@ -19,16 +19,6 @@ export const membersData = [
       twitter: "https://twitter.com/kwunyeung",
     },
   },
-  // {
-  //   name: "Steven Ping",
-  //   position: "partner",
-  //   image: "static/images/team/placeholder.jpg",
-  //   // links: {
-  //   //   linkedin: "#",
-  //   //   github: "#",
-  //   //   twitter: "#",
-  //   // },
-  // },
   {
     name: "Anson Cheung",
     position: "projectDirector",
@@ -36,7 +26,6 @@ export const membersData = [
     links: {
       linkedin: "https://www.linkedin.com/in/anson-yk-cheung/",
       github: "https://github.com/anson-cheung",
-      // twitter: "#",
     },
   },
   {
@@ -45,7 +34,6 @@ export const membersData = [
     image: "static/images/team/shilin.jpeg",
     links: {
       linkedin: "https://www.linkedin.com/in/ruoyin-zheng-b6687a32/",
-      // twitter: "#",
     },
   },
   {
@@ -54,8 +42,6 @@ export const membersData = [
     image: "static/images/team/michael.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/michael-wu-a959123b",
-      // github: "https://github.com/anson-cheung",
-      // twitter: "https://twitter.com/Lorinaura?s=20",
     },
   },
   {
@@ -73,7 +59,6 @@ export const membersData = [
     image: "static/images/team/laura-nori.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/laura-nori-67826015a/",
-      // github: "https://github.com/anson-cheung",
       twitter: "https://twitter.com/Lorinaura?s=20",
     },
   },
@@ -83,8 +68,6 @@ export const membersData = [
     image: "static/images/team/rooty.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/rooty-chan-972985172/",
-      // github: "#",
-      // twitter: "#",
     },
   },
   {
@@ -104,7 +87,6 @@ export const membersData = [
     links: {
       linkedin: "https://www.linkedin.com/in/monika-pusz-b90906150/",
       github: "https://github.com/MonikaCat",
-      // twitter: "https://twitter.com/ricmontagnin",
     },
   },
   {
@@ -121,10 +103,7 @@ export const membersData = [
     name: "Ravi Soni",
     position: "infrastructureEngineer",
     image: "static/images/team/ravi.jpg",
-    links: {
-      // linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
-      // github: "https://github.com/dadamu",
-    },
+    links: {},
   },
   {
     name: "Tina Liao",
@@ -161,8 +140,6 @@ export const membersData = [
     image: "static/images/team/apple.jpeg",
     links: {
       linkedin: "https://www.linkedin.com/in/hau-yi-choi-4929b6153/",
-      // github: "https://github.com/bragaz",
-      // twitter: "https://twitter.com/leobragaz_",
     },
   },
   {
