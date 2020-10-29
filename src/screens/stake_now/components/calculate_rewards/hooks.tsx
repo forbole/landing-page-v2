@@ -34,8 +34,7 @@ export const useCalculateRewardsHook = (t: any) => {
       throw new Error();
     }
     // get the selected token
-    const network = getNetworkInfo(selectedToken);
-    const { calculator } = network;
+    const { calculator } = getNetworkInfo(selectedToken);
     // check it has all the links we need
     if (
       !calculator.bonded ||
