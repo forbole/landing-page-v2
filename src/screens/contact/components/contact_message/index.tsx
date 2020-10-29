@@ -3,6 +3,7 @@ import { useTranslation } from "i18n";
 import { ContactMessageCSS } from "./styles";
 import validator from "validator";
 import { Button, Form, Segment, Input } from "semantic-ui-react";
+import { ToastContainer, toast } from "react-toastify";
 
 import useContactForm from "./hooks";
 
@@ -54,6 +55,17 @@ const ContactMessage = () => {
           <Button type="submit" disabled={!canSubmit}>
             {t("submit")}
           </Button>
+          <ToastContainer
+            position="top-center"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </Segment>
       </Form>
     </ContactMessageCSS>

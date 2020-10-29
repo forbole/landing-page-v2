@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import validator from "validator";
 import axios from "axios";
 import DOMPurify from "isomorphic-dompurify";
+import { toast } from "react-toastify";
 
 const useContactForm = () => {
   const [inputs, setInputs] = useState({ name: "", message: "", email: "" });
@@ -32,7 +33,15 @@ const useContactForm = () => {
           html: `<p>${sanitize(inputs.message)}</p>`,
         })
         .then((res) => {
-          console.log(res);
+          toast.success("Success!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          });
         })
         .catch((err) => console.log(err));
     }
