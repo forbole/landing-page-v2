@@ -9,5 +9,7 @@
   "submit": "SUBMIT",
   "contactInfo": "Contact Information",
   "address": "Flat 3B, Tontex Industrial Building, 2-4 Sheung Hei Street, San Po Kong, Kowloon, Hong Kong",
-  "contactEmail": "referral@forbole.com"
+  "contactEmail": "referral@forbole.com",
+  "success": "Success!",
+  "error": "Oops! Unsuccessful."
 }

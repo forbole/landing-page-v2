@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "i18n";
 import validator from "validator";
 import axios from "axios";
 import DOMPurify from "isomorphic-dompurify";
@@ -8,6 +9,7 @@ const useContactForm = () => {
   const [inputs, setInputs] = useState({ name: "", message: "", email: "" });
   const [canSubmit, setCanSubmit] = useState(false);
   const sanitize = DOMPurify.sanitize;
+  const { t } = useTranslation("contact");
 
   useEffect(() => {
     if (
@@ -33,12 +35,11 @@ const useContactForm = () => {
           html: `<p>${sanitize(inputs.message)}</p>`,
         })
         .then((res) => {
-          console.log(res.status);
-          toast.success("Success!");
+          if (res.status == 200) toast.success(t("success"));
         })
         .catch((err) => {
           console.log(err);
-          toast.error("Oops! Unsuccessful.");
+          toast.error(t("error"));
         });
     }
   };
