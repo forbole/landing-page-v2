@@ -90,6 +90,7 @@ export const DashboardContentCSS = styled.div`
       width: 60%;
     }
     .content {
+      padding-right: 1.5rem;
       width: 50%;
     }
     .ui.black.button:hover {
