@@ -3,7 +3,9 @@ import * as R from "ramda";
 import {
   getNewHeight,
   HEIGHT_QUERY,
+  POLKADOT_HEIGHT_QUERY,
   getNetworkInfo,
+  getPolkadotNewHeight,
 } from "@src/utils/network_info";
 
 export const useGetLatestHeightHook = () => {
@@ -15,6 +17,10 @@ export const useGetLatestHeightHook = () => {
     ["band-protocol"]: "---",
     likecoin: "---",
     iris: "---",
+    iov: "---",
+    ["e-money"]: "---",
+    polkadot: "---",
+    kusama: "---",
   });
 
   const handleSetState = (stateChange: any) => {
@@ -30,10 +36,16 @@ export const useGetLatestHeightHook = () => {
     ["terra-money"]: useRef(null),
     ["band-protocol"]: useRef(null),
     iris: useRef(null),
+    iov: useRef(null),
+    ["e-money"]: useRef(null),
+    polkadot: useRef(null),
+    kusama: useRef(null),
   };
 
   useEffect(() => {
+    // ===============================
     // connections
+    // ===============================
     networks.cosmos.current = new WebSocket(
       getNetworkInfo("cosmos")?.heightSocket
     );
@@ -51,8 +63,19 @@ export const useGetLatestHeightHook = () => {
       getNetworkInfo("band-protocol")?.heightSocket
     );
     networks.iris.current = new WebSocket(getNetworkInfo("iris")?.heightSocket);
-
+    networks.iov.current = new WebSocket(getNetworkInfo("iov")?.heightSocket);
+    networks["e-money"].current = new WebSocket(
+      getNetworkInfo("e-money")?.heightSocket
+    );
+    networks.polkadot.current = new WebSocket(
+      getNetworkInfo("polkadot")?.heightSocket
+    );
+    networks.kusama.current = new WebSocket(
+      getNetworkInfo("kusama")?.heightSocket
+    );
+    // ===============================
     // on open
+    // ===============================
     networks.cosmos.current.onopen = () => {
       networks.cosmos.current.send(HEIGHT_QUERY);
     };
@@ -74,8 +97,21 @@ export const useGetLatestHeightHook = () => {
     networks.iris.current.onopen = () => {
       networks.iris.current.send(HEIGHT_QUERY);
     };
-
+    networks.iov.current.onopen = () => {
+      networks.iov.current.send(HEIGHT_QUERY);
+    };
+    networks["e-money"].current.onopen = () => {
+      networks["e-money"].current.send(HEIGHT_QUERY);
+    };
+    networks.polkadot.current.onopen = () => {
+      networks.polkadot.current.send(POLKADOT_HEIGHT_QUERY);
+    };
+    networks.kusama.current.onopen = () => {
+      networks.kusama.current.send(POLKADOT_HEIGHT_QUERY);
+    };
+    // ===============================
     // onclose
+    // ===============================
     if (process.env.NODE_ENV !== "production") {
       networks.cosmos.current.onclose = () => console.log("cosmos closed");
       networks.akash.current.onclose = () => console.log("akash closed");
@@ -86,9 +122,14 @@ export const useGetLatestHeightHook = () => {
       networks["band-protocol"].current.onclose = () =>
         console.log("band-protocol closed");
       networks.iris.current.onclose = () => console.log("iris closed");
+      networks.iov.current.onclose = () => console.log("iov closed");
+      networks["e-money"].current.onclose = () => console.log("e-money closed");
+      networks.polkadot.current.onclose = () => console.log("polkadot closed");
+      networks.kusama.current.onclose = () => console.log("kusama closed");
     }
-
+    // ===============================
     // unsubscribe
+    // ===============================
     return () => {
       networks.cosmos.current.close();
       networks.akash.current.close();
@@ -97,6 +138,10 @@ export const useGetLatestHeightHook = () => {
       networks["terra-money"].current.close();
       networks["band-protocol"].current.close();
       networks.iris.current.close();
+      networks.iov.current.close();
+      networks["e-money"].current.close();
+      networks.polkadot.current.close();
+      networks.kusama.current.close();
     };
   }, []);
 
@@ -140,6 +185,30 @@ export const useGetLatestHeightHook = () => {
     networks.iris.current.onmessage = (e) => {
       handleSetState({
         iris: getNewHeight(e),
+      });
+    };
+
+    networks.iov.current.onmessage = (e) => {
+      handleSetState({
+        iov: getNewHeight(e),
+      });
+    };
+
+    networks["e-money"].current.onmessage = (e) => {
+      handleSetState({
+        ["e-money"]: getNewHeight(e),
+      });
+    };
+
+    networks.polkadot.current.onmessage = (e) => {
+      handleSetState({
+        polkadot: getPolkadotNewHeight(e),
+      });
+    };
+
+    networks.kusama.current.onmessage = (e) => {
+      handleSetState({
+        kusama: getPolkadotNewHeight(e),
       });
     };
   }, [handleSetState]);

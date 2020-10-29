@@ -89,6 +89,7 @@ const logos = {
     bigDipper: "https://e-money.network/",
     delegate:
       "https://e-money.network/validator/emoneyvaloper1293pqwtzu67zp8txuya4yts03ccw5kgf98hz9y/delegate",
+    heightSocket: "wss://ws.emoney.forbole.com",
   },
   desmos: {
     image: "/static/images/icons/desmos.png",
@@ -107,6 +108,7 @@ const logos = {
     key: "iov",
     delegate:
       "https://big-dipper.iov-mainnet-2.iov.one/validator/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0/delegate",
+    heightSocket: "wss://ws.iov.forbole.com",
   },
   ["oasis-labs"]: {
     image: "/static/images/icons/oasis-labs.png",
@@ -137,7 +139,6 @@ const logos = {
     image: "/static/images/icons/band-protocol.png",
     name: "Band Protocol",
     key: "band-protocol",
-    // wingman need to fix
     heightSocket: "wss://ws.band.forbole.com",
     delegate:
       "https://band.bigdipper.live/validator/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z/delegate",
@@ -158,6 +159,7 @@ const logos = {
     key: "polkadot",
     delegate:
       "https://app.lunie.io/polkadot/validators/12L5PhJ2CT4MujSXoHTsBRZHQym4e6WYRhpAkgNWSwAnjZTf",
+    heightSocket: "wss://rpc.polkadot.io/",
   },
   kusama: {
     image: "/static/images/icons/kusama.png",
@@ -165,6 +167,7 @@ const logos = {
     key: "kusama",
     delegate:
       "https://app.lunie.io/kusama/validators/D9rwRxuG8xm8TZf5tgkbPxhhTJK5frCJU9wvp59VRjcMkUf",
+    heightSocket: "wss://kusama-rpc.polkadot.io/",
   },
   celo: {
     image: "/static/images/icons/celo.png",
@@ -187,5 +190,18 @@ export const getNewHeight = (e: any) => {
   return newHeight;
 };
 
+export const getPolkadotNewHeight = (e: any) => {
+  const message = JSON.parse(e.data);
+  let newHeight = R.pathOr("---", ["params", "result", "number"], message);
+
+  if (newHeight !== "---") {
+    newHeight = Number(newHeight);
+  }
+  return newHeight;
+};
+
 export const HEIGHT_QUERY =
   '{"jsonrpc": "2.0","method": "subscribe","id":"0","params":{"query":"tm.event=\'NewBlock\'"}}';
+
+export const POLKADOT_HEIGHT_QUERY =
+  '{"jsonrpc": "2.0","method": "chain_subscribeAllHeads","id":"0","params":[]}';
