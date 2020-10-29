@@ -16,6 +16,7 @@ const CalculateRewards = () => {
     handleChange,
     tokens,
     error,
+    loading,
   } = useCalculateRewardsHook();
 
   return (
@@ -33,6 +34,7 @@ const CalculateRewards = () => {
             totalEarnings={totalEarnings}
             handleChange={handleChange}
             tokens={tokens}
+            loading={loading}
           />
         </div>
       </ContentCSS>

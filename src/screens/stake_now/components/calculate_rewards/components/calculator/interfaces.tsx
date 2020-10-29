@@ -3,4 +3,5 @@ export interface ICalculatorProp {
   totalEarnings: any;
   handleChange: any;
   tokens: any;
+  loading: boolean;
 }

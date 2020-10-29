@@ -19,6 +19,11 @@ export const Input = styled(SemenaticInput)`
       color: white;
       font-weight: 300;
       transition: 0.2s;
+      padding: 0.5rem 1.2rem;
+      min-width: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &:hover {
         background: black;
       }

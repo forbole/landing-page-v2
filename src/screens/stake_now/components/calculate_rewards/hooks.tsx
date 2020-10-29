@@ -6,6 +6,7 @@ import { getNetworkInfo } from "@utils/network_info";
 import { networkFunctions, toFixed } from "./utils";
 
 export const useCalculateRewardsHook = () => {
+  const [loading, setLoading] = useState(false);
   const [tokens, setTokens] = useState<any | null>({
     value: "",
     display: "",
@@ -29,6 +30,7 @@ export const useCalculateRewardsHook = () => {
 
   const handleCalculations = async () => {
     try {
+      setLoading(true);
       const networkFunction = networkFunctions[selectedToken] ?? null;
 
       if (!selectedToken || !tokens?.value || !networkFunction) {
@@ -120,13 +122,14 @@ export const useCalculateRewardsHook = () => {
           amount: formatAnnualPrice,
         },
       });
-
+      setLoading(false);
       if (error) {
         setError(false);
       }
     } catch (err) {
       console.log(err, "whts the err");
       setError(true);
+      setLoading(false);
     }
   };
 
@@ -148,5 +151,6 @@ export const useCalculateRewardsHook = () => {
     handleChange,
     tokens,
     error,
+    loading,
   };
 };
