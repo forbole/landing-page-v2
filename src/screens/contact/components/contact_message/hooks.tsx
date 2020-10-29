@@ -33,17 +33,13 @@ const useContactForm = () => {
           html: `<p>${sanitize(inputs.message)}</p>`,
         })
         .then((res) => {
-          toast.success("Success!", {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          });
+          console.log(res.status);
+          toast.success("Success!");
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+          toast.error("Oops! Unsuccessful.");
+        });
     }
   };
   const handleInputChange = (event) => {

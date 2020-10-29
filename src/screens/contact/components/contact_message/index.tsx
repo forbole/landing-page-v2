@@ -55,17 +55,6 @@ const ContactMessage = () => {
           <Button type="submit" disabled={!canSubmit}>
             {t("submit")}
           </Button>
-          <ToastContainer
-            position="top-center"
-            autoClose={5000}
-            hideProgressBar={false}
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
         </Segment>
       </Form>
     </ContactMessageCSS>
