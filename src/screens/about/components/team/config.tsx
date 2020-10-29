@@ -19,16 +19,16 @@ export const membersData = [
       twitter: "https://twitter.com/kwunyeung",
     },
   },
-  {
-    name: "Steven Ping",
-    position: "partner",
-    image: "static/images/team/placeholder.jpg",
-    // links: {
-    //   linkedin: "#",
-    //   github: "#",
-    //   twitter: "#",
-    // },
-  },
+  // {
+  //   name: "Steven Ping",
+  //   position: "partner",
+  //   image: "static/images/team/placeholder.jpg",
+  //   // links: {
+  //   //   linkedin: "#",
+  //   //   github: "#",
+  //   //   twitter: "#",
+  //   // },
+  // },
   {
     name: "Anson Cheung",
     position: "projectDirector",
@@ -36,6 +36,54 @@ export const membersData = [
     links: {
       linkedin: "https://www.linkedin.com/in/anson-yk-cheung/",
       github: "https://github.com/anson-cheung",
+      // twitter: "#",
+    },
+  },
+  {
+    name: "Shilin Zheng",
+    position: "researchContent",
+    image: "static/images/team/shilin.jpeg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/ruoyin-zheng-b6687a32/",
+      // twitter: "#",
+    },
+  },
+  {
+    name: "Michael Wu",
+    position: "financeOperationManager",
+    image: "static/images/team/michael.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/michael-wu-a959123b",
+      // github: "https://github.com/anson-cheung",
+      // twitter: "https://twitter.com/Lorinaura?s=20",
+    },
+  },
+  {
+    name: "Caroline Lau",
+    position: "associate",
+    image: "static/images/team/caroline.jpeg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/caroline-lauhy/",
+      twitter: "https://twitter.com/carolinelauhy",
+    },
+  },
+  {
+    name: "Laura Nori",
+    position: "communicationDesigner",
+    image: "static/images/team/laura-nori.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/laura-nori-67826015a/",
+      // github: "https://github.com/anson-cheung",
+      twitter: "https://twitter.com/Lorinaura?s=20",
+    },
+  },
+  {
+    name: "Rooty Chan",
+    position: "uxDesigner",
+    image: "static/images/team/rooty.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/rooty-chan-972985172/",
+      // github: "#",
       // twitter: "#",
     },
   },
@@ -50,51 +98,13 @@ export const membersData = [
     },
   },
   {
-    name: "Shilin Zheng",
-    position: "researchContent",
-    image: "static/images/team/shilin.jpeg",
+    name: "Monika Pusz",
+    position: "swe",
+    image: "static/images/team/monika.jpg",
     links: {
-      linkedin: "https://www.linkedin.com/in/ruoyin-zheng-b6687a32/",
-      // twitter: "#",
-    },
-  },
-  {
-    name: "Caroline Lau",
-    position: "associate",
-    image: "static/images/team/caroline.jpeg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/caroline-lauhy/",
-      twitter: "https://twitter.com/carolinelauhy",
-    },
-  },
-  {
-    name: "Laura",
-    position: "communicationDesigner",
-    image: "static/images/team/laura-nori.jpg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/laura-nori-67826015a/",
-      // github: "https://github.com/anson-cheung",
-      twitter: "https://twitter.com/Lorinaura?s=20",
-    },
-  },
-  {
-    name: "Michael Wu",
-    position: "financeOperationManager",
-    image: "static/images/team/michael.jpg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/michael-wu-a959123b",
-      // github: "https://github.com/anson-cheung",
-      // twitter: "https://twitter.com/Lorinaura?s=20",
-    },
-  },
-  {
-    name: "Rooty Chan",
-    position: "uxDesigner",
-    image: "static/images/team/rooty.jpg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/rooty-chan-972985172/",
-      // github: "#",
-      // twitter: "#",
+      linkedin: "https://www.linkedin.com/in/monika-pusz-b90906150/",
+      github: "https://github.com/MonikaCat",
+      // twitter: "https://twitter.com/ricmontagnin",
     },
   },
   {
@@ -108,13 +118,12 @@ export const membersData = [
     },
   },
   {
-    name: "Rachel Ho",
-    position: "swe",
-    image: "static/images/team/rachel.jpg",
+    name: "Ravi Soni",
+    position: "infrastructureEngineer",
+    image: "static/images/team/ravi.jpg",
     links: {
-      linkedin: "http://linkedin.com/in/rachel-ho-1016",
-      github: "https://github.com/rachelhox/",
-      twitter: "https://twitter.com/zadpoke",
+      // linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
+      // github: "https://github.com/dadamu",
     },
   },
   {
@@ -137,13 +146,13 @@ export const membersData = [
     },
   },
   {
-    name: "Monika Pusz",
+    name: "Rachel Ho",
     position: "swe",
-    image: "static/images/team/monika.jpg",
+    image: "static/images/team/rachel.jpg",
     links: {
-      linkedin: "https://www.linkedin.com/in/monika-pusz-b90906150/",
-      github: "https://github.com/MonikaCat",
-      // twitter: "https://twitter.com/ricmontagnin",
+      linkedin: "http://linkedin.com/in/rachel-ho-1016",
+      github: "https://github.com/rachelhox/",
+      twitter: "https://twitter.com/zadpoke",
     },
   },
   {
@@ -157,6 +166,15 @@ export const membersData = [
     },
   },
   {
+    name: "Paul Chen",
+    position: "swe",
+    image: "static/images/team/paul.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
+      github: "https://github.com/dadamu",
+    },
+  },
+  {
     name: "Wingman Lee",
     position: "swe",
     image: "static/images/team/wingman.jpg",
@@ -165,27 +183,9 @@ export const membersData = [
       github: "https://github.com/ryuash",
     },
   },
-  {
-    name: "Ravi Soni",
-    position: "infrastructureEngineer",
-    image: "static/images/team/placeholder.jpg",
-    links: {
-      // linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
-      // github: "https://github.com/dadamu",
-    },
-  },
-  {
-    name: "Paul Chen",
-    position: "swe",
-    image: "static/images/team/placeholder.jpg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
-      github: "https://github.com/dadamu",
-    },
-  },
   // {
   // name: "You",
   // position: "researchContent",
-  // image: "images/team/123.png",
+  // image: "images/team/placeholder.png",
   // },
 ];

@@ -12,9 +12,10 @@ export const useSubscribeHook = (t: any) => {
     e.preventDefault();
     if (!validator.isEmail(email)) {
       toast.error(t("common:invalidEmail"));
+    } else {
+      toast.success(t("subscribed"));
+      setEmail("");
     }
-    toast.success(t("subscribed"));
-    setEmail("");
   };
 
   return {
