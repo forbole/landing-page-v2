@@ -1,16 +1,9 @@
 export const calculatorKeys = [
   "cosmos",
-  "polkadot",
   "kava",
-  // "terra-money",
   "iris",
-  // "desmos",
   "likecoin",
-  // "cyberd",
-  "e-money",
-  // "regen-network",
   "band-protocol",
   "akash",
   "iov",
-  "kusama",
 ].sort();

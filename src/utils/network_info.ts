@@ -29,6 +29,13 @@ const logos = {
     delegate:
       "https://iris.bigdipper.live/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegate",
     heightSocket: "wss://ws.iris.forbole.com",
+    calculator: {
+      bonded: "http://lcd.iris.forbole.com/staking/pool",
+      inflation: "http://iris.iov.forbole.com/minting/inflation",
+      supply: "http://lcd.iris.forbole.com/supply/total/uiris",
+      stakingParams:
+        "http://lcd.iris.forbole.com/staking/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru",
+    },
   },
   ["terra-money"]: {
     image: "/static/images/icons/terra.png",
@@ -75,6 +82,13 @@ const logos = {
     delegate:
       "https://likecoin.bigdipper.live/validator/cosmosvaloper1v8njts96gl5eqstnen4gksdy5k860fau65c3sw/delegate",
     heightSocket: "wss://ws.likecoin.forbole.com",
+    calculator: {
+      bonded: "http://lcd.likecoin.forbole.com/staking/pool",
+      inflation: "http://lcd.likecoin.forbole.com/minting/inflation",
+      supply: "http://lcd.likecoin.forbole.com/supply/total/nanolike",
+      stakingParams:
+        "http://lcd.likecoin.forbole.com/staking/validators/cosmosvaloper1v8njts96gl5eqstnen4gksdy5k860fau65c3sw",
+    },
   },
   ["regen-network"]: {
     image: "/static/images/icons/regen-network.png",
@@ -109,6 +123,13 @@ const logos = {
     delegate:
       "https://big-dipper.iov-mainnet-2.iov.one/validator/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0/delegate",
     heightSocket: "wss://ws.iov.forbole.com",
+    calculator: {
+      bonded: "http://lcd.iov.forbole.com/staking/pool",
+      inflation: "http://lcd.iov.forbole.com/minting/inflation",
+      supply: "http://lcd.iov.forbole.com/supply/total/uiov",
+      stakingParams:
+        "http://lcd.iov.forbole.com/staking/validators/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0",
+    },
   },
   ["oasis-labs"]: {
     image: "/static/images/icons/oasis-labs.png",
@@ -142,6 +163,13 @@ const logos = {
     heightSocket: "wss://ws.band.forbole.com",
     delegate:
       "https://band.bigdipper.live/validator/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z/delegate",
+    calculator: {
+      bonded: "http://lcd.band.forbole.com/staking/pool",
+      inflation: "http://lcd.band.forbole.com/minting/inflation",
+      supply: "http://lcd.band.forbole.com/supply/total/uband",
+      stakingParams:
+        "http://lcd.band.forbole.com/staking/validators/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z",
+    },
   },
   solana: {
     image: "/static/images/icons/solana.png",

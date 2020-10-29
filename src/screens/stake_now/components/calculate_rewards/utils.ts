@@ -9,11 +9,17 @@ export const defaultConverter = (ratio: number) => (num: number) => {
 };
 export const uAtomToAtom = defaultConverter(1000000);
 
-export const uLunaToLuna = defaultConverter(1000000);
+// export const uLunaToLuna = defaultConverter(1000000);
 
 export const uKavaToKava = defaultConverter(1000000);
 
 export const uAktToAkash = defaultConverter(1000000);
+
+export const uBandToBand = defaultConverter(1000000);
+
+export const uIovToIov = defaultConverter(1000000);
+
+export const nanoLikeToLike = defaultConverter(1000000);
 
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
@@ -40,8 +46,8 @@ export const defaultFunctions = (converter: any) => ({
 const cosmos = R.clone(defaultFunctions(uAtomToAtom));
 cosmos.gecko = "https://api.coingecko.com/api/v3/coins/cosmos";
 
-const terra = R.clone(defaultFunctions(uLunaToLuna));
-terra.gecko = "https://api.coingecko.com/api/v3/coins/terra-luna";
+// const terra = R.clone(defaultFunctions(uLunaToLuna));
+// terra.gecko = "https://api.coingecko.com/api/v3/coins/terra-luna";
 
 const kava = R.clone(defaultFunctions(uKavaToKava));
 kava.gecko = "https://api.coingecko.com/api/v3/coins/kava";
@@ -49,10 +55,22 @@ kava.gecko = "https://api.coingecko.com/api/v3/coins/kava";
 const akash = R.clone(defaultFunctions(uAktToAkash));
 akash.gecko = "https://api.coingecko.com/api/v3/coins/akash-network";
 
+const band = R.clone(defaultFunctions(uBandToBand));
+band.gecko = "https://api.coingecko.com/api/v3/coins/band-protocol";
+
+const iov = R.clone(defaultFunctions(uBandToBand));
+iov.gecko = "https://api.coingecko.com/api/v3/coins/starname";
+
+const likecoin = R.clone(defaultFunctions(uBandToBand));
+likecoin.gecko = "https://api.coingecko.com/api/v3/coins/likecoin";
+
 // available networks for calculations
 export const networkFunctions = {
   cosmos,
   kava,
   akash,
+  iov,
+  likecoin,
+  ["band-protocol"]: band,
   // ["terra-money"]: terra,
 };
