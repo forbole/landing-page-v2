@@ -13,7 +13,6 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 const port = process.env.PORT;
 const url = process.env.NEXT_PUBLIC_URL;
-
 const transporter = nodemailer.createTransport({
   service: "Mailgun",
   host: "smtp.mailgun.org",
@@ -24,12 +23,10 @@ const transporter = nodemailer.createTransport({
     pass: process.env.MAIL_GUN_PW,
   },
 });
-
 (async () => {
   try {
     await app.prepare();
     const server = express();
-
     await nextI18next.initPromise;
     server.use(cors());
     server.use(nextI18NextMiddleware(nextI18next));

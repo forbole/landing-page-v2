@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "i18n";
 import validator from "validator";
 import axios from "axios";
 import DOMPurify from "isomorphic-dompurify";
+import { toast } from "react-toastify";
 
 const useContactForm = () => {
   const [inputs, setInputs] = useState({ name: "", message: "", email: "" });
   const [canSubmit, setCanSubmit] = useState(false);
   const sanitize = DOMPurify.sanitize;
+  const { t } = useTranslation("contact");
 
   useEffect(() => {
     if (
@@ -32,9 +35,12 @@ const useContactForm = () => {
           html: `<p>${sanitize(inputs.message)}</p>`,
         })
         .then((res) => {
-          console.log(res);
+          if (res.status == 200) toast.success(t("success"));
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+          console.log(err);
+          toast.error(t("error"));
+        });
     }
   };
   const handleInputChange = (event) => {
