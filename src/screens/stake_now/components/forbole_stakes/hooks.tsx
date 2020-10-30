@@ -15,18 +15,18 @@ export const useForboleStakesHook = () => {
     denom: "ATOM",
     voting: {
       title: "votingPower",
-      atom: 32545,
-      percent: 1.84,
+      atom: 0,
+      percent: 0,
     },
     selfDelegations: {
       title: "selfDelegations",
-      atom: 32577,
-      percent: 0.95,
+      atom: 0,
+      percent: 0,
     },
     otherDelegations: {
       title: "otherDelegations",
-      atom: 3245,
-      percent: 0.95,
+      atom: 0,
+      percent: 0,
     },
   });
 
@@ -39,16 +39,27 @@ export const useForboleStakesHook = () => {
     const stakingParamsApi = axios.post("/api/proxy", {
       url: calculator.stakingParams,
     });
+    const delegationsApi = axios.post("/api/proxy", {
+      url:
+        "http://lcd.cosmoshub.bigdipper.live/staking/delegators/cosmos14kn0kk33szpwus9nh8n87fjel8djx0y0mmswhp/delegations",
+    });
     const marketPriceApi = axios.get(networkFunction?.gecko);
 
-    const promises = [bondedApi, stakingParamsApi, marketPriceApi];
+    const promises = [
+      bondedApi,
+      stakingParamsApi,
+      delegationsApi,
+      marketPriceApi,
+    ];
 
     const [
       { data: bondedJson },
       { data: stakingParamsJson },
+      { data: delegationsJson },
       { data: marketPriceJson },
     ] = await Promise.all(promises);
-
+    console.log(delegationsJson, "delegations json");
+    // console.log(marketPriceJson, "mak");
     const totalAtom = networkFunction?.converter(
       Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson))
     );
@@ -61,7 +72,21 @@ export const useForboleStakesHook = () => {
     const currentMarketValue = networkFunction.marketPrice(marketPriceJson);
     const totalMarketValue = convertToMoney(currentMarketValue * totalAtom);
     const votingPowerPercent = convertToMoney((totalAtom / bonded) * 100, 2);
-
+    //==========================
+    // self-delegations
+    //==========================
+    const totalSelfDelegations = networkFunction?.converter(
+      R.pathOr([], ["result"], delegationsJson).reduce(
+        (a, b) => (a += Number(b?.balance) ?? 0),
+        0
+      )
+    );
+    const totalSelfDelegationsFormat = convertToMoney(totalSelfDelegations);
+    const totalSelfDelegationsPercent = convertToMoney(
+      (totalSelfDelegations / bonded) * 100,
+      2
+    );
+    console.log(totalSelfDelegations, "the total");
     setCosmos(
       R.mergeDeepLeft(
         {
@@ -71,6 +96,10 @@ export const useForboleStakesHook = () => {
           voting: {
             atom: totalAtomFormat,
             percent: votingPowerPercent,
+          },
+          selfDelegations: {
+            atom: totalSelfDelegationsFormat,
+            percent: totalSelfDelegationsPercent,
           },
         },
         cosmos
@@ -84,7 +113,7 @@ export const useForboleStakesHook = () => {
     } catch (err) {
       console.log(err);
     }
-  }, [cosmos]);
+  }, []);
 
   return {
     cosmos,
