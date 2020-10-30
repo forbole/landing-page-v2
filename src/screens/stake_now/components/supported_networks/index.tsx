@@ -20,9 +20,9 @@ const SupportedNetworks = () => {
       <HeaderContentCSS>
         <h2>{t("supportedNetworks")}</h2>
         <p>{t("supportedNeworksContent")}</p>
-        <TermsOfService
+        {/* <TermsOfService
           trigger={<p className="terms">{t("termsOfService")}</p>}
-        />
+        /> */}
       </HeaderContentCSS>
       <NetworkListCSS>
         {networkData.map((x) => (

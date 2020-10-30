@@ -132,12 +132,27 @@ export const useCalculateRewardsHook = (t: any) => {
 
   const handleChange = (e: any) => {
     const value = R.pathOr(0, ["target", "value"], e);
-    const rawNumber = value.replace(/\D/g, "");
-    const convertedNumber = convertToMoney(rawNumber);
-    setTokens({
-      value: rawNumber,
-      display: convertedNumber,
+    let occurance = 0;
+    value.forEach((x) => {
+      if (x === ".") {
+        occurance += 1;
+      }
     });
+
+    if (occurance === 1 && value[value.length - 1] === ".") {
+      // check . only appeared once
+      setTokens({
+        value: tokens.value,
+        display: value,
+      });
+    } else {
+      const rawNumber = value.replace(/\D/g, "");
+      const convertedNumber = convertToMoney(rawNumber);
+      setTokens({
+        value: rawNumber,
+        display: convertedNumber,
+      });
+    }
   };
 
   return {
