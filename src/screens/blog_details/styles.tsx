@@ -22,6 +22,8 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
 `;
 
 export const ContentCSS = styled.div`
+  overflow: auto;
+  word-break: break-word;
   ${mixins.mobileLastContainerPadding}
   padding-top: 4rem;
   width: 100%;
@@ -75,6 +77,7 @@ export const GhostCSS = styled.div`
 
   .gh-canvas {
     display: grid;
+    word-break: break-all;
     grid-template-columns:
       [full-start]
       minmax(calc(calc(100% - 1200px) / 2), 1fr)
@@ -148,6 +151,8 @@ export const GhostCSS = styled.div`
 
   [id]:not(:first-child) {
     margin: 1.5em 0 0;
+    font-size: 2rem;
+}
   }
 
   > [id] + * {
@@ -205,12 +210,22 @@ export const GhostCSS = styled.div`
     .gh-canvas ul,
     .gh-canvas dl,
     .gh-canvas p {
-      font-size: 1.8rem;
+      font-size: 10.8rem;
     }
 
     blockquote::before {
       left: -4vmin;
     }
+  }
+
+  @media (max-width: 430px) {
+    /* word-break: break-all; */
+    /* hyphens: auto;
+    color: "red";
+    .hyphenate {
+
+    hyphens: auto;
+} */
   }
 
   /* Cards
