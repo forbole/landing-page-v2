@@ -43,6 +43,7 @@ export const defaultFunctions = (converter: any) => ({
       Number(R.pathOr(0, ["market_data", "current_price", "usd"], data))
     );
   },
+  converter,
 });
 
 const cosmos = R.clone(defaultFunctions(uAtomToAtom));

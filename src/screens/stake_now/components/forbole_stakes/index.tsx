@@ -9,34 +9,52 @@ import {
 } from "./styles";
 import HubDetail from "./components/hub_detail";
 import Chart from "./components/chart";
-import { dummyData } from "./config";
-const { cosmos } = dummyData;
+import { useForboleStakesHook } from "./hooks";
 
 const ForboleStakes = () => {
   const { t } = useTranslation("stake_now");
-
+  const hookProps = useForboleStakesHook();
+  const { cosmos } = hookProps;
+  const { voting, selfDelegations, otherDelegations } = cosmos;
   return (
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
-      <h1>${convertToMoney(dummyData.stakeAmount)}</h1>
+      {/* fix later */}
+      <h1>${convertToMoney(1298873168)}</h1>
       <FlexContainerCSS>
         <ChartContainerCSS>
-          <Chart />
+          <Chart {...hookProps} />
         </ChartContainerCSS>
         <StakesDetailsContainerCSS>
           <HubDetail
             main
+            denom={cosmos.denom}
             title={cosmos.title}
-            atom={cosmos.atom}
-            usd={cosmos.usd}
-            perAtom={cosmos.perAtom}
+            atom={cosmos.totalAtom}
+            usd={cosmos.totalMarketValue}
+            perAtom={cosmos.currentMarketValue}
           />
-          {dummyData.details.map((x) => (
-            <React.Fragment key={x.title}>
-              <hr className="stats-hr" />
-              <HubDetail title={x.title} atom={x.atom} percent={x.percent} />
-            </React.Fragment>
-          ))}
+          <hr className="stats-hr" />
+          <HubDetail
+            denom={cosmos.denom}
+            title={voting.title}
+            atom={voting.atom}
+            percent={voting.percent}
+          />
+          <hr className="stats-hr" />
+          <HubDetail
+            denom={cosmos.denom}
+            title={selfDelegations.title}
+            atom={selfDelegations.atom}
+            percent={selfDelegations.percent}
+          />
+          <hr className="stats-hr" />
+          <HubDetail
+            denom={cosmos.denom}
+            title={otherDelegations.title}
+            atom={otherDelegations.atom}
+            percent={otherDelegations.percent}
+          />
         </StakesDetailsContainerCSS>
       </FlexContainerCSS>
     </ForboleStakesCSS>

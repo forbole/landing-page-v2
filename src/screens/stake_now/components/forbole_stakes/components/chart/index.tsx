@@ -3,7 +3,7 @@ import { useTranslation } from "i18n";
 import { PieChart } from "react-minimal-pie-chart";
 
 const fakeData = [
-  { title: "One", value: 25, color: "#FF6767" },
+  { title: "cosmos", value: 25, color: "#FF6767" },
   { title: "Two", value: 25, color: "#50FFB4" },
   { title: "Four", value: 20, color: "#499EFC" },
   { title: "Three", value: 15, color: "#31DDE6" },
@@ -13,9 +13,9 @@ const fakeData = [
   { title: "Four", value: 2, color: "#FDE425" },
 ];
 
-const Chart = () => {
+const Chart = (props: any) => {
   const { t } = useTranslation("stake_now");
-  const [selected, setSelected] = useState<number | undefined>(0);
+  const { selected, setSelected } = props;
 
   const lineWidth = 50;
   const segmentsStyle = { transition: "stroke .3s", cursor: "pointer" };
@@ -37,6 +37,9 @@ const Chart = () => {
       label={() => `${t("cosmosHub")}`}
       labelPosition={0}
       startAngle={285}
+      // onClick={(_, index) => {
+      //   setSelected(index === selected ? undefined : index);
+      // }}
       labelStyle={{
         fill: "#fff",
         opacity: 0.75,

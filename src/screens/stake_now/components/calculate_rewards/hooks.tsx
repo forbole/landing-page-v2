@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { convertToMoney } from "@utils/convert_to_money";
 import { getNetworkInfo } from "@utils/network_info";
-import { networkFunctions, toFixed } from "./utils";
+import { networkFunctions, toFixed } from "../../utils";
 
 export const useCalculateRewardsHook = (t: any) => {
   const [loading, setLoading] = useState(false);
