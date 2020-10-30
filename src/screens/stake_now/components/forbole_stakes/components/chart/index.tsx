@@ -3,15 +3,19 @@ import { useTranslation } from "i18n";
 import { PieChart } from "react-minimal-pie-chart";
 
 const fakeData = [
-  { title: "One", value: 10, color: "#E38627" },
-  { title: "Two", value: 15, color: "#C13C37" },
-  { title: "Three", value: 20, color: "#6A2135" },
-  { title: "Four", value: 20, color: "pink" },
+  { title: "One", value: 25, color: "#FF6767" },
+  { title: "Two", value: 25, color: "#50FFB4" },
+  { title: "Four", value: 20, color: "#499EFC" },
+  { title: "Three", value: 15, color: "#31DDE6" },
+  { title: "Four", value: 10, color: "#E6A531" },
+  { title: "Four", value: 5, color: "#CB86FF" },
+  { title: "Four", value: 3, color: "#FF7753" },
+  { title: "Four", value: 2, color: "#FDE425" },
 ];
 
 const Chart = () => {
   const { t } = useTranslation("stake_now");
-  const [selected, setSelected] = useState<number | undefined>(3);
+  const [selected, setSelected] = useState<number | undefined>(0);
 
   const lineWidth = 50;
   const segmentsStyle = { transition: "stroke .3s", cursor: "pointer" };
@@ -32,6 +36,7 @@ const Chart = () => {
       animate
       label={() => `${t("cosmosHub")}`}
       labelPosition={0}
+      startAngle={285}
       labelStyle={{
         fill: "#fff",
         opacity: 0.75,

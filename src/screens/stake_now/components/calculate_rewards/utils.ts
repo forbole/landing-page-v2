@@ -19,6 +19,8 @@ export const uBandToBand = defaultConverter(1000000);
 
 export const uIovToIov = defaultConverter(1000000);
 
+export const uIrisToIris = defaultConverter(1000000);
+
 export const nanoLikeToLike = defaultConverter(1000000);
 
 export const defaultFunctions = (converter: any) => ({
@@ -64,6 +66,9 @@ iov.gecko = "https://api.coingecko.com/api/v3/coins/starname";
 const likecoin = R.clone(defaultFunctions(uBandToBand));
 likecoin.gecko = "https://api.coingecko.com/api/v3/coins/likecoin";
 
+const iris = R.clone(defaultFunctions(uBandToBand));
+iris.gecko = "https://api.coingecko.com/api/v3/coins/irisnet";
+
 // available networks for calculations
 export const networkFunctions = {
   cosmos,
@@ -71,6 +76,6 @@ export const networkFunctions = {
   akash,
   iov,
   likecoin,
+  iris,
   ["band-protocol"]: band,
-  // ["terra-money"]: terra,
 };
