@@ -2,7 +2,7 @@ import { useState } from "react";
 import * as R from "ramda";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { convertToMoney, testFormat } from "@utils/convert_to_money";
+import { convertToMoney, convertWithDecimal } from "@utils/convert_to_money";
 import { getNetworkInfo } from "@utils/network_info";
 import { networkFunctions, toFixed } from "../../utils";
 
@@ -132,6 +132,14 @@ export const useCalculateRewardsHook = (t: any) => {
 
   const handleChange = (e: any) => {
     const value = R.pathOr(0, ["target", "value"], e);
+    if (!value) {
+      setTokens({
+        value: "",
+        display: "",
+      });
+      return;
+    }
+    // edge cases setup
     const exceptions = [".", "0"];
     let occurance = 0;
     value.split("").forEach((x) => {
@@ -151,14 +159,10 @@ export const useCalculateRewardsHook = (t: any) => {
         display: value,
       });
     } else {
-      // console.log(value, "value");
-      const rawNumber = Number(value.replace(/[^\d.]/g, ""));
-      // if (isNaN(rawNumber)) {
-      //   rawNumber = value.replace(/[^\d.]/g, "");
-      // }
-      const convertedNumber = testFormat(rawNumber);
-      console.log(rawNumber, "raw");
-      console.log(convertedNumber, "converted");
+      const rawNumber = value.replace(/[^\d.]/g, "")
+        ? Number(value.replace(/[^\d.]/g, ""))
+        : "";
+      const convertedNumber = convertWithDecimal(rawNumber);
       setTokens({
         value: rawNumber,
         display: convertedNumber,
