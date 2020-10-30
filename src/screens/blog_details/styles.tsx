@@ -150,7 +150,6 @@ export const GhostCSS = styled.div`
 
   [id]:not(:first-child) {
     margin: 1.5em 0 0;
-}
   }
 
   > [id] + * {
