@@ -74,10 +74,13 @@ export const useForboleStakesHook = () => {
     // self-delegations
     //==========================
     const totalSelfDelegations = networkFunction?.converter(
-      R.pathOr([], ["result"], delegationsJson).reduce(
-        (a, b) => (a += Number(b?.balance) ?? 0),
-        0
-      )
+      R.pathOr([], ["result"], delegationsJson)
+        .filter(
+          (x) =>
+            x?.["validator_address"] ===
+            "cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj"
+        )
+        .reduce((a, b) => (a += Number(b?.balance) ?? 0), 0)
     );
     const totalSelfDelegationsFormat = convertToMoney(totalSelfDelegations);
     const totalSelfDelegationsPercent = convertToMoney(
@@ -88,17 +91,7 @@ export const useForboleStakesHook = () => {
     //==========================
     // other-delegations
     //==========================
-    const selfToSelfDelegation = networkFunction?.converter(
-      R.pathOr([], ["result"], delegationsJson)
-        .filter(
-          (x) =>
-            x?.["validator_address"] ===
-            "cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj"
-        )
-        .reduce((a, b) => (a += Number(b?.balance) ?? 0), 0)
-    );
-
-    const otherDelegations = totalAtom - selfToSelfDelegation;
+    const otherDelegations = totalAtom - totalSelfDelegations;
     const otherDelegationsFormat = convertToMoney(otherDelegations);
     const otherDelegationsPercent = convertToMoney(
       (otherDelegations / bonded) * 100,

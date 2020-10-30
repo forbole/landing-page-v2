@@ -20,7 +20,7 @@ const ForboleStakes = () => {
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
       {/* fix later */}
-      <h1>${convertToMoney(1298873168)}</h1>
+      <h1>${convertToMoney(30791930)}</h1>
       <FlexContainerCSS>
         <ChartContainerCSS>
           <Chart {...hookProps} />

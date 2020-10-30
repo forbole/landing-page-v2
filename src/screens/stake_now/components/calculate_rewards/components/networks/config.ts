@@ -1,7 +1,7 @@
 export const calculatorKeys = [
   "cosmos",
   "kava",
-  // "iris",
+  "iris",
   "likecoin",
   "band-protocol",
   "akash",

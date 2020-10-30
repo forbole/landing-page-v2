@@ -19,9 +19,9 @@ export const uBandToBand = defaultConverter(1000000);
 
 export const uIovToIov = defaultConverter(1000000);
 
-export const uIrisToIris = defaultConverter(1000000);
+export const uIrisToIris = defaultConverter(1000000000000000000);
 
-export const nanoLikeToLike = defaultConverter(1000000);
+export const nanoLikeToLike = defaultConverter(1000000000);
 
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
@@ -69,16 +69,21 @@ likecoin.gecko = "https://api.coingecko.com/api/v3/coins/likecoin";
 
 const iris: any = {
   bonded: (data: any) => {
-    return uIrisToIris(Number(R.pathOr(0, ["bonded_tokens"], data)));
+    return Number(R.pathOr(0, ["bonded_tokens"], data));
   },
   inflation: (data: any) => {
-    return toFixed(Number(R.pathOr(0, ["result"], data))) ?? 0;
+    const [inflationData] = data?.filter(
+      (x) => x?.type === "irishub/mint/Params"
+    );
+    return (
+      toFixed(Number(R.pathOr(0, ["value", "inflation"], inflationData))) ?? 0
+    );
   },
   supply: (data: any) => {
-    const supply = R.pathOr([], ["total_supply"], data).filter(
+    const [supply] = R.pathOr([], ["total_supply"], data).filter(
       (x) => x.denom === "iris-atto"
     );
-    return uIrisToIris(Number(R.pathOr(0, [0, "amount"], supply)));
+    return uIrisToIris(Number(R.pathOr(0, ["amount"], supply)));
   },
   commissionRate: (data: any) => {
     return Number(R.pathOr(0, ["commission", "rate"], data));
@@ -90,7 +95,7 @@ const iris: any = {
   },
 };
 
-iris.gecko = "https://api.coingecko.com/api/v3/coins/irisnet";
+iris.gecko = "https://api.coingecko.com/api/v3/coins/iris-network";
 
 // available networks for calculations
 export const networkFunctions = {

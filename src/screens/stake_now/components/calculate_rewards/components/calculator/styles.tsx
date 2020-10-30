@@ -33,6 +33,7 @@ export const Input = styled(SemenaticInput)`
 
 export const StatsDetailsCSS = styled.div`
   padding: 1.5rem 0;
+  overflow: auto;
   hr {
     ${mixins.grayHr}
     margin: 0.5rem 0;
