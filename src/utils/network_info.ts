@@ -12,7 +12,7 @@ const logos = {
     bigDipper: "https://cosmos.bigdipper.live/",
     delegate:
       "https://cosmos.bigdipper.live/validators/cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj/delegate",
-    heightSocket: "ws://rpc.cosmoshub.bigdipper.live/websocket",
+    heightSocket: "wss://ws.cosmoshub.forbole.com",
     calculator: {
       bonded: "http://lcd.cosmoshub.bigdipper.live/staking/pool",
       inflation: "http://lcd.cosmoshub.bigdipper.live/minting/inflation",
