@@ -92,7 +92,7 @@ export const useCalculateRewardsHook = (t: any) => {
       ((tokens?.value * inflation) / (bonded / supply)) * (1 - commissionRate)
     );
     const monthlyRewards = annualRewards / 12;
-    const dailyRewards = monthlyRewards / 12;
+    const dailyRewards = monthlyRewards / 30;
     // ===============================
     // formats for display
     // ===============================
