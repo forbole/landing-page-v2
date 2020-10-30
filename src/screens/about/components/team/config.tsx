@@ -12,7 +12,7 @@ export const membersData = [
   {
     name: "Kwun Yeung",
     position: "cofounderConductor",
-    image: "static/images/team/kwun-yeung-1.jpg",
+    image: "static/images/team/kwun.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/kwunyeung/",
       github: "https://github.com/kwunyeung",
@@ -100,18 +100,26 @@ export const membersData = [
     },
   },
   {
-    name: "Ravi Soni",
-    position: "infrastructureEngineer",
-    image: "static/images/team/ravi.jpg",
-    links: {},
-  },
-  {
     name: "Tina Liao",
     position: "swe",
     image: "static/images/team/tina.jpeg",
     links: {
       linkedin: "https://www.linkedin.com/in/yu-hsin-liao-0625319a/",
       github: "https://github.com/YuhsinLiao1995",
+    },
+  },
+  {
+    name: "Ravi Soni",
+    position: "infrastructureEngineer",
+    image: "static/images/team/ravi.jpg",
+    links: {},
+  },
+  {
+    name: "Apple Choi",
+    position: "swe",
+    image: "static/images/team/apple.jpeg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/hau-yi-choi-4929b6153/",
     },
   },
   {
@@ -132,14 +140,6 @@ export const membersData = [
       linkedin: "http://linkedin.com/in/rachel-ho-1016",
       github: "https://github.com/rachelhox/",
       twitter: "https://twitter.com/zadpoke",
-    },
-  },
-  {
-    name: "Apple Choi",
-    position: "swe",
-    image: "static/images/team/apple.jpeg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/hau-yi-choi-4929b6153/",
     },
   },
   {
