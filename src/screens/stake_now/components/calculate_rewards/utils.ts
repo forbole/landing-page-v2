@@ -66,7 +66,29 @@ iov.gecko = "https://api.coingecko.com/api/v3/coins/starname";
 const likecoin = R.clone(defaultFunctions(uBandToBand));
 likecoin.gecko = "https://api.coingecko.com/api/v3/coins/likecoin";
 
-const iris = R.clone(defaultFunctions(uBandToBand));
+const iris: any = {
+  bonded: (data: any) => {
+    return uIrisToIris(Number(R.pathOr(0, ["bonded_tokens"], data)));
+  },
+  inflation: (data: any) => {
+    return toFixed(Number(R.pathOr(0, ["result"], data))) ?? 0;
+  },
+  supply: (data: any) => {
+    const supply = R.pathOr([], ["total_supply"], data).filter(
+      (x) => x.denom === "iris-atto"
+    );
+    return uIrisToIris(Number(R.pathOr(0, [0, "amount"], supply)));
+  },
+  commissionRate: (data: any) => {
+    return Number(R.pathOr(0, ["commission", "rate"], data));
+  },
+  marketPrice: (data: any) => {
+    return toFixed(
+      Number(R.pathOr(0, ["market_data", "current_price", "usd"], data))
+    );
+  },
+};
+
 iris.gecko = "https://api.coingecko.com/api/v3/coins/irisnet";
 
 // available networks for calculations
