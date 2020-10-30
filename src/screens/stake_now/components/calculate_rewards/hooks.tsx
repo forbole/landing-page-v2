@@ -125,7 +125,6 @@ export const useCalculateRewardsHook = (t: any) => {
       await handleDefaultCalculation();
       setLoading(false);
     } catch (err) {
-      // console.log(err, "whts the err");
       toast.error(t("error"));
       setLoading(false);
     }

@@ -13,8 +13,8 @@ const StakeNow = () => {
   return (
     <Layout title={t("title")}>
       <ForboleStakes />
-      {/* <CalculateRewards /> */}
-      {/* <SupportedNetworks /> */}
+      <CalculateRewards />
+      <SupportedNetworks />
     </Layout>
   );
 };

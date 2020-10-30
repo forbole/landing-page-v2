@@ -58,8 +58,6 @@ export const useForboleStakesHook = () => {
       { data: delegationsJson },
       { data: marketPriceJson },
     ] = await Promise.all(promises);
-    console.log(delegationsJson, "delegations json");
-    // console.log(marketPriceJson, "mak");
     const totalAtom = networkFunction?.converter(
       Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson))
     );
@@ -86,7 +84,26 @@ export const useForboleStakesHook = () => {
       (totalSelfDelegations / bonded) * 100,
       2
     );
-    console.log(totalSelfDelegations, "the total");
+
+    //==========================
+    // other-delegations
+    //==========================
+    const selfToSelfDelegation = networkFunction?.converter(
+      R.pathOr([], ["result"], delegationsJson)
+        .filter(
+          (x) =>
+            x?.["validator_address"] ===
+            "cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj"
+        )
+        .reduce((a, b) => (a += Number(b?.balance) ?? 0), 0)
+    );
+
+    const otherDelegations = totalAtom - selfToSelfDelegation;
+    const otherDelegationsFormat = convertToMoney(otherDelegations);
+    const otherDelegationsPercent = convertToMoney(
+      (otherDelegations / bonded) * 100,
+      2
+    );
     setCosmos(
       R.mergeDeepLeft(
         {
@@ -100,6 +117,10 @@ export const useForboleStakesHook = () => {
           selfDelegations: {
             atom: totalSelfDelegationsFormat,
             percent: totalSelfDelegationsPercent,
+          },
+          otherDelegations: {
+            atom: otherDelegationsFormat,
+            percent: otherDelegationsPercent,
           },
         },
         cosmos

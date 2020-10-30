@@ -18,7 +18,8 @@ const Chart = (props: any) => {
   const { selected, setSelected } = props;
 
   const lineWidth = 50;
-  const segmentsStyle = { transition: "stroke .3s", cursor: "pointer" };
+  // change to pointer in future
+  const segmentsStyle = { transition: "stroke .3s", cursor: "initial" };
 
   return (
     <PieChart
