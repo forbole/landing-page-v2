@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 export const convertToMoney = (num: any, decimal = 0) => {
-  if (!num) {
+  if (!num && num !== 0) {
     return '';
   }
   if (typeof num === 'string') {
@@ -12,3 +12,10 @@ export const convertToMoney = (num: any, decimal = 0) => {
   num = num.toFixed(decimal);
   return num.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 };
+
+export const testFormat = (num:any) => {
+  let stringNum = num.toString();
+  const [full, decimal] = stringNum.split('.');
+  const formatFull = full.replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+  return `${formatFull}${decimal ? '.': ''}${decimal ?? ''}`
+}

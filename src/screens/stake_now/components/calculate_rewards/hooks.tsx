@@ -2,7 +2,7 @@ import { useState } from "react";
 import * as R from "ramda";
 import axios from "axios";
 import { toast } from "react-toastify";
-import { convertToMoney } from "@utils/convert_to_money";
+import { convertToMoney, testFormat } from "@utils/convert_to_money";
 import { getNetworkInfo } from "@utils/network_info";
 import { networkFunctions, toFixed } from "../../utils";
 
@@ -132,22 +132,33 @@ export const useCalculateRewardsHook = (t: any) => {
 
   const handleChange = (e: any) => {
     const value = R.pathOr(0, ["target", "value"], e);
+    const exceptions = [".", "0"];
     let occurance = 0;
-    value.forEach((x) => {
+    value.split("").forEach((x) => {
       if (x === ".") {
         occurance += 1;
       }
     });
 
-    if (occurance === 1 && value[value.length - 1] === ".") {
-      // check . only appeared once
+    // already has a decimal place
+    if (occurance > 1 && value[value.length - 1] === ".") {
+      return;
+    }
+    // handles edge cases
+    if (exceptions.includes(value[value.length - 1])) {
       setTokens({
-        value: tokens.value,
+        value: value,
         display: value,
       });
     } else {
-      const rawNumber = value.replace(/\D/g, "");
-      const convertedNumber = convertToMoney(rawNumber);
+      // console.log(value, "value");
+      const rawNumber = Number(value.replace(/[^\d.]/g, ""));
+      // if (isNaN(rawNumber)) {
+      //   rawNumber = value.replace(/[^\d.]/g, "");
+      // }
+      const convertedNumber = testFormat(rawNumber);
+      console.log(rawNumber, "raw");
+      console.log(convertedNumber, "converted");
       setTokens({
         value: rawNumber,
         display: convertedNumber,
