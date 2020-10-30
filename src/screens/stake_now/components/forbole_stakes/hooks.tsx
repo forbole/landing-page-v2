@@ -57,16 +57,25 @@ export const useForboleStakesHook = () => {
         Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson))
       )
     );
-    const bonded = convertToMoney(networkFunction?.bonded(bondedJson));
+    const bonded = networkFunction?.bonded(bondedJson);
     const currentMarketValue = networkFunction.marketPrice(marketPriceJson);
     const totalMarketValue = convertToMoney(currentMarketValue * totalAtom);
+    const votingPowerPercent = convertToMoney((totalAtom / bonded) * 100, 2);
 
-    setCosmos({
-      ...cosmos,
-      totalAtom: totalAtomFormat,
-      totalMarketValue,
-      currentMarketValue,
-    });
+    setCosmos(
+      R.mergeDeepLeft(
+        {
+          totalAtom: totalAtomFormat,
+          totalMarketValue,
+          currentMarketValue,
+          voting: {
+            atom: totalAtomFormat,
+            percent: votingPowerPercent,
+          },
+        },
+        cosmos
+      )
+    );
   };
 
   useEffect(() => {
