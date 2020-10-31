@@ -6,7 +6,7 @@ const { colors } = theme;
 export const HeroContentCSS = styled.div`
   ${mixins.mobilePadding};
   background-image: linear-gradient(0deg, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
-    url("static/images/assets/horse.png");
+    url("/static/images/assets/horse.png");
   background-repeat: no-repeat;
   background-position: 50% 52%;
   background-size: 444%;

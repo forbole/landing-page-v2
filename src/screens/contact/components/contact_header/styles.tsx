@@ -12,7 +12,7 @@ export const ContactHeaderCSS = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   background: linear-gradient(0deg, rgb(32, 6, 105, 0.7), rgb(24, 0, 88, 0.84)),
-    url("static/images/assets/contact-us.png");
+    url("/static/images/assets/contact-us.png");
   height: 350px;
   background-repeat: no-repeat;
   background-position: center center;
@@ -30,7 +30,7 @@ export const ContactHeaderCSS = styled.div`
   }
 
   ${media.bigDesktop`
-    background: linear-gradient(0deg, rgb(32, 6, 105, 0.7), rgb(24, 0, 88, 0.4)),url("static/images/assets/contact-us.png");
+    background: linear-gradient(0deg, rgb(32, 6, 105, 0.7), rgb(24, 0, 88, 0.4)),url("/static/images/assets/contact-us.png");
     display: flex;
     align-items: center;
     height: 500px;

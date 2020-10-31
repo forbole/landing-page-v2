@@ -15,7 +15,7 @@ export const HeroCSS = styled(CoverCSS)`
       rgba(0, 0, 0, 0.68),
       rgba(0, 0, 0, 0.68)
     ),
-    url("static/images/assets/desmos-hero.jpg");
+    url("/static/images/assets/desmos-hero.jpg");
   background-position: left bottom;
 
   .visit-website {

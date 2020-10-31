@@ -2,7 +2,7 @@
   "name": "with-typescript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "NODE_ENV=development nodemon",
     "build": "npm run semantic:build && npm run build:next && npm run build:server",
     "build:server": "tsc --project tsconfig.server.json",
     "build:next": "next build",
