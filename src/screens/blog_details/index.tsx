@@ -1,9 +1,7 @@
 import React from "react";
-import { useTranslation } from "i18n";
 import DOMPurify from "isomorphic-dompurify";
 import { Layout, Tags } from "@components";
 import { theme } from "@styles";
-import { fakeBlog } from "./config";
 import {
   BlogDetailsCSS,
   MaxWidthContainerCSS,
@@ -16,7 +14,6 @@ import { Author, SocialMedia } from "./components";
 const { colors } = theme;
 
 const BlogDetails = ({ post }: any) => {
-  const { t } = useTranslation("blog");
   const { tags } = post;
   const sanitize = DOMPurify.sanitize;
   return (

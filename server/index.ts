@@ -72,7 +72,7 @@ const transporter = nodemailer.createTransport({
     server.listen(port, (err?: any) => {
       if (err) throw err;
       console.log(`> Ready on ${url}`);
-      console.log(`> ENV:  ${process.env.ENV}`);
+      console.log(`> ENV:  ${process.env.NODE_ENV}`);
     });
   } catch (e) {
     console.error(e);
