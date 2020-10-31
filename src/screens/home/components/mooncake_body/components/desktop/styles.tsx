@@ -64,7 +64,7 @@ export const BackgroundCSS = styled.div`
       rgba(123, 135, 185, 0.33),
       rgba(123, 135, 185, 0.33)
     ),
-    url(static/images/assets/desmos-hero.jpg);
+    url("/static/images/assets/desmos-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 center;

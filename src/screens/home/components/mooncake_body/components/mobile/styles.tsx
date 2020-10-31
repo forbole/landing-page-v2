@@ -25,7 +25,7 @@ export const HeroCSS = styled.div`
       rgba(123, 135, 185, 0.33),
       rgba(123, 135, 185, 0.33)
     ),
-    url(static/images/assets/desmos-hero.jpg);
+    url("/static/images/assets/desmos-hero.jpg");
   background-size: 134%;
   background-repeat: no-repeat;
   background-position: left bottom;
