@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { MaxWidthContainerCSS as MaxWidthCSS } from "@styles/components";
-import { media, mixins } from "@styles";
+import { media, mixins, theme } from "@styles";
 
+const { colors } = theme;
 export const BlogDetailsCSS = styled.div`
   flex: 1;
   ${media.bigDesktop`
@@ -33,12 +34,32 @@ export const ContentCSS = styled.div`
     font-size: 1.5rem;
   }
 
+  a {
+    color: ${colors.pink};
+    transition: 0.3s;
+    &:hover {
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
   .tags-container {
     margin-top: 1rem;
   }
 
   .cover-image {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    max-height: 400px;
+    display: block;
+    object-fit: cover;
+  }
+
+  li {
+    margin-top: 0.5rem;
   }
 
   ${media.bigDesktop`
@@ -145,7 +166,7 @@ export const GhostCSS = styled.div`
 /* ---------------------------------------------------------- */
 
   > * + * {
-    margin-top: 4vmin;
+    margin-top: 1.5rem;
   }
 
   [id]:not(:first-child) {
@@ -153,7 +174,7 @@ export const GhostCSS = styled.div`
   }
 
   > [id] + * {
-    margin-top: 1.5rem;
+    margin-top: 2vmin;
   }
 
   [id] + .kg-card,
@@ -180,6 +201,8 @@ export const GhostCSS = styled.div`
 
   hr {
     margin-top: 6vmin;
+    border: 1px solid;
+    border-color: ${colors.gray100};
   }
 
   hr + * {
@@ -227,11 +250,11 @@ export const GhostCSS = styled.div`
   }
 
   .kg-card figcaption {
-    padding: 1.5rem 1.5rem 0;
+    padding: 0.6rem 1.5rem 0;
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
-    font-weight: 600;
-    font-size: 1.3rem;
+    font-weight: 300;
+    font-size: 0.9rem;
     line-height: 1.4em;
   }
 
