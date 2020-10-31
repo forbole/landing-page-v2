@@ -24,7 +24,7 @@ const Layout = ({
   mobileNavColor,
 }: Props) => {
   const router = useRouter();
-  const currentPath = router.pathname === "/" ? "/" : `${router.pathname}`;
+  const currentPath = router.asPath === "/" ? "/" : `${router.asPath}`;
   const url = process.env.NEXT_PUBLIC_URL;
 
   return (
