@@ -21,21 +21,3 @@ jobs:
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: build # will run `yarn build` command
-  # Lint:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - uses: borales/actions-yarn@v2.0.0
-  #   - name: Install modules
-  #     run: yarn install
-  #   - name: Run lint check
-  #     run: yarn run lint
-  # Build-test:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #   - uses: actions/checkout@v2
-  #   - uses: borales/actions-yarn@v2.0.0
-  #   - name: Install modules
-  #     run: yarn install
-  #   - name: Run build check
-  #     run: yarn run build
