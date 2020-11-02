@@ -48,6 +48,7 @@ const transporter = nodemailer.createTransport({
     server.post("/api/proxy", async (req:Request, res:Response, next:any) => {
       try{
         const url = req?.body?.url;
+        console.log(url,'proxy url');
         if (url) {
           const { data } = await axios.get(req?.body?.url);
           res.status(200).json(data)
@@ -64,9 +65,12 @@ const transporter = nodemailer.createTransport({
 
     // error handler
     server.use((err, req, res, next) => {
-      console.error(err)
-      console.error(err?.stack)
-      res.status(err?.status || 500).send(err?.message || 'Internal server error.')
+      // console.error(err)
+      res.status(err?.status || 500).json({
+        message: err?.message || 'Internal server error.',
+        stack: err?.stack,
+        error: err,
+      })
     })
 
     server.listen(port, (err?: any) => {
