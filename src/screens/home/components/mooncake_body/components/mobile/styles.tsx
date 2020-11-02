@@ -11,9 +11,9 @@ export const ContentCSS = styled.div`
   ${mixins.mobileHorizontalPadding}
   margin-top: -12rem;
   ${media.tablet`
-  margin-top: -16rem;
+  margin-top: -18rem;
   img {
-    max-width: 683px;
+    max-width: 550px;
     margin: 0 1rem;
   }
   `}

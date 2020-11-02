@@ -39,7 +39,7 @@ export const MooncakeBodyCSS = styled.div`
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding-left: 12rem;
+  padding-left: 7rem;
 `;
 
 export const MooncakeContentCSS = styled.div`
@@ -50,7 +50,8 @@ export const MooncakeContentCSS = styled.div`
 
 export const MooncakeImgCSS = styled.div`
   position: absolute;
-  left: -690px;
+  left: -620px;
+  top: -70px;
   max-height: 45vh;
   z-index: 1;
 `;

@@ -22,7 +22,10 @@ export const DashboardContentCSS = styled.div`
   h3, p {
       font-weight: 100;
       margin-bottom: 0.5rem;
-      font-size: 0.875rem;
+  }
+
+  p {
+    font-size: 0.875rem;
   }
   h3 {
       font-size: 1.25rem;
@@ -45,10 +48,10 @@ export const DashboardContentCSS = styled.div`
       padding: 2rem;
     }
     h3 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     h2 {
-      font-size: 3rem;
+      font-size: 2rem;
     }
 
     p {
@@ -87,7 +90,7 @@ export const DashboardContentCSS = styled.div`
     }
     .image {
       padding: 0;
-      width: 60%;
+      width: 57%;
     }
     .content {
       padding-right: 1.5rem;

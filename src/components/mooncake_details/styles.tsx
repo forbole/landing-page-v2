@@ -8,6 +8,10 @@ export const DecentralizedCSS = styled.p`
   font-weight: 300;
   margin-bottom: 0;
 
+  ${media.tablet`
+    font-size: 1.5rem;
+  `};
+
   ${media.bigDesktop`
     font-size: 2rem;
   `};
@@ -19,10 +23,12 @@ export const MooncakeBodyCSS = styled.div`
   h3 {
     font-weight: 500;
     margin-bottom: ${headerMargin.small};
+    font-size: 2rem;
   }
 
   p {
     font-size: 0.9rem;
+    margin-bottom: 0.3rem;
   }
 
   ${media.bigDesktop`
