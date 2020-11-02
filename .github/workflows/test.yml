@@ -1,25 +1,31 @@
 name: Test
 on: push
 jobs:
-  Lint:
+  name: Build-Test
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: borales/actions-yarn@v2.0.0
-    - name: Install modules
-      with:
-        cmd: install
-    - name: Run lint check
-      with:
-        cmd: run lint
-  Build-test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: borales/actions-yarn@v2.0.0
-    - name: Install modules
-      with:
-        cmd: install
-    - name: Run build check
-      with:
-        cmd: build
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: build # will run `yarn build` command
+  # Lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - uses: borales/actions-yarn@v2.0.0
+  #   - name: Install modules
+  #     run: yarn install
+  #   - name: Run lint check
+  #     run: yarn run lint
+  # Build-test:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v2
+  #   - uses: borales/actions-yarn@v2.0.0
+  #   - name: Install modules
+  #     run: yarn install
+  #   - name: Run build check
+  #     run: yarn run build
