@@ -17,7 +17,7 @@ const NavItems = (props: any) => {
 
   const router = useRouter();
   const { t } = useTranslation("nav");
-  const options = formatLanguageList(availableLanguages, t);
+  const options = formatLanguageList(availableLanguages);
   const handleDropdownOnClick = (e: any, data: any) => {
     i18n.changeLanguage(data.value);
   };
