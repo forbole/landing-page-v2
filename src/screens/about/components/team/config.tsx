@@ -66,9 +66,6 @@ export const membersData = [
     name: "Rooty Chan",
     position: "uxDesigner",
     image: "/static/images/team/rooty.jpg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/rooty-chan-972985172/",
-    },
   },
   {
     name: "Riccardo Montagnin",

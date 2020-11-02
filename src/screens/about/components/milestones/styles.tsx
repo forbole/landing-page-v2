@@ -34,5 +34,6 @@ export const MilestonesGridCSS = styled.div`
 
   ${media.bigDesktop`
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px 40px;
   `}
 `;

@@ -35,7 +35,7 @@ export const SingleMilestoneCSS = styled.div`
     flex-direction: row;
 
     .date {
-      min-width: 10%;
+      min-width: 7%;
       text-align: right;
       margin-right: 1rem;
     }
@@ -43,7 +43,8 @@ export const SingleMilestoneCSS = styled.div`
 
   ${media.tablet`
     .date {
-      min-width: 15%;
+      min-width: 8%;
+      white-space: nowrap;
     }
   `}
 `;
