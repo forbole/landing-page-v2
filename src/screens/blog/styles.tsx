@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MaxWidthContainerCSS as MaxWidthCSS } from "@styles/components";
 import { media, mixins, theme } from "@styles";
 
 const { colors } = theme;

@@ -37,12 +37,12 @@ const socialMedia = {
   youtube: {
     key: "youtube",
     url: "https://www.youtube.com/channel/UCgDS_e-jCvHBDOPvuZDWqAg",
-    component: Github,
+    component: YouTube,
   },
   linkedIn: {
     key: "linkedin",
     url: "https://www.linkedin.com/company/forbole/",
-    component: Github,
+    component: LinkedIn,
   },
 };
 

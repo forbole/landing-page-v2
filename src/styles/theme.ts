@@ -25,7 +25,7 @@ const theme = {
     mobileVertical: "1.5rem",
     desktopHorizontal: "1rem",
     desktopVertical: "1rem",
-  }
+  },
 };
 
 export default theme;

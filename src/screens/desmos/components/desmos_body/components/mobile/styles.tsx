@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { media, theme } from "@styles";
+import { media } from "@styles";
 import { CoverCSS } from "@styles/components";
-const { padding } = theme;
 
 export const MobileCSS = styled.div`
   ${media.bigDesktop`

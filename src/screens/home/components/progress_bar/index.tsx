@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ProgressBarCSS } from "./styles";
 import { Icon } from "semantic-ui-react";
 

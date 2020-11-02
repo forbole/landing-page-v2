@@ -5,11 +5,11 @@
   "formHeading": "Send us a message",
   "name": "Your Name",
   "email": "Email Address",
-  "messages": "Messages",
+  "messages": "Message",
   "submit": "SUBMIT",
   "contactInfo": "Contact Information",
   "address": "Flat 3B, Tontex Industrial Building, 2-4 Sheung Hei Street, San Po Kong, Kowloon, Hong Kong",
   "contactEmail": "referral@forbole.com",
-  "success": "Success!",
-  "error": "Oops! Unsuccessful."
+  "success": "Email sent! We will get back to you shortly",
+  "error": "We are unable to deliver your message at this time. Please try again later"
 }

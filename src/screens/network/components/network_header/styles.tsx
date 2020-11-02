@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { theme, media, mixins } from "@styles";
-
-const { colors } = theme;
+import { media, mixins } from "@styles";
 
 export const NetworkHeaderCSS = styled.div`
   width: 100%;

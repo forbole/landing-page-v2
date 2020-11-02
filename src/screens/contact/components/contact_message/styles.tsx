@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { media, theme } from "@styles";
-
-const { headerMargin } = theme;
+import { media } from "@styles";
 
 export const ContactMessageCSS = styled.div`
   display: flex;

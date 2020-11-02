@@ -11,7 +11,7 @@
     "semantic:build": "cd semantic && gulp build-css build-assets",
     "semantic:watch": "cd semantic && npm run semantic:build && gulp watch",
     "type-check": "tsc",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx"
   },
   "dependencies": {
     "@n8tb1t/use-scroll-position": "^1.0.43",

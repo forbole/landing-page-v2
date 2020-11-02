@@ -1,6 +1,5 @@
 import React from "react";
 import { AuthorCSS } from "./styles";
-import { fakeBlog } from "../../config";
 
 const Author = ({ post }: any) => {
   const { primaryAuthor: author } = post;

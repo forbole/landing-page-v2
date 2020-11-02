@@ -1,4 +1,3 @@
-import * as R from "ramda";
 import moment from "moment";
 import { Author, Tag } from "@models";
 

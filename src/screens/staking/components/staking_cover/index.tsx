@@ -14,7 +14,7 @@ const StakingCover = () => {
         <h2>{t("stakingYourTokens")}</h2>
         <p>{t("stakingYourTokensDetails")}</p>
         <div className="social-media-container">
-          {socialMedias.map((x, i) => (
+          {socialMedias.map((x) => (
             <a href={x.url} key={x.key} target="_blank" rel="noreferrer">
               <x.component />
             </a>

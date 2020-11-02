@@ -7,7 +7,6 @@ import { SidebarCSS } from "./styles";
 import { fakeData } from "../../config";
 
 const Sidebar = (props: any) => {
-  const { active } = props;
   const router = useRouter();
   const {
     query: { title = "" },

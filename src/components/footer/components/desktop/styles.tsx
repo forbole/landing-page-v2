@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { media, mixins } from "@styles";
+import { media } from "@styles";
 
 export const DesktopFooterCSS = styled.div`
   display: none;

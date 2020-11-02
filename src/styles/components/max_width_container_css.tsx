@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { media } from "@styles";
 
 const MaxWidthContainerCSS = styled.div`
   ${media.bigDesktop`
