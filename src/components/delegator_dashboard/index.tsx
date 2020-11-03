@@ -25,7 +25,7 @@ export const DashboardContent = () => {
             {t("dd3")}
           </p>
           <Button color="black">
-            <a href="#">{t("download")}</a>
+            <a href="#">{t("comingSoon")}</a>
           </Button>
         </div>
       </div>
