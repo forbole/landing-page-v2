@@ -17,7 +17,11 @@ const Desktop = () => {
         <DesmosBodyContainerCSS>
           <DesmosHeader />
           <DesmosContent />
-          <a href="#">
+          <a
+            href="https://www.desmos.network/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Button title={t("visitWebsite")}>{t("visitWebsite")}</Button>
           </a>
           <DesmosLogoCSS src="/static/images/icons/desmos-logo.svg" />

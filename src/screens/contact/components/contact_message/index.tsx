@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { ContactMessageCSS } from "./styles";
-import validator from "validator";
 import { Button, Form, Segment, Input } from "semantic-ui-react";
 
 import useContactForm from "./hooks";
@@ -27,8 +26,6 @@ const ContactMessage = () => {
               onChange={handleInputChange}
               value={inputs.name}
               transparent
-              placeholder=""
-              required
             />
           </div>
           <div className="emailField">
@@ -38,8 +35,6 @@ const ContactMessage = () => {
               onChange={handleInputChange}
               value={inputs.email}
               transparent
-              placeholder=""
-              {...validator.isEmail("foo@bar.com")}
             />
           </div>
           <p className="messages">{t("messages")}</p>
@@ -48,8 +43,6 @@ const ContactMessage = () => {
             onChange={handleInputChange}
             value={inputs.message}
             transparent
-            placeholder=""
-            required
           />
           <Button type="submit" disabled={!canSubmit}>
             {t("submit")}

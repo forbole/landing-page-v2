@@ -12,16 +12,12 @@ const useContactForm = () => {
   const { t } = useTranslation("contact");
 
   useEffect(() => {
-    if (
-      validator.isEmail(inputs.email) &&
-      inputs.name.length &&
-      inputs.message.length
-    ) {
+    if (validator.isEmail(inputs.email) && inputs.name && inputs.message) {
       setCanSubmit(true);
     } else if (canSubmit) {
       setCanSubmit(false);
     }
-  }, [inputs.message, inputs.name, inputs.email]);
+  }, [inputs]);
 
   const handleSubmit = (event) => {
     if (event) {
@@ -35,7 +31,14 @@ const useContactForm = () => {
           html: `<p>${sanitize(inputs.message)}</p>`,
         })
         .then((res) => {
-          if (res.status == 200) toast.success(t("success"));
+          if (res.status == 200) {
+            toast.success(t("success"));
+            setInputs({
+              name: "",
+              message: "",
+              email: "",
+            });
+          }
         })
         .catch((err) => {
           console.log(err);
@@ -44,12 +47,11 @@ const useContactForm = () => {
     }
   };
   const handleInputChange = (event) => {
-    event.persist();
+    const { name, value } = event.target;
     setInputs((inputs) => ({
       ...inputs,
-      [event.target.name]: event.target.value,
+      [name]: value,
     }));
-    console.log(event.target.value);
   };
 
   return {

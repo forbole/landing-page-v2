@@ -11,7 +11,13 @@ export const Mobile = () => {
       <HeroCSS>
         <div className="content-container">
           <DesmosHeader />
-          <p className="visit-website">{t("visitWebsite")} &#x2192;</p>
+          <a
+            href="https://www.desmos.network/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <p className="visit-website">{t("visitWebsite")} &#x2192;</p>
+          </a>
         </div>
         <DesmosLogoCSS src="/static/images/icons/desmos-logo.svg" />
       </HeroCSS>

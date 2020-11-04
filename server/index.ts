@@ -48,7 +48,6 @@ const transporter = nodemailer.createTransport({
     server.post("/api/proxy", async (req:Request, res:Response, next:any) => {
       try{
         const url = req?.body?.url;
-        console.log(url,'proxy url');
         if (url) {
           const { data } = await axios.get(req?.body?.url);
           res.status(200).json(data)
@@ -77,6 +76,7 @@ const transporter = nodemailer.createTransport({
       if (err) throw err;
       console.log(`> Ready on ${url}`);
       console.log(`> ENV:  ${process.env.NODE_ENV}`);
+      console.log(`> PORT:  ${process.env.PORT}`);
     });
   } catch (e) {
     console.error(e);

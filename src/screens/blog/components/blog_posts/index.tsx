@@ -11,7 +11,7 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
   const totalPages = R.pathOr(0, ["pagination", "pages"], meta);
 
   const { handlePageChange } = useBlogPostsHook();
-  console.log(blogs, "should be empty?");
+
   return (
     <BlogContainerCSS>
       <BlogPostCSS>
