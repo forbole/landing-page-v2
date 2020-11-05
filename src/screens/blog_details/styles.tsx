@@ -53,7 +53,6 @@ export const ContentCSS = styled.div`
   .cover-image {
     margin-bottom: 1.5rem;
     width: 100%;
-    max-height: 400px;
     display: block;
     object-fit: cover;
   }

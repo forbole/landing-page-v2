@@ -131,10 +131,10 @@ const logos = {
         "http://lcd.iov.forbole.com/staking/validators/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0",
     },
   },
-  ["oasis-labs"]: {
-    image: "/static/images/icons/oasis-labs.png",
-    name: "Oasis Labs",
-    key: "oasis-labs",
+  ["oasis-protocol"]: {
+    image: "/static/images/icons/oasis-protocol.png",
+    name: "Oasis protocol",
+    key: "oasis-protocol",
   },
   akash: {
     image: "/static/images/icons/akash.png",

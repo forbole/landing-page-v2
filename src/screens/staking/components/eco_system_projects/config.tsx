@@ -9,7 +9,7 @@ export const networkKeys = [
   "e-money",
   "desmos",
   "iov",
-  "oasis-labs",
+  "oasis-protocol",
   "akash",
   "bitsongs",
   "band-protocol",
