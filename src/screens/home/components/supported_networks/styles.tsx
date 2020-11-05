@@ -7,7 +7,7 @@ export const SupportedNetworksCSS = styled.div`
   background: ${colors.gray100};
 
   ${media.bigDesktop`
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;

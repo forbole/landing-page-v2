@@ -51,6 +51,7 @@ export const StakingCoverCSS = styled(CoverCSS)`
     .content-container {
       ${mixins.desktopMaxWidth}
       width: 100%;
+      padding: 1rem;
       h2 {
         font-size: 3.75rem;
       }
