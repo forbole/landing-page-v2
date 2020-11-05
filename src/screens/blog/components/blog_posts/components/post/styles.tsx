@@ -35,7 +35,7 @@ export const PostCSS = styled.div`
 
   ${media.tablet`
     img {
-      height: 300px;
+      height: 400px;
     }
   `}
 
