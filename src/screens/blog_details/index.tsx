@@ -13,14 +13,18 @@ import { Author, SocialMedia } from "./components";
 
 const { colors } = theme;
 
-const BlogDetails = ({ post }: any) => {
-  const { tags } = post;
+const BlogDetails = ({ post, raw }: any) => {
+  const { tags, excerpt, featureImage } = post;
   const sanitize = DOMPurify.sanitize;
   return (
     <Layout
       title={post.title}
       navColor={colors.gray600}
       mobileNavColor={colors.gray600}
+      description={excerpt}
+      type="article"
+      image={featureImage}
+      keywords={tags.map((x) => x.name ?? "")}
     >
       <BlogDetailsCSS>
         <MaxWidthContainerCSS>
