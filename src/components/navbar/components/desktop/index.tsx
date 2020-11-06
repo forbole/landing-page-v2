@@ -15,7 +15,7 @@ const DesktopNav = (props: any) => {
     <DesktopNavCSS
       displayBackground={displayBackground}
       color={displayBackground ? colors.forboleRed : color}
-      className={classNames({ displayBackground })}
+      className={classNames("desktop-nav", { displayBackground })}
     >
       <Link href="/">
         <a>

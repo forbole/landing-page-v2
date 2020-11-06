@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import NavBody from "./components/nav_body";
 import Navbar from "./components/navbar";
 import { useMobileNavHook } from "./hooks";
@@ -9,12 +10,13 @@ const MobileNav = (props: IMobileNav) => {
   const { isOpen, toggle } = useMobileNavHook();
   const { color, displayBackground } = props;
   return (
-    <MobileNavCSS>
+    <MobileNavCSS className={classNames("mobile-nav")}>
       <MobileNavBarIconCSS
         isOpen={isOpen}
         onClick={toggle}
         color={color}
         displayBackground={displayBackground}
+        className={classNames("icon")}
       >
         <div></div>
       </MobileNavBarIconCSS>

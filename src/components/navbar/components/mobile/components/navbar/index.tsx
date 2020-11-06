@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import classNames from "classnames";
 import { Forbole as ForboleLogo } from "@icons";
 import { INavBar } from "../../interfaces";
 import { MobileNavBarCSS } from "./styles";
@@ -12,6 +13,7 @@ const Navbar = (props: INavBar) => {
       isOpen={isOpen}
       color={color}
       displayBackground={displayBackground}
+      className={classNames("nav-bar")}
     >
       <Link href="/">
         <a>

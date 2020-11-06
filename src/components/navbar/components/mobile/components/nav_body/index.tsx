@@ -25,7 +25,7 @@ const NavBody = (props: INavBar) => {
   return displayTransitions.map(
     ({ item, key, props }: any) =>
       item && (
-        <NavBodyCSS key={key} style={props}>
+        <NavBodyCSS key={key} style={props} className={classNames("nav-body")}>
           <NavbarOverrideCSS>
             <Link href="/">
               <a>

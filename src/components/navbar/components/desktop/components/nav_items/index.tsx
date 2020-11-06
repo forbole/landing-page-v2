@@ -23,7 +23,7 @@ const NavItems = (props: any) => {
   };
 
   return (
-    <NavItemsCSS color={color}>
+    <NavItemsCSS color={color} className={classNames("nav-item")}>
       {navItems.slice(1).map((x) => (
         <Link href={x.link} key={x.display}>
           <a className={classNames({ active: router.pathname === x.link })}>
