@@ -46,6 +46,8 @@ const Layout = ({
         <meta name="og:url" content={`${url}${currentPath}`} />
         <meta name="og:description" content={description} />
         <meta name="og:image" content={ogImage} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:image" content={ogImage} />
         <link
           rel="icon"
           type="image/png"
@@ -65,7 +67,6 @@ const Layout = ({
           href={`${url}/static/icons/favicon-16x16.png`}
         />
         <link rel="manifest" href={`${url}/static/icons/manifest.json`} />
-        <meta name="twitter:card" content="summary" />
       </Head>
       <NavBar color={navColor} mobileColor={mobileNavColor} />
       <FlexCSS>
