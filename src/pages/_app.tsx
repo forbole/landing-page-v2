@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <GlobalCSS />
       <ToastContainer position="top-center" autoClose={6000} />
       <Component {...pageProps} />
-    </>ß
+    </>
   );
 }
 
