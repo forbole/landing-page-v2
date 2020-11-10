@@ -1170,6 +1170,11 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
+"@socialgouv/matomo-next@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@socialgouv/matomo-next/-/matomo-next-1.1.2.tgz#90c15215b6d006f7c50ea3c914802508fd507a3f"
+  integrity sha512-lyTzZ5Za+9IhwGTO5TkHG5IxQLaRx5jEZHJl3NvDqQ2Co899+Av/JEdoyeZgQ1daJRURbEcFnhqCHwM7a+EuRg==
+
 "@stardust-ui/react-component-event-listener@~0.38.0":
   version "0.38.0"
   resolved "https://registry.yarnpkg.com/@stardust-ui/react-component-event-listener/-/react-component-event-listener-0.38.0.tgz#1787faded94b40ad41226e6289baf13e701c6e7f"
