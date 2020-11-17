@@ -50,12 +50,12 @@ const Layout = ({
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={formattedKeyworks.join(", ")} />
-        <meta name="og:type" content={type} />
-        <meta name="og:title" content={title} />
-        <meta name="og:site_name" content="Forbole" />
-        <meta name="og:url" content={`${url}${currentPath}`} />
-        <meta name="og:description" content={description} />
-        <meta name="og:image" content={ogImage} />
+        <meta property="og:type" content={type} />
+        <meta property="og:title" content={title} />
+        <meta property="og:site_name" content="Forbole" />
+        <meta property="og:url" content={`${url}${currentPath}`} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={metaTwitterImage} />
         <link
