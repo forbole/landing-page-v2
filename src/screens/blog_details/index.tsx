@@ -26,8 +26,6 @@ const BlogDetails = ({ post, raw }: any) => {
     excerpt,
     featureImage,
   } = post;
-  console.log(post);
-  //const published = new Date(publishedAt);
 
   const org = {
     "@id": `${slug}#organization`,
@@ -73,7 +71,6 @@ const BlogDetails = ({ post, raw }: any) => {
     mainEntityOfPage: `${url}articles/${slug}`,
   };
 
-  // console.log(org);
   const sanitize = DOMPurify.sanitize;
   return (
     <Layout
