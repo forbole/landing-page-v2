@@ -88,7 +88,9 @@ const BlogDetails = ({ post, raw }: any) => {
       <Head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonData) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({ jsonData }, null, 2),
+          }}
         />
       </Head>
       <BlogDetailsCSS>
