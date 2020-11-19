@@ -48,35 +48,55 @@ const BlogDetails = ({ post, raw }: any) => {
   // });
   // const citationsText = citationsList.join("");
 
-  const org = `{ "@id": "${slug}#organization", "type": "Organization", "name":"${title}", "logo": {
-    "@type": "ImageObject",
-    "name": "${title} Logo",
-    "width": "230",
-    "height": "67",
-    "url": "${url}images/logo.png"
-} }`;
+  const org = {
+    "@id": `${slug}#organization`,
+    type: "Organization",
+    name: `Forbole`,
+    logo: {
+      "@type": "ImageObject",
+      name: `${title} Logo`,
+      width: "230",
+      height: "67",
+      url: "${sourceUrl}",
+    },
+  };
 
-  const jsonData = `{
-  "@context":"https://schema.org/",
-  "@type":"Article",
-  "name":"${title}",
-  "about": "${blurb}",
-  "author": { "@type": "Person", "@id": "${url}author/${author.name}", "name": "author.name" },
-  "commentCount": commentCount,
-  "copyrightHolder": { "@id": "${url}#organization" },
-  "copyrightYear": copyrightYear,
-  "datePublished": "${date}",
-  "dateModified": modified,
-  "description": "${blurb}",
-  "discussionUrl": "${url}articles/${slug}#comments",
-  "editor": { "@id": "${url}author/${author.slug}#author" },
-  "headline": "${title}",
-  "inLanguage": "English",
-  "mainEntityOfPage": "${url}articles/${slug}",
-  "publisher": { "@id": "${url}#organization" },
-  "sourceOrganization": ${org},
-  "url": "${url}articles/${slug}"
-    }}`;
+  const jsonData = {
+    "@context": "https://schema.org/",
+    "@type": "Article",
+    publisher: org,
+    name: `${title}`,
+    author: {
+      "@type": "Person",
+      "@id": `${url}author/${author.name}`,
+      name: author.name,
+    },
+    commentCount: commentCount,
+    copyrightHolder: { "@id": `${url}#organization` },
+    copyrightYear: copyrightYear,
+    datePublished: `${date}`,
+    dateModified: modified,
+    description: `${blurb}`,
+    discussionUrl: `${url}articles/${slug}#comments`,
+    editor: { "@id": `${url}author/${author.slug}#author` },
+    headline: `${title}`,
+    inLanguage: "English",
+    mainEntityOfPage: `${url}articles/${slug}`,
+    // publisher: { "@id": `${url}#organization` },
+    sourceOrganization: {
+      "@id": `${slug}#organisation`,
+      type: "Organization",
+      name: `${title}`,
+      logo: {
+        "@type": "ImageObject",
+        name: `${title} Logo`,
+        width: "230",
+        height: "67",
+        url: `${url}images/logo.png`,
+      },
+    },
+    url: `${url}articles/${slug}`,
+  };
 
   // console.log(org);
   const sanitize = DOMPurify.sanitize;
