@@ -18,35 +18,16 @@ const BlogDetails = ({ post, raw }: any) => {
   const url = process.env.NEXT_PUBLIC_URL;
   const {
     title,
-    blurb,
-    date,
+    publishedAt,
     modified,
     slug,
-    commentCount,
     author,
-    ratingCount,
-    ratingAverage,
-    citations,
     tags,
     excerpt,
     featureImage,
   } = post;
   console.log(post);
-  const published = new Date(date);
-  const copyrightYear = published.getFullYear();
-
-  let mediaDetails, sourceUrl;
-
-  if (featureImage) {
-    sourceUrl = featureImage.sourceUrl;
-  }
-
-  // const citationsList = citations.map((citation, i) => {
-  //   return `{ "@type": "CreativeWork", "citation": ${JSON.stringify(
-  //     citation
-  //   )} }${i === citations.length - 1 ? "" : ","}\n`;
-  // });
-  // const citationsText = citationsList.join("");
+  //const published = new Date(publishedAt);
 
   const org = {
     "@id": `${slug}#organization`,
@@ -65,24 +46,18 @@ const BlogDetails = ({ post, raw }: any) => {
     "@context": "https://schema.org/",
     "@type": "Article",
     publisher: org,
-    name: `${title}`,
     author: {
       "@type": "Person",
       "@id": `${url}author/${author.name}`,
       name: author.name,
     },
-    commentCount: commentCount,
-    copyrightHolder: { "@id": `${url}#organization` },
-    copyrightYear: copyrightYear,
-    datePublished: `${date}`,
-    dateModified: modified,
-    description: `${blurb}`,
-    discussionUrl: `${url}articles/${slug}#comments`,
-    editor: { "@id": `${url}author/${author.slug}#author` },
     headline: `${title}`,
+    url: `${url}`,
+    datePublished: `${publishedAt}`,
+    dateModified: modified,
+    description: `${excerpt}`,
+    discussionUrl: `${url}articles/${slug}#comments`,
     inLanguage: "English",
-    mainEntityOfPage: `${url}articles/${slug}`,
-    // publisher: { "@id": `${url}#organization` },
     sourceOrganization: {
       "@id": `${slug}#organisation`,
       type: "Organization",
@@ -95,7 +70,7 @@ const BlogDetails = ({ post, raw }: any) => {
         url: `${url}images/logo.png`,
       },
     },
-    url: `${url}articles/${slug}`,
+    mainEntityOfPage: `${url}articles/${slug}`,
   };
 
   // console.log(org);
