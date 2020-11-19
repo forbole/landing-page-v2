@@ -46,7 +46,7 @@ const BlogDetails = ({ post, raw }: any) => {
     publisher: org,
     author: {
       "@type": "Person",
-      "@id": `${url}author/${author.name}`,
+      "@id": `${url}/author/${author.name}`,
       name: author.name,
     },
     headline: `${title}`,
@@ -54,7 +54,7 @@ const BlogDetails = ({ post, raw }: any) => {
     datePublished: `${publishedAt}`,
     dateModified: modified,
     description: `${excerpt}`,
-    discussionUrl: `${url}articles/${slug}#comments`,
+    discussionUrl: `${url}/blog/${slug}#comments`,
     inLanguage: "English",
     sourceOrganization: {
       "@id": `${slug}#organisation`,
@@ -65,10 +65,10 @@ const BlogDetails = ({ post, raw }: any) => {
         name: `${title} Logo`,
         width: "230",
         height: "67",
-        url: `${url}images/logo.png`,
+        url: `${url}/images/logo.png`,
       },
     },
-    mainEntityOfPage: `${url}articles/${slug}`,
+    mainEntityOfPage: `${url}/blog/${slug}`,
   };
 
   const sanitize = DOMPurify.sanitize;
