@@ -3,6 +3,7 @@ import { Author, Tag } from "@models";
 
 class Post {
   public canonicalUrl: string;
+  public author: string;
   public createdAt: string;
   public customExcerpt: string;
   public excerpt: string;
@@ -18,6 +19,7 @@ class Post {
 
   constructor(payload: any) {
     this.canonicalUrl = payload.canonicalUrl;
+    this.author = payload.primaryAuthor;
     this.createdAt = payload.createdAt;
     this.customExcerpt = payload.customExcerpt;
     this.excerpt = payload.excerpt;
@@ -45,6 +47,7 @@ class Post {
   static fromJson(data: any, { excerptLimit = 250 }: any) {
     return new Post({
       canonicalUrl: data["canonical_url"],
+      author: data,
       createdAt: moment(data["created_at"]).format("Do MMM YYYY, h:mm a"),
       customExcerpt: data["custom_excerpt"],
       excerpt: this.formatExcerpt(data.excerpt, excerptLimit),

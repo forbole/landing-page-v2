@@ -11,7 +11,9 @@ BlogDetailsPage.getInitialProps = async ({ query }) => {
   const { title } = query;
 
   const post = await getSinglePost(title);
+
   post.tags = removeInternalTags(post.tags);
+
   const formattedPost = Post.fromJson(post, {});
 
   return { post: formattedPost };
