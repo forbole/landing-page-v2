@@ -57,7 +57,7 @@ const BlogDetails = ({ post, raw }: any) => {
       name: `${title} Logo`,
       width: "230",
       height: "67",
-      url: "${sourceUrl}",
+      url: `${featureImage}`,
     },
   };
 
