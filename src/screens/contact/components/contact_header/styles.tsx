@@ -31,6 +31,9 @@ export const ContactHeaderCSS = styled.div`
 
   ${media.bigDesktop`
     background: linear-gradient(0deg, rgb(32, 6, 105, 0.7), rgb(24, 0, 88, 0.4)),url("/static/images/assets/contact-us.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     display: flex;
     align-items: center;
     height: 500px;
