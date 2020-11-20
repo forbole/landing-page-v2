@@ -23,11 +23,10 @@ export const ContactPageCSS = styled.div`
   ${media.bigDesktop`
     ${mixins.flexBetween}
   width: 100%;
-  height: 100vh;
 
   .wrapper {
     ${mixins.desktopMaxWidth}
-    margin-top: -18rem;
+    margin-top: -200px;
     background: none;
     display: grid;
     grid-template-columns: 60% 40%;
