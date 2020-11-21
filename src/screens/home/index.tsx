@@ -20,7 +20,7 @@ const Home = (props: any) => {
   const { activeScreen, handleActiveScreen } = useHomeHook();
   return (
     <Layout
-      title={t("home")}
+      title={t("forbole")}
       description={t("description")}
       image="/static/images/assets/Facebook-Forbole.png"
       twitterImage="/static/images/assets/Twitter-Forbole.png"
