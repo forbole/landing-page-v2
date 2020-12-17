@@ -16,5 +16,5 @@ jobs:
         run: cp ${{secrets.STAGING_ENV}} .
       - run: npm run build
       - run: pm2 reload landing-staging
-        # env:
-        #   CI: true
+        env:
+          CI: true
