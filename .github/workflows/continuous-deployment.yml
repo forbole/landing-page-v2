@@ -16,9 +16,8 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
       - name: Build
-        run: |
-          npm run build
-          pm2 reload landing-staging
+        run: npm run build
+        run: pm2 reload landing-staging
         env:
           CI: true
       # - name: Install dependencies
