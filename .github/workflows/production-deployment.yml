@@ -1,0 +1,22 @@
+name: Staging Deployment
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: [self-hosted, production, linux, X64]
+    steps:
+      - name: Initial Clean Up #https://github.com/actions/checkout/issues/211
+        run: |
+          sudo chown -R $USER:$USER $GITHUB_WORKSPACE
+      - uses: actions/checkout@v2
+      - uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Set up env
+        run: cp ${{secrets.PRODUCTION_ENV}} .
+      - run: npm run build
+      - run: pm2 reload landing
+        env:
+          CI: true
