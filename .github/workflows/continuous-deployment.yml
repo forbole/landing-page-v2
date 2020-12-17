@@ -5,15 +5,15 @@ jobs:
   build:
     runs-on: [self-hosted, staging, linux, X64]
 
-    environment: STAGING
+    # environment: STAGING
 
     steps:
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.0.0
-        # with:
-        #   cmd: install # will run `yarn install` command
-      # - name: Run build check
-      #   run: npm run build
+        with:
+          cmd: install # will run `yarn install` command
+      - name: Run build check
+        run: npm run build
       - run: |
           echo ${{secrets.NEXTJS_STAGING_ENV}}
       # - name: Install dependencies
