@@ -10,24 +10,11 @@ jobs:
           sudo chown -R $USER:$USER $GITHUB_WORKSPACE
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.0.0
+        with:
+            cmd: install # will run `yarn install` command
       - name: Set up env
         run: cp ${{secrets.STAGING_ENV}} .
-      - name: installing node modules
-        with:
-          cmd: install # will run `yarn install` command
       - run: npm run build
       - run: pm2 reload landing-staging
-        env:
-          CI: true
-      # - name: Install dependencies
-      #   run: npm i
-      # - name: Build
-      #   run: yarn build
-      # - name: Deploy
-      #   uses: jakejarvis/s3-sync-action@v0.5.0
-      #   with:
-      #     args: --acl public-read --follow-symlinks --delete
-      #   env:
-      #     AWS_S3_BUCKET: ${{ secrets.STAGING_AWS_S3_BUCKET }}
-      #   env:
-      #   CI: true
+        # env:
+        #   CI: true
