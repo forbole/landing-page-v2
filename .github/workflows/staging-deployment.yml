@@ -1,17 +1,19 @@
-name: Continuous Deployment
+name: Staging Deployment
 on:
   push:
+    branches:
+      - master
 jobs:
   build:
     runs-on: [self-hosted, staging, linux, X64]
     steps:
-      - name: Iniital Clean Up #https://github.com/actions/checkout/issues/211
+      - name: Initial Clean Up #https://github.com/actions/checkout/issues/211
         run: |
           sudo chown -R $USER:$USER $GITHUB_WORKSPACE
       - uses: actions/checkout@v2
       - uses: borales/actions-yarn@v2.0.0
         with:
-            cmd: install # will run `yarn install` command
+          cmd: install # will run `yarn install` command
       - name: Set up env
         run: cp ${{secrets.STAGING_ENV}} .
       - run: npm run build
