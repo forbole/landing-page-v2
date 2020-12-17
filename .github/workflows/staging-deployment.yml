@@ -1,8 +1,8 @@
 name: Staging Deployment
 on:
   push:
-    branches:
-      - master
+    # branches:
+    #   - master
 jobs:
   build:
     runs-on: [self-hosted, staging, linux, X64]
