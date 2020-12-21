@@ -1,3 +1,4 @@
+import axios from "axios";
 import { ghostApi as api } from "../index";
 import { IPost } from "./interface";
 
@@ -14,6 +15,7 @@ export const getPosts = async ({
       limit,
       page,
       filter,
+      formats: "html",
     });
   } catch (err) {
     console.error(err);
@@ -28,6 +30,7 @@ export const getFeaturedPost = async () => {
       limit: 1,
       filter: "tag:fiction+tag:-fables",
       order: "created_at ASC",
+      formats: "html",
     });
   } catch (err) {
     console.error(err);
@@ -41,8 +44,8 @@ export const getSinglePost = async (slug: string) => {
     return await api.posts.read(
       { slug },
       {
-        // formats: ["html", "plaintext"],
         include: "tags,authors",
+        formats: "html",
       }
     );
   } catch (err) {
@@ -52,13 +55,24 @@ export const getSinglePost = async (slug: string) => {
 };
 
 /** Get single post by id */
-export const getSinglePostById = async (id: string) => {
+export const getSinglePostById = async (id: string, options?: any) => {
+  const { preview = false } = options ?? {};
   try {
+    if (preview) {
+      const post = await axios.post(
+        `${process.env.NEXT_PUBLIC_URL}/api/post-preview`,
+        {
+          id,
+        }
+      );
+      return post.data ?? null;
+    }
+
     return await api.posts.read(
       { id },
       {
-        // formats: ["html", "plaintext"],
         include: "tags,authors",
+        formats: "html",
       }
     );
   } catch (err) {

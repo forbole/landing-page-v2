@@ -19,6 +19,7 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
     ${mixins.mobileBottomPadding}
     margin-top: 7.5rem;
     display: flex;
+    max-width: 900px;
   `}
 `;
 

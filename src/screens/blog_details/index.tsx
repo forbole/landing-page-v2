@@ -15,7 +15,7 @@ import { Author, SocialMedia } from "./components";
 
 const { colors } = theme;
 
-const BlogDetails = ({ post }: any) => {
+const BlogDetails = ({ post, raw }: any) => {
   if (!post) {
     return <Custom404 />;
   }

@@ -16,8 +16,10 @@ class Post {
   public visibility: boolean;
   public primaryAuthor: Author;
   public tags: Tag[];
+  public id: string;
 
   constructor(payload: any) {
+    this.id = payload.id;
     this.canonicalUrl = payload.canonicalUrl;
     this.author = payload.primaryAuthor;
     this.createdAt = payload.createdAt;
@@ -44,8 +46,10 @@ class Post {
     return tags.map((x) => Tag.fromJson(x));
   }
 
-  static fromJson(data: any, { excerptLimit = 250 }: any) {
+  static fromJson(data: any, options?: any) {
+    const { excerptLimit = 250 } = options ?? {};
     return new Post({
+      id: data.uuid,
       canonicalUrl: data["canonical_url"],
       author: data,
       createdAt: moment(data["created_at"]).format("Do MMM YYYY, h:mm a"),

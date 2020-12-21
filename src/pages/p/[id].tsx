@@ -10,17 +10,17 @@ const BlogPreviewPage = (props: any) => {
 BlogPreviewPage.getInitialProps = async ({ query }) => {
   const { id } = query;
 
-  const post = await getSinglePostById(id);
+  const post = await getSinglePostById(id, {
+    preview: true,
+  });
 
   if (post) {
     post.tags = removeInternalTags(post.tags);
 
     const formattedPost = Post.fromJson(post, {});
-
-    return { post: formattedPost };
-  } else {
-    return { post: null };
+    return { post: formattedPost, raw: post };
   }
+  return { post: null };
 };
 
 export default BlogPreviewPage;
