@@ -1,16 +1,17 @@
 import BlogDetails from "@screens/blog_details";
-import { getSinglePost } from "@api/posts";
+import { getSinglePostById } from "@api/posts";
 import { Post } from "@models";
 import { removeInternalTags } from "@utils/remove_internal_tags";
 
-const BlogDetailsPage = (props: any) => {
+const BlogPreviewPage = (props: any) => {
   return <BlogDetails {...props} />;
 };
 
-BlogDetailsPage.getInitialProps = async ({ query }) => {
-  const { title } = query;
+BlogPreviewPage.getInitialProps = async ({ query }) => {
+  const { id } = query;
 
-  const post = await getSinglePost(title);
+  const post = await getSinglePostById(id);
+
   if (post) {
     post.tags = removeInternalTags(post.tags);
 
@@ -22,4 +23,4 @@ BlogDetailsPage.getInitialProps = async ({ query }) => {
   }
 };
 
-export default BlogDetailsPage;
+export default BlogPreviewPage;
