@@ -5,7 +5,8 @@ const { colors } = theme;
 
 export const PostCSS = styled.div`
   img {
-    height: 200px;
+    // height: 150px;
+    min-height: 150px;
     width: 100%;
     object-fit: cover;
   }
@@ -33,15 +34,14 @@ export const PostCSS = styled.div`
     padding: 0.5rem;
   }
 
-  ${media.tablet`
-    img {
-      height: 400px;
-    }
-  `}
-
   ${media.bigDesktop`
+    &.main {
+      img {
+        height: 350px;
+      }
+    }
     img {
-      height: 444px;
+      height: 225px;
     }
   `}
 `;
