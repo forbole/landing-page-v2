@@ -48,6 +48,9 @@ const Layout = ({
     <>
       <Head>
         <title>{title}</title>
+        {!!(url === "https://staging.forbole.com") && (
+          <meta name="googlebot" content="noindex" />
+        )}
         <meta name="description" content={description} />
         <meta name="keywords" content={formattedKeyworks.join(", ")} />
         <meta property="og:type" content={type} />
