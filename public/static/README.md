@@ -14,7 +14,7 @@
 
 ### 3. Commit the new changes
 
-- After finsihing editing the relevant document, please scroll down to commit your new changes.
+- After finishing editing the relevant document, please scroll down to commit your new changes.
 
 ![commitg new changes](https://librarycarpentry.org/lc-git/fig/github-commit-pr.png)
 
