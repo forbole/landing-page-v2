@@ -27,3 +27,7 @@
 ### 5. Wait for the approval for your pull request!
 
 - After creating the pull request for your branch, we would then review and approve your pull request so that your changes could be merged to the master branch!
+
+### 6. Review the new content changes on `staging.forbole.com`
+
+- Navigate to `staging.forbole.com` and sign in with your forbole gmail account to check your content change!
