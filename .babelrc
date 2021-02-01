@@ -4,6 +4,7 @@
   ],
   "plugins": [
     "inline-react-svg",
+    "emotion",
     [
       "styled-components",
       {
