@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { useTranslation } from "i18n";
 import { Layout, Tags } from "@components";
 import { theme } from "@styles";
@@ -35,21 +34,21 @@ const AuthorTitlePosts = (props: any) => {
             <AuthorCSS>
               <img src={author.profile_image} />
               <div className="content">
-                <p className="name">{author.name}</p>
-                <p className="bio">{author.bio}</p>
+                <a href={`/author/${author.slug}`}>
+                  <p className="name">{author.name}</p>
+                  <p className="bio">{author.bio}</p>
+                </a>
               </div>
             </AuthorCSS>
             {post.map((x, i) => (
-              <Link href={`/blog/${x.slug}`} key={i}>
-                <a>
-                  <img src={x.featureImage} />
-                  <div className="content">
-                    <h3>{x.title}</h3>
-                    <p>{x.excerpt}</p>
-                    <p className="date">{x.publishedAt}</p>
-                  </div>
-                </a>
-              </Link>
+              <a href={`/blog/${x.slug}`} key={i}>
+                <img src={x.featureImage} />
+                <div className="content">
+                  <h3>{x.title}</h3>
+                  <p>{x.excerpt}</p>
+                  <p className="date">{x.publishedAt}</p>
+                </div>
+              </a>
             ))}
           </TagTitlePostsCSS>
           <SideCSS>

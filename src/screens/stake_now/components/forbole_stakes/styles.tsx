@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { mixins, theme, media } from "@styles";
-
-const { colors } = theme;
+import { mixins, media } from "@styles";
 
 export const ForboleStakesCSS = styled.div`
   ${mixins.mobileHorizontalPadding};

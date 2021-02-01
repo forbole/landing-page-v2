@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { TagsCSS, ListCSS } from "./styles";
-import Link from "next/link";
+// import Link from "next/link";
 
 const Tags = ({ tags = [] }: any) => {
   const { t } = useTranslation("blog");
@@ -11,9 +11,7 @@ const Tags = ({ tags = [] }: any) => {
       <ul>
         {tags.map((x, i) => (
           <ListCSS key={x.slug} index={i}>
-            <Link href={`/tag/${x.slug}`} as={`/tag/${x.slug}`}>
-              <a>{x.name}</a>
-            </Link>
+            <a href={`/tag/${x.slug}`}>{x.name}</a>
           </ListCSS>
         ))}
       </ul>

@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { useTranslation } from "i18n";
 import { Layout, Tags } from "@components";
 import { theme } from "@styles";
@@ -40,23 +39,20 @@ const TagTitlePosts = (props: any) => {
         <MaxWidthContainerCSS>
           <TagTitlePostsCSS>
             {post.map((x, i) => (
-              <Link href={`/blog/${x.slug}`} key={i}>
-                <a>
-                  <img src={x.featureImage} />
-                  <div className="content">
-                    <span>
-                      <img src={x.author.profileImage} />
-                      <h4>
-                        {x.author.name} in{" "}
-                        {x.tags && x.tags[0] && x.tags[0].name}
-                      </h4>
-                    </span>
-                    <h3>{x.title}</h3>
-                    <p>{x.excerpt}</p>
-                    <p className="date">{x.publishedAt}</p>
-                  </div>
-                </a>
-              </Link>
+              <a href={`/blog/${x.slug}`} key={i}>
+                <img src={x.featureImage} />
+                <div className="content">
+                  <span>
+                    <img src={x.author.profileImage} />
+                    <h4>
+                      {x.author.name} in {x.tags && x.tags[0] && x.tags[0].name}
+                    </h4>
+                  </span>
+                  <h3>{x.title}</h3>
+                  <p>{x.excerpt}</p>
+                  <p className="date">{x.publishedAt}</p>
+                </div>
+              </a>
             ))}
           </TagTitlePostsCSS>
           <SideCSS>
