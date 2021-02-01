@@ -96,9 +96,15 @@ const Chart = (props: any) => {
         )}`
       }
       labelPosition={0}
-      startAngle={285}
+      startAngle={0}
       onClick={(_, index) => {
         setSelected(index === selected ? undefined : index);
+      }}
+      onMouseOver={(_, index) => {
+        setSelected(index);
+      }}
+      onMouseOut={() => {
+        setSelected(0);
       }}
       labelStyle={{
         fill: "#fff",
