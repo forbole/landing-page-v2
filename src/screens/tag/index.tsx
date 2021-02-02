@@ -20,7 +20,7 @@ const TagTitlePosts = (props: any) => {
   } = post;
   const { t } = useTranslation("blog");
   useBlogHook(error, t);
-  console.log(post);
+  console.log(meta);
   return (
     <Layout
       title={post.title}
