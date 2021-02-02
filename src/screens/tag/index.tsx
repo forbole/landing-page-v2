@@ -4,12 +4,7 @@ import { Layout, Tags } from "@components";
 import { theme } from "@styles";
 import { BlogPosts, TitlePosts, Twitter } from "../blog/components";
 import { useBlogHook } from "./hooks";
-import {
-  TagTitlePostsCSS,
-  MaxWidthContainerCSS,
-  SideCSS,
-  BlogCSS,
-} from "./styles";
+import { MaxWidthContainerCSS, SideCSS, BlogCSS } from "./styles";
 
 const TagTitlePosts = (props: any) => {
   const { colors } = theme;
