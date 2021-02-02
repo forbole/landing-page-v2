@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { Layout, Tags } from "@components";
 import { theme } from "@styles";
-import { TitlePosts, Twitter } from "../blog/components";
+import { BlogPosts, TitlePosts, Twitter } from "../blog/components";
 import { useBlogHook } from "./hooks";
 import {
   TagTitlePostsCSS,
@@ -13,7 +13,7 @@ import {
 
 const TagTitlePosts = (props: any) => {
   const { colors } = theme;
-  const { post, main = false, sidePosts = [], tags } = props;
+  const { post, main = false, sidePosts = [], tags, meta = {} } = props;
   const {
     featureImage,
     title,
@@ -25,6 +25,7 @@ const TagTitlePosts = (props: any) => {
   } = post;
   const { t } = useTranslation("blog");
   useBlogHook(error, t);
+  console.log(post);
   return (
     <Layout
       title={post.title}
@@ -37,24 +38,7 @@ const TagTitlePosts = (props: any) => {
     >
       <BlogCSS>
         <MaxWidthContainerCSS>
-          <TagTitlePostsCSS>
-            {post.map((x, i) => (
-              <a href={`/blog/${x.slug}`} key={i}>
-                <img src={x.featureImage} />
-                <div className="content">
-                  <span>
-                    <img src={x.author.profileImage} />
-                    <h4>
-                      {x.author.name} in {x.tags && x.tags[0] && x.tags[0].name}
-                    </h4>
-                  </span>
-                  <h3>{x.title}</h3>
-                  <p>{x.excerpt}</p>
-                  <p className="date">{x.publishedAt}</p>
-                </div>
-              </a>
-            ))}
-          </TagTitlePostsCSS>
+          <BlogPosts main={post[0]} blogs={post.slice(1)} meta={meta} />
           <SideCSS>
             <TitlePosts posts={sidePosts} />
             <Tags tags={tags} />

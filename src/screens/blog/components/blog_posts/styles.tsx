@@ -6,6 +6,7 @@ export const BlogPostCSS = styled.div`
   padding-top: 4rem;
   display: grid;
   grid-gap: 20px;
+  width: 100%;
 
   ${media.bigDesktop`
     padding: 0;
