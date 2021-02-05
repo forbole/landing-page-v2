@@ -11,25 +11,27 @@ const TagTitlePosts = (props: any) => {
   // const { props } = router.query;
   const { colors } = theme;
   const { post, main = false, sidePosts = [], tags = [], meta = {} } = props;
+  console.log(post);
   const {
-    featureImage,
     title,
+    featureImage,
     excerpt,
     publishedAt,
     author,
     slug,
     error,
   } = post;
+  console.log(featureImage);
   const { t } = useTranslation("blog");
-  useBlogHook(error, t);
+  //useBlogHook(error, t);
   return (
     <Layout
-      title={post.title}
+      title={post?.title}
       navColor={colors.gray600}
       mobileNavColor={colors.gray600}
-      description={excerpt}
+      description={post?.excerpt}
       type="article"
-      image={featureImage}
+      image={post?.featureImage}
       keywords={tags.map((x) => x.name ?? "")}
     >
       <BlogCSS>

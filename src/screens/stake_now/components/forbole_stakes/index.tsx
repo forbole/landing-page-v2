@@ -11,7 +11,7 @@ import HubDetail from "./components/hub_detail";
 import Chart from "./components/chart";
 import { useForboleStakesHook } from "./hooks";
 import { INetworkDataProps } from "./interfaces";
-import ClipLoader from "react-spinners/ClipLoader";
+import { Loader } from "semantic-ui-react";
 
 const ForboleStakes = () => {
   const { t } = useTranslation("stake_now");
@@ -40,7 +40,7 @@ const ForboleStakes = () => {
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
       {isLoading ? (
-        <ClipLoader color="rgba(255, 255, 255)" size={50} />
+        <Loader size="medium" active inverted></Loader>
       ) : (
         <h1>${convertToMoney(totalUSD)}</h1>
       )}
@@ -62,10 +62,9 @@ const ForboleStakes = () => {
                 ? selectedData[selected]?.network[selected]?.title
                 : selectedData[selected]?.network?.title
             }
-            // title={cosmos.title}
             token={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={25} />
+                <Loader size="medium" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.totalToken
               ) : (
@@ -74,7 +73,7 @@ const ForboleStakes = () => {
             }
             usd={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={15} />
+                <Loader size="tiny" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.totalMarketValue
               ) : (
@@ -83,7 +82,7 @@ const ForboleStakes = () => {
             }
             perToken={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={10} />
+                <Loader size="mini" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.currentMarketValue
               ) : (
@@ -105,7 +104,7 @@ const ForboleStakes = () => {
             }
             token={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={10} />
+                <Loader size="mini" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.voting.token
               ) : (
@@ -114,7 +113,7 @@ const ForboleStakes = () => {
             }
             percent={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={10} />
+                <Loader size="mini" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.voting.percent
               ) : (
@@ -137,7 +136,7 @@ const ForboleStakes = () => {
             }
             token={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={10} />
+                <Loader size="mini" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.selfDelegations.token
               ) : (
@@ -146,7 +145,7 @@ const ForboleStakes = () => {
             }
             percent={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={10} />
+                <Loader size="mini" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.selfDelegations.percent
               ) : (
@@ -170,7 +169,7 @@ const ForboleStakes = () => {
             }
             token={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={10} />
+                <Loader size="mini" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.otherDelegations.token
               ) : (
@@ -180,7 +179,7 @@ const ForboleStakes = () => {
             }
             percent={
               isLoading ? (
-                <ClipLoader color="rgba(255, 255, 255)" size={10} />
+                <Loader size="mini" active></Loader>
               ) : selected >= 8 ? (
                 selectedData[selected]?.network?.otherDelegations.percent
               ) : (

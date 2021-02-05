@@ -4,7 +4,6 @@ import { ghostApi as api } from "../index";
 /** Get blog posts by tag */
 export const getPostsByTag = async (query: { tag: string; page?: number }) => {
   try {
-    //console.log(query);
     const posts = await api.posts.browse({
       filter: `tags:${query.tag}`,
       include: "tags,authors",

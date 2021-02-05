@@ -34,6 +34,30 @@ export const ForboleStakesCSS = styled.div`
     font-weight: 500;
   }
 
+  .ui.loader {
+    position: relative !important;
+    display: inline-block;
+  }
+
+  .ui.mini.loader {
+    top: 10px;
+    left: 6px;
+  }
+
+  .ui.tiny.loader {
+    top: 8px;
+    left: 8px;
+  }
+
+  .ui.medium.loader {
+    top: 22px;
+    left: 15px;
+  }
+
+  .ui.loader.loader.loader:after {
+    border-color: white;
+  }
+
   ${media.bigDesktop`
     background-image:  url("/static/images/assets/stake-now-elements.svg"), url("/static/images/assets/stake-now-bg.svg");
     background-position: center 200px, center center;
