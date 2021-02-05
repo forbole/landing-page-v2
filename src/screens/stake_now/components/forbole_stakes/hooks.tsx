@@ -428,7 +428,7 @@ export const useForboleStakesHook = () => {
       getCosmosBasedNetwork()
         .then(() => getIrisNetwork())
         .then(() => getVSYSNetwork())
-        .then(() => setLoading(true));
+        .then(() => setLoading(false));
     } catch (err) {
       console.log(err);
     }

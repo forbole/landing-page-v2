@@ -8,7 +8,6 @@ import { useBlogHook } from "./hooks";
 import { MaxWidthContainerCSS, SideCSS, BlogCSS } from "./styles";
 
 const TagTitlePosts = (props: any) => {
-  // const { props } = router.query;
   const { colors } = theme;
   const { post, main = false, sidePosts = [], tags = [], meta = {} } = props;
   console.log(post);
@@ -23,7 +22,7 @@ const TagTitlePosts = (props: any) => {
   } = post;
   console.log(featureImage);
   const { t } = useTranslation("blog");
-  //useBlogHook(error, t);
+  useBlogHook(error, t);
   return (
     <Layout
       title={post?.title}
