@@ -40,7 +40,7 @@ const ForboleStakes = () => {
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
       {isLoading ? (
-        <Loader size="medium" active inverted></Loader>
+        <Loader size="medium" active></Loader>
       ) : (
         <h1>${convertToMoney(totalUSD)}</h1>
       )}
