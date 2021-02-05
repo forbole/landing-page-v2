@@ -8,10 +8,12 @@ const Author = ({ post }: any) => {
     <AuthorCSS>
       <img src={author.profileImage} />
       <div className="content">
-        <a href={`/author/${author.slug}`}>
-          <p className="name">{author.name}</p>
-          <p className="date">{post.publishedAt}</p>
-        </a>
+        <Link href={`/author/${author.slug}`}>
+          <a>
+            <p className="name">{author.name}</p>
+            <p className="date">{post.publishedAt}</p>
+          </a>
+        </Link>
       </div>
     </AuthorCSS>
   );

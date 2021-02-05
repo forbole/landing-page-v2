@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "next/link";
+import Link from "next/link";
 import { useTranslation } from "i18n";
 import { Layout, Tags } from "@components";
 import { theme } from "@styles";
@@ -35,10 +35,12 @@ const AuthorTitlePosts = (props: any) => {
             <AuthorCSS>
               <img src={author.profile_image} />
               <div className="content">
-                <a href={`/author/${author.slug}`}>
-                  <p className="name">{author.name}</p>
-                  <p className="bio">{author.bio}</p>
-                </a>
+                <Link href={`/author/${author.slug}`}>
+                  <a>
+                    <p className="name">{author.name}</p>
+                    <p className="bio">{author.bio}</p>
+                  </a>
+                </Link>
               </div>
             </AuthorCSS>
             {post.map((x, i) => (
