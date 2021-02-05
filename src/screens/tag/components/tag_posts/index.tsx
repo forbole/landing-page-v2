@@ -10,8 +10,6 @@ const TagPosts = ({ main, blogs, meta }: IProps) => {
   const currentPage = R.pathOr(0, ["pagination", "page"], meta);
   const totalPages = R.pathOr(0, ["pagination", "pages"], meta);
 
-  console.log(currentPage, totalPages, meta.pagination);
-
   const { handleTagPageChange } = useBlogPostsHook();
 
   return (
@@ -22,7 +20,6 @@ const TagPosts = ({ main, blogs, meta }: IProps) => {
           <Post key={i} post={x} />
         ))}
       </BlogPostCSS>
-      {/* <Link href="/tag/[tag]" as={"/blog/" + value[0]}></Link> */}
       <Pagination
         boundaryRange={0}
         activePage={currentPage}
