@@ -10,8 +10,6 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
   const currentPage = R.pathOr(0, ["pagination", "page"], meta);
   const totalPages = R.pathOr(0, ["pagination", "pages"], meta);
 
-  console.log(currentPage, totalPages, meta);
-
   const { handlePageChange } = useBlogPostsHook();
 
   return (

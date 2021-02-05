@@ -10,7 +10,6 @@ import { MaxWidthContainerCSS, SideCSS, BlogCSS } from "./styles";
 const TagTitlePosts = (props: any) => {
   const { colors } = theme;
   const { post, main = false, sidePosts = [], tags = [], meta = {} } = props;
-  console.log(post);
   const {
     title,
     featureImage,
@@ -20,7 +19,6 @@ const TagTitlePosts = (props: any) => {
     slug,
     error,
   } = post;
-  console.log(featureImage);
   const { t } = useTranslation("blog");
   useBlogHook(error, t);
   return (
