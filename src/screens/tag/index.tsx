@@ -2,13 +2,15 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { Layout, Tags } from "@components";
 import { theme } from "@styles";
-import { BlogPosts, TitlePosts, Twitter } from "../blog/components";
+import { TitlePosts, Twitter } from "../blog/components";
+import { TagPosts } from "./components";
 import { useBlogHook } from "./hooks";
 import { MaxWidthContainerCSS, SideCSS, BlogCSS } from "./styles";
 
 const TagTitlePosts = (props: any) => {
+  // const { props } = router.query;
   const { colors } = theme;
-  const { post, main = false, sidePosts = [], tags, meta = {} } = props;
+  const { post, main = false, sidePosts = [], tags = [], meta = {} } = props;
   const {
     featureImage,
     title,
@@ -32,7 +34,7 @@ const TagTitlePosts = (props: any) => {
     >
       <BlogCSS>
         <MaxWidthContainerCSS>
-          <BlogPosts main={post[0]} blogs={post.slice(1)} meta={meta} />
+          <TagPosts main={post[0]} blogs={post.slice(0)} meta={meta} />
           <SideCSS>
             <TitlePosts posts={sidePosts} />
             <Tags tags={tags} />

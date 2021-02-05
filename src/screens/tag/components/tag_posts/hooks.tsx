@@ -3,15 +3,14 @@ import { useRouter } from "next/router";
 export const useBlogPostsHook = () => {
   const router: any = useRouter();
 
-  const handlePageChange = (e: any, { activePage, tag }: any) => {
-    console.log(activePage);
+  const handleTagPageChange = (e: any, { activePage }: any) => {
     router.push({
-      pathname: router.pathname,
+      pathname: `/tag/${router.query.tag}`,
       query: { page: activePage },
     });
   };
 
   return {
-    handlePageChange,
+    handleTagPageChange,
   };
 };

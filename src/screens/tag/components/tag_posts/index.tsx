@@ -6,13 +6,13 @@ import Post from "./components/post";
 import { IProps } from "./interface";
 import { useBlogPostsHook } from "./hooks";
 
-const BlogPosts = ({ main, blogs, meta }: IProps) => {
+const TagPosts = ({ main, blogs, meta }: IProps) => {
   const currentPage = R.pathOr(0, ["pagination", "page"], meta);
   const totalPages = R.pathOr(0, ["pagination", "pages"], meta);
 
-  console.log(currentPage, totalPages, meta);
+  console.log(currentPage, totalPages, meta.pagination);
 
-  const { handlePageChange } = useBlogPostsHook();
+  const { handleTagPageChange } = useBlogPostsHook();
 
   return (
     <BlogContainerCSS>
@@ -22,14 +22,15 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
           <Post key={i} post={x} />
         ))}
       </BlogPostCSS>
+      {/* <Link href="/tag/[tag]" as={"/blog/" + value[0]}></Link> */}
       <Pagination
         boundaryRange={0}
         activePage={currentPage}
         totalPages={totalPages}
-        onPageChange={handlePageChange}
+        onPageChange={handleTagPageChange}
       />
     </BlogContainerCSS>
   );
 };
 
-export default BlogPosts;
+export default TagPosts;

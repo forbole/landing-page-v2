@@ -3,13 +3,14 @@ import { getPostsByTag } from "@api/tags";
 import { getPosts, getTags } from "@api/posts";
 import { Post, Tag } from "@models";
 import { removeInternalTags } from "@utils/remove_internal_tags";
+// import { useRouter } from "next/router";
 
 const TagDetailsPage = (props: any) => {
   return <TagTitlePosts {...props} />;
 };
 
 TagDetailsPage.getInitialProps = async ({ query }) => {
-  const { tag } = query;
+  const { tag, page } = query;
   const posts = await getPostsByTag(tag);
 
   let formattedPost = [];
@@ -20,6 +21,10 @@ TagDetailsPage.getInitialProps = async ({ query }) => {
   try {
     const fetchQuery: any = {};
     if (query.page) {
+      fetchQuery.page = query.page;
+    }
+    if (query.tag && query.page) {
+      fetchQuery.tag = query.tag;
       fetchQuery.page = query.page;
     }
     const [tags, sidePosts] = await Promise.all([
