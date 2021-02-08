@@ -9,6 +9,7 @@ import { cosmosData, irisData, vsysData } from "./config";
 
 export const useForboleStakesHook = () => {
   const [selected, setSelected] = useState(0);
+  const [isLoading, setLoading] = useState(false);
 
   // Cosmos-Based Networks
   const cosmosBasedNetwork = [];
@@ -40,6 +41,7 @@ export const useForboleStakesHook = () => {
   const [cosmosNetwork, setCosmosNetwork] = useState(cosmosBasedNetwork);
 
   const getCosmosBasedNetwork = async () => {
+    setLoading(true);
     const updatedArr = [];
     for (let x = 0; x < cosmosData.length; x++) {
       const networkFunction = networkFunctions[cosmosData[x]?.name] ?? null;
@@ -425,7 +427,8 @@ export const useForboleStakesHook = () => {
     try {
       getCosmosBasedNetwork()
         .then(() => getIrisNetwork())
-        .then(() => getVSYSNetwork());
+        .then(() => getVSYSNetwork())
+        .then(() => setLoading(false));
     } catch (err) {
       console.log(err);
     }
@@ -444,6 +447,8 @@ export const useForboleStakesHook = () => {
     iris,
     vsys,
     totalUSD,
+    isLoading,
+    setLoading,
     selected,
     setSelected,
   };

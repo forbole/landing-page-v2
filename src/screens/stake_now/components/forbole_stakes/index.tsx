@@ -11,11 +11,19 @@ import HubDetail from "./components/hub_detail";
 import Chart from "./components/chart";
 import { useForboleStakesHook } from "./hooks";
 import { INetworkDataProps } from "./interfaces";
+import { Loader } from "semantic-ui-react";
 
 const ForboleStakes = () => {
   const { t } = useTranslation("stake_now");
   const hookProps = useForboleStakesHook();
-  const { cosmosNetwork, iris, vsys, totalUSD, selected } = hookProps;
+  const {
+    cosmosNetwork,
+    iris,
+    vsys,
+    totalUSD,
+    selected,
+    isLoading,
+  } = hookProps;
   const selectedData: INetworkDataProps[] = [
     { network: cosmosNetwork, icon: "cosmos-hub" },
     { network: cosmosNetwork, icon: "terra" },
@@ -31,7 +39,11 @@ const ForboleStakes = () => {
   return (
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
-      <h1>${convertToMoney(totalUSD)}</h1>
+      {isLoading ? (
+        <Loader size="medium" active></Loader>
+      ) : (
+        <h1>${convertToMoney(totalUSD)}</h1>
+      )}
       <FlexContainerCSS>
         <ChartContainerCSS>
           <Chart {...hookProps} />
@@ -50,21 +62,32 @@ const ForboleStakes = () => {
                 ? selectedData[selected]?.network[selected]?.title
                 : selectedData[selected]?.network?.title
             }
-            // title={cosmos.title}
             token={
-              selected >= 8
-                ? selectedData[selected]?.network?.totalToken
-                : selectedData[selected]?.network[selected]?.totalToken
+              isLoading ? (
+                <Loader size="medium" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.totalToken
+              ) : (
+                selectedData[selected]?.network[selected]?.totalToken
+              )
             }
             usd={
-              selected >= 8
-                ? selectedData[selected]?.network?.totalMarketValue
-                : selectedData[selected]?.network[selected]?.totalMarketValue
+              isLoading ? (
+                <Loader size="tiny" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.totalMarketValue
+              ) : (
+                selectedData[selected]?.network[selected]?.totalMarketValue
+              )
             }
             perToken={
-              selected >= 8
-                ? selectedData[selected]?.network?.currentMarketValue
-                : selectedData[selected]?.network[selected]?.currentMarketValue
+              isLoading ? (
+                <Loader size="mini" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.currentMarketValue
+              ) : (
+                selectedData[selected]?.network[selected]?.currentMarketValue
+              )
             }
           />
           <hr className="stats-hr" />
@@ -80,14 +103,22 @@ const ForboleStakes = () => {
                 : selectedData[selected]?.network[selected]?.voting.title
             }
             token={
-              selected >= 8
-                ? selectedData[selected]?.network?.voting.token
-                : selectedData[selected]?.network[selected]?.voting.token
+              isLoading ? (
+                <Loader size="mini" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.voting.token
+              ) : (
+                selectedData[selected]?.network[selected]?.voting.token
+              )
             }
             percent={
-              selected >= 8
-                ? selectedData[selected]?.network?.voting.percent
-                : selectedData[selected]?.network[selected]?.voting.percent
+              isLoading ? (
+                <Loader size="mini" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.voting.percent
+              ) : (
+                selectedData[selected]?.network[selected]?.voting.percent
+              )
             }
           />
           <hr className="stats-hr" />
@@ -104,16 +135,23 @@ const ForboleStakes = () => {
                     .title
             }
             token={
-              selected >= 8
-                ? selectedData[selected]?.network?.selfDelegations.token
-                : selectedData[selected]?.network[selected]?.selfDelegations
-                    .token
+              isLoading ? (
+                <Loader size="mini" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.selfDelegations.token
+              ) : (
+                selectedData[selected]?.network[selected]?.selfDelegations.token
+              )
             }
             percent={
-              selected >= 8
-                ? selectedData[selected]?.network?.selfDelegations.percent
-                : selectedData[selected]?.network[selected]?.selfDelegations
-                    .percent
+              isLoading ? (
+                <Loader size="mini" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.selfDelegations.percent
+              ) : (
+                selectedData[selected]?.network[selected]?.selfDelegations
+                  .percent
+              )
             }
           />
           <hr className="stats-hr" />
@@ -130,16 +168,24 @@ const ForboleStakes = () => {
                     .title
             }
             token={
-              selected >= 8
-                ? selectedData[selected]?.network?.otherDelegations.token
-                : selectedData[selected]?.network[selected]?.otherDelegations
-                    .token
+              isLoading ? (
+                <Loader size="mini" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.otherDelegations.token
+              ) : (
+                selectedData[selected]?.network[selected]?.otherDelegations
+                  .token
+              )
             }
             percent={
-              selected >= 8
-                ? selectedData[selected]?.network?.otherDelegations.percent
-                : selectedData[selected]?.network[selected]?.otherDelegations
-                    .percent
+              isLoading ? (
+                <Loader size="mini" active></Loader>
+              ) : selected >= 8 ? (
+                selectedData[selected]?.network?.otherDelegations.percent
+              ) : (
+                selectedData[selected]?.network[selected]?.otherDelegations
+                  .percent
+              )
             }
           />
         </StakesDetailsContainerCSS>

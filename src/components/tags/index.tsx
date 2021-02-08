@@ -11,7 +11,7 @@ const Tags = ({ tags = [] }: any) => {
       <ul>
         {tags.map((x, i) => (
           <ListCSS key={x.slug} index={i}>
-            <Link href={`/tag/${x.slug}`} as={`/tag/${x.slug}`}>
+            <Link href={`/tag/${x.slug}`}>
               <a>{x.name}</a>
             </Link>
           </ListCSS>

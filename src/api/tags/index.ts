@@ -2,13 +2,13 @@ import { ghostApi as api } from "../index";
 // import { IPost } from "./interface";
 
 /** Get blog posts by tag */
-export const getPostsByTag = async (query: string) => {
+export const getPostsByTag = async (query: { tag: string; page?: number }) => {
   try {
     const posts = await api.posts.browse({
-      filter: `tags:${query}`,
+      filter: `tags:${query.tag}`,
       include: "tags,authors",
-      limit: 5,
-      page: 1,
+      limit: 10,
+      page: query?.page || 1,
       formats: "html",
     });
     return posts ?? null;

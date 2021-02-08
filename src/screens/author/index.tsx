@@ -35,8 +35,12 @@ const AuthorTitlePosts = (props: any) => {
             <AuthorCSS>
               <img src={author.profile_image} />
               <div className="content">
-                <p className="name">{author.name}</p>
-                <p className="bio">{author.bio}</p>
+                <Link href={`/author/${author.slug}`}>
+                  <a>
+                    <p className="name">{author.name}</p>
+                    <p className="bio">{author.bio}</p>
+                  </a>
+                </Link>
               </div>
             </AuthorCSS>
             {post.map((x, i) => (

@@ -1,7 +1,5 @@
 import styled from "styled-components";
-import { mixins, theme, media } from "@styles";
-
-const { colors } = theme;
+import { mixins, media } from "@styles";
 
 export const ForboleStakesCSS = styled.div`
   ${mixins.mobileHorizontalPadding};
@@ -34,6 +32,30 @@ export const ForboleStakesCSS = styled.div`
     font-size: 2.5rem;
     color: white;
     font-weight: 500;
+  }
+
+  .ui.loader {
+    position: relative !important;
+    display: inline-block;
+  }
+
+  .ui.mini.loader {
+    top: 10px;
+    left: 6px;
+  }
+
+  .ui.tiny.loader {
+    top: 8px;
+    left: 8px;
+  }
+
+  .ui.medium.loader {
+    top: 22px;
+    left: 15px;
+  }
+
+  .ui.loader.loader.loader:after {
+    border-color: white;
   }
 
   ${media.bigDesktop`

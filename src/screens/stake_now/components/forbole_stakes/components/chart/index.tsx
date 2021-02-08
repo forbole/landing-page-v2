@@ -90,15 +90,20 @@ const Chart = (props: any) => {
           : segmentsStyle;
       }}
       animate
+      animationDuration={500}
+      animationEasing="ease-out"
       label={() =>
         `${t(
           networkData && networkData[selected] && networkData[selected].title
         )}`
       }
       labelPosition={0}
-      startAngle={285}
-      onClick={(_, index) => {
-        setSelected(index === selected ? undefined : index);
+      startAngle={0}
+      onMouseOver={(_, index) => {
+        setSelected(index === selected ? 0 : index);
+      }}
+      onMouseOut={() => {
+        setSelected(0);
       }}
       labelStyle={{
         fill: "#fff",
