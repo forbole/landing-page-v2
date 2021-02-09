@@ -9,10 +9,10 @@ const Tags = ({ tags = [] }: any) => {
     <TagsCSS className="tags-container">
       <h3>{t("tags")}</h3>
       <ul>
-        {tags.map((x, i) => (
-          <ListCSS key={x.slug} index={i}>
-            <Link href={`/tag/${x.slug}`}>
-              <a>{x.name}</a>
+        {tags.map((tag, i) => (
+          <ListCSS key={tag.slug} index={i}>
+            <Link href={`/tag/?tag=${tag.slug}`} as={`/tag/${tag.slug}`}>
+              <a>{tag.name}</a>
             </Link>
           </ListCSS>
         ))}
