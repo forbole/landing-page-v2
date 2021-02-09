@@ -3,7 +3,6 @@ import { getPostsByTag } from "@api/tags";
 import { getPosts, getTags } from "@api/posts";
 import { Post, Tag } from "@models";
 import { removeInternalTags } from "@utils/remove_internal_tags";
-// import { useRouter } from "next/router";
 
 const TagDetailsPage = (props: any) => {
   return <TagTitlePosts {...props} />;
