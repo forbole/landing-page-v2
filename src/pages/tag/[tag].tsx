@@ -10,7 +10,7 @@ const TagDetailsPage = (props: any) => {
 };
 
 TagDetailsPage.getInitialProps = async ({ query }) => {
-  let formattedPost: any = [];
+  let formattedPost = [];
   let formattedSidePosts = [];
   let formattedTags = [];
   let meta = {};
