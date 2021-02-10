@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "i18n";
-import { Layout, Tags } from "@components";
+import { Layout, Tags, TagDetailsLoader } from "@components";
 import { theme } from "@styles";
 import { TitlePosts, Twitter } from "../blog/components";
 import { TagPosts } from "./components";
 import { useBlogHook } from "./hooks";
 import { MaxWidthContainerCSS, SideCSS, BlogCSS } from "./styles";
+import ContentLoader from "react-content-loader";
 
 const TagTitlePosts = (props: any) => {
   const { colors } = theme;
@@ -38,24 +39,26 @@ const TagTitlePosts = (props: any) => {
       // image={props.post?.featureImage}
       keywords={tags.map((x) => x.name ?? "")}
     >
-      {isLoading ? (
-        <p>Loading</p>
-      ) : (
-        <BlogCSS>
-          <MaxWidthContainerCSS>
-            <TagPosts
-              main={props.post[0]}
-              blogs={props.post.slice(0)}
-              meta={meta}
-            />
-            <SideCSS>
-              <TitlePosts posts={sidePosts} />
-              <Tags tags={tags} />
-              <Twitter />
-            </SideCSS>
-          </MaxWidthContainerCSS>
-        </BlogCSS>
-      )}
+      <BlogCSS>
+        <MaxWidthContainerCSS>
+          {isLoading ? (
+            <TagDetailsLoader />
+          ) : (
+            <>
+              <TagPosts
+                main={props.post[0]}
+                blogs={props.post.slice(0)}
+                meta={meta}
+              />
+              <SideCSS>
+                <TitlePosts posts={sidePosts} />
+                <Tags tags={tags} />
+                <Twitter />
+              </SideCSS>
+            </>
+          )}
+        </MaxWidthContainerCSS>
+      </BlogCSS>
     </Layout>
   );
 };
