@@ -1,5 +1,7 @@
 {
   "title": "Blog",
+  "forbole": "Forbole",
+  "excerpt": "Forbole provides staking service, blockchain tools, and run our own blockchain by a global team of software engineers, financial experts, and creative marketers.",
   "tags": "Tags",
   "twitter": "Twitter",
   "error": "Unable to fetch blogs. Please try again later."

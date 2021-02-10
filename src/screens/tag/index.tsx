@@ -6,37 +6,33 @@ import { TitlePosts, Twitter } from "../blog/components";
 import { TagPosts } from "./components";
 import { useBlogHook } from "./hooks";
 import { MaxWidthContainerCSS, SideCSS, BlogCSS } from "./styles";
-import ContentLoader from "react-content-loader";
 
 const TagTitlePosts = (props: any) => {
   const { colors } = theme;
-  const { post, main = false, sidePosts = [], tags = [], meta = {} } = props;
+  const {
+    post,
+    main = false,
+    sidePosts = [],
+    tags = [],
+    meta = {},
+    error,
+  } = props;
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     if (props.post !== undefined) {
       setLoading(false);
     }
   }, [props]);
-  console.log(props.post);
-  // const {
-  //   title,
-  //   featureImage,
-  //   excerpt,
-  //   publishedAt,
-  //   author,
-  //   slug,
-  //   error,
-  // } = post;
   const { t } = useTranslation("blog");
-  //useBlogHook(error, t);
+  useBlogHook(error, t);
   return (
     <Layout
-      // title={props.post?.title}
+      title={isLoading ? t("forbole") : props.post?.title}
       navColor={colors.gray600}
       mobileNavColor={colors.gray600}
-      // description={props.post?.excerpt}
-      // type="article"
-      // image={props.post?.featureImage}
+      description={isLoading ? t("excerpt") : props.post?.excerpt}
+      type="article"
+      image={isLoading ? t("forbole") : props.post?.featureImage}
       keywords={tags.map((x) => x.name ?? "")}
     >
       <BlogCSS>
