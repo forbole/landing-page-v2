@@ -9,11 +9,8 @@ const AuthorDetailsPage = (props: any) => {
 };
 
 AuthorDetailsPage.getInitialProps = async ({ query }) => {
-  const { author } = query;
-  const posts = await getPostsByAuthor(author);
-  const authorInfo = await getAuthorBySlug(author);
-
-  let authorPosts = [];
+  let authorPosts: any = [];
+  let authorInfo = {};
   let formattedSidePosts = [];
   let formattedTags = [];
   let meta = {};
@@ -23,16 +20,23 @@ AuthorDetailsPage.getInitialProps = async ({ query }) => {
     if (query.page) {
       fetchQuery.page = query.page;
     }
-    const [tags, sidePosts] = await Promise.all([
+    if (query.author) {
+      fetchQuery.author = query.author;
+    }
+    const [tags, posts, authorDetails, sidePosts] = await Promise.all([
       getTags(),
+      getPostsByAuthor(fetchQuery),
+      getAuthorBySlug(fetchQuery),
       getPosts({
         limit: 10,
       }),
     ]);
+    authorInfo = authorDetails;
     formattedSidePosts = sidePosts.map((post) => Post.fromJson(post, {}));
     formattedTags = removeInternalTags(tags).map((tag) => Tag.fromJson(tag));
     meta = posts?.meta;
     authorPosts = posts.map((y) => Post.fromJson(y, {}));
+    authorPosts.tags = posts.map((x) => removeInternalTags(x.tags));
   } catch (err) {
     error = true;
     console.log(error, "error");

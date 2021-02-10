@@ -7,7 +7,7 @@ const TitlePosts = (props: any) => {
   return (
     <TitlePostsCSS>
       {posts.map((x, i) => (
-        <Link href={`/blog/${x.slug}`} key={i}>
+        <Link href={`/blog/?blog=${x.slug}`} as={`/blog/${x.slug}`} key={i}>
           <a>
             <li>{x.title}</li>
           </a>
