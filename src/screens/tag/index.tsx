@@ -26,21 +26,34 @@ const TagTitlePosts = (props: any) => {
   const { t } = useTranslation("blog");
   useBlogHook(error, t);
   return (
-    <Layout
-      title={isLoading ? t("forbole") : props.post?.title}
-      navColor={colors.gray600}
-      mobileNavColor={colors.gray600}
-      description={isLoading ? t("excerpt") : props.post?.excerpt}
-      type="article"
-      image={isLoading ? t("forbole") : props.post?.featureImage}
-      keywords={tags.map((x) => x.name ?? "")}
-    >
-      <BlogCSS>
-        <MaxWidthContainerCSS>
-          {isLoading ? (
-            <TagDetailsLoader />
-          ) : (
-            <>
+    <>
+      {isLoading ? (
+        <Layout
+          title={t("forbole")}
+          navColor={colors.gray600}
+          mobileNavColor={colors.gray600}
+          description={t("excerpt")}
+          type="article"
+          image={t("forbole")}
+        >
+          <BlogCSS>
+            <MaxWidthContainerCSS>
+              <TagDetailsLoader />
+            </MaxWidthContainerCSS>
+          </BlogCSS>
+        </Layout>
+      ) : (
+        <Layout
+          title={props.post.title}
+          navColor={colors.gray600}
+          mobileNavColor={colors.gray600}
+          description={props.post.excerpt}
+          type="article"
+          image={props.post.featureImage}
+          keywords={tags.map((x) => x.name ?? "")}
+        >
+          <BlogCSS>
+            <MaxWidthContainerCSS>
               <TagPosts
                 main={props.post[0]}
                 blogs={props.post.slice(1)}
@@ -51,11 +64,11 @@ const TagTitlePosts = (props: any) => {
                 <Tags tags={tags} />
                 <Twitter />
               </SideCSS>
-            </>
-          )}
-        </MaxWidthContainerCSS>
-      </BlogCSS>
-    </Layout>
+            </MaxWidthContainerCSS>
+          </BlogCSS>
+        </Layout>
+      )}
+    </>
   );
 };
 
