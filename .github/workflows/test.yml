@@ -24,6 +24,6 @@ jobs:
           cmd: install # will run `yarn install` command
       - name: Run build check
         run: yarn build
-      - run: yarn test
+      - run: yarn run test
         env:
           CI: true
