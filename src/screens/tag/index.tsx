@@ -10,8 +10,8 @@ import { MaxWidthContainerCSS, SideCSS, BlogCSS } from "./styles";
 const TagTitlePosts = (props: any) => {
   const { colors } = theme;
   const {
-    post,
     main = false,
+    post = [],
     sidePosts = [],
     tags = [],
     meta = {},
@@ -19,7 +19,7 @@ const TagTitlePosts = (props: any) => {
   } = props;
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    if (props.post !== undefined) {
+    if (post.length > 0) {
       setLoading(false);
     }
   }, [props]);
@@ -45,21 +45,16 @@ const TagTitlePosts = (props: any) => {
   } else {
     return (
       <Layout
-        title={props.post.title}
+        title={t("forbole")}
         navColor={colors.gray600}
         mobileNavColor={colors.gray600}
-        description={props.post.excerpt}
+        description={t("excerpt")}
         type="article"
-        image={props.post.featureImage}
-        keywords={tags.map((x) => x.name ?? "")}
+        image={t("forbole")}
       >
         <BlogCSS>
           <MaxWidthContainerCSS>
-            <TagPosts
-              main={props.post[0]}
-              blogs={props.post.slice(1)}
-              meta={meta}
-            />
+            <TagPosts main={post[0]} blogs={post.slice(1)} meta={meta} />
             <SideCSS>
               <TitlePosts posts={sidePosts} />
               <Tags tags={tags} />
