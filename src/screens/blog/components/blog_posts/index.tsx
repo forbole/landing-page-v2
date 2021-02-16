@@ -16,8 +16,8 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
     <BlogContainerCSS>
       <BlogPostCSS>
         {!!main && <Post main post={main} />}
-        {blogs.map((x, i) => (
-          <Post key={i} post={x} />
+        {blogs.map((post, i) => (
+          <Post key={i} post={post} />
         ))}
       </BlogPostCSS>
       <Pagination

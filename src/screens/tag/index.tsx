@@ -43,7 +43,7 @@ const TagTitlePosts = (props: any) => {
             <>
               <TagPosts
                 main={props.post[0]}
-                blogs={props.post.slice(0)}
+                blogs={props.post.slice(1)}
                 meta={meta}
               />
               <SideCSS>
