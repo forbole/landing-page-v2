@@ -8,7 +8,7 @@ const TitlePosts = (props: any) => {
     <TitlePostsCSS>
       {posts.map((post, i) => (
         <Link
-          href={`/blog/?blog=${post.slug}`}
+          href={`/blog/?title=${post.slug}`}
           as={`/blog/${post.slug}`}
           key={i}
         >

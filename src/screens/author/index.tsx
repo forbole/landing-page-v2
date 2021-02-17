@@ -48,7 +48,7 @@ const AuthorTitlePosts = (props: any) => {
             </AuthorCSS>
             {post.map((post, i) => (
               <Link
-                href={`/blog/?blog=${post.slug}`}
+                href={`/blog/?title=${post.slug}`}
                 as={`/blog/${post.slug}`}
                 key={i}
               >

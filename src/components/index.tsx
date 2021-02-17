@@ -12,6 +12,7 @@ import MooncakeDetails from "./mooncake_details";
 import MooncakeImg from "./mooncake_img";
 import ProgressBar from "../screens/home/components/progress_bar";
 import TagDetailsLoader from "./tag_details_loader";
+import BlogDetailsLoader from "./blog_details_loader";
 
 export {
   Layout,
@@ -28,4 +29,5 @@ export {
   MooncakeImg,
   ProgressBar,
   TagDetailsLoader,
+  BlogDetailsLoader,
 };

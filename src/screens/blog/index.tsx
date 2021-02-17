@@ -17,32 +17,43 @@ const Blog = (props: any) => {
       setLoading(false);
     }
   }, [props]);
-  return (
-    <Layout
-      title={t("title")}
-      navColor={colors.gray600}
-      mobileNavColor={colors.gray600}
-    >
-      <BlogCSS>
-        <MaxWidthContainerCSS>
-          {isLoading ? (
-            <>
-              <TagDetailsLoader />
-            </>
-          ) : (
-            <>
-              <BlogPosts main={posts[0]} blogs={posts.slice(1)} meta={meta} />
-              <SideCSS>
-                <TitlePosts posts={sidePosts} />
-                <Tags tags={tags} />
-                <Twitter />
-              </SideCSS>
-            </>
-          )}
-        </MaxWidthContainerCSS>
-      </BlogCSS>
-    </Layout>
-  );
+  if (isLoading) {
+    return (
+      <Layout
+        title={t("forbole")}
+        navColor={colors.gray600}
+        mobileNavColor={colors.gray600}
+        description={t("excerpt")}
+        type="article"
+        image={t("forbole")}
+      >
+        <BlogCSS>
+          <MaxWidthContainerCSS>
+            <TagDetailsLoader />
+          </MaxWidthContainerCSS>
+        </BlogCSS>
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout
+        title={t("title")}
+        navColor={colors.gray600}
+        mobileNavColor={colors.gray600}
+      >
+        <BlogCSS>
+          <MaxWidthContainerCSS>
+            <BlogPosts main={posts[0]} blogs={posts.slice(1)} meta={meta} />
+            <SideCSS>
+              <TitlePosts posts={sidePosts} />
+              <Tags tags={tags} />
+              <Twitter />
+            </SideCSS>
+          </MaxWidthContainerCSS>
+        </BlogCSS>
+      </Layout>
+    );
+  }
 };
 
 export default Blog;
