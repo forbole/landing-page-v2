@@ -30,58 +30,15 @@ const BlogDetails = ({ post, raw }: any) => {
     tags,
     excerpt,
     featureImage,
+    html,
   } = post;
 
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    if (post.excerpt && post.featureImage && post.html) {
+    if (excerpt && featureImage && html) {
       setLoading(false);
     }
   }, [post]);
-
-  const org = {
-    "@id": `${slug}#organization`,
-    type: "Organization",
-    name: `Forbole`,
-    logo: {
-      "@type": "ImageObject",
-      name: `${title} Logo`,
-      width: "230",
-      height: "67",
-      url: `${featureImage}`,
-    },
-  };
-
-  const jsonData = {
-    "@context": "https://schema.org/",
-    "@type": "Article",
-    publisher: org,
-    author: {
-      "@type": "Person",
-      "@id": `${url}/author/${author.name}`,
-      name: author.name,
-    },
-    headline: `${title}`,
-    url: `${url}`,
-    datePublished: `${publishedAt}`,
-    dateModified: modified,
-    description: `${excerpt}`,
-    discussionUrl: `${url}/blog/${slug}#comments`,
-    inLanguage: "English",
-    sourceOrganization: {
-      "@id": `${slug}#organisation`,
-      type: "Organization",
-      name: `${title}`,
-      logo: {
-        "@type": "ImageObject",
-        name: `${title} Logo`,
-        width: "230",
-        height: "67",
-        url: `${url}/images/logo.png`,
-      },
-    },
-    mainEntityOfPage: `${url}/blog/${slug}`,
-  };
 
   const { t } = useTranslation("blog");
   const sanitize = DOMPurify.sanitize;
@@ -103,6 +60,49 @@ const BlogDetails = ({ post, raw }: any) => {
       </Layout>
     );
   } else {
+    const org = {
+      "@id": `${slug}#organization`,
+      type: "Organization",
+      name: `Forbole`,
+      logo: {
+        "@type": "ImageObject",
+        name: `${title} Logo`,
+        width: "230",
+        height: "67",
+        url: `${featureImage}`,
+      },
+    };
+
+    const jsonData = {
+      "@context": "https://schema.org/",
+      "@type": "Article",
+      publisher: org,
+      author: {
+        "@type": "Person",
+        "@id": `${url}/author/${author.name}`,
+        name: author.name,
+      },
+      headline: `${title}`,
+      url: `${url}`,
+      datePublished: `${publishedAt}`,
+      dateModified: modified,
+      description: `${excerpt}`,
+      discussionUrl: `${url}/blog/${slug}#comments`,
+      inLanguage: "English",
+      sourceOrganization: {
+        "@id": `${slug}#organisation`,
+        type: "Organization",
+        name: `${title}`,
+        logo: {
+          "@type": "ImageObject",
+          name: `${title} Logo`,
+          width: "230",
+          height: "67",
+          url: `${url}/images/logo.png`,
+        },
+      },
+      mainEntityOfPage: `${url}/blog/${slug}`,
+    };
     return (
       <Layout
         title={post.title}
