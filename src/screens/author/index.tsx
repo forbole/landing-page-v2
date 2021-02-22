@@ -12,7 +12,6 @@ import {
   BlogCSS,
   AuthorCSS,
 } from "./styles";
-import TagTitlePosts from "../tag";
 
 const AuthorTitlePosts = (props: any) => {
   const { colors } = theme;
@@ -75,7 +74,7 @@ const AuthorTitlePosts = (props: any) => {
               </AuthorCSS>
               {post.map((post, i) => (
                 <Link
-                  href={`/blog/?title=${post.slug}`}
+                  href={`/blog/${post.slug}`}
                   as={`/blog/${post.slug}`}
                   key={i}
                 >

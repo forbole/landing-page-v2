@@ -45,7 +45,6 @@ const BlogDetailsLoader = (props) => {
           <circle cx="90.5%" cy="590" r="18" />
           <circle cx="94%" cy="590" r="18" />
         </ContentLoader>
-        {/* </SideCSS> */}
       </ContentCSS>
     </FlexCSS>
   );

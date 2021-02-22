@@ -72,7 +72,6 @@ const ghostAdminApi = new GhostAdminAPI({
         const {
           id,
         } = req?.body;
-        console.log(id,'the id');
         const [blog] = await ghostAdminApi.posts.browse(
           {
             filter: `uuid:${id}`,
