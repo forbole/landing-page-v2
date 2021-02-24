@@ -61,23 +61,14 @@ const AuthorTitlePosts = (props: any) => {
               <AuthorCSS>
                 <img src={author.profile_image} />
                 <div className="content">
-                  <Link
-                    href={`/author/?author=${author.slug}`}
-                    as={`/author/${author.slug}`}
-                  >
-                    <a>
-                      <p className="name">{author.name}</p>
-                      <p className="bio">{author.bio}</p>
-                    </a>
-                  </Link>
+                  <a>
+                    <p className="name">{author.name}</p>
+                    <p className="bio">{author.bio}</p>
+                  </a>
                 </div>
               </AuthorCSS>
               {post.map((post, i) => (
-                <Link
-                  href={`/blog/${post.slug}`}
-                  as={`/blog/${post.slug}`}
-                  key={i}
-                >
+                <Link href={"/blog/[title]"} as={`/blog/${post.slug}`} key={i}>
                   <a>
                     <img src={post.featureImage} />
                     <div className="content">

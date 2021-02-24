@@ -9,7 +9,8 @@ const Author = ({ post }: any) => {
       <img src={author.profileImage} />
       <div className="content">
         <Link
-          href={`/author/?author=${author.slug}`}
+          key={post.id}
+          href={"/author/[author]"}
           as={`/author/${author.slug}`}
         >
           <a>

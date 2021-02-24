@@ -8,7 +8,7 @@ const Post = (props: any) => {
   const { featureImage, title, excerpt, publishedAt, slug } = post;
   return (
     <PostCSS className={classNames({ main })}>
-      <Link href={`/blog/${slug}`} as={`/blog/${slug}`}>
+      <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
         <a>
           <div className="image-container">
             <img src={featureImage} />

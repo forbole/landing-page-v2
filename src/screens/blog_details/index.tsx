@@ -54,7 +54,7 @@ const BlogDetails = ({ post, raw }: any) => {
       >
         <BlogDetailsCSS>
           <MaxWidthContainerCSS>
-            <BlogDetailsLoader />
+            <BlogDetailsLoader props={post} />
           </MaxWidthContainerCSS>
         </BlogDetailsCSS>
       </Layout>
