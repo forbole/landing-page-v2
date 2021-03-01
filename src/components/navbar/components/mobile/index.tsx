@@ -17,7 +17,9 @@ const MobileNav = (props: IMobileNav) => {
         color={color}
         displayBackground={displayBackground}
         className={classNames("icon")}
-      ></MobileNavBarIconCSS>
+      >
+        <div></div>
+      </MobileNavBarIconCSS>
       <Navbar
         isOpen={isOpen}
         toggle={toggle}
