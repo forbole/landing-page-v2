@@ -1,9 +1,11 @@
 import React from "react";
 import ContentLoader from "react-content-loader";
+import { useMobileLoaderHook } from "./hooks";
 import { NoSSR } from "@components";
 import { FlexCSS, ContentCSS, SideCSS } from "./styles";
 
 const TagDetailsLoader = (props) => {
+  const { loaderWidth } = useMobileLoaderHook();
   return (
     <NoSSR>
       <FlexCSS>
@@ -14,6 +16,7 @@ const TagDetailsLoader = (props) => {
             viewBox="0 0 750 400"
             backgroundColor="#f0f0f0"
             foregroundColor="#dedede"
+            className="topLoader"
             {...props}
           >
             <rect x="80" y="380" rx="4" ry="4" width="271" height="9" />
@@ -21,7 +24,7 @@ const TagDetailsLoader = (props) => {
             <rect x="80" y="-2" rx="10" ry="10" width="850" height="350" />
           </ContentLoader>
           <ContentLoader
-            width={450}
+            width={loaderWidth}
             height={400}
             viewBox="0 0 450 400"
             backgroundColor="#f0f0f0"
@@ -33,7 +36,7 @@ const TagDetailsLoader = (props) => {
             <rect x="42" y="77" rx="10" ry="10" width="388" height="217" />
           </ContentLoader>
           <ContentLoader
-            width={450}
+            width={loaderWidth}
             height={400}
             viewBox="0 0 450 400"
             backgroundColor="#f0f0f0"
