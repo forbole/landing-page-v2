@@ -4,20 +4,10 @@ import { theme, media } from "@styles";
 const { colors } = theme;
 
 export const PostCSS = styled.div`
-  p {
-    display: none;
-  }
   img {
-    // height: 150px;
     min-height: 150px;
     width: 100%;
     object-fit: cover;
-  }
-
-  h4 {
-    font-weight: 400;
-    margin-bottom: 0.1rem;
-    color: ${colors.gray400};
   }
 
   h3 {
@@ -34,7 +24,7 @@ export const PostCSS = styled.div`
 
     &.date {
       color: ${colors.gray600};
-      font-size: 0.8rem;
+      font-size: 0.875rem;
       font-weight: 300;
     }
   }
@@ -46,13 +36,13 @@ export const PostCSS = styled.div`
   span {
     display: flex;
     align-items: center;
-    img {
-      margin-right: 0.3rem;
-      border-radius: 50%;
-      width: 25px;
-      height: 25px;
-      min-height: 0px;
-      object-fit: cover;
+    justify-content: space-between;
+    color: rgba(100, 100, 100, 1);
+    font-weight: 300;
+    font-size: 1rem;
+    a {
+      padding-left: 0.3rem;
+      color: rgba(13, 106, 255, 1);
     }
   }
 
