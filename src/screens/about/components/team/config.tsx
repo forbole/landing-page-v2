@@ -8,11 +8,13 @@ export const membersData = [
       github: "https://github.com/bragaz",
       twitter: "https://twitter.com/leobragaz_",
     },
+    slug: "leo",
   },
   {
     name: "Rooty Chan",
     position: "uxDesigner",
     image: "/static/images/team/rooty.jpg",
+    slug: "rooty",
   },
   {
     name: "Paul Chen",
@@ -22,6 +24,7 @@ export const membersData = [
       linkedin: "https://www.linkedin.com/in/lin-yang-chen-566b23192/",
       github: "https://github.com/dadamu",
     },
+    slug: "paul",
   },
   {
     name: "Anson Cheung",
@@ -31,6 +34,7 @@ export const membersData = [
       linkedin: "https://www.linkedin.com/in/anson-yk-cheung/",
       github: "https://github.com/anson-cheung",
     },
+    slug: "anson",
   },
   {
     name: "Apple Choi",
@@ -39,6 +43,7 @@ export const membersData = [
     links: {
       linkedin: "https://www.linkedin.com/in/hau-yi-choi-4929b6153/",
     },
+    slug: "apple",
   },
   {
     name: "Muhammad Elsayeh",
@@ -49,6 +54,7 @@ export const membersData = [
       github: "https://github.com/Sayeh-1337",
       // twitter: "https://twitter.com/Lorinaura?s=20",
     },
+    slug: "muhammad",
   },
   {
     name: "Rachel Ho",
@@ -59,6 +65,7 @@ export const membersData = [
       github: "https://github.com/rachelhox/",
       twitter: "https://twitter.com/zadpoke",
     },
+    slug: "rachel",
   },
   {
     name: "Terence Lam",
@@ -69,6 +76,7 @@ export const membersData = [
       github: "https://github.com/terencesflam",
       twitter: "https://twitter.com/terencesflam",
     },
+    slug: "terence",
   },
   {
     name: "Caroline Lau",
@@ -78,6 +86,7 @@ export const membersData = [
       linkedin: "https://www.linkedin.com/in/caroline-lauhy/",
       twitter: "https://twitter.com/carolinelauhy",
     },
+    slug: "caroline",
   },
   {
     name: "Wingman Lee",
@@ -87,6 +96,7 @@ export const membersData = [
       linkedin: "https://www.linkedin.com/in/wingman-lee/",
       github: "https://github.com/ryuash",
     },
+    slug: "wingman",
   },
   {
     name: "Tina Liao",
@@ -96,6 +106,7 @@ export const membersData = [
       linkedin: "https://www.linkedin.com/in/yu-hsin-liao-0625319a/",
       github: "https://github.com/YuhsinLiao1995",
     },
+    slug: "tina",
   },
   {
     name: "Riccardo Montagnin",
@@ -106,6 +117,7 @@ export const membersData = [
       github: "https://github.com/RiccardoM",
       twitter: "https://twitter.com/ricmontagnin",
     },
+    slug: "riccardo",
   },
   {
     name: "Laura Nori",
@@ -115,6 +127,7 @@ export const membersData = [
       linkedin: "https://www.linkedin.com/in/laura-nori-67826015a/",
       twitter: "https://twitter.com/Lorinaura?s=20",
     },
+    slug: "laura",
   },
   {
     name: "Monika Pusz",
@@ -124,12 +137,14 @@ export const membersData = [
       linkedin: "https://www.linkedin.com/in/monika-pusz-b90906150/",
       github: "https://github.com/MonikaCat",
     },
+    slug: "monika",
   },
   {
     name: "Ravi Soni",
     position: "infrastructureEngineer",
     image: "/static/images/team/ravi.jpg",
     links: {},
+    slug: "ravi",
   },
   {
     name: "Michael Wu",
@@ -138,6 +153,7 @@ export const membersData = [
     links: {
       linkedin: "https://www.linkedin.com/in/michael-wu-a959123b",
     },
+    slug: "michael",
   },
   {
     name: "Kwun Yeung",
@@ -148,6 +164,7 @@ export const membersData = [
       github: "https://github.com/kwunyeung",
       twitter: "https://twitter.com/kwunyeung",
     },
+    slug: "kwun",
   },
   {
     name: "Shilin Zheng",
@@ -156,6 +173,7 @@ export const membersData = [
     links: {
       linkedin: "https://www.linkedin.com/in/ruoyin-zheng-b6687a32/",
     },
+    slug: "shilin",
   },
   // {
   // name: "You",

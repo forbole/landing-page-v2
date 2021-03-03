@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
 import { useTranslation } from "i18n";
-import { Layout, Tags, BlogDetailsLoader } from "@components";
+import { Layout, BlogDetailsLoader } from "@components";
 import { theme } from "@styles";
-import { TitlePosts, Twitter } from "../blog/components";
+import { AuthorPosts } from "./components";
 import { useBlogHook } from "./hooks";
+import { membersData } from "../about/components/team/config";
 import {
   TagTitlePostsCSS,
   MaxWidthContainerCSS,
-  SideCSS,
   BlogCSS,
   AuthorCSS,
 } from "./styles";
 
 const AuthorTitlePosts = (props: any) => {
-  const { colors } = theme;
-  const { post, main = false, sidePosts = [], tags, author } = props;
-  const { featureImage, title, excerpt, publishedAt, slug, error } = post;
   const { t } = useTranslation("blog");
+  const { colors } = theme;
+  const { post, main = false, sidePosts = [], tags, author, meta } = props;
+  const { featureImage, title, excerpt, publishedAt, slug, error } = post;
+  let position = "";
+  for (const i of membersData) {
+    if (author.slug == i.slug) position = i.position;
+  }
   useBlogHook(error, t);
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
@@ -60,31 +63,14 @@ const AuthorTitlePosts = (props: any) => {
             <TagTitlePostsCSS>
               <AuthorCSS>
                 <img src={author.profile_image} />
-                <div className="content">
-                  <a>
-                    <p className="name">{author.name}</p>
-                    <p className="bio">{author.bio}</p>
-                  </a>
-                </div>
+                <span>
+                  <p className="name">{author.name}</p>
+                  <p className="bio">{author.bio}</p>
+                  <p className="position">{t(position)}</p>
+                </span>
               </AuthorCSS>
-              {post.map((post, i) => (
-                <Link href={"/blog/[title]"} as={`/blog/${post.slug}`} key={i}>
-                  <a>
-                    <img src={post.featureImage} />
-                    <div className="content">
-                      <h3>{post.title}</h3>
-                      <p>{post.excerpt}</p>
-                      <p className="date">{post.publishedAt}</p>
-                    </div>
-                  </a>
-                </Link>
-              ))}
+              <AuthorPosts blogs={post.slice(1)} meta={meta} />
             </TagTitlePostsCSS>
-            <SideCSS>
-              <TitlePosts posts={sidePosts} />
-              <Tags tags={tags} />
-              <Twitter />
-            </SideCSS>
           </MaxWidthContainerCSS>
         </BlogCSS>
       </Layout>

@@ -10,30 +10,24 @@ export const PostCSS = styled.div`
     width: 100%;
     object-fit: cover;
   }
-
   h3 {
     font-weight: 500;
     margin-bottom: 0;
   }
-
   a {
     color: black;
   }
-
   p {
     margin-bottom: 0;
-
     &.date {
       color: ${colors.gray600};
       font-size: 0.875rem;
       font-weight: 300;
     }
   }
-
   .content {
     padding: 0.5rem;
   }
-
   span {
     display: flex;
     align-items: center;
@@ -48,16 +42,6 @@ export const PostCSS = styled.div`
   }
 
   ${media.bigDesktop`
-    &.main {
-      img {
-        height: 350px;
-      }
-      span {
-        img {
-          height: 25px;
-        }
-      }
-    }
     img {
       height: 225px;
     }

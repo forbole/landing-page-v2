@@ -5,5 +5,14 @@
   "tags": "Tags",
   "contents": "Contents",
   "twitter": "Twitter",
-  "error": "Unable to fetch blogs. Please try again later."
+  "error": "Unable to fetch blogs. Please try again later.",
+  "cofounderConductor": "Cofounder & Conductor",
+  "cofounderEvangelist": "Cofounder & Evangelist",
+  "partner": "Partner",
+  "researchContent": "Research & Content",
+  "swe": "Software Engineer",
+  "techLead": "Tech Lead",
+  "communicationDesigner": "Communication Designer",
+  "uxDesigner": "UX Designer",
+  "advisor": "Advisor"
 }
