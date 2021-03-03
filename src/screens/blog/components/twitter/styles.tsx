@@ -12,8 +12,10 @@ export const TwitterCSS = styled.div`
   }
 
   ${media.bigDesktop`
-    padding-bottom: 1.5rem;
+    border: 1px solid rgba(206, 206, 206, 1);
+    border-radius: 8px;
     margin-top: 2rem;
-    border: solid 1px ${colors.gray100};
+    padding: 2.5rem 1.5rem 1.5rem;
+    padding-top: 1.5rem;
   `}
 `;

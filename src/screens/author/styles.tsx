@@ -58,6 +58,7 @@ export const SideCSS = styled.div`
   display: none;
   .tags-container {
     ${mixins.mobilePadding}
+    border: 1px solid rgba(206, 206, 206, 1)
     padding-top: 1.5rem;
   }
 
