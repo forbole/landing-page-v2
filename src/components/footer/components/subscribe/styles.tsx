@@ -24,6 +24,7 @@ export const SubscribeCSS = styled.div`
     background: rgba(255, 255, 255, 0.3);
     font-size: 0.8rem;
     font-weight: 300;
+    border-radius: 0.25rem 0rem 0rem 0.25rem;
   }
 
   h1 {
@@ -48,7 +49,8 @@ export const SubscribeCSS = styled.div`
   .ui.button {
     font-weight: 300;
     color: rgba(255, 255, 255, 1);
-    background: rgba(255, 80, 80, 1);
+    background: ${colors.forboleRed};
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
   }
   ${media.bigDesktop`
   padding-bottom: 0;
