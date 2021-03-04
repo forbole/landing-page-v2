@@ -14,5 +14,10 @@
   "techLead": "Tech Lead",
   "communicationDesigner": "Communication Designer",
   "uxDesigner": "UX Designer",
-  "advisor": "Advisor"
+  "advisor": "Advisor",
+  "projectDirector": "Project Director",
+  "associate": "Associate",
+  "financeOperationManager": "Finance & Operations Manager",
+  "blockchainEngineer": "Blockchain Engineer",
+  "infrastructureEngineer": "Infrastructure Engineer"
 }
