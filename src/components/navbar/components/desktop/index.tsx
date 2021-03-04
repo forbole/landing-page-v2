@@ -22,7 +22,12 @@ const DesktopNav = (props: any) => {
           <ForboleLogo />
         </a>
       </Link>
-      <NavItems color={displayBackground ? colors.gray600 : color} />
+      <NavItems
+        color={displayBackground ? colors.gray600 : color}
+        padding={
+          color || displayBackground ? "0" : "0.375rem 1rem 0.375rem 1rem"
+        }
+      />
     </DesktopNavCSS>
   );
 };
