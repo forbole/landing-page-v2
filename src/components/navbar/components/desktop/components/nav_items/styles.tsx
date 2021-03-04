@@ -32,7 +32,6 @@ export const NavItemsCSS = styled.div<IDesktopNavCSS>`
     &.active {
       display: flex;
       justify-content: center;
-      //background-color: ${colors.white};
       background-color: ${(props) =>
         props.padding == "0" ? "transparent" : colors.white};
       border-radius: 1rem;
