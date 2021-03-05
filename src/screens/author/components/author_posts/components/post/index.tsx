@@ -14,7 +14,6 @@ const Post = (props: any) => {
     author,
     tags,
   } = post;
-  console.log(excerpt);
   return (
     <PostCSS>
       <div className="content">

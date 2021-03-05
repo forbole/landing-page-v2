@@ -85,19 +85,6 @@ const BlogDetails = ({ post, raw }: any) => {
     }
   }, [post]);
 
-  // HTML DOM manipulation for when `next/head` is deprecated:
-  // useEffect(() => {
-  //   const script = document.createElement("script");
-  //   script.type = "application/ld+json";
-  //   script.innerHTML = JSON.stringify({ jsonData }, null, 2);
-  //   script.async = true;
-  //   console.log(`script`, script);
-  //   document.head.appendChild(script);
-  //   return () => {
-  //     document.head.removeChild(script);
-  //   };
-  // }, []);
-
   const { t } = useTranslation("blog");
   const sanitize = DOMPurify.sanitize;
   if (isLoading) {
