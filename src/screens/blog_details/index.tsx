@@ -85,6 +85,7 @@ const BlogDetails = ({ post, raw }: any) => {
     }
   }, [post]);
 
+  // HTML DOM manipulation for when `next/head` is deprecated:
   // useEffect(() => {
   //   const script = document.createElement("script");
   //   script.type = "application/ld+json";
@@ -93,7 +94,7 @@ const BlogDetails = ({ post, raw }: any) => {
   //   console.log(`script`, script);
   //   document.head.appendChild(script);
   //   return () => {
-  //     document.body.removeChild(script);
+  //     document.head.removeChild(script);
   //   };
   // }, []);
 
@@ -141,7 +142,6 @@ const BlogDetails = ({ post, raw }: any) => {
         <BlogDetailsCSS>
           <MaxWidthContainerCSS>
             <ContentCSS>
-              {console.log(JSON.stringify({ jsonData }, null, 2))}
               <h4>{!!tags.length && post.tags[0].name}</h4>
               <h3>{post.title}</h3>
               <FlexContainerCSS>
