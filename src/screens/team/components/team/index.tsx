@@ -9,7 +9,7 @@ import {
 import Member from "./components/member";
 import { membersData } from "./config";
 
-const Team = () => {
+const TeamMembers = () => {
   const { t } = useTranslation("about");
 
   return (
@@ -35,4 +35,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default TeamMembers;

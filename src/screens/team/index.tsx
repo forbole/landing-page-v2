@@ -1,9 +1,9 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
-import { Header, WhatWeDo, Milestones } from "./components";
+import { TeamHeader, TeamMembers, Opportunities } from "./components";
 
-const About = () => {
+const Team = () => {
   const { t } = useTranslation("about");
   return (
     <Layout
@@ -12,13 +12,11 @@ const About = () => {
       image="/static/images/assets/Facebook-who-we-are.png"
       twitterImage="/static/images/assets/Twitter-who-we-are.png"
     >
-      <Header />
-      <WhatWeDo />
-      <Milestones />
-      {/* <Team />
-      <Opportunities /> */}
+      <TeamHeader />
+      <TeamMembers />
+      <Opportunities />
     </Layout>
   );
 };
 
-export default About;
+export default Team;
