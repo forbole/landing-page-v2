@@ -5,6 +5,9 @@ import { IDesktopNavCSS } from "../../interfaces";
 const { colors } = theme;
 
 export const NavItemsCSS = styled.div<IDesktopNavCSS>`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   a:last-child {
     margin-right: 0;
   }
@@ -23,14 +26,21 @@ export const NavItemsCSS = styled.div<IDesktopNavCSS>`
       justify-content: center;
       opacity: 0;
       transition: 0.2s;
-      color: ${(props) => (props.color ? props.color : "white")};
+      color: ${(props) => (props.color ? props.color : colors.forboleRed)};
     }
 
     &.active {
-      color: ${colors.red};
+      display: flex;
+      justify-content: center;
+      background-color: ${(props) =>
+        props.padding == "0" ? "transparent" : colors.white};
+      border-radius: 1rem;
+      width: fit-content;
+      padding: ${(props) => (props.padding ? props.padding : "0")};
+      color: ${colors.forboleRed};
 
       div {
-        color: ${colors.red};
+        color: ${colors.forboleRed};
       }
     }
 
@@ -42,9 +52,10 @@ export const NavItemsCSS = styled.div<IDesktopNavCSS>`
       }
     }
   }
+
   .ui.dropdown {
     color: ${(props) => (props.color ? props.color : "white")};
-    margin-left: 2rem;
+    margin-left: 3rem;
     .menu {
       right: 0;
       left: auto;

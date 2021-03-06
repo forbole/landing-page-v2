@@ -36,7 +36,8 @@ export const SideCSS = styled.div`
 
     .tags-container {
       margin-top: 2rem;
-      border: solid 1px ${colors.gray100};
+      border: 1px solid rgba(206, 206, 206, 1);
+      border-radius: 8px;
     }
   `}
 `;

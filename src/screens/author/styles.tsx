@@ -12,7 +12,7 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
     ${mixins.mobileBottomPadding}
     margin-top: 7.5rem;
     display: flex;
-    max-width: 900px;
+    max-width: 1100px;
   `}
 `;
 
@@ -21,6 +21,7 @@ export const TagTitlePostsCSS = styled.ul`
   padding: 2.5rem 1.5rem 3.5rem;
   padding-top: 5rem;
   list-style-type: none;
+  column-gap: 5rem;
 
   a {
     color: black;
@@ -36,39 +37,13 @@ export const TagTitlePostsCSS = styled.ul`
 
   ${media.bigDesktop`
     width: 100%;
-    border: 1px solid ${colors.gray100};
+    border: none;
+    display: flex;
+    flex-direction: row;
     padding: 0;
 
-    li {
-      padding: 1rem 1.5rem;
-      transition: 0.2s;
-      &:hover {
-        cursor: pointer;
-        background: #f5f7fa;
-      }
-
-      &:last-child {
-        border: none;
-      }
-    }
-  `}
-`;
-
-export const SideCSS = styled.div`
-  display: none;
-  .tags-container {
-    ${mixins.mobilePadding}
-    padding-top: 1.5rem;
-  }
-
-  ${media.bigDesktop`
-    width: 30%;
-    min-width: 300px;
-    margin-left: 2rem;
-
-    .tags-container {
-      margin-top: 2rem;
-      border: solid 1px ${colors.gray100};
+    span {
+      display: inline-block;
     }
   `}
 `;
@@ -82,30 +57,28 @@ export const BlogCSS = styled.div`
 export const AuthorCSS = styled.div`
   display: flex;
   margin-bottom: 1rem;
+  flex-direction: column;
+  padding-top: 0.5rem;
   img {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    border-radius: 0.5rem;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
   }
 
-  .content {
-    margin-left: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+  span {
+    padding-top: 1.5rem;
     p {
-      line-height: 1;
-      margin-bottom: 0;
-
-      &.name {
-        font-weight: 500;
-      }
-
-      &.bio {
-        color: ${colors.gray600};
-      }
+      margin-bottom: 0rem;
+    }
+    .name {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: ${colors.black};
+    }
+    .position {
+      color: ${colors.gray400};
+      font-weight: 100;
     }
   }
 `;
