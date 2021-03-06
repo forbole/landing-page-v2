@@ -13,7 +13,7 @@ import { NavItemsCSS } from "./styles";
 import { formatLanguageList } from "./config";
 
 const NavItems = (props: any) => {
-  const { color } = props;
+  const { color, padding } = props;
 
   const router = useRouter();
   const { t } = useTranslation("nav");
@@ -23,15 +23,19 @@ const NavItems = (props: any) => {
   };
 
   return (
-    <NavItemsCSS color={color} className={classNames("nav-item")}>
+    <NavItemsCSS
+      color={color}
+      padding={padding}
+      className={classNames("nav-item")}
+    >
       {navItems.slice(1).map((x) => (
         <Link href={x.link} key={x.display}>
           <a className={classNames({ active: router.pathname === x.link })}>
             {t(x.display)}
-            <div> &#9670;</div>
           </a>
         </Link>
       ))}
+
       <Dropdown
         simple
         text={mapLanguages[i18n.language || "en"]}
