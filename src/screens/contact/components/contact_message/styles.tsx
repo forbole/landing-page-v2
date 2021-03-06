@@ -32,6 +32,7 @@ export const ContactMessageCSS = styled.div`
   }
   .ui.form input[type="text"] {
     padding: 0.58035714em 0em;
+    border-radius: 0.1rem;
   }
   .ui.transparent.input > input,
   .ui.transparent.input > textarea {
@@ -44,8 +45,12 @@ export const ContactMessageCSS = styled.div`
     letter-spacing: 0.05rem;
   }
   .ui.button {
-    background-color: rgba(18, 113, 227, 1);
+    background-color: rgb(189, 8, 28, 1);
     width: 100%;
+  }
+
+  .ui.disabled.button {
+    background-color: rgb(189, 8, 28, 0.5);
   }
   .ui.segment {
     border-radius: 0;
@@ -77,12 +82,16 @@ export const ContactMessageCSS = styled.div`
   }
   .ui.segment {
     height: 100%;
+    border: 0px solid rgba(34,36,38,.15);
+    box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
+    border-radius: 8px 0px 0px 8px;
   }
+
   .ui.input{
     width: 97%;
   }
   .ui.button {
-    background-color: rgba(18, 113, 227, 1);
+    background-color: rgb(189,8,28,1);
     width: 109px;
     height: 40px;
   }
@@ -90,5 +99,6 @@ export const ContactMessageCSS = styled.div`
       display: block;
       margin-left: auto;
       margin-right: 0;
-  }`}
+  }
+  `}
 `;

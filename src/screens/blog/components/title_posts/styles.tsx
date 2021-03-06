@@ -20,22 +20,28 @@ export const TitlePostsCSS = styled.ul`
     text-overflow: ellipsis;
   }
 
+  h3 {
+    margin-bottom: 0rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(206, 206, 206, 1);
+  }
+
   ${media.bigDesktop`
     width: 100%;
-    border: 1px solid ${colors.gray100};
+    border: 1px solid rgba(206, 206, 206, 1);
+    border-radius: 8px;
     padding: 0;
-
     li {
       padding: 1rem 1.5rem;
       transition: 0.2s;
+      border-bottom: 1px solid rgba(206, 206, 206, 1);
       &:hover {
         cursor: pointer;
         background: #f5f7fa;
       }
-
-      &:last-child {
-        border: none;
-      }
     }
+      a:last-child > li {
+        border-bottom: 0px;
+      }
   `}
 `;

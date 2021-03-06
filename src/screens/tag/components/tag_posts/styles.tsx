@@ -35,5 +35,36 @@ export const BlogContainerCSS = styled.div`
     .ui.pagination.menu {
       display: inline-flex;
     }
+    .ui.menu {
+      background: transparent;
+      border: none;
+      box-shadow: none; 
+      border-radius: none;
+      margin-right: 0.1rem;
+      padding: 5px;
+      .active.item {
+        background: rgba(189, 8, 28, 1);
+        color: rgb(255, 255, 255);
+      }
+      .item {
+        margin: 5px;
+        border-radius: 4px;
+      }
+      > .item:first-child {
+        background: #E2E2E2;
+      }
+      > .item:nth-child(2) {
+        background: #E2E2E2;
+      }
+      > .item:last-child {
+        background: #E2E2E2;
+      }
+      > .item:nth-last-child(2) {
+        background: #E2E2E2;
+      }
+    }
+    .ui.menu .item:before {
+      background: transparent;
+    }
   `}
 `;
