@@ -35,6 +35,5 @@ export const ContactPageCSS = styled.div`
       margin-top: 0;
     }
   }
-
   `}
 `;
