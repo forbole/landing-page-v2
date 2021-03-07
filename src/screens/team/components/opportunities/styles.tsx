@@ -36,17 +36,13 @@ export const OpportunitiesCSS = styled.div`
 
 export const HeaderCSS = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
 
   h3 {
-    font-weight: 500;
+    font-weight: 300;
     margin-bottom: 0.5rem;
-    text-align: center;
-  }
-
-  p {
     text-align: center;
   }
 
