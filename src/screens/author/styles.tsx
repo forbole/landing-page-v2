@@ -82,6 +82,9 @@ export const AuthorCSS = styled.div`
       font-weight: 100;
     }
   }
+  ${media.tablet`
+    padding-left: 2rem;
+  `}
   ${media.bigDesktop`
     padding-left: 0;
   `}
