@@ -5,11 +5,11 @@ import { Go } from "@icons";
 import { OpeningCSS } from "./styles";
 
 const Opening = (props: any) => {
-  const { t } = useTranslation("about");
+  const { t } = useTranslation("team");
   const { title, description, slug } = props;
   return (
     <OpeningCSS>
-      <Link href={`/positions/${slug}`}>
+      <Link href={"/positions/[title]"} as={`/positions/${slug}`}>
         <a>
           <div className="header-content">
             <h3>{title}</h3>

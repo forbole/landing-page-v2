@@ -4,7 +4,7 @@ import { Layout } from "@components";
 import { TeamHeader, TeamMembers, Opportunities } from "./components";
 
 const Team = () => {
-  const { t } = useTranslation("about");
+  const { t } = useTranslation("team");
   return (
     <Layout
       title={t("title")}

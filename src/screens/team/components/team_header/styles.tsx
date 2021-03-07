@@ -55,7 +55,7 @@ export const TeamHeaderCSS = styled.div`
     ${mixins.desktopMaxWidth}
     width: 100%;
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .background{

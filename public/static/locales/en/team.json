@@ -17,5 +17,9 @@
   "associate": "Associate",
   "financeOperationManager": "Finance & Operations Manager",
   "blockchainEngineer": "Blockchain Engineer",
-  "infrastructureEngineer": "Infrastructure Engineer"
+  "infrastructureEngineer": "Infrastructure Engineer",
+  "currentOpportunities": "Current career opportunities",
+  "currentOpportunitiesDetails": "If you are a blockchain believer or a crypto enthusiast, we might have something for you!",
+  "seeMore": "See More",
+  "noOpportunities": "There are currently no positions available at this time :("
 }
