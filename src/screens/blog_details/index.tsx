@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "i18n";
 import Head from "next/head";
 import DOMPurify from "isomorphic-dompurify";
-import { Helmet } from "react-helmet";
 import { Layout, Tags, BlogDetailsLoader } from "@components";
 import { theme } from "@styles";
 import Custom404 from "@screens/404";
