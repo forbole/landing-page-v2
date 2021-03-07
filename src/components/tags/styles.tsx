@@ -1,22 +1,15 @@
 import styled from "styled-components";
-import { generateBackgroundColor } from "./config";
+import { generateBackgroundColor, generateTagTextColor } from "./config";
 
 export const TagsCSS = styled.div<any>`
   h3 {
     font-weight: 500;
     margin-bottom: 1rem;
   }
-
   ul {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
-    a {
-      color: white;
-      &:hover {
-        color: rgba(255, 255, 255);
-      }
-    }
   }
 `;
 
@@ -26,10 +19,11 @@ export const ListCSS = styled.li<any>`
   background: ${(props) => generateBackgroundColor(props.index)};
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
   &:hover {
-    opacity: 0.5;
+    opacity: 0.8;
   }
   a {
-    color: white;
+    color: ${(props) => generateTagTextColor(props.index)} !important;
   }
 `;

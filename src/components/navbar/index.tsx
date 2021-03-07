@@ -6,6 +6,7 @@ import { useNavHook } from "./hooks";
 
 const NavBar = (props: INavBar) => {
   const { color, mobileColor } = props;
+
   const { displayBackground } = useNavHook();
 
   return (

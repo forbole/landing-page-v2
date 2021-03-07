@@ -1,10 +1,10 @@
 import React from "react";
 import Link from "next/link";
-import classNames from "classnames";
+// import classNames from "classnames";
 import { PostCSS } from "./styles";
 
 const Post = (props: any) => {
-  const { post, main = false } = props;
+  const { post } = props;
   const {
     featureImage,
     title,
@@ -15,7 +15,7 @@ const Post = (props: any) => {
     tags,
   } = post;
   return (
-    <PostCSS className={classNames({ main })}>
+    <PostCSS>
       <div className="content">
         <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
           <a>

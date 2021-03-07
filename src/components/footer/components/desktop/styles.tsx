@@ -4,7 +4,7 @@ import { media } from "@styles";
 export const DesktopFooterCSS = styled.div`
   display: none;
   ${media.bigDesktop`
-  background-color: rgba(26, 26, 44, 1);
+  background-color: rgba(27, 27, 27, 1);
   padding: 2rem 3rem;
   display: flex;
   align-items: center;

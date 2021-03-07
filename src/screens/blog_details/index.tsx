@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTranslation } from "i18n";
 import Head from "next/head";
 import DOMPurify from "isomorphic-dompurify";
+import { Helmet } from "react-helmet";
 import { Layout, Tags, BlogDetailsLoader } from "@components";
 import { theme } from "@styles";
 import Custom404 from "@screens/404";
@@ -33,6 +34,50 @@ const BlogDetails = ({ post, raw }: any) => {
     html,
   } = post;
 
+  const org = {
+    "@id": `${slug}#organization`,
+    type: "Organization",
+    name: `Forbole`,
+    logo: {
+      "@type": "ImageObject",
+      name: `${title} Logo`,
+      width: "230",
+      height: "67",
+      url: `${featureImage}`,
+    },
+  };
+
+  const jsonData = {
+    "@context": "https://schema.org/",
+    "@type": "Article",
+    publisher: org,
+    author: {
+      "@type": "Person",
+      "@id": `${url}/author/${author.name}`,
+      name: author.name,
+    },
+    headline: `${title}`,
+    url: `${url}`,
+    datePublished: `${publishedAt}`,
+    dateModified: modified,
+    description: `${excerpt}`,
+    discussionUrl: `${url}/blog/${slug}#comments`,
+    inLanguage: "English",
+    sourceOrganization: {
+      "@id": `${slug}#organisation`,
+      type: "Organization",
+      name: `${title}`,
+      logo: {
+        "@type": "ImageObject",
+        name: `${title} Logo`,
+        width: "230",
+        height: "67",
+        url: `${url}/images/logo.png`,
+      },
+    },
+    mainEntityOfPage: `${url}/blog/${slug}`,
+  };
+
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     if (excerpt && featureImage && html) {
@@ -45,72 +90,13 @@ const BlogDetails = ({ post, raw }: any) => {
   if (isLoading) {
     return (
       <Layout
-        title={t("forbole")}
+        title={post.title ?? t("forbole")}
         navColor={colors.gray600}
         mobileNavColor={colors.gray600}
-        description={t("excerpt")}
+        description={excerpt ?? t("excerpt")}
         type="article"
-        image={t("forbole")}
-      >
-        <BlogDetailsCSS>
-          <MaxWidthContainerCSS>
-            <BlogDetailsLoader props={post} />
-          </MaxWidthContainerCSS>
-        </BlogDetailsCSS>
-      </Layout>
-    );
-  } else {
-    const org = {
-      "@id": `${slug}#organization`,
-      type: "Organization",
-      name: `Forbole`,
-      logo: {
-        "@type": "ImageObject",
-        name: `${title} Logo`,
-        width: "230",
-        height: "67",
-        url: `${featureImage}`,
-      },
-    };
-
-    const jsonData = {
-      "@context": "https://schema.org/",
-      "@type": "Article",
-      publisher: org,
-      author: {
-        "@type": "Person",
-        "@id": `${url}/author/${author.name}`,
-        name: author.name,
-      },
-      headline: `${title}`,
-      url: `${url}`,
-      datePublished: `${publishedAt}`,
-      dateModified: modified,
-      description: `${excerpt}`,
-      discussionUrl: `${url}/blog/${slug}#comments`,
-      inLanguage: "English",
-      sourceOrganization: {
-        "@id": `${slug}#organisation`,
-        type: "Organization",
-        name: `${title}`,
-        logo: {
-          "@type": "ImageObject",
-          name: `${title} Logo`,
-          width: "230",
-          height: "67",
-          url: `${url}/images/logo.png`,
-        },
-      },
-      mainEntityOfPage: `${url}/blog/${slug}`,
-    };
-    return (
-      <Layout
-        title={post.title}
-        navColor={colors.gray600}
-        mobileNavColor={colors.gray600}
-        description={excerpt}
-        type="article"
-        image={featureImage}
+        image={featureImage ?? "/forbole"}
+        twitterImage={featureImage ?? "/forbole"}
         keywords={tags.map((x) => x.name ?? "")}
       >
         <Head>
@@ -121,6 +107,25 @@ const BlogDetails = ({ post, raw }: any) => {
             }}
           />
         </Head>
+        <BlogDetailsCSS>
+          <MaxWidthContainerCSS>
+            <BlogDetailsLoader props={post} />
+          </MaxWidthContainerCSS>
+        </BlogDetailsCSS>
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout
+        title={post.title}
+        navColor={colors.gray600}
+        mobileNavColor={colors.gray600}
+        description={excerpt}
+        type="article"
+        image={featureImage}
+        twitterImage={featureImage}
+        keywords={tags.map((x) => x.name ?? "")}
+      >
         <BlogDetailsCSS>
           <MaxWidthContainerCSS>
             <ContentCSS>
