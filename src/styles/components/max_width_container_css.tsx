@@ -3,7 +3,7 @@ import { media } from "@styles";
 
 const MaxWidthContainerCSS = styled.div`
   ${media.bigDesktop`
-    max-width: 1300px;
+    max-width: 1200px;
     width: 100%;
   `}
 `;
