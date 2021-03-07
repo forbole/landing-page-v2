@@ -51,6 +51,10 @@ export const HomeCSS = styled.div`
  `}
 `;
 
+export const HeroCSS = styled.div`
+  height: 100vh;
+`;
+
 export const CustomContent = styled.div`
   z-index: 50;
   position: absolute;

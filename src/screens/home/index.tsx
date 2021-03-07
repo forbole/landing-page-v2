@@ -10,7 +10,7 @@ import {
 } from "./components";
 import { ProgressBar, Layout } from "@components";
 import { useTranslation } from "i18n";
-import { HomeCSS, CustomContent } from "./styles";
+import { HomeCSS, CustomContent, HeroCSS } from "./styles";
 import AwesomeSlider from "react-awesome-slider";
 import { useHomeHook } from "./hooks";
 
@@ -29,7 +29,7 @@ const Home = (props: any) => {
         <Head>
           <title>{t("forbole")}</title>
         </Head>
-        <AwesomeSlider
+        {/* <AwesomeSlider
           customContent={
             <CustomContent>
               <ProgressBar handleAnimation={handleActiveScreen} />
@@ -37,14 +37,16 @@ const Home = (props: any) => {
           }
           buttons={false}
           selected={activeScreen}
-        >
+        > */}
+        <HeroCSS>
           <div className="slider-wrapper">
             <HeroContent />
           </div>
-          <div className="slider-wrapper">
+        </HeroCSS>
+        {/* <div className="slider-wrapper">
             <HiringContent />
-          </div>
-        </AwesomeSlider>
+          </div> */}
+        {/* </AwesomeSlider> */}
         <SupportedNetworks />
         <DashboardContent />
         <MooncakeBody />
