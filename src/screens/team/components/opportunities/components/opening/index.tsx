@@ -16,7 +16,7 @@ const Opening = (props: any) => {
             <p>{description}</p>
           </div>
           <p className="see-more">
-            {t("seeMore")} <Go />
+            {t("explorer")} <Go />
           </p>
         </a>
       </Link>

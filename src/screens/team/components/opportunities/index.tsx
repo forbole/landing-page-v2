@@ -12,12 +12,12 @@ const Opportunities = () => {
       <MaxWidthContainerCSS>
         <HeaderCSS>
           <h3>{t("currentOpportunities")}</h3>
-          <p>{t("currentOpportunitiesDetails")}</p>
         </HeaderCSS>
         {!openingsData.length && (
           <div className="no-opening">
             <img src="/static/images/icons/unicorn-no-opportunity.png" />
             <p>{t("noOpportunities")}</p>
+            {/* <p>{t("pleaseContactUs")}</p> */}
           </div>
         )}
         <GridCSS>
