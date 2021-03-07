@@ -4,7 +4,7 @@ import { Layout, BlogDetailsLoader } from "@components";
 import { theme } from "@styles";
 import { AuthorPosts } from "./components";
 import { useBlogHook } from "./hooks";
-import { membersData } from "../about/components/team/config";
+import { membersData } from "../team/components/team/config";
 import {
   TagTitlePostsCSS,
   MaxWidthContainerCSS,

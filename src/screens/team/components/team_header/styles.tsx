@@ -8,7 +8,7 @@ export const TeamHeaderCSS = styled.div`
   padding-top: 5rem;
   width: 100%;
   display: flex;
-  align-items: left;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
   background: linear-gradient(
@@ -49,7 +49,6 @@ export const TeamHeaderCSS = styled.div`
     ${mixins.desktopMaxWidth}
     font-size: 2.5rem;
     width: 100%;
-    padding-left: 1.5rem;
   }
 
   p {
@@ -57,7 +56,6 @@ export const TeamHeaderCSS = styled.div`
     width: 100%;
     font-weight: 100;
     font-size: 1rem;
-    padding-left: 1.5rem;
   }
 
   .background{
