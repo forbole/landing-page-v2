@@ -6,9 +6,11 @@ const { colors } = theme;
 export const OpeningCSS = styled.div`
   background: white;
   padding: 1.5rem 1rem;
+  box-shadow: 0px 10px 40px rgb(41 41 42 / 10%);
+  border-radius: 0.5rem;
 
   h3 {
-    margin-bottom: 0.6em;
+    margin-bottom: 1.8rem;
     font-weight: 500;
   }
 
@@ -37,27 +39,28 @@ export const OpeningCSS = styled.div`
       margin-left: -1rem;
       margin-right: -1rem;
       margin-bottom: -1.5rem;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
       transition: 0.3s;
       display: flex;
       align-items: center;
+      color: ${colors.forboleRed};
 
       svg {
         margin-left: 0.5rem;
         path {
-          fill: rgba(0,0,0,.87);
+          fill: ${colors.forboleRed};
         }
       }
     }
 
     &:hover {
       .see-more {
-        background: ${colors.red};
-        color: white;
+        background: ${colors.forboleRed};
+        color: ${colors.white};
 
         svg {
           path {
-            fill: white;
+            fill: ${colors.white};
           }
         }
       }

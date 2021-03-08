@@ -14,6 +14,9 @@ export const membersData = [
     name: "Rooty Chan",
     position: "uxDesigner",
     image: "/static/images/team/rooty.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/rootychan/",
+    },
     slug: "rooty",
   },
   {
@@ -66,6 +69,16 @@ export const membersData = [
       twitter: "https://twitter.com/zadpoke",
     },
     slug: "rachel",
+  },
+  {
+    name: "Calvin Kei",
+    position: "sswe",
+    image: "/static/images/team/calvin.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/calvinkei/",
+      github: "https://github.com/calvinkei",
+    },
+    slug: "calvin",
   },
   {
     name: "Terence Lam",
@@ -143,7 +156,9 @@ export const membersData = [
     name: "Ravi Soni",
     position: "infrastructureEngineer",
     image: "/static/images/team/ravi.jpg",
-    links: {},
+    links: {
+      linkedin: "https://www.linkedin.com/in/rav-s/",
+    },
     slug: "ravi",
   },
   {
@@ -152,6 +167,7 @@ export const membersData = [
     image: "/static/images/team/michael.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/michael-wu-a959123b",
+      twitter: "https://twitter.com/michael__wu",
     },
     slug: "michael",
   },
@@ -172,6 +188,7 @@ export const membersData = [
     image: "/static/images/team/shilin.jpeg",
     links: {
       linkedin: "https://www.linkedin.com/in/ruoyin-zheng-b6687a32/",
+      twitter: "https://twitter.com/CryptoShilin",
     },
     slug: "shilin",
   },

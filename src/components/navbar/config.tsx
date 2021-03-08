@@ -28,6 +28,10 @@ export const navItems = [
     link: "/about",
   },
   {
+    display: "team",
+    link: "/team",
+  },
+  {
     display: "contact",
     link: "/contact",
   },
