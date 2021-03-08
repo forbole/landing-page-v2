@@ -6,18 +6,14 @@ import {
   DashboardContent,
   MooncakeBody,
   News,
-  HiringContent,
 } from "./components";
-import { ProgressBar, Layout } from "@components";
+import { Layout } from "@components";
 import { useTranslation } from "i18n";
-import { HomeCSS, CustomContent, HeroCSS } from "./styles";
-import AwesomeSlider from "react-awesome-slider";
-import { useHomeHook } from "./hooks";
+import { HomeCSS, HeroCSS } from "./styles";
 
 const Home = (props: any) => {
   const { posts } = props;
   const { t } = useTranslation("home");
-  const { activeScreen, handleActiveScreen } = useHomeHook();
   return (
     <Layout
       title={t("forbole")}
@@ -29,24 +25,11 @@ const Home = (props: any) => {
         <Head>
           <title>{t("forbole")}</title>
         </Head>
-        {/* <AwesomeSlider
-          customContent={
-            <CustomContent>
-              <ProgressBar handleAnimation={handleActiveScreen} />
-            </CustomContent>
-          }
-          buttons={false}
-          selected={activeScreen}
-        > */}
         <HeroCSS>
           <div className="slider-wrapper">
             <HeroContent />
           </div>
         </HeroCSS>
-        {/* <div className="slider-wrapper">
-            <HiringContent />
-          </div> */}
-        {/* </AwesomeSlider> */}
         <SupportedNetworks />
         <DashboardContent />
         <MooncakeBody />
