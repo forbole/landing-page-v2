@@ -1,8 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import { useTranslation } from "i18n";
 import { Button } from "semantic-ui-react";
 import { HeroContentCSS, MainContentCSS, HomeButtonCSS } from "./styles";
-import { Secure, Trusted, Reliable, Reward } from "@icons";
 
 export const HeroContent = () => {
   const { t } = useTranslation("home");
@@ -13,7 +13,9 @@ export const HeroContent = () => {
         <p>{t("homeDescription")}</p>
       </MainContentCSS>
       <HomeButtonCSS>
-        <Button color="red">{t("aboutForbole")}</Button>
+        <Link href="/about">
+          <Button color="red">{t("aboutForbole")}</Button>
+        </Link>
       </HomeButtonCSS>
     </HeroContentCSS>
   );
