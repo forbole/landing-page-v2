@@ -15,6 +15,11 @@ export const HeroContentCSS = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  h1 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
 
   ${media.tablet`
     background-size: cover;

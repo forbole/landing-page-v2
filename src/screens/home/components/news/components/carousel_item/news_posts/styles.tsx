@@ -35,7 +35,6 @@ export const PostCSS = styled.div`
     background: white;
     text-overflow: ellipsis;
     overflow: hidden;
-    max-height: 5rem;
   }
   ${media.tablet`
 

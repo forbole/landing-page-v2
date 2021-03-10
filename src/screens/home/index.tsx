@@ -1,12 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import {
-  HeroContent,
-  SupportedNetworks,
-  DashboardContent,
-  MooncakeBody,
-  News,
-} from "./components";
+import { HeroContent, SupportedNetworks, News } from "./components";
 import { Layout } from "@components";
 import { useTranslation } from "i18n";
 import { HomeCSS, HeroCSS } from "./styles";
@@ -31,8 +25,6 @@ const Home = (props: any) => {
           </div>
         </HeroCSS>
         <SupportedNetworks />
-        <DashboardContent />
-        <MooncakeBody />
         {!!posts.length && <News posts={posts} />}
       </HomeCSS>
     </Layout>
