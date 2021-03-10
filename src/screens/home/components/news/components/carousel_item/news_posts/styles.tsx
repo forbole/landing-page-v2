@@ -81,10 +81,6 @@ export const PostCSS = styled.div`
         font-size: 1rem;
         line-height: 1.5rem;
       }
-
-      .date {
-        // padding-top: 2rem;
-      }
     }
     background: none;
   `}
