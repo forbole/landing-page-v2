@@ -5,32 +5,52 @@ const { colors } = theme;
 
 export const ProductDisplayCSS = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  grid-gap: 5rem;
+  grid-gap: 1.5rem;
+
+  ${media.desktop`
+    flex-direction: row;
+    grid-gap: 5rem;
+  `}
+`;
+
+export const CallToActionCSS = styled.div`
+  color: ${colors.forboleRed};
 `;
 
 export const ProductBlockCSS = styled.div`
-  width: 21.5rem;
-  height: 19.125rem;
+  width: 15rem;
+  height: 19rem;
+  padding: 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 2.5rem 2rem;
-  background: #ffffff;
+  background: ${colors.white};
 
   box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
   border-radius: 0.5rem;
+
+  h3 {
+    margin-bottom: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
   a {
-    color: ${colors.black};
     display: flex;
     align-items: center;
     padding: 0.1rem;
+    color: ${colors.forboleRed};
     svg {
       margin: 0.3rem;
       path {
-        fill: black;
+        fill: ${colors.forboleRed};
       }
     }
   }
+  ${media.desktop`
+      width: 21.5rem;
+      height: 19.125rem;
+      padding: 2.5rem 2rem;
+  `}
 `;

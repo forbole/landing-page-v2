@@ -13,6 +13,7 @@ const Products = () => {
       title={t("title")}
       description={t("description")}
       navColor={colors.gray600}
+      mobileNavColor={colors.gray600}
       image="/static/images/assets/Facebook-Desmos.png"
       twitterImage="/static/images/assets/Twitter-Desmos.png"
     >

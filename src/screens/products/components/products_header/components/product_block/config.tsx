@@ -4,6 +4,7 @@ export const productsData = [
     name: "Big Dipper Explorer",
     description:
       "Big Dipper is an open-source block explorer and token management tool serving over 10 proof-of-stake blockchains.",
+    link: "https://cosmos.bigdipper.live/",
   },
   {
     icon: "/static/images/icons/forbole-portal.svg",
@@ -16,5 +17,6 @@ export const productsData = [
     name: "Desmos Network",
     description:
       "Desmos Network is a blockchain protocol designed to host multiple decentralized social network applications.",
+    link: "https://www.desmos.network/",
   },
 ];

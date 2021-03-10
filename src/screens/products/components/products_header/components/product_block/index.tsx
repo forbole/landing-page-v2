@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { ProductDisplayCSS, ProductBlockCSS } from "./styles";
+import { ProductDisplayCSS, ProductBlockCSS, CallToActionCSS } from "./styles";
 import { Go } from "@icons";
 import { productsData } from "./config";
 
@@ -13,9 +13,15 @@ const ProductBlock = (props: any) => {
           <img src={x.icon} alt={x.name} />
           <h3>{x.name}</h3>
           <p>{x.description}</p>
-          <a>
-            {t("explorer")} <Go />
-          </a>
+          <CallToActionCSS>
+            {x.link ? (
+              <a href={x.link}>
+                {t("explorer")} <Go />
+              </a>
+            ) : (
+              <p>{t("coming")}</p>
+            )}
+          </CallToActionCSS>
         </ProductBlockCSS>
       ))}
     </ProductDisplayCSS>
