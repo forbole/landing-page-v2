@@ -8,7 +8,10 @@ export const ProductDisplayCSS = styled.div`
   flex-direction: column;
   align-items: center;
   grid-gap: 1.5rem;
-
+  ${media.tablet`
+    flex-direction: row;
+    grid-gap: 1rem;
+  `}
   ${media.desktop`
     flex-direction: row;
     grid-gap: 5rem;
@@ -20,7 +23,7 @@ export const CallToActionCSS = styled.div`
 `;
 
 export const ProductBlockCSS = styled.div`
-  width: 15rem;
+  width: 17rem;
   height: 19rem;
   padding: 1.5rem 1.5rem;
   display: flex;
@@ -48,6 +51,12 @@ export const ProductBlockCSS = styled.div`
       }
     }
   }
+  ${media.tablet`
+    width: 14.5rem;
+    p {
+      margin-bottom: 0.5rem;
+    }
+  `}
   ${media.desktop`
       width: 21.5rem;
       height: 19.125rem;
