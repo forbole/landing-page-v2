@@ -35,7 +35,6 @@ export const PostCSS = styled.div`
     background: white;
     text-overflow: ellipsis;
     overflow: hidden;
-    max-height: 5rem;
   }
   ${media.tablet`
 
@@ -81,10 +80,6 @@ export const PostCSS = styled.div`
       p {
         font-size: 1rem;
         line-height: 1.5rem;
-      }
-
-      .date {
-        // padding-top: 2rem;
       }
     }
     background: none;

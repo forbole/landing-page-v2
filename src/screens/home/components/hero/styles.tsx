@@ -6,7 +6,7 @@ const { colors } = theme;
 export const HeroContentCSS = styled.div`
   ${mixins.mobilePadding};
   background-image: linear-gradient(0deg, rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5)),
-    url("/static/images/assets/horse.png");
+    url("/static/images/assets/home.png");
   background-repeat: no-repeat;
   background-position: 50% 52%;
   background-size: 444%;
@@ -15,6 +15,11 @@ export const HeroContentCSS = styled.div`
   align-items: center;
   justify-content: center;
   height: 100%;
+  h1 {
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
 
   ${media.tablet`
     background-size: cover;
@@ -37,11 +42,13 @@ export const MainContentCSS = styled.div`
   justify-content: center;
   h1 {
     font-size: 4rem;
+    font-weight: 400;
   }
   p {
     font-size: 1.2rem;
+    font-weight: 200;
     line-height: 1.5rem;
-    width: 80%;
+    width: 100%;
   }
   `}
   ${media.bigDesktop`
@@ -52,6 +59,13 @@ export const MainContentCSS = styled.div`
     font-size: 1.5rem;
   }
   `}
+`;
+
+export const HomeButtonCSS = styled.div`
+  padding-top: 2rem;
+  .ui.red.button {
+    font-weight: 100;
+  }
 `;
 
 export const HomeIconsCSS = styled.div`

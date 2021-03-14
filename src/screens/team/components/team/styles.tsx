@@ -15,6 +15,8 @@ export const TeamHeadingContainerCSS = styled.div`
   h3 {
     margin-bottom: 0.5rem;
     font-weight: 200;
+    font-size: 1.5rem;
+    padding: 2rem 1rem 0rem;
   }
 
   ${media.bigDesktop`
