@@ -12,8 +12,8 @@ export const navItems = [
     link: "/staking",
   },
   {
-    display: "bigDipper",
-    link: "/big-dipper",
+    display: "products",
+    link: "/products",
   },
   {
     display: "desmos",
