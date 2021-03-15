@@ -3,5 +3,10 @@
   "description": "Desmos is a public blockchian built on Cosmos-SDK to improve the well-being of users on social networks through blockchain technology. Envision a world with decentralized social networsk, where you can control your own data and your privacy is preserved.",
   "explorer": "EXPLORER",
   "headerDescription": "Besides providing staking services, Forbole has built award-winning tools and solutions to help crypto asset holders better visualize their transaction activities, manage their tokens, and socialize in the blockchain world.",
-  "coming": "COMING SOON"
+  "coming": "COMING SOON",
+  "bigdipper": "BIG DIPPER",
+  "bd1": "Award winning project",
+  "bd2": "Open-source software",
+  "bd3": "Customizable for any blockchain",
+  "supportedBlockchains": "Supported Blockchains"
 }

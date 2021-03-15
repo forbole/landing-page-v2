@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { theme } from "@styles";
 import { Layout } from "@components";
-import { ProductsHeader } from "./components";
+import { ProductsHeader, BigDipper } from "./components";
 
 const { colors } = theme;
 
@@ -18,6 +18,7 @@ const Products = () => {
       twitterImage="/static/images/assets/Twitter-Desmos.png"
     >
       <ProductsHeader />
+      <BigDipper />
     </Layout>
   );
 };
