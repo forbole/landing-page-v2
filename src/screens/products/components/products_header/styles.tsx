@@ -39,7 +39,7 @@ export const ProductsHeaderCSS = styled.div`
     ${mixins.desktopPadding}
     background-position: 50% 52%;
     background-size: 140%;
-    height: 100vh;
+    height: 80vh;
     h1 {
       font-weight: 500;
       font-size: 4rem;

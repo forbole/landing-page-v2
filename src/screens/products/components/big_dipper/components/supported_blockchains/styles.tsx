@@ -5,7 +5,7 @@ const { colors } = theme;
 
 export const BlockchainProjectsCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
-  background: ${colors.white};
+  background: transparent;
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
@@ -15,7 +15,6 @@ export const BlockchainProjectsCSS = styled.div`
 export const MainContentCSS = styled.div`
   h3 {
     font-weight: 400;
-    //margin-bottom: 0.5rem;
     font-size: 1.25rem;
     color: ${colors.forboleRed};
   }

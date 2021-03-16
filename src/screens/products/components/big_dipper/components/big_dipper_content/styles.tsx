@@ -46,7 +46,7 @@ export const BigDipperContentCSS = styled.div`
     padding-left: 1.5rem;
     color: ${colors.forboleRed};
     svg {
-      margin: 0.3rem;
+      margin-left: 0.8rem;
       path {
         fill: ${colors.forboleRed};
       }
@@ -56,7 +56,23 @@ export const BigDipperContentCSS = styled.div`
   .image {
     padding: 2rem;
   }
+  .bd {
+    width: 450px;
+    height: auto;
+  }
+  .bdbg {
+    width: 482.08px;
+    height: 482.08px;
+    right: 5rem;
+    top: 2rem;
+  }
   p {
+    font-size: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  li {
     font-size: 1rem;
   }
   `}
@@ -88,7 +104,6 @@ export const BigDipperContentCSS = styled.div`
   .bdbg {
     width: 482.08px;
     height: 482.08px;
-    // left: 1374.08px;
     right: 5rem;
     top: 2rem;
   }
@@ -99,9 +114,6 @@ export const BigDipperContentCSS = styled.div`
   h1 {
     font-size: 4rem;
     font-weight: 500;
-  }
-  li {
-    font-size: 1rem;
   }
   a {
     padding-top: 1.5rem;

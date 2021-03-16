@@ -1,9 +1,7 @@
 import styled from "styled-components";
-import { theme } from "@styles";
+import { theme, media } from "@styles";
 const { colors } = theme;
 export const BigDipperCSS = styled.span`
-  background: url("/static/images/assets/bigdipper-backgroud.svg");
-  background-repeat: no-repeat;
   position: relative;
   .displayBackground {
     a.active {
@@ -13,4 +11,8 @@ export const BigDipperCSS = styled.span`
       }
     }
   }
+  ${media.bigDesktop`
+  background: url("/static/images/assets/bigdipper-backgroud.svg");
+  background-repeat: no-repeat;
+  `}
 `;

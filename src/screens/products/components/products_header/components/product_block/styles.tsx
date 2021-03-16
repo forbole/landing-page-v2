@@ -7,6 +7,7 @@ export const ProductDisplayCSS = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   grid-gap: 1.5rem;
   ${media.tablet`
     flex-direction: row;
@@ -15,6 +16,8 @@ export const ProductDisplayCSS = styled.div`
   ${media.desktop`
     flex-direction: row;
     grid-gap: 5rem;
+    margin-top: -15rem;
+    padding-bottom: 10rem;
   `}
 `;
 
