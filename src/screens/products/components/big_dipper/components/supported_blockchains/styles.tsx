@@ -5,7 +5,7 @@ const { colors } = theme;
 
 export const EcoProjectsCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
-  background: ${colors.gray100};
+  background: ${colors.white};
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
@@ -34,8 +34,11 @@ export const MainContentCSS = styled.div`
 
 export const ProjectsGridCSS = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  grid-gap: 12px 12px;
+  grid-template-columns: repeat(4, minmax(45px, 1fr));
+  grid-gap: 30px 30px;
+  a {
+    margin: auto;
+  }
 
   ${media.tablet`
     grid-template-columns: repeat(3, minmax(100px, 1fr));
@@ -43,7 +46,7 @@ export const ProjectsGridCSS = styled.div`
   `}
 
   ${media.bigDesktop`
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    grid-template-columns: repeat(10, minmax(100px, 1fr));
     grid-gap: 20px;
   `}
 `;

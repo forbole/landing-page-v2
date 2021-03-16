@@ -2,16 +2,19 @@ import styled from "styled-components";
 import { media } from "@styles";
 
 export const BlockchainCSS = styled.div`
+  height: 46.06px;
+  width: 46.06px;
+  border-radius: 50%;
+  border: 1px solid white;
   background: white;
-  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-shadow: 0px 10px 20px 0px rgba(41, 41, 42, 0.1);
 
   img {
-    width: 55px;
-    filter: drop-shadow(0px 10px 16px rgba(41, 41, 42, 0.1));
+    width: 100%;
   }
 
   p {
@@ -20,8 +23,8 @@ export const BlockchainCSS = styled.div`
   }
 
   ${media.bigDesktop`
-    height: 120px;
-    transition: 0.5s ease;
+    transition: 0.2s ease;
+    box-shadow: 0px 10px 20px 0px rgba(41, 41, 42, 0.1);
 
     p {
       transition: 0.2s ease;
@@ -34,10 +37,12 @@ export const BlockchainCSS = styled.div`
 
     &:hover {
       cursor: pointer;
-      box-shadow: 0px 8px 13px 3px rgba(214, 214, 214, 0.45);
+      border-radius: 50%;
+      border: 1px solid white;
+      width: 50px
+
       img {
-        width: 55px;
-        margin-top: 0.5rem;
+        //margin-top: 0.5rem;
       }
 
       p {
