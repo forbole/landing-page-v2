@@ -53,9 +53,6 @@ export const BigDipperContentCSS = styled.div`
     }
   }
   ${media.tablet`
-  .image {
-    padding: 2rem;
-  }
   .bd {
     width: 450px;
     height: auto;

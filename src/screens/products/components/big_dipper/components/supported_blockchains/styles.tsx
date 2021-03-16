@@ -27,6 +27,9 @@ export const MainContentCSS = styled.div`
     font-size: 2rem;
   }
   `}
+  ${media.tablet`
+    padding: 2rem 5rem;
+  `}
   ${media.bigDesktop`
     ${mixins.desktopMaxWidth}
     width: 100%;
@@ -46,12 +49,12 @@ export const ProjectsGridCSS = styled.div`
   }
 
   ${media.tablet`
-    grid-template-columns: repeat(6, minmax(100px, 1fr));
+    grid-template-columns: repeat(4, minmax(80px, 1fr));
     grid-gap: 20px;
   `}
 
   ${media.bigDesktop`
-    grid-template-columns: repeat(10, minmax(100px, 1fr));
+    grid-template-columns: repeat(10, minmax(80px, 1fr));
     grid-gap: 20px;
   `}
 `;

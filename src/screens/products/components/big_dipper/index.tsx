@@ -3,9 +3,9 @@ import { useTranslation } from "i18n";
 import { Layout } from "@components";
 import { BigDipperCSS } from "./styles";
 import {
-  //   BigDipperHeader,
   BigDipperContent,
   BlockchainProjects,
+  BigDipperStats,
 } from "./components";
 
 const BigDipper = () => {
@@ -14,6 +14,7 @@ const BigDipper = () => {
     <BigDipperCSS>
       <BigDipperContent />
       <BlockchainProjects />
+      <BigDipperStats />
       {/* <DashboardContent /> */}
     </BigDipperCSS>
   );

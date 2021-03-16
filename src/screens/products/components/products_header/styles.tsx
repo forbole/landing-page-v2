@@ -33,6 +33,10 @@ export const ProductsHeaderCSS = styled.div`
   }
 
   ${media.tablet`
+  background-position: 0% 106%;
+  background-size: cover;
+  height: 25rem;
+  padding: 10rem;
   .headerDiv {
     max-width: 900px;
   }

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, media } from "@styles";
+import { theme, media, mixins } from "@styles";
 const { colors } = theme;
 export const BigDipperCSS = styled.span`
   position: relative;
@@ -12,6 +12,7 @@ export const BigDipperCSS = styled.span`
     }
   }
   ${media.bigDesktop`
+  ${mixins.desktopPadding}
   background: url("/static/images/assets/bigdipper-backgroud.svg");
   background-repeat: no-repeat;
   `}

@@ -12,8 +12,9 @@ export const ProductDisplayCSS = styled.div`
   margin-top: -4rem;
   padding-bottom: 5rem;
   ${media.tablet`
-    flex-direction: row;
+    flex-direction: column;
     grid-gap: 1rem;
+    margin-top: -8rem;
   `}
   ${media.desktop`
     flex-direction: row;
@@ -59,7 +60,9 @@ export const ProductBlockCSS = styled.div`
     }
   }
   ${media.tablet`
-    width: 14.5rem;
+    //width: 14.5rem;
+    width: 25rem;
+    width: 55%;
     p {
       margin-bottom: 0.5rem;
     }
