@@ -3,7 +3,7 @@ import { mixins, theme, media } from "@styles";
 
 const { colors } = theme;
 
-export const EcoProjectsCSS = styled.div`
+export const BlockchainProjectsCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
   background: ${colors.white};
 
@@ -14,8 +14,10 @@ export const EcoProjectsCSS = styled.div`
 
 export const MainContentCSS = styled.div`
   h3 {
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+    font-weight: 400;
+    //margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: ${colors.forboleRed};
   }
 
   p {
@@ -29,6 +31,10 @@ export const MainContentCSS = styled.div`
   ${media.bigDesktop`
     ${mixins.desktopMaxWidth}
     width: 100%;
+    background: ${colors.white};
+    padding: 2rem;
+    box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
+    border-radius: 8px;
   `}
 `;
 
@@ -41,7 +47,7 @@ export const ProjectsGridCSS = styled.div`
   }
 
   ${media.tablet`
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
     grid-gap: 20px;
   `}
 

@@ -1,6 +1,10 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { EcoProjectsCSS, ProjectsGridCSS, MainContentCSS } from "./styles";
+import {
+  BlockchainProjectsCSS,
+  ProjectsGridCSS,
+  MainContentCSS,
+} from "./styles";
 import { networkKeys } from "./config";
 import { Blockchain } from "@components";
 import { getNetworkInfo } from "@src/utils/network_info";
@@ -9,7 +13,7 @@ export const BlockchainProjects = () => {
   const { t } = useTranslation("products");
   const networkData = networkKeys.map((x) => getNetworkInfo(x));
   return (
-    <EcoProjectsCSS>
+    <BlockchainProjectsCSS>
       <MainContentCSS>
         <h3>{t("supportedBlockchains")}</h3>
         <ProjectsGridCSS>
@@ -25,7 +29,7 @@ export const BlockchainProjects = () => {
           ))}
         </ProjectsGridCSS>
       </MainContentCSS>
-    </EcoProjectsCSS>
+    </BlockchainProjectsCSS>
   );
 };
 

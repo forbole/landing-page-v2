@@ -24,7 +24,6 @@ export const BigDipperContent = () => {
           <h1>{t("bigDipper")}</h1>
           <li>{t("bd1")}</li>
           <li>{t("bd2")}</li>
-          {/* <p className="bolded">{t("bd3")}</p> */}
           <li>{t("bd3")}</li>
           <a>
             {t("explorer")} <Go />

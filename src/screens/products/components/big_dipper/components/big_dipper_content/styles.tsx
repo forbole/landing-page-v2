@@ -10,25 +10,23 @@ export const BigDipperContentCSS = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  .image {
-    padding: 1rem;
-    width: 299px;
-    height: 200px;
+  img {
+    max-width: 100%;
+    height: auto;
   }
   .bdbg {
     position: absolute;
     width: 144px;
     height: 144px;
-    right: 5px;
-    top: 1251px;
+    right: 1rem;
+    top: 0.1rem;
     z-index: -1;
   }
   .bd {
     border-radius: 0.5rem;
-    // -webkit-filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.2));
-    // filter: drop-shadow(1rem 1rem 2rem rgba(0, 0, 0, 0.2));
     box-shadow: 0px 10px 40px 0px rgba(41, 41, 42, 0.1);
-    z-index: 100;
+    width: 255px;
+    height: 189.79px;
   }
   h1 {
     font-weigth: 400;
@@ -39,6 +37,8 @@ export const BigDipperContentCSS = styled.div`
   }
   li {
     margin-bottom: 1rem;
+    font-weight: 400;
+    line-height: 28px;
   }
   a {
     display: flex;
@@ -62,13 +62,12 @@ export const BigDipperContentCSS = styled.div`
   `}
   ${media.bigDesktop`
   ${mixins.flexCenter}
-  ${mixins.desktopBottomPadding}
-  padding-top: 5rem;
-  min-height: 45rem;
   height: calc(100vh - 25rem);
+  padding: 0;
   .desktopWrapper {
     ${mixins.desktopMaxWidth}
     ${mixins.flexCenter}
+    justify-content: space-between;
     flex-direction: row-reverse;
     width: 100%;
     display: flex;
@@ -82,7 +81,30 @@ export const BigDipperContentCSS = styled.div`
   img {
       display: flex;
       justify-content: flex-end;
-      margin-bottom: 0;
+      margin-bottom: 0;    
+      max-width: none;
+      height: auto;
+  }
+  .bdbg {
+    width: 482.08px;
+    height: 482.08px;
+    // left: 1374.08px;
+    right: 5rem;
+    top: 2rem;
+  }
+  .bd {
+    width: 525px;
+    height: 390.74px;
+  }
+  h1 {
+    font-size: 4rem;
+    font-weight: 500;
+  }
+  li {
+    font-size: 1rem;
+  }
+  a {
+    padding-top: 1.5rem;
   }
   .image {
     padding: 0;
