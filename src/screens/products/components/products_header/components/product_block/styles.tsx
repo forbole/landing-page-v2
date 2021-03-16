@@ -9,15 +9,19 @@ export const ProductDisplayCSS = styled.div`
   align-items: center;
   justify-content: center;
   grid-gap: 1.5rem;
+  margin-top: -4rem;
+  padding-bottom: 5rem;
   ${media.tablet`
     flex-direction: row;
     grid-gap: 1rem;
   `}
   ${media.desktop`
     flex-direction: row;
-    grid-gap: 5rem;
-    margin-top: -15rem;
+    grid-gap: 3rem;
+    margin-top: -29rem;
     padding-bottom: 10rem;
+    width: 100%;
+    align-self: center;
   `}
 `;
 

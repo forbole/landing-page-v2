@@ -3,7 +3,6 @@ import { useTranslation } from "i18n";
 import { MaxWidthContainerCSS } from "@styles/components";
 import { ProductBlock } from "./components";
 import { ProductsHeaderCSS } from "./styles";
-import { MainContentContainerCSS } from "@src/screens/staking/components/what_is_staking/styles";
 
 const ProductsHeader = () => {
   const { t } = useTranslation("products");
