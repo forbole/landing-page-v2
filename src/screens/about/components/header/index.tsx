@@ -7,10 +7,7 @@ const Header = () => {
   return (
     <HeaderCSS>
       <div className="content-container">
-        <h2>
-          {t("build")} <div className="circle" /> {t("secure")}{" "}
-          <div className="circle" /> {t("stake")}
-        </h2>
+        <h2>{t("aboutUs")}</h2>
         <p>{t("heroDetails")}</p>
       </div>
       <div className="background-image-container">
