@@ -20,7 +20,7 @@ export const MobileNavBarIconCSS = styled.div<IMobileNavBarIconCSS>`
   &:before,
   > div {
     background-color: ${(props) => {
-      return props.color || props.displayBackground ? "black" : "white";
+      return props.color || props.displayBackground ? props.color : "white";
     }};
     border-radius: 10px;
     content: "";
