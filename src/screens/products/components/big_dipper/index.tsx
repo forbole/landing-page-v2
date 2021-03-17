@@ -15,7 +15,6 @@ const BigDipper = () => {
       <BigDipperContent />
       <BlockchainProjects />
       <BigDipperStats />
-      {/* <DashboardContent /> */}
     </BigDipperCSS>
   );
 };

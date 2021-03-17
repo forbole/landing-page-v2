@@ -60,8 +60,8 @@ export const BigDipperContentCSS = styled.div`
   .bdbg {
     width: 482.08px;
     height: 482.08px;
-    right: 5rem;
-    top: 2rem;
+    right: 1rem;
+    top: 0rem;
   }
   p {
     font-size: 1rem;

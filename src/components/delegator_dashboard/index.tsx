@@ -4,29 +4,28 @@ import { DashboardContentCSS } from "./styles";
 import { Button } from "semantic-ui-react";
 
 export const DashboardContent = () => {
-  const { t } = useTranslation("big_dipper");
+  const { t } = useTranslation("products");
   return (
     <DashboardContentCSS>
       <div className="desktopWrapper">
         <div className="image">
           <img
-            src="/static/images/assets/dashboard-screenshot.png"
-            alt="Big Dipper Screenshot"
+            src="/static/images/assets/forbole-portal-screenshot.png"
+            alt="Forbole Portal Screenshot"
           ></img>
         </div>
+        <img
+          src="/static/images/assets/portal-ellipse.png"
+          alt="Portal ellipse"
+          className="pbg"
+        ></img>
         <div className="content">
-          <h3>{t("bdWallet")}</h3>
-          <h2>{t("bdWalletDescription")}</h2>
-          <p>
-            {t("dd1")}
-            <br />
-            {t("dd2")}
-            <br />
-            {t("dd3")}
-          </p>
-          <Button color="black">
-            <a href="#">{t("comingSoon")}</a>
-          </Button>
+          <h1>{t("forbolePortal")}</h1>
+          <li>{t("fp1")}</li>
+          {/* <br /> */}
+          <li>{t("fp2")}</li>
+          {/* <br /> */}
+          <li>{t("fp3")}</li>
         </div>
       </div>
     </DashboardContentCSS>

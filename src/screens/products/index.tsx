@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { theme } from "@styles";
-import { Layout } from "@components";
+import { Layout, DashboardContent } from "@components";
 import { ProductsHeader, BigDipper } from "./components";
 
 const { colors } = theme;
@@ -19,6 +19,7 @@ const Products = () => {
     >
       <ProductsHeader />
       <BigDipper />
+      <DashboardContent />
     </Layout>
   );
 };
