@@ -15,7 +15,6 @@ export const BigDipperStats = () => {
             <p>{x.description}</p>
           </BigDipperDivCSS>
           {i < 3 && <hr />}
-          {/* {i == 4 && <hr style={{ visibility: "hidden" }} />} */}
         </ContentCSS>
       ))}
     </BigDipperStatsCSS>

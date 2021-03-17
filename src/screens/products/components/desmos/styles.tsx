@@ -73,8 +73,6 @@ export const DesmosContentCSS = styled.div`
       font-weight: 500;
     }
     li {
-      // display: flex;
-      // justify-content: flex-start;
       width: 100%;
       font-weight: 100;
       font-size: 1rem;
@@ -87,9 +85,5 @@ export const DesmosContentCSS = styled.div`
     a {
       padding-top: 2rem;
     }
-    // .content {
-    //   padding-right: 1.5rem;
-    //   width: 50%;
-    // }
   `}
 `;

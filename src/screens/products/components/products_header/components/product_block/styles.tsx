@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mixins, media, theme } from "@styles";
+import { media, theme } from "@styles";
 
 const { colors } = theme;
 

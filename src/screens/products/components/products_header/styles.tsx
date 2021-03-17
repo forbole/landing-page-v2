@@ -9,14 +9,13 @@ export const ProductsHeaderCSS = styled.div`
   align-items: flex-start;
   flex-direction: column;
   height: 100%;
-  background-color: white;
+  background-color: ${colors.white};
   background-image: url("/static/images/assets/forboleProductsbackground.png");
   background-repeat: no-repeat;
   background-position: 50% 0%;
   background-size: 145%;
 
   .headerDiv {
-    //margin: auto;
     display: flex;
     flex-direction: column;
   }
@@ -24,7 +23,6 @@ export const ProductsHeaderCSS = styled.div`
     font-weight: 400;
     font-size: 1.7rem;
     margin-bottom: 0;
-    //line-height: 3rem;
   }
   .headerp {
     font-size: 0.8rem;
@@ -64,13 +62,3 @@ export const ProductsHeaderCSS = styled.div`
     }
   `}
 `;
-
-// export const ProductsBackgroundCSS = styled.div`
-//   height: 90vh;
-//   background-color: white;
-//   background-image: url("/static/images/assets/forboleProductsbackground.png");
-//   background-repeat: no-repeat;
-//   background-position: 58% 0%;
-//   background-size: 150%;
-//   background-size: cover;
-// `;
