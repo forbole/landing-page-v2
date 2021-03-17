@@ -16,10 +16,6 @@ export const navItems = [
     link: "/products",
   },
   {
-    display: "desmos",
-    link: "/desmos",
-  },
-  {
     display: "blog",
     link: "/blog",
   },
