@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { Layout } from "@components";
 import { BigDipperCSS } from "./styles";
 import {
   BigDipperContent,

@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { theme } from "@styles";
 import { Layout, DashboardContent } from "@components";
-import { ProductsHeader, BigDipper } from "./components";
+import { ProductsHeader, BigDipper, DesmosContent } from "./components";
 
 const { colors } = theme;
 
@@ -20,6 +20,7 @@ const Products = () => {
       <ProductsHeader />
       <BigDipper />
       <DashboardContent />
+      <DesmosContent />
     </Layout>
   );
 };

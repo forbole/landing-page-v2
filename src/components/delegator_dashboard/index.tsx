@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { DashboardContentCSS } from "./styles";
-import { Button } from "semantic-ui-react";
 
 export const DashboardContent = () => {
   const { t } = useTranslation("products");
@@ -22,9 +21,7 @@ export const DashboardContent = () => {
         <div className="content">
           <h1>{t("forbolePortal")}</h1>
           <li>{t("fp1")}</li>
-          {/* <br /> */}
           <li>{t("fp2")}</li>
-          {/* <br /> */}
           <li>{t("fp3")}</li>
         </div>
       </div>
