@@ -14,7 +14,7 @@ export const DesmosContent = () => {
             alt="Forbole Portal Screenshot"
           ></img>
         </div>
-        <div className="content">
+        <ul className="content">
           <h1>{t("desmos")}</h1>
           <li>{t("dd1")}</li>
           <li>{t("dd2")}</li>
@@ -22,7 +22,7 @@ export const DesmosContent = () => {
           <a href="https://www.desmos.network/">
             {t("explorer")} <Go />
           </a>
-        </div>
+        </ul>
       </div>
     </DesmosContentCSS>
   );
