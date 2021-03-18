@@ -4,7 +4,7 @@ import { mixins, theme, media } from "@styles";
 const { colors } = theme;
 
 export const DashboardContentCSS = styled.div`
-  padding: 5rem 1.5rem 5rem;
+  padding: 5rem 1.5rem 3rem;
   ${mixins.flexCenter}
   background-color: rgba(245, 245, 245, 1);
   z-index: -1;
@@ -15,6 +15,9 @@ export const DashboardContentCSS = styled.div`
   width: 100%;
   img {
     margin-bottom: 2.5rem;
+  }
+  ul {
+    padding: 0rem 1.5rem;
   }
   li {
     font-weight: 400;

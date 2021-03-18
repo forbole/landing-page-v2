@@ -20,7 +20,7 @@ export const BigDipperContent = () => {
             className="bd"
           ></img>
         </div>
-        <div className="content">
+        <ul className="content">
           <h1>{t("bigDipper")}</h1>
           <li>{t("bd1")}</li>
           <li>{t("bd2")}</li>
@@ -28,7 +28,7 @@ export const BigDipperContent = () => {
           <a href="https://cosmos.bigdipper.live/">
             {t("explorer")} <Go />
           </a>
-        </div>
+        </ul>
       </div>
     </BigDipperContentCSS>
   );

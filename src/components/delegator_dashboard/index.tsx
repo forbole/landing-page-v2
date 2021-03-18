@@ -18,12 +18,12 @@ export const DashboardContent = () => {
           alt="Portal ellipse"
           className="pbg"
         ></img>
-        <div className="content">
+        <ul className="content">
           <h1>{t("forbolePortal")}</h1>
           <li>{t("fp1")}</li>
           <li>{t("fp2")}</li>
           <li>{t("fp3")}</li>
-        </div>
+        </ul>
       </div>
     </DashboardContentCSS>
   );

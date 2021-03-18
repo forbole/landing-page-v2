@@ -15,6 +15,9 @@ export const DesmosContentCSS = styled.div`
   img {
     margin-bottom: 2.5rem;
   }
+  ul {
+    padding: 0rem 1.5rem;
+  }
   li {
     font-weight: 400;
     margin-bottom: 1rem;
@@ -29,7 +32,6 @@ export const DesmosContentCSS = styled.div`
     a {
       display: flex;
       align-items: center;
-      padding-left: 1.5rem;
       color: ${colors.forboleRed};
       svg {
         margin: 0.3rem;
