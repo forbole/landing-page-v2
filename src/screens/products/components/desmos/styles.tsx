@@ -28,19 +28,20 @@ export const DesmosContentCSS = styled.div`
     font-size: 2rem;
     color: rgba(243, 114, 90, 1);
   }
-  .content {
-    a {
-      display: flex;
-      align-items: center;
-      color: ${colors.forboleRed};
-      svg {
-        margin: 0.3rem;
-        path {
-          fill: ${colors.forboleRed};
-        }
+  
+  a {
+    display: flex;
+    padding-left: 1.5rem;
+    align-items: center;
+    color: ${colors.forboleRed};
+    svg {
+      margin: 0.3rem;
+      path {
+        fill: ${colors.forboleRed};
       }
     }
   }
+
   ${media.tablet`
     padding: 5rem;
     .desktopWrapper {
@@ -85,7 +86,7 @@ export const DesmosContentCSS = styled.div`
       margin-bottom: 0;
     }
     a {
-      padding-top: 2rem;
+      padding-top: 1.5rem;
     }
   `}
 `;
