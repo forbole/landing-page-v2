@@ -6,12 +6,15 @@ const Header = () => {
   const { t } = useTranslation("about");
   return (
     <HeaderCSS>
-      <div className="content-container">
-        <h2>{t("aboutUs")}</h2>
-        <p>{t("heroDetails")}</p>
-      </div>
-      <div className="background-image-container">
-        <img src="/static/images/assets/about.svg" className="bg-image" />
+      <div>
+        <div className="content-container">
+          <h2>{t("aboutUs")}</h2>
+          <p>{t("heroDetails")}</p>
+        </div>
+        {/* <img
+          src="/static/images/assets/about-background.png"
+          className="bg-image"
+        /> */}
       </div>
     </HeaderCSS>
   );

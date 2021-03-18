@@ -1,24 +1,20 @@
 import styled from "styled-components";
 import { CoverCSS } from "@styles/components";
 import { theme, media, mixins } from "@styles";
-const { headerMargin } = theme;
+const { colors, headerMargin } = theme;
 
 export const HeaderCSS = styled(CoverCSS)`
-  background: rgba(55, 68, 172, 1);
-  position: relative;
-  .background-image-container {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: -1.5rem;
-    width: 100%;
+  padding: 1.5rem;
+  background: ${colors.forboleRed};
+  // position: relative;
+  background-image: url("/static/images/assets/about-background.png");
+  background-position: 85% bottom;
+  background-size: 200%;
+  background-repeat: no-repeat;
 
-    img {
-      opacity: 0.6;
-      mix-blend-mode: hard-light;
-    }
+  img {
+    opacity: 1;
+    //mix-blend-mode: hard-light;
   }
 
   .content-container {
@@ -48,35 +44,23 @@ export const HeaderCSS = styled(CoverCSS)`
   }
 
   ${media.tablet`
-    .background-image-container {
-      img {
-        width: 70%;
-      }
-    }
   `}
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
-    background: rgba(27, 33, 185, 1);
-    height: 30vh;
+    height: 70vh;
+    background-position: 85% bottom;
+    background-size: cover;
 
     .content-container {
       ${mixins.desktopMaxWidth}
       width: 100%;
-
       h2 {
         font-size: 3.75rem;
         margin: 0;
       }
       p {
         font-size: 1.25rem;
-      }
-    }
-
-    .background-image-container {
-      justify-content: flex-end;
-      img {
-        width: 35%;
       }
     }
   `}
