@@ -5,7 +5,8 @@ export const WhatWeDoCSS = styled.div`
   ${mixins.mobilePadding}
 
   h3 {
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
 
