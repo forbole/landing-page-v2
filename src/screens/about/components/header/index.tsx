@@ -1,21 +1,18 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { HeaderCSS } from "./styles";
+import { MaxWidthContainerCSS } from "@styles/components";
 
 const Header = () => {
   const { t } = useTranslation("about");
   return (
     <HeaderCSS>
-      <div>
+      <MaxWidthContainerCSS>
         <div className="content-container">
           <h2>{t("aboutUs")}</h2>
           <p>{t("heroDetails")}</p>
         </div>
-        {/* <img
-          src="/static/images/assets/about-background.png"
-          className="bg-image"
-        /> */}
-      </div>
+      </MaxWidthContainerCSS>
     </HeaderCSS>
   );
 };

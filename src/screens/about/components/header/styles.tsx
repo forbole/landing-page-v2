@@ -6,7 +6,6 @@ const { colors, headerMargin } = theme;
 export const HeaderCSS = styled(CoverCSS)`
   padding: 1.5rem;
   background: ${colors.forboleRed};
-  // position: relative;
   background-image: url("/static/images/assets/about-background.png");
   background-position: 85% bottom;
   background-size: 200%;
@@ -48,6 +47,8 @@ export const HeaderCSS = styled(CoverCSS)`
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
+    align-items: flex-start;
+    padding: 8rem 0rem;
     height: 70vh;
     background-position: 85% bottom;
     background-size: cover;
