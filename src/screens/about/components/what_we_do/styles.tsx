@@ -5,6 +5,10 @@ const { colors } = theme;
 
 export const WhatWeDoCSS = styled.div`
   ${mixins.mobilePadding}
+  min-height: fit-content;
+  .max-width-container {
+    min-height: fit-content;
+  }
 
   h3 {
     font-weight: 400;
