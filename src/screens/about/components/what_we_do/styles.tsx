@@ -10,6 +10,13 @@ export const WhatWeDoCSS = styled.div`
     margin-bottom: 0.5rem;
   }
 
+  p {
+    line-height: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   ul {
     list-style-type: none;
   }
@@ -43,11 +50,15 @@ export const PillarCSS = styled.li`
   margin-bottom: 1rem;
 
   .title {
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 0;
   }
 
   ${media.bigDesktop`
     margin-left: 1rem;
+    .title {
+      font-weight: 600;
+      margin-bottom: 0;
+    }
   `}
 `;
