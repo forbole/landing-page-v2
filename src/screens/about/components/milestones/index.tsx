@@ -16,6 +16,7 @@ const Milestones = () => {
           {data.map((x) => (
             <SingleMilestone
               key={x.title}
+              year={x.year}
               date={x.date}
               title={x.title}
               detail={x.detail}

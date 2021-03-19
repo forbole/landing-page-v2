@@ -1,5 +1,6 @@
 export const milestonesData = [
   {
+    year: "2017",
     date: "oct2017",
     title: "establishedTitle",
     detail: "establishedDetails",

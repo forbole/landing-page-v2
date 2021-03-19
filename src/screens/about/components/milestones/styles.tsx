@@ -1,9 +1,11 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { mixins, media, theme } from "@styles";
+
+const { colors } = theme;
 
 export const MilestonesCSS = styled.div`
   ${mixins.mobilePadding}
-  background: rgba(244, 251, 255, 1);
+  background: ${colors.white};
 
   h3 {
     font-weight: 500;
