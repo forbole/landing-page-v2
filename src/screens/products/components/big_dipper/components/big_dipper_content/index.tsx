@@ -20,15 +20,17 @@ export const BigDipperContent = () => {
             className="bd"
           ></img>
         </div>
-        <ul className="content">
-          <h1>{t("bigDipper")}</h1>
-          <li>{t("bd1")}</li>
-          <li>{t("bd2")}</li>
-          <li>{t("bd3")}</li>
+        <div className="content">
+          <ul>
+            <h1>{t("bigDipper")}</h1>
+            <li>{t("bd1")}</li>
+            <li>{t("bd2")}</li>
+            <li>{t("bd3")}</li>
+          </ul>
           <a href="https://cosmos.bigdipper.live/">
             {t("explorer")} <Go />
           </a>
-        </ul>
+        </div>
       </div>
     </BigDipperContentCSS>
   );

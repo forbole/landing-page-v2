@@ -43,7 +43,6 @@ export const BigDipperContentCSS = styled.div`
   a {
     display: flex;
     align-items: center;
-    padding-left: 1.5rem;
     color: ${colors.forboleRed};
     svg {
       margin-left: 0.8rem;
