@@ -8,10 +8,6 @@ export const navItems = [
     link: "/stake-now",
   },
   {
-    display: "staking",
-    link: "/staking",
-  },
-  {
     display: "products",
     link: "/products",
   },
