@@ -31,7 +31,7 @@ export const FooterItemsCSS = styled.div`
     width: 10rem;
   }
   hr {
-    margin: 0px 0px 0px 0px;
+    display: none;
   }
 `};
 `;
