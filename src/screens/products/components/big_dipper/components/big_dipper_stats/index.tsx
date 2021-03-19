@@ -13,7 +13,7 @@ export const BigDipperStats = () => {
             <h1>{x.stats}</h1>
             <p>{x.description}</p>
           </BigDipperDivCSS>
-          {i < bdStats.length - 1 && <hr />}
+          {!!(i < bdStats.length - 1) && <hr />}
         </ContentCSS>
       ))}
     </BigDipperStatsCSS>
