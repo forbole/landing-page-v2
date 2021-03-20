@@ -17,7 +17,6 @@ const Opportunities = () => {
           <div className="no-opening">
             <img src="/static/images/icons/unicorn-no-opportunity.png" />
             <p>{t("noOpportunities")}</p>
-            {/* <p>{t("pleaseContactUs")}</p> */}
           </div>
         )}
         <GridCSS>

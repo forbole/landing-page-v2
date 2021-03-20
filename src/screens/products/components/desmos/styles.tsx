@@ -3,11 +3,10 @@ import { mixins, theme, media } from "@styles";
 
 const { colors } = theme;
 
-export const DashboardContentCSS = styled.div`
-  padding: 5rem 1.5rem 3rem;
+export const DesmosContentCSS = styled.div`
+  padding: 5rem 1.5rem 5rem;
   ${mixins.flexCenter}
-  background-color: rgba(245, 245, 245, 1);
-  z-index: -1;
+  background-color: ${colors.white};
   position: relative;
   color: ${colors.black};
   display: flex;
@@ -27,26 +26,37 @@ export const DashboardContentCSS = styled.div`
   h1 {
     font-weight: 400;
     font-size: 2rem;
+    color: rgba(243, 114, 90, 1);
   }
-  .pbg {
-    position: absolute;
-    width: 144px;
-    height: 144px;
-    top: 2rem;
-    right: 0.5rem;
-    z-index: -1;
+  
+  a {
+    display: flex;
+    padding-left: 1.5rem;
+    align-items: center;
+    color: ${colors.forboleRed};
+    svg {
+      margin: 0.3rem;
+      path {
+        fill: ${colors.forboleRed};
+      }
+    }
   }
+
   ${media.tablet`
     padding: 5rem;
-    .pbg {
-      width: 418px;
-      height: 418px;
+    .desktopWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     h1 {
       font-size: 2.5rem;
     }
   `}
   ${media.bigDesktop`
+    background-image: url("/static/images/assets/desmos-elements.svg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
     height: 100vh;
     ${mixins.flexCenter}
     padding: 8rem 5rem 8rem;
@@ -66,8 +76,6 @@ export const DashboardContentCSS = styled.div`
       font-weight: 500;
     }
     li {
-      // display: flex;
-      // justify-content: flex-start;
       width: 100%;
       font-weight: 100;
       font-size: 1rem;
@@ -77,9 +85,8 @@ export const DashboardContentCSS = styled.div`
       justify-content: flex-end;
       margin-bottom: 0;
     }
-    // .content {
-    //   padding-right: 1.5rem;
-    //   width: 50%;
-    // }
+    a {
+      padding-top: 1.5rem;
+    }
   `}
 `;

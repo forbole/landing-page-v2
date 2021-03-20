@@ -5,7 +5,8 @@ export const sizes = {
   // feel free to edit this
   giant: 1440,
   bigDesktop: 1200,
-  desktop: 1000,
+  desktop: 1025,
+  bigTablet: 1000,
   tablet: 768,
   phone: 376,
 }

@@ -209,6 +209,26 @@ const logos = {
     name: "Celo",
     key: "celo",
   },
+  agoric: {
+    image: "/static/images/icons/agoric.png",
+    name: "Agoric",
+    key: "agoric",
+  },
+  flow: {
+    image: "/static/images/icons/flow.png",
+    name: "Flow",
+    key: "flow",
+  },
+  ["persistence-one"]: {
+    image: "/static/images/icons/persistence-one.png",
+    name: "Persistence One",
+    key: "persistence-one",
+  },
+  sharering: {
+    image: "/static/images/icons/sharering.png",
+    name: "Sharering",
+    key: "sharering",
+  },
 };
 
 export const getNetworkInfo = (key) => {
