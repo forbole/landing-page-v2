@@ -8,7 +8,6 @@ const SingleMilestone = (props: any) => {
   const { date, year, badge, title, detail } = props;
   return (
     <SingleMilestoneCSS>
-      {!!year && <h3>{year}</h3>}
       <div>
         <span className="badge-wrapper">
           {/* {!!badge && <Award />} */}

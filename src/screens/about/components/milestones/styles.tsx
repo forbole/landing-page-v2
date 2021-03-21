@@ -5,9 +5,17 @@ const { colors } = theme;
 
 export const MilestonesCSS = styled.div`
   ${mixins.mobilePadding}
+  padding: 2.5rem 0.5rem 1.5rem;
   background: ${colors.white};
 
+  .timeline {
+    background-image: url("static/images/assets/timeline.png");
+    background-size: 1%;
+    background-repeat: repeat-y;
+  }
+
   h3 {
+    max-width: 1200px;
     font-weight: 500;
     margin-bottom: 2rem;
   }
@@ -38,4 +46,22 @@ export const MilestonesGridCSS = styled.div`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px 40px;
   `}
+`;
+
+export const TimelineCSS = styled.div`
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: row;
+  background-image: url("static/images/assets/timeline.png");
+  background-size: 1%;
+  background-repeat: repeat-y;
+`;
+
+export const YearCSS = styled.div`
+  display: flex;
+  flex-direction: row;
+  .yearimg {
+    width: 16px;
+    height: 16px;
+  }
 `;
