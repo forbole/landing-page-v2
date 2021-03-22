@@ -229,6 +229,11 @@ const logos = {
     name: "Sharering",
     key: "sharering",
   },
+  cardano: {
+    image: "/static/images/icons/cardano.png",
+    name: "Cardano",
+    key: "cardano",
+  },
 };
 
 export const getNetworkInfo = (key) => {
