@@ -13,5 +13,4 @@ export const networkKeys = [
   "persistence-one",
   "iov",
   "sharering",
-  "cardano",
 ].sort();
