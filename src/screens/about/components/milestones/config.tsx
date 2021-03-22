@@ -6,14 +6,15 @@ export const milestonesData = [
     detail: "establishedDetails",
   },
   {
+    year: "2018",
     date: "apr2018",
-    title: "validatorPresenceTitle",
-    detail: "validatorPresenceDetails",
+    title: "validatorDebutTitle",
+    detail: "validatorDebutDetails",
   },
   {
-    date: "jul2018",
-    title: "cosmosMentionedTitle",
-    detail: "cosmosMentionedDetails",
+    date: "aug2018",
+    title: "bigDipperBornTitle",
+    detail: "bigDipperBornDetails",
   },
   {
     date: "aug2018",
@@ -28,17 +29,17 @@ export const milestonesData = [
     detail: "topScorerDetails",
     badge: true,
   },
-  {
-    date: "feb2019",
-    title: "gameOfStakesTitle",
-    detail: "gameOfStakesDetails",
-    badge: true,
-  },
-  {
-    date: "jun2019",
-    title: "appworksTitle",
-    detail: "appworksDetails",
-  },
+  // {
+  //   date: "feb2019",
+  //   title: "gameOfStakesTitle",
+  //   detail: "gameOfStakesDetails",
+  //   badge: true,
+  // },
+  // {
+  //   date: "jun2019",
+  //   title: "appworksTitle",
+  //   detail: "appworksDetails",
+  // },
   {
     date: "jul2019",
     title: "cosmosHackAtomTitle",

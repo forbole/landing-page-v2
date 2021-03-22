@@ -7,17 +7,17 @@ import {
   YearCSS,
 } from "./styles";
 import { MaxWidthContainerCSS } from "@styles/components";
-import { fetchMileStoneData } from "./config";
+import { fetchMileStoneData, milestonesData } from "./config";
 import SingleMilestone from "./components/single_milestone";
 
 const Milestones = () => {
   const { t } = useTranslation("about");
-  const data = fetchMileStoneData();
+  // const data = fetchMileStoneData();
   return (
     <MilestonesCSS>
       {/* <MaxWidthContainerCSS> */}
       <h3>{t("milestones")}</h3>
-      {data.map((x, i) => (
+      {milestonesData.map((x, i) => (
         // <>
         <TimelineCSS key={i}>
           {!!x.year && (

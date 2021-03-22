@@ -12,6 +12,14 @@ export const SingleMilestoneCSS = styled.div`
   // background: ${colors.white};
   border-radius: 4px;
 
+  p {
+    line-height: 1.2rem;
+  }
+
+  span > h4 {
+    padding-bottom: 0.5rem;
+  }
+
   .date {
     padding-top: 1rem;
     color: ${colors.gray400};

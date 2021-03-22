@@ -58,15 +58,15 @@ export const TimelineCSS = styled.div`
   background-size: 1%;
   background-repeat: no-repeat;
   background-position: left 5%;
+  padding-bottom: 1rem;
 `;
 
 export const YearCSS = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-left: -0.3rem;
-  height: 4rem;
-  //padding: 2rem 0;
+  height: 1.5rem;
+  padding-bottom: 2rem;
   h3 {
     margin-bottom: 0;
     padding-left: 0.3rem;
@@ -74,8 +74,9 @@ export const YearCSS = styled.div`
   }
   .dot {
     background: ${colors.white};
-    width: auto;
-    height: 2rem;
+    width: 1.25rem;
+    height: 1.75rem;
+    margin-left: -0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;

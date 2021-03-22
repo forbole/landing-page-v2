@@ -6,10 +6,11 @@ import { SingleMilestoneCSS } from "./styles";
 const SingleMilestone = (props: any) => {
   const { t } = useTranslation("about");
   const { date, year, badge, title, detail } = props;
+  console.log(date);
   return (
     <SingleMilestoneCSS>
       <div>
-        <span className="badge-wrapper">
+        <span>
           {/* {!!badge && <Award />} */}
           <h4>{t(title)}</h4>
         </span>
