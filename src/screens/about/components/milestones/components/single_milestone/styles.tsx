@@ -4,11 +4,17 @@ import { theme, media } from "@styles";
 const { colors } = theme;
 
 export const SingleMilestoneCSS = styled.div`
+  padding: 1rem;
   margin-bottom: 1.5rem;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 10px 40px 0px rgba(41, 41, 42, 0.1);
+  // background: ${colors.white};
+  border-radius: 4px;
 
   .date {
+    padding-top: 1rem;
+    color: ${colors.gray400};
     margin-bottom: 0;
   }
 
@@ -27,6 +33,7 @@ export const SingleMilestoneCSS = styled.div`
     }
   }
   h4 {
+    color: ${colors.forboleRed};
     font-weight: 500;
     font-size: 1.2rem;
   }

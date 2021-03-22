@@ -22,6 +22,7 @@ export const milestonesData = [
     badge: true,
   },
   {
+    year: "2019",
     date: "feb2019",
     title: "topScorerTitle",
     detail: "topScorerDetails",

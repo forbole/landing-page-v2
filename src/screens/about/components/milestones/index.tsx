@@ -17,35 +17,33 @@ const Milestones = () => {
     <MilestonesCSS>
       {/* <MaxWidthContainerCSS> */}
       <h3>{t("milestones")}</h3>
-      <TimelineCSS>
-        {data.map((x) => (
-          <>
+      {data.map((x, i) => (
+        // <>
+        <TimelineCSS key={i}>
+          {!!x.year && (
             <YearCSS>
-              {!!x.year && (
-                <>
-                  <img
-                    src="static/images/assets/year.png"
-                    className="yearimg"
-                  />
-                  <h3>{x.year}</h3>
-                </>
-              )}
+              <div className="dot">
+                <img src="static/images/assets/year.png" className="yearimg" />
+              </div>
+              <h3>{x.year}</h3>
             </YearCSS>
-            <MaxWidthContainerCSS>
-              <MilestonesGridCSS>
-                <SingleMilestone
-                  key={x.title}
-                  year={x.year}
-                  date={x.date}
-                  title={x.title}
-                  detail={x.detail}
-                  badge={x.badge}
-                />
-              </MilestonesGridCSS>
-            </MaxWidthContainerCSS>
-          </>
-        ))}
-      </TimelineCSS>
+          )}
+          <MaxWidthContainerCSS>
+            <MilestonesGridCSS>
+              <SingleMilestone
+                key={x.title}
+                year={x.year}
+                date={x.date}
+                title={x.title}
+                detail={x.detail}
+                badge={x.badge}
+              />
+            </MilestonesGridCSS>
+          </MaxWidthContainerCSS>
+        </TimelineCSS>
+        // </>
+      ))}
+
       {/* </MaxWidthContainerCSS> */}
     </MilestonesCSS>
   );

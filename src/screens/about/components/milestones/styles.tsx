@@ -34,6 +34,7 @@ export const MilestonesGridCSS = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
+  padding: 0 1rem;
   .date {
     margin-bottom: 0.125rem;
   }
@@ -49,17 +50,36 @@ export const MilestonesGridCSS = styled.div`
 `;
 
 export const TimelineCSS = styled.div`
-  padding: 0rem 1rem;
+  //position: relative;
+  //padding: 0rem 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-image: url("static/images/assets/timeline.png");
   background-size: 1%;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+  background-position: left 5%;
 `;
 
 export const YearCSS = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  margin-left: -0.3rem;
+  height: 4rem;
+  //padding: 2rem 0;
+  h3 {
+    margin-bottom: 0;
+    padding-left: 0.3rem;
+    font-size: 1.5rem;
+  }
+  .dot {
+    background: ${colors.white};
+    width: auto;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .yearimg {
     width: 16px;
     height: 16px;
