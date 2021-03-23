@@ -7,22 +7,15 @@ import {
   YearCSS,
 } from "./styles";
 import { MaxWidthContainerCSS } from "@styles/components";
-import { fetchMileStoneData, milestonesData } from "./config";
+import { milestonesData } from "./config";
 import SingleMilestone from "./components/single_milestone";
-
-// const ConditionalWrapper = ({ condition, wrapper, children }) =>
-//   condition ? wrapper(children) : children;
 
 const Milestones = () => {
   const { t } = useTranslation("about");
-  const data = fetchMileStoneData();
-  console.log(data);
   return (
     <MilestonesCSS>
-      {/* <MaxWidthContainerCSS> */}
       <h3>{t("milestones")}</h3>
       {milestonesData.map((x, i, array) => (
-        // <>
         <TimelineCSS key={i} year={x.year}>
           {!!x.year && (
             <YearCSS>
@@ -64,9 +57,7 @@ const Milestones = () => {
             </MilestonesGridCSS>
           </MaxWidthContainerCSS>
         </TimelineCSS>
-        // </>
       ))}
-      {/* </MaxWidthContainerCSS> */}
     </MilestonesCSS>
   );
 };

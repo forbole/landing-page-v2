@@ -18,7 +18,6 @@ export const MilestonesCSS = styled.div`
 
   ${media.bigDesktop`
     ${mixins.desktopLastContainerPadding}
-    // ${mixins.flexCenter}
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,8 +50,6 @@ export const MilestonesGridCSS = styled.div`
 `;
 
 export const TimelineCSS = styled.div<ITimelineCSS>`
-  //position: relative;
-  //padding: 0rem 1rem;
   display: flex;
   flex-direction: column;
   background-image: url("static/images/assets/timeline.png");

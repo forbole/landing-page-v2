@@ -9,7 +9,6 @@ export const SingleMilestoneCSS = styled.div`
   display: flex;
   flex-direction: column;
   box-shadow: 0px 10px 40px 0px rgba(41, 41, 42, 0.1);
-  // background: ${colors.white};
   border-radius: 4px;
 
   p {
