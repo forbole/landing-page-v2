@@ -12,13 +12,13 @@ const SingleMilestone = (props: any) => {
 
   const { date, year, title, detail } = props;
   return (
-    <SingleMilestoneCSS>
-      <ConditionalWrapper
-        condition={year}
-        wrapper={(children) => (
-          <div style={{ flexDirection: "column" }}>{children}</div>
-        )}
-      >
+    <ConditionalWrapper
+      condition={year}
+      wrapper={(children) => (
+        <div style={{ flexDirection: "column" }}>{children}</div>
+      )}
+    >
+      <SingleMilestoneCSS>
         <div>
           <span>
             <h4>{t(title)}</h4>
@@ -26,8 +26,8 @@ const SingleMilestone = (props: any) => {
           <p>{t(detail)}</p>
         </div>
         <p className="date">{t(date)}</p>
-      </ConditionalWrapper>
-    </SingleMilestoneCSS>
+      </SingleMilestoneCSS>
+    </ConditionalWrapper>
   );
 };
 
