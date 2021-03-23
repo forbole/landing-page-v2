@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mixins, media, theme } from "@styles";
+import { ITimelineCSS } from "./interfaces";
 
 const { colors } = theme;
 
@@ -49,7 +50,7 @@ export const MilestonesGridCSS = styled.div`
   `}
 `;
 
-export const TimelineCSS = styled.div`
+export const TimelineCSS = styled.div<ITimelineCSS>`
   //position: relative;
   //padding: 0rem 1rem;
   display: flex;
@@ -68,6 +69,7 @@ export const TimelineCSS = styled.div`
   `}
   ${media.bigDesktop`
     background-size: 0.2%;
+    display: ${(props) => (props.year ? "flex" : "inline-block")}
   `}
 `;
 

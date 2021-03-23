@@ -10,6 +10,7 @@ export const milestonesData = [
     date: "apr2018",
     title: "validatorDebutTitle",
     detail: "validatorDebutDetails",
+    row: true,
   },
   {
     date: "aug2018",
@@ -21,6 +22,7 @@ export const milestonesData = [
     date: "jun2019",
     title: "appWorksTitle",
     detail: "appWorksDetails",
+    row: true,
   },
   {
     date: "jul2019",
@@ -32,6 +34,7 @@ export const milestonesData = [
     date: "q42020",
     title: "interchainTitle",
     detail: "interchainDetails",
+    row: true,
   },
   {
     date: "jan2020",

@@ -10,6 +10,9 @@ import { MaxWidthContainerCSS } from "@styles/components";
 import { fetchMileStoneData, milestonesData } from "./config";
 import SingleMilestone from "./components/single_milestone";
 
+// const ConditionalWrapper = ({ condition, wrapper, children }) =>
+//   condition ? wrapper(children) : children;
+
 const Milestones = () => {
   const { t } = useTranslation("about");
   const data = fetchMileStoneData();
@@ -18,9 +21,9 @@ const Milestones = () => {
     <MilestonesCSS>
       {/* <MaxWidthContainerCSS> */}
       <h3>{t("milestones")}</h3>
-      {milestonesData.map((x, i) => (
+      {milestonesData.map((x, i, array) => (
         // <>
-        <TimelineCSS key={i}>
+        <TimelineCSS key={i} year={x.year}>
           {!!x.year && (
             <YearCSS>
               <div className="dot">
@@ -31,13 +34,33 @@ const Milestones = () => {
           )}
           <MaxWidthContainerCSS>
             <MilestonesGridCSS>
-              <SingleMilestone
-                key={x.title}
-                year={x.year}
-                date={x.date}
-                title={x.title}
-                detail={x.detail}
-              />
+              {x.row ? (
+                <>
+                  <SingleMilestone
+                    key={x.title}
+                    year={x.year}
+                    date={x.date}
+                    title={x.title}
+                    detail={x.detail}
+                  />
+                  <SingleMilestone
+                    key={array[i + 1].date}
+                    date={array[i + 1].date}
+                    title={array[i + 1].title}
+                    detail={array[i + 1].detail}
+                  />
+                </>
+              ) : x.year ? (
+                <SingleMilestone
+                  key={x.title}
+                  year={x.year}
+                  date={x.date}
+                  title={x.title}
+                  detail={x.detail}
+                />
+              ) : (
+                <div style={{ display: "none" }}></div>
+              )}
             </MilestonesGridCSS>
           </MaxWidthContainerCSS>
         </TimelineCSS>
