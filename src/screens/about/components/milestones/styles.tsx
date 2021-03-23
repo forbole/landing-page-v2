@@ -8,24 +8,24 @@ export const MilestonesCSS = styled.div`
   padding: 2.5rem 0.5rem 1.5rem;
   background: ${colors.white};
 
-  .timeline {
-    background-image: url("static/images/assets/timeline.png");
-    background-size: 1%;
-    background-repeat: repeat-y;
-  }
-
   h3 {
     max-width: 1200px;
     font-weight: 500;
     margin-bottom: 2rem;
+    padding-left: 1rem;
   }
 
   ${media.bigDesktop`
-    ${mixins.flexCenter}
+    ${mixins.desktopLastContainerPadding}
+    // ${mixins.flexCenter}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
     h3 {
       font-size: 2.5rem;
       margin-bottom: 1.5rem;
+      width: 100%;
     }
   `}
 `;
@@ -59,6 +59,16 @@ export const TimelineCSS = styled.div`
   background-repeat: no-repeat;
   background-position: left 5%;
   padding-bottom: 1rem;
+  & :last-of-type {
+    background-image: none;
+  }
+  ${media.tablet`
+    background-size: 0.5%;
+    padding-bottom: 0;
+  `}
+  ${media.bigDesktop`
+    background-size: 0.2%;
+  `}
 `;
 
 export const YearCSS = styled.div`
@@ -85,4 +95,22 @@ export const YearCSS = styled.div`
     width: 16px;
     height: 16px;
   }
+  ${media.tablet`
+  padding-bottom: 0;
+    .yearimg {
+      width: 18px;
+      height: 18px;
+    }
+  `}
+  ${media.bigDesktop`
+    margin-left: -1rem;
+    h3 {
+      padding-left: 0;
+      background: ${colors.white};
+      width: fit-content;
+    }
+    .dot {
+      display: none;
+    }
+  `}
 `;

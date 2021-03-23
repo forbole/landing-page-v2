@@ -47,11 +47,11 @@ export const SingleMilestoneCSS = styled.div`
   }
 
   ${media.tablet`
-    flex-direction: row;
+    flex-direction: column;
 
     .date {
       min-width: 7%;
-      text-align: right;
+      text-align: left;
       margin-right: 1rem;
     }
   `}

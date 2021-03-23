@@ -12,7 +12,8 @@ import SingleMilestone from "./components/single_milestone";
 
 const Milestones = () => {
   const { t } = useTranslation("about");
-  // const data = fetchMileStoneData();
+  const data = fetchMileStoneData();
+  console.log(data);
   return (
     <MilestonesCSS>
       {/* <MaxWidthContainerCSS> */}
@@ -36,14 +37,12 @@ const Milestones = () => {
                 date={x.date}
                 title={x.title}
                 detail={x.detail}
-                badge={x.badge}
               />
             </MilestonesGridCSS>
           </MaxWidthContainerCSS>
         </TimelineCSS>
         // </>
       ))}
-
       {/* </MaxWidthContainerCSS> */}
     </MilestonesCSS>
   );
