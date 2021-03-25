@@ -1,14 +1,14 @@
 export const pillarData = [
   {
     name: "validator",
-    detail: "validatorDetails",
+    image: "/static/images/assets/experienced-validators.svg",
   },
   {
-    name: "blockExplorer",
-    detail: "blockExplorerDetails",
+    name: "cryptoManagementTools",
+    image: "/static/images/assets/crypto-management.svg",
   },
   {
     name: "ecosystemChain",
-    detail: "ecosystemChainDetails",
+    image: "/static/images/assets/ecosystem-chain.svg",
   },
 ];

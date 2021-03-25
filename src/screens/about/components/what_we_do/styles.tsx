@@ -1,16 +1,34 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { mixins, media, theme } from "@styles";
+
+const { colors } = theme;
 
 export const WhatWeDoCSS = styled.div`
   ${mixins.mobilePadding}
+  min-height: fit-content;
+  .max-width-container {
+    min-height: fit-content;
+  }
 
   h3 {
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
   }
 
   ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  p {
+    line-height: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   ${media.tablet`
@@ -21,14 +39,41 @@ export const WhatWeDoCSS = styled.div`
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
-    min-height: 70vh;
+    .max-width-container {
+      margin-top: -25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem 5rem;
+      background: ${colors.white};
+      border: 1px solid ${colors.white};
+
+      box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
+      border-radius: 8px;
+      min-height: 70vh;
+      justify-content: space-evenly;
+    }
+    
     h3 {
       font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+    }
+
+    p {
+      line-height: 1.75rem;
+      flex-direction: column;
+      align-items: center;
     }
 
     ul {
-      list-style-type: disc;
+      padding-top: 3rem;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      .title {
+        font-weight: 500;
+        font-size: 1.25rem;
+      }
     }
 
     .max-width-container {
@@ -39,14 +84,13 @@ export const WhatWeDoCSS = styled.div`
 `;
 
 export const PillarCSS = styled.li`
-  margin-bottom: 1rem;
-
   .title {
-    font-weight: 600;
-    margin-bottom: 0;
+    font-weight: 400;
   }
 
   ${media.bigDesktop`
-    margin-left: 1rem;
+    .title {
+      font-weight: 600;
+    }
   `}
 `;

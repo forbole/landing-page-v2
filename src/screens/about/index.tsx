@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
+import { AboutHeaderCSS } from "./styles";
 import { Header, WhatWeDo, Milestones } from "./components";
 
 const About = () => {
@@ -12,8 +13,10 @@ const About = () => {
       image="/static/images/assets/Facebook-who-we-are.png"
       twitterImage="/static/images/assets/Twitter-who-we-are.png"
     >
-      <Header />
-      <WhatWeDo />
+      <AboutHeaderCSS>
+        <Header />
+        <WhatWeDo />
+      </AboutHeaderCSS>
       <Milestones />
       {/* <Team />
       <Opportunities /> */}
