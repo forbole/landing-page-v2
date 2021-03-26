@@ -66,7 +66,7 @@ export const TimelineCSS = styled.div<ITimelineCSS>`
   `}
   ${media.bigDesktop`
     background-size: 0.2%;
-    display: ${(props) => (props.year ? "flex" : "inline-block")}
+    display: ${(props) => (props.year ? "flex" : "none")}
   `}
 `;
 
