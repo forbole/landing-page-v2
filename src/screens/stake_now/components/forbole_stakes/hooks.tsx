@@ -495,7 +495,6 @@ export const useForboleStakesHook = () => {
     const vsysTotalUSD = await moneyToInt(vsys.totalMarketValue);
 
     // const irisTotalUSD = await moneyToInt(iris.totalMarketValue);
-    console.log(iris.totalMarketValue);
 
     const totalUSD = cosmosNetworkTotalUSD + vsysTotalUSD;
 
