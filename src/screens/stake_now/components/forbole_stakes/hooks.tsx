@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import * as R from "ramda";
 import { getNetworkInfo } from "@utils/network_info";
-import { networkFunctions } from "../../utils";
+import { networkFunctions, defaultFunctions } from "../../utils";
 import { convertToMoney, moneyToInt } from "@utils/convert_to_money";
 import { cosmosData, irisData, vsysData } from "./config";
 
@@ -47,12 +47,14 @@ export const useForboleStakesHook = () => {
   const [band, setBand] = useState(cosmosNetwork[5]);
   const [akash, setAkash] = useState(cosmosNetwork[6]);
   const [emoney, setEmoney] = useState(cosmosNetwork[7]);
+  const [iris, setIris] = useState(cosmosNetwork[8]);
 
   const getCosmosBasedNetwork = async () => {
     // setLoading(true);
     const updatedArr = [];
     for (let x = 0; x < cosmosData.length; x++) {
-      const networkFunction = networkFunctions[cosmosData[x]?.name] ?? null;
+      const networkFunction = networkFunctions[cosmosData[x]?.name];
+      // console.log(x, cosmosData[8]?.name, networkFunction);
       const { calculator } = getNetworkInfo(cosmosData[x]?.network ?? null);
       const bondedApi = axios.post("/api/proxy", {
         url: calculator.bonded,
@@ -78,9 +80,11 @@ export const useForboleStakesHook = () => {
         { data: delegationsJson },
         { data: marketPriceJson },
       ] = await Promise.all(promises);
+      //console.log(stakingParamsJson);
       const totalToken = networkFunction?.converter(
-        Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson))
+        Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson)) ?? 100000
       );
+      //console.log(networkFunction);
       const totalTokenFormat = convertToMoney(
         networkFunction?.converter(
           Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson))
@@ -98,20 +102,35 @@ export const useForboleStakesHook = () => {
       let totalSelfDelegations = 0;
 
       for (let i = 0; i < cosmosData[x].validator_address.length; i++) {
+        // const totalSelfDelegation = networkFunction?.converter(
+        //   R.pathOr([], ["result"], delegationsJson)
+        //     .filter(
+        //       (y) =>
+        //         y?.[cosmosData[x]?.address ?? null] ===
+        //           cosmosData[x]?.validator_address[i] ?? null
+        //     )
+        //     .reduce(
+        //       (a, b) => (a += Number(b?.balance?.amount ?? b?.balance) ?? 0.0),
+        //       totalSelfDelegations ?? 0.0
+        //     )
+        // );
         const totalSelfDelegation = networkFunction?.converter(
-          R.pathOr([], ["result"], delegationsJson)
-            .filter(
-              (y) =>
-                y?.[cosmosData[x]?.x ?? null] ===
-                  cosmosData[x]?.validator_address[i] ?? null
+          R.pathOr([""], ["result"], delegationsJson)
+            .filter((y) =>
+              "delegation" in y
+                ? y.delegation[cosmosData[x]?.address ?? 0] ===
+                    cosmosData[x]?.validator_address[i] ?? 0
+                : y?.[cosmosData[x]?.address ?? 0] ===
+                    cosmosData[x]?.validator_address[i] ?? 0
             )
             .reduce(
-              (a, b) => (a += Number(b?.balance?.amount ?? b?.balance) ?? 0),
-              totalSelfDelegations ?? 0
+              (a, b) => (a += Number(b?.balance?.amount ?? b?.balance) ?? 0.0),
+              totalSelfDelegations ?? 0.0
             )
         );
         totalSelfDelegations += totalSelfDelegation;
       }
+      //console.log(`self delegation`, totalSelfDelegations);
 
       const totalSelfDelegationsFormat = convertToMoney(totalSelfDelegations);
       const totalSelfDelegationsPercent = convertToMoney(
@@ -184,16 +203,25 @@ export const useForboleStakesHook = () => {
             break;
           case 2:
             setKava(state);
+            break;
           case 3:
             setLikecoin(state);
+            break;
           case 4:
             setIOV(state);
+            break;
           case 5:
             setBand(state);
+            break;
           case 6:
             setAkash(state);
+            break;
           case 7:
             setEmoney(state);
+            break;
+          case 8:
+            setIris(state);
+            break;
         }
       } catch (err) {
         console.log(err);
@@ -225,121 +253,121 @@ export const useForboleStakesHook = () => {
   };
 
   // IRIS
-  const [iris, setIris] = useState({
-    title: irisData[0].title,
-    totalToken: 0,
-    totalMarketValue: "0.00",
-    currentMarketValue: "0.00",
-    denom: irisData[0].denom,
-    voting: {
-      title: "votingPower",
-      token: 0,
-      percent: 0,
-    },
-    selfDelegations: {
-      title: "selfDelegations",
-      token: 0,
-      percent: 0,
-    },
-    otherDelegations: {
-      title: "otherDelegations",
-      token: 0,
-      percent: 0,
-    },
-  });
+  // const [iris, setIris] = useState({
+  //   title: irisData[0].title,
+  //   totalToken: 0,
+  //   totalMarketValue: "0.00",
+  //   currentMarketValue: "0.00",
+  //   denom: irisData[0].denom,
+  //   voting: {
+  //     title: "votingPower",
+  //     token: 0,
+  //     percent: 0,
+  //   },
+  //   selfDelegations: {
+  //     title: "selfDelegations",
+  //     token: 0,
+  //     percent: 0,
+  //   },
+  //   otherDelegations: {
+  //     title: "otherDelegations",
+  //     token: 0,
+  //     percent: 0,
+  //   },
+  // });
 
-  const getIrisNetwork = async () => {
-    const networkFunction = networkFunctions["iris"] ?? null;
-    const { calculator } = getNetworkInfo("iris");
-    const bondedApi = axios.post("/api/proxy", {
-      url: calculator.bonded,
-    });
-    const stakingParamsApi = axios.post("/api/proxy", {
-      url: calculator.stakingParams,
-    });
-    const delegationsApi = axios.post("/api/proxy", {
-      url:
-        "http://lcd.iris.bigdipper.live/stake/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegations",
-    });
-    const marketPriceApi = axios.get(networkFunction.gecko);
+  // const getIrisNetwork = async () => {
+  //   const networkFunction = networkFunctions["iris"] ?? null;
+  //   const { calculator } = getNetworkInfo("iris");
+  //   const bondedApi = axios.post("/api/proxy", {
+  //     url: calculator.bonded,
+  //   });
+  //   const stakingParamsApi = axios.post("/api/proxy", {
+  //     url: calculator.stakingParams,
+  //   });
+  //   const delegationsApi = axios.post("/api/proxy", {
+  //     url:
+  //       "http://lcd.iris.bigdipper.live/stake/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegations",
+  //   });
+  //   const marketPriceApi = axios.get(networkFunction.gecko);
 
-    const promises = [
-      bondedApi,
-      stakingParamsApi,
-      delegationsApi,
-      marketPriceApi,
-    ];
+  //   const promises = [
+  //     bondedApi,
+  //     stakingParamsApi,
+  //     delegationsApi,
+  //     marketPriceApi,
+  //   ];
 
-    const [
-      { data: bondedJson },
-      { data: stakingParamsJson },
-      { data: delegationsJson },
-      { data: marketPriceJson },
-    ] = await Promise.all(promises);
+  //   const [
+  //     { data: bondedJson },
+  //     { data: stakingParamsJson },
+  //     { data: delegationsJson },
+  //     { data: marketPriceJson },
+  //   ] = await Promise.all(promises);
 
-    const totalIRIS = Number(R.pathOr(0, ["tokens"], stakingParamsJson));
+  //   const totalIRIS = Number(R.pathOr(0, ["tokens"], stakingParamsJson));
 
-    const totalIRISFormat = convertToMoney(
-      Number(R.pathOr(0, ["tokens"], stakingParamsJson))
-    );
+  //   const totalIRISFormat = convertToMoney(
+  //     Number(R.pathOr(0, ["tokens"], stakingParamsJson))
+  //   );
 
-    const bonded = networkFunctions.iris.bonded(bondedJson);
+  //   const bonded = networkFunctions.iris.bonded(bondedJson);
 
-    const currentMarketValue = networkFunctions.iris.marketPrice(
-      marketPriceJson
-    );
-    const totalMarketValue = convertToMoney(currentMarketValue * totalIRIS);
-    const votingPowerPercent = convertToMoney((totalIRIS / bonded) * 100, 2);
+  //   const currentMarketValue = networkFunctions.iris.marketPrice(
+  //     marketPriceJson
+  //   );
+  //   const totalMarketValue = convertToMoney(currentMarketValue * totalIRIS);
+  //   const votingPowerPercent = convertToMoney((totalIRIS / bonded) * 100, 2);
 
-    //==========================
-    // self-delegations
-    //==========================
-    const totalSelfDelegations = R.pathOr([], [], delegationsJson)
-      .filter(
-        (x) =>
-          x?.["delegator_addr"] === "iaa1msqqkd3v0gmullzwm56c4frevyczzxfednxa7m"
-      )
-      .reduce((a, b) => (a += Number(b?.shares) ?? 0), 0);
+  //   //==========================
+  //   // self-delegations
+  //   //==========================
+  //   const totalSelfDelegations = R.pathOr([], [], delegationsJson)
+  //     .filter(
+  //       (x) =>
+  //         x?.["delegator_addr"] === "iaa1msqqkd3v0gmullzwm56c4frevyczzxfednxa7m"
+  //     )
+  //     .reduce((a, b) => (a += Number(b?.shares) ?? 0), 0);
 
-    const totalSelfDelegationsFormat = convertToMoney(totalSelfDelegations);
-    const totalSelfDelegationsPercent = convertToMoney(
-      (totalSelfDelegations / bonded) * 100,
-      2
-    );
+  //   const totalSelfDelegationsFormat = convertToMoney(totalSelfDelegations);
+  //   const totalSelfDelegationsPercent = convertToMoney(
+  //     (totalSelfDelegations / bonded) * 100,
+  //     2
+  //   );
 
-    //==========================
-    // other-delegations
-    //==========================
-    const otherDelegations = totalIRIS - totalSelfDelegations;
-    const otherDelegationsFormat = convertToMoney(otherDelegations);
-    const otherDelegationsPercent = convertToMoney(
-      (otherDelegations / bonded) * 100,
-      2
-    );
+  //   //==========================
+  //   // other-delegations
+  //   //==========================
+  //   const otherDelegations = totalIRIS - totalSelfDelegations;
+  //   const otherDelegationsFormat = convertToMoney(otherDelegations);
+  //   const otherDelegationsPercent = convertToMoney(
+  //     (otherDelegations / bonded) * 100,
+  //     2
+  //   );
 
-    setIris(
-      R.mergeDeepLeft(
-        {
-          totalToken: totalIRISFormat,
-          totalMarketValue,
-          currentMarketValue,
-          voting: {
-            token: totalIRISFormat,
-            percent: votingPowerPercent,
-          },
-          selfDelegations: {
-            token: totalSelfDelegationsFormat,
-            percent: totalSelfDelegationsPercent,
-          },
-          otherDelegations: {
-            token: otherDelegationsFormat,
-            percent: otherDelegationsPercent,
-          },
-        },
-        iris
-      )
-    );
-  };
+  //   setIris(
+  //     R.mergeDeepLeft(
+  //       {
+  //         totalToken: totalIRISFormat,
+  //         totalMarketValue,
+  //         currentMarketValue,
+  //         voting: {
+  //           token: totalIRISFormat,
+  //           percent: votingPowerPercent,
+  //         },
+  //         selfDelegations: {
+  //           token: totalSelfDelegationsFormat,
+  //           percent: totalSelfDelegationsPercent,
+  //         },
+  //         otherDelegations: {
+  //           token: otherDelegationsFormat,
+  //           percent: otherDelegationsPercent,
+  //         },
+  //       },
+  //       iris
+  //     )
+  //   );
+  // };
 
   // V System
   const [vsys, setVSYS] = useState({
@@ -474,14 +502,10 @@ export const useForboleStakesHook = () => {
   };
 
   useEffect(() => {
-    try {
-      getCosmosBasedNetwork()
-        // .then(() => getIrisNetwork())
-        .then(() => getVSYSNetwork());
-      // .then(() => setLoading(false));
-    } catch (err) {
-      console.log(err);
-    }
+    getCosmosBasedNetwork();
+    // .then(() => getIrisNetwork())
+    // .then(() => getVSYSNetwork());
+    // .then(() => setLoading(false));
   }, []);
 
   useEffect(() => {
@@ -490,7 +514,7 @@ export const useForboleStakesHook = () => {
     } catch (err) {
       console.log(err);
     }
-  }, [cosmosNetwork, vsys, iris]);
+  }, [cosmosNetwork]);
 
   return {
     cosmos,
