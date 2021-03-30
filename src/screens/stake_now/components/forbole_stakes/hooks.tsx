@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import * as R from "ramda";
 import { getNetworkInfo } from "@utils/network_info";
-import { networkFunctions, defaultFunctions } from "../../utils";
+import { networkFunctions } from "../../utils";
 import { convertToMoney, moneyToInt } from "@utils/convert_to_money";
 import { cosmosData, irisData, vsysData } from "./config";
 
@@ -485,7 +485,7 @@ export const useForboleStakesHook = () => {
     );
   };
 
-  const [totalUSD, setNetworkUSD] = useState(0);
+  const [totalUSD, setNetworkUSD]: any = useState(0);
 
   const getNetworkUSD = async () => {
     const cosmosNetworkTotalUSD = await cosmosNetwork
@@ -494,18 +494,18 @@ export const useForboleStakesHook = () => {
 
     const vsysTotalUSD = await moneyToInt(vsys.totalMarketValue);
 
-    const irisTotalUSD = await moneyToInt(iris.totalMarketValue);
+    // const irisTotalUSD = await moneyToInt(iris.totalMarketValue);
+    console.log(iris.totalMarketValue);
 
-    const totalUSD = cosmosNetworkTotalUSD + vsysTotalUSD + irisTotalUSD;
+    const totalUSD = cosmosNetworkTotalUSD + vsysTotalUSD;
 
     setNetworkUSD(totalUSD);
   };
 
   useEffect(() => {
-    getCosmosBasedNetwork();
-    // .then(() => getIrisNetwork())
-    // .then(() => getVSYSNetwork());
-    // .then(() => setLoading(false));
+    getCosmosBasedNetwork()
+      // .then(() => getIrisNetwork())
+      .then(() => getVSYSNetwork());
   }, []);
 
   useEffect(() => {
@@ -529,8 +529,6 @@ export const useForboleStakesHook = () => {
     iris,
     vsys,
     totalUSD,
-    // isLoading,
-    // setLoading,
     selected,
     setSelected,
   };

@@ -25,13 +25,13 @@ const ForboleStakes = () => {
     band,
     akash,
     emoney,
-    cosmosNetwork,
     iris,
     vsys,
     totalUSD,
     selected,
     // isLoading,
   } = hookProps;
+  console.log(totalUSD, typeof totalUSD);
   const selectedData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub" },
     { network: terra, icon: "terra" },
@@ -47,7 +47,7 @@ const ForboleStakes = () => {
   return (
     <ForboleStakesCSS>
       <p>{t("tokensStakedWithForbole")}</p>
-      {totalUSD ? (
+      {isNaN(totalUSD) ? (
         <h1>${" " + "---"}</h1>
       ) : (
         <h1>${convertToMoney(totalUSD)}</h1>
