@@ -9,39 +9,47 @@ import { cosmosData, irisData, vsysData } from "./config";
 
 export const useForboleStakesHook = () => {
   const [selected, setSelected] = useState(0);
-  const [isLoading, setLoading] = useState(false);
+  // const [isLoading, setLoading] = useState(false);
 
   // Cosmos-Based Networks
   const cosmosBasedNetwork = [];
   for (let i = 0; i < cosmosData.length; i++) {
     cosmosBasedNetwork.push({
       title: cosmosData[i].title ?? null,
-      totalToken: 0,
-      totalMarketValue: "0.00",
-      currentMarketValue: "0.00",
+      totalToken: "---",
+      totalMarketValue: "---",
+      currentMarketValue: "---",
       denom: cosmosData[i].denom ?? null,
       voting: {
         title: "votingPower",
-        token: 0,
-        percent: 0,
+        token: "---",
+        percent: "---",
       },
       selfDelegations: {
         title: "selfDelegations",
-        token: 0,
-        percent: 0,
+        token: "---",
+        percent: "---",
       },
       otherDelegations: {
         title: "otherDelegations",
-        token: 0,
-        percent: 0,
+        token: "---",
+        percent: "---",
       },
     });
   }
 
   const [cosmosNetwork, setCosmosNetwork] = useState(cosmosBasedNetwork);
+  const [cosmos, setCosmos] = useState(cosmosNetwork[0]);
+  const [terra, setTerra] = useState(cosmosNetwork[1]);
+  const [kava, setKava] = useState(cosmosNetwork[2]);
+  const [likecoin, setLikecoin] = useState(cosmosNetwork[3]);
+  const [iov, setIOV] = useState(cosmosNetwork[4]);
+  const [band, setBand] = useState(cosmosNetwork[5]);
+  const [akash, setAkash] = useState(cosmosNetwork[6]);
+  const [emoney, setEmoney] = useState(cosmosNetwork[7]);
 
   const getCosmosBasedNetwork = async () => {
-    setLoading(true);
+    // setLoading(true);
     const updatedArr = [];
     for (let x = 0; x < cosmosData.length; x++) {
       const networkFunction = networkFunctions[cosmosData[x]?.name] ?? null;
@@ -145,6 +153,48 @@ export const useForboleStakesHook = () => {
             percent: otherDelegationsPercent,
           },
         });
+        let state = {
+          title: cosmosData[x]?.title,
+          denom: cosmosData[x]?.denom,
+          totalToken: totalTokenFormat,
+          totalMarketValue,
+          currentMarketValue,
+          voting: {
+            title: "votingPower",
+            token: totalTokenFormat,
+            percent: votingPowerPercent,
+          },
+          selfDelegations: {
+            title: "selfDelegations",
+            token: totalSelfDelegationsFormat,
+            percent: totalSelfDelegationsPercent,
+          },
+          otherDelegations: {
+            title: "otherDelegations",
+            token: otherDelegationsFormat,
+            percent: otherDelegationsPercent,
+          },
+        };
+        switch (x) {
+          case 0:
+            setCosmos(state);
+            break;
+          case 1:
+            setTerra(state);
+            break;
+          case 2:
+            setKava(state);
+          case 3:
+            setLikecoin(state);
+          case 4:
+            setIOV(state);
+          case 5:
+            setBand(state);
+          case 6:
+            setAkash(state);
+          case 7:
+            setEmoney(state);
+        }
       } catch (err) {
         console.log(err);
         updatedArr.push({
@@ -426,9 +476,9 @@ export const useForboleStakesHook = () => {
   useEffect(() => {
     try {
       getCosmosBasedNetwork()
-        .then(() => getIrisNetwork())
-        .then(() => getVSYSNetwork())
-        .then(() => setLoading(false));
+        // .then(() => getIrisNetwork())
+        .then(() => getVSYSNetwork());
+      // .then(() => setLoading(false));
     } catch (err) {
       console.log(err);
     }
@@ -443,12 +493,20 @@ export const useForboleStakesHook = () => {
   }, [cosmosNetwork, vsys, iris]);
 
   return {
+    cosmos,
+    terra,
+    kava,
+    likecoin,
+    iov,
+    band,
+    akash,
+    emoney,
     cosmosNetwork,
     iris,
     vsys,
     totalUSD,
-    isLoading,
-    setLoading,
+    // isLoading,
+    // setLoading,
     selected,
     setSelected,
   };
