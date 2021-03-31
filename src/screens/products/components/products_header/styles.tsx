@@ -64,7 +64,9 @@ export const ProductsHeaderCSS = styled.div`
 `;
 
 export const ProductsContainerCSS = styled.div`
+  ${media.desktop`
   position: relative;
-  height: 100vh;
+  // height: 100vh;
   max-height: max-content;
+`}
 `;

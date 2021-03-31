@@ -15,6 +15,7 @@ export const ProductDisplayCSS = styled.div`
     flex-direction: column;
     grid-gap: 1rem;
     margin-top: -8rem;
+    position: inherit;
   `}
   ${media.desktop`
     flex-direction: row;
