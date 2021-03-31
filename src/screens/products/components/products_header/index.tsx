@@ -14,9 +14,7 @@ const ProductsHeader = () => {
           <p className="headerp">{t("headerDescription")}</p>
         </MaxWidthContainerCSS>
       </ProductsHeaderCSS>
-      {/* <MaxWidthContainerCSS> */}
       <ProductBlock />
-      {/* </MaxWidthContainerCSS> */}
     </ProductsContainerCSS>
   );
 };
