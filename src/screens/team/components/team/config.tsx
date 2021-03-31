@@ -30,16 +30,6 @@ export const membersData = [
     slug: "paul",
   },
   {
-    name: "Anson Cheung",
-    position: "projectDirector",
-    image: "/static/images/team/anson.jpg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/anson-yk-cheung/",
-      github: "https://github.com/anson-cheung",
-    },
-    slug: "anson",
-  },
-  {
     name: "Apple Choi",
     position: "swe",
     image: "/static/images/team/apple.jpeg",
