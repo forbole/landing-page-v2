@@ -23,6 +23,8 @@ export const ProductDisplayCSS = styled.div`
     padding-bottom: 10rem;
     width: 100%;
     align-self: center;
+    position: absolute;
+    top: 55rem;
   `}
 `;
 

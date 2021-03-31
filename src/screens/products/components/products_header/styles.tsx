@@ -62,3 +62,9 @@ export const ProductsHeaderCSS = styled.div`
     }
   `}
 `;
+
+export const ProductsContainerCSS = styled.div`
+  position: relative;
+  height: 100vh;
+  max-height: max-content;
+`;
