@@ -31,7 +31,6 @@ const ForboleStakes = () => {
     selected,
     // isLoading,
   } = hookProps;
-  console.log(totalUSD, typeof totalUSD);
   const selectedData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub" },
     { network: terra, icon: "terra" },
