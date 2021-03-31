@@ -1,6 +1,6 @@
 export const membersData = [
   {
-    name: "Leo Bragagnolo",
+    name: "Leonardo Bragagnolo",
     position: "swe",
     image: "/static/images/team/leo.jpg",
     links: {
