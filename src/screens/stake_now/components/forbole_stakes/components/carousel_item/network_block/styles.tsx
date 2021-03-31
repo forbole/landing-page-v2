@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button as SemanticButton } from "semantic-ui-react";
 import { theme, media } from "@styles";
 
 const { colors } = theme;
@@ -86,4 +87,16 @@ export const BlockCSS = styled.div`
     }
     background: none;
   `}
+`;
+
+export const Button = styled(SemanticButton)`
+  &.ui.button {
+    width: 100%;
+    height: 2.125rem;
+    font-weight: 300;
+    background: black;
+    color: white;
+    margin-right: 0;
+    padding: 0.6875em 0.46em 0.6875em;
+  }
 `;
