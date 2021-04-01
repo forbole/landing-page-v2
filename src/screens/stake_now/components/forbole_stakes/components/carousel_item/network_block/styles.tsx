@@ -93,6 +93,7 @@ export const BlockCSS = styled.div`
 export const PercentCSS = styled.div`
   background: ${colors.black};
   border-radius: 1rem;
+  padding: 1rem 0.5rem;
   color: ${colors.white};
 `;
 

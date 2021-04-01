@@ -29,8 +29,8 @@ const ForboleStakes = () => {
     vsys,
     totalUSD,
     selected,
-    // isLoading,
-  } = hookProps;
+  }: // isLoading,
+  any = hookProps;
   const selectedData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub" },
     { network: terra, icon: "terra" },
