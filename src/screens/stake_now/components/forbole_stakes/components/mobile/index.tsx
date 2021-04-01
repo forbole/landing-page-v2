@@ -1,13 +1,13 @@
 import React from "react";
 import { BlogPostCSS } from "./styles";
-import Post from "../carousel_item/news_posts";
+import NetworkBlock from "../carousel_item/network_block";
 
 const BlogPosts = (props: any) => {
   const { posts = [] } = props;
   return (
     <BlogPostCSS>
       {posts.slice(0, 3).map((x, i) => (
-        <Post key={i} post={x} />
+        <NetworkBlock key={i} post={x} />
       ))}
     </BlogPostCSS>
   );

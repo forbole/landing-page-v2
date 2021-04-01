@@ -6,7 +6,7 @@ import {
   CarouselArrowCSS,
   MaxWidthContainerCSS,
 } from "./styles";
-import Post from "../carousel_item/news_posts";
+import NetworkBlock from "../carousel_item/network_block";
 import { Next } from "@icons";
 
 const ButtonGroup = (props: any) => {
@@ -64,7 +64,7 @@ const CarouselBlogPosts = (props: any) => {
           swipeable
         >
           {posts.map((x, i) => (
-            <Post key={i} post={x} />
+            <NetworkBlock key={i} post={x} />
           ))}
         </Carousel>
       </MaxWidthContainerCSS>

@@ -7,14 +7,15 @@ const { colors } = theme;
 export const BlockCSS = styled.div`
   background: ${colors.white};
   border-radius: 0.5rem;
-  .image-container {
-    height: 200px;
+  .title-container {
+    color: ${colors.black};
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+      object-fit: cover;
+    }
   }
-  img {
-    height: 200px;
-    width: 100%;
-    object-fit: cover;
-  }
+
   h3 {
     font-weight: 500;
     margin-bottom: 0;
@@ -89,13 +90,19 @@ export const BlockCSS = styled.div`
   `}
 `;
 
+export const PercentCSS = styled.div`
+  background: ${colors.black};
+  border-radius: 1rem;
+  color: ${colors.white};
+`;
+
 export const Button = styled(SemanticButton)`
   &.ui.button {
     width: 100%;
     height: 2.125rem;
     font-weight: 300;
-    background: black;
-    color: white;
+    background: ${colors.black};
+    color: ${colors.white};
     margin-right: 0;
     padding: 0.6875em 0.46em 0.6875em;
   }
