@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import {
   CarouselCSS,
@@ -6,8 +6,11 @@ import {
   CarouselArrowCSS,
   MaxWidthContainerCSS,
 } from "./styles";
+import { useForboleStakesHook } from "../../hooks";
+import { INetworkDataProps } from "../../interfaces";
 import NetworkBlock from "../carousel_item/network_block";
 import { Next } from "@icons";
+import { networkFunctions } from "@src/screens/stake_now/utils";
 
 const ButtonGroup = (props: any) => {
   const { next, previous } = props;
@@ -25,7 +28,36 @@ const ButtonGroup = (props: any) => {
 };
 
 const CarouselBlogPosts = (props: any) => {
-  const { posts } = props;
+  // const networks = props;
+  const hookProps = useForboleStakesHook();
+  const {
+    cosmos,
+    terra,
+    kava,
+    likecoin,
+    iov,
+    band,
+    akash,
+    emoney,
+    iris,
+    vsys,
+    totalUSD,
+    selected,
+  }: // isLoading,
+  any = hookProps;
+  const selectedData: INetworkDataProps[] = [
+    { network: cosmos, icon: "cosmos-hub" },
+    { network: terra, icon: "terra" },
+    { network: kava, icon: "kava" },
+    { network: likecoin, icon: "likecoin" },
+    { network: iov, icon: "iov" },
+    { network: band, icon: "band-protocol" },
+    { network: akash, icon: "akash" },
+    { network: emoney, icon: "e-money" },
+    { network: iris, icon: "iris" },
+    { network: vsys, icon: "v-system" },
+  ];
+  // console.log(`hiiiiiiiiiii`, selectedData);
   return (
     <CarouselCSS>
       <MaxWidthContainerCSS>
@@ -63,8 +95,8 @@ const CarouselBlogPosts = (props: any) => {
           slidesToSlide={3}
           swipeable
         >
-          {posts.map((x, i) => (
-            <NetworkBlock key={i} post={x} />
+          {selectedData.map((x, i) => (
+            <NetworkBlock key={i} props={x} />
           ))}
         </Carousel>
       </MaxWidthContainerCSS>

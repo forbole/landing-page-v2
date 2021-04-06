@@ -8,6 +8,7 @@ import {
   FlexContainerCSS,
 } from "./styles";
 import HubDetail from "./components/hub_detail";
+import CarouselBlogPosts from "./components/desktop";
 import Chart from "./components/chart";
 import { useForboleStakesHook } from "./hooks";
 import { INetworkDataProps } from "./interfaces";
@@ -86,6 +87,7 @@ const ForboleStakes = () => {
             token={selectedData[selected]?.network?.otherDelegations.token}
             percent={selectedData[selected]?.network?.otherDelegations.percent}
           />
+          <CarouselBlogPosts props={hookProps} />
         </StakesDetailsContainerCSS>
       </FlexContainerCSS>
     </ForboleStakesCSS>

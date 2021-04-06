@@ -6,6 +6,7 @@ import { convertToMoney } from "@utils/convert_to_money";
 import { BlockCSS, PercentCSS, Button } from "./styles";
 
 const NetworkBlock = (props: any) => {
+  console.log(`huuiii`);
   const {
     title = "",
     name = "",
@@ -16,7 +17,33 @@ const NetworkBlock = (props: any) => {
     perToken = 0,
     denom,
     delegate = process.env.NEXT_PUBLIC_URL,
+    // totalToken = 0,
+    // currentMarketValue = "0.00",
+    // denom = "VSYS",
+    // voting = [Object],
+    // selfDelegations = [Object],
+    // otherDelegations = [Object],
+    icon = "",
+    network = {
+      currentMarketValue: "---",
+      denom: "LIKE",
+      otherDelegations: {
+        title: "otherDelegations",
+        token: "---",
+        percent: "---",
+      },
+      selfDelegations: {
+        title: "selfDelegations",
+        token: "---",
+        percent: "---",
+      },
+      title: "Likecoin",
+      totalMarketValue: "---",
+      totalToken: "---",
+      voting: {},
+    },
   } = props;
+  console.log(`network block`, props);
 
   const { t } = useTranslation("stake_now");
 
@@ -29,7 +56,7 @@ const NetworkBlock = (props: any) => {
       </div>
       <div className="amount">
         <div>
-          <h3>{formattedAmount}</h3>
+          <h3>{network.totalMarketValue}</h3>
         </div>
         <p>{usd}</p>
       </div>
