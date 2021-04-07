@@ -5,6 +5,9 @@ import { theme, media } from "@styles";
 const { colors } = theme;
 
 export const BlockCSS = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: ${colors.white};
   border-radius: 0.5rem;
   box-shadow: 0px 0.3rem 0.4rem 0px rgba(41, 41, 42, 0.1);
@@ -38,7 +41,7 @@ export const BlockCSS = styled.div`
   ${media.bigDesktop`
     padding: 1rem;
     margin: 0 1rem;
-    height: 100%;
+    height: 361px;
     transition: 0.5s ease;
 
     a {

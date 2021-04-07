@@ -78,7 +78,7 @@ const CarouselNetworks = ({ network }: any) => {
           itemClass=""
           keyBoardControl
           minimumTouchDrag={80}
-          renderButtonGroupOutside
+          renderButtonGroupOutside={true}
           customButtonGroup={<ButtonGroup />}
           renderDotsOutside={false}
           responsive={{
