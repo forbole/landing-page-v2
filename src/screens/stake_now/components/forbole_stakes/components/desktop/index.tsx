@@ -96,7 +96,14 @@ const CarouselBlogPosts = (props: any) => {
           swipeable
         >
           {selectedData.map((x, i) => (
-            <NetworkBlock key={i} props={x} />
+            // <NetworkBlock key={i} props={x} />
+            <NetworkBlock
+              key={i}
+              denom={x.network?.denom}
+              title={x.network?.otherDelegations.title}
+              token={x.network?.otherDelegations.token}
+              percent={x.network?.otherDelegations.percent}
+            />
           ))}
         </Carousel>
       </MaxWidthContainerCSS>
