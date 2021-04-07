@@ -71,6 +71,7 @@ export const ForboleStakesCSS = styled.div`
 `;
 
 export const FlexContainerCSS = styled.div`
+  z-index: 5;
   width: 100%;
   display: flex;
   align-items: center;
@@ -81,6 +82,10 @@ export const FlexContainerCSS = styled.div`
     flex-direction: row;
     justify-content: center;
   `}
+`;
+
+export const CarouselDesktopContainerCSS = styled.div`
+  width: 100%;
 `;
 
 export const StakesDetailsContainerCSS = styled.div`

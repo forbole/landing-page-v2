@@ -27,36 +27,37 @@ const ButtonGroup = (props: any) => {
   );
 };
 
-const CarouselBlogPosts = (props: any) => {
+const CarouselNetworks = ({ network }: any) => {
   // const networks = props;
-  const hookProps = useForboleStakesHook();
-  const {
-    cosmos,
-    terra,
-    kava,
-    likecoin,
-    iov,
-    band,
-    akash,
-    emoney,
-    iris,
-    vsys,
-    totalUSD,
-    selected,
-  }: // isLoading,
-  any = hookProps;
-  const selectedData: INetworkDataProps[] = [
-    { network: cosmos, icon: "cosmos-hub" },
-    { network: terra, icon: "terra" },
-    { network: kava, icon: "kava" },
-    { network: likecoin, icon: "likecoin" },
-    { network: iov, icon: "iov" },
-    { network: band, icon: "band-protocol" },
-    { network: akash, icon: "akash" },
-    { network: emoney, icon: "e-money" },
-    { network: iris, icon: "iris" },
-    { network: vsys, icon: "v-system" },
-  ];
+  // const networkData = { props };
+  // console.log(`props`, typeof networkData);
+  // const {
+  //   cosmos,
+  //   terra,
+  //   kava,
+  //   likecoin,
+  //   iov,
+  //   band,
+  //   akash,
+  //   emoney,
+  //   iris,
+  //   vsys,
+  //   totalUSD,
+  //   selected,
+  // }: // isLoading,
+  // any = props;
+  // const selectedData: INetworkDataProps[] = [
+  //   { network: cosmos, icon: "cosmos-hub" },
+  //   { network: terra, icon: "terra" },
+  //   { network: kava, icon: "kava" },
+  //   { network: likecoin, icon: "likecoin" },
+  //   { network: iov, icon: "iov" },
+  //   { network: band, icon: "band-protocol" },
+  //   { network: akash, icon: "akash" },
+  //   { network: emoney, icon: "e-money" },
+  //   { network: iris, icon: "iris" },
+  //   { network: vsys, icon: "v-system" },
+  // ];
   // console.log(`hiiiiiiiiiii`, selectedData);
   return (
     <CarouselCSS>
@@ -95,15 +96,20 @@ const CarouselBlogPosts = (props: any) => {
           slidesToSlide={3}
           swipeable
         >
-          {selectedData.map((x, i) => (
+          {network.map((x, i) => (
             // <NetworkBlock key={i} props={x} />
-            <NetworkBlock
-              key={i}
-              denom={x.network?.denom}
-              title={x.network?.otherDelegations.title}
-              token={x.network?.otherDelegations.token}
-              percent={x.network?.otherDelegations.percent}
-            />
+            <>
+              {console.log(x.network)}
+              <NetworkBlock
+                key={i}
+                icon={x.icon}
+                denom={x.network?.denom}
+                title={x.network?.title}
+                usd={x.network?.totalMarketValue}
+                token={x.network?.totalToken}
+                percent={x.network?.voting?.percent}
+              />
+            </>
           ))}
         </Carousel>
       </MaxWidthContainerCSS>
@@ -111,4 +117,4 @@ const CarouselBlogPosts = (props: any) => {
   );
 };
 
-export default CarouselBlogPosts;
+export default CarouselNetworks;

@@ -6,15 +6,13 @@ import { convertToMoney } from "@utils/convert_to_money";
 import { BlockCSS, PercentCSS, Button } from "./styles";
 
 const NetworkBlock = (props: any) => {
-  console.log(`huuiii`);
+  // console.log(`network block`, props);
   const {
     title = "",
-    name = "",
-    token = 0,
-    percent = 0,
-    main = false,
-    usd = 0,
-    perToken = 0,
+    icon = "",
+    token,
+    percent,
+    usd,
     denom,
     delegate = process.env.NEXT_PUBLIC_URL,
     // icon = "",
@@ -37,35 +35,24 @@ const NetworkBlock = (props: any) => {
     //   voting: {},
     // },
   } = props;
-  console.log(`network block`, props);
-
   const { t } = useTranslation("stake_now");
 
   const formattedAmount = token === "---" ? token : convertToMoney(token);
   return (
-    <BlockCSS className={classNames({ main })}>
-      <p className={classNames("title", { main })}>
-        {!!main && <img src={`/static/images/icons/${name}.png`} />}
+    <BlockCSS>
+      <p className={"title-container"}>
+        <img src={`/static/images/icons/${icon}.png`} />
         {t(title)}
       </p>
-      <p className={classNames("token", { main })}>
+      <p className={"token"}>
         {token} {denom}
       </p>
-      {main ? (
-        <>
-          <div className="main-only-content">
-            <p className="usd">
-              {usd} {t("usd")}
-            </p>
-            <p className="per-token">
-              (${perToken}/${denom})
-            </p>
-          </div>
-          <hr className="main-content-hr" />
-        </>
-      ) : (
-        <p>{percent}%</p>
-      )}
+      <div className="main-only-content">
+        <p className="usd">
+          {usd} {t("usd")}
+        </p>
+      </div>
+      <p>{percent}%</p>
       <a href={delegate} target="_blank" rel="noreferrer">
         <Button>{t("stakeNow")}</Button>
       </a>

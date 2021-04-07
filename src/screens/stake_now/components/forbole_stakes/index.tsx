@@ -5,10 +5,11 @@ import {
   ForboleStakesCSS,
   StakesDetailsContainerCSS,
   ChartContainerCSS,
+  CarouselDesktopContainerCSS,
   FlexContainerCSS,
 } from "./styles";
 import HubDetail from "./components/hub_detail";
-import CarouselBlogPosts from "./components/desktop";
+import CarouselNetworks from "./components/desktop";
 import Chart from "./components/chart";
 import { useForboleStakesHook } from "./hooks";
 import { INetworkDataProps } from "./interfaces";
@@ -32,7 +33,7 @@ const ForboleStakes = () => {
     selected,
   }: // isLoading,
   any = hookProps;
-  const selectedData: INetworkDataProps[] = [
+  const networkData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub" },
     { network: terra, icon: "terra" },
     { network: kava, icon: "kava" },
@@ -53,11 +54,11 @@ const ForboleStakes = () => {
         <h1>${convertToMoney(totalUSD)}</h1>
       )}
       <FlexContainerCSS>
-        <ChartContainerCSS>
+        {/* <ChartContainerCSS>
           <Chart {...hookProps} />
         </ChartContainerCSS>
-        <StakesDetailsContainerCSS>
-          <HubDetail
+        <StakesDetailsContainerCSS> */}
+        {/* <HubDetail
             main
             name={selectedData[selected]?.icon}
             denom={selectedData[selected]?.network?.denom}
@@ -86,9 +87,11 @@ const ForboleStakes = () => {
             title={selectedData[selected]?.network?.otherDelegations.title}
             token={selectedData[selected]?.network?.otherDelegations.token}
             percent={selectedData[selected]?.network?.otherDelegations.percent}
-          />
-          <CarouselBlogPosts props={hookProps} />
-        </StakesDetailsContainerCSS>
+          /> */}
+        <CarouselDesktopContainerCSS>
+          <CarouselNetworks network={networkData} />
+        </CarouselDesktopContainerCSS>
+        {/* </StakesDetailsContainerCSS> */}
       </FlexContainerCSS>
     </ForboleStakesCSS>
   );

@@ -45,7 +45,7 @@ export const BlockCSS = styled.div`
   `}
   ${media.bigDesktop`
     padding: 1rem;
-    height: 500px;
+    height: 100%;
     transition: 0.5s ease;
 
     a {
