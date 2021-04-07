@@ -72,9 +72,8 @@ export const ForboleStakesCSS = styled.div`
     background-image: url("/static/images/assets/stake-now-background.png");
     background-color: rgba(27, 27, 27, 1);
     // background-position: center 200px, center center;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    // height: 40vh;
     min-height: 70vh;
 
     .stats-hr {
@@ -95,7 +94,7 @@ export const FlexContainerCSS = styled.div`
     flex-direction: row;
     justify-content: center;
     margin: auto;
-    margin-top: -13rem;
+    margin-top: -11rem;
   `}
 `;
 

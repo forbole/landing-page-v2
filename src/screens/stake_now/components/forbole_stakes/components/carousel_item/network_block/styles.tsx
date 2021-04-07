@@ -7,7 +7,7 @@ const { colors } = theme;
 export const BlockCSS = styled.div`
   background-color: ${colors.white};
   border-radius: 0.5rem;
-
+  box-shadow: 0px 0.3rem 0.4rem 0px rgba(41, 41, 42, 0.1);
   h3 {
     font-weight: 500;
     margin-bottom: 0;
@@ -104,7 +104,7 @@ export const FlexCSS = styled.div`
 export const PercentCSS = styled.div`
   background: ${colors.black};
   border-radius: 1rem;
-  padding: 1rem 0.5rem;
+  padding: 0.1rem 0.7rem;
   color: ${colors.white};
 `;
 
