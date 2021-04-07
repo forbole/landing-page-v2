@@ -7,14 +7,6 @@ const { colors } = theme;
 export const BlockCSS = styled.div`
   background-color: ${colors.white};
   border-radius: 0.5rem;
-  .title-container {
-    color: ${colors.black};
-    img {
-      height: 2.5rem;
-      width: 2.5rem;
-      object-fit: cover;
-    }
-  }
 
   h3 {
     font-weight: 500;
@@ -88,6 +80,25 @@ export const BlockCSS = styled.div`
       }
     }
   `}
+`;
+
+export const FlexCSS = styled.div`
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  align-items: center;
+  .title-container {
+    color: ${colors.black};
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    align-items: center;
+    img {
+      height: 2.5rem;
+      width: 2.5rem;
+      object-fit: cover;
+    }
+  }
 `;
 
 export const PercentCSS = styled.div`

@@ -1,6 +1,8 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { mixins, media, theme } from "@styles";
 import { MaxWidthContainerCSS as MaxWidthCSS } from "@styles/components";
+
+const { colors } = theme;
 
 export const CarouselCSS = styled.div`
   display: none;
@@ -18,7 +20,7 @@ export const ArrowCSS = styled.span`
   svg {
     width: 35px;
     path {
-      fill: rgba(0, 0, 0, 0.2);
+      fill: ${colors.offwhite};
     }
   }
 

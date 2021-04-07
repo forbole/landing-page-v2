@@ -3,7 +3,7 @@ import Link from "next/link";
 import classNames from "classnames";
 import { useTranslation } from "i18n";
 import { convertToMoney } from "@utils/convert_to_money";
-import { BlockCSS, PercentCSS, Button } from "./styles";
+import { BlockCSS, FlexCSS, PercentCSS, Button } from "./styles";
 
 const NetworkBlock = (props: any) => {
   // console.log(`network block`, props);
@@ -40,11 +40,11 @@ const NetworkBlock = (props: any) => {
   const formattedAmount = token === "---" ? token : convertToMoney(token);
   return (
     <BlockCSS>
-      <div>
-        <p className={"title-container"}>
+      <FlexCSS>
+        <div className={"title-container"}>
           <img src={`/static/images/icons/${icon}.png`} />
           {t(title)}
-        </p>
+        </div>
         <p className={"token"}>
           {token} {denom}
         </p>
@@ -53,11 +53,13 @@ const NetworkBlock = (props: any) => {
             {usd} {t("usd")}
           </p>
         </div>
-        <p>{percent}%</p>
+        <PercentCSS>
+          <p>{percent}%</p>
+        </PercentCSS>
         <a href={delegate} target="_blank" rel="noreferrer">
           <Button>{t("stakeNow")}</Button>
         </a>
-      </div>
+      </FlexCSS>
     </BlockCSS>
   );
 };
