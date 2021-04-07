@@ -5,7 +5,7 @@ import { theme, media } from "@styles";
 const { colors } = theme;
 
 export const BlockCSS = styled.div`
-  background: ${colors.white};
+  background-color: ${colors.white};
   border-radius: 0.5rem;
   .title-container {
     color: ${colors.black};
@@ -45,6 +45,7 @@ export const BlockCSS = styled.div`
   `}
   ${media.bigDesktop`
     padding: 1rem;
+    margin: 0 1rem;
     height: 100%;
     transition: 0.5s ease;
 
@@ -86,7 +87,6 @@ export const BlockCSS = styled.div`
         line-height: 1.5rem;
       }
     }
-    background: none;
   `}
 `;
 

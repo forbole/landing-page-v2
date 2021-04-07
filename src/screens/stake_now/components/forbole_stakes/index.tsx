@@ -7,6 +7,7 @@ import {
   ChartContainerCSS,
   CarouselDesktopContainerCSS,
   FlexContainerCSS,
+  StakeNowContainerCSS,
 } from "./styles";
 import HubDetail from "./components/hub_detail";
 import CarouselNetworks from "./components/desktop";
@@ -46,14 +47,15 @@ const ForboleStakes = () => {
     { network: vsys, icon: "v-system" },
   ];
   return (
-    <ForboleStakesCSS>
-      <p>{t("tokensStakedWithForbole")}</p>
-      {isNaN(totalUSD) ? (
-        <h1>${" " + "---"}</h1>
-      ) : (
-        <h1>${convertToMoney(totalUSD)}</h1>
-      )}
-      <FlexContainerCSS>
+    <StakeNowContainerCSS>
+      <ForboleStakesCSS>
+        <p>{t("tokensStakedWithForbole")}</p>
+        {isNaN(totalUSD) ? (
+          <h1>${" " + "---"}</h1>
+        ) : (
+          <h1>${convertToMoney(totalUSD)}</h1>
+        )}
+
         {/* <ChartContainerCSS>
           <Chart {...hookProps} />
         </ChartContainerCSS>
@@ -88,12 +90,14 @@ const ForboleStakes = () => {
             token={selectedData[selected]?.network?.otherDelegations.token}
             percent={selectedData[selected]?.network?.otherDelegations.percent}
           /> */}
+      </ForboleStakesCSS>
+      <FlexContainerCSS>
         <CarouselDesktopContainerCSS>
           <CarouselNetworks network={networkData} />
         </CarouselDesktopContainerCSS>
         {/* </StakesDetailsContainerCSS> */}
       </FlexContainerCSS>
-    </ForboleStakesCSS>
+    </StakeNowContainerCSS>
   );
 };
 

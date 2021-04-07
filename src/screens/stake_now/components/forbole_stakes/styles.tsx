@@ -1,10 +1,20 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { mixins, media, theme } from "@styles";
+
+const { colors } = theme;
+
+export const StakeNowContainerCSS = styled.div`
+  ${media.bigDesktop` 
+    min-height: 100vh;
+    background: ${colors.white};
+  `}
+`;
 
 export const ForboleStakesCSS = styled.div`
   ${mixins.mobileHorizontalPadding};
   min-height: 90vh;
-  background-image: url("/static/images/assets/stake-now-bg.svg");
+  background-image: url("/static/images/assets/stake-now-background.png");
+  background-color: rgba(27, 27, 27, 1);
   background-position: center center;
   background-repeat: no-repeat, repeat;
   background-size: cover;
@@ -58,11 +68,14 @@ export const ForboleStakesCSS = styled.div`
     border-color: white;
   }
 
-  ${media.bigDesktop`
-    background-image:  url("/static/images/assets/stake-now-elements.svg"), url("/static/images/assets/stake-now-bg.svg");
-    background-position: center 200px, center center;
+  ${media.bigDesktop` 
+    background-image: url("/static/images/assets/stake-now-background.png");
+    background-color: rgba(27, 27, 27, 1);
+    // background-position: center 200px, center center;
+    background-size: 100%;
     background-repeat: no-repeat;
-    min-height: 100vh;
+    // height: 40vh;
+    min-height: 70vh;
 
     .stats-hr {
       display: none;
@@ -81,6 +94,8 @@ export const FlexContainerCSS = styled.div`
     ${mixins.desktopMaxWidth}
     flex-direction: row;
     justify-content: center;
+    margin: auto;
+    margin-top: -8rem;
   `}
 `;
 

@@ -98,18 +98,15 @@ const CarouselNetworks = ({ network }: any) => {
         >
           {network.map((x, i) => (
             // <NetworkBlock key={i} props={x} />
-            <>
-              {console.log(x.network)}
-              <NetworkBlock
-                key={i}
-                icon={x.icon}
-                denom={x.network?.denom}
-                title={x.network?.title}
-                usd={x.network?.totalMarketValue}
-                token={x.network?.totalToken}
-                percent={x.network?.voting?.percent}
-              />
-            </>
+            <NetworkBlock
+              key={i}
+              icon={x.icon}
+              denom={x.network?.denom}
+              title={x.network?.title}
+              usd={x.network?.totalMarketValue}
+              token={x.network?.totalToken}
+              percent={x.network?.voting?.percent}
+            />
           ))}
         </Carousel>
       </MaxWidthContainerCSS>
