@@ -26,7 +26,8 @@ export const ForboleStakesCSS = styled.div`
   padding-bottom: 5rem;
 
   p {
-    color: white;
+    color: ${colors.white};
+    font-size: 1.5rem;
   }
 
   hr {
@@ -39,11 +40,10 @@ export const ForboleStakesCSS = styled.div`
 
   h1 {
     margin-bottom: 0;
-    font-size: 2.5rem;
+    font-size: 4rem;
     color: white;
     font-weight: 500;
   }
-
   .ui.loader {
     position: relative !important;
     display: inline-block;
