@@ -12,6 +12,12 @@ export const BlockCSS = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0px 0.3rem 0.4rem 0px rgba(41, 41, 42, 0.1);
 
+  .token {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: ${colors.black};
+  }
+
   h3 {
     font-weight: 300;
     margin-bottom: 0;
@@ -20,11 +26,6 @@ export const BlockCSS = styled.div`
   }
   p {
     margin-bottom: 0;
-    &.date {
-      color: ${colors.gray600};
-      font-size: 0.875rem;
-      font-weight: 300;
-    }
   }
   ${media.tablet`
 
@@ -137,13 +138,14 @@ export const FlexCSS = styled.div`
     flex-direction: column;
     align-items: center;
     img {
-      height: 2.5rem;
-      width: 2.5rem;
+      height: 3rem;
+      width: 3rem;
       object-fit: cover;
     }
   }
   .usd {
     color: ${colors.black};
+    padding-bottom: 0.5rem;
   }
 `;
 
@@ -157,7 +159,5 @@ export const PercentCSS = styled.div`
 export const Button = styled(SemanticButton)`
   &.ui.button {
     display: none;
-    &:hover {
-    }
   }
 `;

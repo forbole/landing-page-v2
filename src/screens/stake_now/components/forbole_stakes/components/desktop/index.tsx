@@ -6,6 +6,7 @@ import {
   CarouselArrowCSS,
   MaxWidthContainerCSS,
 } from "./styles";
+import useWindowSize from "@utils/get_screen_size";
 import { useForboleStakesHook } from "../../hooks";
 import { INetworkDataProps } from "../../interfaces";
 import NetworkBlock from "../carousel_item/network_block";
@@ -59,6 +60,32 @@ const CarouselNetworks = ({ network }: any) => {
   //   { network: vsys, icon: "v-system" },
   // ];
   // console.log(`hiiiiiiiiiii`, selectedData);
+  const { width } = useWindowSize();
+  const responsive: any = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      partialVisibilityGutter: 40,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
+      // slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      // slidesToSlide: 1 // optional, default to 1.
+    },
+  };
+
+  const extraProps = {};
+
+  if (width >= responsive.tablet.breakpoint.max) {
+    extraProps["customButtonGroup"] = <ButtonGroup />;
+    // extraProps["dotListClass"] = "react-multi-carousel-dot-list";
+  }
+  console.log(width, responsive.tablet.breakpoint.max, extraProps);
   return (
     <CarouselCSS>
       <MaxWidthContainerCSS>
@@ -66,12 +93,11 @@ const CarouselNetworks = ({ network }: any) => {
           additionalTransfrom={0}
           arrows
           autoPlaySpeed={3000}
-          centerMode={false}
+          centerMode={width <= responsive.tablet.breakpoint.max ? true : false}
           className=""
           containerClass="container"
           customLeftArrow={<></>}
           customRightArrow={<></>}
-          dotListClass=""
           draggable
           focusOnSelect={false}
           infinite
@@ -79,22 +105,14 @@ const CarouselNetworks = ({ network }: any) => {
           keyBoardControl
           minimumTouchDrag={80}
           renderButtonGroupOutside={true}
-          customButtonGroup={<ButtonGroup />}
+          // customButtonGroup={<ButtonGroup />}
           renderDotsOutside={false}
-          responsive={{
-            desktop: {
-              breakpoint: {
-                max: 3000,
-                min: 1024,
-              },
-              items: 3,
-              partialVisibilityGutter: 40,
-            },
-          }}
-          showDots={false}
+          responsive={responsive}
+          showDots={width <= responsive.tablet.breakpoint.max ? true : false}
           sliderClass=""
           slidesToSlide={3}
           swipeable
+          {...extraProps}
         >
           {network.map((x, i) => (
             // <NetworkBlock key={i} props={x} />

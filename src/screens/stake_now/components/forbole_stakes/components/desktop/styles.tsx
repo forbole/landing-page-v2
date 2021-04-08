@@ -5,7 +5,7 @@ import { MaxWidthContainerCSS as MaxWidthCSS } from "@styles/components";
 const { colors } = theme;
 
 export const CarouselCSS = styled.div`
-  display: none;
+  // display: none;
   ${media.bigDesktop`
    ${mixins.desktopLastContainerPadding}
    display: flex;
@@ -48,10 +48,26 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   display: flex;
   justify-content: center;
   .react-multi-carousel-list {
+    width: 100%;
+    height: 300px;
+    .react-multi-carousel-track {
+      align-items: center;
+    }
+  }
+  .react-multi-carousel-dot button {
+    background: rgba(189, 8, 28, 0.3);
+    border-color: transparent;
+  }
+  .react-multi-carousel-dot--active button {
+    background: rgba(189, 8, 28, 1);
+  }
+  ${media.bigDesktop`
+  .react-multi-carousel-list {
     width: 90%;
     height: 410px;
     .react-multi-carousel-track {
       align-items: center;
     }
   }
+`}
 `;
