@@ -54,6 +54,7 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
       align-items: center;
     }
   }
+  // react-multi-carousel-item--active
   .react-multi-carousel-dot button {
     background: rgba(189, 8, 28, 0.3);
     border-color: transparent;
