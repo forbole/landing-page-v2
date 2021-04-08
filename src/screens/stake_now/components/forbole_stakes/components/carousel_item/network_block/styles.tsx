@@ -38,7 +38,6 @@ export const BlockCSS = styled.div`
     &:hover {
       box-shadow: 0px 8px 13px 3px rgba(214, 214, 214, 0.45);
       cursor: pointer;
-      height: 360px;
       .button-container .ui.button {
         display: block;
         display: flex;
@@ -53,6 +52,7 @@ export const BlockCSS = styled.div`
         align-items: center;
         justify-content: center;
       }
+
       @keyframes buttonContainerHover {
         20% {
           margin-left: -1rem;
@@ -70,14 +70,22 @@ export const BlockCSS = styled.div`
         20% {
           padding-bottom: calc(0.5rem + 0.6875em);
           padding-top: calc(0.5rem + 0.6875em);
-          // border-radius: 0 0 5px 5px;
         }
         100% {
           padding-top: calc(0.5rem + 0.6875em);
           padding-bottom: calc(0.5rem + 0.6875em);
-          // border-radius: 0 0 5px 5px;
         }
       }
+
+      @keyframes uiBlockHover {
+        20% {
+          height: 360px;
+        }
+        100% {
+          height: 360px;
+        }
+      }
+
       .button-container {
         animation: buttonContainerHover 1.5s;
         -webkit-animation-fill-mode: forwards;
@@ -94,7 +102,11 @@ export const BlockCSS = styled.div`
           }
         }
       }
+      animation: uiBlockHover 1.5s;
+      -webkit-animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
     }
+
     a {
       display: flex;
       flex-direction: column;

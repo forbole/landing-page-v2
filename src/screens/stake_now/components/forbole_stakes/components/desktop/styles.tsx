@@ -38,7 +38,7 @@ export const CarouselArrowCSS = styled.div`
   width: 100%;
   position: absolute;
   top: 50%;
-  :hover {
+  &:hover {
     cursor: pointer;
   }
 `;
