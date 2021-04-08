@@ -85,7 +85,6 @@ const CarouselNetworks = ({ network }: any) => {
     extraProps["customButtonGroup"] = <ButtonGroup />;
     // extraProps["dotListClass"] = "react-multi-carousel-dot-list";
   }
-  console.log(width, responsive.tablet.breakpoint.max, extraProps);
   return (
     <CarouselCSS>
       <MaxWidthContainerCSS>
