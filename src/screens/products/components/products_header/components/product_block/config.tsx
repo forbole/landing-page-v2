@@ -8,7 +8,7 @@ export const productsData = [
   },
   {
     icon: "/static/images/icons/forbole-portal.svg",
-    name: "Forbole Portal",
+    name: "Forbole X",
     description:
       "Forbole Portal provides a secured and easy way to manage crypto assets.",
   },
