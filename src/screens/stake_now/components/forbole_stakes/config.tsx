@@ -1,6 +1,6 @@
 export const cosmosData = [
   {
-    title: "Cosmos",
+    title: "Cosmos Hub",
     name: "cosmos",
     network: "cosmos",
     denom: "ATOM",

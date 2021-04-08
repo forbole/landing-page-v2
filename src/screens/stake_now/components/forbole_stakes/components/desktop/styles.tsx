@@ -49,5 +49,6 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   justify-content: center;
   .react-multi-carousel-list {
     width: 90%;
+    height: 380px;
   }
 `;

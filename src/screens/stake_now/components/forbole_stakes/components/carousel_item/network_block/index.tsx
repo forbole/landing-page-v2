@@ -39,28 +39,28 @@ const NetworkBlock = (props: any) => {
 
   const formattedAmount = token === "---" ? token : convertToMoney(token);
   return (
-    <BlockCSS>
-      <FlexCSS>
-        <div className={"title-container"}>
-          <img src={`/static/images/icons/${icon}.png`} />
-          {t(title)}
-        </div>
-        <p className={"token"}>
-          {token} {denom}
-        </p>
-        <div className="main-only-content">
+    <a href={delegate} target="_blank" rel="noreferrer">
+      <BlockCSS>
+        <FlexCSS>
+          <div className={"title-container"}>
+            <img src={`/static/images/icons/${icon}.png`} />
+            <h3>{t(title)}</h3>
+          </div>
+          <p className={"token"}>
+            {token} {denom}
+          </p>
           <p className="usd">
             {usd} {t("usd")}
           </p>
-        </div>
-        <PercentCSS>
-          <p>{percent}%</p>
-        </PercentCSS>
-        <a href={delegate} target="_blank" rel="noreferrer">
-          <Button>{t("stakeNow")}</Button>
-        </a>
-      </FlexCSS>
-    </BlockCSS>
+          <PercentCSS>
+            <p>{percent}%</p>
+          </PercentCSS>
+          <div className="button-container">
+            <Button>{t("stakeNow")}</Button>
+          </div>
+        </FlexCSS>
+      </BlockCSS>
+    </a>
   );
 };
 

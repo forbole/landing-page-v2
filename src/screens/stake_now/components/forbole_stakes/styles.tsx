@@ -94,7 +94,7 @@ export const FlexContainerCSS = styled.div`
     flex-direction: row;
     justify-content: center;
     margin: auto;
-    margin-top: -11rem;
+    margin-top: -15rem;
   `}
 `;
 
