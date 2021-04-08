@@ -12,8 +12,8 @@ export const BlockCSS = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0px 0.3rem 0.4rem 0px rgba(41, 41, 42, 0.1);
 
-  a > h3 {
-    font-weight: 400;
+  h3 {
+    font-weight: 300;
     margin-bottom: 0;
     padding: 0.5rem 0;
     font-size: 1.25rem;
@@ -32,12 +32,13 @@ export const BlockCSS = styled.div`
   ${media.bigDesktop`
     padding: 1rem;
     margin: 0 1rem;
-    height: 361px;
+    height: 340px;
     transition: 0.5s ease;
 
     &:hover {
       box-shadow: 0px 8px 13px 3px rgba(214, 214, 214, 0.45);
       cursor: pointer;
+      height: 360px;
       .button-container .ui.button {
         display: block;
         display: flex;
@@ -80,6 +81,7 @@ export const BlockCSS = styled.div`
       .button-container {
         animation: buttonContainerHover 1.5s;
         -webkit-animation-fill-mode: forwards;
+        padding-top: 3.5rem;
         .ui.button {
           &:hover {
           animation: uiButtonHover 1.5s;
@@ -101,33 +103,12 @@ export const BlockCSS = styled.div`
 
     .token {
       font-size: 1.5rem;
-      font-weight: 500;
+      font-weight: 400;
       color: ${colors.black};
     }
 
     img {
       border-radius: 0.1rem;
-    }
-    .content {
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin: -3rem 1rem;
-      border-radius: 0.3rem;
-      -webkit-filter: drop-shadow(1rem 1rem 1rem rgba(0, 0, 0, 0.2));
-      filter: drop-shadow(0rem 0rem 0.5rem rgba(0, 0, 0, 0.2));
-      transition: 0.3s ease;
-      min-height: 245px;
-
-      h3 {
-        margin-bottom: 0.5rem;
-      }
-      p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-      }
     }
   `}
 `;
@@ -148,6 +129,9 @@ export const FlexCSS = styled.div`
       width: 2.5rem;
       object-fit: cover;
     }
+  }
+  .usd {
+    color: ${colors.black};
   }
 `;
 
