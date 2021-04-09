@@ -12,6 +12,21 @@ export const BlockCSS = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0px 0.3rem 0.4rem 0px rgba(41, 41, 42, 0.1);
 
+  .button-container .ui.button {
+    display: block;
+    display: flex;
+    width: 17rem;
+    height: 2.125rem;
+    font-weight: 300;
+    background: ${colors.black};
+    color: ${colors.white};
+    margin-right: 0;
+    padding: 0.6875em 0.46em 0.6875em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .token {
     font-size: 1.25rem;
     font-weight: 400;
@@ -35,6 +50,10 @@ export const BlockCSS = styled.div`
     margin: 0 1rem;
     height: 340px;
     transition: 0.5s ease;
+
+    .button-container .ui.button {
+      display: none;
+    }
 
     &:hover {
       box-shadow: 0px 8px 13px 3px rgba(214, 214, 214, 0.45);
@@ -157,7 +176,9 @@ export const PercentCSS = styled.div`
 `;
 
 export const Button = styled(SemanticButton)`
-  &.ui.button {
-    display: none;
-  }
+  ${media.bigDesktop`
+    &.ui.button {
+      display: none;
+    }
+`}
 `;
