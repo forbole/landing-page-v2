@@ -5,6 +5,7 @@ import { theme, media } from "@styles";
 const { colors } = theme;
 
 export const BlockCSS = styled.div`
+  margin: 0 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
