@@ -45,6 +45,7 @@ export const CarouselArrowCSS = styled.div`
 
 export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   .react-multi-carousel-list {
@@ -54,7 +55,9 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
       align-items: center;
     }
   }
-  // react-multi-carousel-item--active
+  .react-multi-carousel-item--active {
+    width: 200px !important;
+  }
   .react-multi-carousel-dot button {
     background: rgba(189, 8, 28, 0.3);
     border-color: transparent;
@@ -69,6 +72,9 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
     .react-multi-carousel-track {
       align-items: center;
     }
+  }
+  .react-multi-carousel-item--active {
+    width: 345px !important;
   }
 `}
 `;

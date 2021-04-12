@@ -14,6 +14,7 @@ import { Next } from "@icons";
 import { networkFunctions } from "@src/screens/stake_now/utils";
 
 const ButtonGroup = (props: any) => {
+  console.log(`props`, props);
   const { next, previous } = props;
 
   return (
@@ -71,11 +72,13 @@ const CarouselNetworks = ({ network }: any) => {
       breakpoint: { max: 1024, min: 464 },
       items: 1,
       // slidesToSlide: 2 // optional, default to 1.
+      partialVisibilityGutter: 40,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
       // slidesToSlide: 1 // optional, default to 1.
+      partialVisibilityGutter: 10,
     },
   };
 
@@ -115,15 +118,19 @@ const CarouselNetworks = ({ network }: any) => {
         >
           {network.map((x, i) => (
             // <NetworkBlock key={i} props={x} />
-            <NetworkBlock
-              key={i}
-              icon={x.icon}
-              denom={x.network?.denom}
-              title={x.network?.title}
-              usd={x.network?.totalMarketValue}
-              token={x.network?.totalToken}
-              percent={x.network?.voting?.percent}
-            />
+            <>
+              <NetworkBlock
+                key={i}
+                icon={x.icon}
+                denom={x.network?.denom}
+                title={x.network?.title}
+                usd={x.network?.totalMarketValue}
+                token={x.network?.totalToken}
+                percent={x.network?.voting?.percent}
+                itemClass
+                active={true}
+              />
+            </>
           ))}
         </Carousel>
       </MaxWidthContainerCSS>

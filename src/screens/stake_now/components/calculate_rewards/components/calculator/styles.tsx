@@ -20,13 +20,16 @@ export const Input = styled(SemenaticInput)`
       font-weight: 300;
       transition: 0.2s;
       padding: 0.5rem 1.2rem;
-      min-width: 120px;
+      min-width: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
       &:hover {
         background: black;
       }
+    }
+    > input {
+      width: 150px;
     }
   }
 `;
