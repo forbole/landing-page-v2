@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import classNames from "classnames";
 import { useTranslation } from "i18n";
@@ -6,8 +6,8 @@ import { convertToMoney } from "@utils/convert_to_money";
 import { BlockCSS, FlexCSS, PercentCSS, Button } from "./styles";
 
 const NetworkBlock = (props: any) => {
-  // console.log(`network block`, props);
   const {
+    active,
     title = "",
     icon = "",
     token,
@@ -40,7 +40,7 @@ const NetworkBlock = (props: any) => {
   const formattedAmount = token === "---" ? token : convertToMoney(token);
   return (
     <a href={delegate} target="_blank" rel="noreferrer">
-      <BlockCSS>
+      <BlockCSS className={classNames({ active: active })}>
         <FlexCSS>
           <div className={"title-container"}>
             <img src={`/static/images/icons/${icon}.png`} />

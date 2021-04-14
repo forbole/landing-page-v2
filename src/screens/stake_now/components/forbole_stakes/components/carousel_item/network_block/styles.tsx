@@ -13,7 +13,9 @@ export const BlockCSS = styled.div`
   border-radius: 0.5rem;
   box-shadow: 0px 0.3rem 0.4rem 0px rgba(41, 41, 42, 0.1);
 
-  // height: 256px !important;
+  &.active {
+    height: 256px !important;
+  }
 
   .button-container .ui.button {
     display: block;
