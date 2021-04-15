@@ -5,7 +5,8 @@ import { theme, media } from "@styles";
 const { colors } = theme;
 
 export const BlockCSS = styled.div`
-  margin: 0 0.5rem;
+  // margin: 0 0.5rem;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,13 +15,17 @@ export const BlockCSS = styled.div`
   box-shadow: 0px 0.3rem 0.4rem 0px rgba(41, 41, 42, 0.1);
 
   &.active {
-    height: 256px !important;
+    height: 270px !important;
+    // width: 200px !important;
+    // padding: 1.5rem;
   }
-
+  .button-container {
+    padding-top: 0.3rem;
+  }
   .button-container .ui.button {
     display: block;
     display: flex;
-    width: 19rem;
+    width: 8rem;
     height: 2.125rem;
     font-weight: 300;
     background: ${colors.black};
@@ -58,6 +63,11 @@ export const BlockCSS = styled.div`
 
     .button-container .ui.button {
       display: none;
+    }
+
+    &.active {
+      height: 345px !important;
+      // width: inherit !important;
     }
 
     &:hover {

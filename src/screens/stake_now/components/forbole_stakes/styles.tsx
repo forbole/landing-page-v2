@@ -22,7 +22,7 @@ export const ForboleStakesCSS = styled.div`
   align-items: center;
   justify-content: inherit;
   flex-direction: column;
-  padding-top: 8rem;
+  padding-top: 6rem;
   padding-bottom: 5rem;
 
   p {

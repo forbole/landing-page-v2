@@ -45,18 +45,22 @@ export const CarouselArrowCSS = styled.div`
 
 export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   position: relative;
+  top: -5rem;
   width: 100%;
   display: flex;
   justify-content: center;
+  .carouselItem {
+    padding: 0 0.5rem;
+  }
+  .react-multi-carousel-dot-list {
+    margin-bottom: -1rem;
+  }
   .react-multi-carousel-list {
     width: 100%;
     height: 300px;
     .react-multi-carousel-track {
       align-items: center;
     }
-  }
-  .react-multi-carousel-item--active {
-    width: 200px !important;
   }
   .react-multi-carousel-dot button {
     background: rgba(189, 8, 28, 0.3);

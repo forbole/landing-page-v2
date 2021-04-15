@@ -62,6 +62,7 @@ const CarouselNetworks = ({ network }: any) => {
   // ];
   // console.log(`hiiiiiiiiiii`, selectedData);
   const { width } = useWindowSize();
+  console.log(width);
   const responsive: any = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -114,14 +115,15 @@ const CarouselNetworks = ({ network }: any) => {
           draggable
           focusOnSelect={false}
           infinite
-          itemClass=""
+          itemClass="carouselItem"
           keyBoardControl
           minimumTouchDrag={80}
           renderButtonGroupOutside={true}
           // customButtonGroup={<ButtonGroup />}
-          renderDotsOutside={false}
+          renderDotsOutside={true}
           responsive={responsive}
           showDots={width <= responsive.tablet.breakpoint.max ? true : false}
+          // renderDotsOutside={true}
           sliderClass=""
           slidesToSlide={3}
           swipeable
