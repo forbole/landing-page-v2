@@ -5,7 +5,6 @@ import { MaxWidthContainerCSS as MaxWidthCSS } from "@styles/components";
 const { colors } = theme;
 
 export const CarouselCSS = styled.div`
-  // display: none;
   ${media.bigDesktop`
    ${mixins.desktopLastContainerPadding}
    display: flex;
@@ -50,7 +49,12 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   display: flex;
   justify-content: center;
   .carouselItem {
-    padding: 0 0.5rem;
+    padding: 0 0.8rem;
+    flex: 1 1 11% !important;
+  }
+  .react-multi-carousel-item--active {
+    padding: 0;
+    flex: 1 1 13% !important;
   }
   .react-multi-carousel-dot-list {
     margin-bottom: -1rem;
@@ -60,6 +64,7 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
     height: 300px;
     .react-multi-carousel-track {
       align-items: center;
+      justify-content: center;
     }
   }
   .react-multi-carousel-dot button {
@@ -69,16 +74,28 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   .react-multi-carousel-dot--active button {
     background: rgba(189, 8, 28, 1);
   }
-  ${media.bigDesktop`
-  .react-multi-carousel-list {
-    width: 90%;
-    height: 410px;
-    .react-multi-carousel-track {
-      align-items: center;
+  ${media.tablet`
+    top: -8rem;
+    .react-multi-carousel-list {
+      height: 400px;
     }
-  }
-  .react-multi-carousel-item--active {
-    width: 345px !important;
-  }
-`}
+  `}
+  ${media.bigDesktop`
+    top: 1.2rem;
+    .react-multi-carousel-list {
+      width: 90%;
+      height: 410px;
+      justify-content: space-between;
+      .react-multi-carousel-track {
+        align-items: center;
+      }
+    }
+    .carouselItem {
+      flex: 1 1 auto !important;
+    }
+    .react-multi-carousel-item--active {
+      width: 345px !important;
+      flex: 1 1 auto !important;
+    }
+  `}
 `;

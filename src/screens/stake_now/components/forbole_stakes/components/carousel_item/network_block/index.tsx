@@ -15,25 +15,6 @@ const NetworkBlock = (props: any) => {
     usd,
     denom,
     delegate = process.env.NEXT_PUBLIC_URL,
-    // icon = "",
-    // network = {
-    //   currentMarketValue: "---",
-    //   denom: "LIKE",
-    //   otherDelegations: {
-    //     title: "otherDelegations",
-    //     token: "---",
-    //     percent: "---",
-    //   },
-    //   selfDelegations: {
-    //     title: "selfDelegations",
-    //     token: "---",
-    //     percent: "---",
-    //   },
-    //   title: "Likecoin",
-    //   totalMarketValue: "---",
-    //   totalToken: "---",
-    //   voting: {},
-    // },
   } = props;
   const { t } = useTranslation("stake_now");
 

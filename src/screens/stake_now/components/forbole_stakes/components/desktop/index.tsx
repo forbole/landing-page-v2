@@ -30,47 +30,15 @@ const ButtonGroup = (props: any) => {
 };
 
 const CarouselNetworks = ({ network }: any) => {
-  // const networks = props;
-  // const networkData = { props };
-  // console.log(`props`, typeof networkData);
-  // const {
-  //   cosmos,
-  //   terra,
-  //   kava,
-  //   likecoin,
-  //   iov,
-  //   band,
-  //   akash,
-  //   emoney,
-  //   iris,
-  //   vsys,
-  //   totalUSD,
-  //   selected,
-  // }: // isLoading,
-  // any = props;
-  // const selectedData: INetworkDataProps[] = [
-  //   { network: cosmos, icon: "cosmos-hub" },
-  //   { network: terra, icon: "terra" },
-  //   { network: kava, icon: "kava" },
-  //   { network: likecoin, icon: "likecoin" },
-  //   { network: iov, icon: "iov" },
-  //   { network: band, icon: "band-protocol" },
-  //   { network: akash, icon: "akash" },
-  //   { network: emoney, icon: "e-money" },
-  //   { network: iris, icon: "iris" },
-  //   { network: vsys, icon: "v-system" },
-  // ];
-  // console.log(`hiiiiiiiiiii`, selectedData);
   const { width } = useWindowSize();
-  console.log(width);
   const responsive: any = {
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 3000, min: 1100 },
       items: 3,
       // partialVisibilityGutter: 40,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1100, min: 464 },
       items: 1,
       // slidesToSlide: 2 // optional, default to 1.
       // partialVisibilityGutter: 40,

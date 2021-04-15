@@ -69,7 +69,8 @@ export const ForboleStakesCSS = styled.div`
   }
 
   ${media.bigDesktop`
-    min-height: 90vh;
+    padding-top: 12rem;
+    min-height: 70vh;
     background-image: url("/static/images/assets/stake-now-background.png");
     background-color: rgba(27, 27, 27, 1);
     background-position: 50% 50%;

@@ -6,6 +6,7 @@ const { colors } = theme;
 
 export const BlockCSS = styled.div`
   // margin: 0 0.5rem;
+  height: 240px;
   padding: 0.5rem;
   display: flex;
   align-items: center;
@@ -38,7 +39,7 @@ export const BlockCSS = styled.div`
   }
 
   .token {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: ${colors.black};
   }
@@ -53,7 +54,16 @@ export const BlockCSS = styled.div`
     margin-bottom: 0;
   }
   ${media.tablet`
-
+    height: 300px;
+    &.active {
+      height: 370px !important;
+    }
+    .token {
+      font-size: 1.5rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
   `}
   ${media.bigDesktop`
     padding: 1rem;
