@@ -40,13 +40,13 @@ const CarouselNetworks = ({ network }: any) => {
     tablet: {
       breakpoint: { max: 1100, min: 464 },
       items: 1,
-      // slidesToSlide: 2 // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
       // partialVisibilityGutter: 40,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
-      // slidesToSlide: 1 // optional, default to 1.
+      slidesToSlide: 1, // optional, default to 1.
       // partialVisibilityGutter: 10,
     },
   };
@@ -61,11 +61,7 @@ const CarouselNetworks = ({ network }: any) => {
   const [activeItem, setActiveItem] = useState(0);
 
   const active = (x) => {
-    if (x > network.length) {
-      setActiveItem(0);
-    } else {
-      setActiveItem(x);
-    }
+    setActiveItem(x);
   };
 
   return (
@@ -96,11 +92,11 @@ const CarouselNetworks = ({ network }: any) => {
           slidesToSlide={3}
           swipeable
           beforeChange={(nextSlide, { currentSlide }) => {
-            active(currentSlide + 1);
+            active(nextSlide - 2);
           }}
           {...extraProps}
         >
-          {network.map((x, i, networks) => (
+          {network.map((x, i) => (
             <NetworkBlock
               key={i}
               icon={x.icon}
@@ -109,7 +105,7 @@ const CarouselNetworks = ({ network }: any) => {
               usd={x.network?.totalMarketValue}
               token={x.network?.totalToken}
               percent={x.network?.voting?.percent}
-              active={x == networks[activeItem] ? true : false}
+              active={i == activeItem ? true : false}
             />
           ))}
         </Carousel>
