@@ -39,15 +39,15 @@ const Networks = (props: INetworkProps) => {
   };
   const handleOnChange = (event, data) => {
     event.persist();
-    //console.log(`hi`, event.target.innerText, data.value[1].text);
+    console.log(`hi`, data);
     for (let i = 0; i < networkData.length; i++) {
-      console.log(data.value[i]);
+      console.log(`data`, data);
       if (
-        data.value[i].hasOwnProperty("text") &&
-        event.target.innerText == data.value[i].text
+        data.options[i].hasOwnProperty("text") &&
+        event.target.innerText == data.options[i].text
       ) {
-        setSelectedOption(data.value[i].key);
-        setSelectedToken(data.value[i].key);
+        setSelectedOption(data.options[i]);
+        setSelectedToken(data.options[i].key);
       }
     }
 
@@ -66,7 +66,7 @@ const Networks = (props: INetworkProps) => {
         placeholder="Select Network"
         //value={networkData}
         fluid
-        multiple
+        //multiple
         selection
         options={networkData}
         onChange={handleOnChange}
