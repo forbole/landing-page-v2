@@ -46,7 +46,7 @@ const Networks = (props: INetworkProps) => {
         data.options[i].hasOwnProperty("text") &&
         event.target.innerText == data.options[i].text
       ) {
-        setSelectedOption(data.options[i]);
+        setSelectedOption(data.options[i].key);
         setSelectedToken(data.options[i].key);
       }
     }
