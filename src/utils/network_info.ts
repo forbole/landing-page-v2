@@ -8,7 +8,10 @@ const logos = {
   cosmos: {
     image: "/static/images/icons/cosmos-hub.png",
     name: "Cosmos Hub",
+    text: "Cosmos Hub - ATOM",
     key: "cosmos",
+    value: "cosmos",
+    denom: "ATOM",
     bigDipper: "https://cosmos.bigdipper.live/",
     delegate:
       "https://cosmos.bigdipper.live/validators/cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj/delegate",
@@ -24,7 +27,9 @@ const logos = {
   iris: {
     image: "/static/images/icons/iris.png",
     name: "IRIS Hub",
+    text: "IRIS Hub - IRIS",
     key: "iris",
+    denom: "IRIS",
     bigDipper: "https://iris.bigdipper.live/",
     delegate:
       "https://iris.bigdipper.live/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegate",
@@ -40,7 +45,9 @@ const logos = {
   ["terra-money"]: {
     image: "/static/images/icons/terra.png",
     name: "Terra Money",
+    text: "Terra Money - LUNA",
     key: "terra-money",
+    denom: "LUNA",
     delegate:
       "https://app.lunie.io/terra/validators/terravaloper1jkqr2vfg4krfd4zwmsf7elfj07cjuzss30ux8g",
     heightSocket: "wss://ws.terra.forbole.com",
@@ -55,7 +62,9 @@ const logos = {
   kava: {
     image: "/static/images/icons/kava.png",
     name: "Kava",
+    text: "Kava - KAVA",
     key: "kava",
+    denom: "KAVA",
     bigDipper: "https://kava.bigdipper.live/",
     delegate:
       "https://kava.bigdipper.live/validators/kavavaloper14kn0kk33szpwus9nh8n87fjel8djx0y02c7me3/delegate",
@@ -77,7 +86,9 @@ const logos = {
   likecoin: {
     image: "/static/images/icons/likecoin.png",
     name: "LikeCoin",
+    text: "LikeCoin - LIKE",
     key: "likecoin",
+    denom: "LIKE",
     bigDipper: "http://likecoin.bigdipper.live/",
     delegate:
       "https://likecoin.bigdipper.live/validator/cosmosvaloper1v8njts96gl5eqstnen4gksdy5k860fau65c3sw/delegate",
@@ -126,7 +137,9 @@ const logos = {
   iov: {
     image: "/static/images/icons/iov.png",
     name: "Iov",
+    text: "Iov - IOV",
     key: "iov",
+    denom: "IOV",
     delegate:
       "https://big-dipper.iov-mainnet-2.iov.one/validator/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0/delegate",
     heightSocket: "wss://ws.iov.forbole.com",
@@ -146,7 +159,9 @@ const logos = {
   akash: {
     image: "/static/images/icons/akash.png",
     name: "Akash",
+    text: "Akash - AKT",
     key: "akash",
+    denom: "AKT",
     delegate:
       "https://akash.bigdipper.live/validator/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073/delegate",
     heightSocket: "wss://ws.akash.forbole.com",
@@ -166,7 +181,9 @@ const logos = {
   ["band-protocol"]: {
     image: "/static/images/icons/band-protocol.png",
     name: "Band Protocol",
+    text: "Band Protocol - BAND",
     key: "band-protocol",
+    denom: "BAND",
     heightSocket: "wss://ws.band.forbole.com",
     delegate:
       "https://band.bigdipper.live/validator/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z/delegate",
