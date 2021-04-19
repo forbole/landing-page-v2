@@ -37,7 +37,7 @@ const image = (image = "/static/images/icons/cosmos-hub.png") => ({
     //borderRadius: 10,
     content: '" "',
     display: "block",
-    //marginRight: 8,
+    marginRight: 8,
     height: 30,
     width: 30,
     backgroundSize: "contain",
@@ -47,30 +47,23 @@ const image = (image = "/static/images/icons/cosmos-hub.png") => ({
 const imageStyles = {
   control: (styles) => ({ ...styles, background: "white" }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
-    const image = data.image;
-    console.log(data.image, image);
+    const color = "rgba(189, 8, 28, 1)";
     return {
       ...styles,
-      background: isDisabled
-        ? `url(${image})`
+      backgroundColor: isDisabled
+        ? null
         : isSelected
-        ? data.image
+        ? color
         : isFocused
-        ? "/static/images/icons/cosmos-hub.png"
+        ? "rgba(152, 152, 152, 1)"
         : null,
-      content: '" "',
-      display: "block",
-      // //marginRight: 8,
-      // height: 30,
-      // width: 30,
-      // backgroundSize: "contain",
-      // color: isDisabled
-      //   ? "#ccc"
-      //   : isSelected
-      //   ? chroma.contrast(color, "white") > 2
-      //     ? "white"
-      //     : "black"
-      //   : data.color,
+      color: isDisabled
+        ? "#ccc"
+        : isSelected
+        ? color
+          ? "white"
+          : "black"
+        : color,
       cursor: isDisabled ? "not-allowed" : "default",
 
       ":active": {
@@ -78,6 +71,16 @@ const imageStyles = {
         background:
           !isDisabled &&
           (isSelected ? data.image : "/static/images/icons/cosmos-hub.png"),
+      },
+      ":before": {
+        background: `url(${data.image})`,
+        //borderRadius: 10,
+        content: '" "',
+        display: "block",
+        //marginRight: 8,
+        height: 30,
+        width: 30,
+        backgroundSize: "contain",
       },
     };
   },
@@ -90,7 +93,7 @@ const Networks = (props: INetworkProps) => {
   const { t } = useTranslation("stake_now");
   const { selectedToken, setSelectedToken } = props;
   const networkData = calculatorKeys.map((x) => getNetworkInfo(x));
-  const [selectedOption, setSelectedOption] = useState(networkData[0]);
+  const [selectedOption, setSelectedOption] = useState(null);
 
   const handleOnChange = (data) => {
     for (let i = 0; i < networkData.length; i++) {
