@@ -8,7 +8,7 @@ const logos = {
   cosmos: {
     image: "/static/images/icons/cosmos-hub.png",
     name: "Cosmos Hub",
-    text: "Cosmos Hub - ATOM",
+    label: "Cosmos Hub - ATOM",
     key: "cosmos",
     value: "cosmos",
     denom: "ATOM",
@@ -27,7 +27,7 @@ const logos = {
   iris: {
     image: "/static/images/icons/iris.png",
     name: "IRIS Hub",
-    text: "IRIS Hub - IRIS",
+    label: "IRIS Hub - IRIS",
     key: "iris",
     denom: "IRIS",
     bigDipper: "https://iris.bigdipper.live/",
@@ -45,7 +45,7 @@ const logos = {
   ["terra-money"]: {
     image: "/static/images/icons/terra.png",
     name: "Terra Money",
-    text: "Terra Money - LUNA",
+    label: "Terra Money - LUNA",
     key: "terra-money",
     denom: "LUNA",
     delegate:
@@ -62,7 +62,7 @@ const logos = {
   kava: {
     image: "/static/images/icons/kava.png",
     name: "Kava",
-    text: "Kava - KAVA",
+    label: "Kava - KAVA",
     key: "kava",
     denom: "KAVA",
     bigDipper: "https://kava.bigdipper.live/",
@@ -86,7 +86,7 @@ const logos = {
   likecoin: {
     image: "/static/images/icons/likecoin.png",
     name: "LikeCoin",
-    text: "LikeCoin - LIKE",
+    label: "LikeCoin - LIKE",
     key: "likecoin",
     denom: "LIKE",
     bigDipper: "http://likecoin.bigdipper.live/",
@@ -137,7 +137,7 @@ const logos = {
   iov: {
     image: "/static/images/icons/iov.png",
     name: "Iov",
-    text: "Iov - IOV",
+    label: "Iov - IOV",
     key: "iov",
     denom: "IOV",
     delegate:
@@ -159,7 +159,7 @@ const logos = {
   akash: {
     image: "/static/images/icons/akash.png",
     name: "Akash",
-    text: "Akash - AKT",
+    label: "Akash - AKT",
     key: "akash",
     denom: "AKT",
     delegate:
@@ -181,7 +181,7 @@ const logos = {
   ["band-protocol"]: {
     image: "/static/images/icons/band-protocol.png",
     name: "Band Protocol",
-    text: "Band Protocol - BAND",
+    label: "Band Protocol - BAND",
     key: "band-protocol",
     denom: "BAND",
     heightSocket: "wss://ws.band.forbole.com",

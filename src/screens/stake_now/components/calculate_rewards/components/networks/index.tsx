@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
 import { Dropdown } from "semantic-ui-react";
+import Select from "react-select";
 import { useTranslation } from "i18n";
 import { getNetworkInfo } from "@src/utils/network_info";
 import { calculatorKeys } from "./config";
@@ -27,56 +28,107 @@ import { ParagraphTitleCSS } from "../../styles";
 //   );
 // };
 
+const image = (image = "/static/images/icons/cosmos-hub.png") => ({
+  alignItems: "center",
+  display: "flex",
+
+  ":before": {
+    background: `url(${image})`,
+    //borderRadius: 10,
+    content: '" "',
+    display: "block",
+    //marginRight: 8,
+    height: 30,
+    width: 30,
+    backgroundSize: "contain",
+  },
+});
+
+const imageStyles = {
+  control: (styles) => ({ ...styles, background: "white" }),
+  option: (styles, { data, isDisabled, isFocused, isSelected }) => {
+    const image = data.image;
+    console.log(data.image, image);
+    return {
+      ...styles,
+      background: isDisabled
+        ? `url(${image})`
+        : isSelected
+        ? data.image
+        : isFocused
+        ? "/static/images/icons/cosmos-hub.png"
+        : null,
+      content: '" "',
+      display: "block",
+      // //marginRight: 8,
+      // height: 30,
+      // width: 30,
+      // backgroundSize: "contain",
+      // color: isDisabled
+      //   ? "#ccc"
+      //   : isSelected
+      //   ? chroma.contrast(color, "white") > 2
+      //     ? "white"
+      //     : "black"
+      //   : data.color,
+      cursor: isDisabled ? "not-allowed" : "default",
+
+      ":active": {
+        ...styles[":active"],
+        background:
+          !isDisabled &&
+          (isSelected ? data.image : "/static/images/icons/cosmos-hub.png"),
+      },
+    };
+  },
+  input: (styles) => ({ ...styles, ...image() }),
+  placeholder: (styles) => ({ ...styles, ...image() }),
+  singleValue: (styles, { data }) => ({ ...styles, ...image(data.image) }),
+};
+
 const Networks = (props: INetworkProps) => {
   const { t } = useTranslation("stake_now");
   const { selectedToken, setSelectedToken } = props;
-
   const networkData = calculatorKeys.map((x) => getNetworkInfo(x));
   const [selectedOption, setSelectedOption] = useState(networkData[0]);
-  const handleSelect = (e) => {
-    console.log(`target`, e.currentTarget.value);
-    setSelectedToken(e.target.value);
-  };
-  const handleOnChange = (event, data) => {
-    event.persist();
-    console.log(`hi`, data);
+
+  const handleOnChange = (data) => {
     for (let i = 0; i < networkData.length; i++) {
-      console.log(`data`, data);
-      if (
-        data.options[i].hasOwnProperty("text") &&
-        event.target.innerText == data.options[i].text
-      ) {
-        setSelectedOption(data.options[i].key);
-        setSelectedToken(data.options[i].key);
+      if (data.key == networkData[i].key) {
+        setSelectedOption(data.key);
+        setSelectedToken(data.key);
       }
     }
-
-    if (event.value == "Select All") {
-      console.log(event);
-      console.log(event.target);
-    }
-    //console.log(`selected`, selectedOption);
   };
-  console.log(`selected`, selectedOption, selectedToken);
 
   return (
     <div>
       <ParagraphTitleCSS>{t("selectNetwork")}</ParagraphTitleCSS>
-      <Dropdown
+      {/* <Dropdown
         placeholder="Select Network"
-        //value={networkData}
+        //value={selectedOption}
         fluid
         //multiple
         selection
         options={networkData}
-        onChange={handleOnChange}
+        //onChange={setSelectedOPtion}
+        //onSearchChange={handleOnChange}
         // className={classNames({ active: x.key == selectedToken })}
+      /> */}
+      <Select
+        defaultValue={selectedOption}
+        onChange={handleOnChange}
+        options={networkData}
+        styles={imageStyles}
       />
       <NetworkChoicesCSS>
         {networkData.map((x) => (
           <Button
             key={x.name}
-            onClick={() => setSelectedToken(x.key)}
+            onClick={() => {
+              setSelectedToken(x.key);
+              setSelectedOption(x.key);
+            }}
             className={classNames({ active: x.key == selectedToken })}
           >
             <img src={x.image} />
