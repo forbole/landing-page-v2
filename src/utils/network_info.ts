@@ -37,13 +37,9 @@ const logos = {
       "https://iris.bigdipper.live/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegate",
     heightSocket: "wss://ws.iris.forbole.com",
     calculator: {
-      //bonded: "http://lcd.iris.forbole.com/staking/pool",
       bonded: "https://lcd.iris.bigdipper.live/staking/pool",
       inflation: "http://lcd.iris.forbole.com/params",
-      //supply: "http://lcd.iris.forbole.com/bank/token-stats",
       supply: "https://lcd.iris.bigdipper.live/supply/total/uiris",
-      //stakingParams:
-      // "http://lcd.iris.forbole.com/staking/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru",
       stakingParams:
         "https://lcd.iris.bigdipper.live/staking/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru",
     },
