@@ -12,6 +12,9 @@ export const NetworkCSS = styled.div`
   flex-direction: column;
   color: rgba(0, 0, 0, 0.87);
 
+  box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
+  border-radius: 0.5rem;
+
   img {
     width: 40px;
   }

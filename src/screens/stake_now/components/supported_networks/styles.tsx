@@ -33,7 +33,7 @@ export const HeaderContentCSS = styled.div`
     ${mixins.desktopMaxWidth}
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     margin-bottom: 2rem;

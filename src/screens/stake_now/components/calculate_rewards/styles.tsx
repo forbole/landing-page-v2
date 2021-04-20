@@ -42,9 +42,9 @@ export const ContentCSS = styled.div`
   ${media.bigDesktop`
     ${mixins.desktopMaxWidth}
     width: 100%;
-    margin-top: 5rem;
     h2 {
-      text-align: center;
+      font-size: 2rem;
+      padding-bottom: 1rem;
     }
     .main-content {
       display: grid;

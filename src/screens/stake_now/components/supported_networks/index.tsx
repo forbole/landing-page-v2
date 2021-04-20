@@ -18,7 +18,7 @@ const SupportedNetworks = () => {
   return (
     <SupportedNetworksCSS>
       <HeaderContentCSS>
-        <h2>{t("supportedNetworks")}</h2>
+        <h2>{t("validatingNetworks")}</h2>
         <p>{t("supportedNeworksContent")}</p>
         {/* <TermsOfService
           trigger={<p className="terms">{t("termsOfService")}</p>}
