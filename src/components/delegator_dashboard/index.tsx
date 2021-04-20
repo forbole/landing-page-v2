@@ -19,7 +19,7 @@ export const DashboardContent = () => {
           className="pbg"
         ></img>
         <ul className="content">
-          <h1>{t("forbolePortal")}</h1>
+          <h1>{t("forboleX")}</h1>
           <li>{t("fp1")}</li>
           <li>{t("fp2")}</li>
           <li>{t("fp3")}</li>

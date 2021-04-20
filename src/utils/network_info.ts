@@ -233,6 +233,10 @@ const logos = {
     image: "/static/images/icons/cardano.png",
     name: "Cardano",
     key: "cardano",
+  ["fetch.ai"]: {
+    image: "/static/images/icons/fetch-ai.png",
+    name: "Fetch.ai",
+    key: "fetch-ai",
   },
 };
 
