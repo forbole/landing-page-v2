@@ -9,7 +9,6 @@ import { cosmosData, irisData, vsysData } from "./config";
 
 export const useForboleStakesHook = () => {
   const [selected, setSelected] = useState(0);
-  // const [isLoading, setLoading] = useState(false);
 
   // Cosmos-Based Networks
   const cosmosBasedNetwork = [];

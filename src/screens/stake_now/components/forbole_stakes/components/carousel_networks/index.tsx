@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
-import classNames from "classnames";
 import {
   CarouselCSS,
   ArrowCSS,
@@ -8,9 +7,7 @@ import {
   MaxWidthContainerCSS,
 } from "./styles";
 import useWindowSize from "@utils/get_screen_size";
-import { useForboleStakesHook } from "../../hooks";
-import { INetworkDataProps } from "../../interfaces";
-import NetworkBlock from "../carousel_item/network_block";
+import NetworkBlock from "../network_block";
 import { Next } from "@icons";
 import { networkFunctions } from "@src/screens/stake_now/utils";
 
