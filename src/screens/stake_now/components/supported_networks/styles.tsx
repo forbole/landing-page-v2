@@ -4,7 +4,7 @@ import { media, mixins, theme } from "@styles";
 const { colors } = theme;
 export const SupportedNetworksCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
-  background: ${colors.gray100};
+  background: ${colors.white};
 
   ${media.bigDesktop`
     display: flex;

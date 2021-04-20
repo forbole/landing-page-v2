@@ -1,32 +1,13 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import { Dropdown } from "semantic-ui-react";
+import { NoSSR } from "@components";
 import Select from "react-select";
 import { useTranslation } from "i18n";
 import { getNetworkInfo } from "@src/utils/network_info";
 import { calculatorKeys } from "./config";
-import { Button, NetworkChoicesCSS } from "./styles";
+import { NetworksCSS, Button, NetworkChoicesCSS } from "./styles";
 import { INetworkProps } from "./interfaces";
 import { ParagraphTitleCSS } from "../../styles";
-
-// const Dropdown = (props: any) => {
-//   console.log(props);
-//   const { options } = props;
-//   console.log(options);
-//   const [selectedOption, setSelectedOption] = useState(options[0].value);
-//   return (
-//     <select
-//       value={selectedOption}
-//       onChange={(e) => setSelectedOption(e.target.value)}
-//     >
-//       {options.map((o) => (
-//         <option key={o.value} value={o.value}>
-//           {o.label}
-//         </option>
-//       ))}
-//     </select>
-//   );
-// };
 
 const image = (image = "/static/images/icons/cosmos-hub.png") => ({
   alignItems: "center",
@@ -34,7 +15,6 @@ const image = (image = "/static/images/icons/cosmos-hub.png") => ({
 
   ":before": {
     background: `url(${image})`,
-    //borderRadius: 10,
     content: '" "',
     display: "block",
     marginRight: 8,
@@ -47,37 +27,48 @@ const image = (image = "/static/images/icons/cosmos-hub.png") => ({
 const imageStyles = {
   control: (styles) => ({ ...styles, background: "white" }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
-    const color = "rgba(189, 8, 28, 1)";
+    const color = data.color;
     return {
       ...styles,
       backgroundColor: isDisabled
         ? null
         : isSelected
-        ? color
+        ? "white"
         : isFocused
-        ? "rgba(152, 152, 152, 1)"
-        : null,
+        ? "white"
+        : "white",
       color: isDisabled
         ? "#ccc"
         : isSelected
-        ? color
-          ? "white"
+        ? "white"
+          ? "rgba(0, 0, 0, 1)"
           : "black"
-        : color,
+        : "rgba(0, 0, 0, 1)",
       cursor: isDisabled ? "not-allowed" : "default",
+      alignItems: "center",
+      display: "flex",
+
+      ":hover": {
+        ...styles[":hover"],
+        backgroundColor: isDisabled
+          ? "#ccc"
+          : isSelected
+          ? color
+            ? color
+            : "black"
+          : color,
+        color: "white",
+      },
 
       ":active": {
         ...styles[":active"],
-        background:
-          !isDisabled &&
-          (isSelected ? data.image : "/static/images/icons/cosmos-hub.png"),
+        background: !isDisabled && (isSelected ? data.image : "white"),
       },
       ":before": {
         background: `url(${data.image})`,
-        //borderRadius: 10,
         content: '" "',
         display: "block",
-        //marginRight: 8,
+        marginRight: 8,
         height: 30,
         width: 30,
         backgroundSize: "contain",
@@ -93,7 +84,7 @@ const Networks = (props: INetworkProps) => {
   const { t } = useTranslation("stake_now");
   const { selectedToken, setSelectedToken } = props;
   const networkData = calculatorKeys.map((x) => getNetworkInfo(x));
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState(networkData[2]);
 
   const handleOnChange = (data) => {
     for (let i = 0; i < networkData.length; i++) {
@@ -105,25 +96,17 @@ const Networks = (props: INetworkProps) => {
   };
 
   return (
-    <div>
+    <NetworksCSS>
       <ParagraphTitleCSS>{t("selectNetwork")}</ParagraphTitleCSS>
-      {/* <Dropdown
-        placeholder="Select Network"
-        //value={selectedOption}
-        fluid
-        //multiple
-        selection
-        options={networkData}
-        //onChange={setSelectedOPtion}
-        //onSearchChange={handleOnChange}
-        // className={classNames({ active: x.key == selectedToken })}
-      /> */}
-      <Select
-        defaultValue={selectedOption}
-        onChange={handleOnChange}
-        options={networkData}
-        styles={imageStyles}
-      />
+      <NoSSR>
+        <Select
+          defaultValue={selectedOption}
+          placeholder={selectedOption}
+          onChange={handleOnChange}
+          options={networkData}
+          styles={imageStyles}
+        />
+      </NoSSR>
       <NetworkChoicesCSS>
         {networkData.map((x) => (
           <Button
@@ -134,12 +117,11 @@ const Networks = (props: INetworkProps) => {
             }}
             className={classNames({ active: x.key == selectedToken })}
           >
-            <img src={x.image} />
-            <p>{x.name}</p>
+            <p>{x.denom}</p>
           </Button>
         ))}
       </NetworkChoicesCSS>
-    </div>
+    </NetworksCSS>
   );
 };
 

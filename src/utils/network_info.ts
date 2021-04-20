@@ -12,6 +12,7 @@ const logos = {
     key: "cosmos",
     value: "cosmos",
     denom: "ATOM",
+    color: "#ba3fd9",
     bigDipper: "https://cosmos.bigdipper.live/",
     delegate:
       "https://cosmos.bigdipper.live/validators/cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj/delegate",
@@ -30,6 +31,7 @@ const logos = {
     label: "IRIS Hub - IRIS",
     key: "iris",
     denom: "IRIS",
+    color: "#7a41ff",
     bigDipper: "https://iris.bigdipper.live/",
     delegate:
       "https://iris.bigdipper.live/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegate",
@@ -48,6 +50,7 @@ const logos = {
     label: "Terra Money - LUNA",
     key: "terra-money",
     denom: "LUNA",
+    color: "#2845AE",
     delegate:
       "https://app.lunie.io/terra/validators/terravaloper1jkqr2vfg4krfd4zwmsf7elfj07cjuzss30ux8g",
     heightSocket: "wss://ws.terra.forbole.com",
@@ -65,6 +68,7 @@ const logos = {
     label: "Kava - KAVA",
     key: "kava",
     denom: "KAVA",
+    color: "#ff564f",
     bigDipper: "https://kava.bigdipper.live/",
     delegate:
       "https://kava.bigdipper.live/validators/kavavaloper14kn0kk33szpwus9nh8n87fjel8djx0y02c7me3/delegate",
@@ -89,6 +93,7 @@ const logos = {
     label: "LikeCoin - LIKE",
     key: "likecoin",
     denom: "LIKE",
+    color: "#28646e",
     bigDipper: "http://likecoin.bigdipper.live/",
     delegate:
       "https://likecoin.bigdipper.live/validator/cosmosvaloper1v8njts96gl5eqstnen4gksdy5k860fau65c3sw/delegate",
@@ -111,6 +116,7 @@ const logos = {
     image: "/static/images/icons/e-money.png",
     name: "e-Money",
     key: "e-money",
+    color: "#1e5877",
     bigDipper: "https://e-money.network/",
     delegate:
       "https://e-money.network/validator/emoneyvaloper1293pqwtzu67zp8txuya4yts03ccw5kgf98hz9y/delegate",
@@ -140,6 +146,7 @@ const logos = {
     label: "Iov - IOV",
     key: "iov",
     denom: "IOV",
+    color: "#6610f2",
     delegate:
       "https://big-dipper.iov-mainnet-2.iov.one/validator/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0/delegate",
     heightSocket: "wss://ws.iov.forbole.com",
@@ -162,6 +169,7 @@ const logos = {
     label: "Akash - AKT",
     key: "akash",
     denom: "AKT",
+    color: "#eb3825",
     delegate:
       "https://akash.bigdipper.live/validator/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073/delegate",
     heightSocket: "wss://ws.akash.forbole.com",
@@ -184,6 +192,7 @@ const logos = {
     label: "Band Protocol - BAND",
     key: "band-protocol",
     denom: "BAND",
+    color: "#516FFA",
     heightSocket: "wss://ws.band.forbole.com",
     delegate:
       "https://band.bigdipper.live/validator/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z/delegate",
@@ -204,6 +213,7 @@ const logos = {
     image: "/static/images/icons/v-system.png",
     name: "V-System",
     key: "v-system",
+    color: "#ff8836",
   },
   polkadot: {
     image: "/static/images/icons/polkadot.png",

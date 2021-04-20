@@ -3,7 +3,7 @@ import { theme, mixins, media } from "@styles";
 
 const { colors } = theme;
 export const CalculateRewardsCSS = styled.div`
-  background: ${colors.gray100};
+  background: ${colors.white};
 
   ${media.bigDesktop`
     display: flex;
