@@ -371,24 +371,24 @@ export const useForboleStakesHook = () => {
   // V System
   const [vsys, setVSYS] = useState({
     title: vsysData[0].title,
-    totalToken: 0,
-    totalMarketValue: "0.00",
-    currentMarketValue: "0.00",
+    totalToken: "---",
+    totalMarketValue: "---",
+    currentMarketValue: "---",
     denom: vsysData[0].denom,
     voting: {
       title: "votingPower",
-      token: 0,
-      percent: 0,
+      token: "---",
+      percent: "---",
     },
     selfDelegations: {
       title: "selfDelegations",
-      token: 0,
-      percent: 0,
+      token: "---",
+      percent: "---",
     },
     otherDelegations: {
       title: "otherDelegations",
-      token: 0,
-      percent: 0,
+      token: "---",
+      percent: "---",
     },
   });
 
