@@ -53,12 +53,36 @@ const Layout = ({
         )}
         <meta name="description" content={description} />
         <meta name="keywords" content={formattedKeyworks.join(", ")} />
-        <meta property="og:type" content={type} />
-        <meta property="og:title" content={title} />
-        <meta property="og:site_name" content="Forbole" />
-        <meta property="og:url" content={`${url}${currentPath}`} />
-        <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:type"
+          content={type}
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:title"
+          content={title}
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:site_name"
+          content="Forbole"
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:url"
+          content={`${url}${currentPath}`}
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:description"
+          content={description}
+        />
+        <meta
+          prefix="og: http://ogp.me/ns#"
+          property="og:image"
+          content={ogImage}
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content={metaTwitterImage} />
         <link
