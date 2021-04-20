@@ -21,7 +21,7 @@ export const uIovToIov = defaultConverter(1000000);
 
 export const uEMoneyToEMoney = defaultConverter(1000000);
 
-export const uIrisToIris = defaultConverter(1000000000000000000);
+export const uIrisToIris = defaultConverter(1000000);
 
 export const nanoLikeToLike = defaultConverter(1000000000);
 

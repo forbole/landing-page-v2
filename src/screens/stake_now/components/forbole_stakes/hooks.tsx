@@ -49,11 +49,10 @@ export const useForboleStakesHook = () => {
   const [iris, setIris] = useState(cosmosNetwork[8]);
 
   const getCosmosBasedNetwork = async () => {
-    // setLoading(true);
     const updatedArr = [];
     for (let x = 0; x < cosmosData.length; x++) {
       const networkFunction = networkFunctions[cosmosData[x]?.name];
-      // console.log(x, cosmosData[8]?.name, networkFunction);
+
       const { calculator } = getNetworkInfo(cosmosData[x]?.network ?? null);
       const bondedApi = axios.post("/api/proxy", {
         url: calculator.bonded,
@@ -79,11 +78,9 @@ export const useForboleStakesHook = () => {
         { data: delegationsJson },
         { data: marketPriceJson },
       ] = await Promise.all(promises);
-      //console.log(stakingParamsJson);
       const totalToken = networkFunction?.converter(
         Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson)) ?? 100000
       );
-      //console.log(networkFunction);
       const totalTokenFormat = convertToMoney(
         networkFunction?.converter(
           Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson))
@@ -129,7 +126,6 @@ export const useForboleStakesHook = () => {
         );
         totalSelfDelegations += totalSelfDelegation;
       }
-      //console.log(`self delegation`, totalSelfDelegations);
 
       const totalSelfDelegationsFormat = convertToMoney(totalSelfDelegations);
       const totalSelfDelegationsPercent = convertToMoney(
