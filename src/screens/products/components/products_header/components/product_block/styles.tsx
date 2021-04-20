@@ -15,19 +15,26 @@ export const ProductDisplayCSS = styled.div`
     flex-direction: column;
     grid-gap: 1rem;
     margin-top: -8rem;
+    position: inherit;
   `}
   ${media.desktop`
     flex-direction: row;
-    grid-gap: 3rem;
+    grid-gap: 5rem;
     margin-top: -29rem;
     padding-bottom: 10rem;
     width: 100%;
     align-self: center;
+    position: absolute;
+    top: 55rem;
   `}
 `;
 
 export const CallToActionCSS = styled.div`
   color: ${colors.forboleRed};
+  ${media.desktop`
+    position: absolute;
+    bottom: 2rem;
+  `}
 `;
 
 export const ProductBlockCSS = styled.div`
@@ -71,5 +78,9 @@ export const ProductBlockCSS = styled.div`
       width: 21.5rem;
       height: 19.125rem;
       padding: 2.5rem 2rem;
+      position: relative;
+      p {
+        margin-bottom: 0;
+      }
   `}
 `;
