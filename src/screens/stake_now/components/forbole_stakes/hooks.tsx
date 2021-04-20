@@ -391,7 +391,7 @@ export const useForboleStakesHook = () => {
     } catch (err) {
       console.log(err);
     }
-  }, [cosmosNetwork]);
+  }, [cosmosNetwork, vsys]);
 
   return {
     cosmos,
