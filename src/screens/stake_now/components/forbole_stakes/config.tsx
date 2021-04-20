@@ -115,21 +115,6 @@ export const cosmosData = [
   },
 ];
 
-export const irisData = [
-  {
-    title: "Iris",
-    name: "iris",
-    network: "iris",
-    denom: "IRIS",
-    address: "delegator_addr",
-    delegationsApi:
-      "http://lcd.iris.bigdipper.live/stake/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegations",
-    delegationsJson_R: ["result"],
-    validator_address: ["iaa1msqqkd3v0gmullzwm56c4frevyczzxfednxa7m"],
-    color: "#7a41ff",
-  },
-];
-
 export const vsysData = [
   {
     title: "V Systems",
