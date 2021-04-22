@@ -10,7 +10,7 @@ const Policy = () => {
       <small>{t("copyright")}</small>
       <TermsCSS>
         <small>{t("tnc")}</small>
-        <hr />
+        <div className="vhr" />
         <small>{t("privacy")}</small>
       </TermsCSS>
     </PolicyCSS>

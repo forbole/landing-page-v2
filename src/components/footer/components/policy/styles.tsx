@@ -10,6 +10,7 @@ export const PolicyCSS = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0;
 
   ${media.bigDesktop`
 
@@ -21,10 +22,11 @@ export const TermsCSS = styled.div`
   display: flex;
   align-items: center;
   height: 1rem;
-  hr {
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    display: inline-block;
+  .vhr {
+    padding: 0 0.2rem;
     height: 100%;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 1rem;
   }
   ${media.bigDesktop`
 
