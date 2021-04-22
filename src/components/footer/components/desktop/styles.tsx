@@ -9,6 +9,7 @@ export const DesktopFooterCSS = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   .wrapper {
     max-width: 1300px;
     width: 100%;
@@ -18,6 +19,13 @@ export const DesktopFooterCSS = styled.div`
   .desktopFooter-left {
     padding-right: 7rem;
     width: 100%;
+  }
+  .hr {
+    width: 100%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   `}
 `;

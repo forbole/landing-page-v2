@@ -3,6 +3,7 @@ import SocialMedia from "../social_media";
 import Subscribe from "../subscribe";
 import Forbole from "../forbole";
 import FooterItems from "../footer_items";
+import Policy from "../policy";
 import { DesktopFooterCSS } from "./styles";
 
 const DesktopFooter = () => {
@@ -16,6 +17,8 @@ const DesktopFooter = () => {
         <FooterItems />
         <Subscribe />
       </div>
+      <hr className="hr" />
+      <Policy />
     </DesktopFooterCSS>
   );
 };

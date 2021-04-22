@@ -10,5 +10,8 @@
   "subscribe": "SUBSCRIBE",
   "subscribeDescription": "Subscribe to our news and regular updates",
   "email": "Your email address",
-  "subscribed": "Subscribed"
+  "subscribed": "Subscribed",
+  "copyright": "Copyright © Forbole 2021",
+  "tnc": "Terms & Conditions",
+  "privacy": "Privacy Policy"
 }
