@@ -15,4 +15,8 @@ export const PPCSS = styled.div`
 
 export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   margin: auto;
+  p {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+  }
 `;

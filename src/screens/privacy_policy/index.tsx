@@ -172,7 +172,7 @@ const PrivacyPolicy = () => {
             identify You. Personally identifiable information may include, but
             is not limited to:
           </p>
-          <ul>
+          <ul style={{ paddingBottom: "2rem" }}>
             <li>Usage Data</li>
           </ul>
           <h3>Usage Data</h3>
@@ -439,7 +439,7 @@ const PrivacyPolicy = () => {
               other users will be able to view descriptions of Your activity,
               communicate with You and view Your profile.
             </li>
-            <li>
+            <li style={{ paddingBottom: "1rem" }}>
               <strong>With Your consent</strong>: We may disclose Your personal
               information for any other purpose with Your consent.
             </li>
@@ -705,7 +705,7 @@ const PrivacyPolicy = () => {
               information which You initially provided consent for Us to use or
               where We used the information to perform a contract with You.
             </li>
-            <li>
+            <li style={{ paddingBottom: "1rem" }}>
               <strong>Withdraw Your consent.</strong> You have the right to
               withdraw Your consent on using your Personal Data. If You withdraw
               Your consent, We may not be able to provide You with access to
