@@ -4,19 +4,21 @@ import Subscribe from "../subscribe";
 import Forbole from "../forbole";
 import FooterItems from "../footer_items";
 import Policy from "../policy";
-import { DesktopFooterCSS } from "./styles";
+import { DesktopFooterCSS, ContentFooterCSS } from "./styles";
 
 const DesktopFooter = () => {
   return (
     <DesktopFooterCSS>
-      <div className="wrapper">
-        <div className="desktopFooter-left">
-          <Forbole />
-          <SocialMedia />
+      <ContentFooterCSS>
+        <div className="wrapper">
+          <div className="desktopFooter-left">
+            <Forbole />
+            <SocialMedia />
+          </div>
+          <FooterItems />
+          <Subscribe />
         </div>
-        <FooterItems />
-        <Subscribe />
-      </div>
+      </ContentFooterCSS>
       <hr className="hr" />
       <Policy />
     </DesktopFooterCSS>

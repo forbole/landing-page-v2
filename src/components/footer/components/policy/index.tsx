@@ -9,7 +9,9 @@ const Policy = () => {
     <PolicyCSS>
       <small>{t("copyright")}</small>
       <TermsCSS>
-        <small>{t("tnc")}</small>
+        <Link href="/terms-and-conditions">
+          <small>{t("tnc")}</small>
+        </Link>
         <div className="vhr" />
         <small>{t("privacy")}</small>
       </TermsCSS>

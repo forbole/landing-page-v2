@@ -10,7 +10,7 @@ export const PolicyCSS = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
 
   ${media.bigDesktop`
 
@@ -27,6 +27,11 @@ export const TermsCSS = styled.div`
     height: 100%;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     margin: 0 1rem;
+  }
+  small {
+    &:hover {
+      cursor: pointer;
+    }
   }
   ${media.bigDesktop`
 
