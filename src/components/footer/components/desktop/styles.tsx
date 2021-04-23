@@ -17,7 +17,7 @@ export const DesktopFooterCSS = styled.div`
     justify-content: center;
   }
   .desktopFooter-left {
-    padding-right: 7rem;
+    padding-right: 10rem;
     width: 100%;
   }
   .hr {
