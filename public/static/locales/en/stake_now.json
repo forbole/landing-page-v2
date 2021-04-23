@@ -1,7 +1,7 @@
 {
   "title": "Stake now with Forbole",
   "description": "Stake now. Earn rewards. Secure the networks. Forbole supports over 30 networks.",
-  "tokensStakedWithForbole": "Tokens staked with Forbole",
+  "tokensStakedWithForbole": "Tokens staked with Forbole valued at",
   "cosmosHub": "Cosmos Hub",
   "atom": "ATOM",
   "usd": "USD",
@@ -30,7 +30,7 @@
   "yearlyEarnings": "Yearly Earnings",
   "token": "Token",
   "band-protocol": "Band Protocol",
-  "supportedNetworks": "Supported Networks",
+  "validatingNetworks": "Validating Networks",
   "supportedNeworksContent": "We have partnered with and supported projects that develops breakthrough technologies, solves industry pain points, and brings disruptive innovations.",
   "termsOfService": "Terms of Service",
   "termsOfServiceDetails": "Please insert",

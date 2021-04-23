@@ -14,21 +14,41 @@ export const CalculatorCSS = styled.div`
 
 export const Input = styled(SemenaticInput)`
   &.ui.input {
+    width: 100%;
     .ui.button {
-      background: ${colors.gray600};
+      background: ${colors.black};
       color: white;
       font-weight: 300;
       transition: 0.2s;
       padding: 0.5rem 1.2rem;
-      min-width: 120px;
+      min-width: 80px;
       display: flex;
       align-items: center;
       justify-content: center;
+      border-radius: 0rem 0.25rem 0.25rem 0rem;
       &:hover {
         background: black;
       }
     }
+    > input {
+      width: 65%;
+      border-radius: 0.25rem 0rem 0rem 0.25rem;
+    }
   }
+  ${media.tablet`
+  &.ui.input {
+    > input {
+      width: 80%;
+    }
+  }
+  `}
+  ${media.bigDesktop`
+  &.ui.input {
+    > input {
+      width: 70%;
+    }
+  }
+  `}
 `;
 
 export const StatsDetailsCSS = styled.div`

@@ -4,6 +4,28 @@ import { theme, media } from "@styles";
 
 const { colors } = theme;
 
+export const NetworksCSS = styled.div`
+  .css-2b097c-container {
+    padding-bottom: 1rem;
+  }
+  .css-1hb7zxy-IndicatorsContainer {
+    span {
+      display: none;
+    }
+  }
+  .css-uk2c3s-control {
+    box-shadow: 0 0 0 1px rgba(152, 152, 152, 1);
+    border-color: rgba(152, 152, 152, 1);
+    :hover {
+      border-color: rgba(152, 152, 152, 1);
+    }
+  }
+  .css-26l3qy-menu {
+    margin-top: 0px;
+    top: 90%;
+  }
+`;
+
 export const NetworkChoicesCSS = styled.div`
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 1fr));
@@ -21,11 +43,13 @@ export const NetworkChoicesCSS = styled.div`
 export const Button = styled(SemanticButton)`
   &.ui.button {
     background: white;
-    border: solid 1px ${colors.gray600};
+    border: solid 1px rgba(243, 83, 99, 1);
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0.3rem 0.7rem;
     width: 100%;
+    color: rgba(243, 83, 99, 1);
 
     p {
       white-space: nowrap;
@@ -35,16 +59,11 @@ export const Button = styled(SemanticButton)`
     }
 
     &.active {
-      background: ${colors.black};
+      background: rgba(243, 83, 99, 1);
 
       p {
         color: white;
       }
     }
-  }
-
-  img {
-    width: 30px;
-    margin-right: 0.4rem;
   }
 `;

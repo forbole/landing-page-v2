@@ -1,22 +1,33 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { mixins, media, theme } from "@styles";
+
+const { colors } = theme;
+
+export const StakeNowContainerCSS = styled.div`
+  ${media.bigDesktop` 
+    min-height: 100vh;
+    background: ${colors.white};
+  `}
+`;
 
 export const ForboleStakesCSS = styled.div`
   ${mixins.mobileHorizontalPadding};
-  min-height: 90vh;
-  background-image: url("/static/images/assets/stake-now-bg.svg");
-  background-position: center center;
-  background-repeat: no-repeat, repeat;
+  min-height: 30vh;
+  background-image: url("/static/images/assets/stake-now-background.png");
+  background-color: rgba(27, 27, 27, 1);
+  background-position: 100%;
+  background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: inherit;
   flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 6rem;
   padding-bottom: 5rem;
 
   p {
-    color: white;
+    color: ${colors.white};
+    font-size: 1rem;
   }
 
   hr {
@@ -29,11 +40,10 @@ export const ForboleStakesCSS = styled.div`
 
   h1 {
     margin-bottom: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: white;
     font-weight: 500;
   }
-
   .ui.loader {
     position: relative !important;
     display: inline-block;
@@ -59,18 +69,25 @@ export const ForboleStakesCSS = styled.div`
   }
 
   ${media.bigDesktop`
-    background-image:  url("/static/images/assets/stake-now-elements.svg"), url("/static/images/assets/stake-now-bg.svg");
-    background-position: center 200px, center center;
+    padding-top: 12rem;
+    min-height: 70vh;
+    background-image: url("/static/images/assets/stake-now-background.png");
+    background-color: rgba(27, 27, 27, 1);
+    background-position: 50% 50%;
+    // background-position: center 200px, center center;
+    background-size: cover;
     background-repeat: no-repeat;
-    min-height: 100vh;
-
-    .stats-hr {
-      display: none;
+    p {
+      font-size: 1.5rem;
+    }
+    h1 {
+      font-size: 4rem;
     }
   `}
 `;
 
 export const FlexContainerCSS = styled.div`
+  z-index: 5;
   width: 100%;
   display: flex;
   align-items: center;
@@ -80,7 +97,13 @@ export const FlexContainerCSS = styled.div`
     ${mixins.desktopMaxWidth}
     flex-direction: row;
     justify-content: center;
+    margin: auto;
+    margin-top: -18rem;
   `}
+`;
+
+export const CarouselDesktopContainerCSS = styled.div`
+  width: 100%;
 `;
 
 export const StakesDetailsContainerCSS = styled.div`

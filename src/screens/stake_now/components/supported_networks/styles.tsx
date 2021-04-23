@@ -4,7 +4,7 @@ import { media, mixins, theme } from "@styles";
 const { colors } = theme;
 export const SupportedNetworksCSS = styled.div`
   ${mixins.mobileLastContainerPadding}
-  background: ${colors.gray100};
+  background: ${colors.white};
 
   ${media.bigDesktop`
     display: flex;
@@ -33,7 +33,7 @@ export const HeaderContentCSS = styled.div`
     ${mixins.desktopMaxWidth}
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     flex-direction: column;
     margin-bottom: 2rem;

@@ -9,6 +9,10 @@ export const CarouselCSS = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
+  //  padding: 1rem;
+    .react-multi-carousel-item {
+      padding: 0 1rem;
+    }
   `}
 `;
 
@@ -47,5 +51,11 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   justify-content: center;
   .react-multi-carousel-list {
     width: 90%;
+    .react-multi-carousel-track > .react-multi-carousel-item {
+      padding: 0 1rem;
+    }
+  }
+  li {
+    padding: 0 1rem;
   }
 `;

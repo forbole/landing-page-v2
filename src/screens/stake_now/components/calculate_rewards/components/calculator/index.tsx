@@ -22,6 +22,7 @@ const Calculator = (props: ICalculatorProp) => {
       <Input
         fluid
         onChange={handleChange}
+        placeholder={"0 Amount"}
         action={{
           content: loading ? (
             <Icon loading fitted name="asterisk" />

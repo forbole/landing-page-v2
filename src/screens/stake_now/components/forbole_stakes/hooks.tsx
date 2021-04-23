@@ -5,46 +5,54 @@ import * as R from "ramda";
 import { getNetworkInfo } from "@utils/network_info";
 import { networkFunctions } from "../../utils";
 import { convertToMoney, moneyToInt } from "@utils/convert_to_money";
-import { cosmosData, irisData, vsysData } from "./config";
+import { cosmosData, vsysData } from "./config";
 
 export const useForboleStakesHook = () => {
   const [selected, setSelected] = useState(0);
-  const [isLoading, setLoading] = useState(false);
 
   // Cosmos-Based Networks
   const cosmosBasedNetwork = [];
   for (let i = 0; i < cosmosData.length; i++) {
     cosmosBasedNetwork.push({
       title: cosmosData[i].title ?? null,
-      totalToken: 0,
-      totalMarketValue: "0.00",
-      currentMarketValue: "0.00",
+      totalToken: "---",
+      totalMarketValue: "---",
+      currentMarketValue: "---",
       denom: cosmosData[i].denom ?? null,
       voting: {
         title: "votingPower",
-        token: 0,
-        percent: 0,
+        token: "---",
+        percent: "---",
       },
       selfDelegations: {
         title: "selfDelegations",
-        token: 0,
-        percent: 0,
+        token: "---",
+        percent: "---",
       },
       otherDelegations: {
         title: "otherDelegations",
-        token: 0,
-        percent: 0,
+        token: "---",
+        percent: "---",
       },
     });
   }
 
   const [cosmosNetwork, setCosmosNetwork] = useState(cosmosBasedNetwork);
+  const [cosmos, setCosmos] = useState(cosmosNetwork[0]);
+  const [terra, setTerra] = useState(cosmosNetwork[1]);
+  const [kava, setKava] = useState(cosmosNetwork[2]);
+  const [likecoin, setLikecoin] = useState(cosmosNetwork[3]);
+  const [iov, setIOV] = useState(cosmosNetwork[4]);
+  const [band, setBand] = useState(cosmosNetwork[5]);
+  const [akash, setAkash] = useState(cosmosNetwork[6]);
+  const [emoney, setEmoney] = useState(cosmosNetwork[7]);
+  const [iris, setIris] = useState(cosmosNetwork[8]);
 
   const getCosmosBasedNetwork = async () => {
-    setLoading(true);
     const updatedArr = [];
     for (let x = 0; x < cosmosData.length; x++) {
-      const networkFunction = networkFunctions[cosmosData[x]?.name] ?? null;
+      const networkFunction = networkFunctions[cosmosData[x]?.name];
+
       const { calculator } = getNetworkInfo(cosmosData[x]?.network ?? null);
       const bondedApi = axios.post("/api/proxy", {
         url: calculator.bonded,
@@ -71,7 +79,7 @@ export const useForboleStakesHook = () => {
         { data: marketPriceJson },
       ] = await Promise.all(promises);
       const totalToken = networkFunction?.converter(
-        Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson))
+        Number(R.pathOr(0, ["result", "tokens"], stakingParamsJson)) ?? 100000
       );
       const totalTokenFormat = convertToMoney(
         networkFunction?.converter(
@@ -90,16 +98,30 @@ export const useForboleStakesHook = () => {
       let totalSelfDelegations = 0;
 
       for (let i = 0; i < cosmosData[x].validator_address.length; i++) {
+        // const totalSelfDelegation = networkFunction?.converter(
+        //   R.pathOr([], ["result"], delegationsJson)
+        //     .filter(
+        //       (y) =>
+        //         y?.[cosmosData[x]?.address ?? null] ===
+        //           cosmosData[x]?.validator_address[i] ?? null
+        //     )
+        //     .reduce(
+        //       (a, b) => (a += Number(b?.balance?.amount ?? b?.balance) ?? 0.0),
+        //       totalSelfDelegations ?? 0.0
+        //     )
+        // );
         const totalSelfDelegation = networkFunction?.converter(
-          R.pathOr([], ["result"], delegationsJson)
-            .filter(
-              (y) =>
-                y?.[cosmosData[x]?.x ?? null] ===
-                  cosmosData[x]?.validator_address[i] ?? null
+          R.pathOr([""], ["result"], delegationsJson)
+            .filter((y) =>
+              "delegation" in y
+                ? y.delegation[cosmosData[x]?.address ?? 0] ===
+                    cosmosData[x]?.validator_address[i] ?? 0
+                : y?.[cosmosData[x]?.address ?? 0] ===
+                    cosmosData[x]?.validator_address[i] ?? 0
             )
             .reduce(
-              (a, b) => (a += Number(b?.balance?.amount ?? b?.balance) ?? 0),
-              totalSelfDelegations ?? 0
+              (a, b) => (a += Number(b?.balance?.amount ?? b?.balance) ?? 0.0),
+              totalSelfDelegations ?? 0.0
             )
         );
         totalSelfDelegations += totalSelfDelegation;
@@ -145,6 +167,57 @@ export const useForboleStakesHook = () => {
             percent: otherDelegationsPercent,
           },
         });
+        let state = {
+          title: cosmosData[x]?.title,
+          denom: cosmosData[x]?.denom,
+          totalToken: totalTokenFormat,
+          totalMarketValue,
+          currentMarketValue,
+          voting: {
+            title: "votingPower",
+            token: totalTokenFormat,
+            percent: votingPowerPercent,
+          },
+          selfDelegations: {
+            title: "selfDelegations",
+            token: totalSelfDelegationsFormat,
+            percent: totalSelfDelegationsPercent,
+          },
+          otherDelegations: {
+            title: "otherDelegations",
+            token: otherDelegationsFormat,
+            percent: otherDelegationsPercent,
+          },
+        };
+        switch (x) {
+          case 0:
+            setCosmos(state);
+            break;
+          case 1:
+            setTerra(state);
+            break;
+          case 2:
+            setKava(state);
+            break;
+          case 3:
+            setLikecoin(state);
+            break;
+          case 4:
+            setIOV(state);
+            break;
+          case 5:
+            setBand(state);
+            break;
+          case 6:
+            setAkash(state);
+            break;
+          case 7:
+            setEmoney(state);
+            break;
+          case 8:
+            setIris(state);
+            break;
+        }
       } catch (err) {
         console.log(err);
         updatedArr.push({
@@ -174,144 +247,27 @@ export const useForboleStakesHook = () => {
     setCosmosNetwork(updatedArr);
   };
 
-  // IRIS
-  const [iris, setIris] = useState({
-    title: irisData[0].title,
-    totalToken: 0,
-    totalMarketValue: "0.00",
-    currentMarketValue: "0.00",
-    denom: irisData[0].denom,
-    voting: {
-      title: "votingPower",
-      token: 0,
-      percent: 0,
-    },
-    selfDelegations: {
-      title: "selfDelegations",
-      token: 0,
-      percent: 0,
-    },
-    otherDelegations: {
-      title: "otherDelegations",
-      token: 0,
-      percent: 0,
-    },
-  });
-
-  const getIrisNetwork = async () => {
-    const networkFunction = networkFunctions["iris"] ?? null;
-    const { calculator } = getNetworkInfo("iris");
-    const bondedApi = axios.post("/api/proxy", {
-      url: calculator.bonded,
-    });
-    const stakingParamsApi = axios.post("/api/proxy", {
-      url: calculator.stakingParams,
-    });
-    const delegationsApi = axios.post("/api/proxy", {
-      url:
-        "http://lcd.iris.bigdipper.live/stake/validators/iva1msqqkd3v0gmullzwm56c4frevyczzxfeczvjru/delegations",
-    });
-    const marketPriceApi = axios.get(networkFunction.gecko);
-
-    const promises = [
-      bondedApi,
-      stakingParamsApi,
-      delegationsApi,
-      marketPriceApi,
-    ];
-
-    const [
-      { data: bondedJson },
-      { data: stakingParamsJson },
-      { data: delegationsJson },
-      { data: marketPriceJson },
-    ] = await Promise.all(promises);
-
-    const totalIRIS = Number(R.pathOr(0, ["tokens"], stakingParamsJson));
-
-    const totalIRISFormat = convertToMoney(
-      Number(R.pathOr(0, ["tokens"], stakingParamsJson))
-    );
-
-    const bonded = networkFunctions.iris.bonded(bondedJson);
-
-    const currentMarketValue = networkFunctions.iris.marketPrice(
-      marketPriceJson
-    );
-    const totalMarketValue = convertToMoney(currentMarketValue * totalIRIS);
-    const votingPowerPercent = convertToMoney((totalIRIS / bonded) * 100, 2);
-
-    //==========================
-    // self-delegations
-    //==========================
-    const totalSelfDelegations = R.pathOr([], [], delegationsJson)
-      .filter(
-        (x) =>
-          x?.["delegator_addr"] === "iaa1msqqkd3v0gmullzwm56c4frevyczzxfednxa7m"
-      )
-      .reduce((a, b) => (a += Number(b?.shares) ?? 0), 0);
-
-    const totalSelfDelegationsFormat = convertToMoney(totalSelfDelegations);
-    const totalSelfDelegationsPercent = convertToMoney(
-      (totalSelfDelegations / bonded) * 100,
-      2
-    );
-
-    //==========================
-    // other-delegations
-    //==========================
-    const otherDelegations = totalIRIS - totalSelfDelegations;
-    const otherDelegationsFormat = convertToMoney(otherDelegations);
-    const otherDelegationsPercent = convertToMoney(
-      (otherDelegations / bonded) * 100,
-      2
-    );
-
-    setIris(
-      R.mergeDeepLeft(
-        {
-          totalToken: totalIRISFormat,
-          totalMarketValue,
-          currentMarketValue,
-          voting: {
-            token: totalIRISFormat,
-            percent: votingPowerPercent,
-          },
-          selfDelegations: {
-            token: totalSelfDelegationsFormat,
-            percent: totalSelfDelegationsPercent,
-          },
-          otherDelegations: {
-            token: otherDelegationsFormat,
-            percent: otherDelegationsPercent,
-          },
-        },
-        iris
-      )
-    );
-  };
-
   // V System
   const [vsys, setVSYS] = useState({
     title: vsysData[0].title,
-    totalToken: 0,
-    totalMarketValue: "0.00",
-    currentMarketValue: "0.00",
+    totalToken: "---",
+    totalMarketValue: "---",
+    currentMarketValue: "---",
     denom: vsysData[0].denom,
     voting: {
       title: "votingPower",
-      token: 0,
-      percent: 0,
+      token: "---",
+      percent: "---",
     },
     selfDelegations: {
       title: "selfDelegations",
-      token: 0,
-      percent: 0,
+      token: "---",
+      percent: "---",
     },
     otherDelegations: {
       title: "otherDelegations",
-      token: 0,
-      percent: 0,
+      token: "---",
+      percent: "---",
     },
   });
 
@@ -407,7 +363,7 @@ export const useForboleStakesHook = () => {
     );
   };
 
-  const [totalUSD, setNetworkUSD] = useState(0);
+  const [totalUSD, setNetworkUSD]: any = useState(0);
 
   const getNetworkUSD = async () => {
     const cosmosNetworkTotalUSD = await cosmosNetwork
@@ -416,22 +372,17 @@ export const useForboleStakesHook = () => {
 
     const vsysTotalUSD = await moneyToInt(vsys.totalMarketValue);
 
-    const irisTotalUSD = await moneyToInt(iris.totalMarketValue);
+    // const irisTotalUSD = await moneyToInt(iris.totalMarketValue);
 
-    const totalUSD = cosmosNetworkTotalUSD + vsysTotalUSD + irisTotalUSD;
+    const totalUSD = cosmosNetworkTotalUSD + vsysTotalUSD;
 
     setNetworkUSD(totalUSD);
   };
 
   useEffect(() => {
-    try {
-      getCosmosBasedNetwork()
-        .then(() => getIrisNetwork())
-        .then(() => getVSYSNetwork())
-        .then(() => setLoading(false));
-    } catch (err) {
-      console.log(err);
-    }
+    getCosmosBasedNetwork()
+      // .then(() => getIrisNetwork())
+      .then(() => getVSYSNetwork());
   }, []);
 
   useEffect(() => {
@@ -440,15 +391,21 @@ export const useForboleStakesHook = () => {
     } catch (err) {
       console.log(err);
     }
-  }, [cosmosNetwork, vsys, iris]);
+  }, [cosmosNetwork, vsys]);
 
   return {
+    cosmos,
+    terra,
+    kava,
+    likecoin,
+    iov,
+    band,
+    akash,
+    emoney,
     cosmosNetwork,
     iris,
     vsys,
     totalUSD,
-    isLoading,
-    setLoading,
     selected,
     setSelected,
   };

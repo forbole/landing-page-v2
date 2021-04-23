@@ -21,7 +21,7 @@ export const uIovToIov = defaultConverter(1000000);
 
 export const uEMoneyToEMoney = defaultConverter(1000000);
 
-export const uIrisToIris = defaultConverter(1000000000000000000);
+export const uIrisToIris = defaultConverter(1000000);
 
 export const nanoLikeToLike = defaultConverter(1000000000);
 
@@ -78,34 +78,35 @@ emoney.gecko = "https://api.coingecko.com/api/v3/coins/iris-network";
 const solana = R.clone(defaultFunctions(uAtomToAtom));
 solana.gecko = "https://api.coingecko.com/api/v3/coins/solana";
 
-const iris: any = {
-  bonded: (data: any) => {
-    return Number(R.pathOr(0, ["bonded_tokens"], data));
-  },
-  inflation: (data: any) => {
-    const [inflationData] = data?.filter(
-      (x) => x?.type === "irishub/mint/Params"
-    );
-    return (
-      toFixed(Number(R.pathOr(0, ["value", "inflation"], inflationData))) ?? 0
-    );
-  },
-  supply: (data: any) => {
-    const [supply] = R.pathOr([], ["total_supply"], data).filter(
-      (x) => x.denom === "iris-atto"
-    );
-    return uIrisToIris(Number(R.pathOr(0, ["amount"], supply)));
-  },
-  commissionRate: (data: any) => {
-    return Number(R.pathOr(0, ["commission", "rate"], data));
-  },
-  marketPrice: (data: any) => {
-    return toFixed(
-      Number(R.pathOr(0, ["market_data", "current_price", "usd"], data))
-    );
-  },
-};
+// const iris: any = {
+//   bonded: (data: any) => {
+//     return Number(R.pathOr(0, ["bonded_tokens"], data));
+//   },
+//   inflation: (data: any) => {
+//     const [inflationData] = data?.filter(
+//       (x) => x?.type === "irishub/mint/Params"
+//     );
+//     return (
+//       toFixed(Number(R.pathOr(0, ["value", "inflation"], inflationData))) ?? 0
+//     );
+//   },
+//   supply: (data: any) => {
+//     const [supply] = R.pathOr([], ["total_supply"], data).filter(
+//       (x) => x.denom === "iris-atto"
+//     );
+//     return uIrisToIris(Number(R.pathOr(0, ["amount"], supply)));
+//   },
+//   commissionRate: (data: any) => {
+//     return Number(R.pathOr(0, ["commission", "rate"], data));
+//   },
+//   marketPrice: (data: any) => {
+//     return toFixed(
+//       Number(R.pathOr(0, ["market_data", "current_price", "usd"], data))
+//     );
+//   },
+// };
 
+const iris = R.clone(defaultFunctions(uIrisToIris));
 iris.gecko = "https://api.coingecko.com/api/v3/coins/iris-network";
 
 // available networks for calculations

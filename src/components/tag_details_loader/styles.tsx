@@ -3,7 +3,7 @@ import { media } from "@styles";
 
 export const FlexCSS = styled.div`
   display: flex;
-  justify-itmes: center;
+  justify-items: center;
 `;
 
 export const ContentCSS = styled.div`
