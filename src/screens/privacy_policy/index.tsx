@@ -844,7 +844,7 @@ const PrivacyPolicy = () => {
             us:
           </p>
           <ul>
-            <li>By email: referral@forbole.com</li>
+            <li style={{ listStyle: "none" }}>By email: info@forbole.com</li>
           </ul>
         </MaxWidthContainerCSS>
       </PPCSS>
