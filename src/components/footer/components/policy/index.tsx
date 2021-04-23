@@ -13,7 +13,9 @@ const Policy = () => {
           <small>{t("tnc")}</small>
         </Link>
         <div className="vhr" />
-        <small>{t("privacy")}</small>
+        <Link href="/privacy-policy">
+          <small>{t("privacy")}</small>
+        </Link>
       </TermsCSS>
     </PolicyCSS>
   );
