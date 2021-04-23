@@ -5,11 +5,14 @@ import { mixins, theme, media } from "@styles";
 const { colors } = theme;
 
 export const PPCSS = styled.div`
+  padding: 4rem 1.5rem;
+  ${media.bigDesktop`
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
   padding: 5rem 0;
+  `}
 `;
 
 export const MaxWidthContainerCSS = styled(MaxWidthCSS)`

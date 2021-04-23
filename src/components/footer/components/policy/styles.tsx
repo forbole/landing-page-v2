@@ -5,15 +5,18 @@ const { colors } = theme;
 
 export const PolicyCSS = styled.div`
   color: rgba(201, 201, 201, 1);
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.2rem;
+
+  ${media.bigDesktop`
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-
-  ${media.bigDesktop`
-
 `}
 `;
 

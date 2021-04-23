@@ -1,6 +1,9 @@
 import styled from "styled-components";
+import { media } from "@styles";
 
 export const TermsOfServiceCSS = styled.div`
+  padding: 5rem 2rem;
+  ${media.bigDesktop`
   padding: 1rem;
   max-height: 80vh;
   overflow-y: auto;
@@ -11,5 +14,5 @@ export const TermsOfServiceCSS = styled.div`
 
   p {
     text-align: center;
-  }
+  }`}
 `;
