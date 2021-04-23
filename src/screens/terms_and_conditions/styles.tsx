@@ -4,6 +4,9 @@ import { media } from "@styles";
 
 export const TNCCSS = styled.div`
   padding: 4rem 1.5rem;
+  .email {
+    list-style: none;
+  }
   ${media.bigDesktop`
   display: flex;
   flex-direction: column;

@@ -316,7 +316,7 @@ const TermsAndConditions = () => {
             contact us:
           </p>
           <ul>
-            <li style={{ listStyle: "none" }}>By email: info@forbole.com</li>
+            <li className="email">By email: info@forbole.com</li>
           </ul>
         </MaxWidthContainerCSS>
       </TNCCSS>
