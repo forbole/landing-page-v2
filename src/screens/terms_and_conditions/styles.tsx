@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { MaxWidthContainerCSS as MaxWidthCSS } from "@styles/components";
-import { mixins, theme, media } from "@styles";
-
-const { colors } = theme;
+import { media } from "@styles";
 
 export const TNCCSS = styled.div`
   padding: 4rem 1.5rem;
