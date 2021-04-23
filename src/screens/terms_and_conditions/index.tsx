@@ -210,7 +210,7 @@ const TermsAndConditions = () => {
       </p>
       <p>
         Without limiting the foregoing, neither the Company nor any of the
-        company&apos;'s provider makes any representation or warranty of any
+        company&apos;s provider makes any representation or warranty of any
         kind, express or implied: (i) as to the operation or availability of the
         Service, or the information, content, and materials or products included
         thereon; (ii) that the Service will be uninterrupted or error-free;
