@@ -22,11 +22,18 @@ export const NewsHeaderCSS = styled.div`
   `}
   ${media.bigDesktop`
   ${mixins.flexCenter}
-  padding: 5rem 1.5rem 2.5rem;
+  //padding: 5rem 1.5rem 2.5rem;
+  justify-content: center;
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
     .desktopWrapper{ 
       ${mixins.desktopMaxWidth}
-      ${mixins.flexCenter}
       flex-direction: column;
+      justify-content: flex-start;
       width: 100%;
     }
   `}
