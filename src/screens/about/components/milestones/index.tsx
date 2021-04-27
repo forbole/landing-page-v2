@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
+import classNames from "classnames";
 import {
   MilestonesCSS,
   MilestonesGridCSS,
@@ -16,7 +17,14 @@ const Milestones = () => {
     <MilestonesCSS>
       <h3>{t("milestones")}</h3>
       {milestonesData.map((x, i, array) => (
-        <TimelineCSS key={i} year={x.year}>
+        <TimelineCSS
+          className={classNames(
+            { firstMilestone: x == array[0] },
+            { lastMilestone: x == array[array.length - 1] }
+          )}
+          key={i}
+          year={x.year}
+        >
           {!!x.year && (
             <YearCSS>
               <div className="dot">

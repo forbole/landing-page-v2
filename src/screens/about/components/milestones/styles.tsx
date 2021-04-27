@@ -46,6 +46,7 @@ export const MilestonesGridCSS = styled.div`
   ${media.bigDesktop`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px 40px;
+    padding: 0 3rem;
   `}
 `;
 
@@ -65,8 +66,24 @@ export const TimelineCSS = styled.div<ITimelineCSS>`
     padding-bottom: 0;
   `}
   ${media.bigDesktop`
-    background-size: 0.2%;
-    display: ${(props) => (props.year ? "flex" : "none")}
+    background-size: 0.25%;
+    display: ${(props) => (props.year ? "flex" : "none")};
+    position: relative;
+    background-clip: border-box;
+    background-position: left 1%;
+    &.firstMilestone {
+      background-size: 0.25%;
+      background-repeat: no-repeat;
+      display: flex;
+      width: 1200px;
+      background-position: left 130px;
+    }
+    &.lastMilestone {
+      background-size: 0.25%;
+      background-image: url(static/images/assets/timeline.png);
+      background-repeat: no-repeat;
+      background-position: left -1775px;
+    }
   `}
 `;
 
@@ -103,9 +120,12 @@ export const YearCSS = styled.div`
   `}
   ${media.bigDesktop`
     margin-left: -1rem;
+    position: absolute;
+    top: 50%;
     h3 {
       padding-left: 0;
       background: ${colors.white};
+      background-image: none;
       width: fit-content;
     }
     .dot {
