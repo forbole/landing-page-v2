@@ -127,6 +127,9 @@ export const YearCSS = styled.div`
       background: ${colors.white};
       background-image: none;
       width: fit-content;
+      height: 4rem;
+      display: flex;
+      align-items: center;
     }
     .dot {
       display: none;
