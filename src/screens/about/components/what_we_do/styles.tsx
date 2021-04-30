@@ -39,19 +39,19 @@ export const WhatWeDoCSS = styled.div`
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
+    // position: relative;
     .max-width-container {
       margin-top: -25rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      padding: 3rem 5rem;
+      justify-content: space-evenly;
+      padding: 0 5rem;
       background: ${colors.white};
       border: 1px solid ${colors.white};
 
       box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
       border-radius: 8px;
       min-height: 70vh;
-      justify-content: space-evenly;
     }
     
     h3 {
@@ -62,6 +62,11 @@ export const WhatWeDoCSS = styled.div`
       line-height: 1.75rem;
       flex-direction: column;
       align-items: center;
+      margin-top: -2rem;
+    }
+
+    .lastP {
+      padding-bottom: 3rem;
     }
 
     ul {
