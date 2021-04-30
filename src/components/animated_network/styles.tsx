@@ -46,9 +46,9 @@ export const NetworkCSS = styled.div`
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    padding: 1rem;
+    padding: 2rem 1rem 1rem;
     transition: 0.5s ease;
-    height: 210px;
+    height: 235px;
     position: relative;
 
     .flex {
@@ -145,7 +145,7 @@ export const NetworkCSS = styled.div`
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: 0;
+          border-radius: 0 0 0.5rem .5rem;
         }
       }
 
