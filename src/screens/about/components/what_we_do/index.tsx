@@ -10,7 +10,7 @@ const WhatWeDo = () => {
       <div className="max-width-container">
         <h3>{t("whatWeDo")}</h3>
         <p>{t("whatWeDoDetailsOne")}</p>
-        <p>{t("whatWeDoDetailsTwo")}</p>
+        <p className="lastP">{t("whatWeDoDetailsTwo")}</p>
         <ul>
           {pillarData.map((x) => (
             <PillarCSS key={x.name}>

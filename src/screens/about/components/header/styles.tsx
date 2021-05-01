@@ -52,9 +52,14 @@ export const HeaderCSS = styled(CoverCSS)`
     height: 70vh;
     background-position: 85% bottom;
     background-size: cover;
+    position: relative;
+    z-index: -1;
 
     .content-container {
       ${mixins.desktopMaxWidth}
+      // position: absolute;
+      // bottom: 0rem;
+      
       width: 100%;
       h2 {
         font-size: 3.75rem;
