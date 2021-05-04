@@ -52,7 +52,7 @@ const logos = {
     denom: "LUNA",
     color: "#2845AE",
     delegate:
-      "https://app.lunie.io/terra/validators/terravaloper1jkqr2vfg4krfd4zwmsf7elfj07cjuzss30ux8g",
+      "https://station.terra.money/validator/terravaloper1jkqr2vfg4krfd4zwmsf7elfj07cjuzss30ux8g",
     heightSocket: "wss://ws.terra.forbole.com",
     calculator: {
       bonded: "https://lcd.terra.bigdipper.live/staking/pool",
