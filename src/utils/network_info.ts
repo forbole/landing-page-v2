@@ -86,6 +86,8 @@ const logos = {
     name: "Sentinel",
     key: "sentinel",
     bigDipper: "https://explorer.sentinel.co/",
+    delegate:
+      "https://explorer.sentinel.co/validator/sentvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0l9e6u8",
   },
   likecoin: {
     image: "/static/images/icons/likecoin.png",
