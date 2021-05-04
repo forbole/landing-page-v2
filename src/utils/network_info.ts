@@ -221,6 +221,7 @@ const logos = {
     name: "V-System",
     key: "v-system",
     color: "#ff8836",
+    delegate: "https://wallet.v.systems/",
   },
   polkadot: {
     image: "/static/images/icons/polkadot.png",

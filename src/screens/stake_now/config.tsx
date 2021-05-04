@@ -28,4 +28,5 @@ export const networkKeys = [
   // "oasis-labs",
   "cosmwasm",
   "crypto.org",
+  "v-system",
 ].sort();
