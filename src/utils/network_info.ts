@@ -119,7 +119,7 @@ const logos = {
     color: "#1e5877",
     bigDipper: "https://e-money.network/",
     delegate:
-      "https://e-money.network/validator/emoneyvaloper1293pqwtzu67zp8txuya4yts03ccw5kgf98hz9y/delegate",
+      "https://wallet.e-money.com/earn/emoneyvaloper1293pqwtzu67zp8txuya4yts03ccw5kgf98hz9y",
     heightSocket: "wss://ws.emoney.forbole.com",
     calculator: {
       bonded: "http://lcd.emoney.forbole.com/staking/pool",
