@@ -18,7 +18,7 @@ export const networkKeys = [
   "bitsongs",
   "solana",
   "celo",
-  "agoric",
+  // "agoric",
   "flow",
   "persistence-one",
   "sharering",
