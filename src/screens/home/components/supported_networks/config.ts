@@ -27,4 +27,5 @@ export const networkKeys = [
   "straightedge",
   "oasis-labs",
   "cosmwasm",
+  "crypto.org",
 ].sort();

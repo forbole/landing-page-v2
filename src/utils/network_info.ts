@@ -284,6 +284,13 @@ const logos = {
     key: "cosmwasm",
     delegate: "https://www.cosmwasm.com/",
   },
+  ["crypto.org"]: {
+    image: "/static/images/icons/crypto-org.svg",
+    name: "Crypto.org",
+    key: "crypto-org",
+    delegate:
+      "https://crypto-org.bigdipper.live/validator/crocncl15xphw2m025acwnjd2ucq9t5ku4ggaqyecekzqa",
+  },
 };
 
 export const getNetworkInfo = (key) => {
