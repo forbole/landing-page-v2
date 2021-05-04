@@ -142,13 +142,13 @@ const logos = {
   },
   iov: {
     image: "/static/images/icons/iov.png",
-    name: "Iov",
+    name: "Starname",
     label: "Iov - IOV",
     key: "iov",
     denom: "IOV",
     color: "#6610f2",
     delegate:
-      "https://big-dipper.iov-mainnet-2.iov.one/validator/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0/delegate",
+      "https://big-dipper.iov-mainnet-2.iov.one/validator/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0",
     heightSocket: "wss://ws.iov.forbole.com",
     calculator: {
       bonded: "http://lcd.iov.forbole.com/staking/pool",
