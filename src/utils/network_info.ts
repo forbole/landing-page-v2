@@ -111,6 +111,8 @@ const logos = {
     name: "Regen Network",
     key: "regen-network",
     bigDipper: "https://explorer.regen.vitwit.com/",
+    delegate:
+      "https://wallet.keplr.app/#/regen/stake?modal=detail&validator=regenvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0c7xhe5",
   },
   ["e-money"]: {
     image: "/static/images/icons/e-money.png",
