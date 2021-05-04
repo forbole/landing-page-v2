@@ -214,6 +214,7 @@ const logos = {
     image: "/static/images/icons/solana.png",
     name: "Solana",
     key: "solana",
+    delegate: "https://solflare.com/",
   },
   ["v-system"]: {
     image: "/static/images/icons/v-system.png",
