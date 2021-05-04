@@ -262,6 +262,8 @@ const logos = {
     image: "/static/images/icons/fetch-ai.png",
     name: "Fetch.ai",
     key: "fetch-ai",
+    delegate:
+      "https://explore.fetch.ai/validator/fetchvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0dzxfx3",
   },
   ["injective-protocol"]: {
     image: "/static/images/icons/injective-protocol.png",
