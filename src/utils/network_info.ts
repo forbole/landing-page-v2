@@ -228,8 +228,7 @@ const logos = {
     image: "/static/images/icons/kusama.png",
     name: "Kusama",
     key: "kusama",
-    delegate:
-      "https://app.lunie.io/kusama/validators/D9rwRxuG8xm8TZf5tgkbPxhhTJK5frCJU9wvp59VRjcMkUf",
+    delegate: "https://polkadot.js.org/apps/#/accounts",
     heightSocket: "wss://kusama-rpc.polkadot.io/",
   },
   celo: {
