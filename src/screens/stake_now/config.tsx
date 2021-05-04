@@ -21,7 +21,7 @@ export const networkKeys = [
   // "agoric",
   "flow",
   // "persistence-one",
-  "sharering",
+  // "sharering",
   "fetch.ai",
   "injective-protocol",
   "straightedge",
