@@ -234,6 +234,7 @@ const logos = {
   },
   celo: {
     image: "/static/images/icons/celo.png",
+    delegate: "https://celo.bigdipper.live/",
     name: "Celo",
     key: "celo",
   },
