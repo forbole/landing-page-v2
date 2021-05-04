@@ -162,6 +162,7 @@ const logos = {
     image: "/static/images/icons/oasis-protocol.png",
     name: "Oasis protocol",
     key: "oasis-protocol",
+    delegate: "https://anthem.chorus.one/networks",
   },
   akash: {
     image: "/static/images/icons/akash.png",
