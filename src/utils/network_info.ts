@@ -247,6 +247,7 @@ const logos = {
     image: "/static/images/icons/flow.png",
     name: "Flow",
     key: "flow",
+    delegate: "https://port.onflow.org/",
   },
   ["persistence-one"]: {
     image: "/static/images/icons/persistence-one.png",
@@ -269,6 +270,7 @@ const logos = {
     image: "/static/images/icons/injective-protocol.png",
     name: "Injective Portocol",
     key: "injective-protocol",
+    delegate: "https://staking.injective.network/connect",
   },
   straightedge: {
     image: "/static/images/icons/straightedge.png",
