@@ -183,9 +183,9 @@ const logos = {
   },
   bitsongs: {
     image: "/static/images/icons/bitsongs.png",
-    delegate: "https://play.bitsong.io/",
     name: "BitSongs",
     key: "bitsongs",
+    delegate: "https://play.bitsong.io/",
   },
   ["band-protocol"]: {
     image: "/static/images/icons/band-protocol.png",
@@ -234,9 +234,9 @@ const logos = {
   },
   celo: {
     image: "/static/images/icons/celo.png",
-    delegate: "https://celo.bigdipper.live/",
     name: "Celo",
     key: "celo",
+    delegate: "https://celo.bigdipper.live/",
   },
   agoric: {
     image: "/static/images/icons/agoric.png",
@@ -277,6 +277,12 @@ const logos = {
     image: "/static/images/icons/oasis-labs.png",
     name: "Oasis Labs",
     key: "oasis-labs",
+  },
+  cosmwasm: {
+    image: "/static/images/icons/cosmwasm.png",
+    name: "CosmWasm",
+    key: "cosmwasm",
+    delegate: "https://www.cosmwasm.com/",
   },
 };
 

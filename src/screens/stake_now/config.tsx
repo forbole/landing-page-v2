@@ -26,4 +26,5 @@ export const networkKeys = [
   "injective-protocol",
   "straightedge",
   "oasis-labs",
+  "cosmwasm",
 ].sort();
