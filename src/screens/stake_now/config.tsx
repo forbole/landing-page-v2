@@ -24,7 +24,7 @@ export const networkKeys = [
   // "sharering",
   "fetch.ai",
   "injective-protocol",
-  "straightedge",
+  // "straightedge",
   // "oasis-labs",
   "cosmwasm",
   "crypto.org",
