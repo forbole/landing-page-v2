@@ -25,7 +25,7 @@ export const networkKeys = [
   "fetch.ai",
   "injective-protocol",
   "straightedge",
-  "oasis-labs",
+  // "oasis-labs",
   "cosmwasm",
   "crypto.org",
 ].sort();
