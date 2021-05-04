@@ -20,7 +20,7 @@ export const networkKeys = [
   "celo",
   // "agoric",
   "flow",
-  "persistence-one",
+  // "persistence-one",
   "sharering",
   "fetch.ai",
   "injective-protocol",
