@@ -183,6 +183,7 @@ const logos = {
   },
   bitsongs: {
     image: "/static/images/icons/bitsongs.png",
+    delegate: "https://play.bitsong.io/",
     name: "BitSongs",
     key: "bitsongs",
   },
