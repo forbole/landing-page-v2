@@ -82,6 +82,7 @@ export const ForboleStakesCSS = styled.div`
     }
     h1 {
       font-size: 4rem;
+      display: flex;
     }
   `}
 `;
