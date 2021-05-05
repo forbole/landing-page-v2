@@ -1,12 +1,15 @@
 import React from "react";
 import { useTranslation } from "i18n";
+import { config } from "react-spring";
 import ReactLoading from "react-loading";
+import AnimatedNumber from "react-animated-numbers";
 import {
   ForboleStakesCSS,
   CarouselDesktopContainerCSS,
   FlexContainerCSS,
   StakeNowContainerCSS,
 } from "./styles";
+import { moneyToInt } from "@utils/convert_to_money";
 import { CarouselNetworks } from "./components";
 import { useForboleStakesHook } from "./hooks";
 import { INetworkDataProps } from "./interfaces";
@@ -51,7 +54,15 @@ const ForboleStakes = () => {
             width={"5%"}
           />
         ) : (
-          <h1>${totalUSD}</h1>
+          <h1>
+            $
+            <AnimatedNumber
+              animateToNumber={moneyToInt(totalUSD)}
+              includeComma
+              config={config.stiff}
+              animationType={"random"}
+            />
+          </h1>
         )}
       </ForboleStakesCSS>
       <FlexContainerCSS>

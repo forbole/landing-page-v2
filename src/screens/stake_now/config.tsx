@@ -11,7 +11,7 @@ export const networkKeys = [
   "regen-network",
   "band-protocol",
   "akash",
-  "starname",
+  "iov",
   "kusama",
   "sentinel",
   "oasis-protocol",
