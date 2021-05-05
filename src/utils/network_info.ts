@@ -144,7 +144,7 @@ const logos = {
     name: "Cyberd",
     key: "cyberd",
   },
-  iov: {
+  starname: {
     image: "/static/images/icons/iov.png",
     name: "Starname",
     label: "Iov - IOV",

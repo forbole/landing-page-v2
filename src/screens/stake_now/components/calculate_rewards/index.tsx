@@ -23,6 +23,7 @@ const CalculateRewards = () => {
         <h2>{t("calculateRewards")}</h2>
         <div className="main-content">
           <Networks
+            key={selectedToken}
             selectedToken={selectedToken}
             setSelectedToken={setSelectedToken}
           />
