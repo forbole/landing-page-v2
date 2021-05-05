@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { convertToMoney } from "@utils/convert_to_money";
+import ReactLoading from "react-loading";
 import {
   ForboleStakesCSS,
   CarouselDesktopContainerCSS,
@@ -26,7 +26,6 @@ const ForboleStakes = () => {
     iris,
     vsys,
     totalUSD,
-    selected,
   }: any = hookProps;
   const networkData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub" },
@@ -44,10 +43,15 @@ const ForboleStakes = () => {
     <StakeNowContainerCSS>
       <ForboleStakesCSS>
         <p>{t("tokensStakedWithForbole")}</p>
-        {isNaN(totalUSD) ? (
-          <h1>${" " + "---"}</h1>
+        {totalUSD == 0 ? (
+          <ReactLoading
+            type={"bars"}
+            color={"#FFF"}
+            height={"5%"}
+            width={"5%"}
+          />
         ) : (
-          <h1>${convertToMoney(totalUSD)}</h1>
+          <h1>${totalUSD}</h1>
         )}
       </ForboleStakesCSS>
       <FlexContainerCSS>

@@ -4,35 +4,36 @@ import axios from "axios";
 import * as R from "ramda";
 import { getNetworkInfo } from "@utils/network_info";
 import { networkFunctions } from "../../utils";
-import { convertToMoney, moneyToInt } from "@utils/convert_to_money";
+import { convertToMoney } from "@utils/convert_to_money";
 import { cosmosData, vsysData } from "./config";
 
 export const useForboleStakesHook = () => {
-  const [selected, setSelected] = useState(0);
+  const [totalUSD, setNetworkUSD] = useState(0);
 
   // Cosmos-Based Networks
   const cosmosBasedNetwork = [];
   for (let i = 0; i < cosmosData.length; i++) {
     cosmosBasedNetwork.push({
       title: cosmosData[i].title ?? null,
-      totalToken: "---",
-      totalMarketValue: "---",
-      currentMarketValue: "---",
+      totalToken: 0,
+      totalUSDPrice: 0,
+      totalMarketValue: 0,
+      currentMarketValue: 0,
       denom: cosmosData[i].denom ?? null,
       voting: {
         title: "votingPower",
-        token: "---",
-        percent: "---",
+        token: 0,
+        percent: 0,
       },
       selfDelegations: {
         title: "selfDelegations",
-        token: "---",
-        percent: "---",
+        token: 0,
+        percent: 0,
       },
       otherDelegations: {
         title: "otherDelegations",
-        token: "---",
-        percent: "---",
+        token: 0,
+        percent: 0,
       },
     });
   }
@@ -89,6 +90,7 @@ export const useForboleStakesHook = () => {
 
       const bonded = networkFunction?.bonded(bondedJson);
       const currentMarketValue = networkFunction.marketPrice(marketPriceJson);
+      const totalUSDPrice = currentMarketValue * totalToken;
       const totalMarketValue = convertToMoney(currentMarketValue * totalToken);
       const votingPowerPercent = convertToMoney((totalToken / bonded) * 100, 2);
       //==========================
@@ -98,18 +100,6 @@ export const useForboleStakesHook = () => {
       let totalSelfDelegations = 0;
 
       for (let i = 0; i < cosmosData[x].validator_address.length; i++) {
-        // const totalSelfDelegation = networkFunction?.converter(
-        //   R.pathOr([], ["result"], delegationsJson)
-        //     .filter(
-        //       (y) =>
-        //         y?.[cosmosData[x]?.address ?? null] ===
-        //           cosmosData[x]?.validator_address[i] ?? null
-        //     )
-        //     .reduce(
-        //       (a, b) => (a += Number(b?.balance?.amount ?? b?.balance) ?? 0.0),
-        //       totalSelfDelegations ?? 0.0
-        //     )
-        // );
         const totalSelfDelegation = networkFunction?.converter(
           R.pathOr([""], ["result"], delegationsJson)
             .filter((y) =>
@@ -149,6 +139,7 @@ export const useForboleStakesHook = () => {
           title: cosmosData[x]?.title,
           denom: cosmosData[x]?.denom,
           totalToken: totalTokenFormat,
+          totalUSDPrice,
           totalMarketValue,
           currentMarketValue,
           voting: {
@@ -171,6 +162,7 @@ export const useForboleStakesHook = () => {
           title: cosmosData[x]?.title,
           denom: cosmosData[x]?.denom,
           totalToken: totalTokenFormat,
+          totalUSDPrice,
           totalMarketValue,
           currentMarketValue,
           voting: {
@@ -250,24 +242,25 @@ export const useForboleStakesHook = () => {
   // V System
   const [vsys, setVSYS] = useState({
     title: vsysData[0].title,
-    totalToken: "---",
-    totalMarketValue: "---",
-    currentMarketValue: "---",
+    totalToken: 0,
+    totalUSDPrice: 0,
+    totalMarketValue: 0,
+    currentMarketValue: 0,
     denom: vsysData[0].denom,
     voting: {
       title: "votingPower",
-      token: "---",
-      percent: "---",
+      token: 0,
+      percent: 0,
     },
     selfDelegations: {
       title: "selfDelegations",
-      token: "---",
-      percent: "---",
+      token: 0,
+      percent: 0,
     },
     otherDelegations: {
       title: "otherDelegations",
-      token: "---",
-      percent: "---",
+      token: 0,
+      percent: 0,
     },
   });
 
@@ -308,6 +301,7 @@ export const useForboleStakesHook = () => {
     const bondedTokens = bonded / 100000000;
 
     const currentMarketValue = networkFunction.marketPrice(marketPriceJson);
+    const totalUSDPrice = currentMarketValue * totalVSYStokens;
     const totalMarketValue = convertToMoney(
       currentMarketValue * totalVSYStokens
     );
@@ -343,6 +337,7 @@ export const useForboleStakesHook = () => {
       R.mergeDeepLeft(
         {
           totalToken: totalVSYSFormat,
+          totalUSDPrice,
           totalMarketValue,
           currentMarketValue,
           voting: {
@@ -363,26 +358,28 @@ export const useForboleStakesHook = () => {
     );
   };
 
-  const [totalUSD, setNetworkUSD]: any = useState(0);
-
   const getNetworkUSD = async () => {
-    const cosmosNetworkTotalUSD = await cosmosNetwork
-      .map((x) => moneyToInt(x.totalMarketValue))
+    const network = [
+      cosmos,
+      terra,
+      kava,
+      likecoin,
+      iov,
+      band,
+      akash,
+      emoney,
+      vsys,
+    ];
+    const totalUSD = network
+      .map((x) => x.totalUSDPrice)
       .reduce((a, b) => (a += b));
+    const displayUSD = convertToMoney(totalUSD);
 
-    const vsysTotalUSD = await moneyToInt(vsys.totalMarketValue);
-
-    // const irisTotalUSD = await moneyToInt(iris.totalMarketValue);
-
-    const totalUSD = cosmosNetworkTotalUSD + vsysTotalUSD;
-
-    setNetworkUSD(totalUSD);
+    setNetworkUSD(displayUSD);
   };
 
   useEffect(() => {
-    getCosmosBasedNetwork()
-      // .then(() => getIrisNetwork())
-      .then(() => getVSYSNetwork());
+    getCosmosBasedNetwork().then(() => getVSYSNetwork());
   }, []);
 
   useEffect(() => {
@@ -391,7 +388,7 @@ export const useForboleStakesHook = () => {
     } catch (err) {
       console.log(err);
     }
-  }, [cosmosNetwork, vsys]);
+  }, [cosmos, terra, kava, likecoin, iov, band, akash, emoney, vsys]);
 
   return {
     cosmos,
@@ -406,7 +403,5 @@ export const useForboleStakesHook = () => {
     iris,
     vsys,
     totalUSD,
-    selected,
-    setSelected,
   };
 };
