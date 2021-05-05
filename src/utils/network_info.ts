@@ -292,6 +292,7 @@ const logos = {
     name: "CosmWasm",
     key: "cosmwasm",
     delegate: "https://www.cosmwasm.com/",
+    disable: true,
   },
   ["crypto.org"]: {
     image: "/static/images/icons/crypto-org.svg",

@@ -17,7 +17,6 @@ export const networkKeys = [
   "oasis-protocol",
   "bitsongs",
   "solana",
-  "celo",
   // "agoric",
   "flow",
   // "persistence-one",
@@ -26,7 +25,7 @@ export const networkKeys = [
   "injective-protocol",
   // "straightedge",
   // "oasis-labs",
-  "cosmwasm",
+  // "cosmwasm",
   "crypto.org",
   "v-system",
 ].sort();

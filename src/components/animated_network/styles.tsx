@@ -38,6 +38,10 @@ export const NetworkCSS = styled.div`
     }
   }
 
+  .ui.button.disabled {
+    background: rgba(152, 152, 152, 1);
+  }
+
   ${media.tablet`
     padding: 2rem 1rem;
   `}

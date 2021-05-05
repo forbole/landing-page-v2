@@ -8,12 +8,12 @@ import {
   HeaderContentCSS,
   NetworkListCSS,
 } from "./styles";
-import { useSupportedNetworkHook } from "./hooks";
+// import { useSupportedNetworkHook } from "./hooks";
 
 const SupportedNetworks = () => {
   const { t } = useTranslation("home");
   const networkData = networkKeys.map((x) => getNetworkInfo(x));
-  const { state } = useSupportedNetworkHook();
+  // const { state } = useSupportedNetworkHook();
 
   return (
     <SupportedNetworksCSS>
@@ -27,7 +27,8 @@ const SupportedNetworks = () => {
             key={x.key}
             name={x?.name}
             image={x?.image}
-            amount={state[x.key]}
+            disable={x?.disable}
+            // amount={state[x.key]}
             delegate={x?.delegate}
           />
         ))}
