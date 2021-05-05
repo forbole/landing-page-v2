@@ -29,6 +29,8 @@ export const useCalculateRewardsHook = (t: any) => {
   });
 
   const handleDefaultCalculation = async () => {
+    console.log(`selected`, selectedToken, networkFunctions[selectedToken]);
+
     const networkFunction = networkFunctions[selectedToken] ?? null;
     if (!selectedToken || !tokens?.value || !networkFunction) {
       throw new Error();
