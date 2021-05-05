@@ -5,5 +5,5 @@ export const calculatorKeys = [
   "likecoin",
   "band-protocol",
   "akash",
-  "starname",
+  "iov",
 ].sort();
