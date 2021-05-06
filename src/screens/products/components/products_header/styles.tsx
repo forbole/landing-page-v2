@@ -43,7 +43,7 @@ export const ProductsHeaderCSS = styled.div`
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 10rem;
+    padding: 8rem;
     background-position: 0px -200px;
     background-size: cover;
     height: 90vh;
