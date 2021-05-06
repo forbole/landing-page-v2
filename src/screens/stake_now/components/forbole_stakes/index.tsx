@@ -16,6 +16,7 @@ import { INetworkDataProps } from "./interfaces";
 
 const ForboleStakes = () => {
   const { t } = useTranslation("stake_now");
+
   const hookProps = useForboleStakesHook();
   const {
     cosmos,

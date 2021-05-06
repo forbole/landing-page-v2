@@ -138,6 +138,7 @@ export const useForboleStakesHook = () => {
         updatedArr.push({
           title: cosmosData[x]?.title,
           denom: cosmosData[x]?.denom,
+          network: cosmosData[x]?.network,
           totalToken: totalTokenFormat,
           totalUSDPrice,
           totalMarketValue,
@@ -161,6 +162,7 @@ export const useForboleStakesHook = () => {
         let state = {
           title: cosmosData[x]?.title,
           denom: cosmosData[x]?.denom,
+          network: cosmosData[x]?.network,
           totalToken: totalTokenFormat,
           totalUSDPrice,
           totalMarketValue,
@@ -218,6 +220,7 @@ export const useForboleStakesHook = () => {
           totalMarketValue: "0.00",
           currentMarketValue: "0.00",
           denom: cosmosData[x].denom ?? null,
+          network: cosmosData[x]?.network ?? null,
           voting: {
             title: "votingPower",
             token: 0,
@@ -247,6 +250,7 @@ export const useForboleStakesHook = () => {
     totalMarketValue: 0,
     currentMarketValue: 0,
     denom: vsysData[0].denom,
+    network: vsysData[0]?.network,
     voting: {
       title: "votingPower",
       token: 0,
