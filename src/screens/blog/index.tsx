@@ -13,7 +13,7 @@ const Blog = (props: any) => {
   useBlogHook(error, t);
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    if (posts.length > 0 && posts[0].featureImage && sidePosts.length > 0) {
+    if (posts.length > 0 && posts[0] && sidePosts.length > 0) {
       setLoading(false);
     }
   }, [props]);
