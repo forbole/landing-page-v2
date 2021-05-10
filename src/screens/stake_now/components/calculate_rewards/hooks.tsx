@@ -12,7 +12,7 @@ export const useCalculateRewardsHook = (t: any) => {
     value: "",
     display: "",
   });
-  const [selectedToken, setSelectedToken] = useState<any>("cosmos");
+  const [selectedToken, setSelectedToken] = useState<any>("");
   const [totalEarnings, setTotalEarnings] = useState({
     dailyEarnings: {
       tokens: "0",

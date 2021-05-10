@@ -75,8 +75,8 @@ const imageStyles = (value) => ({
       },
     };
   },
-  input: (styles) => ({ ...styles, ...image(value.image) }),
-  placeholder: (styles) => ({ ...styles, ...image(value.image) }),
+  input: (styles) => ({ ...styles }),
+  placeholder: (styles) => ({ ...styles }),
   singleValue: (styles, { data }) => ({ ...styles, ...image(data.image) }),
 });
 
@@ -84,7 +84,6 @@ const Networks = (props: INetworkProps) => {
   const { t } = useTranslation("stake_now");
   const { selectedToken, setSelectedToken } = props;
   const networkData = calculatorKeys.map((x) => getNetworkInfo(x));
-  const [selectedOption, setSelectedOption] = useState(networkData[0]);
 
   const displayItem = (selected) => {
     const item = networkData.find((x) => x.name === selected.name);
@@ -92,7 +91,6 @@ const Networks = (props: INetworkProps) => {
   };
 
   const onChange = (e) => {
-    setSelectedOption(e);
     setSelectedToken(e);
   };
 
@@ -101,11 +99,15 @@ const Networks = (props: INetworkProps) => {
       <ParagraphTitleCSS>{t("selectNetwork")}</ParagraphTitleCSS>
       <NoSSR>
         <Select
-          placeholder={selectedOption}
+          placeholder={
+            selectedToken == "" ? "Please Select ..." : selectedToken
+          }
           options={networkData}
-          styles={imageStyles(selectedOption)}
+          styles={imageStyles(selectedToken)}
           onChange={onChange}
-          value={displayItem(selectedOption)}
+          value={
+            selectedToken == "" ? "Please Select" : displayItem(selectedToken)
+          }
         />
       </NoSSR>
       <NetworkChoicesCSS>
@@ -114,7 +116,6 @@ const Networks = (props: INetworkProps) => {
             key={x.name}
             onClick={() => {
               setSelectedToken(x);
-              setSelectedOption(x);
             }}
             className={classNames({ active: x == selectedToken })}
           >
