@@ -16,7 +16,7 @@ const image = (image) => ({
   ":before": {
     background: `url(${image})`,
     content: '" "',
-    display: "block",
+    display: image == "none" ? "none" : "block",
     marginRight: 8,
     height: 30,
     width: 30,
@@ -75,8 +75,8 @@ const imageStyles = (value) => ({
       },
     };
   },
-  input: (styles) => ({ ...styles }),
-  placeholder: (styles) => ({ ...styles }),
+  input: (styles) => ({ ...styles, ...image(value.image) }),
+  placeholder: (styles) => ({ ...styles, ...image("none") }),
   singleValue: (styles, { data }) => ({ ...styles, ...image(data.image) }),
 });
 
