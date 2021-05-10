@@ -4,6 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { convertToMoney, convertWithDecimal } from "@utils/convert_to_money";
 import { getNetworkInfo } from "@utils/network_info";
+import { getStakingParams } from "./config";
 import { networkFunctions, toFixed } from "../../utils";
 
 export const useCalculateRewardsHook = (t: any) => {
@@ -12,7 +13,8 @@ export const useCalculateRewardsHook = (t: any) => {
     value: "",
     display: "",
   });
-  const [selectedToken, setSelectedToken] = useState<string | null>("cosmos");
+  console.log(tokens);
+  const [selectedToken, setSelectedToken] = useState<any>("cosmos");
   const [totalEarnings, setTotalEarnings] = useState({
     dailyEarnings: {
       tokens: "0",
@@ -29,9 +31,12 @@ export const useCalculateRewardsHook = (t: any) => {
   });
 
   const handleDefaultCalculation = async () => {
-    console.log(`selected`, selectedToken, networkFunctions[selectedToken]);
-
-    const networkFunction = networkFunctions[selectedToken] ?? null;
+    console.log(selectedToken);
+    const networkFunction = networkFunctions[selectedToken.key] ?? null;
+    const networkParams = getStakingParams(selectedToken.key);
+    console.log(networkFunction, networkParams);
+    //const { commissionRate, inflation, stakingRatio } = networkParams;
+    //console.log(commissionRate, inflation, stakingRatio );
     if (!selectedToken || !tokens?.value || !networkFunction) {
       throw new Error();
     }
@@ -125,6 +130,7 @@ export const useCalculateRewardsHook = (t: any) => {
     try {
       setLoading(true);
       await handleDefaultCalculation();
+      console.log(`selected`, selectedToken, networkFunctions[selectedToken]);
       setLoading(false);
     } catch (err) {
       toast.error(t("error"));
