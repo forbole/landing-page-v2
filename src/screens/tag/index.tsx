@@ -19,7 +19,7 @@ const TagTitlePosts = (props: any) => {
   } = props;
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    if (post.length > 0 && post[0].featureImage && sidePosts.length > 0) {
+    if (post.length > 0 && sidePosts.length > 0) {
       setLoading(false);
     }
   }, [props]);

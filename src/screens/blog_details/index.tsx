@@ -79,7 +79,7 @@ const BlogDetails = ({ post, raw }: any) => {
 
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    if (excerpt && featureImage && html) {
+    if (excerpt && html) {
       setLoading(false);
     }
   }, [post]);
