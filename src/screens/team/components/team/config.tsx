@@ -104,6 +104,17 @@ export const membersData = [
     slug: "leo",
   },
   {
+    name: "Manuel Turetta ",
+    position: "swe",
+    image: "/static/images/team/manuel.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/manuel-turetta-9b3272160/",
+      twitter: "https://twitter.com/TurettaManuel",
+      github: "https://github.com/manu0466",
+    },
+    slug: "manuel",
+  },
+  {
     name: "Rachel Ho",
     position: "swe",
     image: "/static/images/team/rachel.jpg",
