@@ -43,6 +43,7 @@ export const ForboleStakesCSS = styled.div`
     font-size: 2rem;
     color: white;
     font-weight: 500;
+    display: flex;
   }
   .ui.loader {
     position: relative !important;
@@ -82,7 +83,6 @@ export const ForboleStakesCSS = styled.div`
     }
     h1 {
       font-size: 4rem;
-      display: flex;
     }
   `}
 `;

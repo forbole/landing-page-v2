@@ -9,7 +9,6 @@ import {
 import useWindowSize from "@utils/get_screen_size";
 import NetworkBlock from "../network_block";
 import { Next } from "@icons";
-import { networkFunctions } from "@src/screens/stake_now/utils";
 
 const ButtonGroup = (props: any) => {
   const { next, previous } = props;
@@ -103,6 +102,7 @@ const CarouselNetworks = ({ network }: any) => {
               token={x.network?.totalToken}
               percent={x.network?.voting?.percent}
               active={i == activeItem ? true : false}
+              network={x.network?.network}
             />
           ))}
         </Carousel>

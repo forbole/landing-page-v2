@@ -2,6 +2,7 @@ import React from "react";
 import ReactLoading from "react-loading";
 import classNames from "classnames";
 import { useTranslation } from "i18n";
+import { getNetworkInfo } from "@src/utils/network_info";
 import { BlockCSS, FlexCSS, PercentCSS, Button } from "./styles";
 
 const NetworkBlock = (props: any) => {
@@ -13,9 +14,11 @@ const NetworkBlock = (props: any) => {
     percent,
     usd,
     denom,
-    delegate = process.env.NEXT_PUBLIC_URL,
+    network,
   } = props;
   const { t } = useTranslation("stake_now");
+  const networkInfo: any = getNetworkInfo(network);
+  const delegate = networkInfo.delegate;
 
   return (
     <a href={delegate} target="_blank" rel="noreferrer">

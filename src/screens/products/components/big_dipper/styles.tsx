@@ -13,6 +13,7 @@ export const BigDipperCSS = styled.span`
   }
   ${media.bigDesktop`
   ${mixins.desktopPadding}
+  padding-top: 8rem;
   padding-bottom: 7rem;
   background: url("/static/images/assets/bigdipper-backgroud.svg");
   background-repeat: no-repeat;

@@ -119,7 +119,7 @@ export const vsysData = [
   {
     title: "V Systems",
     name: "vsys",
-    network: "vsys",
+    network: ["v-system"],
     denom: "VSYS",
     address: "delegator_address",
     bondedApi: "https://api.vsys.forbole.com/consensus/allSlotsInfo",
