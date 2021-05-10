@@ -27,6 +27,10 @@ const AuthorTitlePosts = (props: any) => {
     if (post && sidePosts.length > 0) {
       setLoading(false);
     }
+    post.map((x) => {
+      if (x.featureImage == null)
+        x.featureImage = "/static/images/assets/blog-placeholder.png";
+    });
   }, [props]);
   if (isLoading) {
     return (
