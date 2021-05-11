@@ -31,6 +31,7 @@ const CalculateRewards = () => {
             handleCalculations={handleCalculations}
             totalEarnings={totalEarnings}
             handleChange={handleChange}
+            selectedToken={selectedToken}
             tokens={tokens}
             loading={loading}
           />
