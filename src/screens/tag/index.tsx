@@ -22,6 +22,10 @@ const TagTitlePosts = (props: any) => {
     if (post.length > 0 && sidePosts.length > 0) {
       setLoading(false);
     }
+    post.map((x) => {
+      if (x.featureImage == null)
+        x.featureImage = "/static/images/assets/blog-placeholder.png";
+    });
   }, [props]);
   const { t } = useTranslation("blog");
   useBlogHook(error, t);
