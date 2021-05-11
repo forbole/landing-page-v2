@@ -99,9 +99,7 @@ const Networks = (props: INetworkProps) => {
       <ParagraphTitleCSS>{t("selectNetwork")}</ParagraphTitleCSS>
       <NoSSR>
         <Select
-          placeholder={
-            selectedToken == "" ? "Please Select ..." : selectedToken
-          }
+          placeholder={selectedToken == "" ? "Please Select..." : selectedToken}
           options={networkData}
           styles={imageStyles(selectedToken)}
           onChange={onChange}

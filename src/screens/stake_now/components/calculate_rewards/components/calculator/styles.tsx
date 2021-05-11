@@ -29,7 +29,9 @@ export const Input = styled(SemenaticInput)`
       border-radius: 0rem 0.25rem 0.25rem 0rem;
       &:hover {
         background: ${(props) =>
-          props.selectedtoken == "disabled" ? colors.gray600 : colors.black};
+          props.selectedtoken == "disabled" ? colors.gray400 : colors.black};
+        cursor: ${(props) =>
+          props.selectedtoken == "disabled" ? "not-allowed" : "pointer"};
       }
     }
     > input {
