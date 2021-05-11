@@ -3,7 +3,7 @@ import * as R from "ramda";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { convertToMoney, convertWithDecimal } from "@utils/convert_to_money";
-import { getNetworkInfo } from "@utils/network_info";
+import { getStakingParams } from "./config";
 import { networkFunctions, toFixed } from "../../utils";
 
 export const useCalculateRewardsHook = (t: any) => {
@@ -12,7 +12,7 @@ export const useCalculateRewardsHook = (t: any) => {
     value: "",
     display: "",
   });
-  const [selectedToken, setSelectedToken] = useState<string | null>("cosmos");
+  const [selectedToken, setSelectedToken] = useState<any>("");
   const [totalEarnings, setTotalEarnings] = useState({
     dailyEarnings: {
       tokens: "0",
@@ -29,70 +29,28 @@ export const useCalculateRewardsHook = (t: any) => {
   });
 
   const handleDefaultCalculation = async () => {
-    const networkFunction = networkFunctions[selectedToken] ?? null;
-    if (!selectedToken || !tokens?.value || !networkFunction) {
+    const networkFunction = networkFunctions[selectedToken.key] ?? null;
+    const networkParams = getStakingParams(selectedToken.key);
+    const { commissionRate, inflation, stakingRatio } = networkParams;
+    if (!selectedToken || !tokens?.value) {
       throw new Error();
     }
-    // get the selected token
-    const { calculator } = getNetworkInfo(selectedToken);
-    // check it has all the links we need
-    if (
-      !calculator.bonded ||
-      !calculator.inflation ||
-      !calculator.supply ||
-      !calculator.stakingParams
-    ) {
-      throw new Error();
-    }
-    // ===============================
-    // calculations start here
-    // ===============================
-    const bondedApi = axios.post("/api/proxy", {
-      url: calculator.bonded,
-    });
 
-    const inflationApi = axios.post("/api/proxy", {
-      url: calculator.inflation,
-    });
+    const marketPriceApi = await axios.get(networkFunction?.gecko);
 
-    const supplyApi = axios.post("/api/proxy", {
-      url: calculator.supply,
-    });
+    const { data: marketPriceJson } = marketPriceApi;
 
-    const stakingParamsApi = axios.post("/api/proxy", {
-      url: calculator.stakingParams,
-    });
-
-    const marketPriceApi = axios.get(networkFunction?.gecko);
-
-    const promises = [
-      bondedApi,
-      inflationApi,
-      supplyApi,
-      stakingParamsApi,
-      marketPriceApi,
-    ];
-    const [
-      { data: bondedJson },
-      { data: inflationJson },
-      { data: supplyJson },
-      { data: stakingParamsJson },
-      { data: marketPriceJson },
-    ] = await Promise.all(promises);
-
-    const bonded = networkFunction?.bonded(bondedJson);
-    const inflation = networkFunction?.inflation(inflationJson);
-    const supply = networkFunction?.supply(supplyJson);
-    const commissionRate = networkFunction?.commissionRate(stakingParamsJson);
     const marketPrice = networkFunction.marketPrice(marketPriceJson);
     // ===============================
     // raw calcs
     // ===============================
     const annualRewards = toFixed(
-      ((tokens?.value * inflation) / (bonded / supply)) * (1 - commissionRate)
+      ((tokens?.value * inflation) / (inflation / stakingRatio)) *
+        (1 - commissionRate)
     );
     const monthlyRewards = annualRewards / 12;
     const dailyRewards = monthlyRewards / 30;
+
     // ===============================
     // formats for display
     // ===============================

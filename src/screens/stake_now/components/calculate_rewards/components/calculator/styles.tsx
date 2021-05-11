@@ -16,7 +16,8 @@ export const Input = styled(SemenaticInput)`
   &.ui.input {
     width: 100%;
     .ui.button {
-      background: ${colors.black};
+      background: ${(props) =>
+        props.selectedtoken == "disabled" ? colors.gray400 : colors.black};
       color: white;
       font-weight: 300;
       transition: 0.2s;
@@ -27,7 +28,10 @@ export const Input = styled(SemenaticInput)`
       justify-content: center;
       border-radius: 0rem 0.25rem 0.25rem 0rem;
       &:hover {
-        background: black;
+        background: ${(props) =>
+          props.selectedtoken == "disabled" ? colors.gray400 : colors.black};
+        cursor: ${(props) =>
+          props.selectedtoken == "disabled" ? "not-allowed" : "pointer"};
       }
     }
     > input {

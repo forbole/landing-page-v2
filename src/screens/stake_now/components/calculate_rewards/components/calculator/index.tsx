@@ -12,6 +12,7 @@ const Calculator = (props: ICalculatorProp) => {
     handleCalculations,
     totalEarnings,
     handleChange,
+    selectedToken,
     tokens,
     loading,
   } = props;
@@ -20,7 +21,9 @@ const Calculator = (props: ICalculatorProp) => {
     <CalculatorCSS>
       <ParagraphTitleCSS>{t("enterTokens")}</ParagraphTitleCSS>
       <Input
+        selectedtoken={typeof selectedToken == "string" ? "disabled" : "active"}
         fluid
+        disabled={typeof selectedToken == "string" ? true : false}
         onChange={handleChange}
         placeholder={"0 Amount"}
         action={{

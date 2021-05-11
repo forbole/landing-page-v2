@@ -9,14 +9,14 @@ import { NetworksCSS, Button, NetworkChoicesCSS } from "./styles";
 import { INetworkProps } from "./interfaces";
 import { ParagraphTitleCSS } from "../../styles";
 
-const image = (image = "/static/images/icons/cosmos-hub.png") => ({
+const image = (image) => ({
   alignItems: "center",
   display: "flex",
 
   ":before": {
     background: `url(${image})`,
     content: '" "',
-    display: "block",
+    display: image == "none" ? "none" : "block",
     marginRight: 8,
     height: 30,
     width: 30,
@@ -24,8 +24,8 @@ const image = (image = "/static/images/icons/cosmos-hub.png") => ({
   },
 });
 
-const imageStyles = {
-  control: (styles) => ({ ...styles, background: "white" }),
+const imageStyles = (value) => ({
+  control: (provided, state) => ({ ...provided, background: "white" }),
   option: (styles, { data, isDisabled, isFocused, isSelected }) => {
     const color = data.color;
     return {
@@ -75,24 +75,23 @@ const imageStyles = {
       },
     };
   },
-  input: (styles) => ({ ...styles, ...image() }),
-  placeholder: (styles) => ({ ...styles, ...image() }),
+  input: (styles) => ({ ...styles, ...image(value.image) }),
+  placeholder: (styles) => ({ ...styles, ...image("none") }),
   singleValue: (styles, { data }) => ({ ...styles, ...image(data.image) }),
-};
+});
 
 const Networks = (props: INetworkProps) => {
   const { t } = useTranslation("stake_now");
   const { selectedToken, setSelectedToken } = props;
   const networkData = calculatorKeys.map((x) => getNetworkInfo(x));
-  const [selectedOption, setSelectedOption] = useState(networkData[2]);
 
-  const handleOnChange = (data) => {
-    for (let i = 0; i < networkData.length; i++) {
-      if (data.key == networkData[i].key) {
-        setSelectedOption(data.key);
-        setSelectedToken(data.key);
-      }
-    }
+  const displayItem = (selected) => {
+    const item = networkData.find((x) => x.name === selected.name);
+    return item ? item : { name: "", label: "" };
+  };
+
+  const onChange = (e) => {
+    setSelectedToken(e);
   };
 
   return (
@@ -100,11 +99,13 @@ const Networks = (props: INetworkProps) => {
       <ParagraphTitleCSS>{t("selectNetwork")}</ParagraphTitleCSS>
       <NoSSR>
         <Select
-          defaultValue={selectedOption}
-          placeholder={selectedOption}
-          onChange={handleOnChange}
+          placeholder={selectedToken == "" ? "Please Select..." : selectedToken}
           options={networkData}
-          styles={imageStyles}
+          styles={imageStyles(selectedToken)}
+          onChange={onChange}
+          value={
+            selectedToken == "" ? "Please Select" : displayItem(selectedToken)
+          }
         />
       </NoSSR>
       <NetworkChoicesCSS>
@@ -112,10 +113,9 @@ const Networks = (props: INetworkProps) => {
           <Button
             key={x.name}
             onClick={() => {
-              setSelectedToken(x.key);
-              setSelectedOption(x.key);
+              setSelectedToken(x);
             }}
-            className={classNames({ active: x.key == selectedToken })}
+            className={classNames({ active: x == selectedToken })}
           >
             <p>{x.denom}</p>
           </Button>
