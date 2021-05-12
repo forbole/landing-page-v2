@@ -16,6 +16,7 @@ import Block from "./block.svg";
 import Award from "./award.svg";
 import Go from "./go.svg";
 import Next from "./next.svg";
+import Disclaimer from "./disclaimer.svg";
 
 export {
   Telegram,
@@ -36,4 +37,5 @@ export {
   Award,
   Go,
   Next,
+  Disclaimer,
 };
