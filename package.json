@@ -43,6 +43,7 @@
     "react-spring": "^8.0.27",
     "react-toastify": "^6.0.9",
     "react-twitter-embed": "^3.0.3",
+    "reactjs-popup": "^2.0.4",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.1.1",
     "validator": "^13.1.17"
