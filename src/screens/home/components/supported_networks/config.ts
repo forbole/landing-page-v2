@@ -28,4 +28,6 @@ export const networkKeys = [
   "cosmwasm",
   "crypto.org",
   "v-system",
+  "moonriver",
+  "moonbeam",
 ].sort();

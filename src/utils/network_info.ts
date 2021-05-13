@@ -301,6 +301,20 @@ const logos = {
     delegate:
       "https://crypto-org.bigdipper.live/validator/crocncl15xphw2m025acwnjd2ucq9t5ku4ggaqyecekzqa",
   },
+  moonriver: {
+    image: "/static/images/icons/moonriver.png",
+    name: "Moonriver",
+    key: "moonriver",
+    delegate: "",
+    disable: true,
+  },
+  moonbeam: {
+    image: "/static/images/icons/moonbeam.png",
+    name: "Moonbeam",
+    key: "moonbeam",
+    delegate: "",
+    disable: true,
+  },
 };
 
 export const getNetworkInfo = (key) => {
