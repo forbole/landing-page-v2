@@ -4,6 +4,10 @@ import { theme, mixins, media } from "@styles";
 const { colors } = theme;
 export const CalculateRewardsCSS = styled.div`
   background: ${colors.white};
+  .disclaimerIcon {
+    border: none;
+    background: transparent;
+  }
 
   ${media.bigDesktop`
     display: flex;
