@@ -24,6 +24,7 @@ export const MilestonesCSS = styled.div`
     min-height: 100vh;
     h3 {
       font-size: 2.5rem;
+      font-weight: 200;
       margin-bottom: 1.5rem;
       width: 100%;
     }

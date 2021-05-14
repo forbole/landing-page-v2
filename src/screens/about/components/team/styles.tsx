@@ -12,16 +12,19 @@ export const TeamCSS = styled.div`
 
 export const TeamHeadingContainerCSS = styled.div`
   margin-bottom: 1rem;
+  padding: 2.5rem 0.5rem 1.5rem;
   h3 {
+    font-weight: 400;
+    font-size: 2rem;
     margin-bottom: 0.5rem;
-    font-weight: 200;
-    font-size: 1.5rem;
-    padding: 2rem 1rem 0rem;
   }
 
   ${media.bigDesktop`
     h3 {
-      font-size: 3.1rem;
+      margin-bottom: 0.5rem;
+      font-weight: 200;
+      font-size: 2.5rem;
+      // padding: 2rem 1rem 0rem;
     }
   `}
 `;

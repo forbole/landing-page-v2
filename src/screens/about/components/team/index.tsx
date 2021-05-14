@@ -10,13 +10,15 @@ import Member from "./components/member";
 import { membersData } from "./config";
 
 const TeamMembers = () => {
-  const { t } = useTranslation("team");
+  const { t } = useTranslation("about");
 
   return (
     <TeamCSS>
       <MaxWidthContainerCSS>
         <TeamHeadingContainerCSS>
-          <h3>{t("teamMembers")}</h3>
+          <h3>{t("heading")}</h3>
+          <p>{t("heroDetails1")}</p>
+          <p>{t("heroDetails2")}</p>
         </TeamHeadingContainerCSS>
         <TeamGridCSS>
           {membersData.map((x, i) => (
