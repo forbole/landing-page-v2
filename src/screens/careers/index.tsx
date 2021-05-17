@@ -3,8 +3,8 @@ import { useTranslation } from "i18n";
 import { Layout } from "@components";
 import { TeamHeader, Opportunities } from "./components";
 
-const Team = () => {
-  const { t } = useTranslation("team");
+const Careers = () => {
+  const { t } = useTranslation("careers");
   return (
     <Layout
       title={t("title")}
@@ -18,4 +18,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default Careers;

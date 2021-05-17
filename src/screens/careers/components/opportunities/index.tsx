@@ -6,7 +6,7 @@ import { openingsData } from "./config";
 import Opening from "./components/opening";
 
 const Opportunities = () => {
-  const { t } = useTranslation("team");
+  const { t } = useTranslation("careers");
   return (
     <OpportunitiesCSS id="opportunity">
       <MaxWidthContainerCSS>
