@@ -3,7 +3,7 @@ import { useTranslation } from "i18n";
 import { Layout } from "@components";
 import { TeamHeader, Opportunities } from "./components";
 
-const Careers = () => {
+const Careers = (props: any) => {
   const { t } = useTranslation("careers");
   return (
     <Layout
@@ -13,7 +13,7 @@ const Careers = () => {
       twitterImage="/static/images/assets/Twitter-who-we-are.png"
     >
       <TeamHeader />
-      <Opportunities />
+      <Opportunities jobPosts={props} />
     </Layout>
   );
 };

@@ -9,7 +9,7 @@ const Opening = (props: any) => {
   const { title, description, slug } = props;
   return (
     <OpeningCSS>
-      <Link href={"/positions/[title]"} as={`/positions/${slug}`}>
+      <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
         <a>
           <div className="header-content">
             <h3>{title}</h3>
