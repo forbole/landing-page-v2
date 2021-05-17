@@ -6,7 +6,6 @@ export const TeamCSS = styled.div`
   padding: 0rem 0rem 5rem;
   ${media.bigDesktop`
     ${mixins.flexCenter}
-    padding-top: 3rem;
     padding-bottom: 8rem;
   `}
 `;
