@@ -19,7 +19,13 @@ const Post = (props: any) => {
       <div className="content">
         <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
           <a>
-            <img src={featureImage} />
+            <img
+              src={
+                featureImage == null
+                  ? "/static/images/assets/blog-placeholder.png"
+                  : featureImage
+              }
+            />
             <h3>{title}</h3>
             <p>{excerpt}</p>
           </a>
