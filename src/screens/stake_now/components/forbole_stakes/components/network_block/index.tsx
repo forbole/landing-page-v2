@@ -1,6 +1,7 @@
 import React from "react";
 import ReactLoading from "react-loading";
 import classNames from "classnames";
+import { NoSSR } from "@components";
 import { useTranslation } from "i18n";
 import { getNetworkInfo } from "@src/utils/network_info";
 import { BlockCSS, FlexCSS, PercentCSS, Button } from "./styles";
@@ -16,6 +17,7 @@ const NetworkBlock = (props: any) => {
     denom,
     network,
   } = props;
+  console.log(`blockkkkkkkkkkkk`, token, usd, percent);
   const { t } = useTranslation("stake_now");
   const networkInfo: any = getNetworkInfo(network);
   const delegate = networkInfo.delegate;
@@ -29,14 +31,14 @@ const NetworkBlock = (props: any) => {
             <h3>{t(title)}</h3>
           </div>
           {token == 0 || usd == 0 || percent == 0 ? (
-            <>
+            <NoSSR>
               <ReactLoading
                 type={"bars"}
                 color={"#000"}
                 height={"3rem"}
                 width={"3rem"}
               />
-            </>
+            </NoSSR>
           ) : (
             <>
               <p className={"token"}>
