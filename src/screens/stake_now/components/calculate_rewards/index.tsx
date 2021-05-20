@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import Popup from "reactjs-popup";
+import { NoSSR } from "@components";
 import useWindowSize from "@utils/get_screen_size";
 import { screenSize } from "@styles";
 import { Disclaimer } from "@icons";
@@ -27,21 +28,23 @@ const CalculateRewards = () => {
       <ContentCSS>
         <h2>
           {t("calculateRewards")}{" "}
-          <Popup
-            position={
-              width <= screenSize.phone ? "bottom center" : "right center"
-            }
-            trigger={
-              <button className="disclaimerIcon">
-                <Disclaimer />
-              </button>
-            }
-            on={["hover", "focus"]}
-          >
-            <span style={{ color: "rgba(100,100,100,1)" }}>
-              only for reference
-            </span>
-          </Popup>
+          <NoSSR>
+            <Popup
+              position={
+                width <= screenSize.phone ? "bottom center" : "right center"
+              }
+              trigger={
+                <button className="disclaimerIcon">
+                  <Disclaimer />
+                </button>
+              }
+              on={["hover", "focus"]}
+            >
+              <span style={{ color: "rgba(100,100,100,1)" }}>
+                only for reference
+              </span>
+            </Popup>
+          </NoSSR>
         </h2>
 
         <div className="main-content">

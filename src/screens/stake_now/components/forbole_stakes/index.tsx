@@ -16,7 +16,6 @@ import { INetworkDataProps } from "./interfaces";
 
 const ForboleStakes = () => {
   const { t } = useTranslation("stake_now");
-
   const hookProps = useForboleStakesHook();
   const {
     cosmos,
@@ -30,7 +29,6 @@ const ForboleStakes = () => {
     iris,
     vsys,
     totalUSD,
-    cosmosNetworks,
   }: any = hookProps;
   const networkData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub" },
