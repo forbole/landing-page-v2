@@ -461,7 +461,7 @@ export const useForboleStakesHook = () => {
     getCosmosNetwork(cosmosData[8]);
     getVSYSNetwork();
     return () => {
-      dispatch("default");
+      cosmosNetworks;
     };
   }, [cosmos]);
 
