@@ -16,17 +16,6 @@ const NetworkBlock = (props: any) => {
     denom,
     network,
   } = props;
-  // console.log(
-  //   `blockkkkkkkkkkkk`,
-  //   active,
-  //   title,
-  //   icon,
-  //   token,
-  //   percent,
-  //   usd,
-  //   denom,
-  //   network
-  // );
   const { t } = useTranslation("stake_now");
   const networkInfo: any = getNetworkInfo(network);
   const delegate = networkInfo.delegate;
@@ -39,7 +28,7 @@ const NetworkBlock = (props: any) => {
             <img src={`/static/images/icons/${icon}.png`} />
             <h3>{t(title)}</h3>
           </div>
-          {token == 0 || usd == 0 || percent == 0 ? (
+          {network === undefined || token == 0 || usd == 0 || percent == 0 ? (
             <>
               <ReactLoading
                 type={"bars"}

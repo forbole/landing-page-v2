@@ -112,8 +112,9 @@ export const useForboleStakesHook = () => {
   const [cosmosNetworks, dispatch] = useReducer((state, action): Array<
     object
   > => {
-    // console.log(`cosmosNetworksssss`, cosmosNetworks);
-    //state = network;
+    // for checking useReducer:
+    // console.log("prevState: ", state);
+    // console.log("action: ", action);
     const model = {
       title: action.title,
       denom: action?.denom,
@@ -167,7 +168,6 @@ export const useForboleStakesHook = () => {
         setIris(model);
         return [...state, model];
       default:
-        // console.log(`cosmosNetworkss DEFFFFFFAULT`, cosmosNetworks);
         return state;
     }
   }, []);
@@ -429,6 +429,7 @@ export const useForboleStakesHook = () => {
     );
   };
 
+  const [usdLoading, setUSDLoading] = useState(true);
   const getNetworkUSD = async () => {
     const network = [
       cosmos,
@@ -445,7 +446,9 @@ export const useForboleStakesHook = () => {
       .map((x) => x.totalUSDPrice)
       .reduce((a, b) => (a += b));
     const displayUSD = convertToMoney(totalUSD);
-
+    network.forEach((x) =>
+      x.totalUSDPrice == 0 ? setUSDLoading(true) : setUSDLoading(false)
+    );
     setNetworkUSD(displayUSD);
   };
 
@@ -460,10 +463,7 @@ export const useForboleStakesHook = () => {
     getCosmosNetwork(cosmosData[7]);
     getCosmosNetwork(cosmosData[8]);
     getVSYSNetwork();
-    return () => {
-      cosmosNetworks;
-    };
-  }, [cosmos]);
+  }, []);
 
   useEffect(() => {
     try {
@@ -486,6 +486,7 @@ export const useForboleStakesHook = () => {
     iris,
     vsys,
     totalUSD,
+    usdLoading,
     cosmosNetworks,
   };
 };
