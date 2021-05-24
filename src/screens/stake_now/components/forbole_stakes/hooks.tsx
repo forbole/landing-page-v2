@@ -112,6 +112,7 @@ export const useForboleStakesHook = () => {
   const [cosmosNetworks, dispatch] = useReducer((state, action): Array<
     object
   > => {
+    // console.log(`cosmosNetworksssss`, cosmosNetworks);
     //state = network;
     const model = {
       title: action.title,
@@ -166,6 +167,7 @@ export const useForboleStakesHook = () => {
         setIris(model);
         return [...state, model];
       default:
+        // console.log(`cosmosNetworkss DEFFFFFFAULT`, cosmosNetworks);
         return state;
     }
   }, []);
@@ -458,7 +460,10 @@ export const useForboleStakesHook = () => {
     getCosmosNetwork(cosmosData[7]);
     getCosmosNetwork(cosmosData[8]);
     getVSYSNetwork();
-  }, [cosmos, terra, kava, likecoin, iov, band, akash, emoney, vsys]);
+    return () => {
+      dispatch("default");
+    };
+  }, [cosmos]);
 
   useEffect(() => {
     try {
