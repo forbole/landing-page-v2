@@ -1,5 +1,5 @@
 export interface INetworkDataProps {
-  network?: any;
+  network: any;
   icon: string;
 }
 

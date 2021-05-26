@@ -109,68 +109,69 @@ export const useForboleStakesHook = () => {
   const [emoney, setEmoney] = useState(cosmosNetwork[7]);
   const [iris, setIris] = useState(cosmosNetwork[8]);
 
-  const [cosmosNetworks, dispatch] = useReducer((state, action): Array<
-    object
-  > => {
-    // for checking useReducer:
-    // console.log("prevState: ", state);
-    // console.log("action: ", action);
-    const model = {
-      title: action.title,
-      denom: action?.denom,
-      network: action?.network,
-      totalToken: action.totalToken,
-      totalUSDPrice: action.totalUSDPrice,
-      totalMarketValue: action.totalMarketValue,
-      currentMarketValue: action.currentMarketValue,
-      voting: {
-        title: "votingPower",
-        token: action.voting.token,
-        percent: action.voting.percent,
-      },
-      selfDelegations: {
-        title: "selfDelegations",
-        token: action.selfDelegations.token,
-        percent: action.selfDelegations.percent,
-      },
-      otherDelegations: {
-        title: "otherDelegations",
-        token: action.otherDelegations.token,
-        percent: action.otherDelegations.percent,
-      },
-    };
-    switch (action.type) {
-      case "cosmos":
-        setCosmos(model);
-        return [...state, model];
-      case "terra":
-        setTerra(model);
-        return [...state, model];
-      case "kava":
-        setKava(model);
-        return [...state, model];
-      case "likecoin":
-        setLikecoin(model);
-        return [...state, model];
-      case "iov":
-        setIOV(model);
-        return [...state, model];
-      case "band":
-        setBand(model);
-        return [...state, model];
-      case "akash":
-        setAkash(model);
-        return [...state, model];
-      case "emoney":
-        setEmoney(model);
-        return [...state, model];
-      case "iris":
-        setIris(model);
-        return [...state, model];
-      default:
-        return state;
-    }
-  }, []);
+  const [cosmosNetworks, dispatch] = useReducer(
+    (state, action): IModelProps[] => {
+      // for checking useReducer:
+      // console.log("prevState: ", state);
+      // console.log("action: ", action);
+      const model = {
+        title: action.title,
+        denom: action?.denom,
+        network: action?.network,
+        totalToken: action.totalToken,
+        totalUSDPrice: action.totalUSDPrice,
+        totalMarketValue: action.totalMarketValue,
+        currentMarketValue: action.currentMarketValue,
+        voting: {
+          title: "votingPower",
+          token: action.voting.token,
+          percent: action.voting.percent,
+        },
+        selfDelegations: {
+          title: "selfDelegations",
+          token: action.selfDelegations.token,
+          percent: action.selfDelegations.percent,
+        },
+        otherDelegations: {
+          title: "otherDelegations",
+          token: action.otherDelegations.token,
+          percent: action.otherDelegations.percent,
+        },
+      };
+      switch (action.type) {
+        case "cosmos":
+          setCosmos(model);
+          return [...state, model];
+        case "terra":
+          setTerra(model);
+          return [...state, model];
+        case "kava":
+          setKava(model);
+          return [...state, model];
+        case "likecoin":
+          setLikecoin(model);
+          return [...state, model];
+        case "iov":
+          setIOV(model);
+          return [...state, model];
+        case "band":
+          setBand(model);
+          return [...state, model];
+        case "akash":
+          setAkash(model);
+          return [...state, model];
+        case "emoney":
+          setEmoney(model);
+          return [...state, model];
+        case "iris":
+          setIris(model);
+          return [...state, model];
+        default:
+          return state;
+      }
+    },
+    []
+  );
 
   const getCosmosNetwork = async (input) => {
     const networkFunction = networkFunctions[input?.name];
@@ -446,9 +447,9 @@ export const useForboleStakesHook = () => {
       .map((x) => x.totalUSDPrice)
       .reduce((a, b) => (a += b));
     const displayUSD = convertToMoney(totalUSD);
-    network.forEach((x) =>
-      x.totalUSDPrice == 0 ? setUSDLoading(true) : setUSDLoading(false)
-    );
+    network.map((x) => x.totalUSDPrice).includes(0)
+      ? setUSDLoading(true)
+      : setUSDLoading(false);
     setNetworkUSD(displayUSD);
   };
 

@@ -28,6 +28,7 @@ const ForboleStakes = () => {
     emoney,
     iris,
     vsys,
+    usdLoading,
     totalUSD,
   }: any = hookProps;
   const networkData: INetworkDataProps[] = [
@@ -54,15 +55,25 @@ const ForboleStakes = () => {
             width={"5%"}
           />
         ) : (
-          <h1>
-            $
-            <AnimatedNumber
-              animateToNumber={moneyToInt(totalUSD)}
-              includeComma
-              config={config.stiff}
-              animationType={"random"}
-            />
-          </h1>
+          <>
+            <h1>
+              $
+              <AnimatedNumber
+                animateToNumber={moneyToInt(totalUSD)}
+                includeComma
+                config={config.stiff}
+                animationType={"random"}
+              />
+            </h1>
+            {!!(usdLoading === true) && (
+              <ReactLoading
+                type={"bars"}
+                color={"#FFF"}
+                height={"5%"}
+                width={"5%"}
+              />
+            )}
+          </>
         )}
       </ForboleStakesCSS>
       <FlexContainerCSS>
