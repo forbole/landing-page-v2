@@ -16,10 +16,6 @@ const Blog = (props: any) => {
     if (posts.length > 0 && posts[0] && sidePosts.length > 0) {
       setLoading(false);
     }
-    posts.map((x) => {
-      if (x.featureImage == null)
-        x.featureImage = "/static/images/assets/blog-placeholder.png";
-    });
   }, [props]);
   if (isLoading) {
     return (

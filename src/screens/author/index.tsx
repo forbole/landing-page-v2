@@ -4,7 +4,7 @@ import { Layout, BlogDetailsLoader } from "@components";
 import { theme } from "@styles";
 import { AuthorPosts } from "./components";
 import { useBlogHook } from "./hooks";
-import { membersData } from "../team/components/team/config";
+import { membersData } from "../about/components/team/config";
 import {
   TagTitlePostsCSS,
   MaxWidthContainerCSS,
@@ -27,10 +27,6 @@ const AuthorTitlePosts = (props: any) => {
     if (post && sidePosts.length > 0) {
       setLoading(false);
     }
-    post.map((x) => {
-      if (x.featureImage == null)
-        x.featureImage = "/static/images/assets/blog-placeholder.png";
-    });
   }, [props]);
   if (isLoading) {
     return (

@@ -57,6 +57,7 @@ export const OpeningCSS = styled.div`
       .see-more {
         background: ${colors.forboleRed};
         color: ${colors.white};
+        border-radius: 0 0 0.5rem .5rem;
 
         svg {
           path {

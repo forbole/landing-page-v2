@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
 import { AboutHeaderCSS } from "./styles";
-import { Header, WhatWeDo, Milestones } from "./components";
+import { Header, WhatWeDo, Milestones, TeamMembers } from "./components";
 
 const About = () => {
   const { t } = useTranslation("about");
@@ -18,6 +18,7 @@ const About = () => {
         <WhatWeDo />
       </AboutHeaderCSS>
       <Milestones />
+      <TeamMembers />
       {/* <Team />
       <Opportunities /> */}
     </Layout>

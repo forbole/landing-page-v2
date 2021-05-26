@@ -1,10 +1,10 @@
 import React from "react";
 import { useTranslation } from "i18n";
 import { Layout } from "@components";
-import { TeamHeader, TeamMembers, Opportunities } from "./components";
+import { TeamHeader, Opportunities } from "./components";
 
-const Team = () => {
-  const { t } = useTranslation("team");
+const Careers = (props: any) => {
+  const { t } = useTranslation("careers");
   return (
     <Layout
       title={t("title")}
@@ -13,10 +13,9 @@ const Team = () => {
       twitterImage="/static/images/assets/Twitter-who-we-are.png"
     >
       <TeamHeader />
-      <TeamMembers />
-      <Opportunities />
+      <Opportunities jobPosts={props} />
     </Layout>
   );
 };
 
-export default Team;
+export default Careers;

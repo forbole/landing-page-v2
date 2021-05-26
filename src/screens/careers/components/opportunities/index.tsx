@@ -2,11 +2,12 @@ import React from "react";
 import { useTranslation } from "i18n";
 import { MaxWidthContainerCSS } from "@styles/components";
 import { OpportunitiesCSS, HeaderCSS, GridCSS } from "./styles";
-import { openingsData } from "./config";
+// import { openingsData } from "./config";
 import Opening from "./components/opening";
 
-const Opportunities = () => {
-  const { t } = useTranslation("team");
+const Opportunities = ({ jobPosts }: any) => {
+  const { t } = useTranslation("careers");
+  const openingsData = jobPosts.posts;
   return (
     <OpportunitiesCSS id="opportunity">
       <MaxWidthContainerCSS>
@@ -24,7 +25,7 @@ const Opportunities = () => {
             <Opening
               key={i}
               title={x.title}
-              description={x.description}
+              description={x.excerpt}
               slug={x.slug}
             />
           ))}

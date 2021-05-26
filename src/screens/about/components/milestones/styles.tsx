@@ -24,6 +24,7 @@ export const MilestonesCSS = styled.div`
     min-height: 100vh;
     h3 {
       font-size: 2.5rem;
+      font-weight: 200;
       margin-bottom: 1.5rem;
       width: 100%;
     }
@@ -46,7 +47,7 @@ export const MilestonesGridCSS = styled.div`
   ${media.bigDesktop`
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px 40px;
-    padding: 0 3rem;
+    padding: 1.5rem 3rem;
   `}
 `;
 
