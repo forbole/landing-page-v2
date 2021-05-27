@@ -109,70 +109,6 @@ export const useForboleStakesHook = () => {
   const [emoney, setEmoney] = useState(cosmosNetwork[7]);
   const [iris, setIris] = useState(cosmosNetwork[8]);
 
-  const [cosmosNetworks, dispatch] = useReducer(
-    (state, action): IModelProps[] => {
-      // for checking useReducer:
-      // console.log("prevState: ", state);
-      // console.log("action: ", action);
-      const model = {
-        title: action.title,
-        denom: action?.denom,
-        network: action?.network,
-        totalToken: action.totalToken,
-        totalUSDPrice: action.totalUSDPrice,
-        totalMarketValue: action.totalMarketValue,
-        currentMarketValue: action.currentMarketValue,
-        voting: {
-          title: "votingPower",
-          token: action.voting.token,
-          percent: action.voting.percent,
-        },
-        selfDelegations: {
-          title: "selfDelegations",
-          token: action.selfDelegations.token,
-          percent: action.selfDelegations.percent,
-        },
-        otherDelegations: {
-          title: "otherDelegations",
-          token: action.otherDelegations.token,
-          percent: action.otherDelegations.percent,
-        },
-      };
-      switch (action.type) {
-        case "cosmos":
-          setCosmos(model);
-          return [...state, model];
-        case "terra":
-          setTerra(model);
-          return [...state, model];
-        case "kava":
-          setKava(model);
-          return [...state, model];
-        case "likecoin":
-          setLikecoin(model);
-          return [...state, model];
-        case "iov":
-          setIOV(model);
-          return [...state, model];
-        case "band":
-          setBand(model);
-          return [...state, model];
-        case "akash":
-          setAkash(model);
-          return [...state, model];
-        case "emoney":
-          setEmoney(model);
-          return [...state, model];
-        case "iris":
-          setIris(model);
-          return [...state, model];
-        default:
-          return state;
-      }
-    },
-    []
-  );
-
   const getCosmosNetwork = async (input) => {
     const networkFunction = networkFunctions[input?.name];
 
@@ -255,11 +191,10 @@ export const useForboleStakesHook = () => {
     );
     // resolve any possible Promise error (in case any api endpoint doesn't work )
     try {
-      dispatch({
-        type: input.name,
-        title: input?.title,
-        denom: input?.denom,
-        network: input?.network,
+      let state = {
+        title: input.title,
+        denom: input.denom,
+        network: input.network,
         totalToken: totalTokenFormat,
         totalUSDPrice,
         totalMarketValue,
@@ -279,33 +214,89 @@ export const useForboleStakesHook = () => {
           token: otherDelegationsFormat,
           percent: otherDelegationsPercent,
         },
-      });
+      };
+      switch (input.name) {
+        case "cosmos":
+          setCosmos(state);
+          break;
+        case "terra":
+          setTerra(state);
+          break;
+        case "kava":
+          setKava(state);
+          break;
+        case "likecoin":
+          setLikecoin(state);
+          break;
+        case "iov":
+          setIOV(state);
+          break;
+        case "band":
+          setBand(state);
+          break;
+        case "akash":
+          setAkash(state);
+          break;
+        case "emoney":
+          setEmoney(state);
+          break;
+        case "iris":
+          setIris(state);
+          break;
+        default:
+          state;
+      }
+      // dispatch({
+      //   type: input.name,
+      //   title: input?.title,
+      //   denom: input?.denom,
+      //   network: input?.network,
+      //   totalToken: totalTokenFormat,
+      //   totalUSDPrice,
+      //   totalMarketValue,
+      //   currentMarketValue,
+      //   voting: {
+      //     title: "votingPower",
+      //     token: totalTokenFormat,
+      //     percent: votingPowerPercent,
+      //   },
+      //   selfDelegations: {
+      //     title: "selfDelegations",
+      //     token: totalSelfDelegationsFormat,
+      //     percent: totalSelfDelegationsPercent,
+      //   },
+      //   otherDelegations: {
+      //     title: "otherDelegations",
+      //     token: otherDelegationsFormat,
+      //     percent: otherDelegationsPercent,
+      //   },
+      // });
     } catch (err) {
       console.log(err);
-      dispatch({
-        type: input.name,
-        title: input.title ?? null,
-        totalToken: 0,
-        totalMarketValue: "0.00",
-        currentMarketValue: "0.00",
-        denom: input.denom ?? null,
-        network: input?.network ?? null,
-        voting: {
-          title: "votingPower",
-          token: 0,
-          percent: 0,
-        },
-        selfDelegations: {
-          title: "selfDelegations",
-          token: 0,
-          percent: 0,
-        },
-        otherDelegations: {
-          title: "otherDelegations",
-          token: 0,
-          percent: 0,
-        },
-      });
+      // dispatch({
+      //   type: input.name,
+      //   title: input.title ?? null,
+      //   totalToken: 0,
+      //   totalMarketValue: "0.00",
+      //   currentMarketValue: "0.00",
+      //   denom: input.denom ?? null,
+      //   network: input?.network ?? null,
+      //   voting: {
+      //     title: "votingPower",
+      //     token: 0,
+      //     percent: 0,
+      //   },
+      //   selfDelegations: {
+      //     title: "selfDelegations",
+      //     token: 0,
+      //     percent: 0,
+      //   },
+      //   otherDelegations: {
+      //     title: "otherDelegations",
+      //     token: 0,
+      //     percent: 0,
+      //   },
+      // });
     }
   };
   //setCosmosNetwork(updatedArr);
@@ -488,6 +479,5 @@ export const useForboleStakesHook = () => {
     vsys,
     totalUSD,
     usdLoading,
-    cosmosNetworks,
   };
 };
