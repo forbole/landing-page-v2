@@ -14,6 +14,51 @@ const dataParams = {
     bonded: 74827116718480,
     selfDelegation: 2213097585421,
   },
+  ["Crypto.org"]: {
+    totalToken: 2506933382641597413,
+    bonded: 348954387453015544,
+    selfDelegation: 7308504808729876,
+  },
+  sentinel: {
+    totalToken: 10288428980216833,
+    bonded: 9167598803417683,
+    selfDelegation: 264415829817570,
+  },
+  ["Fetch.ai"]: {
+    totalToken: 1059406888657601483097496694,
+    bonded: 53388864075675265212893849,
+    selfDelegation: 3438006635315918023130450,
+  },
+  regen: {
+    totalToken: 102712435328012,
+    bonded: 57978105410921,
+    selfDelegation: 2360208138165,
+  },
+  bitsong: {
+    totalToken: 106228117674904,
+    bonded: 31303511882895,
+    selfDelegation: 4749699284583,
+  },
+  oasis: {
+    totalToken: 10000000000,
+    bonded: 4545887153.23,
+    selfDelegation: 54396365.96,
+  },
+  kusama: {
+    totalToken: 10000000,
+    bonded: 4890000,
+    selfDelegation: 15526,
+  },
+  flow: {
+    totalToken: 1358642702.43160844,
+    bonded: 1238448939.32838964,
+    selfDelegation: 27104804.58989077,
+  },
+  solana: {
+    totalToken: 496200600,
+    bonded: 335727200,
+    selfDelegation: 839318,
+  },
 };
 
 export const getDataParams = (key) => {
