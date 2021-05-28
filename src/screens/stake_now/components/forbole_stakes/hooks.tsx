@@ -244,7 +244,7 @@ export const useForboleStakesHook = () => {
           setIris(state);
           break;
         default:
-          state;
+          return state;
       }
       // dispatch({
       //   type: input.name,
@@ -297,6 +297,60 @@ export const useForboleStakesHook = () => {
       //     percent: 0,
       //   },
       // });
+      let failedState = {
+        title: input.title ?? null,
+        totalToken: 0,
+        totalMarkefailedStatetValue: "0.00",
+        currentMarketValue: "0.00",
+        denom: input.denom ?? null,
+        network: input?.network ?? null,
+        voting: {
+          title: "votingPower",
+          token: 0,
+          percent: 0,
+        },
+        selfDelegations: {
+          title: "selfDelegations",
+          token: 0,
+          percent: 0,
+        },
+        otherDelegations: {
+          title: "otherDelegations",
+          token: 0,
+          percent: 0,
+        },
+      };
+      switch (input.name) {
+        case "cosmos":
+          setCosmos(failedState);
+          break;
+        case "terra":
+          setTerra(failedState);
+          break;
+        case "kava":
+          setKava(failedState);
+          break;
+        case "likecoin":
+          setLikecoin(failedState);
+          break;
+        case "iov":
+          setIOV(failedState);
+          break;
+        case "band":
+          setBand(failedState);
+          break;
+        case "akash":
+          setAkash(failedState);
+          break;
+        case "emoney":
+          setEmoney(failedState);
+          break;
+        case "iris":
+          setIris(failedState);
+          break;
+        default:
+          return failedState;
+      }
     }
   };
   //setCosmosNetwork(updatedArr);
@@ -445,16 +499,19 @@ export const useForboleStakesHook = () => {
   };
 
   useEffect(() => {
-    getCosmosNetwork(cosmosData[0]);
-    getCosmosNetwork(cosmosData[1]);
-    getCosmosNetwork(cosmosData[2]);
-    getCosmosNetwork(cosmosData[3]);
-    getCosmosNetwork(cosmosData[4]);
-    getCosmosNetwork(cosmosData[5]);
-    getCosmosNetwork(cosmosData[6]);
-    getCosmosNetwork(cosmosData[7]);
-    getCosmosNetwork(cosmosData[8]);
-    getVSYSNetwork();
+    try {
+      getCosmosNetwork(cosmosData[0]);
+      getCosmosNetwork(cosmosData[1]);
+      getCosmosNetwork(cosmosData[2]);
+      getCosmosNetwork(cosmosData[3]);
+      getCosmosNetwork(cosmosData[4]);
+      getCosmosNetwork(cosmosData[5]);
+      getCosmosNetwork(cosmosData[6]);
+      getCosmosNetwork(cosmosData[7]);
+      getVSYSNetwork();
+    } catch (err) {
+      console.log(`hoook errrrrrrr`, err);
+    }
   }, [cosmos, terra, kava, likecoin, iov, band, akash, emoney, vsys]);
 
   useEffect(() => {
