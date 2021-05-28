@@ -510,9 +510,9 @@ export const useForboleStakesHook = () => {
       getCosmosNetwork(cosmosData[7]);
       getVSYSNetwork();
     } catch (err) {
-      console.log(`hoook errrrrrrr`, err);
+      console.log(err);
     }
-  }, [cosmos, terra, kava, likecoin, iov, band, akash, emoney, vsys]);
+  }, []);
 
   useEffect(() => {
     try {

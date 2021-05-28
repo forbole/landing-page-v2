@@ -1,3 +1,25 @@
+const dataParams = {
+  cosmos: {
+    totalToken: 273460364505181,
+    bonded: 193395019832210,
+    selfDelegation: 2414513744704,
+  },
+  terra: {
+    totalToken: 982911320980144,
+    bonded: 322848406720639,
+    selfDelegation: 2358293157003,
+  },
+  kava: {
+    totalToken: 128155373282488,
+    bonded: 74827116718480,
+    selfDelegation: 2213097585421,
+  },
+};
+
+export const getDataParams = (key) => {
+  return dataParams[key] ?? {};
+};
+
 export const cosmosData = [
   {
     title: "Cosmos Hub",
@@ -5,7 +27,7 @@ export const cosmosData = [
     network: "cosmos",
     denom: "ATOM",
     delegationsApi:
-      "https://lcd.cosmoshub.bigdipper.live/staking/delegators/cosmos14kn0kk33szpwus9nh8n87fjel8djx0y0mmswhp/delegations",
+      "https://api.cosmoshub.bigdipper.live/staking/delegators/cosmos14kn0kk33szpwus9nh8n87fjel8djx0y0mmswhp/delegations",
     address: "validator_address",
     delegationsJson_R: ["result"],
     validator_address: ["cosmosvaloper14kn0kk33szpwus9nh8n87fjel8djx0y070ymmj"],
