@@ -29,6 +29,9 @@ export const uCryptoOrgToCryptoOrg = defaultConverter(100000000);
 
 export const uSentinelToSentinel = defaultConverter(1000000);
 
+// Need adjusting the converter
+export const uFetchAIToFetchAI = defaultConverter(10000000000000);
+
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
     return converter(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
@@ -118,6 +121,10 @@ cryptoOrg.gecko = "https://api.coingecko.com/api/v3/coins/crypto-com-chain";
 
 const sentinel = R.clone(defaultFunctions(uSentinelToSentinel));
 sentinel.gecko = "https://api.coingecko.com/api/v3/coins/sentinel";
+
+const fetchAI = R.clone(defaultFunctions(uFetchAIToFetchAI));
+fetchAI.gecko = "https://api.coingecko.com/api/v3/coins/fetch-ai";
+
 // available networks for calculations
 export const networkFunctions = {
   cosmos,
@@ -134,4 +141,5 @@ export const networkFunctions = {
   ["band-protocol"]: band,
   cryptoOrg,
   sentinel,
+  ["fetch.ai"]: fetchAI,
 };

@@ -192,6 +192,12 @@ export const cosmosData = [
     network: "sentinel",
     denom: "DVPN",
   },
+  {
+    title: "Fetch.ai",
+    name: "fetch.ai",
+    network: "fetch.ai",
+    denom: "FET",
+  },
 ];
 
 export const vsysData = [
