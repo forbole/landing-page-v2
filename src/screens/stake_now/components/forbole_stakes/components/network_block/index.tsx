@@ -19,6 +19,7 @@ const NetworkBlock = (props: any) => {
   const { t } = useTranslation("stake_now");
   const networkInfo: any = getNetworkInfo(network);
   const delegate = networkInfo.delegate;
+  // console.log(`frontend usd`, usd);
 
   return (
     <a href={delegate} target="_blank" rel="noreferrer">
@@ -42,9 +43,15 @@ const NetworkBlock = (props: any) => {
               <p className={"token"}>
                 {token} {denom}
               </p>
-              <p className="usd">
-                {usd} {t("usd")}
-              </p>
+              {usd === null ? (
+                <p style={{ display: "none" }}>
+                  {usd} {t("usd")}
+                </p>
+              ) : (
+                <p className="usd">
+                  {usd} {t("usd")}
+                </p>
+              )}
               <PercentCSS>
                 <p>{percent}%</p>
               </PercentCSS>

@@ -111,32 +111,44 @@ export const useForboleStakesHook = () => {
   const [cryptoOrg, setcryptoOrg] = useState(cosmosNetwork[9]);
   const [sentinel, setSentinel] = useState(cosmosNetwork[10]);
   const [fetchAI, setFetchAI] = useState(cosmosNetwork[11]);
+  const [regen, setRegen] = useState(cosmosNetwork[12]);
 
   const getNetwork = async (input) => {
     // console.log(`cosmosInput`, input);
     const networkFunction = networkFunctions[input.name] ?? null;
     // console.log(networkFunction);
     const networkParams = getDataParams(input.name);
+    const { totalTokenData, bondedData, selfDelegation } = networkParams;
     // console.log(`networkParams`, networkParams);
     // console.log(`network function`, networkFunction);
-    const marketPriceApi = await axios.get(networkFunction?.gecko);
+    const marketPriceApi: any = networkFunction?.gecko
+      ? await axios.get(networkFunction?.gecko)
+      : "not ready";
 
     const { data: marketPriceJson } = marketPriceApi;
+    // console.log(marketPriceApi);
 
-    const currentMarketValue = networkFunction.marketPrice(marketPriceJson);
+    const currentMarketValue =
+      marketPriceApi === "not ready"
+        ? null
+        : networkFunction.marketPrice(marketPriceJson);
     // console.log(`market price`, currentMarketValue);
-    const { totalTokenData, bondedData, selfDelegation } = networkParams;
     const totalToken = networkFunction?.converter(totalTokenData);
+    const totalMarketValue =
+      currentMarketValue === null
+        ? null
+        : convertToMoney(currentMarketValue * totalToken);
+    const totalUSDPrice =
+      currentMarketValue === null ? null : currentMarketValue * totalToken;
+    //  console.log(totalUSDPrice, currentMarketValue);
     const bondedToken = networkFunction?.converter(bondedData);
     // console.log(`total token`, convertToMoney(totalToken));
     // console.log(`bonded`, bondedToken);
     // console.log(`voting power`, totalToken / bondedToken);
     const totalTokenFormat = convertToMoney(totalToken);
     const votingPowerPercent = convertToMoney(totalToken / bondedToken, 2);
-    const totalMarketValue = convertToMoney(currentMarketValue * totalToken);
-    const totalUSDPrice = currentMarketValue * totalToken;
 
-    console.log(`data`, totalTokenFormat, votingPowerPercent, totalUSDPrice);
+    // console.log(`data`, totalTokenFormat, votingPowerPercent, totalUSDPrice);
 
     try {
       let state = {
@@ -153,7 +165,7 @@ export const useForboleStakesHook = () => {
           percent: votingPowerPercent,
         },
       };
-      console.log(input.name);
+      // console.log(input.name);
       switch (input.name) {
         case "cosmos":
           setCosmos(state);
@@ -172,6 +184,9 @@ export const useForboleStakesHook = () => {
           break;
         case "fetch.ai":
           setFetchAI(state);
+          break;
+        case "regen-network":
+          setRegen(state);
           break;
       }
     } catch (err) {
@@ -217,6 +232,9 @@ export const useForboleStakesHook = () => {
           break;
         case "fetch.ai":
           setFetchAI(failedState);
+          break;
+        case "regen-network":
+          setRegen(failedState);
           break;
       }
     }
@@ -586,6 +604,7 @@ export const useForboleStakesHook = () => {
       cryptoOrg,
       sentinel,
       fetchAI,
+      // regen,
     ];
     const totalUSD = network
       .map((x) => x.totalUSDPrice)
@@ -608,6 +627,7 @@ export const useForboleStakesHook = () => {
       getNetwork(cosmosData[9]);
       getNetwork(cosmosData[10]);
       getNetwork(cosmosData[11]);
+      getNetwork(cosmosData[12]);
       getCosmosNetwork(cosmosData[3]);
       getCosmosNetwork(cosmosData[4]);
       getCosmosNetwork(cosmosData[5]);
@@ -643,6 +663,7 @@ export const useForboleStakesHook = () => {
     cryptoOrg,
     sentinel,
     fetchAI,
+    regen,
     totalUSD,
     usdLoading,
   };

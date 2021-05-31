@@ -32,6 +32,9 @@ export const uSentinelToSentinel = defaultConverter(1000000);
 // Need adjusting the converter
 export const uFetchAIToFetchAI = defaultConverter(10000000000000);
 
+// Regen Network not listed on Coingecko yet
+export const uRegenToRegen = defaultConverter(1000000);
+
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
     return converter(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
@@ -125,6 +128,10 @@ sentinel.gecko = "https://api.coingecko.com/api/v3/coins/sentinel";
 const fetchAI = R.clone(defaultFunctions(uFetchAIToFetchAI));
 fetchAI.gecko = "https://api.coingecko.com/api/v3/coins/fetch-ai";
 
+// Regen Network not listed on Coingecko yet
+const regen = R.clone(defaultFunctions(uRegenToRegen));
+// regen.gecko = "https://api.coingecko.com/api/v3/coins/regen-network";
+
 // available networks for calculations
 export const networkFunctions = {
   cosmos,
@@ -142,4 +149,5 @@ export const networkFunctions = {
   cryptoOrg,
   sentinel,
   ["fetch.ai"]: fetchAI,
+  "regen-network": regen,
 };

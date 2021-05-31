@@ -31,6 +31,7 @@ const ForboleStakes = () => {
     cryptoOrg,
     sentinel,
     fetchAI,
+    regen,
     usdLoading,
     totalUSD,
   }: any = hookProps;
@@ -49,6 +50,7 @@ const ForboleStakes = () => {
     { network: cryptoOrg, icon: "crypto-org.svg" },
     { network: sentinel, icon: "sentinel.png" },
     { network: fetchAI, icon: "fetch-ai.png" },
+    { network: regen, icon: "regen-network.png" },
   ];
   return (
     <StakeNowContainerCSS>

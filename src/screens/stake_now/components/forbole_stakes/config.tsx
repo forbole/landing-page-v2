@@ -198,6 +198,12 @@ export const cosmosData = [
     network: "fetch.ai",
     denom: "FET",
   },
+  {
+    title: "regen-network",
+    name: "regen-network",
+    network: "regen-network",
+    denom: "FET",
+  },
 ];
 
 export const vsysData = [
