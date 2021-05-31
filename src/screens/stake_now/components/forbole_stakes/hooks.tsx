@@ -6,7 +6,7 @@ import { getNetworkInfo } from "@utils/network_info";
 import { networkFunctions } from "../../utils";
 import { convertToMoney } from "@utils/convert_to_money";
 import { IModelProps } from "./interfaces";
-import { cosmosData, vsysData } from "./config";
+import { cosmosData, vsysData, getDataParams } from "./config";
 
 export const useForboleStakesHook = () => {
   //const state = () => cosmosData;
@@ -109,6 +109,97 @@ export const useForboleStakesHook = () => {
   const [emoney, setEmoney] = useState(cosmosNetwork[7]);
   const [iris, setIris] = useState(cosmosNetwork[8]);
 
+  const getNetwork = async (input) => {
+    // console.log(`cosmosInput`, input);
+    const networkFunction = networkFunctions[input.name] ?? null;
+    //console.log(networkFunction);
+    const networkParams = getDataParams(input.name);
+    //console.log(`networkParams`, networkParams);
+    // console.log(`network function`, networkFunction);
+    const marketPriceApi = await axios.get(networkFunction?.gecko);
+
+    const { data: marketPriceJson } = marketPriceApi;
+
+    const currentMarketValue = networkFunction.marketPrice(marketPriceJson);
+    // console.log(`market price`, currentMarketValue);
+    const { totalTokenData, bondedData, selfDelegation } = networkParams;
+    const totalToken = networkFunction?.converter(totalTokenData);
+    const bondedToken = networkFunction?.converter(bondedData);
+    // console.log(`total token`, convertToMoney(totalToken));
+    // console.log(`bonded`, bondedToken);
+    // console.log(`voting power`, totalToken / bondedToken);
+    const totalTokenFormat = convertToMoney(totalToken);
+    const votingPowerPercent = convertToMoney(totalToken / bondedToken, 2);
+    const totalMarketValue = convertToMoney(currentMarketValue * totalToken);
+    const totalUSDPrice = currentMarketValue * totalToken;
+
+    //console.log(`data`, totalTokenFormat, votingPowerPercent, totalUSDPrice);
+
+    try {
+      let state = {
+        title: input.title,
+        denom: input.denom,
+        network: input.network,
+        totalToken: totalTokenFormat,
+        totalUSDPrice,
+        totalMarketValue,
+        currentMarketValue,
+        voting: {
+          title: "votingPower",
+          token: totalTokenFormat,
+          percent: votingPowerPercent,
+        },
+      };
+      switch (input.name) {
+        case "cosmos":
+          setCosmos(state);
+          break;
+        case "terra":
+          setTerra(state);
+          break;
+        case "kava":
+          setKava(state);
+          break;
+      }
+    } catch (err) {
+      console.log(err);
+      let failedState = {
+        title: input.title ?? null,
+        totalToken: 0,
+        totalMarkefailedStatetValue: "0.00",
+        currentMarketValue: "0.00",
+        denom: input.denom ?? null,
+        network: input?.network ?? null,
+        voting: {
+          title: "votingPower",
+          token: 0,
+          percent: 0,
+        },
+        selfDelegations: {
+          title: "selfDelegations",
+          token: 0,
+          percent: 0,
+        },
+        otherDelegations: {
+          title: "otherDelegations",
+          token: 0,
+          percent: 0,
+        },
+      };
+      switch (input.name) {
+        case "cosmos":
+          setCosmos(failedState);
+          break;
+        case "terra":
+          setTerra(failedState);
+          break;
+        case "kava":
+          setKava(failedState);
+          break;
+      }
+    }
+  };
+
   const getCosmosNetwork = async (input) => {
     const networkFunction = networkFunctions[input?.name];
 
@@ -147,6 +238,7 @@ export const useForboleStakesHook = () => {
     );
 
     const bonded = networkFunction?.bonded(bondedJson);
+    //console.log(`regular`, convertToMoney(totalToken), convertToMoney(bonded));
     const currentMarketValue = networkFunction.marketPrice(marketPriceJson);
     const totalUSDPrice = currentMarketValue * totalToken;
     const totalMarketValue = convertToMoney(currentMarketValue * totalToken);
@@ -216,15 +308,6 @@ export const useForboleStakesHook = () => {
         },
       };
       switch (input.name) {
-        case "cosmos":
-          setCosmos(state);
-          break;
-        case "terra":
-          setTerra(state);
-          break;
-        case "kava":
-          setKava(state);
-          break;
         case "likecoin":
           setLikecoin(state);
           break;
@@ -321,15 +404,6 @@ export const useForboleStakesHook = () => {
         },
       };
       switch (input.name) {
-        case "cosmos":
-          setCosmos(failedState);
-          break;
-        case "terra":
-          setTerra(failedState);
-          break;
-        case "kava":
-          setKava(failedState);
-          break;
         case "likecoin":
           setLikecoin(failedState);
           break;
@@ -500,14 +574,18 @@ export const useForboleStakesHook = () => {
 
   useEffect(() => {
     try {
-      getCosmosNetwork(cosmosData[0]);
-      getCosmosNetwork(cosmosData[1]);
-      getCosmosNetwork(cosmosData[2]);
+      // getCosmosNetwork(cosmosData[0]);
+      // getCosmosNetwork(cosmosData[1]);
+      // getCosmosNetwork(cosmosData[2]);
+      getNetwork(cosmosData[0]);
+      getNetwork(cosmosData[1]);
+      getNetwork(cosmosData[2]);
       getCosmosNetwork(cosmosData[3]);
       getCosmosNetwork(cosmosData[4]);
       getCosmosNetwork(cosmosData[5]);
       getCosmosNetwork(cosmosData[6]);
       getCosmosNetwork(cosmosData[7]);
+      getCosmosNetwork(cosmosData[8]);
       getVSYSNetwork();
     } catch (err) {
       console.log(err);
