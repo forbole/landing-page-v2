@@ -30,7 +30,7 @@ export const uCryptoOrgToCryptoOrg = defaultConverter(100000000);
 export const uSentinelToSentinel = defaultConverter(1000000);
 
 // Need adjusting the converter
-export const uFetchAIToFetchAI = defaultConverter(10000000000000);
+export const uFetchAIToFetchAI = defaultConverter(1000000000000000000);
 
 // Regen Network not listed on Coingecko yet
 export const uRegenToRegen = defaultConverter(1000000);

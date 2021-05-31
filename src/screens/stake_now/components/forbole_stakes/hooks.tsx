@@ -133,7 +133,7 @@ export const useForboleStakesHook = () => {
         ? null
         : networkFunction.marketPrice(marketPriceJson);
     // console.log(`market price`, currentMarketValue);
-    const totalToken = networkFunction?.converter(totalTokenData);
+    const totalToken = networkFunction?.converter(selfDelegation);
     const totalMarketValue =
       currentMarketValue === null
         ? null
@@ -146,7 +146,10 @@ export const useForboleStakesHook = () => {
     // console.log(`bonded`, bondedToken);
     // console.log(`voting power`, totalToken / bondedToken);
     const totalTokenFormat = convertToMoney(totalToken);
-    const votingPowerPercent = convertToMoney(totalToken / bondedToken, 2);
+    const votingPowerPercent = convertToMoney(
+      (totalToken / bondedToken) * 100,
+      2
+    );
 
     // console.log(`data`, totalTokenFormat, votingPowerPercent, totalUSDPrice);
 
