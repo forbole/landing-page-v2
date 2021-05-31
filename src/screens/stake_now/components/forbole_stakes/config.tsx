@@ -202,7 +202,7 @@ export const cosmosData = [
     title: "regen-network",
     name: "regen-network",
     network: "regen-network",
-    denom: "FET",
+    denom: "REGEN",
   },
 ];
 
