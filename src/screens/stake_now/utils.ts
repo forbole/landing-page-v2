@@ -27,6 +27,8 @@ export const nanoLikeToLike = defaultConverter(1000000000);
 
 export const uCryptoComToCryptoCom = defaultConverter(1000000);
 
+export const uSentinelToSentinel = defaultConverter(1000000);
+
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
     return converter(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
@@ -112,8 +114,10 @@ const iris = R.clone(defaultFunctions(uIrisToIris));
 iris.gecko = "https://api.coingecko.com/api/v3/coins/iris-network";
 
 const cryptoOrg = R.clone(defaultFunctions(uCryptoComToCryptoCom));
-cryptoOrg.gecko = "https://api.coingecko.com/api/v3/coins/crypto-com-coin";
+cryptoOrg.gecko = "https://api.coingecko.com/api/v3/coins/crypto-com-chain";
 
+const sentinel = R.clone(defaultFunctions(uSentinelToSentinel));
+sentinel.gecko = "https://api.coingecko.com/api/v3/coins/sentinel";
 // available networks for calculations
 export const networkFunctions = {
   cosmos,
@@ -128,5 +132,6 @@ export const networkFunctions = {
   vsys,
   solana,
   ["band-protocol"]: band,
-  ["crypto.org"]: band,
+  ["crypto.org"]: cryptoOrg,
+  sentinel,
 };

@@ -109,13 +109,14 @@ export const useForboleStakesHook = () => {
   const [emoney, setEmoney] = useState(cosmosNetwork[7]);
   const [iris, setIris] = useState(cosmosNetwork[8]);
   const [cryptoOrg, setcryptoOrg] = useState(cosmosNetwork[9]);
+  const [sentinel, setSentinel] = useState(cosmosNetwork[10]);
 
   const getNetwork = async (input) => {
-    //console.log(`cosmosInput`, input);
+    // console.log(`cosmosInput`, input);
     const networkFunction = networkFunctions[input.name] ?? null;
-    //console.log(networkFunction);
+    // console.log(networkFunction);
     const networkParams = getDataParams(input.name);
-    //console.log(`networkParams`, networkParams);
+    // console.log(`networkParams`, networkParams);
     // console.log(`network function`, networkFunction);
     const marketPriceApi = await axios.get(networkFunction?.gecko);
 
@@ -134,7 +135,7 @@ export const useForboleStakesHook = () => {
     const totalMarketValue = convertToMoney(currentMarketValue * totalToken);
     const totalUSDPrice = currentMarketValue * totalToken;
 
-    //console.log(`data`, totalTokenFormat, votingPowerPercent, totalUSDPrice);
+    // console.log(`data`, totalTokenFormat, votingPowerPercent, totalUSDPrice);
 
     try {
       let state = {
@@ -163,6 +164,9 @@ export const useForboleStakesHook = () => {
           break;
         case "crypto.org":
           setcryptoOrg(state);
+          break;
+        case "sentinel":
+          setSentinel(state);
           break;
       }
     } catch (err) {
@@ -202,6 +206,9 @@ export const useForboleStakesHook = () => {
           break;
         case ["crypto.org"]:
           setcryptoOrg(failedState);
+          break;
+        case "sentinel":
+          setSentinel(failedState);
           break;
       }
     }
@@ -568,7 +575,8 @@ export const useForboleStakesHook = () => {
       akash,
       emoney,
       vsys,
-      cryptoOrg,
+      //cryptoOrg,
+      sentinel,
     ];
     const totalUSD = network
       .map((x) => x.totalUSDPrice)
@@ -588,6 +596,7 @@ export const useForboleStakesHook = () => {
       getNetwork(cosmosData[0]);
       getNetwork(cosmosData[1]);
       getNetwork(cosmosData[2]);
+      getNetwork(cosmosData[10]);
       getCosmosNetwork(cosmosData[3]);
       getCosmosNetwork(cosmosData[4]);
       getCosmosNetwork(cosmosData[5]);
@@ -595,7 +604,6 @@ export const useForboleStakesHook = () => {
       getCosmosNetwork(cosmosData[7]);
       getCosmosNetwork(cosmosData[8]);
       getVSYSNetwork();
-      getNetwork(cosmosData[9]);
     } catch (err) {
       console.log(err);
     }
@@ -622,6 +630,7 @@ export const useForboleStakesHook = () => {
     iris,
     vsys,
     cryptoOrg,
+    sentinel,
     totalUSD,
     usdLoading,
   };

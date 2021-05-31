@@ -29,10 +29,11 @@ const ForboleStakes = () => {
     iris,
     vsys,
     cryptoOrg,
+    sentinel,
     usdLoading,
     totalUSD,
   }: any = hookProps;
-
+  //console.log(`sentinel`, sentinel);
   const networkData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub.png" },
     { network: terra, icon: "terra.png" },
@@ -45,6 +46,7 @@ const ForboleStakes = () => {
     { network: iris, icon: "iris.png" },
     { network: vsys, icon: "v-system.png" },
     { network: cryptoOrg, icon: "crypto-org.svg" },
+    { network: sentinel, icon: "sentinel.png" },
   ];
   return (
     <StakeNowContainerCSS>

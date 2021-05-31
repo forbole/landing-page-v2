@@ -181,10 +181,16 @@ export const cosmosData = [
     color: "#7a41ff",
   },
   {
-    title: "Cryto.org",
+    title: "Crypto.org",
     name: "crypto.org",
     network: "crypto.org",
     denom: "CRO",
+  },
+  {
+    title: "Sentinel",
+    name: "sentinel",
+    network: "sentinel",
+    denom: "DVPN",
   },
 ];
 
