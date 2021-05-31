@@ -14,7 +14,7 @@ const dataParams = {
     bondedData: 74827116718480,
     selfDelegation: 2213097585421,
   },
-  ["crypto.org"]: {
+  cryptoOrg: {
     totalTokenData: 2506933382641597413,
     bondedData: 348954387453015544,
     selfDelegation: 7308504808729876,
@@ -182,7 +182,7 @@ export const cosmosData = [
   },
   {
     title: "Crypto.org",
-    name: "crypto.org",
+    name: "cryptoOrg",
     network: "crypto.org",
     denom: "CRO",
   },

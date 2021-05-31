@@ -135,7 +135,7 @@ export const useForboleStakesHook = () => {
     const totalMarketValue = convertToMoney(currentMarketValue * totalToken);
     const totalUSDPrice = currentMarketValue * totalToken;
 
-    // console.log(`data`, totalTokenFormat, votingPowerPercent, totalUSDPrice);
+    console.log(`data`, totalTokenFormat, votingPowerPercent, totalUSDPrice);
 
     try {
       let state = {
@@ -152,6 +152,7 @@ export const useForboleStakesHook = () => {
           percent: votingPowerPercent,
         },
       };
+      console.log(input.name);
       switch (input.name) {
         case "cosmos":
           setCosmos(state);
@@ -162,7 +163,7 @@ export const useForboleStakesHook = () => {
         case "kava":
           setKava(state);
           break;
-        case "crypto.org":
+        case "cryptoOrg":
           setcryptoOrg(state);
           break;
         case "sentinel":
@@ -204,7 +205,7 @@ export const useForboleStakesHook = () => {
         case "kava":
           setKava(failedState);
           break;
-        case ["crypto.org"]:
+        case "crypto.org":
           setcryptoOrg(failedState);
           break;
         case "sentinel":
@@ -596,6 +597,7 @@ export const useForboleStakesHook = () => {
       getNetwork(cosmosData[0]);
       getNetwork(cosmosData[1]);
       getNetwork(cosmosData[2]);
+      getNetwork(cosmosData[9]);
       getNetwork(cosmosData[10]);
       getCosmosNetwork(cosmosData[3]);
       getCosmosNetwork(cosmosData[4]);

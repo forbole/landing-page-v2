@@ -132,6 +132,6 @@ export const networkFunctions = {
   vsys,
   solana,
   ["band-protocol"]: band,
-  ["crypto.org"]: cryptoOrg,
+  cryptoOrg,
   sentinel,
 };
