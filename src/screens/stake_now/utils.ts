@@ -25,7 +25,7 @@ export const uIrisToIris = defaultConverter(1000000);
 
 export const nanoLikeToLike = defaultConverter(1000000000);
 
-export const uCryptoComToCryptoCom = defaultConverter(1000000);
+export const uCryptoOrgToCryptoOrg = defaultConverter(100000000);
 
 export const uSentinelToSentinel = defaultConverter(1000000);
 
@@ -113,7 +113,7 @@ solana.gecko = "https://api.coingecko.com/api/v3/coins/solana";
 const iris = R.clone(defaultFunctions(uIrisToIris));
 iris.gecko = "https://api.coingecko.com/api/v3/coins/iris-network";
 
-const cryptoOrg = R.clone(defaultFunctions(uCryptoComToCryptoCom));
+const cryptoOrg = R.clone(defaultFunctions(uCryptoOrgToCryptoOrg));
 cryptoOrg.gecko = "https://api.coingecko.com/api/v3/coins/crypto-com-chain";
 
 const sentinel = R.clone(defaultFunctions(uSentinelToSentinel));
