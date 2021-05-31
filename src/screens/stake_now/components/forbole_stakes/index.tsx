@@ -33,7 +33,6 @@ const ForboleStakes = () => {
     totalUSD,
   }: any = hookProps;
 
-  console.log(`hiiiiiiii`, cryptoOrg);
   const networkData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub.png" },
     { network: terra, icon: "terra.png" },
