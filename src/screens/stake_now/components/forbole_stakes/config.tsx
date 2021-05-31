@@ -34,7 +34,7 @@ const dataParams = {
     bondedData: 57978105410921,
     selfDelegation: 2360208138165,
   },
-  bitsongs: {
+  bitsong: {
     totalTokenData: 106228117674904,
     bondedData: 31303511882895,
     selfDelegation: 4749699284583,
@@ -202,6 +202,12 @@ export const cosmosData = [
     title: "regen-network",
     name: "regen-network",
     network: "regen-network",
+    denom: "REGEN",
+  },
+  {
+    title: "Bitsong",
+    name: "bitsong",
+    network: "bitsong",
     denom: "REGEN",
   },
 ];

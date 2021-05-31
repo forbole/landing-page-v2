@@ -186,10 +186,10 @@ const logos = {
         "http://lcd.akash.forbole.com/staking/validators/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073",
     },
   },
-  bitsongs: {
-    image: "/static/images/icons/bitsongs.png",
-    name: "BitSongs",
-    key: "bitsongs",
+  bitsong: {
+    image: "/static/images/icons/bitsong.png",
+    name: "BitSong",
+    key: "bitsong",
     delegate: "https://play.bitsong.io/",
   },
   ["band-protocol"]: {

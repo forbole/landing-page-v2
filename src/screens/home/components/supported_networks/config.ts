@@ -15,7 +15,7 @@ export const networkKeys = [
   "kusama",
   "sentinel",
   "oasis-protocol",
-  "bitsongs",
+  "bitsong",
   "solana",
   // "agoric",
   "flow",
