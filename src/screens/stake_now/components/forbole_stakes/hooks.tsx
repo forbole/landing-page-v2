@@ -108,9 +108,10 @@ export const useForboleStakesHook = () => {
   const [akash, setAkash] = useState(cosmosNetwork[6]);
   const [emoney, setEmoney] = useState(cosmosNetwork[7]);
   const [iris, setIris] = useState(cosmosNetwork[8]);
+  const [cryptoOrg, setcryptoOrg] = useState(cosmosNetwork[9]);
 
   const getNetwork = async (input) => {
-    // console.log(`cosmosInput`, input);
+    //console.log(`cosmosInput`, input);
     const networkFunction = networkFunctions[input.name] ?? null;
     //console.log(networkFunction);
     const networkParams = getDataParams(input.name);
@@ -160,6 +161,9 @@ export const useForboleStakesHook = () => {
         case "kava":
           setKava(state);
           break;
+        case "crypto.org":
+          setcryptoOrg(state);
+          break;
       }
     } catch (err) {
       console.log(err);
@@ -195,6 +199,9 @@ export const useForboleStakesHook = () => {
           break;
         case "kava":
           setKava(failedState);
+          break;
+        case ["crypto.org"]:
+          setcryptoOrg(failedState);
           break;
       }
     }
@@ -561,6 +568,7 @@ export const useForboleStakesHook = () => {
       akash,
       emoney,
       vsys,
+      cryptoOrg,
     ];
     const totalUSD = network
       .map((x) => x.totalUSDPrice)
@@ -587,6 +595,7 @@ export const useForboleStakesHook = () => {
       getCosmosNetwork(cosmosData[7]);
       getCosmosNetwork(cosmosData[8]);
       getVSYSNetwork();
+      getNetwork(cosmosData[9]);
     } catch (err) {
       console.log(err);
     }
@@ -612,6 +621,7 @@ export const useForboleStakesHook = () => {
     cosmosNetwork,
     iris,
     vsys,
+    cryptoOrg,
     totalUSD,
     usdLoading,
   };

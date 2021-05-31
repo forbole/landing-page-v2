@@ -28,20 +28,24 @@ const ForboleStakes = () => {
     emoney,
     iris,
     vsys,
+    cryptoOrg,
     usdLoading,
     totalUSD,
   }: any = hookProps;
+
+  console.log(`hiiiiiiii`, cryptoOrg);
   const networkData: INetworkDataProps[] = [
-    { network: cosmos, icon: "cosmos-hub" },
-    { network: terra, icon: "terra" },
-    { network: kava, icon: "kava" },
-    { network: likecoin, icon: "likecoin" },
-    { network: iov, icon: "iov" },
-    { network: band, icon: "band-protocol" },
-    { network: akash, icon: "akash" },
-    { network: emoney, icon: "e-money" },
-    { network: iris, icon: "iris" },
-    { network: vsys, icon: "v-system" },
+    { network: cosmos, icon: "cosmos-hub.png" },
+    { network: terra, icon: "terra.png" },
+    { network: kava, icon: "kava.png" },
+    { network: likecoin, icon: "likecoin.png" },
+    { network: iov, icon: "iov.png" },
+    { network: band, icon: "band-protocol.png" },
+    { network: akash, icon: "akash.png" },
+    { network: emoney, icon: "e-money.png" },
+    { network: iris, icon: "iris.png" },
+    { network: vsys, icon: "v-system.png" },
+    { network: cryptoOrg, icon: "crypto-org.svg" },
   ];
   return (
     <StakeNowContainerCSS>

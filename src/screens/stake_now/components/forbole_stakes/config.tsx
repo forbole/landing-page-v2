@@ -14,7 +14,7 @@ const dataParams = {
     bondedData: 74827116718480,
     selfDelegation: 2213097585421,
   },
-  ["Crypto.org"]: {
+  ["crypto.org"]: {
     totalTokenData: 2506933382641597413,
     bondedData: 348954387453015544,
     selfDelegation: 7308504808729876,
@@ -24,22 +24,22 @@ const dataParams = {
     bondedData: 9167598803417683,
     selfDelegation: 264415829817570,
   },
-  ["Fetch.ai"]: {
+  ["fetch.ai"]: {
     totalTokenData: 1059406888657601483097496694,
     bondedData: 53388864075675265212893849,
     selfDelegation: 3438006635315918023130450,
   },
-  regen: {
+  ["regen-network"]: {
     totalTokenData: 102712435328012,
     bondedData: 57978105410921,
     selfDelegation: 2360208138165,
   },
-  bitsong: {
+  bitsongs: {
     totalTokenData: 106228117674904,
     bondedData: 31303511882895,
     selfDelegation: 4749699284583,
   },
-  oasis: {
+  ["oasis-protocol"]: {
     totalTokenData: 10000000000,
     bondedData: 4545887153.23,
     selfDelegation: 54396365.96,
@@ -179,6 +179,12 @@ export const cosmosData = [
     delegationsJson_R: ["result"],
     validator_address: ["iaa1msqqkd3v0gmullzwm56c4frevyczzxfednxa7m"],
     color: "#7a41ff",
+  },
+  {
+    title: "Cryto.org",
+    name: "crypto.org",
+    network: "crypto.org",
+    denom: "CRO",
   },
 ];
 

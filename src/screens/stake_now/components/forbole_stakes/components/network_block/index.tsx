@@ -25,7 +25,7 @@ const NetworkBlock = (props: any) => {
       <BlockCSS className={classNames({ active: active })}>
         <FlexCSS>
           <div className={"title-container"}>
-            <img src={`/static/images/icons/${icon}.png`} />
+            <img src={`/static/images/icons/${icon}`} />
             <h3>{t(title)}</h3>
           </div>
           {network === undefined || token == 0 || usd == 0 || percent == 0 ? (
