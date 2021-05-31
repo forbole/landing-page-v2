@@ -44,7 +44,7 @@ const NetworkBlock = (props: any) => {
                 {token} {denom}
               </p>
               {usd === null ? (
-                <p style={{ display: "none" }}>
+                <p style={{ visibility: "hidden" }}>
                   {usd} {t("usd")}
                 </p>
               ) : (
