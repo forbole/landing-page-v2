@@ -35,6 +35,8 @@ export const uFetchAIToFetchAI = defaultConverter(1000000000000000000);
 // Regen Network not listed on Coingecko yet
 export const uRegenToRegen = defaultConverter(1000000);
 
+export const uBitsongToBitsong = defaultConverter(1000000);
+
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
     return converter(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
@@ -132,6 +134,9 @@ fetchAI.gecko = "https://api.coingecko.com/api/v3/coins/fetch-ai";
 const regen = R.clone(defaultFunctions(uRegenToRegen));
 // regen.gecko = "https://api.coingecko.com/api/v3/coins/regen-network";
 
+const bitsong = R.clone(defaultFunctions(uBitsongToBitsong));
+bitsong.gecko = "https://api.coingecko.com/api/v3/coins/bitsong";
+
 // available networks for calculations
 export const networkFunctions = {
   cosmos,
@@ -150,4 +155,5 @@ export const networkFunctions = {
   sentinel,
   ["fetch.ai"]: fetchAI,
   "regen-network": regen,
+  bitsong,
 };
