@@ -33,10 +33,11 @@ const ForboleStakes = () => {
     fetchAI,
     regen,
     bitsong,
+    oasis,
     usdLoading,
     totalUSD,
   }: any = hookProps;
-  //console.log(`sentinel`, sentinel);
+  // console.log(`oasis`, oasis);
   const networkData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub.png" },
     { network: terra, icon: "terra.png" },
@@ -53,6 +54,7 @@ const ForboleStakes = () => {
     { network: fetchAI, icon: "fetch-ai.png" },
     { network: regen, icon: "regen-network.png" },
     { network: bitsong, icon: "bitsong.png" },
+    { network: oasis, icon: "oasis-protocol.png" },
   ];
   return (
     <StakeNowContainerCSS>

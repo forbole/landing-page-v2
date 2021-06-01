@@ -37,6 +37,8 @@ export const uRegenToRegen = defaultConverter(1000000);
 
 export const uBitsongToBitsong = defaultConverter(1000000);
 
+export const uOasisToOasis = defaultConverter(1000000);
+
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
     return converter(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
@@ -137,6 +139,9 @@ const regen = R.clone(defaultFunctions(uRegenToRegen));
 const bitsong = R.clone(defaultFunctions(uBitsongToBitsong));
 bitsong.gecko = "https://api.coingecko.com/api/v3/coins/bitsong";
 
+const oasis = R.clone(defaultFunctions(uOasisToOasis));
+oasis.gecko = "https://api.coingecko.com/api/v3/coins/oasis-network";
+
 // available networks for calculations
 export const networkFunctions = {
   cosmos,
@@ -156,4 +161,5 @@ export const networkFunctions = {
   ["fetch.ai"]: fetchAI,
   "regen-network": regen,
   bitsong,
+  "oasis-protocol": oasis,
 };

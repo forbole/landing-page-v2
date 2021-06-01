@@ -210,6 +210,12 @@ export const cosmosData = [
     network: "bitsong",
     denom: "REGEN",
   },
+  {
+    title: "Oasis Protocol",
+    name: "oasis-protocol",
+    network: "oasis-protocol",
+    denom: "ROSE",
+  },
 ];
 
 export const vsysData = [
