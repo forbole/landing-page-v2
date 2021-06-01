@@ -37,14 +37,14 @@ export const uRegenToRegen = defaultConverter(1000000);
 
 export const uBitsongToBitsong = defaultConverter(1000000);
 
-export const uOasisToOasis = defaultConverter(1000000);
+export const uOasisToOasis = defaultConverter(1);
 
 // need to adjust the converter
-export const uKusamaToKusama = defaultConverter(1000);
+export const uKusamaToKusama = defaultConverter(1);
 
-export const uFlowToFlow = defaultConverter(1000000);
+export const uFlowToFlow = defaultConverter(1);
 
-export const uSolanaToSolana = defaultConverter(1000000);
+export const uSolanaToSolana = defaultConverter(1);
 
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
