@@ -208,13 +208,19 @@ export const cosmosData = [
     title: "Bitsong",
     name: "bitsong",
     network: "bitsong",
-    denom: "REGEN",
+    denom: "BTSG",
   },
   {
     title: "Oasis Protocol",
     name: "oasis-protocol",
     network: "oasis-protocol",
     denom: "ROSE",
+  },
+  {
+    title: "Kusama",
+    name: "kusama",
+    network: "kusama",
+    denom: "KSM",
   },
 ];
 

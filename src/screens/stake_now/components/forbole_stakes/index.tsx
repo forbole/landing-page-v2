@@ -34,6 +34,7 @@ const ForboleStakes = () => {
     regen,
     bitsong,
     oasis,
+    kusama,
     usdLoading,
     totalUSD,
   }: any = hookProps;
@@ -55,6 +56,7 @@ const ForboleStakes = () => {
     { network: regen, icon: "regen-network.png" },
     { network: bitsong, icon: "bitsong.png" },
     { network: oasis, icon: "oasis-protocol.png" },
+    { network: kusama, icon: "kusama.png" },
   ];
   return (
     <StakeNowContainerCSS>

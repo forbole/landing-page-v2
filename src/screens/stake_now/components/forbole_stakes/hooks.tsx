@@ -114,6 +114,7 @@ export const useForboleStakesHook = () => {
   const [regen, setRegen] = useState(cosmosNetwork[12]);
   const [bitsong, setBitsong] = useState(cosmosNetwork[13]);
   const [oasis, setOasis] = useState(cosmosNetwork[14]);
+  const [kusama, setKusama] = useState(cosmosNetwork[15]);
 
   const getNetwork = async (input) => {
     // console.log(`cosmosInput`, input);
@@ -142,7 +143,7 @@ export const useForboleStakesHook = () => {
         : convertToMoney(currentMarketValue * totalToken);
     const totalUSDPrice =
       currentMarketValue === null ? null : currentMarketValue * totalToken;
-    //  console.log(totalUSDPrice, currentMarketValue);
+    // console.log(totalUSDPrice, currentMarketValue);
     const bondedToken = networkFunction?.converter(bondedData);
     // console.log(`total token`, convertToMoney(totalToken));
     // console.log(`bonded`, bondedToken);
@@ -199,6 +200,9 @@ export const useForboleStakesHook = () => {
         case "oasis-protocol":
           setOasis(state);
           break;
+        case "kusama":
+          setKusama(state);
+          break;
       }
     } catch (err) {
       console.log(err);
@@ -252,6 +256,9 @@ export const useForboleStakesHook = () => {
           break;
         case "oasis-protocol":
           setOasis(failedState);
+          break;
+        case "kusama":
+          setKusama(failedState);
           break;
       }
     }
@@ -624,6 +631,7 @@ export const useForboleStakesHook = () => {
       // regen,
       bitsong,
       oasis,
+      kusama,
     ];
     const totalUSD = network
       .map((x) => x.totalUSDPrice)
@@ -649,6 +657,7 @@ export const useForboleStakesHook = () => {
       getNetwork(cosmosData[12]);
       getNetwork(cosmosData[13]);
       getNetwork(cosmosData[14]);
+      getNetwork(cosmosData[15]);
       getCosmosNetwork(cosmosData[3]);
       getCosmosNetwork(cosmosData[4]);
       getCosmosNetwork(cosmosData[5]);
@@ -683,6 +692,7 @@ export const useForboleStakesHook = () => {
     // regen,
     bitsong,
     oasis,
+    kusama,
   ]);
 
   return {
@@ -703,6 +713,7 @@ export const useForboleStakesHook = () => {
     regen,
     bitsong,
     oasis,
+    kusama,
     totalUSD,
     usdLoading,
   };
