@@ -228,6 +228,12 @@ export const cosmosData = [
     network: "flow",
     denom: "FLOW",
   },
+  {
+    title: "Solana",
+    name: "solana",
+    network: "solana",
+    denom: "SOL",
+  },
 ];
 
 export const vsysData = [

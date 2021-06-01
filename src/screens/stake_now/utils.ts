@@ -44,6 +44,8 @@ export const uKusamaToKusama = defaultConverter(1000);
 
 export const uFlowToFlow = defaultConverter(1000000);
 
+export const uSolanaToSolana = defaultConverter(1000000);
+
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
     return converter(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
@@ -93,9 +95,6 @@ vsys.gecko = "https://api.coingecko.com/api/v3/coins/v-systems";
 
 const emoney = R.clone(defaultFunctions(uBandToBand));
 emoney.gecko = "https://api.coingecko.com/api/v3/coins/iris-network";
-
-const solana = R.clone(defaultFunctions(uAtomToAtom));
-solana.gecko = "https://api.coingecko.com/api/v3/coins/solana";
 
 // const iris: any = {
 //   bonded: (data: any) => {
@@ -152,6 +151,9 @@ kusama.gecko = "https://api.coingecko.com/api/v3/coins/kusama";
 
 const flow = R.clone(defaultFunctions(uFlowToFlow));
 flow.gecko = "https://api.coingecko.com/api/v3/coins/flow";
+
+const solana = R.clone(defaultFunctions(uSolanaToSolana));
+solana.gecko = "https://api.coingecko.com/api/v3/coins/solana";
 
 // available networks for calculations
 export const networkFunctions = {

@@ -116,6 +116,7 @@ export const useForboleStakesHook = () => {
   const [oasis, setOasis] = useState(cosmosNetwork[14]);
   const [kusama, setKusama] = useState(cosmosNetwork[15]);
   const [flow, setFlow] = useState(cosmosNetwork[16]);
+  const [solana, setSolana] = useState(cosmosNetwork[17]);
 
   const getNetwork = async (input) => {
     // console.log(`cosmosInput`, input);
@@ -207,6 +208,9 @@ export const useForboleStakesHook = () => {
         case "flow":
           setFlow(state);
           break;
+        case "solana":
+          setSolana(state);
+          break;
       }
     } catch (err) {
       console.log(err);
@@ -266,6 +270,9 @@ export const useForboleStakesHook = () => {
           break;
         case "flow":
           setFlow(failedState);
+          break;
+        case "solana":
+          setSolana(failedState);
           break;
       }
     }
@@ -640,6 +647,7 @@ export const useForboleStakesHook = () => {
       oasis,
       kusama,
       flow,
+      solana,
     ];
     const totalUSD = network
       .map((x) => x.totalUSDPrice)
@@ -667,6 +675,7 @@ export const useForboleStakesHook = () => {
       getNetwork(cosmosData[14]);
       getNetwork(cosmosData[15]);
       getNetwork(cosmosData[16]);
+      getNetwork(cosmosData[17]);
       getCosmosNetwork(cosmosData[3]);
       getCosmosNetwork(cosmosData[4]);
       getCosmosNetwork(cosmosData[5]);
@@ -702,6 +711,8 @@ export const useForboleStakesHook = () => {
     bitsong,
     oasis,
     kusama,
+    flow,
+    solana,
   ]);
 
   return {
@@ -724,6 +735,7 @@ export const useForboleStakesHook = () => {
     oasis,
     kusama,
     flow,
+    solana,
     totalUSD,
     usdLoading,
   };
