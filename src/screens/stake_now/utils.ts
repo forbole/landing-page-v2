@@ -42,6 +42,8 @@ export const uOasisToOasis = defaultConverter(1000000);
 // need to adjust the converter
 export const uKusamaToKusama = defaultConverter(1000);
 
+export const uFlowToFlow = defaultConverter(1000000);
+
 export const defaultFunctions = (converter: any) => ({
   bonded: (data: any) => {
     return converter(Number(R.pathOr(0, ["result", "bonded_tokens"], data)));
@@ -148,6 +150,9 @@ oasis.gecko = "https://api.coingecko.com/api/v3/coins/oasis-network";
 const kusama = R.clone(defaultFunctions(uKusamaToKusama));
 kusama.gecko = "https://api.coingecko.com/api/v3/coins/kusama";
 
+const flow = R.clone(defaultFunctions(uFlowToFlow));
+flow.gecko = "https://api.coingecko.com/api/v3/coins/flow";
+
 // available networks for calculations
 export const networkFunctions = {
   cosmos,
@@ -169,4 +174,5 @@ export const networkFunctions = {
   bitsong,
   "oasis-protocol": oasis,
   kusama,
+  flow,
 };

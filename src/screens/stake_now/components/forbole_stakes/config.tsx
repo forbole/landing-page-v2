@@ -222,6 +222,12 @@ export const cosmosData = [
     network: "kusama",
     denom: "KSM",
   },
+  {
+    title: "Flow",
+    name: "flow",
+    network: "flow",
+    denom: "FLOW",
+  },
 ];
 
 export const vsysData = [
