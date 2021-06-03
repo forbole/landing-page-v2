@@ -5,7 +5,6 @@ const { colors } = theme;
 
 export const AboutHeaderCSS = styled.div`
   ${media.bigDesktop`
-  margin-bottom: 10rem;
-  height: 100vh;
+  min-height: 100vh;
 `}
 `;

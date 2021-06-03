@@ -49,11 +49,12 @@ export const HeaderCSS = styled(CoverCSS)`
     ${mixins.flexCenter}
     align-items: flex-start;
     padding: 8rem 0rem;
-    height: 70vh;
     background-position: 85% bottom;
     background-size: cover;
     position: relative;
     z-index: -1;
+    height: 30vh;
+    min-height: 25rem;
 
     .content-container {
       ${mixins.desktopMaxWidth}
