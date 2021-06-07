@@ -41,17 +41,17 @@ export const WhatWeDoCSS = styled.div`
     ${mixins.flexCenter}
     // position: relative;
     .max-width-container {
-      margin-top: -25rem;
+      margin-top: -10rem;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       padding: 0 5rem;
       background: ${colors.white};
       border: 1px solid ${colors.white};
-
       box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
       border-radius: 8px;
-      min-height: 70vh;
+      min-height: 30rem;
+      height: 40rem;
     }
     
     h3 {

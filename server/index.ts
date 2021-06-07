@@ -41,15 +41,15 @@ const ghostAdminApi = new GhostAdminAPI({
     server.use(nextI18NextMiddleware(nextI18next));
     server.use(express.json());
 
-    server.get('/author/:author', (req: Request, res: Response, next:any) => {
-      try {
-      const actualPage = `/author/${req.params.author}`
-      const queryParams = Object.assign({}, req.params, req.query);
-      app.render(req, res, actualPage, queryParams)
-      } catch (e){
-        next(e);
-      }
-    });
+    // server.get('/author/:author', (req: Request, res: Response, next:any) => {
+    //   try {
+    //   const actualPage = `/author/${req.params.author}`
+    //   const queryParams = Object.assign({}, req.params, req.query);
+    //   app.render(req, res, actualPage, queryParams)
+    //   } catch (e){
+    //     next(e);
+    //   }
+    // });
 
     server.post("/api/contact", async (req: Request, res: Response, next:any) => {
       try {
