@@ -7,8 +7,8 @@ export const forboleFooterItems = [
     to: "/stake-now",
   },
   {
-    display: "staking",
-    to: "/staking",
+    display: "about",
+    to: "/about",
   },
 ];
 
