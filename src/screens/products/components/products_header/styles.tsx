@@ -46,9 +46,11 @@ export const ProductsHeaderCSS = styled.div`
     padding: 8rem;
     background-position: 0px -200px;
     background-size: cover;
-    height: 90vh;
+    height: 85vh;
+    min-height: 55rem;
     .headerDiv {
       max-width: 1200px;
+      margin: 0;
     }
     h1 {
       font-weight: 500;

@@ -20,12 +20,11 @@ export const ProductDisplayCSS = styled.div`
   ${media.desktop`
     flex-direction: row;
     grid-gap: 5rem;
-    margin-top: -32rem;
     padding-bottom: 10rem;
     width: 100%;
     align-self: center;
-    position: absolute;
-    top: 55rem;
+    max-width: 1200px;
+    margin: -32rem auto 0 auto;
   `}
 `;
 

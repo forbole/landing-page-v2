@@ -75,6 +75,7 @@ export const BigDipperContentCSS = styled.div`
   ${media.bigDesktop`
   ${mixins.flexCenter}
   height: calc(100vh - 25rem);
+  min-height: 30rem;
   padding: 0;
   .desktopWrapper {
     ${mixins.desktopMaxWidth}
@@ -101,7 +102,7 @@ export const BigDipperContentCSS = styled.div`
     width: 482.08px;
     height: 482.08px;
     right: 5rem;
-    top: 2rem;
+    top: 10rem;
   }
   .bd {
     width: 525px;
