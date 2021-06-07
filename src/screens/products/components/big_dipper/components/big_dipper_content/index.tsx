@@ -27,7 +27,7 @@ export const BigDipperContent = () => {
             <li>{t("bd2")}</li>
             <li>{t("bd3")}</li>
           </ul>
-          <a href="https://cosmos.bigdipper.live/">
+          <a href="https://bigdipper.live/">
             {t("explorer")} <Go />
           </a>
         </div>
