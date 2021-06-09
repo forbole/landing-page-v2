@@ -16,7 +16,7 @@ const ProductBlock = (props: any) => {
           <CallToActionCSS>
             {x.link ? (
               <a href={x.link}>
-                {t("explorer")} <Go />
+                {t("learnMore")} <Go />
               </a>
             ) : (
               <p>{t("coming")}</p>
