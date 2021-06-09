@@ -12,7 +12,7 @@ export const StakeNowContainerCSS = styled.div`
 
 export const ForboleStakesCSS = styled.div`
   ${mixins.mobileHorizontalPadding};
-  min-height: 30vh;
+  min-height: 35vh;
   background-image: url("/static/images/assets/stake-now-background.png");
   background-color: rgba(27, 27, 27, 1);
   background-position: 100%;
@@ -71,7 +71,7 @@ export const ForboleStakesCSS = styled.div`
 
   ${media.bigDesktop`
     padding-top: 12rem;
-    min-height: 70vh;
+    height: 45rem;
     background-image: url("/static/images/assets/stake-now-background.png");
     background-color: rgba(27, 27, 27, 1);
     background-position: 50% 50%;
