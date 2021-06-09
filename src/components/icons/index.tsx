@@ -17,6 +17,7 @@ import Award from "./award.svg";
 import Go from "./go.svg";
 import Next from "./next.svg";
 import Disclaimer from "./disclaimer.svg";
+import RSS from "./rss";
 
 export {
   Telegram,
@@ -27,6 +28,7 @@ export {
   Forbole,
   LinkedIn,
   YouTube,
+  RSS,
   Language,
   Arrow,
   Email,

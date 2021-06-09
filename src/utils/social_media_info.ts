@@ -6,6 +6,7 @@ import {
   Github,
   YouTube,
   LinkedIn,
+  RSS,
 } from "@icons";
 
 const socialMedia = {
@@ -43,6 +44,11 @@ const socialMedia = {
     key: "linkedin",
     url: "https://www.linkedin.com/company/forbole/",
     component: LinkedIn,
+  },
+  rss: {
+    key: "rss",
+    url: "https://www.forbole.com/rss/",
+    component: RSS,
   },
 };
 
