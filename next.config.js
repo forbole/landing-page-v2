@@ -23,6 +23,6 @@ const nextConfig = {
 module.exports = {
   css: withPlugins([[css]], nextConfig),
   images: {
-    domains: process.env.NEXT_PUBLIC_URL,
+    domains: [process.env.NEXT_PUBLIC_URL],
   },
 };
