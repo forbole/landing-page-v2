@@ -5,12 +5,19 @@ const { colors } = theme;
 
 export const PostCSS = styled.div`
   .image-container {
-    height: 200px;
-  }
-  img {
-    height: 200px;
     width: 100%;
-    object-fit: cover;
+
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: cover;
+      border-radius: 0.1rem;
+      width: 100% !important;
+      position: relative !important;
+      height: 200px !important;
+    }
   }
   h3 {
     font-weight: 500;
@@ -56,10 +63,6 @@ export const PostCSS = styled.div`
         border-bottom: 5px solid ${colors.red};
         border-radius: 0;
       }
-    }
-
-    img {
-      border-radius: 0.1rem;
     }
     .content {
       padding: 1rem;

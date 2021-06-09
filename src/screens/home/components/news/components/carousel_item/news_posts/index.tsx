@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import classNames from "classnames";
 import { PostCSS } from "./styles";
 
@@ -11,7 +12,17 @@ const Post = (props: any) => {
       <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
         <a>
           <div className="image-container">
-            <img src={featureImage} />
+            {/* <img src={featureImage} /> */}
+            <Image
+              src={featureImage}
+              alt="Feature Image"
+              // layout="responsive"
+              className="image"
+              // width={200}
+              // height={100}
+              layout="fill"
+              //objectFit="cover"
+            />
           </div>
           <div className="content">
             <div>
