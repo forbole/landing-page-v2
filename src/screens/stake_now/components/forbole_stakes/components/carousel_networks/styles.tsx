@@ -70,6 +70,7 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   .react-multi-carousel-dot button {
     background: rgba(189, 8, 28, 0.3);
     border-color: transparent;
+    margin-right: 4px;
   }
   .react-multi-carousel-dot--active button {
     background: rgba(189, 8, 28, 1);
