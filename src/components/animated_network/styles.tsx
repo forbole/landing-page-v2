@@ -3,6 +3,21 @@ import { Button as SemanticButton } from "semantic-ui-react";
 import { media } from "@styles";
 
 export const NetworkCSS = styled.div`
+  .image-container {
+    width: 100%;
+
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      border-radius: 0.1rem;
+      width: 100% !important;
+      position: relative !important;
+      height: 40px !important;
+    }
+  }
   padding: 1rem;
   background: white;
   border-radius: 5px;
@@ -15,9 +30,9 @@ export const NetworkCSS = styled.div`
   box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
   border-radius: 0.5rem;
 
-  img {
-    width: 40px;
-  }
+  // img {
+  //   width: 40px;
+  // }
 
   p {
     margin-top: 0.5rem;
@@ -66,6 +81,20 @@ export const NetworkCSS = styled.div`
       margin-right: auto;
       transition: 1s ease;
       width: 60px;
+    }
+    .image-container {
+      .image {
+        object-fit: contain;
+        // border-radius: 0.1rem;
+        // width: 100% !important;
+        // position: relative !important;
+        // height: 40px !important;
+        display: block;
+        // margin-left: auto;
+        // margin-right: auto;
+        transition: 1s ease;
+        height: 60px !important;
+      }
     }
 
     p {
