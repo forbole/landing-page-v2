@@ -45,8 +45,7 @@ export const useCalculateRewardsHook = (t: any) => {
     // raw calcs
     // ===============================
     const annualRewards = toFixed(
-      ((tokens?.value * inflation) / (inflation / stakingRatio)) *
-        (1 - commissionRate)
+      tokens?.value * (inflation / stakingRatio) * (1 - commissionRate)
     );
     const monthlyRewards = annualRewards / 12;
     const dailyRewards = monthlyRewards / 30;
