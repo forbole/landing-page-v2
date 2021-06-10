@@ -7,7 +7,10 @@ import { PostCSS } from "./styles";
 const Post = (props: any) => {
   const { post, main = false } = props;
   const { featureImage, title, excerpt, publishedAt, slug } = post;
-  console.log(process.env.NEXT_PUBLIC_URL);
+  // console.log(process.env.NEXT_PUBLIC_URL);
+  const myLoader = ({ src }) => {
+    return `${src}`;
+  };
   return (
     <PostCSS className={classNames({ main })}>
       <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
@@ -15,6 +18,7 @@ const Post = (props: any) => {
           <div className="image-container">
             {/* <img src={featureImage} /> */}
             <Image
+              loader={myLoader}
               src={featureImage}
               alt="Feature Image"
               // layout="responsive"
