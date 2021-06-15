@@ -191,6 +191,21 @@ export const FlexCSS = styled.div`
       width: 3rem;
       object-fit: cover;
     }
+    .image-container {
+      width: 100%;
+
+      > div {
+        position: unset !important;
+      }
+
+      .image {
+        object-fit: contain;
+        border-radius: 0.1rem;
+        width: 3.5rem !important;
+        position: relative !important;
+        height: 3.5rem !important;
+      }
+    }
   }
   .usd {
     color: ${colors.black};

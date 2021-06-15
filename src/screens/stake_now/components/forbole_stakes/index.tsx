@@ -40,7 +40,6 @@ const ForboleStakes = () => {
     usdLoading,
     totalUSD,
   }: any = hookProps;
-  // console.log(`oasis`, oasis);
   const networkData: INetworkDataProps[] = [
     { network: cosmos, icon: "cosmos-hub.png" },
     { network: terra, icon: "terra.png" },

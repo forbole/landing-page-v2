@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import ReactLoading from "react-loading";
 import classNames from "classnames";
 import { useTranslation } from "i18n";
@@ -19,14 +20,19 @@ const NetworkBlock = (props: any) => {
   const { t } = useTranslation("stake_now");
   const networkInfo: any = getNetworkInfo(network);
   const delegate = networkInfo.delegate;
-  // console.log(`frontend usd`, usd);
-
   return (
     <a href={delegate} target="_blank" rel="noreferrer">
       <BlockCSS className={classNames({ active: active })}>
         <FlexCSS>
           <div className={"title-container"}>
-            <img src={`/static/images/icons/${icon}`} />
+            <div className="image-container">
+              <Image
+                src={`/static/images/icons/${icon}`}
+                alt="Network Icon"
+                className="image"
+                layout="fill"
+              />
+            </div>
             <h3>{t(title)}</h3>
           </div>
           {network === undefined || token == 0 || usd == 0 || percent == 0 ? (

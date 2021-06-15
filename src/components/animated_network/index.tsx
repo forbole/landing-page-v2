@@ -14,7 +14,7 @@ const Network = (props: INetworkProps) => {
     delegate = process.env.NEXT_PUBLIC_URL,
   } = props;
   const { t } = useTranslation("stake_now");
-
+  console.log(`image`, image);
   //const formattedAmount = amount === "---" ? amount : convertToMoney(amount);
   return (
     <a href={disable ? null : delegate} target="_blank" rel="noreferrer">
