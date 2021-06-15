@@ -2,6 +2,21 @@ import styled from "styled-components";
 import { media } from "@styles";
 
 export const BlockchainCSS = styled.div`
+  .image-container {
+    width: 100%;
+
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      border-radius: 0.1rem;
+      width: 100% !important;
+      position: relative !important;
+      height: 100% !important;
+    }
+  }
   height: 46.06px;
   width: 46.06px;
   border-radius: 50%;
@@ -40,10 +55,6 @@ export const BlockchainCSS = styled.div`
       border-radius: 50%;
       border: 1px solid white;
       width: 50px
-
-      img {
-        //margin-top: 0.5rem;
-      }
 
       p {
         font-size: 1.1rem;

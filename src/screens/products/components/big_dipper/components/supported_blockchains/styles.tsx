@@ -45,7 +45,7 @@ export const ProjectsGridCSS = styled.div`
   grid-template-columns: repeat(4, minmax(45px, 1fr));
   grid-gap: 30px 30px;
   a {
-    margin: auto;
+    margin: 1rem auto 1rem auto;
   }
 
   ${media.tablet`
@@ -55,6 +55,6 @@ export const ProjectsGridCSS = styled.div`
 
   ${media.bigDesktop`
     grid-template-columns: repeat(10, minmax(80px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 24px;
   `}
 `;

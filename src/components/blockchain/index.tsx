@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { INetworkProps } from "./interfaces";
 import { BlockchainCSS } from "./styles";
 
@@ -7,7 +8,14 @@ const Blockchain = (props: INetworkProps) => {
 
   return (
     <BlockchainCSS>
-      <img src={image} />
+      <div className="image-container">
+        <Image
+          src={image}
+          alt="Blockchain Icon"
+          className="image"
+          layout="fill"
+        />
+      </div>
     </BlockchainCSS>
   );
 };
