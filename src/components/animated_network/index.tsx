@@ -10,26 +10,18 @@ const Network = (props: INetworkProps) => {
     image,
     name,
     disable,
-    // amount = "---",
     delegate = process.env.NEXT_PUBLIC_URL,
   } = props;
   const { t } = useTranslation("stake_now");
-  //const formattedAmount = amount === "---" ? amount : convertToMoney(amount);
   return (
     <a href={disable ? null : delegate} target="_blank" rel="noreferrer">
       <NetworkCSS>
         <div className="image-container">
-          {/* <img src={image} /> */}
           <Image
-            // loader={myLoader}
             src={image}
             alt="Feature Image"
-            // layout="responsive"
             className="image"
-            // width={200}
-            // height={100}
             layout="fill"
-            //objectFit="cover"
           />
         </div>
         <p className="name">{name}</p>
