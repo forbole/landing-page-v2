@@ -18,6 +18,7 @@ import Go from "./go.svg";
 import Next from "./next.svg";
 import Disclaimer from "./disclaimer.svg";
 import RSS from "./rss";
+import BDScreenshot from "./bigdipper-screenshot.svg";
 
 export {
   Telegram,
@@ -40,4 +41,5 @@ export {
   Go,
   Next,
   Disclaimer,
+  BDScreenshot,
 };

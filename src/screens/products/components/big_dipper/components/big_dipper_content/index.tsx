@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { Go } from "@icons";
+import { Go, BDScreenshot } from "@icons";
 import { BigDipperContentCSS } from "./styles";
 
 export const BigDipperContent = () => {
@@ -14,11 +14,7 @@ export const BigDipperContent = () => {
             alt="Big Dipper Background"
             className="bdbg"
           ></img>
-          <img
-            src="/static/images/assets/bigdipper-screenshot.jpg"
-            alt="Big Dipper Screenshot"
-            className="bd"
-          ></img>
+          <BDScreenshot className="bd" />
         </div>
         <div className="content">
           <ul>
