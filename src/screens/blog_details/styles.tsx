@@ -13,6 +13,9 @@ export const BlogDetailsCSS = styled.div`
 
 export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
   width: 100%;
+  th {
+    font-size: 1em !important;
+  }
 
   ${media.bigDesktop`
     ${mixins.mobileHorizontalPadding}
