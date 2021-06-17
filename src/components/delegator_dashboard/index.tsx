@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
+import { XScreenshot } from "@icons";
 import { DashboardContentCSS } from "./styles";
 
 export const DashboardContent = () => {
@@ -8,6 +9,7 @@ export const DashboardContent = () => {
     <DashboardContentCSS>
       <div className="desktopWrapper">
         <div className="image">
+          {/* <XScreenshot /> */}
           <img
             src="/static/images/assets/forbole-portal-screenshot.png"
             alt="Forbole Portal Screenshot"
