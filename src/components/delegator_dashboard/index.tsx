@@ -1,6 +1,5 @@
 import React from "react";
 import { useTranslation } from "i18n";
-import { XScreenshot } from "@icons";
 import Image from "next/image";
 import { DashboardContentCSS } from "./styles";
 

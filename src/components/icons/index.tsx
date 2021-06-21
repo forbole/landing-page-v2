@@ -19,7 +19,6 @@ import Next from "./next.svg";
 import Disclaimer from "./disclaimer.svg";
 import RSS from "./rss";
 import BDScreenshot from "./bigdipper.svg";
-import XScreenshot from "./forbole-x-screenshot.svg";
 
 export {
   Telegram,
@@ -43,5 +42,4 @@ export {
   Next,
   Disclaimer,
   BDScreenshot,
-  XScreenshot,
 };
