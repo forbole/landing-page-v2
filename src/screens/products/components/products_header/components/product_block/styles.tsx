@@ -37,6 +37,18 @@ export const CallToActionCSS = styled.div`
 `;
 
 export const ProductBlockCSS = styled.div`
+  .image-container {
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 2rem !important;
+      position: relative !important;
+      height: 2rem !important;
+    }
+  }
   width: 17rem;
   height: 19rem;
   padding: 1.5rem 1.5rem;
