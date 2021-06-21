@@ -4,6 +4,20 @@ import { mixins, theme, media } from "@styles";
 const { colors } = theme;
 
 export const DashboardContentCSS = styled.div`
+  .image-container {
+    width: 100%;
+    padding-bottom: 1rem;
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: 200px !important;
+    }
+  }
   padding: 5rem 1.5rem 3rem;
   ${mixins.flexCenter}
   background-color: rgba(245, 245, 245, 1);
@@ -66,20 +80,16 @@ export const DashboardContentCSS = styled.div`
       font-weight: 500;
     }
     li {
-      // display: flex;
-      // justify-content: flex-start;
       width: 100%;
       font-weight: 100;
       font-size: 1rem;
     }
-    img {
-      display: flex;
-      justify-content: flex-end;
-      margin-bottom: 0;
+    .image-container {
+      padding-bottom: 0;
+      width: 50%;
+      .image {
+        height: 350px !important;
+      }
     }
-    // .content {
-    //   padding-right: 1.5rem;
-    //   width: 50%;
-    // }
   `}
 `;
