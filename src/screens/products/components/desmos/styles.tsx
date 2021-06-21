@@ -4,6 +4,20 @@ import { mixins, theme, media } from "@styles";
 const { colors } = theme;
 
 export const DesmosContentCSS = styled.div`
+  .image-container {
+    width: 100%;
+    padding-bottom: 1rem;
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: 200px !important;
+    }
+  }
   padding: 5rem 1.5rem 5rem;
   ${mixins.flexCenter}
   background-color: ${colors.white};
@@ -43,6 +57,12 @@ export const DesmosContentCSS = styled.div`
   }
 
   ${media.tablet`
+    .image-container {
+      width: 50%;
+      .image {
+        height: 250px !important;
+      }
+    }
     padding: 5rem;
     .desktopWrapper {
       display: flex;
@@ -54,6 +74,11 @@ export const DesmosContentCSS = styled.div`
     }
   `}
   ${media.bigDesktop`
+  .image-container {
+    .image {
+      height: 350px !important;
+    }
+  }
     background-image: url("/static/images/assets/desmos-elements.svg");
     background-repeat: no-repeat;
     background-position: bottom left;

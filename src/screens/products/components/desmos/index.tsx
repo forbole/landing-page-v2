@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslation } from "i18n";
+import Image from "next/image";
 import { DesmosContentCSS } from "./styles";
 import { Go } from "@icons";
 
@@ -8,11 +9,13 @@ export const DesmosContent = () => {
   return (
     <DesmosContentCSS>
       <div className="desktopWrapper">
-        <div className="image">
-          <img
+        <div className="image-container">
+          <Image
             src="/static/images/assets/desmos-image.png"
-            alt="Forbole Portal Screenshot"
-          ></img>
+            alt="Desmos Image"
+            className="image"
+            layout="fill"
+          />
         </div>
         <div className="content">
           <ul>
