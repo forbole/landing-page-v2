@@ -52,9 +52,18 @@ export const PostCSS = styled.div`
   }
 
   ${media.bigDesktop`
+    &.main {
+      .content {
+        a > .image-container {
+            .image {
+              height: 350px !important;
+            }
+        }
+      }
+    }
     .image-container {
       .image {
-        height: 225px;
+        height: 225px !important;
       }
     }
   `}
