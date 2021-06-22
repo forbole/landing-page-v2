@@ -31,6 +31,21 @@ export const WhatWeDoCSS = styled.div`
     align-items: center;
   }
 
+  .image-container {
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      display: block;
+      position: relative !important;
+      border-radius: 0.5rem;
+      height: 80px !important;
+      width: 80px !important;
+      object-fit: contain;
+    }
+  }
+
   ${media.tablet`
     p {
       margin-bottom: 0.5rem;
@@ -39,7 +54,6 @@ export const WhatWeDoCSS = styled.div`
 
   ${media.bigDesktop`
     ${mixins.flexCenter}
-    // position: relative;
     .max-width-container {
       margin-top: -10rem;
       display: flex;

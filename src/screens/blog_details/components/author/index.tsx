@@ -11,7 +11,6 @@ const Author = ({ post }: any) => {
   const { primaryAuthor: author } = post;
   return (
     <AuthorCSS>
-      {/* <img src={author.profileImage} /> */}
       <div className="image-container">
         <Image
           loader={cmsLoader}
