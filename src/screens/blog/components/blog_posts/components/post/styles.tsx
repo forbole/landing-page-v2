@@ -4,6 +4,20 @@ import { theme, media } from "@styles";
 const { colors } = theme;
 
 export const PostCSS = styled.div`
+  .image-container {
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      border-radius: 0.5rem;
+      object-fit: cover;
+      width: 100% !important;
+      position: relative !important;
+      // height: 2rem !important;
+      min-height: 150px !important;
+    }
+  }
   img {
     border-radius: 0.5rem;
     min-height: 150px;
@@ -31,7 +45,7 @@ export const PostCSS = styled.div`
   }
 
   .content {
-    padding: 0.5rem;
+    padding: 0;
   }
 
   span {
@@ -58,8 +72,10 @@ export const PostCSS = styled.div`
         }
       }
     }
-    img {
-      height: 225px;
+    .image-container {
+      .image {
+        height: 225px !important;
+      }
     }
   `}
 `;

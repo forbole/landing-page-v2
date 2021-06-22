@@ -7,8 +7,7 @@ import { PostCSS } from "./styles";
 const Post = (props: any) => {
   const { post, main = false } = props;
   const { featureImage, title, excerpt, publishedAt, slug } = post;
-  // console.log(process.env.NEXT_PUBLIC_URL);
-  const myLoader = ({ src }) => {
+  const cmsLoader = ({ src }) => {
     return `${src}`;
   };
   return (
@@ -16,17 +15,12 @@ const Post = (props: any) => {
       <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
         <a>
           <div className="image-container">
-            {/* <img src={featureImage} /> */}
             <Image
-              loader={myLoader}
+              loader={cmsLoader}
               src={featureImage}
               alt="Feature Image"
-              // layout="responsive"
               className="image"
-              // width={200}
-              // height={100}
               layout="fill"
-              //objectFit="cover"
             />
           </div>
           <div className="content">

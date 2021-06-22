@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import classNames from "classnames";
 import { PostCSS } from "./styles";
 
@@ -14,12 +15,23 @@ const Post = (props: any) => {
     author,
     tags,
   } = post;
+  const cmsLoader = ({ src }) => {
+    return `${src}`;
+  };
   return (
     <PostCSS className={classNames({ main })}>
       <div className="content">
         <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
           <a>
-            <img src={featureImage} />
+            <div className="image-container">
+              <Image
+                loader={cmsLoader}
+                src={featureImage}
+                alt={title}
+                className="image"
+                layout="fill"
+              />
+            </div>
             <h3>{title}</h3>
             <p>{excerpt}</p>
           </a>
