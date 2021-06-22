@@ -20,6 +20,9 @@ export const MaxWidthContainerCSS = styled(MaxWidthCSS)`
     margin-top: 7.5rem;
     display: flex;
     max-width: 900px;
+    th {
+      font-size: 1em !important;
+    }
   `}
 `;
 

@@ -315,6 +315,12 @@ const logos = {
     delegate: "",
     disable: true,
   },
+  osmosis: {
+    image: "/static/images/icons/osmosis.png",
+    name: "Osmosis",
+    key: "osmosis",
+    delegate: "https://osmosis.zone/",
+  },
 };
 
 export const getNetworkInfo = (key) => {
