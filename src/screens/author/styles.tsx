@@ -62,6 +62,8 @@ export const AuthorCSS = styled.div`
   padding-left: 1.5rem;
 
   .image-container {
+    width: 150px !important;
+    height: 150px !important;
     > div {
       position: unset !important;
     }
@@ -69,10 +71,10 @@ export const AuthorCSS = styled.div`
     .image {
       display: block;
       border-radius: 0.5rem;
-      width: 120px !important;
-      height: 120px !important;
       object-fit: cover;
       position: relative !important;
+      min-height: 50px !important;
+      height: 150px !important;
     }
   }
 
