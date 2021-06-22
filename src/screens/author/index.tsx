@@ -67,7 +67,6 @@ const AuthorTitlePosts = (props: any) => {
           <MaxWidthContainerCSS>
             <TagTitlePostsCSS>
               <AuthorCSS>
-                {/* <img src={author.profile_image} /> */}
                 <div className="image-container">
                   <Image
                     loader={cmsLoader}
