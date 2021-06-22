@@ -60,11 +60,20 @@ export const AuthorCSS = styled.div`
   flex-direction: column;
   padding-top: 0.5rem;
   padding-left: 1.5rem;
-  img {
-    border-radius: 0.5rem;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+
+  .image-container {
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      display: block;
+      border-radius: 0.5rem;
+      width: 120px !important;
+      height: 120px !important;
+      object-fit: cover;
+      position: relative !important;
+    }
   }
 
   span {

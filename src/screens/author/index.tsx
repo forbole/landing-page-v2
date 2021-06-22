@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "i18n";
+import Image from "next/image";
 import { Layout, BlogDetailsLoader } from "@components";
 import { theme } from "@styles";
 import { AuthorPosts } from "./components";
@@ -11,6 +12,10 @@ import {
   BlogCSS,
   AuthorCSS,
 } from "./styles";
+
+const cmsLoader = ({ src }) => {
+  return `${src}`;
+};
 
 const AuthorTitlePosts = (props: any) => {
   const { t } = useTranslation("blog");
@@ -62,7 +67,16 @@ const AuthorTitlePosts = (props: any) => {
           <MaxWidthContainerCSS>
             <TagTitlePostsCSS>
               <AuthorCSS>
-                <img src={author.profile_image} />
+                {/* <img src={author.profile_image} /> */}
+                <div className="image-container">
+                  <Image
+                    loader={cmsLoader}
+                    src={author.profile_image}
+                    alt={author.name}
+                    className="image"
+                    layout="fill"
+                  />
+                </div>
                 <span>
                   <p className="name">{author.name}</p>
                   <p className="bio">{author.bio}</p>
