@@ -10,6 +10,22 @@ export const PostCSS = styled.div`
     width: 100%;
     object-fit: cover;
   }
+  .image-container {
+    padding-bottom: 1rem;
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      display: block;
+      position: relative !important;
+      border-radius: 0.5rem;
+      height: 200px !important;
+      min-height: 150px !important;
+      width: 100% !important;
+      object-fit: cover;
+    }
+  }
   h3 {
     font-weight: 500;
     margin-bottom: 0;
@@ -43,17 +59,18 @@ export const PostCSS = styled.div`
 
   ${media.bigDesktop`
     &.main {
-      img {
-        height: 350px;
-      }
-      span {
-        img {
-          height: 25px;
+      .content {
+        a > .image-container {
+            .image {
+              height: 350px !important;
+            }
         }
       }
     }
-    img {
-      height: 225px;
+    .image-container {
+      .image {
+        height: 225px !important;
+      }
     }
   `}
 `;
