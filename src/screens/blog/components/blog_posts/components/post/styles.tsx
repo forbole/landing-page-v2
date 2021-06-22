@@ -5,6 +5,7 @@ const { colors } = theme;
 
 export const PostCSS = styled.div`
   .image-container {
+    padding-bottom: 1rem;
     > div {
       position: unset !important;
     }
