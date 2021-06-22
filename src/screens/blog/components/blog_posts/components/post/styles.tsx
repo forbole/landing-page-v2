@@ -11,12 +11,13 @@ export const PostCSS = styled.div`
     }
 
     .image {
-      border-radius: 0.5rem;
-      object-fit: cover;
-      width: 100% !important;
+      display: block;
       position: relative !important;
-      // height: 2rem !important;
+      border-radius: 0.5rem;
+      height: 200px !important;
       min-height: 150px !important;
+      width: 100% !important;
+      object-fit: cover;
     }
   }
 
@@ -58,12 +59,11 @@ export const PostCSS = styled.div`
 
   ${media.bigDesktop`
     &.main {
-      img {
-        height: 350px;
-      }
-      span {
-        img {
-          height: 25px;
+      .content {
+        a > .image-container {
+            .image {
+              height: 350px !important;
+            }
         }
       }
     }
