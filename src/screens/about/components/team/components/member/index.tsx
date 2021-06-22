@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { MemberCSS, SocialMediaContainerCSS } from "./styles";
 import { LinkedIn, Twitter, Github } from "@icons";
 const Member = (props: any) => {
@@ -11,7 +12,14 @@ const Member = (props: any) => {
 
   return (
     <MemberCSS>
-      <img src={image} />
+      <div className="image-container">
+        <Image
+          src={image}
+          alt={"Teammates' Icon"}
+          className="image"
+          layout="fill"
+        />
+      </div>
       <p className="name">{name}</p>
       <p className="position">{position}</p>
       <SocialMediaContainerCSS>

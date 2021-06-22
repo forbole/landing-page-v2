@@ -14,11 +14,19 @@ export const MemberCSS = styled.div`
   align-items: center;
   padding: 0.5rem;
 
-  img {
-    border-radius: 50%;
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
+  .image-container {
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      display: block;
+      position: relative !important;
+      border-radius: 50%;
+      height: 100px !important;
+      width: 100px !important;
+      object-fit: cover;
+    }
   }
 
   .name {
@@ -34,9 +42,11 @@ export const MemberCSS = styled.div`
     color: ${colors.gray400};
   }
   ${media.tablet`
-    img {
-      width: 136px;
-      height: 136px;
+    .image-container {
+      .image {
+        width: 136px !important;
+        height: 136px !important;
+      }
     }
     .name {
       font-size: 1.1rem;
@@ -47,9 +57,11 @@ export const MemberCSS = styled.div`
   `}
   ${media.bigDesktop`
     padding: 2rem 0 1.5rem 0;
-    img {
-      width: 156px;
-      height: 156px;
+    .image-container {
+      .image {
+        width: 156px !important;
+        height: 156px !important;
+      }
     }
   `}
 `;
