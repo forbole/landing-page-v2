@@ -6,11 +6,18 @@ const { colors } = theme;
 export const AuthorCSS = styled.div`
   display: flex;
   margin-bottom: 1rem;
-  img {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
+  .image-container {
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      border-radius: 50%;
+      object-fit: cover;
+      width: 40px !important;
+      height: 40px !important;
+      min-height: 40px !important;
+    }
   }
 
   .content {

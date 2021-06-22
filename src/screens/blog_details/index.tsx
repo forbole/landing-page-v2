@@ -139,7 +139,6 @@ const BlogDetails = ({ post, raw }: any) => {
                 <SocialMedia title={post.title} />
                 <Author post={post} />
               </FlexContainerCSS>
-              {/* <img className="cover-image" src={post.featureImage} /> */}
               <div className="image-container">
                 <Image
                   loader={cmsLoader}
