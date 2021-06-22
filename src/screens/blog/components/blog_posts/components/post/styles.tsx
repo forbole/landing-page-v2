@@ -18,12 +18,6 @@ export const PostCSS = styled.div`
       min-height: 150px !important;
     }
   }
-  img {
-    border-radius: 0.5rem;
-    min-height: 150px;
-    width: 100%;
-    object-fit: cover;
-  }
 
   h3 {
     font-weight: 500;

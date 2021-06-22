@@ -56,11 +56,19 @@ export const ContentCSS = styled.div`
     margin-top: 1rem;
   }
 
-  .cover-image {
-    margin-bottom: 1.5rem;
-    width: 100%;
-    display: block;
-    object-fit: cover;
+  .image-container {
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: cover;
+      width: 100% !important;
+      position: relative !important;
+      // height: 3rem !important;
+      min-height: 150px !important;
+      display: block;
+    }
   }
 
   li {

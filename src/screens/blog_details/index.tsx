@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "i18n";
+import Image from "next/image";
 import Head from "next/head";
 import DOMPurify from "isomorphic-dompurify";
 import { Layout, Tags, BlogDetailsLoader } from "@components";
@@ -15,6 +16,10 @@ import {
 import { Author, SocialMedia } from "./components";
 
 const { colors } = theme;
+
+const cmsLoader = ({ src }) => {
+  return `${src}`;
+};
 
 const BlogDetails = ({ post, raw }: any) => {
   if (!post) {
@@ -134,7 +139,16 @@ const BlogDetails = ({ post, raw }: any) => {
                 <SocialMedia title={post.title} />
                 <Author post={post} />
               </FlexContainerCSS>
-              <img className="cover-image" src={post.featureImage} />
+              {/* <img className="cover-image" src={post.featureImage} /> */}
+              <div className="image-container">
+                <Image
+                  loader={cmsLoader}
+                  src={post.featureImage}
+                  alt={title}
+                  className="image"
+                  layout="fill"
+                />
+              </div>
               <GhostCSS
                 className="blog-content"
                 dangerouslySetInnerHTML={{ __html: sanitize(post.html) }}
