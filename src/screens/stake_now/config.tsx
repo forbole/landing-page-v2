@@ -28,4 +28,5 @@ export const networkKeys = [
   // "cosmwasm",
   "crypto.org",
   "v-system",
+  "osmosis",
 ].sort();
