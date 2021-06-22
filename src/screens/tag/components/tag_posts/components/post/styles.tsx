@@ -4,12 +4,6 @@ import { theme, media } from "@styles";
 const { colors } = theme;
 
 export const PostCSS = styled.div`
-  img {
-    border-radius: 0.5rem;
-    min-height: 150px;
-    width: 100%;
-    object-fit: cover;
-  }
   .image-container {
     padding-bottom: 1rem;
     > div {
@@ -40,9 +34,6 @@ export const PostCSS = styled.div`
       font-size: 0.875rem;
       font-weight: 300;
     }
-  }
-  .content {
-    padding: 0.5rem;
   }
   span {
     display: flex;
