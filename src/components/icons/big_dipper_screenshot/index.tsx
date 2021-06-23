@@ -1,6 +1,6 @@
 import React from "react";
 
-const BDScreenshot = () => {
+const BDScreenshot: any = () => {
   return (
     <svg
       width="511"
