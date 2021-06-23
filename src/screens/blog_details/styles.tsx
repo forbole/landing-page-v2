@@ -68,9 +68,9 @@ export const ContentCSS = styled.div`
       object-fit: cover;
       width: 100% !important;
       position: relative !important;
-      // height: 3rem !important;
       min-height: 150px !important;
       display: block;
+      height: 100% !important;
     }
   }
 
