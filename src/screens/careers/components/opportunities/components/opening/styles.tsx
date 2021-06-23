@@ -33,6 +33,13 @@ export const OpeningCSS = styled.div`
       flex-direction: column;
     }
 
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
     .see-more {
       display: block;
       margin-top: 1.5rem;
