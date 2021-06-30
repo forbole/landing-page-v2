@@ -4,6 +4,20 @@ import { mixins, theme, media } from "@styles";
 const { colors } = theme;
 
 export const BigDipperContentCSS = styled.div`
+  .image-container {
+    // width: 100%;
+    padding-bottom: 1rem;
+    > div {
+      position: unset !important;
+    }
+
+    .image {
+      object-fit: contain;
+      width: 100% !important;
+      position: relative !important;
+      height: 200px !important;
+    }
+  }
   ${mixins.mobilePadding}
   ${mixins.flexCenter}
   color: ${colors.black};
@@ -44,12 +58,16 @@ export const BigDipperContentCSS = styled.div`
     display: flex;
     align-items: center;
     color: ${colors.forboleRed};
+    padding-left: 1.5rem;
     svg {
       margin-left: 0.8rem;
       path {
         fill: ${colors.forboleRed};
       }
     }
+  }
+  ul {
+    padding: 0rem 1.5rem;
   }
   ${media.tablet`
   .bd {
@@ -101,8 +119,8 @@ export const BigDipperContentCSS = styled.div`
   .bdbg {
     width: 482.08px;
     height: 482.08px;
-    right: 5rem;
-    top: 10rem;
+    top: 5rem;
+    right: 10rem;
   }
   .bd {
     width: 525px;
@@ -115,14 +133,22 @@ export const BigDipperContentCSS = styled.div`
   a {
     padding-top: 1.5rem;
   }
-  .image {
+  .img {
     padding: 0;
   }
   .content {
     margin-right: 7rem;
+    width: 50%;
 
     p:last-child {
       margin-bottom: 0;
+    }
+  }
+  .image-container {
+    padding-bottom: 0;
+    // width: 50%;
+    .image {
+      height: 350px !important;
     }
   }
   `}
