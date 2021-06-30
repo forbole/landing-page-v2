@@ -5,7 +5,6 @@ const { colors } = theme;
 
 export const BigDipperContentCSS = styled.div`
   .image-container {
-    // width: 100%;
     padding-bottom: 1rem;
     > div {
       position: unset !important;
@@ -146,7 +145,6 @@ export const BigDipperContentCSS = styled.div`
   }
   .image-container {
     padding-bottom: 0;
-    // width: 50%;
     .image {
       height: 350px !important;
     }
