@@ -27,8 +27,43 @@ export const BlogContainerCSS = styled.div`
   flex: 1;
 
   .ui.pagination.menu {
-    display: none;
+    // display: none;
     margin: 2rem 0;
+  }
+
+  .ui.pagination.menu {
+    display: inline-flex;
+  }
+  .ui.menu {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: none;
+    margin-right: 0.1rem;
+    // padding: 15px;
+    .active.item {
+      background: rgba(189, 8, 28, 1);
+      color: rgb(255, 255, 255);
+    }
+    .item {
+      margin: 2px;
+      border-radius: 4px;
+    }
+    > .item:first-child {
+      background: #e2e2e2;
+    }
+    > .item:nth-child(2) {
+      background: #e2e2e2;
+    }
+    > .item:last-child {
+      background: #e2e2e2;
+    }
+    > .item:nth-last-child(2) {
+      background: #e2e2e2;
+    }
+  }
+  .ui.menu .item:before {
+    background: transparent;
   }
 
   ${media.tablet`
