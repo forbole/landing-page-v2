@@ -15,22 +15,26 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
   const currentPage = R.pathOr(0, ["pagination", "page"], meta);
   const totalPages = R.pathOr(0, ["pagination", "pages"], meta);
   const totalPosts = R.pathOr(0, ["pagination", "total"], meta);
-  const [limit, setLimit] = useState(11);
-  let lastPost = limit - 2;
-  console.log(`first render`, lastPost, limit);
+  const [limit, setLimit] = useState(15);
+  //let limit = 0;
+  //const [lastPost, setLastPost] = useState(blogs[blogs.length - 1].id);
+  let lastPost = blogs[blogs.length - 1].id;
+  //console.log(`first render`, blogs[blogs.length - 1].id, lastPost);
   const lastPostRef = useRef(null);
-  // console.log(blogs);
+  console.log(blogs.length);
   // console.log(`reffffff`, postPos);
 
   const seeMorePages = (e: any, { limit }: any) => {
-    limit + 11 >= totalPosts ? setLimit(totalPosts) : setLimit(limit + 11);
+    console.log(`ref`, lastPostRef);
+    limit + 15 >= totalPosts ? setLimit(totalPosts) : setLimit(limit + 15);
     // const elmnt = postPos.current.length - 1;
     // console.group(`hiiiiiii`, elmnt, document.querySelector(`[id=${elmnt}]`));
     //elmnt.scrollIntoView();
     //console.log(`inside function posts arrayyyy`, postPos);
     // ref.current.click();
     // postPos.current
-    //lastPost = limit - 2;
+    //lastPost = limit;
+    //setLastPost(blogs.length - 1);
     console.log(`newwwwww`, lastPost, limit);
     router.push({
       pathname: router.pathname,
@@ -49,16 +53,16 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
     },
   };
 
-  useEffect(() => {
-    console.log(`last ref element`, lastPostRef);
-    if (lastPostRef.current) {
-      lastPostRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "nearest",
-        inline: "nearest",
-      });
-    }
-  }, [lastPost]);
+  // useEffect(() => {
+  //   console.log(`last ref element`, lastPostRef.current);
+  //   if (lastPostRef.current) {
+  //     lastPostRef.current.scrollIntoView({
+  //       behavior: "smooth",
+  //       block: "nearest",
+  //       inline: "nearest",
+  //     });
+  //   }
+  // }, [lastPostRef]);
 
   const { handlePageChange } = useBlogPostsHook();
 
@@ -68,17 +72,15 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
         {!!main && <Post main post={main} />}
         {blogs.map((post, i, array) => (
           <>
-            {console.log(`checkkkk`, i, lastPost, post, array)}
-            <div>
-              <Post
-                key={i}
-                id={i}
-                //ref={i == lastPost ? lastPostRef : null}
-                className={classNames({ lastPost: i == lastPost })}
-                post={post}
-              />
-            </div>
-            {console.log(`after checkkk`, i, lastPostRef, post, array)}
+            {/* {console.log(`checkkkk`, post.id, lastPost)} */}
+            <Post
+              key={post.id}
+              id={i}
+              refProp={post.id == lastPost ? lastPostRef : null}
+              className={classNames({ lastPost: i == lastPost })}
+              post={post}
+            />
+            {/* {console.log(`after checkkk`, i, lastPostRef, post, array)} */}
           </>
         ))}
       </BlogPostCSS>

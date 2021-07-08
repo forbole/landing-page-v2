@@ -18,10 +18,10 @@ const Post = (props: any) => {
   const cmsLoader = ({ src }) => {
     return `${src}`;
   };
-  //console.log(featureImage);
+  console.log(`childddd`, props.refProp);
   return (
     <PostCSS className={classNames({ main })}>
-      <div className="content">
+      <div ref={props.refProp} className="content">
         <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
           <a>
             <div className="image-container">

@@ -10,6 +10,13 @@ export const useBlogPostsHook = () => {
     });
   };
 
+  // const mobileView = (e: any ) => {
+  //   router.push({
+  //     pathname: router.pathname,
+  //     query: { page: activePage },
+  //   });
+  // }
+
   return {
     handlePageChange,
   };

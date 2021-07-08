@@ -1,5 +1,5 @@
 import Blog from "@screens/blog";
-import { getPosts, getMorePosts, getTags } from "@api/posts";
+import { getPosts, getAllPosts, getTags } from "@api/posts";
 import { Post, Tag } from "@models";
 import { removeInternalTags } from "@utils/remove_internal_tags";
 function BlogPage(props: any) {
@@ -20,7 +20,7 @@ BlogPage.getInitialProps = async ({ query }) => {
       posts = await getPosts(fetchQuery);
     } else if (query.limit) {
       fetchQuery.limit = query.limit;
-      posts = await getMorePosts(fetchQuery);
+      posts = await getAllPosts(fetchQuery);
     } else {
       posts = await getPosts(fetchQuery);
     }

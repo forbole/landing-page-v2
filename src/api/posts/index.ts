@@ -24,7 +24,7 @@ export const getPosts = async ({
 };
 
 /** Gets posts from remote based on See More*/
-export const getMorePosts = async ({
+export const getAllPosts = async ({
   limit,
   // filter = "tag:-[hash-zhs,hash-zht]",
   filter = "tags:-[careers]",
