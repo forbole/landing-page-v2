@@ -18,7 +18,7 @@ const Post = (props: any) => {
   const cmsLoader = ({ src }) => {
     return `${src}`;
   };
-  console.log(featureImage);
+  //console.log(featureImage);
   return (
     <PostCSS className={classNames({ main })}>
       <div className="content">
