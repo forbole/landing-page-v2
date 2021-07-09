@@ -73,6 +73,16 @@ export const membersData = [
     slug: "ravi",
   },
   {
+    name: "Charles Pusey",
+    position: "infrastructureEngineer",
+    image: "/static/images/team/charles.jpeg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/chccp/",
+      twitter: "https://twitter.com/CCrypto19961035",
+    },
+    slug: "charles",
+  },
+  {
     name: "Calvin Kei",
     position: "sswe",
     image: "/static/images/team/calvin.jpg",
@@ -192,16 +202,6 @@ export const membersData = [
       linkedin: "https://www.linkedin.com/in/rootychan/",
     },
     slug: "rooty",
-  },
-  {
-    name: "Charles Pusey",
-    position: "infrastructureEngineer",
-    image: "/static/images/team/charles.jpeg",
-    links: {
-      linkedin: "https://www.linkedin.com/in/chccp/",
-      twitter: "https://twitter.com/CCrypto19961035",
-    },
-    slug: "charles",
   },
   {
     name: "Nicole To",
