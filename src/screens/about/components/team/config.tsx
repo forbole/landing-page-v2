@@ -203,6 +203,15 @@ export const membersData = [
     },
     slug: "charles",
   },
+  {
+    name: "Nicole to",
+    position: "uxDesigner",
+    image: "/static/images/team/nicole.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/wan-ting-nicole-to-ab9314215",
+    },
+    slug: "nicole",
+  },
   // {
   // name: "You",
   // position: "researchContent",
