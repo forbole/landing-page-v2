@@ -12,7 +12,8 @@ export const MemberCSS = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem;
+  justify-content: space-evenly;
+  padding: 1rem 0.5rem;
 
   .image-container {
     > div {
@@ -34,12 +35,14 @@ export const MemberCSS = styled.div`
     margin-top: 1rem;
     margin-bottom: 0.2rem;
     font-size: 0.8rem;
+    text-align: center;
   }
 
   .position {
     font-size: 0.6rem;
     margin-bottom: 0.1rem;
     color: ${colors.gray400};
+    text-align: center;
   }
   ${media.tablet`
     .image-container {
