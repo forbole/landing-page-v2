@@ -73,6 +73,16 @@ export const membersData = [
     slug: "ravi",
   },
   {
+    name: "Charles Pusey",
+    position: "infrastructureEngineer",
+    image: "/static/images/team/charles.jpeg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/chccp/",
+      twitter: "https://twitter.com/CCrypto19961035",
+    },
+    slug: "charles",
+  },
+  {
     name: "Calvin Kei",
     position: "sswe",
     image: "/static/images/team/calvin.jpg",
@@ -186,12 +196,40 @@ export const membersData = [
   },
   {
     name: "Rooty Chan",
-    position: "uxDesigner",
+    position: "seniorUXDesigner",
     image: "/static/images/team/rooty.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/rootychan/",
     },
     slug: "rooty",
+  },
+  {
+    name: "Nicole To",
+    position: "uxDesigner",
+    image: "/static/images/team/nicole.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/wan-ting-nicole-to-ab9314215",
+    },
+    slug: "nicole",
+  },
+  {
+    name: "Carine Cho",
+    position: "exeAssitant",
+    image: "/static/images/team/carine.png",
+    links: {
+      linkedin: "https://www.linkedin.com/in/carine-cho",
+    },
+    slug: "carine",
+  },
+  {
+    name: "Jade Lai",
+    position: "marketingManager",
+    image: "/static/images/team/jade.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/jade-lai-18543432",
+      twitter: "https://twitter.com/jadelaiwy",
+    },
+    slug: "jade",
   },
   // {
   // name: "You",

@@ -33,7 +33,7 @@
   "inceptionTitle": "Inception of De-social network",
   "inceptionDetails": "3rd Prize, HackAtom Seoul, the winning project has become the prototype of Desmos.",
   "interchainTitle": "Big Dipper goes \"Interchain\"",
-  "interchainDetails": "Builds Big Dipper explorers for non-Cosmos SDK blockchians, including Celo and Flow.",
+  "interchainDetails": "Builds Big Dipper explorers for non-Cosmos SDK blockchains, including Celo and Flow.",
   "jun2019": "Jun 2019",
   "desmosTitle": "Introducing Desmos",
   "desmosDetails": "Launches the public testnet of Desmos, the blockchain protocol for decentralized social networks (explorer). Launched its first DApp Mooncake (test version) a month later.",
@@ -55,7 +55,7 @@
   "q42020": "Q4 2020",
   "q12021": "Q1 2021",
   "heading": "Team",
-  "heroDetails1": "With team members in Europe, Africa, and Asia, Forbole is setting an example of how to to manage a fast-paced global team in the blockchian industry.",
+  "heroDetails1": "With team members in Europe, Africa, and Asia, Forbole is setting an example of how to to manage a fast-paced global team in the blockchain industry.",
   "heroDetails2": "The team consists of highly skilled software engineers, experienced financial experts, and creative marketers.",
   "cofounderConductor": "Cofounder & Conductor",
   "cofounderEvangelist": "Cofounder & Evangelist",
@@ -71,5 +71,8 @@
   "associate": "Associate",
   "financeOperationManager": "Finance & Operations Manager",
   "blockchainEngineer": "Blockchain Engineer",
-  "infrastructureEngineer": "Infrastructure Engineer"
+  "infrastructureEngineer": "Infrastructure Engineer",
+  "seniorUXDesigner": "Senior UX Designer",
+  "exeAssitant": "Executive Assistant",
+  "marketingManager": "Marketing Manager"
 }

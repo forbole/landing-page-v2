@@ -15,17 +15,15 @@ const WhatWeDo = () => {
         <ul>
           {pillarData.map((x) => (
             <PillarCSS key={x.name}>
-              <p>
-                <div className="image-container">
-                  <Image
-                    src={x.image}
-                    alt={"Pillar Icon"}
-                    className="image"
-                    layout="fill"
-                  />
-                </div>
-                <span className="title">{t(x.name)}&nbsp;</span>
-              </p>
+              <div className="image-container">
+                <Image
+                  src={x.image}
+                  alt={"Pillar Icon"}
+                  className="image"
+                  layout="fill"
+                />
+              </div>
+              <span className="title">{t(x.name)}&nbsp;</span>
             </PillarCSS>
           ))}
         </ul>
