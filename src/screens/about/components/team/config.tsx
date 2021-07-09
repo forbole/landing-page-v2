@@ -193,6 +193,16 @@ export const membersData = [
     },
     slug: "rooty",
   },
+  {
+    name: "Charles Pusey",
+    position: "infrastructureEngineer",
+    image: "/static/images/team/charles.jpeg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/chccp/",
+      twitter: "https://twitter.com/CCrypto19961035",
+    },
+    slug: "charles",
+  },
   // {
   // name: "You",
   // position: "researchContent",
