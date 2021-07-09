@@ -186,7 +186,7 @@ export const membersData = [
   },
   {
     name: "Rooty Chan",
-    position: "uxDesigner",
+    position: "seniorUXDesigner",
     image: "/static/images/team/rooty.jpg",
     links: {
       linkedin: "https://www.linkedin.com/in/rootychan/",
