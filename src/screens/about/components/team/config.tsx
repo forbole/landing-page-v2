@@ -212,6 +212,25 @@ export const membersData = [
     },
     slug: "nicole",
   },
+  {
+    name: "Carine Cho",
+    position: "exeAssitant",
+    image: "/static/images/team/carine.png",
+    links: {
+      linkedin: "https://www.linkedin.com/in/carine-cho",
+    },
+    slug: "carine",
+  },
+  {
+    name: "Jade Lai",
+    position: "marketingManager",
+    image: "/static/images/team/jade.jpg",
+    links: {
+      linkedin: "https://www.linkedin.com/in/jade-lai-18543432",
+      twitter: "https://twitter.com/jadelaiwy",
+    },
+    slug: "jade",
+  },
   // {
   // name: "You",
   // position: "researchContent",
