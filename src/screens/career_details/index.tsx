@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "i18n";
 import Head from "next/head";
+import Image from "next/image";
 import DOMPurify from "isomorphic-dompurify";
 import { Layout, Tags, BlogDetailsLoader } from "@components";
 import { theme } from "@styles";
@@ -77,6 +78,10 @@ const CareerDetails = ({ post, raw }: any) => {
     mainEntityOfPage: `${url}/careers/${slug}`,
   };
 
+  const cmsLoader = ({ src }) => {
+    return `${src}`;
+  };
+
   const [isLoading, setLoading] = useState(true);
   useEffect(() => {
     if (excerpt && html) {
@@ -134,7 +139,19 @@ const CareerDetails = ({ post, raw }: any) => {
                 <SocialMedia title={post.title} />
                 <Author post={post} />
               </FlexContainerCSS>
-              <img className="cover-image" src={post.featureImage} />
+              <div className="image-container cover-image">
+                <Image
+                  loader={cmsLoader}
+                  src={
+                    post.featureImage == null
+                      ? "/static/images/assets/blog-placeholder.png"
+                      : post.featureImage
+                  }
+                  alt={title}
+                  className="image"
+                  layout="fill"
+                />
+              </div>
               <GhostCSS
                 className="blog-content"
                 dangerouslySetInnerHTML={{ __html: sanitize(post.html) }}

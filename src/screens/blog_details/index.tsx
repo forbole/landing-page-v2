@@ -142,7 +142,11 @@ const BlogDetails = ({ post, raw }: any) => {
               <div className="image-container">
                 <Image
                   loader={cmsLoader}
-                  src={post.featureImage}
+                  src={
+                    post.featureImage == null
+                      ? "/static/images/assets/blog-placeholder.png"
+                      : post.featureImage
+                  }
                   alt={title}
                   className="image"
                   layout="fill"
