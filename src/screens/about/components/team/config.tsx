@@ -204,7 +204,7 @@ export const membersData = [
     slug: "charles",
   },
   {
-    name: "Nicole to",
+    name: "Nicole To",
     position: "uxDesigner",
     image: "/static/images/team/nicole.jpg",
     links: {
