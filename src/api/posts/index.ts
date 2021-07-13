@@ -23,6 +23,25 @@ export const getPosts = async ({
   }
 };
 
+/** Gets posts from remote based on See More on mobile device */
+export const getAllPosts = async ({
+  limit,
+  // filter = "tag:-[hash-zhs,hash-zht]",
+  filter = "tags:-[careers]",
+}: IPost) => {
+  try {
+    return await api.posts.browse({
+      include: "tags,authors",
+      limit,
+      filter,
+      formats: "html",
+    });
+  } catch (err) {
+    console.error(err);
+    return [];
+  }
+};
+
 /** Gets the main feature post from remote */
 export const getFeaturedPost = async () => {
   try {

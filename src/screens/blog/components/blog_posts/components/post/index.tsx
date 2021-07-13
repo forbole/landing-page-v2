@@ -20,13 +20,17 @@ const Post = (props: any) => {
   };
   return (
     <PostCSS className={classNames({ main })}>
-      <div className="content">
+      <div ref={props.refProp} className="content">
         <Link href={"/blog/[title]"} as={`/blog/${slug}`}>
           <a>
             <div className="image-container">
               <Image
                 loader={cmsLoader}
-                src={featureImage}
+                src={
+                  featureImage == null
+                    ? "/static/images/assets/blog-placeholder.png"
+                    : featureImage
+                }
                 alt={title}
                 className="image"
                 layout="fill"
