@@ -247,6 +247,7 @@ const logos = {
     image: "/static/images/icons/agoric.png",
     name: "Agoric",
     key: "agoric",
+    bigDipper: "https://testnet.explorer.agoric.net/",
   },
   flow: {
     image: "/static/images/icons/flow.png",
