@@ -18,7 +18,6 @@ const Post = (props: any) => {
   const cmsLoader = ({ src }) => {
     return `${src}`;
   };
-  console.log(`childddd`, props.refProp);
   return (
     <PostCSS className={classNames({ main })}>
       <div ref={props.refProp} className="content">
