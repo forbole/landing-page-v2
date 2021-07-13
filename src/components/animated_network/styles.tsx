@@ -30,10 +30,6 @@ export const NetworkCSS = styled.div`
   box-shadow: 0px 10px 40px rgba(41, 41, 42, 0.1);
   border-radius: 0.5rem;
 
-  // img {
-  //   width: 40px;
-  // }
-
   p {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -75,7 +71,7 @@ export const NetworkCSS = styled.div`
       width: 100%;
     }
 
-    img {
+    .image-container {
       display: block;
       margin-left: auto;
       margin-right: auto;
@@ -85,13 +81,7 @@ export const NetworkCSS = styled.div`
     .image-container {
       .image {
         object-fit: contain;
-        // border-radius: 0.1rem;
-        // width: 100% !important;
-        // position: relative !important;
-        // height: 40px !important;
         display: block;
-        // margin-left: auto;
-        // margin-right: auto;
         transition: 1s ease;
         height: 60px !important;
       }
@@ -156,10 +146,15 @@ export const NetworkCSS = styled.div`
 
       @keyframes nameHover {
         50% {
-          opacity: 0%;
+          opacity: 70%;
+          font-size: 1.3rem;
+          margin-top: calc(10px + 0.5rem);
+          margin-bottom: 1rem;
         }
         100% {
-          opacity: 0;
+          font-size: 1.3rem;
+          margin-top: calc(10px + 0.5rem);
+          margin-bottom: 1rem;
         }
       }
 
@@ -183,7 +178,7 @@ export const NetworkCSS = styled.div`
         }
       }
 
-      img {
+      .image-container {
         animation: imgHover 0.5s;
         -webkit-animation-fill-mode: forwards;
       }
