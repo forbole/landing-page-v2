@@ -151,6 +151,7 @@ const logos = {
     key: "iov",
     denom: "IOV",
     color: "#6610f2",
+    bigDipper: "https://big-dipper.iov-mainnet-2.iov.one/",
     delegate:
       "https://big-dipper.iov-mainnet-2.iov.one/validator/starvaloper1jkv2qkpq6cfplx6put7f00wzuyds57fnmtgde0",
     heightSocket: "wss://ws.iov.forbole.com",
@@ -175,6 +176,7 @@ const logos = {
     key: "akash",
     denom: "AKT",
     color: "#eb3825",
+    bigDipper: "https://akash.bigdipper.live/",
     delegate:
       "https://akash.bigdipper.live/validator/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073/delegate",
     heightSocket: "wss://ws.akash.forbole.com",
@@ -200,6 +202,7 @@ const logos = {
     denom: "BAND",
     color: "#516FFA",
     heightSocket: "wss://ws.band.forbole.com",
+    bigDipper: "https://band.bigdipper.live/",
     delegate:
       "https://band.bigdipper.live/validator/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z/delegate",
     calculator: {
@@ -242,17 +245,20 @@ const logos = {
     name: "Celo",
     key: "celo",
     delegate: "https://celo.bigdipper.live/",
+    bigDipper: "https://celo.bigdipper.live/",
   },
   agoric: {
     image: "/static/images/icons/agoric.png",
     name: "Agoric",
     key: "agoric",
+    bigDipper: "https://testnet.explorer.agoric.net/",
   },
   flow: {
     image: "/static/images/icons/flow.png",
     name: "Flow",
     key: "flow",
     delegate: "https://port.onflow.org/",
+    bigDipper: "https://flow.bigdipper.live/",
   },
   ["persistence-one"]: {
     image: "/static/images/icons/persistence-one.png",
@@ -270,6 +276,7 @@ const logos = {
     key: "fetch-ai",
     delegate:
       "https://explore.fetch.ai/validator/fetchvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0dzxfx3",
+    bigDipper: "https://explore.fetch.ai/",
   },
   ["injective-protocol"]: {
     image: "/static/images/icons/injective-protocol.png",
@@ -281,6 +288,7 @@ const logos = {
     image: "/static/images/icons/straightedge.png",
     name: "Straightedge",
     key: "straightedge",
+    bigDipper: "http://explorer.straighted.ge/",
   },
   ["oasis-labs"]: {
     image: "/static/images/icons/oasis-labs.png",
@@ -300,6 +308,7 @@ const logos = {
     key: "crypto-org",
     delegate:
       "https://crypto-org.bigdipper.live/validator/crocncl15xphw2m025acwnjd2ucq9t5ku4ggaqyecekzqa",
+    bigDipper: "https://crypto-org.bigdipper.live/",
   },
   moonriver: {
     image: "/static/images/icons/moonriver.png",
@@ -320,6 +329,7 @@ const logos = {
     name: "Osmosis",
     key: "osmosis",
     delegate: "https://osmosis.zone/",
+    bigDipper: "https://osmosis.bigdipper.live/",
   },
 };
 
