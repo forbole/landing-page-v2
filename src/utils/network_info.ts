@@ -175,6 +175,7 @@ const logos = {
     key: "akash",
     denom: "AKT",
     color: "#eb3825",
+    bigDipper: "https://akash.bigdipper.live/",
     delegate:
       "https://akash.bigdipper.live/validator/akashvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0uzn073/delegate",
     heightSocket: "wss://ws.akash.forbole.com",
@@ -200,6 +201,7 @@ const logos = {
     denom: "BAND",
     color: "#516FFA",
     heightSocket: "wss://ws.band.forbole.com",
+    bigDipper: "https://band.bigdipper.live/",
     delegate:
       "https://band.bigdipper.live/validator/bandvaloper14kn0kk33szpwus9nh8n87fjel8djx0y0wz502z/delegate",
     calculator: {
