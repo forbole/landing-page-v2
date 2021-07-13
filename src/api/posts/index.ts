@@ -23,7 +23,7 @@ export const getPosts = async ({
   }
 };
 
-/** Gets posts from remote based on See More*/
+/** Gets posts from remote based on See More on mobile device */
 export const getAllPosts = async ({
   limit,
   // filter = "tag:-[hash-zhs,hash-zht]",
