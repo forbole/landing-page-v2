@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import App, { AppProps } from "next/app";
+import { RouterScrollProvider } from "@moxy/next-router-scroll";
 import { ToastContainer } from "react-toastify";
 import { init } from "@socialgouv/matomo-next";
 import { GlobalCSS } from "@styles";
@@ -20,7 +21,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <GlobalCSS />
       <ToastContainer position="top-center" autoClose={6000} />
-      <Component {...pageProps} />
+      <RouterScrollProvider disableNextLinkScroll={false}>
+        <Component {...pageProps} />
+      </RouterScrollProvider>
     </>
   );
 }

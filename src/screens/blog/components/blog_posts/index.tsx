@@ -1,4 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
+import { useRouterScroll } from "@moxy/next-router-scroll";
 import classNames from "classnames";
 import { useRouter } from "next/router";
 import * as R from "ramda";
@@ -17,16 +18,43 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
   const totalPosts = R.pathOr(0, ["pagination", "total"], meta);
   const [limit, setLimit] = useState(15);
   //let limit = 0;
-  //const [lastPost, setLastPost] = useState(blogs[blogs.length - 1].id);
-  let lastPost = blogs[blogs.length - 1].id;
+  const [lastView, setLastView] = useState(0);
+  //let lastPost = blogs.length - 1;
   //console.log(`first render`, blogs[blogs.length - 1].id, lastPost);
+  console.log(`meta`, meta);
   const lastPostRef = useRef(null);
-  console.log(blogs.length);
+  console.log(`lengthhhhhh`, blogs.length);
   // console.log(`reffffff`, postPos);
+  const { updateScroll } = useRouterScroll();
+  console.log(`hiiiiiii`, updateScroll);
+  const divRef = useCallback(
+    (node) => {
+      if (node) {
+        console.log(`node`, node);
+        // console.log(updateScroll);
+        // updateScroll();
+        node.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "nearest",
+        });
+      }
+      return node;
+    },
+    [updateScroll]
+  );
 
-  const seeMorePages = (e: any, { limit }: any) => {
-    console.log(`ref`, lastPostRef);
+  useEffect(() => {
+    updateScroll();
+    //console.log(`hiiiiiii b`, registerElement);
+  }, [divRef]);
+
+  const seeMorePages = (e: any, { limit, posts }: any) => {
+    console.log(`post check`, posts);
     limit + 15 >= totalPosts ? setLimit(totalPosts) : setLimit(limit + 15);
+    //console.log(`last view`, lastView);
+    //const lastPost = limit - 11;
+    setLastView(posts);
     // const elmnt = postPos.current.length - 1;
     // console.group(`hiiiiiii`, elmnt, document.querySelector(`[id=${elmnt}]`));
     //elmnt.scrollIntoView();
@@ -35,7 +63,7 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
     // postPos.current
     //lastPost = limit;
     //setLastPost(blogs.length - 1);
-    console.log(`newwwwww`, lastPost, limit);
+    console.log(`newwwwww`, lastView, limit);
     router.push({
       pathname: router.pathname,
       query: { limit: limit },
@@ -70,14 +98,14 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
     <BlogContainerCSS>
       <BlogPostCSS>
         {!!main && <Post main post={main} />}
-        {blogs.map((post, i, array) => (
+        {blogs.map((post, i) => (
           <>
-            {/* {console.log(`checkkkk`, post.id, lastPost)} */}
+            {console.log(`checkkkk`, i, lastView)}
             <Post
-              key={post.id}
+              key={i}
               id={i}
-              refProp={post.id == lastPost ? lastPostRef : null}
-              className={classNames({ lastPost: i == lastPost })}
+              refProp={i == lastView ? divRef : null}
+              className={classNames({ lastPost: i == blogs.length - 4 })}
               post={post}
             />
             {/* {console.log(`after checkkk`, i, lastPostRef, post, array)} */}
@@ -92,7 +120,12 @@ const BlogPosts = ({ main, blogs, meta }: IProps) => {
           onPageChange={handlePageChange}
         />
       ) : (
-        <Button content="See More" onClick={seeMorePages} limit={limit} />
+        <Button
+          content="See More"
+          onClick={seeMorePages}
+          limit={limit}
+          posts={blogs.length}
+        />
       )}
     </BlogContainerCSS>
   );
