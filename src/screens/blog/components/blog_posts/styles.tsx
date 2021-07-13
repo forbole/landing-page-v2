@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { mixins, media } from "@styles";
+import { mixins, media, theme } from "@styles";
+
+const { colors } = theme;
 
 export const BlogPostCSS = styled.div`
   ${mixins.mobilePadding}
@@ -26,8 +28,13 @@ export const BlogContainerCSS = styled.div`
   justify-content: start;
   flex: 1;
 
+  .ui.button {
+    background-color: transparent;
+    color: ${colors.forboleRed};
+  }
+
   .ui.pagination.menu {
-    // display: none;
+    display: none;
     margin: 2rem 0;
   }
 
